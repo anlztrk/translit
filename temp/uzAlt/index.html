@@ -1,0 +1,58 @@
+<html> 
+<head> 
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Tinos::cyrillic-ext,latin,latin-ext,cyrillic' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<!-- d --> 
+<meta NAME="ROBOTS" CONTENT="NOARCHIVE"> 
+<title>Uzbek Cyrillic - Latin converter</title> 
+<meta name="description" content="Uzbek Cyrillic - Latin converter" /> 
+<meta http-equiv="Content-Language" content="en"> 
+<meta name="revisit-after" content="2 Days"> 
+<base target="_top"> 
+<!-- d --> 
+		<script type="text/javascript" src="conversionuz.js"></script>
+		<style type="text/css"> 
+		textarea {
+			font-family: Arial, "Liberation Sans", Arimo, sans-serif;
+			font-size: 15px;
+			width: 500px;
+			height: 300px;
+		}
+		</style> 
+</head> 
+<body> 
+	<h1>Uzbek Cyrillic - Latin converter</h1> 
+
+
+<div align="center"> Type or copy a text:<br> 
+  <form name=transcription> 
+	<table width=90%><tr align=center> 
+		<td> in Uzbek Cyrillic alphabet: <br> 
+	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
+		  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
+		</td> 
+		<td> here you get it in Latin alphabet:<br> 
+	<textarea name="text2" onKeyUp="latcyr()"></textarea> 
+			  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
+	</td></tr></table> 
+</form> 
+</body> 
+</html> 

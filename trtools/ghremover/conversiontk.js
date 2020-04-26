@@ -1,0 +1,122 @@
+﻿//  copyright lexilogos.com
+var car;
+function latcyr () {
+}
+function cyrlat () {
+car = document.transcription.text1.value;
+  car = car.replace(/ağa/g, "a-a");
+  car = car.replace(/âğâ/g, "â-â");
+  car = car.replace(/ağâ/g, "a-â");
+  car = car.replace(/âğa/g, "â-a");
+  car = car.replace(/eğe/g, "e-e");
+  car = car.replace(/ığı/g, "ı-ı");
+  car = car.replace(/iği/g, "i-i");
+  car = car.replace(/îğî/g, "î-î");
+  car = car.replace(/iğî/g, "i-î");
+  car = car.replace(/îği/g, "î-i");
+  car = car.replace(/oğo/g, "o-o");
+  car = car.replace(/öğö/g, "ö-ö");
+  car = car.replace(/uğu/g, "u-u");
+  car = car.replace(/ûğû/g, "û-û");
+  car = car.replace(/ûğu/g, "û-u");
+  car = car.replace(/uğû/g, "u-û");
+  car = car.replace(/üğü/g, "ü-ü");
+  
+  car = car.replace(/Ağa/g, "A-a");
+  car = car.replace(/Âğâ/g, "Â-â");
+  car = car.replace(/Ağâ/g, "A-â");
+  car = car.replace(/Âğa/g, "Â-a");
+  car = car.replace(/Eğe/g, "E-e");
+  car = car.replace(/Iğı/g, "I-ı");
+  car = car.replace(/İği/g, "İ-i");
+  car = car.replace(/Îğî/g, "Î-î");
+  car = car.replace(/İğî/g, "İ-î");
+  car = car.replace(/Îği/g, "Î-i");
+  car = car.replace(/Oğo/g, "O-o");
+  car = car.replace(/Öğö/g, "Ö-ö");
+  car = car.replace(/Uğu/g, "U-u");
+  car = car.replace(/Ûğû/g, "Û-û");
+  car = car.replace(/Ûğu/g, "Û-u");
+  car = car.replace(/Uğû/g, "U-û");
+  car = car.replace(/Üğü/g, "Ü-ü");
+  
+  car = car.replace(/AĞA/g, "A-A");
+  car = car.replace(/ÂĞÂ/g, "Â-Â");
+  car = car.replace(/AĞÂ/g, "A-Â");
+  car = car.replace(/ÂĞA/g, "Â-A");
+  car = car.replace(/EĞE/g, "E-E");
+  car = car.replace(/IĞI/g, "I-I");
+  car = car.replace(/İĞİ/g, "İ-İ");
+  car = car.replace(/ÎĞÎ/g, "Î-Î");
+  car = car.replace(/İĞÎ/g, "İ-Î");
+  car = car.replace(/ÎĞİ/g, "Î-İ");
+  car = car.replace(/OĞO/g, "O-O");
+  car = car.replace(/ÖĞÖ/g, "Ö-Ö");
+  car = car.replace(/UĞU/g, "U-U");
+  car = car.replace(/ÛĞÛ/g, "Û-Û");
+  car = car.replace(/UĞÛ/g, "U-Û");
+  car = car.replace(/ÛĞU/g, "Û-U");
+  car = car.replace(/ÜĞÜ/g, "Ü-Ü");
+  car = car.replace(/ğa/g, "a");
+  car = car.replace(/ğâ/g, "â");
+  car = car.replace(/ğe/g, "e");
+  car = car.replace(/ğı/g, "ı");
+  car = car.replace(/ği/g, "i");
+  car = car.replace(/ğî/g, "î");
+  car = car.replace(/ğo/g, "o");
+  car = car.replace(/ğö/g, "ö");
+  car = car.replace(/ğu/g, "u");
+  car = car.replace(/ğû/g, "û");
+  car = car.replace(/ğü/g, "ü");
+  car = car.replace(/ĞA/g, "A");
+  car = car.replace(/ĞÂ/g, "Â");
+  car = car.replace(/ĞE/g, "E");
+  car = car.replace(/ĞI/g, "I");
+  car = car.replace(/Ğİ/g, "İ");
+  car = car.replace(/ĞÎ/g, "Î");
+  car = car.replace(/ĞO/g, "O");
+  car = car.replace(/ĞÖ/g, "Ö");
+  car = car.replace(/ĞU/g, "U");
+  car = car.replace(/ĞÛ/g, "Û");
+  car = car.replace(/ĞÜ/g, "Ü");
+  car = car.replace(/ağ/g, "a:");
+  car = car.replace(/âğ/g, "â:");
+  car = car.replace(/eğ/g, "ey");
+  car = car.replace(/ığ/g, "ı:");
+  car = car.replace(/iğ/g, "iy");
+  car = car.replace(/îğ/g, "îy");
+  car = car.replace(/oğ/g, "o:");
+  car = car.replace(/öğ/g, "ö:");
+  car = car.replace(/uğ/g, "u:");
+  car = car.replace(/ûğ/g, "û:");
+  car = car.replace(/üğ/g, "ü:");
+  car = car.replace(/Ağ/g, "A:");
+  car = car.replace(/Âğ/g, "Â:");
+  car = car.replace(/Eğ/g, "Ey");
+  car = car.replace(/Iğ/g, "I:");
+  car = car.replace(/İğ/g, "İy");
+  car = car.replace(/Îğ/g, "Îy");
+  car = car.replace(/Oğ/g, "O:");
+  car = car.replace(/Öğ/g, "Ö:");
+  car = car.replace(/Uğ/g, "U:");
+  car = car.replace(/Ûğ/g, "Û:");
+  car = car.replace(/Üğ/g, "Ü:");
+  car = car.replace(/AĞ/g, "A:");
+  car = car.replace(/ÂĞ/g, "Â:");
+  car = car.replace(/EĞ/g, "EY");
+  car = car.replace(/IĞ/g, "I:");
+  car = car.replace(/İĞ/g, "İY");
+  car = car.replace(/ÎĞ/g, "ÎY");
+  car = car.replace(/OĞ/g, "O:");
+  car = car.replace(/ÖĞ/g, "Ö:");
+  car = car.replace(/UĞ/g, "U:");
+  car = car.replace(/ÛĞ/g, "Û:");
+  car = car.replace(/ÜĞ/g, "Ü:");  
+document.transcription.text2.value=car;
+}
+function copy1()
+{ textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
+}
+function copy2()
+{ textRange=document.transcription.text2.createTextRange();   textRange.execCommand("Copy");   textRange="";
+}

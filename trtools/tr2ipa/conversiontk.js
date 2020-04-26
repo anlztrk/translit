@@ -1,0 +1,100 @@
+﻿//  copyright lexilogos.com
+var car;
+function latcyr () {
+}
+function cyrlat () {
+car = document.transcription.text1.value;
+translit = document.transcription.text1.value;
+  translit = translit.replace(/a/g, "A");
+  translit = translit.replace(/ä/g, "Ä");
+  translit = translit.replace(/â/g, "Â");
+  translit = translit.replace(/b/g, "B");
+  translit = translit.replace(/c/g, "C");
+  translit = translit.replace(/ç/g, "Ç");
+  translit = translit.replace(/d/g, "D");
+  translit = translit.replace(/e/g, "E");
+  translit = translit.replace(/ə/g, "Ə");
+  translit = translit.replace(/f/g, "F");
+  translit = translit.replace(/g/g, "G");
+  translit = translit.replace(/ğ/g, "Ğ");
+  translit = translit.replace(/h/g, "H");
+  translit = translit.replace(/ı/g, "I");
+  translit = translit.replace(/i/g, "İ");
+  translit = translit.replace(/î/g, "Î");
+  translit = translit.replace(/í/g, "Í");
+  translit = translit.replace(/j/g, "J");
+  translit = translit.replace(/k/g, "K");
+  translit = translit.replace(/l/g, "L");
+  translit = translit.replace(/m/g, "M");
+  translit = translit.replace(/n/g, "N");
+  translit = translit.replace(/ň/g, "Ň");
+  translit = translit.replace(/ñ/g, "Ñ");
+  translit = translit.replace(/o/g, "O");
+  translit = translit.replace(/ö/g, "Ö");
+  translit = translit.replace(/p/g, "P");
+  translit = translit.replace(/q/g, "Q");
+  translit = translit.replace(/r/g, "R");
+  translit = translit.replace(/s/g, "S");
+  translit = translit.replace(/ş/g, "Ş");
+  translit = translit.replace(/t/g, "T");
+  translit = translit.replace(/u/g, "U");
+  translit = translit.replace(/û/g, "Û");
+  translit = translit.replace(/ü/g, "Ü");
+  translit = translit.replace(/v/g, "V");
+  translit = translit.replace(/w/g, "W");
+  translit = translit.replace(/x/g, "X");
+  translit = translit.replace(/y/g, "Y");
+  translit = translit.replace(/ý/g, "Ý");
+  translit = translit.replace(/z/g, "Z");
+  translit = translit.replace(/ž/g, "Ž");
+  car = car.replace(/A/g, "a");
+  car = car.replace(/Ä/g, "ä");
+  car = car.replace(/Â/g, "â");
+  car = car.replace(/B/g, "b");
+  car = car.replace(/C/g, "c");
+  car = car.replace(/Ç/g, "ç");
+  car = car.replace(/D/g, "d");
+  car = car.replace(/E/g, "e");
+  car = car.replace(/Ə/g, "ə");
+  car = car.replace(/F/g, "f");
+  car = car.replace(/G/g, "g");
+  car = car.replace(/Ğ/g, "ğ");
+  car = car.replace(/H/g, "h");
+  car = car.replace(/I/g, "ı");
+  car = car.replace(/İ/g, "i");
+  car = car.replace(/Î/g, "î");
+  car = car.replace(/Í/g, "í");
+  car = car.replace(/J/g, "j");
+  car = car.replace(/K/g, "k");
+  car = car.replace(/L/g, "l");
+  car = car.replace(/M/g, "m");
+  car = car.replace(/N/g, "n");
+  car = car.replace(/Ň/g, "ň");
+  car = car.replace(/Ñ/g, "ñ");
+  car = car.replace(/O/g, "o");
+  car = car.replace(/Ö/g, "ö");
+  car = car.replace(/P/g, "p");
+  car = car.replace(/Q/g, "q");
+  car = car.replace(/R/g, "r");
+  car = car.replace(/S/g, "s");
+  car = car.replace(/Ş/g, "ş");
+  car = car.replace(/T/g, "t");
+  car = car.replace(/U/g, "u");
+  car = car.replace(/Û/g, "û");
+  car = car.replace(/Ü/g, "ü");
+  car = car.replace(/V/g, "v");
+  car = car.replace(/W/g, "w");
+  car = car.replace(/X/g, "x");
+  car = car.replace(/Y/g, "y");
+  car = car.replace(/Ý/g, "ý");
+  car = car.replace(/Z/g, "z");
+  car = car.replace(/Ž/g, "ž");
+document.transcription.text1.value=translit;
+document.transcription.text2.value=car;
+}
+function copy1()
+{ textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
+}
+function copy2()
+{ textRange=document.transcription.text2.createTextRange();   textRange.execCommand("Copy");   textRange="";
+}

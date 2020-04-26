@@ -1,0 +1,47 @@
+﻿<html> 
+<head> 
+<link rel="stylesheet" href="../../font/stylesheet.css" type="text/css" charset="utf-8" /> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<!-- d --> 
+<meta NAME="ROBOTS" CONTENT="NOARCHIVE"> 
+<title>Laz converter : Laz Georgian (Mkhedruli) - Latin and Latin - Georgian (Mkhedruli) converter</title> 
+<meta name="description" content="Laz converter : Laz Georgian (Mkhedruli) - Latin and Latin - Georgian (Mkhedruli) converter" /> 
+<meta http-equiv="Content-Language" content="en"> 
+<meta name="revisit-after" content="2 Days"> 
+<base target="_top"> 
+<!-- d --> 
+		<script type="text/javascript" src="conversionlzz.js"></script>
+		<style type="text/css"> 
+		textarea {
+			font-family: Arial, "Liberation Sans", Arimo, sans-serif;
+			font-size: 15px;
+			width: 500px;
+			height: 300px;
+		}
+		</style> 
+</head> 
+<body> 
+	<h1>Laz converter<br>Laz Georgian (Mkhedruli) - Latin and Latin - Georgian (Mkhedruli) converter</h1> 
+
+<p>This converter converts both directions Laz language from Latin alphabet variant used in Turkey into Georgian (Mkhedruli alphabet) used in Georgia.</p>
+
+<div align="center"> Type or copy a text:<br> 
+  <form name=transcription> 
+	<table width=90%><tr align=center> 
+		<td> in Laz Georgian alphabet: <br> 
+	<textarea name="text1" onKeyUp="geolat()"></textarea> 
+		  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
+		</td> 
+		<td> in Laz Latin alphabet:<br> 
+	<textarea name="text2" onKeyUp="latgeo()"></textarea> 
+			  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
+	</td></tr></table> 
+</form> 
+</body> 
+</html> 

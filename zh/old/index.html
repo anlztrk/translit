@@ -1,0 +1,39 @@
+﻿<html> 
+<head> 
+<link rel="stylesheet" href="../../font/stylesheet.css" type="text/css" charset="utf-8" /> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<!-- d --> 
+<meta NAME="ROBOTS" CONTENT="NOARCHIVE"> 
+<title>Pinyin tone sign removal tool</title> 
+<meta name="description" content="Pinyin tone sign removal tool" /> 
+<meta http-equiv="Content-Language" content="en, ru"> 
+<meta name="revisit-after" content="2 Days"> 
+<base target="_top"> 
+<!-- d --> 
+		<script type="text/javascript" src="conversiontk.js"></script>
+		<style type="text/css"> 
+		textarea {
+			font-family: Arial, "Liberation Sans", Arimo, sans-serif;
+			font-size: 15px;
+			width: 1000px;
+			height: 450px;
+		}
+		</style> 
+</head> 
+<body> 
+	<h1>Pinyin tone sign removal tool</h1> 
+
+<div align="center"> Type Pinyin text to have the tone marks removed:<br> 
+  <form name=transcription> 
+	<table width=90%><tr align=center> 
+		<td><br> 
+	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
+		  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
+		</td>
+	</td></tr></table> 
+</form>  
+</body> 
+</html> 
