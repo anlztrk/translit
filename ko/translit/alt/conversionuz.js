@@ -145,6 +145,8 @@ translit = document.transcription.text1.value;
   translit = translit.replace(/s(i|y)/g, "š$1");
   translit = translit.replace(/ṣ(i|y)/g, "š\u0323$1");
 
+  translit = translit.replace(/sh/g, "s-h");
+  translit = translit.replace(/ng/g, "n-g")
   translit = translit.replace(/š/g, "sh");
   translit = translit.replace(/ŋ/g, "ng");
   translit = translit.replace(/č\u0323/g, "c\u0323h");
