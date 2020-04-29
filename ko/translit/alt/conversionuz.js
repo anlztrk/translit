@@ -127,15 +127,14 @@ translit = document.transcription.text1.value;
   translit = translit.replace(/ṣ·/g, "t·");
   translit = translit.replace(/j·/g, "t·");
   translit = translit.replace(/č·/g, "t·");
-  translit = translit.replace(/h·/g, "t·");  
-  
+  translit = translit.replace(/h·/g, "t·");    
   
   translit = translit.replace(/k·ŋ/g, "·g");
   
-  
-  
-  */translit = translit.replace(/ŋ(a|e|è|i|o|õ|u|ũ|y|w)/g, "$1");
-  
+*/
+  translit = translit.replace(/ŋ(a|e|è|i|o|õ|u|ũ|y|w)/g, "$1");
+
+  translit = translit.replace(/ŋ·(a|e|è|i|o|õ|u|ũ|y|w)/g, "ŋ-·$1");  
   
   translit = translit.replace(/·/g, "");
  
