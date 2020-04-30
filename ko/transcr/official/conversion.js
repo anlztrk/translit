@@ -155,7 +155,7 @@ function cyrlat () {
   translit = translit.replace(/(h|ɦ)j/g, "č");
   translit = translit.replace(/(h|ɦ)(č|k|p)/g, "t$2");
   translit = translit.replace(/(h|ɦ)t/g, "ṭ");  
-  translit = translit.replace(/(d|s|ṣ|j|č|h)(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭśṗaeèioõœuũwy]|$))/g, "t$2");
+  translit = translit.replace(/(d|s|ṣ|j|č|h)(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭśṗaeèiĩoõœuũwy]|$))/g, "t$2");
   translit = translit.replace(/Th/g, "t");
   translit = translit.replace(/(s|j|č|t|T|h|ɦ)(n|l)/g, "nn");
   translit = translit.replace(/(s|j|č|t|T|h|ɦ)m/g, "nm");
@@ -164,10 +164,10 @@ function cyrlat () {
   
   translit = translit.replace(/(p|t|č|k)h(y|w)/g, "$1$2");
   
-  translit = translit.replace(/b(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèioõœuũwy]|$))/g, "p$1");
-  translit = translit.replace(/d(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèioõœuũwy]|$))/g, "t$1");
-  translit = translit.replace(/j(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèioõœuũwy]|$))/g, "č$1");
-  translit = translit.replace(/g(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèioõœuũwy]|$))/g, "k$1");
+  translit = translit.replace(/b(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèiĩoõœuũwy]|$))/g, "p$1");
+  translit = translit.replace(/d(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèiĩoõœuũwy]|$))/g, "t$1");
+  translit = translit.replace(/j(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèiĩoõœuũwy]|$))/g, "č$1");
+  translit = translit.replace(/g(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèiĩoõœuũwy]|$))/g, "k$1");
  
   translit = translit.replace(/l(a|e|è|i|ĩ|o|õ|œ|u|ũ|y|w)/g, "r$1");
   translit = translit.replace(/lr/g, "ll");
@@ -176,11 +176,13 @@ function cyrlat () {
   translit = translit.replace(/ae/g, "a-e");
   translit = translit.replace(/eo/g, "e-o");
   translit = translit.replace(/eu/g, "e-u");
+  translit = translit.replace(/eĩ/g, "e-ĩ");
   translit = translit.replace(/oe/g, "o-e");
   translit = translit.replace(/ui/g, "u-i");
   translit = translit.replace(/oõ/g, "o-õ");
   translit = translit.replace(/oũ/g, "o-ũ");
   translit = translit.replace(/õe/g, "õ-e");
+  translit = translit.replace(/œĩ/g, "œ-ĩ");
   translit = translit.replace(/œo/g, "œ-o");
   translit = translit.replace(/œu/g, "œ-u");
   translit = translit.replace(/eœ/g, "e-œ");
