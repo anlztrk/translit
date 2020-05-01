@@ -228,7 +228,47 @@ function cyrlat () {
   translit = translit.replace(/õ/g, "eo");  
   translit = translit.replace(/ũ/g, "eu");
   translit = translit.replace(/ĩ/g, "ui");
-  
+
+  translit = translit.replace(/ㄱ/g, "g");
+  translit = translit.replace(/ㄴ/g, "n");
+  translit = translit.replace(/ㄷ/g, "d");
+  translit = translit.replace(/ㄹ/g, "l");
+  translit = translit.replace(/ㅁ/g, "m");
+  translit = translit.replace(/ㅂ/g, "b");
+  translit = translit.replace(/ㅅ/g, "s");
+  translit = translit.replace(/ㅇ/g, "ng");
+  translit = translit.replace(/ㅈ/g, "j");
+  translit = translit.replace(/ㅊ/g, "ch");
+  translit = translit.replace(/ㅋ/g, "k");
+  translit = translit.replace(/ㅌ/g, "t");
+  translit = translit.replace(/ㅍ/g, "p");
+  translit = translit.replace(/ㅎ/g, "h");
+  translit = translit.replace(/ㅏ/g, "a");
+  translit = translit.replace(/ㅑ/g, "ya");
+  translit = translit.replace(/ㅓ/g, "eo");
+  translit = translit.replace(/ㅕ/g, "yeo");
+  translit = translit.replace(/ㅗ/g, "o");
+  translit = translit.replace(/ㅛ/g, "yo");
+  translit = translit.replace(/ㅜ/g, "u");
+  translit = translit.replace(/ㅠ/g, "yu");
+  translit = translit.replace(/ㅡ/g, "eu");
+  translit = translit.replace(/ㅣ/g, "i");
+  translit = translit.replace(/ㄲ/g, "kk");
+  translit = translit.replace(/ㄸ/g, "tt");
+  translit = translit.replace(/ㅃ/g, "pp");
+  translit = translit.replace(/ㅆ/g, "ss");
+  translit = translit.replace(/ㅉ/g, "jj");
+  translit = translit.replace(/ㅐ/g, "ae");
+  translit = translit.replace(/ㅒ/g, "yae");
+  translit = translit.replace(/ㅔ/g, "e");
+  translit = translit.replace(/ㅖ/g, "ye");
+  translit = translit.replace(/ㅘ/g, "wa");
+  translit = translit.replace(/ㅙ/g, "wae");
+  translit = translit.replace(/ㅚ/g, "oe");
+  translit = translit.replace(/ㅝ/g, "wo");
+  translit = translit.replace(/ㅞ/g, "we");
+  translit = translit.replace(/ㅟ/g, "wi");
+  translit = translit.replace(/ㅢ/g, "ui");
 
 //re-adding Latin letters
   
