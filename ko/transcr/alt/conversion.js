@@ -157,6 +157,7 @@ function cyrlat () {
   translit = translit.replace(/(h|ɦ)t/g, "ṭ");  
   translit = translit.replace(/(d|s|ṣ|j|č|h)(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭśṗaeèioõœuũwy]|$))/g, "t$2");
   translit = translit.replace(/Th/g, "t");
+  translit = translit.replace(/nɦ(n|m)/g, "n$1");
   translit = translit.replace(/(s|j|č|t|T|h|ɦ)(n|l)/g, "nn");
   translit = translit.replace(/(s|j|č|t|T|h|ɦ)m/g, "nm");
   translit = translit.replace(/ɦ/g, "");
