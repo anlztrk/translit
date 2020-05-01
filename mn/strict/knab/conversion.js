@@ -1,6 +1,4 @@
-﻿
-//  copyright lexilogos.com
-var car;
+﻿var car;
 function cyrlat () {
 car = document.transcription.text1.value;
   car = car.replace(/еө/g, "йөө");
