@@ -113,7 +113,11 @@ function cyrlat () {
   translit = translit.replace(/\u1170/g, "we");
   translit = translit.replace(/\u1171/g, "wi");
   translit = translit.replace(/\u1174/g, "ũi");
-  translit = translit.normalize('NFC');
+  translit = translit.normalize('NFC');  
+  
+  translit = translit.replace(/(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)j·h/g, "$1·č");
+  translit = translit.replace(/lg·h/g, "l·k");
+  translit = translit.replace(/lb·h/g, "lp·h");
   
   translit = translit.replace(/(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)j·ŋ/g, "$1·j");
   translit = translit.replace(/(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)h·ŋ/g, "·$1");
@@ -125,6 +129,8 @@ function cyrlat () {
   translit = translit.replace(/(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)h·/g, "$1ɦ·");
   translit = translit.replace(/(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)s·/g, "$1·");
   translit = translit.replace(/l(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)·/g, "$1·");
+  translit = translit.replace(/(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)·ŋ/g, "$1·$2");
+  translit = translit.replace(/(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)(b|č|d|g|h|j|k|l|m|n|ŋ|p|s|t)/g, "$1");
   
   translit = translit.replace(/ŋ(a|e|è|i|o|õ|œ|u|ũ|y|w)/g, "$1");
   
@@ -134,6 +140,8 @@ function cyrlat () {
   translit = translit.replace(/(a|e|è|i|o|õ|œ|u|ũ)h·(a|e|è|i|o|õ|œ|u|ũ|y|w)/g, "$1·$2");
   
   translit = translit.replace(/·/g, "");
+  
+  translit = translit.replace(/jh/g, "čh");
   
   translit = translit.replace(/t/g, "T");
   translit = translit.replace(/g(l|n|m)/g, "ŋ$1");
@@ -162,8 +170,6 @@ function cyrlat () {
   translit = translit.replace(/(s|j|č|t|T|h|ɦ)m/g, "nm");
   translit = translit.replace(/ɦ/g, "");
   translit = translit.replace(/T/g, "t");
-  
-  translit = translit.replace(/(p|t|č|k)h(y|w)/g, "$1$2");
   
   translit = translit.replace(/b(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèioõœuũwy]|$))/g, "p$1");
   translit = translit.replace(/d(b|č|d|g|h|j|k|m|n|ŋ|p|r|s|t|ĉ|ḳ|ṭ|ṣ|ṗ|([^bčdghjkmnŋprstḳṭṣṗaeèioõœuũwy]|$))/g, "t$1");
