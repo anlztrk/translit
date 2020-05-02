@@ -152,8 +152,8 @@ function cyrlat () {
   translit = translit.replace(/ln/g, "ll");
   translit = translit.replace(/ml/g, "mn");
   translit = translit.replace(/b(g|d|b|s|j|č|k|t|p|h)/g, "p$1");
-  translit = translit.replace(/b(n|l)/g, "mn");
-  translit = translit.replace(/bm/g, "mm");
+  translit = translit.replace(/(b|p)(n|l)/g, "mn");
+  translit = translit.replace(/(b|p)m/g, "mm");
   translit = translit.replace(/(s|j|č)(g|d|b|s|j|č|k|t|p|h)/g, "t$2");
   translit = translit.replace(/ŋl/g, "ŋn");
   translit = translit.replace(/g(g|d|b|s|j|č|k|t|p|h)/g, "k$1");
