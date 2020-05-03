@@ -10,4 +10,15 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'Mirza';
+    src: url('Mirza-Regular.eot');
+    src: url('Mirza-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Mirza-Regular.woff2') format('woff2'),
+         url('Mirza-Regular.woff') format('woff'),
+         url('Mirza-Regular.ttf') format('truetype'),
+         url('Mirza-Regular.svg#Mirza') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
