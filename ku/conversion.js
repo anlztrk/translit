@@ -1,4 +1,4 @@
-﻿//  zaciatocne e musi byt ye
+﻿
 var car;
 
 function cyrlat () {
