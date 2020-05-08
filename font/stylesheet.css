@@ -22,3 +22,15 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'lerkhatese';
+    src: url('lerkhatese.eot');
+    src: url('lerkhatese.eot?#iefix') format('embedded-opentype'),
+         url('lerkhatese.woff2') format('woff2'),
+         url('lerkhatese.woff') format('woff'),
+         url('lerkhatese.ttf') format('truetype'),
+         url('lerkhatese.svg#lerkhatese') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
