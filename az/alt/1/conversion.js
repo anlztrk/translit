@@ -2,10 +2,6 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
-  car = car.replace(/e/g, "é");
-  car = car.replace(/E/g, "É");
-  car = car.replace(/ə/g, "e");
-  car = car.replace(/Ə/g, "E");
   car = car.replace(/x/g, "ḥ");
   car = car.replace(/X/g, "Ḥ");
   
@@ -21,7 +17,14 @@ car = document.transcription.text1.value;
   car = car.replace(/GI/g, "GÎ");
   car = car.replace(/GO/g, "GÔ");
   car = car.replace(/GU/g, "GÛ");  
-  
+
+  car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü)Q(B|C|D|G|Ğ|J|Q|L|M|N|R|V|Y|Z|b|c|d|g|ğ|j|q|l|m|n|r|v|y|z)/g, "$1Ğ$2");
+  car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü|a|e|ə|ı|i|o|ö|u|ü)q(b|c|d|g|ğ|j|q|l|m|n|r|v|y|z)/g, "$1ğ$2");
+  car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü)Q/g, "$1X");
+  car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü|a|e|ə|ı|i|o|ö|u|ü)q/g, "$1x");
+  car = car.replace(/X(A|E|Ə|I|İ|O|Ö|U|Ü|a|e|ə|ı|i|o|ö|u|ü)/g, "Q$1");
+  car = car.replace(/x(a|e|ə|ı|i|o|ö|u|ü)/g, "q$1");
+
   car = car.replace(/EQ/g, "EĠ");
   car = car.replace(/ƏQ/g, "ƏĠ");
   car = car.replace(/İQ/g, "İĠ");
@@ -57,12 +60,19 @@ car = document.transcription.text1.value;
   
   car = car.replace(/(ġ)(a|ı|o|u)/g, "g$2");
   car = car.replace(/(Ġ)(A|I|O|U|a|ı|o|u)/g, "G$2");
+
   
   car = car.replace(/(E|Ə|İ|Ö|Ü|e|ə|i|ö|ü)(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z|b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|z)q/g, "$1$2ġ");
   car = car.replace(/(E|Ə|İ|Ö|Ü|e|ə|i|ö|ü)(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z|b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|z)Q/g, "$1$2Ġ");
   
   car = car.replace(/q/g, "g");
   car = car.replace(/Q/g, "G");
+  car = car.replace(/e/g, "é");
+  car = car.replace(/E/g, "É");
+  car = car.replace(/ə/g, "e");
+  car = car.replace(/Ə/g, "E");
+  car = car.replace(/x/g, "ḥ");
+  car = car.replace(/X/g, "Ḥ");
 document.transcription.text2.value=car;
 }
 function latcyr () {

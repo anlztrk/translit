@@ -221,6 +221,17 @@ function cyrlat () {
   translit = translit.replace(/ㅃ/g, "ṗ");
   translit = translit.replace(/ㅆ/g, "ṣ");
   translit = translit.replace(/ㅉ/g, "c\u0323h");
+  translit = translit.replace(/ㄳ/g, "gs");
+  translit = translit.replace(/ㄵ/g, "nj");
+  translit = translit.replace(/ㄶ/g, "nh");
+  translit = translit.replace(/ㄺ/g, "rg");
+  translit = translit.replace(/ㄻ/g, "rm");
+  translit = translit.replace(/ㄼ/g, "rb");
+  translit = translit.replace(/ㄽ/g, "rs");
+  translit = translit.replace(/ㄾ/g, "lt");
+  translit = translit.replace(/ㄿ/g, "lp");
+  translit = translit.replace(/ㅀ/g, "lh");
+  translit = translit.replace(/ㅄ/g, "bs");
   translit = translit.replace(/ㅐ/g, "è");
   translit = translit.replace(/ㅒ/g, "yè");
   translit = translit.replace(/ㅔ/g, "e");
