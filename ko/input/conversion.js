@@ -2,6 +2,13 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
+  car = car.replace(/ç/g, "ч");
+  car = car.replace(/Ç/g, "Ч");
+  car = car.replace(/ň/g, "ң");
+  car = car.replace(/ş/g, "ш");
+  car = car.replace(/Ş/g, "Ш");
+
+  car = car.normalize('NFD');
 
   car = car.replace(/g/g, "ᄀ");
   car = car.replace(/G/g, "ᄁ");
@@ -17,17 +24,17 @@ car = document.transcription.text1.value;
   car = car.replace(/B/g, "ᄈ");
   car = car.replace(/P/g, "ᄈ");
   car = car.replace(/s/g, "ᄉ");
-  car = car.replace(/ş/g, "ᄉ");
+  car = car.replace(/ш/g, "ᄉ");
   car = car.replace(/S/g, "ᄊ");
-  car = car.replace(/Ş/g, "ᄊ");
-  car = car.replace(/ň/g, "ᄋ");
+  car = car.replace(/Ш/g, "ᄊ");
+  car = car.replace(/ң/g, "ᄋ");
   car = car.replace(/q/g, "ᄋ");
   car = car.replace(/j/g, "ᄌ");
   car = car.replace(/c/g, "ᄌ");
   car = car.replace(/J/g, "ᄍ");
   car = car.replace(/C/g, "ᄍ");
-  car = car.replace(/Ç/g, "ᄍ");
-  car = car.replace(/ç/g, "ᄎ");
+  car = car.replace(/Ч/g, "ᄍ");
+  car = car.replace(/ч/g, "ᄎ");
   car = car.replace(/k/g, "ᄏ");
   car = car.replace(/t/g, "ᄐ");
   car = car.replace(/p/g, "ᄑ");
@@ -55,7 +62,6 @@ car = document.transcription.text1.value;
   car = car.replace(/wᅦ/g, "ᅰ");
   car = car.replace(/wᅵ/g, "ᅱ");
   
-  car = car.normalize('NFD');
   
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄀ/g, "$1ᆨ");
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄁ/g, "$1ᆩ");
