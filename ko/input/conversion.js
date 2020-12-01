@@ -2,7 +2,7 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
-  car = car.replace(/(Q|R|Y|U|I|Ğ|Ü|A|F|H|L|İ|Z|X|V|N|M|Ö|ğ|ü|f|z|x|v|ö)/g, "");
+  car = car.replace(/(Q|R|Y|U|I|Ğ|Ü|A|F|H|L|İ|Z|X|V|N|M|Ö|ğ|f|z|x|v)/g, "");
   car = car.replace(/ç/g, "ч");
   car = car.replace(/Ç/g, "Ч");
   car = car.replace(/ň/g, "ң");
@@ -48,6 +48,8 @@ car = document.transcription.text1.value;
   car = car.replace(/u/g, "ᅮ");
   car = car.replace(/ı/g, "ᅳ");
   car = car.replace(/i/g, "ᅵ");
+  car = car.replace(/ö/g, "ᅬ");
+  car = car.replace(/ü/g, "ᅱ");
   car = car.replace(/yᅡ/g, "ᅣ");
   car = car.replace(/yᅢ/g, "ᅤ");
   car = car.replace(/yᅥ/g, "ᅧ");
