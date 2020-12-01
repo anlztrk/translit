@@ -6,8 +6,10 @@ car = document.transcription.text1.value;
   car = car.replace(/ç/g, "ч");
   car = car.replace(/Ç/g, "Ч");
   car = car.replace(/ň/g, "ң");
+  car = car.replace(/ö/g, "ө");
   car = car.replace(/ş/g, "ш");
   car = car.replace(/Ş/g, "Ш");
+  car = car.replace(/ü/g, "ү");
 
   car = car.normalize('NFD');
 
@@ -48,8 +50,8 @@ car = document.transcription.text1.value;
   car = car.replace(/u/g, "ᅮ");
   car = car.replace(/ı/g, "ᅳ");
   car = car.replace(/i/g, "ᅵ");
-  car = car.replace(/ö/g, "ᅬ");
-  car = car.replace(/ü/g, "ᅱ");
+  car = car.replace(/ө/g, "ᅬ");
+  car = car.replace(/ү/g, "ᅱ");
   car = car.replace(/yᅡ/g, "ᅣ");
   car = car.replace(/yᅢ/g, "ᅤ");
   car = car.replace(/yᅥ/g, "ᅧ");
