@@ -127,7 +127,8 @@ function cyrlat () {
   translit = translit.replace(/lh·ŋ/g, "l·h");
   translit = translit.replace(/bs·ŋ/g, "b·s");
   
-  translit = translit.replace(/(g|ḳ|n|d|ṭ|l|m|b|ṗ|s|ṣ|j|ĉ|č|k|t|p|h)·ŋ/g, "·$1");
+  translit = translit.replace(/(g|ḳ|n|d|ṭ|l|m|b|ṗ|s|ṣ|j|ĉ|č|k|t|p)·ŋ/g, "·$1");
+  translit = translit.replace(/h·ŋ/g, "·ŋ");
 
   translit = translit.replace(/(lb|ls|lt|lh)/g, "l");
   translit = translit.replace(/(gs|lg)/g, "g");
