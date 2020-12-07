@@ -116,28 +116,38 @@ function cyrlat () {
   
   translit = translit.replace(/gs·ŋ/g, "g·s");
   translit = translit.replace(/nj·ŋ/g, "n·j");
-  translit = translit.replace(/nh·ŋ/g, "n·h");
-  translit = translit.replace(/lg·ŋ/g, "l·g");
-  translit = translit.replace(/lg·g/g, "l·ḳ");
+  translit = translit.replace(/nj·l/g, "n·n");
+  translit = translit.replace(/nj·h/g, "n·h");
+  translit = translit.replace(/nh·(g|ḳ)/g, "n·k");
+  translit = translit.replace(/nh·d/g, "n·t");
+  translit = translit.replace(/nh·b/g, "n·p");
+  translit = translit.replace(/nh·(j|ĉ)/g, "n·č");
+  translit = translit.replace(/lg·(ŋ|g)/g, "l·g");
+  translit = translit.replace(/lg·ḳ/g, "l·ḳ");
+  translit = translit.replace(/lg·(k|h)/g, "l·k");
   translit = translit.replace(/lm·ŋ/g, "l·m");
   translit = translit.replace(/lb·ŋ/g, "l·b");
+  translit = translit.replace(/lb·h/g, "l·ph");
   translit = translit.replace(/ls·ŋ/g, "l·s");
+  translit = translit.replace(/ls·(n|l)/g, "l·n");
   translit = translit.replace(/lt·ŋ/g, "l·t");
   translit = translit.replace(/lp·ŋ/g, "l·p");
-  translit = translit.replace(/lh·ŋ/g, "l·h");
+  translit = translit.replace(/lh·ŋ/g, "·l");
+  translit = translit.replace(/lh·(g|ḳ)/g, "l·k");
+  translit = translit.replace(/lh·(d|ṭ)/g, "l·t");
+  translit = translit.replace(/lh·(b|ṗ)/g, "l·p");
+  translit = translit.replace(/lh·(j|ĉ)/g, "l·č");
   translit = translit.replace(/bs·ŋ/g, "b·s");
+  translit = translit.replace(/(gs·|lg·)/g, "g·");
+  translit = translit.replace(/(nj·|nh·)/g, "n·");
+  translit = translit.replace(/lm·/g, "m·");
+  translit = translit.replace(/(lb·|ls·|lt·|lh·)/g, "l·");
+  translit = translit.replace(/(lp·|bs·)/g, "b·");
   
   translit = translit.replace(/(g|ḳ|n|d|ṭ|l|m|b|ṗ|s|ṣ|j|ĉ|č|k|t|p)·ŋ/g, "·$1");
   translit = translit.replace(/h·ŋ/g, "·ŋ");
-
-  translit = translit.replace(/(lb|ls|lt|lh)/g, "l");
-  translit = translit.replace(/(gs|lg)/g, "g");
-  translit = translit.replace(/(nj|nh)/g, "n");
-  translit = translit.replace(/lm/g, "m");
-  translit = translit.replace(/lp/g, "p");
-  translit = translit.replace(/bs/g, "b");
   
-  translit = translit.replace(/(g|ḳ)·(g|ḳ|d|ṭ|b|ṗ|s|ṣ|j|ĉ|č|k|t|p|h)/g, "k·$2");
+  translit = translit.replace(/(g|ḳ)·(g|ḳ|d|0|b|ṗ|s|ṣ|j|ĉ|č|k|t|p|h)/g, "k·$2");
   translit = translit.replace(/(g|ḳ|ŋ|k)·(n|l)/g, "ŋ·n");
   translit = translit.replace(/(g|ḳ|k)·m/g, "ŋ·m");
   translit = translit.replace(/n·l/g, "l·l");
