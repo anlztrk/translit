@@ -1,8 +1,7 @@
-﻿
-var translit;
+﻿var translit;
 
 function cyrlat () {
-translit = document.transcription.text1.value;
+  translit = document.transcription.text1.value;
 //getting the Latin letters out of the way
 
   translit = translit.replace(/A/g, "А");
@@ -57,10 +56,9 @@ translit = document.transcription.text1.value;
   translit = translit.replace(/x/g, "х");
   translit = translit.replace(/y/g, "й");
   translit = translit.replace(/z/g, "з");
-  
+
   translit = translit.normalize('NFC');
   translit = translit.replace(/.{1}/g, "$&" + "·");
-  translit = translit.replace(/· ·/g, " ");
   translit = translit.normalize('NFD');
 
   translit = translit.replace(/(\u1100|\u11a8)/g, "g");
@@ -92,17 +90,17 @@ translit = document.transcription.text1.value;
   translit = translit.replace(/(\u115c|\u11ac)/g, "nj");
   translit = translit.replace(/(\u115d|\u11ad)/g, "nh");
   translit = translit.replace(/(\u1104|\ud7cd)/g, "ṭ");
-  translit = translit.replace(/(\ua964|\u11b0)/g, "rg");
-  translit = translit.replace(/(\ua968|\u11b1)/g, "rm");
-  translit = translit.replace(/(\ua969|\u11b2)/g, "rb");
-  translit = translit.replace(/(\ua96c|\u11b3)/g, "rs");
+  translit = translit.replace(/(\ua964|\u11b0)/g, "lg");
+  translit = translit.replace(/(\ua968|\u11b1)/g, "lm");
+  translit = translit.replace(/(\ua969|\u11b2)/g, "lb");
+  translit = translit.replace(/(\ua96c|\u11b3)/g, "ls");
   translit = translit.replace(/\u11b4/g, "lt");
   translit = translit.replace(/\u11b5/g, "lp");
   translit = translit.replace(/(\u111a|\u11b6)/g, "lh");
   translit = translit.replace(/(\u1108|\ud7e6)/g, "ṗ");
   translit = translit.replace(/(\u1121|\u11b9)/g, "bs");
   translit = translit.replace(/(\u110a|\u11bb)/g, "ṣ");
-  translit = translit.replace(/(\u110d|\ud7f9)/g, "č\u0323");
+  translit = translit.replace(/(\u110d|\ud7f9)/g, "ĉ");
   translit = translit.replace(/\u1162/g, "è");
   translit = translit.replace(/\u1164/g, "yè");
   translit = translit.replace(/\u1166/g, "e");
@@ -113,14 +111,169 @@ translit = document.transcription.text1.value;
   translit = translit.replace(/\u116f/g, "wõ");
   translit = translit.replace(/\u1170/g, "we");
   translit = translit.replace(/\u1171/g, "wi");
-  translit = translit.replace(/\u1174/g, "ũi");  
-  
-  translit = translit.replace(/(g|ḳ|n|d|ṭ|l|m|b|ṗ|s|ṣ|j|č\u0323|č|k|t|p|h)·ŋ(a|e|è|i|o|õ|u|ũ|y|w)/g, "·$1$2");
+  translit = translit.replace(/\u1174/g, "ũi");
+  translit = translit.normalize('NFC');  
 
-  translit = translit.replace(/ŋ(a|e|è|i|o|õ|u|ũ|y|w)/g, "$1");  
+  translit = translit.replace(/gs·ŋ/g, "g·s");
+  translit = translit.replace(/nj·ŋ/g, "n·j");
+  translit = translit.replace(/nj·l/g, "n·n");
+  translit = translit.replace(/nj·h/g, "n·č");
+  translit = translit.replace(/nh·(g|ḳ)/g, "n·k");
+  translit = translit.replace(/nh·d/g, "n·t");
+  translit = translit.replace(/nh·b/g, "n·p");
+  translit = translit.replace(/nh·(j|ĉ)/g, "n·č");
+  translit = translit.replace(/lg·(ŋ|g)/g, "l·g");
+  translit = translit.replace(/lg·ḳ/g, "l·ḳ");
+  translit = translit.replace(/lg·(k|h)/g, "l·k");
+  translit = translit.replace(/lm·ŋ/g, "l·m");
+  translit = translit.replace(/lb·ŋ/g, "l·b");
+  translit = translit.replace(/lb·h/g, "l·ph");
+  translit = translit.replace(/ls·ŋ/g, "l·s");
+  translit = translit.replace(/ls·(n|l)/g, "l·n");
+  translit = translit.replace(/lt·ŋ/g, "l·t");
+  translit = translit.replace(/lp·ŋ/g, "l·p");
+  translit = translit.replace(/lh·ŋ/g, "·l");
+  translit = translit.replace(/lh·(g|ḳ)/g, "l·k");
+  translit = translit.replace(/lh·(d|ṭ)/g, "l·t");
+  translit = translit.replace(/lh·(b|ṗ)/g, "l·p");
+  translit = translit.replace(/lh·(j|ĉ)/g, "l·č");
+  translit = translit.replace(/bs·ŋ/g, "b·s");
+  translit = translit.replace(/(gs·|lg·)/g, "g·");
+  translit = translit.replace(/(nj·|nh·)/g, "n·");
+  translit = translit.replace(/lm·/g, "m·");
+  translit = translit.replace(/(lb·|ls·|lt·|lh·)/g, "l·");
+  translit = translit.replace(/(lp·|bs·)/g, "b·");
   
+  translit = translit.replace(/(g|ḳ|n|d|ṭ|l|m|b|ṗ|s|ṣ|j|ĉ|č|k|t|p)·ŋ/g, "·$1");
+  translit = translit.replace(/h·ŋ/g, "·ŋ");
+  
+  translit = translit.replace(/(g|ḳ)·(g|ḳ|d|0|b|ṗ|s|ṣ|j|ĉ|č|k|t|p|h)/g, "k·$2");
+  translit = translit.replace(/(g|ḳ|ŋ|k)·(n|l)/g, "ŋ·n");
+  translit = translit.replace(/(g|ḳ|k)·m/g, "ŋ·m");
+  translit = translit.replace(/n·l/g, "l·l");
+  translit = translit.replace(/(d|s|ṣ|č)·(g|ḳ|d|ṭ|b|ṗ|s|ṣ|j|ĉ|č|k|t|p|h)/g, "t·$2");
+  translit = translit.replace(/(d|s|ṣ|j|č|t|h)·(n|l)/g, "n·n");
+  translit = translit.replace(/(d|s|ṣ|j|č|t|h)·m/g, "n·m");
+  translit = translit.replace(/l·n/g, "l·l");
+  translit = translit.replace(/(m|b|p)·(n|l)/g, "m·n");
+  translit = translit.replace(/b·(g|ḳ|d|ṭ|b|ṗ|s|ṣ|j|ĉ|č|k|t|p|h)/g, "p·$1");
+  translit = translit.replace(/b·m/g, "m·m");
+  translit = translit.replace(/j·(g|ḳ|d|ṭ|b|ṗ|s|ṣ|j|ĉ|č|k|t|p)/g, "t·$1");
+  translit = translit.replace(/j·h/g, "·č");
+  translit = translit.replace(/p·m/g, "m·m");
+  translit = translit.replace(/h·(g|ḳ)/g, "·k");
+  translit = translit.replace(/h·(d|ṭ)/g, "·t");
+  translit = translit.replace(/h·(b|ṗ)/g, "·p");
+  translit = translit.replace(/h·(j|ĉ)/g, "·č");
+  translit = translit.replace(/h·č/g, "t·č");
+  translit = translit.replace(/h·(s|ṣ|k|t|p|h)/g, "·$1");
+  
+  translit = translit.replace(/(g|ḳ)·/g, "k·");
+  translit = translit.replace(/(d|s|ṣ|j|č|h)·/g, "t·");
+  translit = translit.replace(/b·/g, "p·");
+  translit = translit.replace(/h·/g, "t·");
+  
+  translit = translit.replace(/ŋ(a|e|è|i|o|õ|œ|u|ũ|y|w)/g, "$1");
+
   translit = translit.replace(/·/g, "");
-  translit = translit.normalize('NFC');
+ 
+  translit = translit.replace(/l(a|e|è|i|o|õ|œ|u|ũ|y|w)/g, "r$1");
+  translit = translit.replace(/lr/g, "ll");
+  
+  translit = translit.replace(/s(i|y|wi)/g, "š$1");
+  translit = translit.replace(/ṣ(i|y|wi)/g, "š\u0323$1");
+
+  translit = translit.replace(/sh/g, "s-h");
+  translit = translit.replace(/ng/g, "n-g")
+  translit = translit.replace(/š\u0323/g, "s\u0323h");
+  translit = translit.replace(/š/g, "sh");
+  translit = translit.replace(/ŋ(a|e|è|i|o|õ|u|ũ|y|w)/g, "ŋ-$1");
+  translit = translit.replace(/ŋ/g, "ng");
+  translit = translit.replace(/ĉ/g, "c\u0323h");
+  translit = translit.replace(/č/g, "ch");
+  translit = translit.replace(/œ/g, "we"); 
+  
+  translit = translit.replace(/ṗ/g, "p\u0301");
+  translit = translit.replace(/ḳ/g, "k\u0301");
+  translit = translit.replace(/c\u0323h/g, "ç\u0301");
+  translit = translit.replace(/s\u0323h/g, "ş\u0301");
+  translit = translit.replace(/ṣ/g, "s\u0301");
+  translit = translit.replace(/ṭ/g, "t\u0301");
+
+
+  translit = translit.replace(/ch/g, "ç");
+  translit = translit.replace(/sh/g, "ş");
+  translit = translit.replace(/ng/g, "nğ");
+  translit = translit.replace(/j/g, "c");
+  translit = translit.replace(/w/g, "v");
+  translit = translit.replace(/è/g, "e");
+  translit = translit.replace(/õ/g, "ô");
+  translit = translit.replace(/ũ/g, "ı");
+  
+  translit = translit.replace(/ıi/g, "ıy");
+  
+  translit = translit.replace(/(a|e|i|o|ô|u|ı)(a|e|i|o|ô|u|ı)/g, "$1ğ$2");
+  translit = translit.replace(/(a|e|i|o|ô|u|ı)(a|e|i|o|ô|u|ı)/g, "$1ğ$2");
+  translit = translit.replace(/(a|e|i|o|ô|u|ı)(a|e|i|o|ô|u|ı)/g, "$1ğ$2");
+  translit = translit.replace(/(a|e|i|o|ô|u|ı)(a|e|i|o|ô|u|ı)/g, "$1ğ$2");
+  
+  translit = translit.replace(/n-g/g, "ng");
+  translit = translit.replace(/s-h/g, "sh");
+  translit = translit.replace(/nğ-/g, "nğ");
+  
+  
+  
+  translit = translit.replace(/ㄱ/g, "g");
+  translit = translit.replace(/ㄴ/g, "n");
+  translit = translit.replace(/ㄷ/g, "d");
+  translit = translit.replace(/ㄹ/g, "l");
+  translit = translit.replace(/ㅁ/g, "m");
+  translit = translit.replace(/ㅂ/g, "b");
+  translit = translit.replace(/ㅅ/g, "s");
+  translit = translit.replace(/ㅇ/g, "ng");
+  translit = translit.replace(/ㅈ/g, "j");
+  translit = translit.replace(/ㅊ/g, "ch");
+  translit = translit.replace(/ㅋ/g, "k");
+  translit = translit.replace(/ㅌ/g, "t");
+  translit = translit.replace(/ㅍ/g, "p");
+  translit = translit.replace(/ㅎ/g, "h");
+  translit = translit.replace(/ㅏ/g, "a");
+  translit = translit.replace(/ㅑ/g, "ya");
+  translit = translit.replace(/ㅓ/g, "õ");
+  translit = translit.replace(/ㅕ/g, "yõ");
+  translit = translit.replace(/ㅗ/g, "o");
+  translit = translit.replace(/ㅛ/g, "yo");
+  translit = translit.replace(/ㅜ/g, "u");
+  translit = translit.replace(/ㅠ/g, "yu");
+  translit = translit.replace(/ㅡ/g, "ũ");
+  translit = translit.replace(/ㅣ/g, "i");
+  translit = translit.replace(/ㄲ/g, "ḳ");
+  translit = translit.replace(/ㄸ/g, "ṭ");
+  translit = translit.replace(/ㅃ/g, "ṗ");
+  translit = translit.replace(/ㅆ/g, "ṣ");
+  translit = translit.replace(/ㅉ/g, "c\u0323h");
+  translit = translit.replace(/ㄳ/g, "gs");
+  translit = translit.replace(/ㄵ/g, "nj");
+  translit = translit.replace(/ㄶ/g, "nh");
+  translit = translit.replace(/ㄺ/g, "rg");
+  translit = translit.replace(/ㄻ/g, "rm");
+  translit = translit.replace(/ㄼ/g, "rb");
+  translit = translit.replace(/ㄽ/g, "rs");
+  translit = translit.replace(/ㄾ/g, "lt");
+  translit = translit.replace(/ㄿ/g, "lp");
+  translit = translit.replace(/ㅀ/g, "lh");
+  translit = translit.replace(/ㅄ/g, "bs");
+  translit = translit.replace(/ㅐ/g, "è");
+  translit = translit.replace(/ㅒ/g, "yè");
+  translit = translit.replace(/ㅔ/g, "e");
+  translit = translit.replace(/ㅖ/g, "ye");
+  translit = translit.replace(/ㅘ/g, "wa");
+  translit = translit.replace(/ㅙ/g, "wè");
+  translit = translit.replace(/ㅚ/g, "we");
+  translit = translit.replace(/ㅝ/g, "wõ");
+  translit = translit.replace(/ㅞ/g, "we");
+  translit = translit.replace(/ㅟ/g, "wi");
+  translit = translit.replace(/ㅢ/g, "ũi");
 
 //re-adding Latin letters
   
@@ -176,6 +329,8 @@ translit = document.transcription.text1.value;
   translit = translit.replace(/х/g, "x");
   translit = translit.replace(/й/g, "y");
   translit = translit.replace(/з/g, "z");
+  
+  translit = translit.normalize('NFC');
 document.transcription.text2.value = translit;
 }
 
