@@ -207,15 +207,15 @@ function cyrlat () {
   translit = translit.replace(/j/g, "c");
   translit = translit.replace(/w/g, "v");
   translit = translit.replace(/è/g, "e");
-  translit = translit.replace(/õ/g, "ô");
+  translit = translit.replace(/õ/g, "å");
   translit = translit.replace(/ũ/g, "ı");
   
   translit = translit.replace(/ıi/g, "ıy");
   
-  translit = translit.replace(/(a|e|i|o|ô|u|ı)(a|e|i|o|ô|u|ı)/g, "$1ğ$2");
-  translit = translit.replace(/(a|e|i|o|ô|u|ı)(a|e|i|o|ô|u|ı)/g, "$1ğ$2");
-  translit = translit.replace(/(a|e|i|o|ô|u|ı)(a|e|i|o|ô|u|ı)/g, "$1ğ$2");
-  translit = translit.replace(/(a|e|i|o|ô|u|ı)(a|e|i|o|ô|u|ı)/g, "$1ğ$2");
+  translit = translit.replace(/(a|e|i|o|å|u|ı)(a|e|i|o|å|u|ı)/g, "$1ğ$2");
+  translit = translit.replace(/(a|e|i|o|å|u|ı)(a|e|i|o|å|u|ı)/g, "$1ğ$2");
+  translit = translit.replace(/(a|e|i|o|å|u|ı)(a|e|i|o|å|u|ı)/g, "$1ğ$2");
+  translit = translit.replace(/(a|e|i|o|å|u|ı)(a|e|i|o|å|u|ı)/g, "$1ğ$2");
   
   translit = translit.replace(/n-g/g, "ng");
   translit = translit.replace(/s-h/g, "sh");
