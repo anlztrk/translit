@@ -207,7 +207,7 @@ function cyrlat () {
   translit = translit.replace(/j/g, "c");
   translit = translit.replace(/w/g, "v");
   translit = translit.replace(/è/g, "e");
-  translit = translit.replace(/õ/g, "å");
+  translit = translit.replace(/õ/g, "o\u0363");
   translit = translit.replace(/ũ/g, "ı");
   
   translit = translit.replace(/ıi/g, "ıy");
