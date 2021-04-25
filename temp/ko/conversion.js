@@ -1,7 +1,172 @@
-﻿var translit;
-
-function cyrlat () {
+﻿function cyrlat () {
   translit = document.transcription.text1.value;
+  var translit;
+
+  translit = document.transcription.text1.value;
+  translit = translit.replace(/(Q|R|Y|U|I|Ğ|Ü|A|F|H|L|İ|Z|X|V|N|M|Ö|ğ|f|z|x|v)/g, "");
+  translit = translit.replace(/ç/g, "ч");
+  translit = translit.replace(/Ç/g, "Ч");
+  translit = translit.replace(/ň/g, "ң");
+  translit = translit.replace(/ö/g, "ө");
+  translit = translit.replace(/ş/g, "ш");
+  translit = translit.replace(/Ş/g, "Ш");
+  translit = translit.replace(/ü/g, "ү");
+
+  translit = translit.normalize('NFD');
+
+  translit = translit.replace(/g/g, "ᄀ");
+  translit = translit.replace(/G/g, "ᄁ");
+  translit = translit.replace(/K/g, "ᄁ");
+  translit = translit.replace(/n/g, "ᄂ");
+  translit = translit.replace(/d/g, "ᄃ");
+  translit = translit.replace(/D/g, "ᄄ");
+  translit = translit.replace(/T/g, "ᄄ");
+  translit = translit.replace(/r/g, "ᄅ");
+  translit = translit.replace(/l/g, "ᄅ");
+  translit = translit.replace(/m/g, "ᄆ");
+  translit = translit.replace(/b/g, "ᄇ");
+  translit = translit.replace(/B/g, "ᄈ");
+  translit = translit.replace(/P/g, "ᄈ");
+  translit = translit.replace(/s/g, "ᄉ");
+  translit = translit.replace(/ш/g, "ᄉ");
+  translit = translit.replace(/S/g, "ᄊ");
+  translit = translit.replace(/Ш/g, "ᄊ");
+  translit = translit.replace(/ң/g, "ᄋ");
+  translit = translit.replace(/q/g, "ᄋ");
+  translit = translit.replace(/j/g, "ᄌ");
+  translit = translit.replace(/c/g, "ᄌ");
+  translit = translit.replace(/J/g, "ᄍ");
+  translit = translit.replace(/C/g, "ᄍ");
+  translit = translit.replace(/Ч/g, "ᄍ");
+  translit = translit.replace(/ч/g, "ᄎ");
+  translit = translit.replace(/k/g, "ᄏ");
+  translit = translit.replace(/t/g, "ᄐ");
+  translit = translit.replace(/p/g, "ᄑ");
+  translit = translit.replace(/h/g, "ᄒ");
+  translit = translit.replace(/a/g, "ᅡ");
+  translit = translit.replace(/E/g, "ᅢ");
+  translit = translit.replace(/O/g, "ᅥ");
+  translit = translit.replace(/e/g, "ᅦ");
+  translit = translit.replace(/o/g, "ᅩ");
+  translit = translit.replace(/u/g, "ᅮ");
+  translit = translit.replace(/ı/g, "ᅳ");
+  translit = translit.replace(/i/g, "ᅵ");
+  translit = translit.replace(/ө/g, "ᅬ");
+  translit = translit.replace(/ү/g, "ᅱ");
+  translit = translit.replace(/yᅡ/g, "ᅣ");
+  translit = translit.replace(/yᅢ/g, "ᅤ");
+  translit = translit.replace(/yᅥ/g, "ᅧ");
+  translit = translit.replace(/yᅦ/g, "ᅨ");
+  translit = translit.replace(/yᅩ/g, "ᅭ");
+  translit = translit.replace(/yᅮ/g, "ᅲ");
+  translit = translit.replace(/ᅳy/g, "ᅴ");
+  translit = translit.replace(/wᅡ/g, "ᅪ");
+  translit = translit.replace(/wᅢ/g, "ᅫ");
+  translit = translit.replace(/Wᅦ/g, "ᅬ");
+  translit = translit.replace(/Wᅵ/g, "ᅬ");
+  translit = translit.replace(/wᅥ/g, "ᅯ");
+  translit = translit.replace(/wᅦ/g, "ᅰ");
+  translit = translit.replace(/wᅵ/g, "ᅱ");
+  
+  
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄀ/g, "$1ᆨ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄁ/g, "$1ᆩ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄂ/g, "$1ᆫ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄃ/g, "$1ᆮ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄅ/g, "$1ᆯ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄆ/g, "$1ᆷ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄇ/g, "$1ᆸ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄉ/g, "$1ᆺ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄊ/g, "$1ᆻ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄋ/g, "$1ᆼ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄌ/g, "$1ᆽ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄎ/g, "$1ᆾ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄏ/g, "$1ᆿ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄐ/g, "$1ᇀ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄑ/g, "$1ᇁ");
+  translit = translit.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄒ/g, "$1ᇂ");
+  translit = translit.replace(/ᆨᄉ/g, "ᆪ");
+  translit = translit.replace(/ᆫᄌ/g, "ᆬ");
+  translit = translit.replace(/ᆫᄒ/g, "ᆭ");
+  translit = translit.replace(/ᆯᄀ/g, "ᆰ");
+  translit = translit.replace(/ᆯᄆ/g, "ᆱ");
+  translit = translit.replace(/ᆯᄇ/g, "ᆲ");
+  translit = translit.replace(/ᆯᄉ/g, "ᆳ");
+  translit = translit.replace(/ᆯᄐ/g, "ᆴ");
+  translit = translit.replace(/ᆯᄑ/g, "ᆵ");
+  translit = translit.replace(/ᆯᄒ/g, "ᆶ");
+  translit = translit.replace(/ᆸᄉ/g, "ᆹ");
+  
+  translit = translit.replace(/ᆨ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄀ$1");
+  translit = translit.replace(/ᆩ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄁ$1");
+  translit = translit.replace(/ᆫ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄂ$1");
+  translit = translit.replace(/ᆮ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄃ$1");
+  translit = translit.replace(/ᆯ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄅ$1");
+  translit = translit.replace(/ᆷ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄆ$1");
+  translit = translit.replace(/ᆸ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄇ$1");
+  translit = translit.replace(/ᆺ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄉ$1");
+  translit = translit.replace(/ᆻ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄊ$1");
+  translit = translit.replace(/ᆼ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄋ$1");
+  translit = translit.replace(/ᆽ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄌ$1");
+  translit = translit.replace(/ᆾ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄎ$1");
+  translit = translit.replace(/ᆿ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄏ$1");
+  translit = translit.replace(/ᇀ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄐ$1");
+  translit = translit.replace(/ᇁ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄑ$1");
+  translit = translit.replace(/ᇂ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᄒ$1");
+  translit = translit.replace(/ᆪ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆨᄉ$1");
+  translit = translit.replace(/ᆬ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆫᄌ$1");
+  translit = translit.replace(/ᆭ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆫᄒ$1");
+  translit = translit.replace(/ᆰ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆯᄀ$1");
+  translit = translit.replace(/ᆱ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆯᄆ$1");
+  translit = translit.replace(/ᆲ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆯᄇ$1");
+  translit = translit.replace(/ᆳ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆯᄉ$1");
+  translit = translit.replace(/ᆴ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆯᄐ$1");
+  translit = translit.replace(/ᆵ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆯᄑ$1");
+  translit = translit.replace(/ᆶ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆯᄒ$1");
+  translit = translit.replace(/ᆹ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, "ᆸᄉ$1");
+  translit = translit.normalize('NFC');
+  
+  translit = translit.replace(/ᄀ /g, "ㄱ");
+  translit = translit.replace(/ᄁ /g, "ㄲ");
+  translit = translit.replace(/ᄂ /g, "ㄴ");
+  translit = translit.replace(/ᄃ /g, "ㄷ");
+  translit = translit.replace(/ᄄ /g, "ㄸ");
+  translit = translit.replace(/ᄅ /g, "ㄹ");
+  translit = translit.replace(/ᄆ /g, "ㅁ");
+  translit = translit.replace(/ᄇ /g, "ㅂ");
+  translit = translit.replace(/ᄈ /g, "ㅃ");
+  translit = translit.replace(/ᄉ /g, "ㅅ");
+  translit = translit.replace(/ᄊ /g, "ㅆ");
+  translit = translit.replace(/ᄋ /g, "ㅇ");
+  translit = translit.replace(/ᄌ /g, "ㅈ");
+  translit = translit.replace(/ᄍ /g, "ㅉ");
+  translit = translit.replace(/ᄎ /g, "ㅊ");
+  translit = translit.replace(/ᄏ /g, "ㅋ");
+  translit = translit.replace(/ᄐ /g, "ㅌ");
+  translit = translit.replace(/ᄑ /g, "ㅍ");
+  translit = translit.replace(/ᄒ /g, "ㅎ");
+  translit = translit.replace(/ᅡ /g, "ㅏ");
+  translit = translit.replace(/ᅢ /g, "ㅐ");
+  translit = translit.replace(/ᅣ /g, "ㅑ");
+  translit = translit.replace(/ᅤ /g, "ㅒ");
+  translit = translit.replace(/ᅥ /g, "ㅓ");
+  translit = translit.replace(/ᅦ /g, "ㅔ");
+  translit = translit.replace(/ᅧ /g, "ㅕ");
+  translit = translit.replace(/ᅨ /g, "ㅖ");
+  translit = translit.replace(/ᅩ /g, "ㅗ");
+  translit = translit.replace(/ᅪ /g, "ㅘ");
+  translit = translit.replace(/ᅫ /g, "ㅙ");
+  translit = translit.replace(/ᅬ /g, "ㅚ");
+  translit = translit.replace(/ᅭ /g, "ㅛ");
+  translit = translit.replace(/ᅮ /g, "ㅜ");
+  translit = translit.replace(/ᅯ /g, "ㅝ");
+  translit = translit.replace(/ᅰ /g, "ㅞ");
+  translit = translit.replace(/ᅱ /g, "ㅟ");
+  translit = translit.replace(/ᅲ /g, "ㅠ");
+  translit = translit.replace(/ᅳ /g, "ㅡ");
+  translit = translit.replace(/ᅴ /g, "ㅢ");
+  translit = translit.replace(/ᅵ /g, "ㅣ");  
+  
 //getting the Latin letters out of the way
 
   translit = translit.replace(/A/g, "А");
@@ -111,9 +276,9 @@ function cyrlat () {
   translit = translit.replace(/\u116f/g, "wõ");
   translit = translit.replace(/\u1170/g, "we");
   translit = translit.replace(/\u1171/g, "wi");
-  translit = translit.replace(/\u1174/g, "ũi");
+  translit = translit.replace(/\u1174/g, "ĩ");
   translit = translit.normalize('NFC');  
-
+  
   translit = translit.replace(/gs·ŋ/g, "g·s");
   translit = translit.replace(/nj·ŋ/g, "n·j");
   translit = translit.replace(/nj·l/g, "n·n");
@@ -173,56 +338,63 @@ function cyrlat () {
   translit = translit.replace(/b·/g, "p·");
   translit = translit.replace(/h·/g, "t·");
   
-  translit = translit.replace(/ŋ(a|e|è|i|o|õ|œ|u|ũ|y|w)/g, "$1");
+  translit = translit.replace(/ŋ(a|e|è|i|ĩ|o|õ|œ|u|ũ|y|w)/g, "$1");
 
   translit = translit.replace(/·/g, "");
  
-  translit = translit.replace(/l(a|e|è|i|o|õ|œ|u|ũ|y|w)/g, "r$1");
+  translit = translit.replace(/l(a|e|è|i|ĩ|o|õ|œ|u|ũ|y|w)/g, "r$1");
   translit = translit.replace(/lr/g, "ll");
   
-  translit = translit.replace(/s(i|y|wi)/g, "š$1");
-  translit = translit.replace(/ṣ(i|y|wi)/g, "š\u0323$1");
-
-  translit = translit.replace(/sh/g, "s-h");
-  translit = translit.replace(/ng/g, "n-g")
-  translit = translit.replace(/š\u0323/g, "s\u0323h");
-  translit = translit.replace(/š/g, "sh");
-  translit = translit.replace(/ŋ(a|e|è|i|o|õ|u|ũ|y|w)/g, "ŋ-$1");
+  translit = translit.replace(/èĩ/g, "è-ĩ");
+  translit = translit.replace(/ae/g, "a-e");
+  translit = translit.replace(/eo/g, "e-o");
+  translit = translit.replace(/eu/g, "e-u");
+  translit = translit.replace(/eĩ/g, "e-ĩ");
+  translit = translit.replace(/oe/g, "o-e");
+  translit = translit.replace(/ui/g, "u-i");
+  translit = translit.replace(/oõ/g, "o-õ");
+  translit = translit.replace(/oũ/g, "o-ũ");
+  translit = translit.replace(/õe/g, "õ-e");
+  translit = translit.replace(/œĩ/g, "œ-ĩ");
+  translit = translit.replace(/œo/g, "œ-o");
+  translit = translit.replace(/œu/g, "œ-u");
+  translit = translit.replace(/eœ/g, "e-œ");
+  translit = translit.replace(/õũ/g, "õ-ũ");
+  translit = translit.replace(/eũ/g, "e-ũ");
+  translit = translit.replace(/œũ/g, "œ-ũ");
+  translit = translit.replace(/aõ/g, "a-õ");
+  translit = translit.replace(/aũ/g, "a-ũ");
+  translit = translit.replace(/eo/g, "e-o");
+  translit = translit.replace(/eu/g, "e-u");
+  translit = translit.replace(/ae/g, "a-e");
+  translit = translit.replace(/oe/g, "o-e");
+  translit = translit.replace(/èo/g, "è-o");
+  translit = translit.replace(/èu/g, "è-u");
+  translit = translit.replace(/ũi/g, "ũ-i");
+  translit = translit.replace(/jj/g, "j-j");
+  translit = translit.replace(/kk/g, "k-k");
+  translit = translit.replace(/pp/g, "p-p");
+  translit = translit.replace(/ss/g, "s-s");
+  translit = translit.replace(/tt/g, "t-t");  
+  translit = translit.replace(/ng/g, "n-g");
+  
+  translit = translit.replace(/è/g, "ae");
+  translit = translit.replace(/ḳ/g, "kk");
+  translit = translit.replace(/ṗ/g, "pp");
+  translit = translit.replace(/ṣ/g, "ss");
+  translit = translit.replace(/ṭ/g, "tt");
+  translit = translit.replace(/wõ/g, "wo");
+  
+  translit = translit.replace(/ŋ(a|e|è|i|ĩ|o|õ|u|ũ|y|w)/g, "ŋ-$1");
   translit = translit.replace(/ŋ/g, "ng");
-  translit = translit.replace(/ĉ/g, "c\u0323h");
+  translit = translit.replace(/ĉ/g, "jj");
   translit = translit.replace(/č/g, "ch");
-  translit = translit.replace(/œ/g, "we"); 
-  
-  translit = translit.replace(/ṗ/g, "p\u0301");
-  translit = translit.replace(/ḳ/g, "k\u0301");
-  translit = translit.replace(/c\u0323h/g, "ç\u0301");
-  translit = translit.replace(/s\u0323h/g, "ş\u0301");
-  translit = translit.replace(/ṣ/g, "s\u0301");
-  translit = translit.replace(/ṭ/g, "t\u0301");
+  translit = translit.replace(/è/g, "ae");
+  translit = translit.replace(/œ/g, "oe");
+  translit = translit.replace(/õ/g, "eo");  
+  translit = translit.replace(/ũ/g, "eu");
+  translit = translit.replace(/ĩ/g, "ui");
 
-
-  translit = translit.replace(/ch/g, "ç");
-  translit = translit.replace(/sh/g, "ş");
-  translit = translit.replace(/ng/g, "nğ");
-  translit = translit.replace(/j/g, "c");
-  translit = translit.replace(/w/g, "v");
-  translit = translit.replace(/è/g, "e");
-  translit = translit.replace(/õ/g, "o\u0363");
-  translit = translit.replace(/ũ/g, "ı");
-  
-  translit = translit.replace(/ıi/g, "ıy");
-  
-  translit = translit.replace(/(a|e|i|o|å|u|ı)(a|e|i|o|å|u|ı)/g, "$1ğ$2");
-  translit = translit.replace(/(a|e|i|o|å|u|ı)(a|e|i|o|å|u|ı)/g, "$1ğ$2");
-  translit = translit.replace(/(a|e|i|o|å|u|ı)(a|e|i|o|å|u|ı)/g, "$1ğ$2");
-  translit = translit.replace(/(a|e|i|o|å|u|ı)(a|e|i|o|å|u|ı)/g, "$1ğ$2");
-  
-  translit = translit.replace(/n-g/g, "ng");
-  translit = translit.replace(/s-h/g, "sh");
-  translit = translit.replace(/nğ-/g, "nğ");
-  
-  
-  
   translit = translit.replace(/ㄱ/g, "g");
   translit = translit.replace(/ㄴ/g, "n");
   translit = translit.replace(/ㄷ/g, "d");
@@ -239,19 +411,19 @@ function cyrlat () {
   translit = translit.replace(/ㅎ/g, "h");
   translit = translit.replace(/ㅏ/g, "a");
   translit = translit.replace(/ㅑ/g, "ya");
-  translit = translit.replace(/ㅓ/g, "õ");
-  translit = translit.replace(/ㅕ/g, "yõ");
+  translit = translit.replace(/ㅓ/g, "eo");
+  translit = translit.replace(/ㅕ/g, "yeo");
   translit = translit.replace(/ㅗ/g, "o");
   translit = translit.replace(/ㅛ/g, "yo");
   translit = translit.replace(/ㅜ/g, "u");
   translit = translit.replace(/ㅠ/g, "yu");
-  translit = translit.replace(/ㅡ/g, "ũ");
+  translit = translit.replace(/ㅡ/g, "eu");
   translit = translit.replace(/ㅣ/g, "i");
-  translit = translit.replace(/ㄲ/g, "ḳ");
-  translit = translit.replace(/ㄸ/g, "ṭ");
-  translit = translit.replace(/ㅃ/g, "ṗ");
-  translit = translit.replace(/ㅆ/g, "ṣ");
-  translit = translit.replace(/ㅉ/g, "c\u0323h");
+  translit = translit.replace(/ㄲ/g, "kk");
+  translit = translit.replace(/ㄸ/g, "tt");
+  translit = translit.replace(/ㅃ/g, "pp");
+  translit = translit.replace(/ㅆ/g, "ss");
+  translit = translit.replace(/ㅉ/g, "jj");
   translit = translit.replace(/ㄳ/g, "gs");
   translit = translit.replace(/ㄵ/g, "nj");
   translit = translit.replace(/ㄶ/g, "nh");
@@ -263,17 +435,17 @@ function cyrlat () {
   translit = translit.replace(/ㄿ/g, "lp");
   translit = translit.replace(/ㅀ/g, "lh");
   translit = translit.replace(/ㅄ/g, "bs");
-  translit = translit.replace(/ㅐ/g, "è");
-  translit = translit.replace(/ㅒ/g, "yè");
+  translit = translit.replace(/ㅐ/g, "ae");
+  translit = translit.replace(/ㅒ/g, "yae");
   translit = translit.replace(/ㅔ/g, "e");
   translit = translit.replace(/ㅖ/g, "ye");
   translit = translit.replace(/ㅘ/g, "wa");
-  translit = translit.replace(/ㅙ/g, "wè");
-  translit = translit.replace(/ㅚ/g, "we");
-  translit = translit.replace(/ㅝ/g, "wõ");
+  translit = translit.replace(/ㅙ/g, "wae");
+  translit = translit.replace(/ㅚ/g, "oe");
+  translit = translit.replace(/ㅝ/g, "wo");
   translit = translit.replace(/ㅞ/g, "we");
   translit = translit.replace(/ㅟ/g, "wi");
-  translit = translit.replace(/ㅢ/g, "ũi");
+  translit = translit.replace(/ㅢ/g, "ui");
 
 //re-adding Latin letters
   
@@ -329,8 +501,6 @@ function cyrlat () {
   translit = translit.replace(/х/g, "x");
   translit = translit.replace(/й/g, "y");
   translit = translit.replace(/з/g, "z");
-  
-  translit = translit.normalize('NFC');
 document.transcription.text2.value = translit;
 }
 

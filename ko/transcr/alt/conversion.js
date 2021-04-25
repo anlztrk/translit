@@ -119,7 +119,10 @@ function cyrlat () {
   translit = translit.replace(/nj·l/g, "n·n");
   translit = translit.replace(/nj·h/g, "n·č");
   translit = translit.replace(/nh·(g|ḳ)/g, "n·k");
+  translit = translit.replace(/nh·ṭ/g, "n·t");
+  translit = translit.replace(/nh·ṗ/g, "n·p");
   translit = translit.replace(/nh·d/g, "n·t");
+  translit = translit.replace(/nh·l/g, "n·n");
   translit = translit.replace(/nh·b/g, "n·p");
   translit = translit.replace(/nh·(j|ĉ)/g, "n·č");
   translit = translit.replace(/lg·(ŋ|g)/g, "l·g");
@@ -129,7 +132,7 @@ function cyrlat () {
   translit = translit.replace(/lb·ŋ/g, "l·b");
   translit = translit.replace(/lb·h/g, "l·ph");
   translit = translit.replace(/ls·ŋ/g, "l·s");
-  translit = translit.replace(/ls·(n|l)/g, "l·n");
+  translit = translit.replace(/ls·(n|l)/g, "l·н");
   translit = translit.replace(/lt·ŋ/g, "l·t");
   translit = translit.replace(/lp·ŋ/g, "l·p");
   translit = translit.replace(/lh·ŋ/g, "·l");
