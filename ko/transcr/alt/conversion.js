@@ -112,6 +112,7 @@ function cyrlat () {
   translit = translit.replace(/\u1170/g, "we");
   translit = translit.replace(/\u1171/g, "wi");
   translit = translit.replace(/\u1174/g, "ũi");
+  translit = translit.replace(/ũ·ŋi/g, "ũ·-ŋi");
   translit = translit.normalize('NFC');  
 
   translit = translit.replace(/gs·ŋ/g, "g·s");
@@ -187,7 +188,7 @@ function cyrlat () {
   translit = translit.replace(/ṣ(i|y|wi)/g, "š\u0323$1");
 
   translit = translit.replace(/sh/g, "s-h");
-  translit = translit.replace(/ng/g, "n-g")
+  translit = translit.replace(/ng/g, "n-g");
   translit = translit.replace(/š\u0323/g, "s\u0323h");
   translit = translit.replace(/š/g, "sh");
   translit = translit.replace(/ŋ(a|e|è|i|o|õ|u|ũ|y|w)/g, "ŋ-$1");
