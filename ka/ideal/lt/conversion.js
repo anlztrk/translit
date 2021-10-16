@@ -131,6 +131,11 @@ car = document.transcription.text1.value;
   
   car = car.replace(/«/g, "\u201c");
   car = car.replace(/»/g, "\u201d");
+  
+  car = car.replace(/(1|2|3|4|5|6|7|8|9|0)h\u2060/g, "$1x");
+  car = car.replace(/(1|2|3|4|5|6|7|8|9|0)H\u2060/g, "$1X");
+  car = car.replace(/h\u2060(1|2|3|4|5|6|7|8|9|0)/g, "x$1");
+  car = car.replace(/H\u2060(1|2|3|4|5|6|7|8|9|0)/g, "X$1");
 document.transcription.text1.value=translit;
 document.transcription.text2.value=car;
 }
