@@ -1,6 +1,6 @@
 var car;
 function cyrlat () {
-car = document.transcription.text1.value; 
+car = document.transcription.text1.value;  
   car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2$3.$4$5");
   car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2$3.$4$5");
   car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2.$3$4");
@@ -45,7 +45,9 @@ car = document.transcription.text1.value;
   car = car.replace(/Â|â/g, "ʲa");
   car = car.replace(/Û|û/g, "ʲu");
 
-  car = car.replace(/eɰ/g, "ej");
+  car = car.replace(/eɰ/g, "eĵ");
+  car = car.replace(/ĵ(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)/g, "ː$1");
+  car = car.replace(/ĵ/g, "j");
   car = car.replace(/(a|i|o|u|y|œ|ɯ)ɰ/g, "$1ː");
   car = car.replace(/ɰ/g, "");
 
@@ -66,11 +68,12 @@ car = document.transcription.text1.value;
   car = car.replace(/ʲ(a|u)(b|dʒ|tʃ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "$1$2");
   car = car.replace(/ʲ(a|u)/g, "$1ː");
 
-  car = car.replace(/n(ɡ|\.ɡ|k|\.k)/g, "ŋ$1");
-  car = car.replace(/n(ɟ|\.ɟ|c|\.c)/g, "ɲ$1");
+  car = car.replace(/n(ɡ|.ɡ|k|.k)/g, "ŋ$1");
+  car = car.replace(/n(ɟ|.ɟ|c|.c)/g, "ɲ$1");
 
   car = car.replace(/.mez/g, ".mæz");
   car = car.replace(/e(ɾ|l|m|n)/g, "æ$1");
+  car = car.replace(/eː(ɾ|l|m|n)/g, "æː$1");
 
   car = car.replace(/(a|e|ɯ|i|o|œ|u|y)h/g, "$1ː");
 
