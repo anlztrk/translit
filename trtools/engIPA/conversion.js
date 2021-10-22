@@ -79,7 +79,7 @@ car = document.transcription.text1.value;
   car = car.replace(/eː(ɾ|l|m|n)/g, "æː$1");
 
   car = car.replace(/(a|e|ɯ|i|o|œ|u|y)h/g, "$1ː");
-  car = car.replace(/(o|œ|u|y)β/g, "$vː");
+  car = car.replace(/(o|œ|u|y)β/g, "$1vː");
 
   car = car.replace(/(p|b|c|ɟ|m|f|v|β|h)yː/g, "$1ju\u2060ː");
   car = car.replace(/βj/g, "vj");
