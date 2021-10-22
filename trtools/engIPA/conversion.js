@@ -82,7 +82,7 @@ car = document.transcription.text1.value;
   car = car.replace(/(u|y)ːɾ/g, "ʊəɾ");
   car = car.replace(/ajɾ/g, "a\u2060ɪəɾ");
   car = car.replace(/ejɾ/g, "ɛəɾ");
-  car = car.replace(/(ɯj|ij)ɾ/g, "ɪəɾ");
+  car = car.replace(/(ɯj|ij|ɯː|iː)ɾ/g, "ɪəɾ");
   car = car.replace(/(oj|œj)ɾ/g, "ɔɪəɾ");
   car = car.replace(/(uj|yj)ɾ/g, "wɪəɾ");
 
