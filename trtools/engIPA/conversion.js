@@ -71,8 +71,8 @@ car = document.transcription.text1.value;
   car = car.replace(/ʲ(a|u)(b|dʒ|tʃ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "$1$2");
   car = car.replace(/ʲ(a|u)/g, "$1ː");
 
-  car = car.replace(/n(ɡ|.ɡ|k|.k)/g, "ŋ$1");
-  car = car.replace(/n(ɟ|.ɟ|c|.c)/g, "ɲ$1");
+  car = car.replace(/n(ɡ|\.ɡ|k|\.k)/g, "ŋ$1");
+  car = car.replace(/n(ɟ|\.ɟ|c|\.c)/g, "ɲ$1");
 
   car = car.replace(/.mez/g, ".mæz");
   car = car.replace(/e(ɾ|l|m|n)/g, "æ$1");
