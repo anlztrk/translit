@@ -1,0 +1,76 @@
+var car;
+function cyrlat () {
+car = document.transcription.text1.value;
+  car = car.replace(/iang/g, "yang");
+  car = car.replace(/ying/g, "ing");
+  car = car.replace(/iong|yong/g, "yung");
+  car = car.replace(/uang|wang/g, "vang");
+  car = car.replace(/weng/g, "vıng");
+  car = car.replace(/juan/g, "jüen");
+  car = car.replace(/quan/g, "qüen");
+  car = car.replace(/xuan/g, "xüen");
+  car = car.replace(/lüan/g, "lüen");
+  car = car.replace(/yuan/g, "üen");
+  car = car.replace(/zhi/g, "zhı");
+  car = car.replace(/chi/g, "chı");
+  car = car.replace(/shi/g, "shı");
+  car = car.replace(/eng/g, "ıng");
+  car = car.replace(/ong/g, "ung");
+  car = car.replace(/iao|yao/g, "yau");
+  car = car.replace(/ian|yan/g, "yen");
+  car = car.replace(/yin/g, "in");
+  car = car.replace(/uai|wai/g, "vay");
+  car = car.replace(/ui|wei/g, "vey");
+  car = car.replace(/uan|wan/g, "van");
+  car = car.replace(/un|wen/g, "vın");
+  car = car.replace(/jue/g, "jüe");
+  car = car.replace(/que/g, "qüe");
+  car = car.replace(/xue/g, "xüe");
+  car = car.replace(/yue/g, "üe");
+  car = car.replace(/jun/g, "jün");
+  car = car.replace(/qun/g, "qün");
+  car = car.replace(/xun/g, "xün");
+  car = car.replace(/yun/g, "ün");
+  car = car.replace(/zi/g, "zı");
+  car = car.replace(/ci/g, "cı");
+  car = car.replace(/si/g, "sı");
+  car = car.replace(/ri/g, "rı");
+  car = car.replace(/ai/g, "ay");
+  car = car.replace(/ei/g, "ey");
+  car = car.replace(/ao/g, "au");
+  car = car.replace(/en/g, "ın");
+  car = car.replace(/er/g, "ar");
+  car = car.replace(/ia/g, "ya");
+  car = car.replace(/ie/g, "ye");
+  car = car.replace(/iu/g, "you");
+  car = car.replace(/ua|wa/g, "va");
+  car = car.replace(/uo|wo/g, "vo");
+  car = car.replace(/bo/g, "bvo");
+  car = car.replace(/po/g, "pvo");
+  car = car.replace(/mo/g, "mvo");
+  car = car.replace(/fo/g, "fvo");
+  car = car.replace(/ju/g, "jü");
+  car = car.replace(/qu/g, "qü");
+  car = car.replace(/xu/g, "xü");
+  car = car.replace(/io/g, "yo");
+  car = car.replace(/yu/g, "ü");
+  car = car.replace(/wu/g, "u");
+  car = car.replace(/yi/g, "i");
+  car = car.replace(/e/g, "ı");
+  car = car.replace(/ê/g, "e");
+  car = car.replace(/ch/g, "ç");
+  car = car.replace(/c/g, "ts");
+  car = car.replace(/j/g, "c");
+  car = car.replace(/r/g, "j");
+  car = car.replace(/q/g, "ç");
+  car = car.replace(/x/g, "ş");
+  car = car.replace(/zh/g, "c");
+  car = car.replace(/sh/g, "ş");
+document.transcription.text1.value=car;
+}
+function copy1()
+{ textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
+}
+function copy2()
+{ textRange=document.transcription.text2.createTextRange();   textRange.execCommand("Copy");   textRange="";
+}
