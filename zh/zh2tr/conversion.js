@@ -66,7 +66,7 @@ car = document.transcription.text1.value;
   car = car.replace(/x/g, "ş");
   car = car.replace(/zh/g, "c");
   car = car.replace(/sh/g, "ş");
-document.transcription.text1.value=car;
+document.transcription.text2.value=car;
 }
 function copy1()
 { textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
