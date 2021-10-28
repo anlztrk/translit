@@ -45,9 +45,7 @@ car = document.transcription.text1.value;
   car = car.replace(/V/g, "v");
   car = car.replace(/Z/g, "z");
 
-  car = car.replace(/(ɡ|k)(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(a|e|i|o|u|y|œ|ɯ)/g, "$1ɯ\.$2$3");
-  car = car.replace(/(b|dʒ|tʃ|d|f|h|ʒ|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(a|o|u|ɯ)/g, "$1ɯ\.$2$3");
-  car = car.replace(/(b|dʒ|tʃ|d|f|h|ʒ|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(e|i|y|œ)/g, "$1i\.$2$3");
+  car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(a|o|u|ɯ|e|i|y|œ)/g, "$1ɯ\.$2$3");
   
   car = car.replace(/Â|â/g, "ʲa");
   car = car.replace(/Û|û/g, "ʲu");
