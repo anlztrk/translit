@@ -136,11 +136,12 @@ car = document.transcription.text1.value;
   car = car.replace(/ɾ/g, "ɹ");
   
   car = car.replace(/(æ|ɛ|ɪ|ɒ|ʌ|ʊ)\.(b|dʒ|tʃ|d|f|ɡ|h|ʒ|l|m|n|ŋ|ɹ|ʃ|v|w|z)/g, "$1$2\.");
+  car = car.replace(/(a|e|ɔ)ɪ/g, "$1\u2060ɪ");
     
   car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)jʊəɹ/g, "$1EWR");
   car = car.replace(/jʊəɹ/g, "YOOR");
-  car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)aɪ(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)/g, "$1Y$2E");
-  car = car.replace(/ɔɪəɹ/g, "OIR");
+  car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)a\u2060ɪ(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)/g, "$1Y$2E");
+  car = car.replace(/ɔ\u2060ɪəɹ/g, "OIR");
   car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)juː/g, "$1EW");
   car = car.replace(/aʊəɹ/g, "OWR");
   car = car.replace(/uː|u/g, "OO");
@@ -151,9 +152,9 @@ car = document.transcription.text1.value;
   car = car.replace(/EH(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|z)/g, "E$1");
   car = car.replace(/juː/g, "YOO");
   car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|z)aɪ/g, "$1Y");
-  car = car.replace(/aɪ/g, "EYE");
-  car = car.replace(/eɪ/g, "AY");
-  car = car.replace(/ɔɪ/g, "OY");
+  car = car.replace(/a\u2060ɪ/g, "EYE");
+  car = car.replace(/e\u2060ɪ/g, "AY");
+  car = car.replace(/ɔ\u2060ɪ/g, "OY");
   car = car.replace(/ɪ/g, "IH");
   car = car.replace(/IH(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|z)/g, "I$1");
   car = car.replace(/ʊəɹ/g, "OOR");
