@@ -184,6 +184,7 @@ car = document.transcription.text1.value;
   car = car.replace(/tʃ/g, "CH");
   car = car.replace(/dʒ/g, "J");
   car = car.replace(/ŋk/g, "NK");
+  car = car.replace(/ŋɡ/g, "NG");
   car = car.replace(/hw/g, "WH");
   car = car.replace(/b/g, "B");
   car = car.replace(/d/g, "D");
