@@ -38,6 +38,7 @@ car = car.replace(/Չ/g, "Čh"); //tʃʰ/
 car = car.replace(/Պ/g, "P"); //p/
 car = car.replace(/Ջ/g, "J"); //dʒ/
 car = car.replace(/Ռ/g, "Rr");
+car = car.replace(/Ս/g, "S");
 car = car.replace(/Վ/g, "V");
 car = car.replace(/Տ/g, "T"); //t/
 car = car.replace(/Ր/g, "R");
