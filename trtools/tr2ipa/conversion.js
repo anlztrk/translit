@@ -15,8 +15,8 @@ car = document.transcription.text1.value;
 
   car = car.replace(/A/g, "a");
   car = car.replace(/B/g, "b");
-  car = car.replace(/C|c/g, "dʒ");
-  car = car.replace(/Ç|ç/g, "tʃ");
+  car = car.replace(/C|c/g, "ʤ");
+  car = car.replace(/Ç|ç/g, "ʧ");
   car = car.replace(/D/g, "d");
   car = car.replace(/E/g, "e");
   car = car.replace(/Ê|ê/g, "eː");
@@ -45,13 +45,13 @@ car = document.transcription.text1.value;
   car = car.replace(/V/g, "v");
   car = car.replace(/Z/g, "z");
 
-  car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(a|â|o|u|û|ɯ|e|ê|i|î|y|œ)/g, "$1ɯ\.$2$3");
+  car = car.replace(/(b|ʤ|ʧ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(b|ʤ|ʧ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)(a|â|o|u|û|ɯ|e|ê|i|î|y|œ)/g, "$1ɯ\.$2$3");
   
   car = car.replace(/Â|â/g, "ʲa");
   car = car.replace(/Û|û/g, "ʲu");
 
   car = car.replace(/eɰ/g, "eĵ");
-  car = car.replace(/ĵ(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)/g, "ː$1");
+  car = car.replace(/ĵ(b|ʤ|ʧ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)/g, "ː$1");
   car = car.replace(/ĵ/g, "j");
   car = car.replace(/(a|i|o|u|y|œ|ɯ)ɰ/g, "$1ː");
   car = car.replace(/ɰ/g, "");
@@ -62,15 +62,15 @@ car = document.transcription.text1.value;
   car = car.replace(/(e|i|œ|y)ɡ/g, "$1ɟ");
   car = car.replace(/(e|i|œ|y)k/g, "$1c");
   car = car.replace(/(e|i|œ|y)ɫ/g, "$1l");
-  car = car.replace(/(e|i|œ|y)(b|dʒ|tʃ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)ɡ/g, "$1$2ɟ");
-  car = car.replace(/(e|i|œ|y)(b|dʒ|tʃ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)k/g, "$1$2c");
-  car = car.replace(/(e|i|œ|y)(b|dʒ|tʃ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)ɫ/g, "$1$2l");
+  car = car.replace(/(e|i|œ|y)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)ɡ/g, "$1$2ɟ");
+  car = car.replace(/(e|i|œ|y)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)k/g, "$1$2c");
+  car = car.replace(/(e|i|œ|y)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)ɫ/g, "$1$2l");
   car = car.replace(/ɡ(e|i|œ|y|ʲ)/g, "ɟ$1");
   car = car.replace(/k(e|i|œ|y|ʲ)/g, "c$1");
   car = car.replace(/ɫ(e|i|œ|y|ʲ)/g, "l$1");
   car = car.replace(/(ɟ|c|l)ʲ/g, "$1");
 
-  car = car.replace(/ʲ(a|u)(b|dʒ|tʃ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "$1$2");
+  car = car.replace(/ʲ(a|u)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "$1$2");
   car = car.replace(/ʲ(a|u)/g, "$1ː");
 
   car = car.replace(/n(ɡ|\.ɡ|k|\.k)/g, "ŋ$1");
@@ -79,6 +79,9 @@ car = document.transcription.text1.value;
   car = car.replace(/.mez/g, ".mæz");
   car = car.replace(/e(ɾ|l|m|n)/g, "æ$1");
   car = car.replace(/eː(ɾ|l|m|n)/g, "æː$1");
+
+  car = car.replace(/ʤ/g, "dʒ");
+  car = car.replace(/ʧ/g, "tʃ");
 document.transcription.text2.value=car;
 }
 function copy1()
