@@ -1,4 +1,3 @@
-﻿//  copyright lexilogos.com
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
@@ -60,9 +59,9 @@ car = document.transcription.text1.value;
   car = car.replace(/ý\u002a/g, "y");
   car = car.replace(/z\u002a/g, "ž");
   car = car.replace(/ž\u002a/g, "z");
-  car = car.replace(/\u0027\u002a/g, "\u2018");
-  car = car.replace(/\u2018\u002a/g, "\u2019");
-  car = car.replace(/\u2019\u002a/g, "\u0027");
+  car = car.replace(/\u0027\u002a/g, "\u02bb");
+  car = car.replace(/\u02bb\u002a/g, "\u02bc");
+  car = car.replace(/\u02bc\u002a/g, "\u0027");
   
   car = car.replace(/A\u005b/g, "Â");
   car = car.replace(/Â\u005b/g, "Ä");
@@ -122,9 +121,9 @@ car = document.transcription.text1.value;
   car = car.replace(/ý\u005b/g, "y");
   car = car.replace(/z\u005b/g, "ž");
   car = car.replace(/ž\u005b/g, "z");
-  car = car.replace(/\u0027\u005b/g, "\u2018");
-  car = car.replace(/\u2018\u005b/g, "\u2019");
-  car = car.replace(/\u2019\u005b/g, "\u0027");
+  car = car.replace(/\u0027\u005b/g, "\u02bb");
+  car = car.replace(/\u02bb\u005b/g, "\u02bc");
+  car = car.replace(/\u02bc\u005b/g, "\u0027");
   
   car = car.replace(/A\u005c/g, "Â");
   car = car.replace(/Â\u005c/g, "Ä");
