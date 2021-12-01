@@ -184,9 +184,9 @@ car = document.transcription.text1.value;
   car = car.replace(/ý\u005c/g, "y");
   car = car.replace(/z\u005c/g, "ž");
   car = car.replace(/ž\u005c/g, "z");
-  car = car.replace(/\u0027\u005c/g, "\u2018");
-  car = car.replace(/\u2018\u005c/g, "\u2019");
-  car = car.replace(/\u2019\u005c/g, "\u0027");
+  car = car.replace(/\u0027\u005c/g, "\u02bb");
+  car = car.replace(/\u02bb\u005c/g, "\u02bc");
+  car = car.replace(/\u02bc\u005c/g, "\u0027");
 document.transcription.text1.value=car;
 }
 function copy1()
