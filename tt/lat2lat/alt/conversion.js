@@ -17,8 +17,7 @@ car = car.replace(/E/g, "Ə");
   car = car.replace(/ö/g, "ɵ");
   car = car.replace(/Í/g, "Iy");
   car = car.replace(/í/g, "ıy");
-  car = car.replace(/
-document.transcription.text1.value=car;
+  document.transcription.text1.value=car;
 }
 function cyrlat () {
 car = document.transcription.text1.value;
