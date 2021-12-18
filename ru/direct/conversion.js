@@ -32,9 +32,9 @@ translit = translit.replace(/ъ|Ъ/g, "\u02bc");
 translit = translit.replace(/ы/g, "î");
 translit = translit.replace(/ь/g, "y");
 translit = translit.replace(/э/g, "ê");
-translit = translit.replace(/ю/g, "ų");
-translit = translit.replace(/ё/g, "ǫ");
-translit = translit.replace(/я/g, "ą");
+translit = translit.replace(/ю/g, "ù");
+translit = translit.replace(/ё/g, "ò");
+translit = translit.replace(/я/g, "à");
 
 translit = translit.replace(/А/g, "A");
 translit = translit.replace(/Б/g, "B");
@@ -65,9 +65,9 @@ translit = translit.replace(/Щ/g, "Ś");
 translit = translit.replace(/Ы/g, "Î");
 translit = translit.replace(/Ь/g, "Y");
 translit = translit.replace(/Э/g, "Ê");
-translit = translit.replace(/Ю/g, "Ų");
-translit = translit.replace(/Ё/g, "Ǫ");
-translit = translit.replace(/Я/g, "Ą");
+translit = translit.replace(/Ю/g, "Ù");
+translit = translit.replace(/Ё/g, "Ò");
+translit = translit.replace(/Я/g, "À");
 translit = translit.replace(/«/g, "\u201e");
 translit = translit.replace(/»/g, "\u201c");
 
