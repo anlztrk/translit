@@ -2,10 +2,18 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
-  car = car.replace(/\u201c/g, "\u201e");
-  car = car.replace(/\u201d/g, "\u201c");
-  car = car.replace(/\u02bc\u02bc/g, "\u201d");
-  car = car.replace(/\u02bc/g, "\u2019");
+  car = car.replace(/Ś/g, "Ș");
+  car = car.replace(/ś/g, ș");
+  car = car.replace(/Ë/g, "Ê");
+  car = car.replace(/ë/g, "ê");
+  car = car.replace(/Ï/g, "Î");
+  car = car.replace(/ï/g, "î");
+  car = car.replace(/Â/g, "Á");
+  car = car.replace(/â/g, "á");
+  car = car.replace(/Ô/g, "Ó");
+  car = car.replace(/ô/g, "ó");
+  car = car.replace(/Û/g, "Ú");
+  car = car.replace(/û/g, "ú");
   document.transcription.text1.value=car;
 }
 function copy1()
