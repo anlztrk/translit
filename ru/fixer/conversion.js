@@ -3,7 +3,7 @@ var car;
 function cyrlat () {
 car = document.transcription.text1.value;
   car = car.replace(/Ś/g, "Ș");
-  car = car.replace(/ś/g, ș");
+  car = car.replace(/ś/g, "ș");
   car = car.replace(/Ë/g, "Ê");
   car = car.replace(/ë/g, "ê");
   car = car.replace(/Ï/g, "Î");
