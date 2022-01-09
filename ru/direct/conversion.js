@@ -74,6 +74,82 @@ translit = translit.replace(/»/g, "\u201c");
 document.transcription.text2.value = translit;
 }
 
+function latcyr () {
+translit = document.transcription.text2.value;
+translit = translit.replace(/a/g, "а");
+translit = translit.replace(/b/g, "б");
+translit = translit.replace(/v/g, "в");
+translit = translit.replace(/g/g, "г");
+translit = translit.replace(/d/g, "д");
+translit = translit.replace(/e/g, "е");
+translit = translit.replace(/ž/g, "ж");
+translit = translit.replace(/z/g, "з");
+translit = translit.replace(/i/g, "и");
+translit = translit.replace(/j/g, "й");
+translit = translit.replace(/k/g, "к");
+translit = translit.replace(/l/g, "л");
+translit = translit.replace(/m/g, "м");
+translit = translit.replace(/n/g, "н");
+translit = translit.replace(/o/g, "о");
+translit = translit.replace(/p/g, "п");
+translit = translit.replace(/r/g, "р");
+translit = translit.replace(/s/g, "с");
+translit = translit.replace(/t/g, "т");
+translit = translit.replace(/u/g, "у");
+translit = translit.replace(/f/g, "ф");
+translit = translit.replace(/h/g, "х");
+translit = translit.replace(/c/g, "ц");
+translit = translit.replace(/č/g, "ч");
+translit = translit.replace(/š/g, "ш");
+translit = translit.replace(/ś/g, "щ");
+translit = translit.replace(/\u02bc|\u2019/g, "ъ");
+translit = translit.replace(/î/g, "ы");
+translit = translit.replace(/y/g, "ь");
+translit = translit.replace(/ê/g, "э");
+translit = translit.replace(/ü/g, "ю");
+translit = translit.replace(/ö/g, "ё");
+translit = translit.replace(/ä/g, "я");
+
+translit = translit.replace(/A/g, "А");
+translit = translit.replace(/B/g, "Б");
+translit = translit.replace(/V/g, "В");
+translit = translit.replace(/G/g, "Г");
+translit = translit.replace(/D/g, "Д");
+translit = translit.replace(/E/g, "Е");
+translit = translit.replace(/Ž/g, "Ж");
+translit = translit.replace(/Z/g, "З");
+translit = translit.replace(/I/g, "И");
+translit = translit.replace(/J/g, "Й");
+translit = translit.replace(/K/g, "К");
+translit = translit.replace(/L/g, "Л");
+translit = translit.replace(/M/g, "М");
+translit = translit.replace(/N/g, "Н");
+translit = translit.replace(/O/g, "О");
+translit = translit.replace(/P/g, "П");
+translit = translit.replace(/R/g, "Р");
+translit = translit.replace(/S/g, "С");
+translit = translit.replace(/T/g, "Т");
+translit = translit.replace(/U/g, "У");
+translit = translit.replace(/F/g, "Ф");
+translit = translit.replace(/H/g, "Х");
+translit = translit.replace(/C/g, "Ц");
+translit = translit.replace(/Č/g, "Ч");
+translit = translit.replace(/Š/g, "Ш");
+translit = translit.replace(/Ś/g, "Щ");
+translit = translit.replace(/Î/g, "Ы");
+translit = translit.replace(/Y/g, "Ь");
+translit = translit.replace(/Ê/g, "Э");
+translit = translit.replace(/Ü/g, "Ю");
+translit = translit.replace(/Ö/g, "Ё");
+translit = translit.replace(/Ä/g, "Я");
+translit = translit.replace(/\u201e/g, "«");
+translit = translit.replace(/\u201c/g, "»");
+
+
+translit = translit.replace(/(А|Б|В|Г|Д|Е|Ж|З|И|Й|К|Л|М|Н|О|П|Р|С|Т|У|Ф|Х|Ц|Ч|Ш|Щ|Ы|Ь|Э|Ю|Ё|Я)ъ/g, "$1Ъ");
+document.transcription.text1.value = translit;
+}
+
 function copy1()
 { textRange=document.transcription.text1.createTextRange();
 textRange.execCommand("Copy");
