@@ -99,6 +99,9 @@ translit = translit.replace(/(A|E|I|İ|O|U)Ц/g, "$1TS");
 translit = translit.replace(/ц/g, "s");
 translit = translit.replace(/Ц/g, "S");
 
+translit = translit.replace(/Д(Ж|ж)/g, "C");
+translit = translit.replace(/дж/g, "c");
+
 document.transcription.text1.value = car;
 document.transcription.text2.value = translit;
 }
