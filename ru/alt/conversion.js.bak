@@ -1,28 +1,22 @@
-﻿var car;
+﻿
 var translit;
 
 function cyrlat () {
 translit = document.transcription.text1.value;
-car = document.transcription.text1.value;
-car = car.replace(/<</g, "«");
-car = car.replace(/>>/g, "»");
-translit = translit.replace(/<</g, "«");
-translit = translit.replace(/>>/g, "»");
-
 translit = translit.replace(/Ъ/g, "ъ");
 translit = translit.replace(/Ь/g, "ь");
 
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Е/g, "$1E");
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)е/g, "$1e");
-translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Э/g, "$1ъE");
-translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)э/g, "$1ъe");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Э/g, "$1È");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)э/g, "$1è");
 
-translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Я/g, "$1ЬA");
-translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)я/g, "$1ьa");
-translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ё/g, "$1ЬO");
-translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ё/g, "$1ьo");
-translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ю/g, "$1ЬU");
-translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ю/g, "$1ьu");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Я/g, "$1\u0323A");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)я/g, "$1\u0323a");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ё/g, "$1\u0323O");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ё/g, "$1\u0323o");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ю/g, "$1\u0323U");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ю/g, "$1\u0323u");
 
 translit = translit.replace(/а/g, "a");
 translit = translit.replace(/б/g, "b");
@@ -49,9 +43,9 @@ translit = translit.replace(/х/g, "h");
 translit = translit.replace(/ч/g, "ç");
 translit = translit.replace(/ш/g, "ş");
 translit = translit.replace(/щ/g, "ŝ");
-translit = translit.replace(/ъ/g, "\u02bc");
+translit = translit.replace(/ъ/g, "’");
 translit = translit.replace(/ы/g, "ı");
-translit = translit.replace(/ь/g, "");
+translit = translit.replace(/ь/g, "\u0323");
 translit = translit.replace(/э/g, "e");
 translit = translit.replace(/ю/g, "yu");
 translit = translit.replace(/ё/g, "yo");
@@ -79,24 +73,33 @@ translit = translit.replace(/Т/g, "T");
 translit = translit.replace(/У/g, "U");
 translit = translit.replace(/Ф/g, "F");
 translit = translit.replace(/Х/g, "H");
-translit = translit.replace(/Ц/g, "C");
 translit = translit.replace(/Ч/g, "Ç");
 translit = translit.replace(/Ш/g, "Ş");
 translit = translit.replace(/Щ/g, "Ŝ");
 translit = translit.replace(/Ы/g, "I");
-translit = translit.replace(/Ь/g, "");
 translit = translit.replace(/Э/g, "E");
 translit = translit.replace(/Ю/g, "Yu");
 translit = translit.replace(/Ё/g, "Yo");
 translit = translit.replace(/Я/g, "Ya");
+translit = translit.replace(/«/g, "\u201e");
+translit = translit.replace(/»/g, "\u201c");
 
-translit = translit.replace(/ц(a|e|ı|i|o|u)/g, "ts$1");
-translit = translit.replace(/Ц(a|e|ı|i|o|u)/g, "Ts$1");
-translit = translit.replace(/Ц(A|E|I|İ|O|U)/g, "TS$1");
-translit = translit.replace(/ц/g, "s");
-translit = translit.replace(/Ц/g, "S");
+translit = translit.replace(/Ç\u0323/g, "Ç\u0307");
+translit = translit.replace(/S\u0323/g, "S\u0307");
+translit = translit.replace(/Ş\u0323/g, "Ş\u0307");
+translit = translit.replace(/Ц\u0323/g, "T\u0323s\u0307");
+translit = translit.replace(/ç\u0323/g, "ç\u0307");
+translit = translit.replace(/g\u0323/g, "g\u0307");
+translit = translit.replace(/p\u0323/g, "p\u0307");
+translit = translit.replace(/s\u0323/g, "s\u0307");
+translit = translit.replace(/ş\u0323/g, "ş\u0307");
+translit = translit.replace(/j\u0323/g, "j\u0308");
+translit = translit.replace(/ц\u0323/g, "t\u0323s\u0307");
 
-document.transcription.text1.value = car;
+translit = translit.replace(/Ц/g, "Ts");
+translit = translit.replace(/ц/g, "ts");
+
+translit = translit.normalize('NFC'); 
 document.transcription.text2.value = translit;
 }
 
