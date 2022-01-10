@@ -79,7 +79,6 @@ translit = translit.replace(/Т/g, "T");
 translit = translit.replace(/У/g, "U");
 translit = translit.replace(/Ф/g, "F");
 translit = translit.replace(/Х/g, "H");
-translit = translit.replace(/Ц/g, "C");
 translit = translit.replace(/Ч/g, "Ç");
 translit = translit.replace(/Ш/g, "Ş");
 translit = translit.replace(/Щ/g, "Ş");
