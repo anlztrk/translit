@@ -29,6 +29,9 @@ translit = translit.replace(/ЬA/g, "Â");
 translit = translit.replace(/ьu/g, "û");
 translit = translit.replace(/ЬU/g, "Û");
 
+translit = translit.replace(/Д(Ж|ж)/g, "C");
+translit = translit.replace(/дж/g, "c");
+
 translit = translit.replace(/а/g, "a");
 translit = translit.replace(/б/g, "b");
 translit = translit.replace(/в/g, "v");
@@ -98,9 +101,6 @@ translit = translit.replace(/(A|E|I|İ|O|U|a|e|ı|i|o|u)ц/g, "$1ts");
 translit = translit.replace(/(A|E|I|İ|O|U)Ц/g, "$1TS");
 translit = translit.replace(/ц/g, "s");
 translit = translit.replace(/Ц/g, "S");
-
-translit = translit.replace(/Д(Ж|ж)/g, "C");
-translit = translit.replace(/дж/g, "c");
 
 document.transcription.text1.value = car;
 document.transcription.text2.value = translit;

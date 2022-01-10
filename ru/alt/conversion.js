@@ -25,9 +25,9 @@ translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ю/g, "$1ьu");
 
 translit = translit.replace(/ьa/g, "â");
-translit = translit.replace(/ЬA/g, "Â");
+translit = translit.replace(/ьA/g, "Â");
 translit = translit.replace(/ьu/g, "û");
-translit = translit.replace(/ЬU/g, "Û");
+translit = translit.replace(/ьU/g, "Û");
 
 translit = translit.replace(/Д(Ж|ж)/g, "C");
 translit = translit.replace(/дж/g, "c");
