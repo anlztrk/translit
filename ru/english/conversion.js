@@ -99,9 +99,9 @@ translit = translit.replace(/ый/g, "y");
 translit = translit.replace(/ЙЫ/g, "ĬI");
 translit = translit.replace(/Йы/g, "Ĭi");
 translit = translit.replace(/йы/g, "ĭi");
-translit = translit.replace(/ЫЕ/g, "YE");
-translit = translit.replace(/Ые/g, "Ye");
-translit = translit.replace(/ые/g, "ye");
+translit = translit.replace(/ЫЕ/g, "IYE");
+translit = translit.replace(/Ые/g, "Iye");
+translit = translit.replace(/ые/g, "iye");
 
 translit = translit.replace(/дж/g, "џ");
 translit = translit.replace(/Д(Ж|ж)/g, "Џ");
