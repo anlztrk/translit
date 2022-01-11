@@ -109,7 +109,6 @@ translit = translit.replace(/Д(Ж|ж)/g, "Џ");
 translit = translit.replace(/((Б|В|Г|Д|Џ|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|џ|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ы){2}/g, "$1И");
 translit = translit.replace(/((Б|В|Г|Д|Џ|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|џ|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ы){2}/g, "$1и");
 
-
 translit = translit.replace(/а/g, "a");
 translit = translit.replace(/б/g, "b");
 translit = translit.replace(/в/g, "v");
