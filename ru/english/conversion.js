@@ -108,6 +108,8 @@ translit = translit.replace(/ШЮ/g, "SHU");
 
 translit = translit.replace(/ЫЙ|Ый/g, "Y");
 translit = translit.replace(/ый/g, "y");
+translit = translit.replace(/ИЙ|Ий/g, "Y");
+translit = translit.replace(/ий/g, "y");
 translit = translit.replace(/ЙЫ/g, "ĬI");
 translit = translit.replace(/Йы/g, "Ĭi");
 translit = translit.replace(/йы/g, "ĭi");
