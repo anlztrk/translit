@@ -131,6 +131,12 @@ translit = translit.replace(/І/g, "И");
 translit = translit.replace(/(С|с)(Х|х)/g, "$1\u2019$2");
 translit = translit.replace(/(Ш|ш)(Х|х)/g, "$1\u2019$2");
 
+translit = translit.replace(/Щ(А|Б|В|Г|Д|Е|Ё|Ж|З|И|Й|К|Л|М|Н|О|П|Р|С|Т|У|Ф|Х|Ц|Ч|Ш|Щ|Ы|Э|Ю|Я)/g, "SHH$1");
+translit = translit.replace(/Щ(а|б|в|г|д|е|ё|ж|з|и|й|к|л|м|н|о|п|р|с|т|у|ф|х|ц|ч|ш|щ|ы|э|ю|я)/g, "Shh$1");
+translit = translit.replace(/щ(А|Б|В|Г|Д|Е|Ё|Ж|З|И|Й|К|Л|М|Н|О|П|Р|С|Т|У|Ф|Х|Ц|Ч|Ш|Щ|Ы|Э|Ю|Я|а|б|в|г|д|е|ё|ж|з|и|й|к|л|м|н|о|п|р|с|т|у|ф|х|ц|ч|ш|щ|ы|э|ю|я)/g, "shh$1");
+translit = translit.replace(/Щ/g, "SH");
+translit = translit.replace(/щ/g, "sh");
+
 translit = translit.replace(/а/g, "a");
 translit = translit.replace(/б/g, "b");
 translit = translit.replace(/в/g, "v");
@@ -157,7 +163,6 @@ translit = translit.replace(/х/g, "h");
 translit = translit.replace(/ц/g, "ts");
 translit = translit.replace(/ч/g, "ch");
 translit = translit.replace(/ш/g, "sh");
-translit = translit.replace(/щ/g, "shh");
 translit = translit.replace(/ы/g, "y");
 translit = translit.replace(/э/g, "e");
 translit = translit.replace(/ю/g, "ĭu");
@@ -190,25 +195,24 @@ translit = translit.replace(/Х/g, "H");
 translit = translit.replace(/Ц/g, "Ts");
 translit = translit.replace(/Ч/g, "Ch");
 translit = translit.replace(/Ш/g, "Sh");
-translit = translit.replace(/Щ/g, "Shh");
 translit = translit.replace(/Ы/g, "Y");
 translit = translit.replace(/Э/g, "E");
 translit = translit.replace(/Ю/g, "Ĭu");
 translit = translit.replace(/Ё/g, "Ĭo");
 translit = translit.replace(/Я/g, "Ĭa");
-translit = translit.replace(/«/g, "\u201c");
-translit = translit.replace(/»/g, "\u201d");
 
 translit = translit.replace(/Ь|Ъ|ь|ъ/g, "");
 
 translit = translit.replace(/(B|V|G|D|J|H|Z|K|L|M|N|P|R|S|T|F)Ĭ(A|E|O|U|a|e|o|u)/g, "$1I$2");
 translit = translit.replace(/(B|V|G|D|J|H|Z|K|L|M|N|P|R|S|T|F|b|v|g|d|j|h|z|k|l|m|n|p|r|s|t|f)ĭ(a|e|o|u)/g, "$1i$2");
-translit = translit.replace(/(A|E|I|O|U)Ĭ(A|E|I|O|U)/g, "$1Y$2");
+translit = translit.replace(/(A|E|I|O|U)Ĭ(A|E|I|O|U|a|e|i|o|u)/g, "$1Y$2");
 translit = translit.replace(/(A|E|I|O|U|a|e|i|o|u)ĭ(a|e|i|o|u)/g, "$1y$2");
 translit = translit.replace(/(A|E|O|U)Ĭ/g, "$1I");
 translit = translit.replace(/(A|E|O|U|a|e|o|u)ĭ/g, "$1i");
 translit = translit.replace(/Ĭ/g, "Y");
 translit = translit.replace(/ĭ/g, "y");
+translit = translit.replace(/«/g, "\u201c");
+translit = translit.replace(/»/g, "\u201d");
 document.transcription.text2.value = translit;
 }
 

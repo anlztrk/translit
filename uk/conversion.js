@@ -1,9 +1,6 @@
-﻿//  copyright lexilogos.com
+﻿
 var car;
-function latcyr () {
-car = document.transcription.text2.value;
-document.transcription.text2.value=car;
-}
+
 function cyrlat () {
 car = document.transcription.text1.value;
 car = car.replace(/ʼ/g, "ъ");
@@ -16,13 +13,13 @@ car = car.replace(/г/g, "h");
 car = car.replace(/ґ/g, "g");
 car = car.replace(/д/g, "d");
 car = car.replace(/е/g, "e");
-car = car.replace(/є/g, "ë");
+car = car.replace(/є/g, "je");
 car = car.replace(/ж/g, "ž");
 car = car.replace(/з/g, "z");
-car = car.replace(/и/g, "î");
+car = car.replace(/и/g, "y");
 car = car.replace(/і/g, "i");
-car = car.replace(/ї́/g, "ï\u0301");
-car = car.replace(/ї/g, "ï");
+car = car.replace(/ї́/g, "jí");
+car = car.replace(/ї/g, "ji");
 car = car.replace(/й/g, "j");
 car = car.replace(/к/g, "k");
 car = car.replace(/л/g, "l");
@@ -39,11 +36,10 @@ car = car.replace(/х/g, "x");
 car = car.replace(/ц/g, "c");
 car = car.replace(/ч/g, "č");
 car = car.replace(/ш/g, "š");
-car = car.replace(/щ/g, "ć");
-car = car.replace(/ь/g, "y");
-car = car.replace(/ю/g, "ü");
-car = car.replace(/я/g, "ä");
-car = car.replace(/ъ/g, "ʼ");
+car = car.replace(/щ/g, "šč");
+car = car.replace(/ь/g, "\u02bc");
+car = car.replace(/ю/g, "ju");
+car = car.replace(/я/g, "ja");
 
 car = car.replace(/А/g, "A");
 car = car.replace(/Б/g, "B");
@@ -52,13 +48,13 @@ car = car.replace(/Г/g, "H");
 car = car.replace(/Ґ/g, "G");
 car = car.replace(/Д/g, "D");
 car = car.replace(/Е/g, "E");
-car = car.replace(/Є/g, "Ë");
+car = car.replace(/Є/g, "Je");
 car = car.replace(/Ж/g, "Ž");
 car = car.replace(/З/g, "Z");
-car = car.replace(/И/g, "Î");
+car = car.replace(/И/g, "Y");
 car = car.replace(/І/g, "I");
-car = car.replace(/Ї́/g, "Ï\u0301");
-car = car.replace(/Ї/g, "Ï");
+car = car.replace(/Ї́/g, "Jí");
+car = car.replace(/Ї/g, "Ji");
 car = car.replace(/Й/g, "J");
 car = car.replace(/К/g, "K");
 car = car.replace(/Л/g, "L");
@@ -75,17 +71,23 @@ car = car.replace(/Х/g, "X");
 car = car.replace(/Ц/g, "C");
 car = car.replace(/Ч/g, "Č");
 car = car.replace(/Ш/g, "Š");
-car = car.replace(/Щ/g, "Ć");
-car = car.replace(/Ь/g, "Y");
-car = car.replace(/Ю/g, "Ü");
-car = car.replace(/Я/g, "Ä");
+car = car.replace(/Щ/g, "Šč");
+car = car.replace(/Ь/g, "\u02bc");
+car = car.replace(/Ю/g, "Ju");
+car = car.replace(/Я/g, "Ja");
+
 car = car.replace(/«/g, "\u201e");
 car = car.replace(/»/g, "\u201c");
-document.transcription.text2.value=car;
+document.transcription.text2.value = car;
 }
+
 function copy1()
-{ textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
+{ textRange=document.transcription.text1.createTextRange();
+textRange.execCommand("Copy");
+textRange="";
 }
 function copy2()
-{ textRange=document.transcription.text2.createTextRange();   textRange.execCommand("Copy");   textRange="";
+{ textRange=document.transcription.text2.createTextRange();
+textRange.execCommand("Copy");
+textRange="";
 }
