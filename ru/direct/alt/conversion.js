@@ -34,7 +34,7 @@ translit = translit.replace(/ь/g, "y");
 translit = translit.replace(/э/g, "ë");
 translit = translit.replace(/ю/g, "û");
 translit = translit.replace(/ё/g, "ô");
-translit = translit.replace(/я/g, "ä");
+translit = translit.replace(/я/g, "â");
 
 translit = translit.replace(/А/g, "A");
 translit = translit.replace(/Б/g, "B");
@@ -108,7 +108,7 @@ translit = translit.replace(/y/g, "ь");
 translit = translit.replace(/ë/g, "э");
 translit = translit.replace(/û/g, "ю");
 translit = translit.replace(/ô/g, "ё");
-translit = translit.replace(/ä/g, "я");
+translit = translit.replace(/â/g, "я");
 
 translit = translit.replace(/A/g, "А");
 translit = translit.replace(/B/g, "Б");

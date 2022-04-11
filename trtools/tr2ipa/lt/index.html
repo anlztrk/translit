@@ -1,11 +1,12 @@
-﻿<html> 
+
+<html> 
 <head> 
 <link rel="stylesheet" href="https://anlztrk.github.io/translit/font/stylesheet.css" type="text/css" charset="utf-8" /> 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <!-- d --> 
 <meta NAME="ROBOTS" CONTENT="NOARCHIVE"> 
-<title>Unicode decomposition tool</title> 
-<meta name="description" content="Unicode decomposition tool" /> 
+<title>Turkish - IPA converter</title> 
+<meta name="description" content="Turkish - IPA converter/> 
 <meta http-equiv="Content-Language" content="en, ru"> 
 <meta name="revisit-after" content="2 Days"> 
 <base target="_top"> 
@@ -15,25 +16,31 @@
 		textarea {
 			font-family: Arial, "Liberation Sans", Arimo, liberation_sansregular, sans-serif;
 			font-size: 15px;
-			width: 1000px;
-			height: 450px;
+			width: 500px;
+			height: 300px;
 		}
 		</style> 
 </head> 
 <body> 
-	<h1>Unicode decomposition tool</h1> 
+	<h1>Turkish - IPA converter</h1> 
 
-<div align="center">Type composed text to get it decomposed:<br> 
+<div align="center"> Type or copy a text:<br> 
   <form name=transcription> 
 	<table width=90%><tr align=center> 
-		<td><br> 
+		<td> in Turkish: <br> 
 	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
 		  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
 	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
-		</td>
+		</td> 
+		<td> here you get its IPA transcription:<br> 
+	<textarea name="text2" onKeyUp="latcyr()"></textarea> 
+			  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
 	</td></tr></table> 
-</form>  
+</form> 
 </body> 
 </html> 
