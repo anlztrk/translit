@@ -1,6 +1,4 @@
-﻿
-//  copyright lexilogos.com
-var car;
+﻿var car;
 function latcyr () {
 car = document.transcription.text2.value;
 translit = document.transcription.text2.value;
