@@ -70,6 +70,20 @@ car = document.transcription.text1.value;
   car = car.replace(/ő/g, "ö");
   car = car.replace(/ú/g, "u");
   car = car.replace(/ű/g, "ü");
+  
+  car = car.replace(/(A|a|O|o|U|u)Ǵ/g, "$1Đ");
+  car = car.replace(/(A|a|O|o|U|u)ǵ/g, "$1đ");
+  car = car.replace(/(A|a|O|o|U|u)Ḱ/g, "$1Ć");
+  car = car.replace(/(A|a|O|o|U|u)ḱ/g, "$1ć");
+  
+  car = car.replace(/Đ(E|e|İ|i|Ö|ö|Ü|ü)/g, "Ǵ$1");
+  car = car.replace(/đ(E|e|İ|i|Ö|ö|Ü|ü)/g, "ǵ$1");
+  car = car.replace(/Ć(E|e|İ|i|Ö|ö|Ü|ü)/g, "Ḱ$1");
+  car = car.replace(/ć(E|e|İ|i|Ö|ö|Ü|ü)/g, "ḱ$1");
+  car = car.replace(/Đ/g, "C");
+  car = car.replace(/đ/g, "c");
+  car = car.replace(/Ć/g, "Ç");
+  car = car.replace(/ć/g, "ç");
 
   car = car.replace(/(Ǵ|ǵ|Ḱ|ḱ|Ĺ|ĺ)(A|a|U|u)/g, "$1$2\u0302");
   car = car.normalize('NFD');
