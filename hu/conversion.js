@@ -76,10 +76,10 @@ car = document.transcription.text1.value;
   car = car.replace(/(A|a|O|o|U|u)Ḱ/g, "$1Ć");
   car = car.replace(/(A|a|O|o|U|u)ḱ/g, "$1ć");
   
-  car = car.replace(/Đ(E|e|İ|i|Ö|ö|Ü|ü)/g, "Ǵ$1");
-  car = car.replace(/đ(E|e|İ|i|Ö|ö|Ü|ü)/g, "ǵ$1");
-  car = car.replace(/Ć(E|e|İ|i|Ö|ö|Ü|ü)/g, "Ḱ$1");
-  car = car.replace(/ć(E|e|İ|i|Ö|ö|Ü|ü)/g, "ḱ$1");
+  car = car.replace(/Đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü)/g, "Ǵ$1");
+  car = car.replace(/đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü)/g, "ǵ$1");
+  car = car.replace(/Ć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü)/g, "Ḱ$1");
+  car = car.replace(/ć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü)/g, "ḱ$1");
   car = car.replace(/Đ/g, "C");
   car = car.replace(/đ/g, "c");
   car = car.replace(/Ć/g, "Ç");
@@ -90,9 +90,9 @@ car = document.transcription.text1.value;
   car = car.replace(/\u0301/g, "");
   car = car.normalize('NFC');
 
-  car = car.replace(/(a|e|i|o|u|ö|ü)Ţ/g, "$1Ts");
-  car = car.replace(/(A|E|İ|O|U|Ö|Ü)Ţ/g, "$1TS");
-  car = car.replace(/(A|E|İ|O|U|Ö|Ü|a|e|i|o|u|ö|ü)ţ/g, "$1ts");
+  car = car.replace(/(a|â|e|i|o|u|ö|û|ü)Ţ/g, "$1Ts");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)Ţ/g, "$1TS");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü|a|â|e|i|o|u|ö|û|ü)ţ/g, "$1ts");
   car = car.replace(/Ţ/g, "S");
   car = car.replace(/ţ/g, "s");
 document.transcription.text2.value=car;
