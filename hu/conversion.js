@@ -1,6 +1,9 @@
 ﻿var car;
 function cyrlat () {
 car = document.transcription.text1.value;
+  car = car.replace(/LY/g, "J");
+  car = car.replace(/Ly/g, "J");
+  car = car.replace(/ly/g, "j");
   car = car.replace(/C/g, "Ţ");   
   car = car.replace(/c/g, "ţ");
   car = car.replace(/ŢS/g, "Ç");
@@ -9,9 +12,6 @@ car = document.transcription.text1.value;
   car = car.replace(/GY/g, "Ǵ");
   car = car.replace(/Gy/g, "Ǵ");
   car = car.replace(/gy/g, "ǵ");
-  car = car.replace(/LY/g, "Ĺ");
-  car = car.replace(/Ly/g, "Ĺ");
-  car = car.replace(/ly/g, "ĺ");
   car = car.replace(/NY/g, "Ń");
   car = car.replace(/Ny/g, "Ń");
   car = car.replace(/ny/g, "ń");
@@ -74,23 +74,23 @@ car = document.transcription.text1.value;
   car = car.replace(/(A|a|O|o|U|u)Ḱ/g, "$1Ć");
   car = car.replace(/(A|a|O|o|U|u)ḱ/g, "$1ć");
   
-  car = car.replace(/Đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü)/g, "Ǵ$1");
-  car = car.replace(/đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü)/g, "ǵ$1");
-  car = car.replace(/Ć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü)/g, "Ḱ$1");
-  car = car.replace(/ć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü)/g, "ḱ$1");
+  car = car.replace(/Đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| E| e| İ| i| Ö| ö| Ü| ü)/g, "Ǵ$1");
+  car = car.replace(/đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| E| e| İ| i| Ö| ö| Ü| ü)/g, "ǵ$1");
+  car = car.replace(/Ć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| E| e| İ| i| Ö| ö| Ü| ü)/g, "Ḱ$1");
+  car = car.replace(/ć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| E| e| İ| i| Ö| ö| Ü| ü)/g, "ḱ$1");
   car = car.replace(/Đ/g, "C");
   car = car.replace(/đ/g, "c");
   car = car.replace(/Ć/g, "Ç");
   car = car.replace(/ć/g, "ç");
 
-  car = car.replace(/(Ǵ|ǵ|Ḱ|ḱ|Ĺ|ĺ)(A|a|U|u)/g, "$1$2\u0302");
+  car = car.replace(/(Ǵ|ǵ|Ḱ|ḱ)(A|a|U|u)/g, "$1$2\u0302");
   car = car.normalize('NFD');
   car = car.replace(/\u0301/g, "");
   car = car.normalize('NFC');
 
-  car = car.replace(/(a|â|e|i|o|u|ö|û|ü)Ţ/g, "$1Ts");
+  car = car.replace(/(a|â|e|i|o|u|û|ö|ü)Ţ/g, "$1Ts");
   car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)Ţ/g, "$1TS");
-  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü|a|â|e|i|o|u|ö|û|ü)ţ/g, "$1ts");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü|a|â|e|i|o|u|û|ö|ü)ţ/g, "$1ts");
   car = car.replace(/Ţ/g, "S");
   car = car.replace(/ţ/g, "s");
 document.transcription.text2.value=car;
@@ -101,4 +101,3 @@ function copy1()
 function copy2()
 { textRange=document.transcription.text2.createTextRange();   textRange.execCommand("Copy");   textRange="";
 }
-
