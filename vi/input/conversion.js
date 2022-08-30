@@ -19,7 +19,8 @@ car = document.transcription.text1.value;
   car = car.replace(/ə/g, "ê");
   car = car.replace(/ş/g, "\u002b");
  
-  
+  car = car.normalize('NFD');  
+
   car = car.replace(/A\u002b/g, "Ă");
   car = car.replace(/Ă\u002b/g, "Â");
   car = car.replace(/Â\u002b/g, "A");
@@ -495,6 +496,8 @@ car = document.transcription.text1.value;
   car = car.replace(/ỷ\u002a/g, "ỹ");
   car = car.replace(/ỹ\u002a/g, "ỵ");
   car = car.replace(/ỵ\u002a/g, "y");
+
+  car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
 function copy1()
