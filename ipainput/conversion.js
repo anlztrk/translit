@@ -1,6 +1,42 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value; 
+ car = car.replace(/A/g, "a");
+  car = car.replace(/Ä/g, "ä");
+  car = car.replace(/B/g, "ʙ");
+  car = car.replace(/C/g, "c");
+  car = car.replace(/Ç/g, "ç");
+  car = car.replace(/D/g, "d");
+  car = car.replace(/E/g, "e");
+  car = car.replace(/Ə/g, "ə");
+  car = car.replace(/F/g, "f");
+  car = car.replace(/G/g, "ɢ");
+  car = car.replace(/H/g, "h");
+  car = car.replace(/I/g, "ɪ");
+  car = car.replace(/J/g, "j");
+  car = car.replace(/K/g, "k");
+  car = car.replace(/L/g, "l");
+  car = car.replace(/M/g, "m");
+  car = car.replace(/N/g, "n");
+  car = car.replace(/O/g, "o");
+  car = car.replace(/Ö/g, "ɵ");
+  car = car.replace(/P/g, "p");
+  car = car.replace(/Q/g, "q");
+  car = car.replace(/R/g, "ʀ");
+  car = car.replace(/S/g, "s");
+  car = car.replace(/T/g, "t");
+  car = car.replace(/U/g, "u");
+  car = car.replace(/Ü/g, "ʉ");
+  car = car.replace(/V/g, "v");
+  car = car.replace(/W/g, "w");
+  car = car.replace(/X/g, "x");
+  car = car.replace(/Y/g, "ʏ");
+  car = car.replace(/Z/g, "z");
+ 
+ car = car.normalize('NFD');
+ 
+ car = car.replace(/c\u0327/g, "ç");
+ 
  car = car.replace(/\u003a/g, "\u02d0");
  car = car.replace(/\u0027/g, "\u02c8");
  
@@ -18,8 +54,7 @@ car = document.transcription.text1.value;
  car = car.replace(/\u005e/g, "\u0311");
  car = car.replace(/\u0311(\u002a|\u005c)/g, "\u035c");
  car = car.replace(/\u035c(\u002a|\u005c)/g, "\u032f");
- car = car.replace(/\u032f(\u002a|\u005c)/g, "\u203f");
- car = car.replace(/\u203f(\u002a|\u005c)/g, "\u0306");
+ car = car.replace(/\u032f(\u002a|\u005c)/g, "\u0306");
  car = car.replace(/\u007e/g, "\u0303");
  car = car.replace(/\u0306(\u002a|\u005c)/g, "\u0303");
  car = car.replace(/\u00a8/g, "\u0308");
