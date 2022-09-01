@@ -50,8 +50,8 @@ car = document.transcription.text1.value;
  car = car.replace(/ᵝ(\u002a|\u005c)/g, "ˤ");
  car = car.replace(/ˤ(\u002a|\u005c)/g, "\u02c8");
  
- car = car.replace(/\u005e/g, "\u0311");
- car = car.replace(/\u0311(\u002a|\u005c)/g, "\u035c");
+ car = car.replace(/\u005e/g, "\u0361");
+ car = car.replace(/\u0361(\u002a|\u005c)/g, "\u035c");
  car = car.replace(/\u035c(\u002a|\u005c)/g, "\u032f");
  car = car.replace(/\u032f(\u002a|\u005c)/g, "\u0306");
  car = car.replace(/\u007e/g, "\u0303");
@@ -65,7 +65,7 @@ car = document.transcription.text1.value;
  car = car.replace(/\u032a(\u002a|\u005c)/g, "\u0325");
  car = car.replace(/\u0325(\u002a|\u005c)/g, "\u030a");
  car = car.replace(/\u030a(\u002a|\u005c)/g, "\u033d");
- car = car.replace(/\u033d(\u002a|\u005c)/g, "\u0311"); 
+ car = car.replace(/\u033d(\u002a|\u005c)/g, "\u0361"); 
  
  car = car.replace(/\u007c/g, "\u01c0");
  car = car.replace(/\u01c0(\u002a|\u005c)/g, "\u01c1");
