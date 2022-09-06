@@ -38,6 +38,14 @@ car = document.transcription.text1.value;
   car = car.replace(/\u0020(Ь|ь)\u0020/g, "\u00206\u0020");
   car = car.replace(/\u0020(Ɂ|ʔ)\u0020/g, "\u00207\u0020");
   car = car.replace(/\u0020(ꟼ|զ)\u0020/g, "\u00209\u0020");
+  
+  car = car.replace(/(1|2|3|4|5|6|7|8|9|0)(Ƨ|ƨ)/g, "$1\2");
+  car = car.replace(/(1|2|3|4|5|6|7|8|9|0)(Ʒ|ʒ)/g, "$1\3");
+  car = car.replace(/(1|2|3|4|5|6|7|8|9|0)(Ҕ|ҕ)/g, "$1\5");
+  car = car.replace(/(1|2|3|4|5|6|7|8|9|0)(Ь|ь)/g, "$1\6");
+  car = car.replace(/(1|2|3|4|5|6|7|8|9|0)(Ɂ|ʔ)/g, "$1\7");
+  car = car.replace(/(1|2|3|4|5|6|7|8|9|0)(ꟼ|զ)/g, "$1\9");
+  
 document.transcription.text1.value=car;
 }
 function copy1()
