@@ -18,8 +18,6 @@ car = document.transcription.text1.value;
   car = car.replace(/ü/g, "ư");
   car = car.replace(/ə/g, "ê");
   car = car.replace(/ş/g, "\u002b");
- 
-  car = car.normalize('NFD');  
 
   car = car.replace(/A\u002b/g, "Ă");
   car = car.replace(/Ă\u002b/g, "Â");
