@@ -1,6 +1,4 @@
-﻿
-//  copyright lexilogos.com
-var car;
+﻿var car;
 function cyrlat () {
 translit = document.transcription.text1.value;
 car = document.transcription.text1.value;
@@ -9,6 +7,11 @@ car = document.transcription.text1.value;
   translit = translit.replace(/Ə/g, "Ә");
   car = car.replace(/ə/g, "ä");
   car = car.replace(/Ə/g, "Ä");
+
+  car = car.replace(/Х(0|1|2|3|4|5|6|7|8|9)/g, "X$1");
+  car = car.replace(/х(0|1|2|3|4|5|6|7|8|9)/g, "x$1");
+  car = car.replace(/(0|1|2|3|4|5|6|7|8|9)Х/g, "$1X");
+  car = car.replace(/(0|1|2|3|4|5|6|7|8|9)х/g, "$1x");
 
   //Я, Ё, Ю 
   car = car.replace(/Я(А|Ә|Б|В|Г|Ғ|Д|Е|Ё|Ж|З|И|Й|К|Қ|Л|М|Н|Ң|О|Ө|П|Р|С|Т|У|Ұ|Ү|Ф|Х|Һ|Ц|Ч|Ш|Щ|Ъ|Ы|І|Ь|Э|Я|Ю)/g, "ЙА$1");
@@ -70,7 +73,7 @@ car = document.transcription.text1.value;
   car = car.replace(/б/g, "b");
   car = car.replace(/в/g, "v");
   car = car.replace(/г/g, "g");
-  car = car.replace(/ғ/g, "ğ");
+  car = car.replace(/ғ/g, "ǧ");
   car = car.replace(/д/g, "d");
   car = car.replace(/е/g, "e");
   car = car.replace(/ж/g, "j");
@@ -82,7 +85,7 @@ car = document.transcription.text1.value;
   car = car.replace(/л/g, "l");
   car = car.replace(/м/g, "m");
   car = car.replace(/н/g, "n");
-  car = car.replace(/ң/g, "ņ");
+  car = car.replace(/ң/g, "ň");
   car = car.replace(/о/g, "o");
   car = car.replace(/ө/g, "ö");
   car = car.replace(/п/g, "p");
@@ -96,7 +99,7 @@ car = document.transcription.text1.value;
   car = car.replace(/ф/g, "f");
   car = car.replace(/х/g, "h");
   car = car.replace(/һ/g, "h");
-  car = car.replace(/ш/g, "ș");
+  car = car.replace(/ш/g, "c");
   car = car.replace(/ъ/g, "");
   car = car.replace(/ы/g, "ı");
   car = car.replace(/і/g, "i");
@@ -107,7 +110,7 @@ car = document.transcription.text1.value;
   car = car.replace(/Б/g, "B");
   car = car.replace(/В/g, "V");
   car = car.replace(/Г/g, "G");
-  car = car.replace(/Ғ/g, "Ğ");
+  car = car.replace(/Ғ/g, "Ǧ");
   car = car.replace(/Д/g, "D");
   car = car.replace(/Е/g, "E");
   car = car.replace(/Ж/g, "J");
@@ -119,7 +122,7 @@ car = document.transcription.text1.value;
   car = car.replace(/Л/g, "L");
   car = car.replace(/М/g, "M");
   car = car.replace(/Н/g, "N");
-  car = car.replace(/Ң/g, "Ņ");
+  car = car.replace(/Ң/g, "Ň");
   car = car.replace(/О/g, "O");
   car = car.replace(/Ө/g, "Ö");
   car = car.replace(/П/g, "P");
@@ -133,7 +136,7 @@ car = document.transcription.text1.value;
   car = car.replace(/Ф/g, "F");
   car = car.replace(/Х/g, "H");
   car = car.replace(/Һ/g, "H");
-  car = car.replace(/Ш/g, "Ș");
+  car = car.replace(/Ш/g, "C");
   car = car.replace(/Ъ/g, "");
   car = car.replace(/Ы/g, "I");
   car = car.replace(/І/g, "İ");

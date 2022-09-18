@@ -709,10 +709,10 @@ translit = translit.replace(/Oʼ/g, "Oʻ");
 translit = translit.replace(/gʼ/g, "gʻ");
 translit = translit.replace(/Gʼ/g, "Gʻ");
 
-translit = translit.replace(/oʻ/g, "ô");
-translit = translit.replace(/Oʻ/g, "Ô");
-translit = translit.replace(/gʻ/g, "ĝ");
-translit = translit.replace(/Gʻ/g, "Ĝ");
+translit = translit.replace(/oʻ/g, "ŏ");
+translit = translit.replace(/Oʻ/g, "Ŏ");
+translit = translit.replace(/gʻ/g, "ğ");
+translit = translit.replace(/Gʻ/g, "Ğ");
 
 translit = translit.replace(/CHCH/g, "CCH");
 translit = translit.replace(/Chch/g, "Cch");
@@ -771,10 +771,10 @@ translit = translit.replace(/CCH/g, "CHCH");
 translit = translit.replace(/Cch/g, "Chch");
 translit = translit.replace(/cch/g, "chch");
 
-translit = translit.replace(/ô/g, "oʻ");
-translit = translit.replace(/Ô/g, "Oʻ");
-translit = translit.replace(/ĝ/g, "gʻ");
-translit = translit.replace(/Ĝ/g, "Gʻ");
+translit = translit.replace(/ŏ/g, "oʻ");
+translit = translit.replace(/Ŏ/g, "Oʻ");
+translit = translit.replace(/ğ/g, "gʻ");
+translit = translit.replace(/Ğ/g, "Gʻ");
 
 translit = translit.replace(/H\u2060/g, "X");
 translit = translit.replace(/h\u2060/g, "x");
