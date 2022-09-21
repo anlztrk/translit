@@ -4,7 +4,6 @@ var translit;
 function cyrlat () {
 translit = document.transcription.text1.value;
 translit = translit.replace(/Ъ/g, "ъ");
-translit = translit.replace(/Ь/g, "ь");
 
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Е/g, "$1E");
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ё/g, "$1Ǒ");
@@ -43,9 +42,9 @@ translit = translit.replace(/ц/g, "c");
 translit = translit.replace(/ч/g, "č");
 translit = translit.replace(/ш/g, "š");
 translit = translit.replace(/щ/g, "ś");
-translit = translit.replace(/ъ/g, "\u02ee");
+translit = translit.replace(/ъ/g, "\u2019");
 translit = translit.replace(/ы/g, "y");
-translit = translit.replace(/ь/g, "\u02bc");
+translit = translit.replace(/ь/g, "ǐ");
 translit = translit.replace(/э/g, "e");
 translit = translit.replace(/ю/g, "ju");
 translit = translit.replace(/ё/g, "jo");
@@ -78,6 +77,7 @@ translit = translit.replace(/Ч/g, "Č");
 translit = translit.replace(/Ш/g, "Š");
 translit = translit.replace(/Щ/g, "Ś");
 translit = translit.replace(/Ы/g, "Y");
+translit = translit.replace(/Ь/g, "Ǐ");
 translit = translit.replace(/Э/g, "E");
 translit = translit.replace(/Ю/g, "Ju");
 translit = translit.replace(/Ё/g, "Jo");
