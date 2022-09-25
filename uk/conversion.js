@@ -3,9 +3,18 @@ var car;
 
 function cyrlat () {
 car = document.transcription.text1.value;
+car = car.replace(/(Ц|ц)(Г|г)/g, "$1ъ$2");
 car = car.replace(/ʼ/g, "ъ");
 car = car.replace(/’/g, "ъ");
 car = car.replace(/'/g, "ъ");
+
+car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Є/g, "$1Ě");
+car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ю/g, "$1Ǔ");
+car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Я/g, "$1Ǎ");
+car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)є/g, "$1ě");
+car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ю/g, "$1ǔ");
+car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)я/g, "$1ǎ");
+
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
 car = car.replace(/в/g, "v");
@@ -32,12 +41,12 @@ car = car.replace(/с/g, "s");
 car = car.replace(/т/g, "t");
 car = car.replace(/у/g, "u");
 car = car.replace(/ф/g, "f");
-car = car.replace(/х/g, "x");
+car = car.replace(/х/g, "ch");
 car = car.replace(/ц/g, "c");
 car = car.replace(/ч/g, "č");
 car = car.replace(/ш/g, "š");
 car = car.replace(/щ/g, "šč");
-car = car.replace(/ь/g, "\u02bc");
+car = car.replace(/ь/g, "ǐ");
 car = car.replace(/ю/g, "ju");
 car = car.replace(/я/g, "ja");
 
@@ -67,12 +76,12 @@ car = car.replace(/С/g, "S");
 car = car.replace(/Т/g, "T");
 car = car.replace(/У/g, "U");
 car = car.replace(/Ф/g, "F");
-car = car.replace(/Х/g, "X");
+car = car.replace(/Х/g, "Ch");
 car = car.replace(/Ц/g, "C");
 car = car.replace(/Ч/g, "Č");
 car = car.replace(/Ш/g, "Š");
 car = car.replace(/Щ/g, "Šč");
-car = car.replace(/Ь/g, "\u02bc");
+car = car.replace(/Ь/g, "Ǐ");
 car = car.replace(/Ю/g, "Ju");
 car = car.replace(/Я/g, "Ja");
 
