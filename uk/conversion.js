@@ -47,6 +47,7 @@ car = car.replace(/ч/g, "č");
 car = car.replace(/ш/g, "š");
 car = car.replace(/щ/g, "šč");
 car = car.replace(/ь/g, "ǐ");
+car = car.replace(/ъ/g, "’");
 car = car.replace(/ю/g, "ju");
 car = car.replace(/я/g, "ja");
 
