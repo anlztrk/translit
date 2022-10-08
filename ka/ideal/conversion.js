@@ -58,7 +58,7 @@ car = document.transcription.text1.value;
   car = car.replace(/И(а|о|ұ|ы)/g, "Ый$1");
   car = car.replace(/и(а|о|ұ|ы)/g, "ый$1");
   car = car.replace(/И(Ә|Е|Ө|Ү|І)/g, "ІЙ$1");
-  car = car.replace(/И(ә|е|ө|ү|і)/g, "ій$1");
+  car = car.replace(/И(ә|е|ө|ү|і)/g, "Ій$1");
   car = car.replace(/и(ә|е|ө|ү|і)/g, "ій$1");             
   
   //У
