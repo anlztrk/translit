@@ -25,6 +25,7 @@ car = car.replace(/Z/g, "Ζ");
 car = car.replace(/a/g, "а");
 car = car.replace(/b/g, "b");
 car = car.replace(/c/g, "с");
+car = car.replace(/ç/g, "ҫ");
 car = car.replace(/d/g, "ԁ");
 car = car.replace(/e/g, "е");
 car = car.replace(/g/g, "ɡ");
