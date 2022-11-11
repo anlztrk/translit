@@ -49,7 +49,17 @@ car = car.replace(/З(Ъ|ъ)/g, "З");
 car = car.replace(/С(Ъ|ъ)/g, "С");
 car = car.replace(/Л(Ъ|ъ)/g, "Л");
 car = car.replace(/Н(Ъ|ъ)/g, "Н");
-                  
+
+car = car.replace(/ӞӞ/G, "DDJ́");
+car = car.replace(/ЧЧ/G, "TTŚ");
+car = car.replace(/ӴӴ/G, "TTX");
+car = car.replace(/Ӟӟ/G, "Ddj́");
+car = car.replace(/Чч/G, "Ttś");
+car = car.replace(/Ӵӵ/G, "Ttx");
+car = car.replace(/ӟӟ/g, "ddj́");
+car = car.replace(/чч/g, "ttś");
+car = car.replace(/ӵӵ/g, "ttx");
+  
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
 car = car.replace(/в/g, "v");
