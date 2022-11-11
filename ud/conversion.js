@@ -108,7 +108,7 @@ car = car.replace(/ӵ/g, "č");
 car = car.replace(/ш/g, "š");
 car = car.replace(/щ/g, "ś");
 car = car.replace(/ъ/g, "ˮ");
-car = car.replace(/ы/g, "ĩ");
+car = car.replace(/ы/g, "ũ");
 car = car.replace(/ь/g, "ʼ");
 car = car.replace(/э/g, "e");
 
@@ -143,7 +143,7 @@ car = car.replace(/Ӵ/g, "Č");
 car = car.replace(/Ш/g, "Š");
 car = car.replace(/Щ/g, "Ś");
 car = car.replace(/Ъ/g, "ˮ");
-car = car.replace(/Ы/g, "Ĩ");
+car = car.replace(/Ы/g, "Ũ");
 car = car.replace(/Ь/g, "ʼ");
 car = car.replace(/Э/g, "E");
 car = car.replace(/«/g, "\u201c");
