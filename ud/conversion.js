@@ -4,16 +4,16 @@ var car;
 function cyrlat () {
 car = document.transcription.text1.value;
 
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)Е/g, "$1ЬЭ");
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)е/g, "$1ьэ");
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)Ё/g, "$1ЬО");
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)ё/g, "$1ьо");
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)И/g, "$1ЬӤ");
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)и/g, "$1ьӥ");
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)Ю/g, "$1ЬУ");
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)ю/g, "$1ьу");
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)Я/g, "$1ЬА");
-car = car.replace(/(Д|Т|С|Л|Н|д|т|с|л|н)я/g, "$1ьа");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)Е/g, "$1ЬЭ");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)е/g, "$1ьэ");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)Ё/g, "$1ЬО");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)ё/g, "$1ьо");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)И/g, "$1ЬӤ");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)и/g, "$1ьӥ");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)Ю/g, "$1ЬУ");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)ю/g, "$1ьу");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)Я/g, "$1ЬА");
+car = car.replace(/(Д|Т|З|С|Л|Н|д|т|з|с|л|н)я/g, "$1ьа");
 
 car = car.replace(/Е/g, "Йэ");  
 car = car.replace(/Ё/g, "Йо");  
