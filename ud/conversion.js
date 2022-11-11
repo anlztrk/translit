@@ -72,13 +72,10 @@ car = car.replace(/Н(Ъ|ъ)/g, "Н");
 
 car = car.replace(/ӞӞ/g, "DDŹ");
 car = car.replace(/ЧЧ/g, "TTŚ");
-car = car.replace(/ӴӴ/g, "TTŠ");
 car = car.replace(/Ӟӟ/g, "Ddź");
 car = car.replace(/Чч/g, "Ttś");
-car = car.replace(/Ӵӵ/g, "Ttš");
 car = car.replace(/ӟӟ/g, "ddź");
 car = car.replace(/чч/g, "ttś");
-car = car.replace(/ӵӵ/g, "ttš");
   
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
