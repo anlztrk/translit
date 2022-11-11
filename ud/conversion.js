@@ -161,6 +161,6 @@ textRange="";
 }
 function copy2()
 { textRange=document.transcription.text2.createTextRange();
-textRange.ešecCommand("Copy");
+textRange.execCommand("Copy");
 textRange="";
 }
