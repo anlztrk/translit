@@ -25,6 +25,25 @@ car = car.replace(/и/g, "ӥ");
 car = car.replace(/ю/g, "йу");  
 car = car.replace(/я/g, "йа");
   
+car = car.replace(/ддь/g, "ďď");
+car = car.replace(/тть/g, "ťť");
+car = car.replace(/ззь/g, "j́j́");
+car = car.replace(/ссь/g, "śś");
+car = car.replace(/лль/g, "ll");
+car = car.replace(/ннь/g, "ńń");
+car = car.replace(/Ддь/g, "Ďď");
+car = car.replace(/Тть/g, "Ťť");
+car = car.replace(/Ззь/g, "J́j́");
+car = car.replace(/Ссь/g, "Śś");
+car = car.replace(/Лль/g, "Ll");
+car = car.replace(/Ннь/g, "Ńń");
+car = car.replace(/ДД(Ь|ь)/g, "ĎĎ");
+car = car.replace(/ТТ(Ь|ь)/g, "ŤŤ");
+car = car.replace(/ЗЗ(Ь|ь)/g, "J́J́");
+car = car.replace(/СС(Ь|ь)/g, "ŚŚ");
+car = car.replace(/ЛЛ(Ь|ь)/g, "LL");
+car = car.replace(/НН(Ь|ь)/g, "ŃŃ");
+
 car = car.replace(/дь/g, "ď");
 car = car.replace(/ть/g, "ť");
 car = car.replace(/зь/g, "j́");
