@@ -1,5 +1,6 @@
 var car;
 
+
 function cyrlat () {
 car = document.transcription.text1.value;
 
@@ -27,32 +28,32 @@ car = car.replace(/я/g, "йа");
   
 car = car.replace(/ддь/g, "ďď");
 car = car.replace(/тть/g, "ťť");
-car = car.replace(/ззь/g, "j́j́");
+car = car.replace(/ззь/g, "jj");
 car = car.replace(/ссь/g, "śś");
 car = car.replace(/лль/g, "ll");
 car = car.replace(/ннь/g, "ńń");
 car = car.replace(/Ддь/g, "Ďď");
 car = car.replace(/Тть/g, "Ťť");
-car = car.replace(/Ззь/g, "J́j́");
+car = car.replace(/Ззь/g, "Jj");
 car = car.replace(/Ссь/g, "Śś");
 car = car.replace(/Лль/g, "Ll");
 car = car.replace(/Ннь/g, "Ńń");
 car = car.replace(/ДД(Ь|ь)/g, "ĎĎ");
 car = car.replace(/ТТ(Ь|ь)/g, "ŤŤ");
-car = car.replace(/ЗЗ(Ь|ь)/g, "J́J́");
+car = car.replace(/ЗЗ(Ь|ь)/g, "JJ");
 car = car.replace(/СС(Ь|ь)/g, "ŚŚ");
 car = car.replace(/ЛЛ(Ь|ь)/g, "LL");
 car = car.replace(/НН(Ь|ь)/g, "ŃŃ");
 
 car = car.replace(/дь/g, "ď");
 car = car.replace(/ть/g, "ť");
-car = car.replace(/зь/g, "j́");
+car = car.replace(/зь/g, "j");
 car = car.replace(/сь/g, "ś");
 car = car.replace(/ль/g, "l");
 car = car.replace(/нь/g, "ń");
 car = car.replace(/Д(Ь|ь)/g, "Ď");
 car = car.replace(/Т(Ь|ь)/g, "Ť");
-car = car.replace(/З(Ь|ь)/g, "J́");
+car = car.replace(/З(Ь|ь)/g, "J");
 car = car.replace(/С(Ь|ь)/g, "Ś");
 car = car.replace(/Л(Ь|ь)/g, "L");
 car = car.replace(/Н(Ь|ь)/g, "Ń");
@@ -69,25 +70,25 @@ car = car.replace(/С(Ъ|ъ)/g, "С");
 car = car.replace(/Л(Ъ|ъ)/g, "Л");
 car = car.replace(/Н(Ъ|ъ)/g, "Н");
 
-car = car.replace(/ӞӞ/g, "DDJ́");
+car = car.replace(/ӞӞ/g, "DDJ");
 car = car.replace(/ЧЧ/g, "TTŚ");
-car = car.replace(/ӴӴ/g, "TTX");
-car = car.replace(/Ӟӟ/g, "Ddj́");
+car = car.replace(/ӴӴ/g, "TTŠ");
+car = car.replace(/Ӟӟ/g, "Ddj");
 car = car.replace(/Чч/g, "Ttś");
-car = car.replace(/Ӵӵ/g, "Ttx");
-car = car.replace(/ӟӟ/g, "ddj́");
+car = car.replace(/Ӵӵ/g, "Ttš");
+car = car.replace(/ӟӟ/g, "ddj");
 car = car.replace(/чч/g, "ttś");
-car = car.replace(/ӵӵ/g, "ttx");
+car = car.replace(/ӵӵ/g, "ttš");
   
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
 car = car.replace(/в/g, "v");
 car = car.replace(/г/g, "g");
 car = car.replace(/д/g, "d");
-car = car.replace(/ж/g, "j");
-car = car.replace(/ӝ/g, "dj");
+car = car.replace(/ж/g, "ž");
+car = car.replace(/ӝ/g, "dž");
 car = car.replace(/з/g, "z");
-car = car.replace(/ӟ/g, "dj́");
+car = car.replace(/ӟ/g, "dj");
 car = car.replace(/и/g, "i");
 car = car.replace(/ӥ/g, "i");
 car = car.replace(/й/g, "y");
@@ -106,11 +107,11 @@ car = car.replace(/ф/g, "f");
 car = car.replace(/х/g, "h");
 car = car.replace(/ц/g, "c");
 car = car.replace(/ч/g, "tś");
-car = car.replace(/ӵ/g, "tx");
-car = car.replace(/ш/g, "x");
+car = car.replace(/ӵ/g, "tš");
+car = car.replace(/ш/g, "š");
 car = car.replace(/щ/g, "ś");
 car = car.replace(/ъ/g, "ˮ");
-car = car.replace(/ы/g, "ɨ");
+car = car.replace(/ы/g, "ĩ");
 car = car.replace(/ь/g, "ʼ");
 car = car.replace(/э/g, "e");
 
@@ -119,10 +120,10 @@ car = car.replace(/Б/g, "B");
 car = car.replace(/В/g, "V");
 car = car.replace(/Г/g, "G");
 car = car.replace(/Д/g, "D");
-car = car.replace(/Ж/g, "J");
-car = car.replace(/Ӝ/g, "Dj");
+car = car.replace(/Ж/g, "Ž");
+car = car.replace(/Ӝ/g, "Dž");
 car = car.replace(/З/g, "Z");
-car = car.replace(/Ӟ/g, "Dj́");
+car = car.replace(/Ӟ/g, "Dj");
 car = car.replace(/И/g, "I");
 car = car.replace(/Ӥ/g, "I");
 car = car.replace(/Й/g, "Y");
@@ -141,11 +142,11 @@ car = car.replace(/Ф/g, "F");
 car = car.replace(/Х/g, "H");
 car = car.replace(/Ц/g, "C");
 car = car.replace(/Ч/g, "Tś");
-car = car.replace(/Ӵ/g, "Tx");
-car = car.replace(/Ш/g, "X");
+car = car.replace(/Ӵ/g, "Tš");
+car = car.replace(/Ш/g, "Š");
 car = car.replace(/Щ/g, "Ś");
 car = car.replace(/Ъ/g, "ˮ");
-car = car.replace(/Ы/g, "Ɨ");
+car = car.replace(/Ы/g, "Ĩ");
 car = car.replace(/Ь/g, "ʼ");
 car = car.replace(/Э/g, "E");
 car = car.replace(/«/g, "\u201c");
@@ -160,6 +161,6 @@ textRange="";
 }
 function copy2()
 { textRange=document.transcription.text2.createTextRange();
-textRange.execCommand("Copy");
+textRange.ešecCommand("Copy");
 textRange="";
 }
