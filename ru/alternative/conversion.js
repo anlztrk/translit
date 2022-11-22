@@ -5,6 +5,9 @@ function cyrlat () {
 translit = document.transcription.text1.value;
 translit = translit.replace(/Ъ/g, "ъ");
 
+translit = translit.replace(/ЬЯ/g, "ЙA");
+translit = translit.replace(/ья/g, "йа");
+
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Е/g, "$1E");
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ё/g, "$1Ö");
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ю/g, "$1Ü");
