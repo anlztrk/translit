@@ -24,6 +24,12 @@ car = document.transcription.text1.value;
   car = car.replace(/DTY/g, "TTY");
   car = car.replace(/Dty/g, "Tty");
   car = car.replace(/dty/g, "tty");
+  car = car.replace(/GYJ/g, "GGY");
+  car = car.replace(/Gyj/g, "Ggy");
+  car = car.replace(/gyj/g, "ggy");
+  car = car.replace(/TYJ/g, "TTY");
+  car = car.replace(/Tyj/g, "Tty");
+  car = car.replace(/tyj/g, "tty");
 
   car = car.replace(/LLY/g, "JJ");
   car = car.replace(/LLy/g, "JJ");
@@ -107,6 +113,16 @@ car = document.transcription.text1.value;
   car = car.replace(/(E|e|İ|i|Ö|ö|Ü|ü)đ/g, "$1ǵ");
   car = car.replace(/(E|e|İ|i|Ö|ö|Ü|ü)Ć/g, "$1Ḱ");
   car = car.replace(/(E|e|İ|i|Ö|ö|Ü|ü)ć/g, "$1ḱ");
+  
+  car = car.replace(/ĐĐ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "ǴǴ$1");
+  car = car.replace(/Đđ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "Ǵǵ$1");
+  car = car.replace(/đđ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "ǵǵ$1");
+  car = car.replace(/ĆĆ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "ḰḰ$1");
+  car = car.replace(/Ćć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "Ḱḱ$1");
+  car = car.replace(/ćć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "ḱḱ$1");
+  car = car.replace(/đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "ǵ$1");
+  car = car.replace(/Ć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "Ḱ$1");
+  car = car.replace(/ć(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "ḱ$1");
   
   car = car.replace(/Đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "Ǵ$1");
   car = car.replace(/đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "ǵ$1");
