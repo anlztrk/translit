@@ -88,6 +88,14 @@ car = document.transcription.text1.value;
   car = car.replace(/\u0301/g, "");
   car = car.normalize('NFC');
 
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü|a|â|e|i|o|u|û|ö|ü)ŢŢ/g, "$1TTS");
+  car = car.replace(/(a|â|e|i|o|u|û|ö|ü)Ţţ/g, "$1Tts");
+  car = car.replace(/(a|â|e|i|o|u|û|ö|ü)ţŢ/g, "$1tTs");
+  car = car.replace(/(a|â|e|i|o|u|û|ö|ü)ţţ/g, "$1tts");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)Ţţ/g, "$1Tts");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)ţŢ/g, "$1tTS");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)ţţ/g, "$1tts");
+  
   car = car.replace(/(a|â|e|i|o|u|û|ö|ü)Ţ/g, "$1Ts");
   car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)Ţ/g, "$1TS");
   car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü|a|â|e|i|o|u|û|ö|ü)ţ/g, "$1ts");
