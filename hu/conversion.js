@@ -73,6 +73,10 @@ car = document.transcription.text1.value;
   car = car.replace(/(A|a|O|o|U|u)ǵ/g, "$1đ");
   car = car.replace(/(A|a|O|o|U|u)Ḱ/g, "$1Ć");
   car = car.replace(/(A|a|O|o|U|u)ḱ/g, "$1ć");
+  car = car.replace(/Ǵ(O|o)/g, "Đ$1");
+  car = car.replace(/ǵ(O|o)/g, "đ$1");
+  car = car.replace(/Ḱ(O|o)/g, "Ć$1");
+  car = car.replace(/ḱ(O|o)/g, "ć$1");
   
   car = car.replace(/Đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "Ǵ$1");
   car = car.replace(/đ(A|a|E|e|İ|i|Ö|ö|U|u|Ü|ü| A| a| U| u| E| e| İ| i| Ö| ö| Ü| ü)/g, "ǵ$1");
