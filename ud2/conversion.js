@@ -27,6 +27,10 @@ car = car.replace(/дь/g, "гь");
 car = car.replace(/СЬ/g, "Щ");
 car = car.replace(/Сь/g, "Щ");
 car = car.replace(/сь/g, "щ");
+  
+car = car.replace(/Ь(Д|С|З|Л|Н|Т)Ь/g, "$1Ь");
+car = car.replace(/Ь(д|с|з|л|н|т)Ь/g, "$1ь");
+car = car.replace(/ь(д|с|з|л|н|т)Ь/g, "$1ь");
 
 car = car.replace(/ЖЖ/g, "ZZS");
 car = car.replace(/ӜӜ/g, "DDZS");
