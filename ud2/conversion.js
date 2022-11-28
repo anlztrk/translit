@@ -22,7 +22,7 @@ car = car.replace(/(Д|С|З|Л|Н|Т|д|с|з|л|н|т)и/g, "$1ьӥ");
   
 car = car.replace(/Ь(Д|С|З|Л|Н|Т)Ь/g, "$1Ь");
 car = car.replace(/Ь(д|с|з|л|н|т)Ь/g, "$1ь");
-car = car.replace(/ь(д|с|з|л|н|т)Ь/g, "$1ь");
+car = car.replace(/ь(д|с|з|л|н|т)ь/g, "$1ь");
   
 car = car.replace(/ДЬ/g, "ГЬ");
 car = car.replace(/Дь/g, "Гь");
