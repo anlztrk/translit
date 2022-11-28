@@ -2,6 +2,11 @@ var car;
 
 function cyrlat () {
 car = document.transcription.text1.value;
+car = car.replace(/(0|1|2|3|4|5|6|7|8|9)Х/g, "$1X");
+car = car.replace(/(0|1|2|3|4|5|6|7|8|9)х/g, "$1x");
+car = car.replace(/Х(0|1|2|3|4|5|6|7|8|9)/g, "X$1");
+car = car.replace(/х(0|1|2|3|4|5|6|7|8|9)/g, "x$1");
+  
 car = car.replace(/(Б|В|Г|Ж|Ӝ|Ӟ|К|М|П|Р|Ф|Х|Ц|Ч|Ӵ|Ш|Щ|б|в|г|ж|ӝ|ӟ|к|м|п|р|ф|х|ц|ч|ӵ|ш|щ)Е/g, "$1Э");
 car = car.replace(/(Б|В|Г|Ж|Ӝ|Ӟ|К|М|П|Р|Ф|Х|Ц|Ч|Ӵ|Ш|Щ|б|в|г|ж|ӝ|ӟ|к|м|п|р|ф|х|ц|ч|ӵ|ш|щ)е/g, "$1э");
 car = car.replace(/(Д|С|З|Л|Н|Т)Е/g, "$1ЬЭ");
