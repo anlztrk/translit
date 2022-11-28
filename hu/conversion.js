@@ -2,18 +2,18 @@
 function cyrlat () {
 car = document.transcription.text1.value;
 
-  car = car.replace(/DJ/g, "GY");
-  car = car.replace(/Dj/g, "Gy");
-  car = car.replace(/dj/g, "gy");
-  car = car.replace(/LJ/g, "LY");
-  car = car.replace(/Lj/g, "Ly");
-  car = car.replace(/lj/g, "ly");
-  car = car.replace(/NJ/g, "NY");
-  car = car.replace(/Nj/g, "Ny");
-  car = car.replace(/nj/g, "ny");
-  car = car.replace(/TJ/g, "TY");
-  car = car.replace(/Tj/g, "Ty");
-  car = car.replace(/tj/g, "ty");
+  car = car.replace(/DJ/g, "GGY");
+  car = car.replace(/Dj/g, "Ggy");
+  car = car.replace(/dj/g, "ggy");
+  car = car.replace(/LJ/g, "LLY");
+  car = car.replace(/Lj/g, "Lly");
+  car = car.replace(/lj/g, "lly");
+  car = car.replace(/NJ/g, "NNY");
+  car = car.replace(/Nj/g, "Nny");
+  car = car.replace(/nj/g, "nny");
+  car = car.replace(/TJ/g, "TTY");
+  car = car.replace(/Tj/g, "Tty");
+  car = car.replace(/tj/g, "tty");
   
   car = car.replace(/DGY/g, "GGY");
   car = car.replace(/Dgy/g, "Ggy");
@@ -30,6 +30,9 @@ car = document.transcription.text1.value;
   car = car.replace(/TYJ/g, "TTY");
   car = car.replace(/Tyj/g, "Tty");
   car = car.replace(/tyj/g, "tty");
+  car = car.replace(/NYJ/g, "NNY");
+  car = car.replace(/Nyj/g, "Nny");
+  car = car.replace(/nyj/g, "nny");
 
   car = car.replace(/LLY/g, "JJ");
   car = car.replace(/LLy/g, "JJ");
