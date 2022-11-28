@@ -24,6 +24,9 @@ car = document.transcription.text1.value;
   car = car.replace(/nii/g, "ńji");
   car = car.replace(/N(I|i)/g, "Ń$1");
   car = car.replace(/ni/g, "ńi");
+  
+  car = car.replace(/I(I|i)/g, "J$1");
+  car = car.replace(/ii/g, "ji");
 document.transcription.text2.value=car;
 }
 function copy1()
