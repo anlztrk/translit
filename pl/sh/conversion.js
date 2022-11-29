@@ -72,7 +72,7 @@ car = document.transcription.text1.value;
   car = car.replace(/ł/g, "w");
  
   car = car.replace(/Ń/g, "Nj");
-  car = car.replace(/ń/g, "nJ");
+  car = car.replace(/ń/g, "nj");
 document.transcription.text2.value=car;
 }
 function copy1()
