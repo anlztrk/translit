@@ -60,60 +60,19 @@ car = document.transcription.text1.value;
   car = car.replace(/D(Z|z)/g, "Ѕ");
   car = car.replace(/dz/g, "ѕ");
   
-  car = car.replace(/D(Ž|Ź)/g, "Җ");
-  car = car.replace(/D(ž|ź)/g, "Җ");
-  car = car.replace(/d(ž|ź)/g, "җ");
-  car = car.replace(/C/g, "Ц");
-  car = car.replace(/c/g, "ц");
-  car = car.replace(/Җ/g, "C");
-  car = car.replace(/җ/g, "c");
   car = car.replace(/Ą/g, "O");
   car = car.replace(/ą/g, "o");
-  car = car.replace(/I/g, "İ");
-  car = car.replace(/Y/g, "I");
-  car = car.replace(/y/g, "ı");
-  car = car.replace(/J/g, "Y");
-  car = car.replace(/j/g, "y");
-  car = car.replace(/(Ć|Č)/g, "Ç");
-  car = car.replace(/(ć|č)/g, "ç");
   car = car.replace(/Ę/g, "E");
   car = car.replace(/ę/g, "e");
   car = car.replace(/Ó/g, "U");
   car = car.replace(/ó/g, "u");
-  car = car.replace(/(Ś|Š)/g, "Ş");
-  car = car.replace(/(ś|š)/g, "ş");
-  car = car.replace(/(Ž|Ź)/g, "J");
-  car = car.replace(/(ž|ź)/g, "j");
-  car = car.replace(/(W|Ł)/g, "V");
-  car = car.replace(/(w|ł)/g, "v");
-  
-  car = car.replace(/Ń(A|E|İ|O|U|I)/g, "NY$1");
-  car = car.replace(/Ń(a|e|i|o|u|ı)/g, "Ny$1");
-  car = car.replace(/ń(a|e|i|o|u|ı)/g, "ny$1");
-  car = car.replace(/Ń/g, "N");
-  car = car.replace(/ń/g, "n");
-  
-  car = car.replace(/(A|E|İ|O|U|I|a|e|i|o|u|ı)ЦЦ/g, "$1TTS");
-  car = car.replace(/(a|e|i|o|u|ı)Цц/g, "$1Tts");
-  car = car.replace(/(a|e|i|o|u|ı)цЦ/g, "$1tTs");
-  car = car.replace(/(a|e|i|o|u|ı)цц/g, "$1tts");
-  car = car.replace(/(A|E|İ|O|U|I)Цц/g, "$1Tts");
-  car = car.replace(/(A|E|İ|O|U|I)цЦ/g, "$1tTS");
-  car = car.replace(/(A|E|İ|O|U|I)цц/g, "$1tts");
-  
-  car = car.replace(/(A|E|İ|O|U|I)Ц/g, "$1TS");
-  car = car.replace(/(A|E|İ|O|U|I)ц/g, "$1ts");
-  car = car.replace(/(a|e|i|o|u|ı)Ц/g, "$1Ts");
-  car = car.replace(/(a|e|i|o|u|ı)ц/g, "$1ts");
-  car = car.replace(/Ц/g, "S");
-  car = car.replace(/ц/g, "s");
-  
-  car = car.replace(/(A|E|İ|O|U|I)Ѕ/g, "$1DZ");
-  car = car.replace(/(A|E|İ|O|U|I)ѕ/g, "$1dz");
-  car = car.replace(/(a|e|i|o|u|ı)Ѕ/g, "$1Dz");
-  car = car.replace(/(a|e|i|o|u|ı)ѕ/g, "$1dz");
-  car = car.replace(/Ѕ/g, "Z");
-  car = car.replace(/ѕ/g, "z");
+  car = car.replace(/W/g, "V");
+  car = car.replace(/w/g, "v");
+  car = car.replace(/Ł/g, "W");
+  car = car.replace(/ł/g, "W");
+ 
+  car = car.replace(/Ń/g, "Nj");
+  car = car.replace(/ń/g, "nJ");
 document.transcription.text2.value=car;
 }
 function copy1()
