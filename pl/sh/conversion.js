@@ -69,7 +69,7 @@ car = document.transcription.text1.value;
   car = car.replace(/W/g, "V");
   car = car.replace(/w/g, "v");
   car = car.replace(/Ł/g, "W");
-  car = car.replace(/ł/g, "W");
+  car = car.replace(/ł/g, "w");
  
   car = car.replace(/Ń/g, "Nj");
   car = car.replace(/ń/g, "nJ");
