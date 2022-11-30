@@ -45,6 +45,9 @@ car = document.transcription.text1.value;
   car = car.replace(/Ddz/g, "Ƶƶ");
   car = car.replace(/ddz/g, "ƶƶ"); 
   
+  car = car.replace(/DZS/g, "Ċ");
+  car = car.replace(/Dzs/g, "Ċ");
+  car = car.replace(/Dzs/g, "ċ");
   car = car.replace(/ZS/g, "Ĵ");
   car = car.replace(/Zs/g, "Ĵ");
   car = car.replace(/zs/g, "ĵ");  
