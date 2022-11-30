@@ -216,7 +216,7 @@ car = document.transcription.text1.value;
   
   car = car.replace(/(a|â|e|i|o|u|û|ö|ü)Ƶ/g, "$1Dz");
   car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)Ƶ/g, "$1DZ");
-  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü|a|â|e|i|o|u|û|ö|ü)ƶ/g, "$1ts");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü|a|â|e|i|o|u|û|ö|ü)ƶ/g, "$1dz");
   car = car.replace(/Ƶ/g, "Z");
   car = car.replace(/ƶ/g, "z");
 document.transcription.text2.value=car;
