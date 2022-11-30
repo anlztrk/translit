@@ -1,6 +1,22 @@
 ﻿var car;
 function cyrlat () {
 car = document.transcription.text1.value;
+  car = car.replace(/DZSZ/g, "DZ\u200bSZ");
+  car = car.replace(/Dzsz/g, "Dz\u200bsz");
+  car = car.replace(/dzsz/g, "dz\u200bsz");
+  
+  car = car.replace(/SZS/g, "SZ\u200bS");
+  car = car.replace(/Szs/g, "Sz\u200bs");
+  car = car.replace(/szs/g, "sz\u200bs");
+   
+  car = car.replace(/ZSZ/g, "Z\u200bSZ");
+  car = car.replace(/Zsz/g, "Z\u200bsz");
+  car = car.replace(/zsz/g, "z\u200bsz");
+  
+  car = car.replace(/CSZ/g, "CS\u200bZ");
+  car = car.replace(/Csz/g, "Cs\u200bz");
+  car = car.replace(/csz/g, "cs\u200bz");
+  
   car = car.replace(/TTY/g, "ĆĆ");
   car = car.replace(/Tty/g, "Ćć");
   car = car.replace(/tty/g, "ćć");
@@ -68,6 +84,8 @@ car = document.transcription.text1.value;
   car = car.replace(/j/g, "y");
   car = car.replace(/Ĵ/g, "J");
   car = car.replace(/ĵ/g, "j");
+  
+  car = car.replace(/\u200b/g, "");
   
   car = car.replace(/P(B|D|Ƶ|C|G|Đ|Z|J|b|d|ƶ|c|g|đ|z|j)/g, "B$1");
   car = car.replace(/T(B|D|Ƶ|C|G|Đ|Z|J|b|d|ƶ|c|g|đ|z|j)/g, "D$1");
