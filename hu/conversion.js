@@ -214,6 +214,14 @@ car = document.transcription.text1.value;
   car = car.replace(/Ţ/g, "S");
   car = car.replace(/ţ/g, "s");
   
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü|a|â|e|i|o|u|û|ö|ü)ƵƵ/g, "$1DDZ");
+  car = car.replace(/(a|â|e|i|o|u|û|ö|ü)Ƶƶ/g, "$1Ddz");
+  car = car.replace(/(a|â|e|i|o|u|û|ö|ü)ƶƵ/g, "$1tDz");
+  car = car.replace(/(a|â|e|i|o|u|û|ö|ü)ƶƶ/g, "$1ddz");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)Ƶƶ/g, "$1Ddz");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)ƶƵ/g, "$1tDZ");
+  car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)ƶƶ/g, "$1ddz");
+    
   car = car.replace(/(a|â|e|i|o|u|û|ö|ü)Ƶ/g, "$1Dz");
   car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü)Ƶ/g, "$1DZ");
   car = car.replace(/(A|Â|E|İ|O|U|Û|Ö|Ü|a|â|e|i|o|u|û|ö|ü)ƶ/g, "$1dz");
