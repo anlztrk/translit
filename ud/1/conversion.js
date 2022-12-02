@@ -65,6 +65,7 @@ car = car.replace(/Д(Ь|ь)/g, "Ď");
 car = car.replace(/Т(Ь|ь)/g, "Ť");
 car = car.replace(/З(Ь|ь)/g, "Ź");
 car = car.replace(/С(Ь|ь)/g, "Ś");
+car = car.replace(/Л(Ь|ь)/g, "Ly");
 car = car.replace(/Н(Ь|ь)/g, "Ń");
 
 car = car.replace(/дъ/g, "д");
@@ -79,8 +80,6 @@ car = car.replace(/З(Ъ|ъ)/g, "З");
 car = car.replace(/С(Ъ|ъ)/g, "С");
 car = car.replace(/Л(Ъ|ъ)/g, "Л");
 car = car.replace(/Н(Ъ|ъ)/g, "Н");
-
-car = car.replace(/(Л|л)(Й|й)/g, "$1ʼ$2");
 
 car = car.replace(/ӞӞ/g, "DDŹ");
 car = car.replace(/Ӟӟ/g, "Ddź");
