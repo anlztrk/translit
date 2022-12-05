@@ -21,7 +21,6 @@ car = document.transcription.text1.value;
   car = car.replace(/Ň\u002a/g, "Ñ");
   car = car.replace(/Ñ\u002a/g, "N");
   car = car.replace(/O\u002a/g, "Ö");
-  car = car.replace(/Ö\u002a/g, "O");
   car = car.replace(/Ö\u002a/g, "O\u02bb");
   car = car.replace(/O\u02bb\u002a/g, "O");
   car = car.replace(/S\u002a/g, "Ş");
