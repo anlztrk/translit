@@ -149,7 +149,7 @@ car = document.transcription.text1.value;
     
   car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)jʊəɹ/g, "$1EWR");
   car = car.replace(/jʊəɹ/g, "YOOR");
-  car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)aɪ\u2060(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)/g, "$1Y$2E");
+  car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)aɪ(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)/g, "$1Y$2E");
   car = car.replace(/ɔɪəɹ/g, "OIR");
   car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)juː/g, "$1EW");
   car = car.replace(/aʊəɹ/g, "OWR");
