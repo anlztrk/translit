@@ -136,6 +136,7 @@ car = document.transcription.text1.value;
 
   car = car.replace(/ɑː\u2060/g, "a");
   car = car.replace(/eɪ\u2060/g, "e");
+  car = car.replace(/oʊ\u2060/g, "e");
   car = car.replace(/iː\u2060/g, "i");
   car = car.replace(/uː\u2060/g, "u");
 
