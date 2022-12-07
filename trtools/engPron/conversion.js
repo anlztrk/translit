@@ -111,7 +111,7 @@ car = document.transcription.text1.value;
   car = car.replace(/aː/g, "ɑː");
   car = car.replace(/eː/g, "ɛ");
   car = car.replace(/ɯː|iː/g, "i\u2060ː");
-  car = car.replace(/oː|œː/g, "o\u20600ʊ");
+  car = car.replace(/oː|œː/g, "o\u2060ʊ");
   car = car.replace(/uː|yː/g, "u\u2060ː");
   
   car = car.replace(/c(u|y)/g, "kj$1");
