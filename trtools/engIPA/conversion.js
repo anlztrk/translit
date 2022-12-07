@@ -113,15 +113,21 @@ car = document.transcription.text1.value;
   car = car.replace(/ɯː|iː/g, "i\u2060ː");
   car = car.replace(/oː|œː/g, "ɔː");
   car = car.replace(/uː|yː/g, "u\u2060ː");
+  
+  car = car.replace(/c(u|y)/g, "kj$1");
+  car = car.replace(/ɟ(u|y)/g, "ɡj$1");
+  
+  car = car.replace(/a.(b|dʒ|tʃ|d|f|ɡ|ɟ|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "ʌ$2.");
+  car = car.replace(/e.(b|dʒ|tʃ|d|f|ɡ|ɟ|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "ɛ$2.");
+  car = car.replace(/i.(b|dʒ|tʃ|d|f|ɡ|ɟ|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "ɪ$2.");
+  car = car.replace(/(u|y).(b|dʒ|tʃ|d|f|ɡ|ɟ|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "ʊ$2.");
 
-  car = car.replace(/a/g, "ʌ");
-  car = car.replace(/e/g, "ɛ");
+  car = car.replace(/a/g, "ɑː");
+  car = car.replace(/e/g, "eɪ");
   car = car.replace(/ɯ/g, "ə");
-  car = car.replace(/i/g, "ɪ");
+  car = car.replace(/i/g, "iː");
   car = car.replace(/o|œ/g, "oʊ");
-  car = car.replace(/c(u|y)/g, "kjʊ");
-  car = car.replace(/ɟ(u|y)/g, "ɡjʊ");
-  car = car.replace(/u|y/g, "ʊ");
+  car = car.replace(/u|y/g, "uː");
 
   car = car.replace(/ʌ\u2060/g, "a");
   car = car.replace(/ɛ\u2060/g, "e");
