@@ -129,10 +129,10 @@ car = document.transcription.text1.value;
   car = car.replace(/o|œ/g, "oʊ");
   car = car.replace(/u|y/g, "uː");
 
-  car = car.replace(/ʌ\u2060/g, "a");
-  car = car.replace(/ɛ\u2060/g, "e");
-  car = car.replace(/ɪ\u2060/g, "i");
-  car = car.replace(/ʊ\u2060/g, "u");
+  car = car.replace(/ɑː\u2060/g, "a");
+  car = car.replace(/eɪ\u2060/g, "e");
+  car = car.replace(/iː\u2060/g, "i");
+  car = car.replace(/uː\u2060/g, "u");
 
   car = car.replace(/c/g, "k");
   car = car.replace(/ɟ/g, "ɡ");
