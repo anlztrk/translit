@@ -1,7 +1,7 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;  
-  car = car.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)Ğ/g, "$1G");
+    car = car.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)Ğ/g, "$1G");
   car = car.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)ğ/g, "$1g");
   
   car = car.replace(/(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2$3.$4$5");
@@ -111,7 +111,7 @@ car = document.transcription.text1.value;
   car = car.replace(/aː/g, "ɑː");
   car = car.replace(/eː/g, "ɛ");
   car = car.replace(/ɯː|iː/g, "i\u2060ː");
-  car = car.replace(/oː|œː/g, "oʊ");
+  car = car.replace(/oː|œː/g, "o\u20600ʊ");
   car = car.replace(/uː|yː/g, "u\u2060ː");
   
   car = car.replace(/c(u|y)/g, "kj$1");
@@ -136,6 +136,7 @@ car = document.transcription.text1.value;
 
   car = car.replace(/ɑː\u2060/g, "a");
   car = car.replace(/eɪ\u2060/g, "e");
+  car = car.replace(/o\u2060ʊ/g, "o");
   car = car.replace(/iː\u2060/g, "i");
   car = car.replace(/uː\u2060/g, "u");
 
@@ -145,6 +146,7 @@ car = document.transcription.text1.value;
   car = car.replace(/ɲ/g, "ŋ");
   car = car.replace(/β/g, "w");
   car = car.replace(/ɾ/g, "ɹ");
+  car = car.replace(/\u2060/g, "");
 document.transcription.text2.value=car;
 }
 function copy1()
