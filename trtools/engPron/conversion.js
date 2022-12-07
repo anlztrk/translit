@@ -4,14 +4,14 @@ car = document.transcription.text1.value;
   car = car.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)Ğ/g, "$1G");
   car = car.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)ğ/g, "$1g");
   
-  car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2$3.$4$5");
-  car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2$3.$4$5");
-  car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2.$3$4");
-  car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2.$3$4");
-  car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1.$2$3");
-  car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1.$2$3");
-  car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1.$2");
-  car = car.replace(/(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(A|a|Â|â|E|e|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1.$2");
+  car = car.replace(/(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2$3.$4$5");
+  car = car.replace(/(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2$3.$4$5");
+  car = car.replace(/(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2.$3$4");
+  car = car.replace(/(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1$2.$3$4");
+  car = car.replace(/(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1.$2$3");
+  car = car.replace(/(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(B|b|C|c|Ç|ç|D|d|F|f|G|g|Ğ|ğ|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1.$2$3");
+  car = car.replace(/(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1.$2");
+  car = car.replace(/(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)(A|a|Â|â|E|e|Ê|ê|I|ı|İ|i|Î|î|O|o|Ö|ö|U|u|Û|û|Ü|ü)/g, "$1.$2");
 
   car = car.replace(/A/g, "a");
   car = car.replace(/B/g, "b");
@@ -74,7 +74,7 @@ car = document.transcription.text1.value;
   car = car.replace(/n(ɡ|\.ɡ|k|\.k)/g, "ŋ$1");
   car = car.replace(/n(ɟ|\.ɟ|c|\.c)/g, "ɲ$1");
 
-  car = car.replace(/.mez/g, ".mæz");
+  car = car.replace(/\.mez/g, "\.mæz");
   car = car.replace(/e(ɾ|l|m|n)/g, "æ$1");
   car = car.replace(/eː(ɾ|l|m|n)/g, "æː$1");
 
@@ -113,20 +113,31 @@ car = document.transcription.text1.value;
   car = car.replace(/ɯː|iː/g, "i\u2060ː");
   car = car.replace(/oː|œː/g, "ɔː");
   car = car.replace(/uː|yː/g, "u\u2060ː");
+  
+  car = car.replace(/c(u|y)/g, "kj$1");
+  car = car.replace(/ɟ(u|y)/g, "ɡj$1");
+  
+  car = car.replace(/a\.(b|dʒ|tʃ|d|f|ɡ|ɟ|ʒ|k|c|ɫ|l|m|n|ŋ|ɲ|p|ɾ|s|ʃ|t|v|w|β|z)/g, "ʌ$1\.");
+  car = car.replace(/e\.(b|dʒ|tʃ|d|f|ɡ|ɟ|ʒ|k|c|ɫ|l|m|n|ŋ|ɲ|p|ɾ|s|ʃ|t|v|w|β|z)/g, "ɛ$1\.");
+  car = car.replace(/i\.(b|dʒ|tʃ|d|f|ɡ|ɟ|ʒ|k|c|ɫ|l|m|n|ŋ|ɲ|p|ɾ|s|ʃ|t|v|w|β|z)/g, "ɪ$1\.");
+  car = car.replace(/(u|y)\.(b|dʒ|tʃ|d|f|ɡ|ɟ|ʒ|k|c|ɫ|l|m|n|ŋ|ɲ|p|ɾ|s|ʃ|t|v|w|β|z)/g, "ʊ$2\.");
+  
+  car = car.replace(/a(b|dʒ|tʃ|d|f|ɡ|ɟ|ʒ|k|c|ɫ|l|m|n|ŋ|ɲ|p|ɾ|s|ʃ|t|v|w|β|z)/g, "ʌ$1");
+  car = car.replace(/e(b|dʒ|tʃ|d|f|ɡ|ɟ|ʒ|k|c|ɫ|l|m|n|ŋ|ɲ|p|ɾ|s|ʃ|t|v|w|β|z)/g, "ɛ$1");
+  car = car.replace(/i(b|dʒ|tʃ|d|f|ɡ|ɟ|ʒ|k|c|ɫ|l|m|n|ŋ|ɲ|p|ɾ|s|ʃ|t|v|w|β|z)/g, "ɪ$1");
+  car = car.replace(/(u|y)(b|dʒ|tʃ|d|f|ɡ|ɟ|ʒ|k|c|ɫ|l|m|n|ŋ|ɲ|p|ɾ|s|ʃ|t|v|w|β|z)/g, "ʊ$2");
 
-  car = car.replace(/a/g, "ʌ");
-  car = car.replace(/e/g, "ɛ");
+  car = car.replace(/a/g, "ɑː");
+  car = car.replace(/e/g, "eɪ");
   car = car.replace(/ɯ/g, "ə");
-  car = car.replace(/i/g, "ɪ");
+  car = car.replace(/i/g, "iː");
   car = car.replace(/o|œ/g, "oʊ");
-  car = car.replace(/c(u|y)/g, "kjʊ");
-  car = car.replace(/ɟ(u|y)/g, "ɡjʊ");
-  car = car.replace(/u|y/g, "ʊ");
+  car = car.replace(/u|y/g, "uː");
 
-  car = car.replace(/ʌ\u2060/g, "a");
-  car = car.replace(/ɛ\u2060/g, "e");
-  car = car.replace(/ɪ\u2060/g, "i");
-  car = car.replace(/ʊ\u2060/g, "u");
+  car = car.replace(/ɑː\u2060/g, "a");
+  car = car.replace(/eɪ\u2060/g, "e");
+  car = car.replace(/iː\u2060/g, "i");
+  car = car.replace(/uː\u2060/g, "u");
 
   car = car.replace(/c/g, "k");
   car = car.replace(/ɟ/g, "ɡ");
@@ -134,9 +145,6 @@ car = document.transcription.text1.value;
   car = car.replace(/ɲ/g, "ŋ");
   car = car.replace(/β/g, "w");
   car = car.replace(/ɾ/g, "ɹ");
-  
-  car = car.replace(/(a|e|ɔ)ɪ/g, "$1ɪ\u2060");
-  car = car.replace(/(æ|ɛ|ɪ|ɒ|ʌ|ʊ)\.(b|dʒ|tʃ|d|f|ɡ|h|ʒ|l|m|n|ŋ|ɹ|ʃ|v|w|z)/g, "$1$2\.");
     
   car = car.replace(/(b|dʒ|tʃ|d|f|ɡ|h|ʒ|k|l|m|n|ŋ|p|ɹ|s|ʃ|t|v|w|j|z)jʊəɹ/g, "$1EWR");
   car = car.replace(/jʊəɹ/g, "YOOR");
