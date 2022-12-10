@@ -129,6 +129,8 @@ car = document.transcription.text1.value;
   car = car.replace(/w/g, "'u");
   car = car.replace(/ẃ/g, "w");
 
+  car = car.replace(/er(a|e|i|o|u|ü)/g, "e'r$1");
+
   car = car.replace(/iang/g, "ĵaŋ");
   car = car.replace(/iong/g, "ĵʊŋ");
   car = car.replace(/uang/g, "waŋ");
@@ -159,7 +161,7 @@ car = document.transcription.text1.value;
   car = car.replace(/io/g, "ĵɔ");
   car = car.replace(/e/g, "ɤ");
   car = car.replace(/ü/g, "y");
-  car = car.replace(/ê/g, "ɛ ");
+  car = car.replace(/ê/g, "ɛ");
   car = car.replace(/o/g, "ɔ");
   car = car.replace(/ě/g, "e");
   car = car.replace(/ô/g, "o");
