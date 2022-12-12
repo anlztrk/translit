@@ -4,7 +4,12 @@ function latcyr () {
 car = document.transcription.text2.value;
 translit = document.transcription.text2.value;
   translit = translit.toUpperCase();
+  if (translit == İ){
+  car = car.replace(/İ/g, "i");
+  }
+  else {
   car = car.toLowerCase();
+  }
    document.transcription.text2.value=translit;
    document.transcription.text1.value=car;
 }
