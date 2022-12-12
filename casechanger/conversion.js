@@ -6,8 +6,7 @@ translit = document.transcription.text2.value;
   translit = translit.toUpperCase();
   if (car == İ){
   car = car.replace(/İ/g, "i");
-  }
-  else {
+  }  else {
   car = car.toLowerCase();
   }
    document.transcription.text2.value=translit;
@@ -18,8 +17,7 @@ car = document.transcription.text1.value;
 translit = document.transcription.text1.value;
   if (translit == İ){
   translit = translit.replace(/İ/g, "i");
-  }
-  else {
+  }  else {
   translit = translit.toLowerCase();
   }
   car = car.toUpperCase();
