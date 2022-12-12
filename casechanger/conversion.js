@@ -4,22 +4,16 @@ function latcyr () {
 car = document.transcription.text2.value;
 translit = document.transcription.text2.value;
   translit = translit.toUpperCase();
-  if (car == "İ"){
   car = car.replace(/İ/g, "i");
-  }  else {
   car = car.toLowerCase();
-  }
    document.transcription.text2.value=translit;
    document.transcription.text1.value=car;
 }
 function cyrlat () {
 car = document.transcription.text1.value;
 translit = document.transcription.text1.value;
-  if (translit == "İ"){
   translit = translit.replace(/İ/g, "i");
-  }  else {
   translit = translit.toLowerCase();
-  }
   car = car.toUpperCase();
 document.transcription.text1.value=translit;
 document.transcription.text2.value=car;
