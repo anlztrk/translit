@@ -4,7 +4,7 @@ function latcyr () {
 car = document.transcription.text2.value;
 translit = document.transcription.text2.value;
   translit = translit.toUpperCase();
-  if (car == İ){
+  if (car == "İ"){
   car = car.replace(/İ/g, "i");
   }  else {
   car = car.toLowerCase();
@@ -15,7 +15,7 @@ translit = document.transcription.text2.value;
 function cyrlat () {
 car = document.transcription.text1.value;
 translit = document.transcription.text1.value;
-  if (translit == İ){
+  if (translit == "İ"){
   translit = translit.replace(/İ/g, "i");
   }  else {
   translit = translit.toLowerCase();
