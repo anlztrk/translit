@@ -179,7 +179,11 @@ car = document.transcription.text1.value;
   car = car.replace(/G/g, "Г");
   car = car.replace(/H/g, "Х");
   car = car.replace(/Ĵ/g, "Й");
-  
+  car = car.replace(/F/g, "Ф");
+  car = car.replace(/L/g, "Л");
+  car = car.replace(/M/g, "М");
+  car = car.replace(/N/g, "Н");
+  car = car.replace(/S/g, "С");
   
   car = car.replace(/p/g, "п");
   car = car.replace(/b/g, "б");
@@ -195,6 +199,11 @@ car = document.transcription.text1.value;
   car = car.replace(/g/g, "г");
   car = car.replace(/h/g, "х");
   car = car.replace(/ĵ/g, "й");
+  car = car.replace(/f/g, "ф");
+  car = car.replace(/l/g, "л");
+  car = car.replace(/m/g, "м");
+  car = car.replace(/n/g, "н");
+  car = car.replace(/s/g, "с");
   
   car = car.replace(/'/g, "");
   
@@ -240,7 +249,11 @@ car = document.transcription.text1.value;
   car = car.replace(/К/g, "K");
   car = car.replace(/Х/g, "H");
   car = car.replace(/(Ж|Җ\u032f)/g, "R");
+  car = car.replace(/Ф/g, "F");
+  car = car.replace(/Л/g, "L");
+  car = car.replace(/М/g, "M");
   car = car.replace(/Н/g, "N");
+  car = car.replace(/С/g, "S");
   
   car = car.replace(/(ч|ћ)/g, "ç");
   car = car.replace(/(ђ|џ)/g, "c");
@@ -255,7 +268,11 @@ car = document.transcription.text1.value;
   car = car.replace(/к/g, "k");
   car = car.replace(/х/g, "h");
   car = car.replace(/(ж|җ\u032f)/g, "r");
-  car = car.replace(/н/g, "n");  
+  car = car.replace(/ф/g, "f");
+  car = car.replace(/л/g, "l");
+  car = car.replace(/м/g, "m");
+  car = car.replace(/н/g, "n");
+  car = car.replace(/с/g, "s");
   
   car = car.replace(/(A|E|İ|I|O|U|Ü)Ź/g, "$1DZ");
   car = car.replace(/(A|E|İ|I|O|U|Ü)Ć/g, "$1TS");
