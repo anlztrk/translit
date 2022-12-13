@@ -198,8 +198,8 @@ car = document.transcription.text1.value;
   
   car = car.replace(/'/g, "");
   
-  car = car.replace(/Ә(Ң|ң)/g, "О$1");
-  car = car.replace(/әң/g, "оң");
+  car = car.replace(/(Б|П|М|Ф|Ў)ӘҢ/g, "$1ОҢ");
+  car = car.replace(/(Б|П|М|Ф|Ў|б|п|м|ф|ў)әң/g, "$1оң");
   
   car = car.replace(/У\u032f/g, "Ğ");
   car = car.replace(/у\u032f/g, "ğ");
