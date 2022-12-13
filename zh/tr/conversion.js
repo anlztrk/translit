@@ -200,7 +200,7 @@ car = document.transcription.text1.value;
   
   car = car.replace(/У\u032f/g, "Ğ");
   car = car.replace(/у\u032f/g, "ğ");
-  car = car.replace(/(І|Ә|Ы)/g, "I");
+  car = car.replace(/(І|Ы)/g, "I");
   car = car.replace(/Ү/g, "Ü");
   car = car.replace(/(Й|И\u032f)/g, "Y");
   car = car.replace(/И/g, "İ");
@@ -209,10 +209,10 @@ car = document.transcription.text1.value;
   car = car.replace(/У/g, "U");
   car = car.replace(/(Э|Е)/g, "E");
   car = car.replace(/(Ў|Ӯ)/g, "V");
-  car = car.replace(/(О|Ӧ)/g, "O");
+  car = car.replace(/(О|Ӧ|Ә)/g, "O");
   car = car.replace(/А/g, "A");
   
-  car = car.replace(/(і|ә|ы)/g, "ı");
+  car = car.replace(/(і|ы)/g, "ı");
   car = car.replace(/ү/g, "ü");
   car = car.replace(/(й|и\u032f)/g, "y");
   car = car.replace(/и/g, "i");
@@ -221,7 +221,7 @@ car = document.transcription.text1.value;
   car = car.replace(/у/g, "u");
   car = car.replace(/(э|е)/g, "e");
   car = car.replace(/(ў|ӯ)/g, "v");
-  car = car.replace(/(о|ӧ)/g, "o");
+  car = car.replace(/(о|ӧ|ә)/g, "o");
   car = car.replace(/а/g, "a");
   
   car = car.replace(/(Ч|Ћ)/g, "Ç");
