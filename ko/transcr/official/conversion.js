@@ -29,7 +29,7 @@ function cyrlat () {
   car = car.replace(/ᆿᄋ/g, 'ᄏ');
   car = car.replace(/ᇀᄋ/g, 'ᄐ');
   car = car.replace(/ᇁᄋ/g, 'ᄑ');
-  car = car.replace(/ᇂᄋ/g, 'ᄒ');
+  car = car.replace(/ᇂᄋ/g, 'ᄋ');
 
   car = car.replace(/ᆪ/g, 'ᆨ');
   car = car.replace(/ᆬ/g, 'ᆫ');
