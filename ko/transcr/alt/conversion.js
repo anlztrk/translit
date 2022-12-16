@@ -77,6 +77,8 @@ function cyrlat () {
   car = car.replace(/티/g, '치');
   
   car = car.replace(/ᆫᄀ/g, 'ᆫ-ᄀ');
+  car = car.replace(/ᆼᄋ/g, 'ᆼ-ᄋ');
+
   
   car = car.replace(/시/g, 'shi');
   car = car.replace(/씨/g, 'ṡhi');
