@@ -140,9 +140,9 @@ function cyrlat () {
   car = car.replace(/ᅢ/g, 'e');
   car = car.replace(/ᅣ/g, 'ya');
   car = car.replace(/ᅤ/g, 'ye');
-  car = car.replace(/ᅥ/g, 'a');
+  car = car.replace(/ᅥ/g, 'o\u0363');
   car = car.replace(/ᅦ/g, 'e');
-  car = car.replace(/ᅧ/g, 'ya');
+  car = car.replace(/ᅧ/g, 'yo\u0363');
   car = car.replace(/ᅨ/g, 'ye');
   car = car.replace(/ᅩ/g, 'o');
   car = car.replace(/ᅪ/g, 'va');
@@ -150,7 +150,7 @@ function cyrlat () {
   car = car.replace(/ᅬ/g, 've');
   car = car.replace(/ᅭ/g, 'yo');
   car = car.replace(/ᅮ/g, 'u');
-  car = car.replace(/ᅯ/g, 'va');
+  car = car.replace(/ᅯ/g, 'vo\u0363');
   car = car.replace(/ᅰ/g, 've');
   car = car.replace(/ᅱ/g, 'vi');
   car = car.replace(/ᅲ/g, 'yu');
