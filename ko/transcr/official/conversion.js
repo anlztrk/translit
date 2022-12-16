@@ -21,6 +21,18 @@ function cyrlat () {
   car = car.replace(/ㄿᄋ/g, 'ᆯᄑ');
   car = car.replace(/ᆳᄋ/g, 'ᆯᄉ');
   car = car.replace(/ㄾᄋ/g, 'ᆯᄐ');
+  
+  car = car.replace(/ᆪ/g, 'ᆨ');
+  car = car.replace(/ᆬ/g, 'ᆫ');
+  car = car.replace(/ᆭ/g, 'ᆫ');
+  car = car.replace(/ᆰ/g, 'ᆨ');
+  car = car.replace(/ᆲ/g, 'ᆯ');
+  car = car.replace(/ᆶ/g, 'ᆯ');
+  car = car.replace(/ᆱ/g, 'ᆷ');
+  car = car.replace(/ᆹ/g, 'ᆸ');
+  car = car.replace(/ㄿ/g, 'ᇁ');
+  car = car.replace(/ᆳ/g, 'ᆯ');
+  car = car.replace(/ㄾ/g, 'ᆯ');
 
   car = car.replace(/ᆨᄋ/g, 'ᄀ');
   car = car.replace(/ᆩᄋ/g, 'ᄁ');
@@ -64,18 +76,6 @@ function cyrlat () {
   car = car.replace(/디/g, '지');
   car = car.replace(/티/g, '치');
 
-  car = car.replace(/ᆪ/g, 'ᆨ');
-  car = car.replace(/ᆬ/g, 'ᆫ');
-  car = car.replace(/ᆭ/g, 'ᆫ');
-  car = car.replace(/ᆰ/g, 'ᆨ');
-  car = car.replace(/ᆲ/g, 'ᆯ');
-  car = car.replace(/ᆶ/g, 'ᆯ');
-  car = car.replace(/ᆱ/g, 'ᆷ');
-  car = car.replace(/ᆹ/g, 'ᆸ');
-  car = car.replace(/ㄿ/g, 'ᇁ');
-  car = car.replace(/ᆳ/g, 'ᆯ');
-  car = car.replace(/ㄾ/g, 'ᆯ');
-  
   car = car.replace(/ᅡ에/g, 'ᅡ-에');
   car = car.replace(/ᅦᄋ(ᅩ|ᅬ|ᅮ|ᅴ)/g, 'ᅦ-ᄋ$1');
   car = car.replace(/ᅩ에/g, 'ᅩ-에');
