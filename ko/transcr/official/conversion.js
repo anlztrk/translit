@@ -3,6 +3,13 @@
 function cyrlat () {
   car = document.transcription.text1.value;
   car = car.normalize('NFD');
+  car = car.replace(/ᆪᄉ/g, 'ᆨᄊ');
+  car = car.replace(/ᆬᄌ/g, 'ᆫᄍ');
+  car = car.replace(/ᆰᄀ/g, 'ᆯᄁ');
+  car = car.replace(/ᆲᄇ/g, 'ᆯᄈ');
+  car = car.replace(/ᆹᄉ/g, 'ᆸᄊ');
+  car = car.replace(/ᆳᄉ/g, 'ᆯᄊ');
+  
   car = car.replace(/ᆪᄋ/g, 'ᆨᄉ');
   car = car.replace(/ᆬᄋ/g, 'ᆫᄌ');
   car = car.replace(/ᆭᄋ/g, 'ᆫᄒ');
