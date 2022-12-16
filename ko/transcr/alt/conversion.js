@@ -53,7 +53,7 @@ function cyrlat () {
   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄅ/g, 'ᆫᄂ');
   car = car.replace(/ᆨᄆ/g, 'ᆼᄆ');
   car = car.replace(/ᆸᄆ/g, 'ᆷᄆ');
-  car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄆ/g, 'ᆨᄆ');
+  car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄆ/g, 'ᆫᄆ');
 
   car = car.replace(/ᇂᄀ/g, 'ᄏ');
   car = car.replace(/ᇂᄃ/g, 'ᄐ');
