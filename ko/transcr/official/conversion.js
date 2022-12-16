@@ -80,7 +80,7 @@ function cyrlat () {
   car = car.replace(/(ᅦ|ᅨ|ᅢ|ᅤ|ᅬ|ᅫ|ᅰ)ᄋ(ᅩ|ᅬ|ᅮ|ᅴ)/g, '$1-ᄋ$2');
   car = car.replace(/(ᅩ|ᅭ|ᅥ|ᅧ|ᅯ)에/g, '$1-에');
   car = car.replace(/ᆫᄀ/g, 'ᆫ-ᄀ');
-  car = car.replace(/(ᅮ|ᅲ|ᅳ)이/g, 'ᅮ-이');
+  car = car.replace(/(ᅮ|ᅲ|ᅳ)이/g, '$1-이');
 
   car = car.replace(/ᆯᄅ/g, 'll');
   car = car.replace(/ᄀ/g, 'g');
