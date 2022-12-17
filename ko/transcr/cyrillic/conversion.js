@@ -23,6 +23,15 @@ function cyrlat () {
   car = car.replace(/ᆳᄋ/g, 'ᆯᄉ');
   car = car.replace(/ㄾᄋ/g, 'ᆯᄐ');
   
+  car = car.replace(/ᆭᄀ/g, 'ᆫᄏ');
+  car = car.replace(/ᆭᄃ/g, 'ᆫᄐ');
+  car = car.replace(/ᆭᄇ/g, 'ᆫᄑ');
+  car = car.replace(/ᆭᄌ/g, 'ᆫᄎ');
+  car = car.replace(/ᆶᄀ/g, 'ᆯᄏ');
+  car = car.replace(/ᆶᄃ/g, 'ᆯᄐ');
+  car = car.replace(/ᆶᄇ/g, 'ᆯᄑ');
+  car = car.replace(/ᆶᄌ/g, 'ᆯᄎ');
+  
   car = car.replace(/ᆪ/g, 'ᆨ');
   car = car.replace(/ᆬ/g, 'ᆫ');
   car = car.replace(/ᆭ/g, 'ᆫ');
@@ -34,6 +43,10 @@ function cyrlat () {
   car = car.replace(/ㄿ/g, 'ᇁ');
   car = car.replace(/ᆳ/g, 'ᆯ');
   car = car.replace(/ㄾ/g, 'ᆯ');
+  
+  car = car.replace(/ᆮ이/g, '지');
+  car = car.replace(/ᆮ히/g, '치');
+  car = car.replace(/ᇀ이/g, '치');
 
   car = car.replace(/ᆨᄋ/g, 'ᄀ');
   car = car.replace(/ᆩᄋ/g, 'ᄁ');
@@ -51,16 +64,16 @@ function cyrlat () {
   car = car.replace(/ᇁᄋ/g, 'ᄑ');
   car = car.replace(/ᇂᄋ/g, 'ᄋ');
 
-  car = car.replace(/ᆨᄂ/g, 'ᆼᄂ');
-  car = car.replace(/ᆸᄂ/g, 'ᆷᄂ');
+  car = car.replace(/(ᆨ|ᆿ)ᄂ/g, 'ᆼᄂ');
+  car = car.replace(/(ᆸ|ᇁ)ᄂ/g, 'ᆷᄂ');
   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄂ/g, 'ᆫᄂ');
-  car = car.replace(/ᆨᄅ/g, 'ᆼᄂ');
+  car = car.replace(/(ᆨ|ᆿ)ᄅ/g, 'ᆼᄂ');
   car = car.replace(/ᆫᄅ/g, 'ᆯᄅ');
   car = car.replace(/(ᆷ|ᆸ)ᄅ/g, 'ᆷᄂ');
   car = car.replace(/ᆼᄅ/g, 'ᆼᄂ');
   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄅ/g, 'ᆫᄂ');
-  car = car.replace(/ᆨᄆ/g, 'ᆼᄆ');
-  car = car.replace(/ᆸᄆ/g, 'ᆷᄆ');
+  car = car.replace(/(ᆨ|ᆿ)ᄆ/g, 'ᆼᄆ');
+  car = car.replace(/(ᆸ|ᇁ)ᄆ/g, 'ᆷᄆ');
   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄆ/g, 'ᆫᄆ');
 
   car = car.replace(/ᇂᄀ/g, 'ᄏ');
@@ -74,15 +87,16 @@ function cyrlat () {
   car = car.replace(/ᆺᄒ/g, 'ᄐ');
   
   car = car.replace(/ᆫᄅ/g, 'ᆯᄅ');
-
-  car = car.replace(/디/g, '지');
-  car = car.replace(/ᆮ히/g, '치');
-  car = car.replace(/티/g, '치');
+  car = car.replace(/ᆯᄂ/g, 'ᆯᄅ');
 
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄀ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, '$1г$2');
+		car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄀ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, '$1г$2');
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄃ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, '$1д$2');
+		car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄃ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, '$1д$2');
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄇ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, '$1б$2');
+		car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄇ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, '$1б$2');
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄌ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, '$1дж$2');
+		car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)ᄌ(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ)/g, '$1дж$2');
   
   car = car.replace(/(ᆯ|ᆫ|ᆷ|ᆼ)ᄀ/g, '$1г');
   car = car.replace(/(ᆯ|ᆫ|ᆷ|ᆼ)ᄃ/g, '$1д');
@@ -156,6 +170,10 @@ function cyrlat () {
   car = car.replace(/ь(о|ё)/g, 'ё');
   car = car.replace(/ь(у|ю)/g, 'ю');
   car = car.replace(/ьи/g, 'и');
+  
+  car = car.replace(/(с|сс)(и|й|я|ё|ю|ви)/g, 'щ$2');
+  car = car.replace(/тч/g, 'чч');
+  car = car.replace(/тщ/g, 'ч');
 document.transcription.text2.value = car;
 }
 
