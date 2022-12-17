@@ -91,8 +91,8 @@ function cyrlat () {
   car = car.replace(/쌰/g, 'şya');
   car = car.replace(/섀/g, 'şye');
   car = car.replace(/썌/g, 'şye');
-  car = car.replace(/셔/g, 'şyo');
-  car = car.replace(/쎠/g, 'şyo');
+  car = car.replace(/셔/g, 'şyô');
+  car = car.replace(/쎠/g, 'şyô');
   car = car.replace(/셰/g, 'şye');
   car = car.replace(/쎼/g, 'şye');
   car = car.replace(/쇼/g, 'şyo');
