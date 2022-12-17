@@ -170,6 +170,9 @@ function cyrlat () {
   car = car.replace(/ᅳ/g, 'ı');
   car = car.replace(/ᅴ/g, 'ıy');
   car = car.replace(/ᅵ/g, 'i');
+  
+  car = car.replace(/dc/g, 'cc');
+  car = car.replace(/tç/g, 'çç');
 document.transcription.text2.value = car;
 }
 
