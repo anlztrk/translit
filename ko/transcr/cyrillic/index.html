@@ -1,0 +1,50 @@
+<html> 
+<head> 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tinos&family=Vollkorn&display=swap');
+</style>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<!-- d --> 
+<meta NAME="ROBOTS" CONTENT="NOARCHIVE"> 
+<title>Korean Hangeul - Revised Romanization transcriber</title> 
+<meta name="description" content="Korean Hangeul - Revised Romanization transcriber" /> 
+<meta http-equiv="Content-Language" content="en, ru"> 
+<meta name="revisit-after" content="2 Days"> 
+<base target="_top"> 
+<!-- d --> 
+		<script src="https://unpkg.com/xregexp/xregexp-all.js"></script>
+		<script type="text/javascript" src="conversion.js"></script>
+		<style type="text/css"> 
+		textarea {
+			font-family: Vollkorn, Cambria, 'Times New Roman', serif;
+			font-size: 15px;
+			width: 500px;
+			height: 300px;
+		}
+		</style> 
+</head> 
+<body> 
+	<h1>Korean Hangeul - Revised Romanization transcriber</h1> 
+
+
+<div align="center"> Type or copy a text:<br> 
+  <form name=transcription> 
+	<table width=90%><tr align=center> 
+		<td> in Hangeul: <br> 
+	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
+		  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
+		</td> 
+		<td> here you get it in RR transcription:<br> 
+	<textarea name="text2" onKeyUp="latcyr()"></textarea> 
+			  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
+	</td></tr></table> 
+</form>
+</body> 
+</html> 
