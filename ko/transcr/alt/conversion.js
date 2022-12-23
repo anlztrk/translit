@@ -79,12 +79,12 @@ function cyrlat () {
   car = car.replace(/ᇂᄃ/g, 'ᄐ');
   car = car.replace(/ᇂᄇ/g, 'ᄑ');
   car = car.replace(/ᇂᄌ/g, 'ᄎ');
-  car = car.replace(/ᇂ(ᄂ|ᄅ|ᄆ|ᄉ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ|ᄁ|ᄄ|ᄈ|ᄊ|ᄍ)/g, '$1');
   
-  car = car.replace(/ᆽᄒ/g, 'ᄐ');
-  car = car.replace(/ᆺᄒ/g, 'ᄐ');
+  car = car.replace(/ᇂᄂ/g, 'ᆫᄂ');
+  car = car.replace(/(ᄅ|ᄆ|ᄉ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ|ᄁ|ᄄ|ᄈ|ᄊ|ᄍ)/g, '$1');
   
   car = car.replace(/ᆫᄅ/g, 'ᆯᄅ');
+  car = car.replace(/ᆯᄂ/g, 'ᆯᄅ');
   
   car = car.replace(/ᆫᄀ/g, 'ᆫ-ᄀ');
   car = car.replace(/ᆼᄋ/g, 'ᆼ-ᄋ');
