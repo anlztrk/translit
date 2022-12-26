@@ -64,6 +64,7 @@ car = document.transcription.text1.value;
   car = car.replace(/z/g, 'զ');
   
   car = car.replace(/Ւ( |)(ա|բ|ջ|չ|դ|ե|է|ֆ|գ|հ|ը|ի|ժ|ք|լ|մ|ն|ո|փ|կ|ռ|ս|շ|թ|օ|վ|յ|զ)/g, 'ւ$1$2');
+  car = car.replace(/(ա|բ|ջ|չ|դ|ե|է|ֆ|գ|հ|ը|ի|ժ|ք|լ|մ|ն|ո|փ|կ|ռ|ս|շ|թ|օ|վ|յ|զ)( |)(Ո|Օ)Ւ/g, '$1$2$3ւ');
 document.transcription.text2.value = car;
 }
 
