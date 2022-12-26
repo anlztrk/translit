@@ -289,9 +289,9 @@ car = document.transcription.text1.value;
   car = car.replace(/ź/g, "z");
   car = car.replace(/ć/g, "s");
   
-  car = car.replace(/(A|E|İ|I|O|U|Ü)(A|E|İ|I|O|U|Ü)/g, "$1Ğ$2");
-  car = car.replace(/(A|E|İ|I|O|U|Ü)(a|e|ı|i|o|u|ü)/g, "$1ğ$2");
-  car = car.replace(/(a|e|ı|i|o|u|ü)(a|e|ı|i|o|u|ü)/g, "$1ğ$2");
+  car = car.replace(/(A|E|İ|I|O|U|Ü)(A|E|İ|I|O|U|Ü)/g, "$1\u2019$2");
+  car = car.replace(/(A|E|İ|I|O|U|Ü)(a|e|ı|i|o|u|ü)/g, "$1\u2019ğ$2");
+  car = car.replace(/(a|e|ı|i|o|u|ü)(a|e|ı|i|o|u|ü)/g, "$1\u2019ğ$2");
   
   car = car.replace(/\u032f/g, "");
 document.transcription.text2.value=car;

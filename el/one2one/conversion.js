@@ -1,22 +1,7 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
-car = car.replace(/Ά/g, "Α\u0301");
-car = car.replace(/ά/g, "α\u0301");
-car = car.replace(/Έ/g, "Ε\u0301");
-car = car.replace(/έ/g, "ε\u0301");
-car = car.replace(/Ή/g, "Η\u0301");
-car = car.replace(/ή/g, "η\u0301");
-car = car.replace(/Ί/g, "Ι\u0301");
-car = car.replace(/ί/g, "ι\u0301");
-car = car.replace(/Ό/g, "Ο\u0301");
-car = car.replace(/ό/g, "ο\u0301");
-car = car.replace(/Ύ/g, "Υ\u0301");
-car = car.replace(/ύ/g, "υ\u0301");
-car = car.replace(/Ώ/g, "Ω\u0301");
-car = car.replace(/ώ/g, "ω\u0301");
-car = car.replace(/ΐ/g, "ϊ\u0301");
-car = car.replace(/ΰ/g, "ΰ\u0301");
+car = car.normalize('NFD');
 
 car = car.replace(/Α/g, "A");
 car = car.replace(/α/g, "a");
