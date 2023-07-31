@@ -25,6 +25,13 @@ car = document.transcription.text2.value;
   car = car.replace(/y/g, "j");
   car = car.replace(/ü/g, "y");
   car = car.replace(/b/g, "ʙ");
+  
+  car = car.replace(/Â/g, "A");
+  car = car.replace(/Î/g, "I");
+  car = car.replace(/Û/g, "U");
+  car = car.replace(/â/g, "a");
+  car = car.replace(/î/g, "i");
+  car = car.replace(/û/g, "u");
    document.transcription.text1.value=car;
 }
 function cyrlat () {
