@@ -10,13 +10,6 @@ car = car.replace(/Е(Ө|ө)/g, "Й$1$1");
 car = car.replace(/еө/g, "йөө");
 
 car = car.replace(/(И|и)(Э|О|У|А|э|о|у|а)/g, "$1\u02bc$2");
-car = car.replace(/Ё/g, "Йо");
-car = car.replace(/Ю/g, "Йу");
-car = car.replace(/Я/g, "Йа");
-car = car.replace(/е/g, "йе");
-car = car.replace(/ё/g, "йо");
-car = car.replace(/ю/g, "йу");
-car = car.replace(/я/g, "йа");
 car = car.replace(/Е/g, "Йэ");
 car = car.replace(/Ё/g, "Йо");
 car = car.replace(/Ю/g, "Йу");
