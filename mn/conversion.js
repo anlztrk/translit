@@ -4,68 +4,12 @@ function latcyr () {
 function cyrlat () {
 car = document.transcription.text1.value;
 
-car = car.replace(/ е/g, " ye");
-car = car.replace(/\nе/g, "\nye");
-car = car.replace(/\rе/g, "\rye");
-car = car.replace(/^е/g, "ye");
-
-car = car.replace(/ае/g, "аye");
-car = car.replace(/ие/g, "иye");
-car = car.replace(/ые/g, "ыye");
-car = car.replace(/ее/g, "еye");
-car = car.replace(/эе/g, "эye");
-car = car.replace(/уе/g, "уye");
-car = car.replace(/ое/g, "оye");
-car = car.replace(/өе/g, "өye");
-car = car.replace(/ёе/g, "ёye");
-car = car.replace(/үе/g, "үye");
-car = car.replace(/йе/g, "йye");
-car = car.replace(/юе/g, "юye");
-car = car.replace(/яе/g, "яye");
-car = car.replace(/ье/g, "ye");
-car = car.replace(/ъе/g, "ye");
-
-car = car.replace(/ Е/g, " Ye");
-car = car.replace(/\nЕ/g, "\nYe");
-car = car.replace(/\rЕ/g, "\rYe");
-car = car.replace(/^Е/g, "Ye");
-
-car = car.replace(/Ае/g, "Аye");
-car = car.replace(/Ие/g, "Иye");
-car = car.replace(/Ые/g, "Ыye");
-car = car.replace(/Ее/g, "Еye");
-car = car.replace(/Эе/g, "Эye");
-car = car.replace(/Уе/g, "Уye");
-car = car.replace(/Ое/g, "Оye");
-car = car.replace(/Өе/g, "Өye");
-car = car.replace(/Ёе/g, "Ёye");
-car = car.replace(/Үе/g, "Үye");
-car = car.replace(/Йе/g, "Йye");
-car = car.replace(/Юе/g, "Юye");
-car = car.replace(/Яе/g, "Яye");
-
-car = car.replace(/АЕ/g, "АYE");
-car = car.replace(/ИЕ/g, "ИYE");
-car = car.replace(/ЫЕ/g, "ЫYE");
-car = car.replace(/ЕЕ/g, "ЕYE");
-car = car.replace(/ЭЕ/g, "ЭYE");
-car = car.replace(/УЕ/g, "УYE");
-car = car.replace(/ОЕ/g, "ОYE");
-car = car.replace(/ӨЕ/g, "ӨYE");
-car = car.replace(/ЁЕ/g, "ЁYE");
-car = car.replace(/ҮЕ/g, "ҮYE");
-car = car.replace(/ЙЕ/g, "ЙYE");
-car = car.replace(/ЮЕ/g, "ЮYE");
-car = car.replace(/ЯЕ/g, "ЯYE");
-car = car.replace(/ЬЕ/g, "YE");
-car = car.replace(/ЪЕ/g, "YE");
-
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
 car = car.replace(/в/g, "v");
 car = car.replace(/г/g, "g");
 car = car.replace(/д/g, "d");
-car = car.replace(/е/g, "e");
+car = car.replace(/е/g, "yö");
 car = car.replace(/ё/g, "yo");
 car = car.replace(/ж/g, "j");
 car = car.replace(/з/g, "z");
@@ -100,7 +44,7 @@ car = car.replace(/Б/g, "B");
 car = car.replace(/В/g, "V");
 car = car.replace(/Г/g, "G");
 car = car.replace(/Д/g, "D");
-car = car.replace(/Е/g, "E");
+car = car.replace(/Е/g, "Yö");
 car = car.replace(/Ё/g, "Yo");
 car = car.replace(/Ж/g, "J");
 car = car.replace(/З/g, "Z");
