@@ -5,30 +5,27 @@ function cyrlat () {
 car = document.transcription.text1.value;
 car = car.replace(/Є/g, "Ө");
 car = car.replace(/є/g, "ө");
+car = car.replace(/Ї/g, "Ү");
+car = car.replace(/ї/g, "ү");
 
 car = car.replace(/Е(Ө|ө)/g, "Й$1$1");
 car = car.replace(/еө/g, "йөө");
 
-car = car.replace(/(И|и)(Э|О|У|А|э|о|у|а)/g, "$1\u02bc$2");
 car = car.replace(/Е/g, "Йэ");
 car = car.replace(/Ё/g, "Йо");
 car = car.replace(/Ю/g, "Йу");
 car = car.replace(/Я/g, "Йа");
-car = car.replace(/е/g, "йе");
+car = car.replace(/е/g, "йэ");
 car = car.replace(/ё/g, "йо");
 car = car.replace(/ю/g, "йу");
 car = car.replace(/я/g, "йа");
 
-car = car.replace(/(А|Э|И|Ы|О|Ө|У|Ү|а|э|и|ы|о|ө|у|ү)(И|и)/g, "$1\u02bc$2");
-car = car.replace(/(А|Э|И|Ы|О|Ө|У|Ү|а|э|и|ы|о|ө|у|ү)Й/g, "$1И");
-car = car.replace(/(А|Э|И|Ы|О|Ө|У|Ү|а|э|и|ы|о|ө|у|ү)й/g, "$1и");
-
-car = car.replace(/(А|а|Б|б|В|в|Г|г|Д|д|Ж|ж|З|з|И|и|Й|й|К|к|Л|л|М|м|Н|н|О|о|Ө|ө|П|п|Р|р|С|с|Т|т|У|у|Ү|ү|Ф|ф|Х|х|Ц|ц|Ч|ч|Ш|ш|Щ|щ|Ъ|ъ|Ы|ы|Ь|ь|Э|э)Й/g, "$1И");
-car = car.replace(/(А|а|Б|б|В|в|Г|г|Д|д|Ж|ж|З|з|И|и|Й|й|К|к|Л|л|М|м|Н|н|О|о|Ө|ө|П|п|Р|р|С|с|Т|т|У|у|Ү|ү|Ф|ф|Х|х|Ц|ц|Ч|ч|Ш|ш|Щ|щ|Ъ|ъ|Ы|ы|Ь|ь|Э|э)й/g, "$1и");
-car = car.replace(/\u02bcИ/g, "Й");
-car = car.replace(/И\u02bc/g, "Й");
-car = car.replace(/\u02bcи/g, "й");
-car = car.replace(/и\u02bc/g, "й");
+car = car.replace(/(А|И|О|Ө|У|Ү|Ы|Э|а|и|о|ө|у|ү|ы|э)(И|и)/g, "$1\u02bc$2");
+car = car.replace(/(И|и)(А|И|О|Ө|У|Ү|Ы|Э|а|и|о|ө|у|ү|ы|э)/g, "$1\u02bc$2");
+car = car.replace(/(А|Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|О|Ө|П|Р|С|Т|У|Ү|Ф|Х|Ц|Ч|Ш|Щ|Ъ|Ы|Ь|Э|а|б|в|г|д|ж|з|й|к|л|м|н|о|ө|п|р|с|т|у|ү|ф|х|ц|ч|ш|щ|ъ|ы|ь|э)й/g, "$1и");
+car = car.replace(/(А|Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|О|Ө|П|Р|С|Т|У|Ү|Ф|Х|Ц|Ч|Ш|Щ|Ъ|Ы|Ь|Э|а|б|в|г|д|ж|з|й|к|л|м|н|о|ө|п|р|с|т|у|ү|ф|х|ц|ч|ш|щ|ъ|ы|ь|э)Й/g, "$1И");
+car = car.replace(/и(А|И|О|Ө|У|Ү|Ы|Э|а|и|о|ө|у|ү|ы|э)/g, "й$1");
+car = car.replace(/И(А|И|О|Ө|У|Ү|Ы|Э|а|и|о|ө|у|ү|ы|э)/g, "Й$1");
 
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
@@ -50,7 +47,7 @@ car = car.replace(/р/g, "r");
 car = car.replace(/с/g, "s");
 car = car.replace(/т/g, "t");
 car = car.replace(/у/g, "u");
-car = car.replace(/(ү|ї)/g, "ü");
+car = car.replace(/ү/g, "ü");
 car = car.replace(/ф/g, "f");
 car = car.replace(/х/g, "h");
 car = car.replace(/ц/g, "c");
@@ -81,7 +78,7 @@ car = car.replace(/Р/g, "R");
 car = car.replace(/С/g, "S");
 car = car.replace(/Т/g, "T");
 car = car.replace(/У/g, "U");
-car = car.replace(/(Ү|Ї)/g, "Ü");
+car = car.replace(/Ү/g, "Ü");
 car = car.replace(/Ф/g, "F");
 car = car.replace(/Х/g, "H");
 car = car.replace(/Ц/g, "C");
