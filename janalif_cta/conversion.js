@@ -66,7 +66,7 @@ car = document.transcription.text1.value;
   car = car.replace(/j/g, "y");
   car = car.replace(/ƶ/g, "j");
   car = car.replace(/ь/g, "ı");
-  car = car.replace(/ʙ/g, "b");
+  car = car.replace(/(ʙ|в)/g, "b");
 document.transcription.text2.value=car;
 }
 function copy1()
