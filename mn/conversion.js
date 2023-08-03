@@ -9,13 +9,37 @@ car = car.replace(/є/g, "ө");
 car = car.replace(/Е(Ө|ө)/g, "Й$1$1");
 car = car.replace(/еө/g, "йөө");
 
+car = car.replace(/(И|и)(Э|О|У|А|э|о|у|а)/g, "$1\u02bc$2");
+car = car.replace(/Ё/g, "Йо");
+car = car.replace(/Ю/g, "Йу");
+car = car.replace(/Я/g, "Йа");
+car = car.replace(/е/g, "йе");
+car = car.replace(/ё/g, "йо");
+car = car.replace(/ю/g, "йу");
+car = car.replace(/я/g, "йа");
+car = car.replace(/Е/g, "Йэ");
+car = car.replace(/Ё/g, "Йо");
+car = car.replace(/Ю/g, "Йу");
+car = car.replace(/Я/g, "Йа");
+car = car.replace(/е/g, "йе");
+car = car.replace(/ё/g, "йо");
+car = car.replace(/ю/g, "йу");
+car = car.replace(/я/g, "йа");
+
+car = car.replace(/(А|Э|И|Ы|О|Ө|У|Ү|а|э|и|ы|о|ө|у|ү)(И|и)/g, "$1\u02bc$2");
+car = car.replace(/(А|Э|И|Ы|О|Ө|У|Ү|а|э|и|ы|о|ө|у|ү)Й/g, "$1И");
+car = car.replace(/(А|Э|И|Ы|О|Ө|У|Ү|а|э|и|ы|о|ө|у|ү)й/g, "$1и");
+
+car = car.replace(/Й/g, "И");
+car = car.replace(/й/g, "и");
+car = car.replace(/\u02bcИ/g, "Й");
+car = car.replace(/\u02bcи/g, "й");
+
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
 car = car.replace(/в/g, "v");
 car = car.replace(/г/g, "g");
 car = car.replace(/д/g, "d");
-car = car.replace(/е/g, "ye");
-car = car.replace(/ё/g, "yo");
 car = car.replace(/ж/g, "j");
 car = car.replace(/з/g, "z");
 car = car.replace(/и/g, "i");
@@ -42,15 +66,11 @@ car = car.replace(/ъ/g, "\u02bc");
 car = car.replace(/ы/g, "ï");
 car = car.replace(/ь/g, "ÿ");
 car = car.replace(/э/g, "e");
-car = car.replace(/ю/g, "yu");
-car = car.replace(/я/g, "ya");
 car = car.replace(/А/g, "A");
 car = car.replace(/Б/g, "B");
 car = car.replace(/В/g, "V");
 car = car.replace(/Г/g, "G");
 car = car.replace(/Д/g, "D");
-car = car.replace(/Е/g, "Ye");
-car = car.replace(/Ё/g, "Yo");
 car = car.replace(/Ж/g, "J");
 car = car.replace(/З/g, "Z");
 car = car.replace(/И/g, "I");
@@ -77,8 +97,6 @@ car = car.replace(/Ъ/g, "\u02bc");
 car = car.replace(/Ы/g, "Ï");
 car = car.replace(/Ь/g, "Ÿ");
 car = car.replace(/Э/g, "E");
-car = car.replace(/Ю/g, "Yu");
-car = car.replace(/Я/g, "Ya");
 document.transcription.text2.value=car;
 }
 function copy1()
