@@ -9,7 +9,9 @@ car = car.replace(/Ї/g, "Ү");
 car = car.replace(/ї/g, "ү");
 
 car = car.replace(/Е(Ө|ө)/g, "Й$1$1");
+car = car.replace(/Ю(Ү|ү)/g, "Й$1$1");
 car = car.replace(/еө/g, "йөө");
+car = car.replace(/юү/g, "йү");
 
 car = car.replace(/Е/g, "Йэ");
 car = car.replace(/Ё/g, "Йо");
