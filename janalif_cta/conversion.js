@@ -1,6 +1,8 @@
 var car;
 function latcyr () {
 car = document.transcription.text2.value;
+  car = car.replace(/\u2060/g, "");
+  
   car = car.replace(/Ä/g, "Ə");
   car = car.replace(/Ç/g, "\u2060");
   car = car.replace(/C/g, "Ç");
@@ -38,6 +40,9 @@ car = document.transcription.text2.value;
 }
 function cyrlat () {
 car = document.transcription.text1.value;
+  car = car.replace(/V\u2060/g, "W");
+  car = car.replace(/v\u2060/g, "w");
+  
   car = car.replace(/C/g, "\u2060");
   car = car.replace(/Ç/g, "C");
   car = car.replace(/\u2060/g, "Ç");
@@ -62,8 +67,6 @@ car = document.transcription.text1.value;
   car = car.replace(/ƶ/g, "j");
   car = car.replace(/ь/g, "ı");
   car = car.replace(/ʙ/g, "b");
-  car = car.replace(/V\u2060/g, "W");
-  car = car.replace(/v\u2060/g, "w");
 document.transcription.text2.value=car;
 }
 function copy1()
