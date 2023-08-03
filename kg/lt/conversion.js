@@ -1,4 +1,3 @@
-﻿//  copyright lexilogos.com
 var car;
 function latcyr () {
 }
@@ -89,7 +88,7 @@ car = car.replace(/а/g, "a");
   car = car.replace(/л/g, "l");
   car = car.replace(/м/g, "m");
   car = car.replace(/н/g, "n");
-  car = car.replace(/ң/g, "ň");
+  car = car.replace(/ң/g, "ñ");
   car = car.replace(/о/g, "o");
   car = car.replace(/ө/g, "ö");
   car = car.replace(/п/g, "p");
@@ -123,7 +122,7 @@ car = car.replace(/а/g, "a");
   car = car.replace(/Л/g, "L");
   car = car.replace(/М/g, "M");
   car = car.replace(/Н/g, "N");
-  car = car.replace(/Ң/g, "Ň");
+  car = car.replace(/Ң/g, "Ñ");
   car = car.replace(/О/g, "O");
   car = car.replace(/Ө/g, "Ö");
   car = car.replace(/П/g, "P");
