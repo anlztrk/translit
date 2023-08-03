@@ -3,6 +3,9 @@ function latcyr () {
 }
 function cyrlat () {
 car = document.transcription.text1.value;
+car = car.replace(/Є/g, "Ө");
+car = car.replace(/є/g, "ө");
+
 car = car.replace(/Е(Ө|ө)/g, "Й$1$1");
 car = car.replace(/еө/g, "йөө");
 
@@ -22,7 +25,7 @@ car = car.replace(/л/g, "l");
 car = car.replace(/м/g, "m");
 car = car.replace(/н/g, "n");
 car = car.replace(/о/g, "o");
-car = car.replace(/(ө|є)/g, "ö");
+car = car.replace(/ө/g, "ö");
 car = car.replace(/п/g, "p");
 car = car.replace(/р/g, "r");
 car = car.replace(/с/g, "s");
