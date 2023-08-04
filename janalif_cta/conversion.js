@@ -1,10 +1,10 @@
 var car;
 function latcyr () {
 car = document.transcription.text2.value;
-var letters = ["A","Ä","B","C","Ç","D","E","F","G","Ğ","H","I","İ","J","K","L","M","N","Ñ","O","Ö","P","Q","R","S","Ş","T","U","Ü","V","W","X","Y","Z","a","ä","b","c","ç","d","e","f","g","ğ","h","i","İ","j","k","l","m","n","ñ","o","ö","p","q","r","s","ş","t","u","ü","v","w","x","y","z"];
+var letters = ["Ä","Ç","Ğ","İ","Ñ","Ö","Ş","Ü","ä","ç","ğ","ı","ñ","ö","ş","ü"];
   for (let i=0;i<=car.length;i++){
     if (letters.indexOf(car.charAt(i)) == -1){
-      car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));    
+      car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
       }
   }
     
@@ -43,11 +43,13 @@ var letters = ["A","Ä","B","C","Ç","D","E","F","G","Ğ","H","I","İ","J","K","
   car = car.replace(/û/g, "u");
   car = car.replace(/W/g, "V\u2060");
   car = car.replace(/w/g, "v\u2060");
+  
+  car = car.normalize('NFC');
    document.transcription.text1.value=car;
 }
 function cyrlat () {
 car = document.transcription.text1.value;
-var letters = ["A","Ə","B","Ç","C","D","E","F","G","Ƣ","H","Ь","I","Ƶ","K","L","M","N","Ꞑ","O","Ɵ","P","Q","R","S","Ş","T","U","У","V","V⁠","X","J","Z","a","ə","ʙ","ç","c","d","e","f","g","ƣ","h","i","I","ƶ","k","l","m","n","ꞑ","o","ɵ","p","q","r","s","ş","t","u","y","v","v⁠","x","j","z"];
+var letters = ["Ə","Ç","Ƣ","Ь","Ƶ","Ꞑ","Ɵ","Ş","У","⁠ə","ʙ","ç","ƣ","ƶ","ꞑ","ɵ","ş⁠"];
   for (let i=0;i<=car.length;i++){
     if (letters.indexOf(car.charAt(i)) == -1){
       car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));    
@@ -80,6 +82,8 @@ var letters = ["A","Ə","B","Ç","C","D","E","F","G","Ƣ","H","Ь","I","Ƶ","K",
   car = car.replace(/ƶ/g, "j");
   car = car.replace(/ь/g, "ı");
   car = car.replace(/(ʙ|в)/g, "b");
+  
+  car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }
 function copy1()

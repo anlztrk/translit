@@ -1,6 +1,12 @@
 var car;
 function latcyr () {
 car = document.transcription.text2.value;
+var letters = ["Ä","Č","Ġ","Ï","Ž","Ṅ","Ö","Š","Ü","Ḥ","ä","č","ġ","ï","ž","ṅ","ö","š","ü","ḥ"];
+  for (let i=0;i<=car.length;i++){
+    if (letters.indexOf(car.charAt(i)) == -1){
+      car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
+      }
+  }
   car = car.replace(/C/g, "Ţ");
   car = car.replace(/J/g, "C");
   car = car.replace(/Ž/g, "J");
@@ -21,10 +27,17 @@ car = document.transcription.text2.value;
   car = car.replace(/ġ/g, "ğ");
   car = car.replace(/ṅ/g, "ñ");  
   car = car.replace(/ḥ/g, "x");
+  car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
 function cyrlat () {
 car = document.transcription.text1.value;
+var letters = ["Ä","Ç","Ğ","İ","Ñ","Ö","Ş","Ţ","Ü","ä","ç","ğ","ı","ñ","ö","ş","ţ","ü"];
+  for (let i=0;i<=car.length;i++){
+    if (letters.indexOf(car.charAt(i)) == -1){
+      car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
+      }
+  }
   car = car.replace(/J/g, "Ž");
   car = car.replace(/C/g, "J");
   car = car.replace(/Ğ/g, "Ġ");
@@ -53,6 +66,7 @@ car = document.transcription.text1.value;
   car = car.replace(/â/g, "a");
   car = car.replace(/î/g, "i");
   car = car.replace(/û/g, "u");
+  car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }
 function copy1()
