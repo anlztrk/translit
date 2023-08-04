@@ -9,7 +9,7 @@ car = document.transcription.text2.value;
   car = car.replace(/Š/g, "Ş");
   car = car.replace(/Ġ/g, "Ğ");
   car = car.replace(/Ṅ/g, "Ñ");
-  car = car.replace(/(Ḣ|Ḥ)/g, "X");
+  car = car.replace(/Ḥ/g, "X");
 
   car = car.replace(/j/g, "c");
   car = car.replace(/ž/g, "j");
@@ -31,7 +31,7 @@ car = document.transcription.text1.value;
   car = car.replace(/Ç/g, "Č");
   car = car.replace(/Ş/g, "Š");
   car = car.replace(/Ñ/g, "Ṅ");
-  car = car.replace(/X/g, "Ḣ");
+  car = car.replace(/X/g, "Ḥ");
   car = car.replace(/j/g, "ž");
   car = car.replace(/c/g, "j");  
   car = car.replace(/ç/g, "č");
