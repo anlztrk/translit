@@ -9,6 +9,7 @@ car = document.transcription.text2.value;
   car = car.replace(/Š/g, "Ş");
   car = car.replace(/Ġ/g, "Ğ");
   car = car.replace(/Ṅ/g, "Ñ");
+  car = car.replace(/(Ḣ|Ḥ)/g, "X");
 
   car = car.replace(/j/g, "c");
   car = car.replace(/ž/g, "j");
@@ -17,6 +18,7 @@ car = document.transcription.text2.value;
   car = car.replace(/š/g, "ş");
   car = car.replace(/ġ/g, "ğ");
   car = car.replace(/ṅ/g, "ñ");  
+  car = car.replace(/ḥ/g, "x");
 document.transcription.text1.value=car;
 }
 function cyrlat () {
@@ -29,6 +31,7 @@ car = document.transcription.text1.value;
   car = car.replace(/Ç/g, "Č");
   car = car.replace(/Ş/g, "Š");
   car = car.replace(/Ñ/g, "Ṅ");
+  car = car.replace(/X/g, "Ḣ");
   car = car.replace(/j/g, "ž");
   car = car.replace(/c/g, "j");  
   car = car.replace(/ç/g, "č");
@@ -36,6 +39,7 @@ car = document.transcription.text1.value;
   car = car.replace(/ğ/g, "ġ");
   car = car.replace(/ı/g, "ï");
   car = car.replace(/ñ/g, "ṅ");
+  car = car.replace(/x/g, "ḥ");
   
   car = car.replace(/Ə/g, "Ä");
   car = car.replace(/Â/g, "A");
