@@ -2,7 +2,7 @@ var car;
 function latcyr () {
 car = document.transcription.text2.value;
   {
-    var letters = ["Ç","ç","Ä","ä","Ž","ž","Ň","ň","Ö","ö","Ş","ş","Ü","ü","Ý","ý"];
+    var letters = ["Ç","ç","Ä","ä","Ǧ","ǧ","Ž","ž","Ň","ň","Ö","ö","Ş","ş","Ü","ü","Ý","ý"];
     for (let i=0;i<=car.length;i++){
       if (letters.indexOf(car.charAt(i)) == -1){
         car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
@@ -52,15 +52,6 @@ car = document.transcription.text1.value;
   car = car.replace(/y/g, "ý");
   car = car.replace(/ı/g, "y");
   car = car.replace(/ñ/g, "ň");
-  
-  car = car.replace(/Ə/g, "Ä");
-  car = car.replace(/Â/g, "A");
-  car = car.replace(/Î/g, "I");
-  car = car.replace(/Û/g, "U");
-  car = car.replace(/ə/g, "ä");
-  car = car.replace(/â/g, "a");
-  car = car.replace(/î/g, "i");
-  car = car.replace(/û/g, "u");
 document.transcription.text2.value=car;
 }
 function copy1()
