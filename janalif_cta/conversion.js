@@ -2,7 +2,7 @@ var car;
 function latcyr () {
 car = document.transcription.text2.value;
   {
-    var letters = ["Ä","Ç","Ğ","İ","Ñ","Ö","Ş","Ü","ä","ç","ğ","ñ","ö","ş","ü"];
+    var letters = ["Ä","Ç","Ğ","İ","Ñ","Ö","Ş","Ţ","Ü","ä","ç","ğ","ñ","ö","ş","ţ","ü"];
     for (let i=0;i<=car.length;i++){
       if (letters.indexOf(car.charAt(i)) == -1){
         car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
@@ -38,6 +38,11 @@ car = document.transcription.text2.value;
   car = car.replace(/y/g, "j");
   car = car.replace(/ü/g, "y");
   car = car.replace(/b/g, "ʙ");
+
+  car = car.replace(/Ţ/g, "Ts\u2060");
+  car = car.replace(/ţ/g, "ts\u2060");
+  car = car.replace(/W/g, "V\u2060");
+  car = car.replace(/w/g, "v\u2060");
   
   car = car.normalize('NFC');
 document.transcription.text1.value=car;
@@ -52,7 +57,14 @@ car = document.transcription.text1.value;
       }
   }
 car = car.replace(/I(\p{M})/ug, "Ï$1");   
-}  
+} 
+  car = car.replace(/T(S|s)\u2060/g, "Ţ");
+  car = car.replace(/ts\u2060/g, "ţ");
+  car = car.replace(/V\u2060/g, "W");
+  car = car.replace(/v\u2060/g, "w");
+
+  car = car.replace(/\u2060/g, "");
+
   car = car.replace(/C/g, "\u2060");
   car = car.replace(/Ç/g, "C");
   car = car.replace(/\u2060/g, "Ç");
@@ -63,6 +75,8 @@ car = car.replace(/I(\p{M})/ug, "Ï$1");
   car = car.replace(/(У|Y)/g, "Ü");
   car = car.replace(/J/g, "Y");
   car = car.replace(/Ƶ/g, "J");  
+  car = car.replace(/I/g, "İ");
+  car = car.replace(/Ь/g, "I");
   car = car.replace(/c/g, "\u2060");
   car = car.replace(/ç/g, "c");
   car = car.replace(/\u2060/g, "ç");
@@ -75,11 +89,8 @@ car = car.replace(/I(\p{M})/ug, "Ï$1");
   car = car.replace(/ƶ/g, "j");
   car = car.replace(/ь/g, "ı");
   car = car.replace(/(ʙ|в)/g, "b");  
-  
-  car = car.normalize('NFC');  
-  
-  car = car.replace(/I/g, "İ");
-  car = car.replace(/Ь/g, "I");
+    
+  car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }
 function copy1()
