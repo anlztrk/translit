@@ -38,15 +38,6 @@ car = document.transcription.text2.value;
   car = car.replace(/y/g, "j");
   car = car.replace(/ü/g, "y");
   car = car.replace(/b/g, "ʙ");
-    
-  car = car.replace(/Â/g, "A");
-  car = car.replace(/Î/g, "I");
-  car = car.replace(/Û/g, "U");
-  car = car.replace(/â/g, "a");
-  car = car.replace(/î/g, "i");
-  car = car.replace(/û/g, "u");
-  car = car.replace(/W/g, "V\u2060");
-  car = car.replace(/w/g, "v\u2060");
   
   car = car.normalize('NFC');
 document.transcription.text1.value=car;
@@ -62,10 +53,6 @@ car = document.transcription.text1.value;
   }
 car = car.replace(/I(\p{M})/ug, "Ï$1");   
 }  
-  
-  car = car.replace(/V\u2060/g, "W");
-  car = car.replace(/v\u2060/g, "w");
-  
   car = car.replace(/C/g, "\u2060");
   car = car.replace(/Ç/g, "C");
   car = car.replace(/\u2060/g, "Ç");
