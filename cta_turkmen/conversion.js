@@ -25,6 +25,7 @@ car = document.transcription.text2.value;
   car = car.replace(/ý/g, "y");
   car = car.replace(/ǧ/g, "ğ");
   car = car.replace(/ň/g, "ñ");  
+  car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
 function cyrlat () {
@@ -52,6 +53,7 @@ car = document.transcription.text1.value;
   car = car.replace(/y/g, "ý");
   car = car.replace(/ı/g, "y");
   car = car.replace(/ñ/g, "ň");
+  car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }
 function copy1()
