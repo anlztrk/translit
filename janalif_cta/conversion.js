@@ -56,7 +56,7 @@ car = document.transcription.text1.value;
       car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
       }
   }
-car = car.replace(/I(\p{M})/ug, "Ï$1");   
+car = car.replace(/I(\p{M})/ug, "Ь$1");   
 } 
   car = car.replace(/T(S|s)\u2060/g, "Ţ");
   car = car.replace(/ts\u2060/g, "ţ");

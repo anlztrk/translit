@@ -8,7 +8,7 @@ var letters = ["Ä","Č","Đ","Ġ","Ž","Ṅ","Ö","Š","Ü","Ḥ","ä","č","đ
       car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
       }
   }
-car = car.replace(/I(\p{M})/ug, "Ï$1");   
+car = car.replace(/I(\p{M})/ug, "Y$1");   
 }  
   car = car.replace(/C/g, "Ţ");
   car = car.replace(/Đ/g, "C");

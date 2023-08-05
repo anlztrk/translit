@@ -5,12 +5,11 @@ car = document.transcription.text2.value;
     var letters = ["Ç","ç","Ä","ä","Ǧ","ǧ","Ž","ž","Ň","ň","Ö","ö","Ş","ş","Ü","ü","Ý","ý"];
     for (let i=0;i<=car.length;i++){
       if (letters.indexOf(car.charAt(i)) == -1){
-        car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
+              car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
       }
-    }
-    car = car.replace(/I(\p{M})/ug, "İ$1");
-	car = car.replace(/İ\u0307/g, "İ");
-  } 
+  }
+car = car.replace(/I(\p{M})/ug, "Y$1");   
+}  
   car = car.replace(/J/g, "C");
   car = car.replace(/Ž/g, "J");
   car = car.replace(/I/g, "İ");
