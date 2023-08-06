@@ -1,6 +1,7 @@
 var car;
 function latcyr () {
 car = document.transcription.text2.value;
+var car_Orig = car;
 {
 var letters = ["Ä","Č","Đ","Ġ","Ž","Ṅ","Ö","Š","Ü","Ḥ","ä","č","đ","ġ","ž","ṅ","ö","š","ü","ḥ"];
   for (let i=0;i<=car.length;i++){
@@ -20,7 +21,11 @@ car = car.replace(/I(\p{M})/ug, "Y$1");
   car = car.replace(/Š/g, "Ş");
   car = car.replace(/Ġ/g, "Ğ");
   car = car.replace(/Ṅ/g, "Ñ");
-  car = car.replace(/Ḥ/g, "X");
+  if (/Ḥ|ḥ/.test(car_Orig)) {
+	  car = car.replace(/Ḥ/g, "X");
+	  car = car.replace(/ḥ/g, "x");
+  } 
+  car = car.replace(/Ḥ/g, "H");
 
   car = car.replace(/c/g, "ţ");
   car = car.replace(/đ/g, "c");
@@ -31,12 +36,13 @@ car = car.replace(/I(\p{M})/ug, "Y$1");
   car = car.replace(/š/g, "ş");
   car = car.replace(/ġ/g, "ğ");
   car = car.replace(/ṅ/g, "ñ");
-  car = car.replace(/ḥ/g, "x"); 
+  car = car.replace(/ḥ/g, "h"); 
   car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
 function cyrlat () {
 car = document.transcription.text1.value;
+var car_Orig = car;
   {
     var letters = ["Ä","Ç","Ğ","İ","Ñ","Ö","Ş","Ţ","Ü","ä","ç","ğ","ı","ñ","ö","ş","ţ","ü"];
     for (let i=0;i<=car.length;i++){
@@ -57,7 +63,11 @@ car = document.transcription.text1.value;
   car = car.replace(/Ţ/g, "C");
   car = car.replace(/Ş/g, "Š");
   car = car.replace(/Ñ/g, "Ṅ");
-  car = car.replace(/X/g, "Ḥ");
+  if (/H|h/.test(car_Orig)) {
+	  car = car.replace(/X/g, "Ḥ");
+	  car = car.replace(/x/g, "ḥ");
+  }  
+  car = car.replace(/X/g, "H");
   car = car.replace(/j/g, "ž");
   car = car.replace(/j/g, "ž");
   car = car.replace(/c/g, "đ");
@@ -68,8 +78,7 @@ car = document.transcription.text1.value;
   car = car.replace(/ţ/g, "c");
   car = car.replace(/ş/g, "š");
   car = car.replace(/ñ/g, "ṅ");
-  car = car.replace(/x/g, "ḥ");
-  
+  car = car.replace(/x/g, "h");  
   car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }

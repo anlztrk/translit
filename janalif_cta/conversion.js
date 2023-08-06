@@ -1,6 +1,7 @@
 var car;
 function latcyr () {
 car = document.transcription.text2.value;
+var car_Orig = car;
   {
     var letters = ["Ä","Ç","Ğ","İ","Ñ","Ö","Ş","Ţ","Ü","ä","ç","ğ","ñ","ö","ş","ţ","ü"];
     for (let i=0;i<=car.length;i++){
@@ -19,8 +20,16 @@ car = document.transcription.text2.value;
   car = car.replace(/C/g, "Ç");
   car = car.replace(/\u2060/g, "C");
   car = car.replace(/Ğ/g, "Ƣ");
-  car = car.replace(/I/g, "Ь");
-  car = car.replace(/İ/g, "I");
+  if (/V|v/.test(car_Orig) == false) {
+	  car = car.replace(/W/g, "V");
+	  car = car.replace(/w/g, "v");
+  }
+  if (/İ|ı/.test(car_Orig)) {
+	  car = car.replace(/I/g, "Ь");
+	  car = car.replace(/İ/g, "I");
+	  car = car.replace(/ı/g, "ь");
+	  car = car.replace(/b/g, "ʙ");
+  }
   car = car.replace(/J/g, "Ƶ");
   car = car.replace(/Ñ/g, "Ꞑ");
   car = car.replace(/Ö/g, "Ɵ");
@@ -31,24 +40,29 @@ car = document.transcription.text2.value;
   car = car.replace(/c/g, "ç");
   car = car.replace(/\u2060/g, "c");
   car = car.replace(/ğ/g, "ƣ");
-  car = car.replace(/ı/g, "ь");
   car = car.replace(/j/g, "ƶ");
   car = car.replace(/ñ/g, "ꞑ");
   car = car.replace(/ö/g, "ɵ");
   car = car.replace(/y/g, "j");
   car = car.replace(/ü/g, "y");
-  car = car.replace(/b/g, "ʙ");
 
-  car = car.replace(/Ţ/g, "Ts\u2060");
-  car = car.replace(/ţ/g, "ts\u2060");
-  car = car.replace(/W/g, "V\u2060");
-  car = car.replace(/w/g, "v\u2060");
+  if (/Ţ|ţ/.test(car_Orig)) {
+	  if (/C|c/.test(car_Orig)) {
+	  car = car.replace(/Ţ/g, "Ç");
+	  car = car.replace(/ţ/g, "ç");
+	}
+	  else {
+	  car = car.replace(/Ţ/g, "Ts\u2060");
+	  car = car.replace(/ţ/g, "ts\u2060");  
+	}
+  }
   
   car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
 function cyrlat () {
 car = document.transcription.text1.value;
+var car_Orig = car;
   {
     var letters = ["Ə","Ç","Ƣ","Ь","Ƶ","Ꞑ","Ɵ","Ş","У","⁠ə","ʙ","ç","ƣ","ƶ","ꞑ","ɵ","ş⁠"];
       for (let i=0;i<=car.length;i++){
@@ -60,8 +74,6 @@ car = car.replace(/I(\p{M})/ug, "Ь$1");
 } 
   car = car.replace(/T(S|s)\u2060/g, "Ţ");
   car = car.replace(/ts\u2060/g, "ţ");
-  car = car.replace(/V\u2060/g, "W");
-  car = car.replace(/v\u2060/g, "w");
 
   car = car.replace(/\u2060/g, "");
 
@@ -74,9 +86,12 @@ car = car.replace(/I(\p{M})/ug, "Ь$1");
   car = car.replace(/Ɵ/g, "Ö");
   car = car.replace(/(У|Y)/g, "Ü");
   car = car.replace(/J/g, "Y");
-  car = car.replace(/Ƶ/g, "J");  
-  car = car.replace(/I/g, "İ");
-  car = car.replace(/Ь/g, "I");
+  car = car.replace(/Ƶ/g, "J");
+  if (/Ь|ь/.test(car_Orig)) {
+	car = car.replace(/I/g, "İ");
+    car = car.replace(/Ь/g, "I");
+	car = car.replace(/ь/g, "ı");
+  }   
   car = car.replace(/c/g, "\u2060");
   car = car.replace(/ç/g, "c");
   car = car.replace(/\u2060/g, "ç");
@@ -87,7 +102,6 @@ car = car.replace(/I(\p{M})/ug, "Ь$1");
   car = car.replace(/y/g, "ü");
   car = car.replace(/j/g, "y");
   car = car.replace(/ƶ/g, "j");
-  car = car.replace(/ь/g, "ı");
   car = car.replace(/(ʙ|в)/g, "b");  
     
   car = car.normalize('NFC');
