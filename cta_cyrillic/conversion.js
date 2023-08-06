@@ -60,7 +60,11 @@ var car_Orig = car;
   car = car.replace(/С/g, "S");
   car = car.replace(/Т/g, "T");
   car = car.replace(/У/g, "U");
-  car = car.replace(/Ў/g, "W");
+  if (/В/.test(car_Orig)) {
+	  car = car.replace(/Ў/g, "W");
+	  car = car.replace(/ў/g, "w");
+  }
+  car = car.replace(/Ў/g, "V");
   car = car.replace(/(Ү|Ӱ)/g, "Ü");
   car = car.replace(/Ф/g, "F"); 
   if (/Һ|Ҳ|һ|ҳ/.test(car_Orig)) {
@@ -102,7 +106,7 @@ var car_Orig = car;
   car = car.replace(/с/g, "s");
   car = car.replace(/т/g, "t");
   car = car.replace(/у/g, "u");
-  car = car.replace(/ў/g, "w");
+  car = car.replace(/ў/g, "v");
   car = car.replace(/(ү|ӱ)/g, "ü");
   car = car.replace(/ф/g, "f");
   car = car.replace(/(һ|ҳ)/g, "h");
@@ -155,7 +159,11 @@ var car_Orig = car;
   car = car.replace(/T/g, "Т");
   car = car.replace(/U/g, "У");
   car = car.replace(/Ù/g, "У\u0300");
-  car = car.replace(/W/g, "Ў");
+  if (/V/.test(car_Orig)) {
+	  car = car.replace(/W/g, "Ў");
+	  car = car.replace(/w/g, "ў");
+  }
+  car = car.replace(/W/g, "В");
   car = car.replace(/Ü/g, "Ү");
   car = car.replace(/F/g, "Ф");
   if (/X|x/.test(car_Orig)) {
@@ -200,7 +208,7 @@ var car_Orig = car;
   car = car.replace(/t/g, "т");
   car = car.replace(/u/g, "у");
   car = car.replace(/ù/g, "у\u0300");
-  car = car.replace(/w/g, "ў");
+  car = car.replace(/w/g, "в");
   car = car.replace(/ü/g, "ү");
   car = car.replace(/f/g, "ф");
   car = car.replace(/x/g, "х");
