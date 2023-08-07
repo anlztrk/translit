@@ -29,11 +29,7 @@ car = car.replace(/I(\p{M})/ug, "Ï$1");
   car = car.replace(/Š/g, "Ş");
   car = car.replace(/Ġ/g, "Ğ");
   car = car.replace(/Ṅ/g, "Ñ");
-  if (/Ḥ|ḥ/.test(car_Orig)) {
-	  car = car.replace(/Ḥ/g, "X");
-	  car = car.replace(/ḥ/g, "x");
-  } 
-  car = car.replace(/Ḥ/g, "H");
+  car = car.replace(/Ḥ/g, "X");
   car = car.replace(/c/g, "ç");
   car = car.replace(/ž/g, "j");
   car = car.replace(/ï/g, "ı");
@@ -42,7 +38,6 @@ car = car.replace(/I(\p{M})/ug, "Ï$1");
   car = car.replace(/ġ/g, "ğ");
   car = car.replace(/ṅ/g, "ñ");  
   car = car.replace(/ḥ/g, "x");
-  car = car.replace(/ḥ/g, "h");
   car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
