@@ -11,6 +11,10 @@ var letters = ["Ä","Č","Đ","Ġ","Ž","Ṅ","Ö","Š","Ü","Ḥ","ä","č","đ
   }
 car = car.replace(/I(\p{M})/ug, "Y$1");   
 }  
+  if (/Ž|ž/.test(car_Orig) == false) {
+	  car = car.replace(/Đ/g, "Ž");
+	  car = car.replace(/đ/g, "ž");
+  }
   car = car.replace(/C/g, "Ţ");
   car = car.replace(/Đ/g, "C");
   car = car.replace(/I/g, "İ");
@@ -21,11 +25,7 @@ car = car.replace(/I(\p{M})/ug, "Y$1");
   car = car.replace(/Š/g, "Ş");
   car = car.replace(/Ġ/g, "Ğ");
   car = car.replace(/Ṅ/g, "Ñ");
-  if (/Ḥ|ḥ/.test(car_Orig)) {
-	  car = car.replace(/Ḥ/g, "X");
-	  car = car.replace(/ḥ/g, "x");
-  } 
-  car = car.replace(/Ḥ/g, "H");
+  car = car.replace(/Ḥ/g, "X");
 
   car = car.replace(/c/g, "ţ");
   car = car.replace(/đ/g, "c");
@@ -36,7 +36,7 @@ car = car.replace(/I(\p{M})/ug, "Y$1");
   car = car.replace(/š/g, "ş");
   car = car.replace(/ġ/g, "ğ");
   car = car.replace(/ṅ/g, "ñ");
-  car = car.replace(/ḥ/g, "h"); 
+  car = car.replace(/ḥ/g, "x"); 
   car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
@@ -53,6 +53,10 @@ var car_Orig = car;
     car = car.replace(/I(\p{M})/ug, "İ$1");
 	car = car.replace(/İ\u0307/g, "İ");
   }  
+  if (/C|c/.test(car_Orig) == false) {
+	  car = car.replace(/J/g, "Đ");
+	  car = car.replace(/j/g, "đ");
+  }
   car = car.replace(/J/g, "Ž");
   car = car.replace(/C/g, "Đ");
   car = car.replace(/Ğ/g, "Ġ");
@@ -63,12 +67,7 @@ var car_Orig = car;
   car = car.replace(/Ţ/g, "C");
   car = car.replace(/Ş/g, "Š");
   car = car.replace(/Ñ/g, "Ṅ");
-  if (/H|h/.test(car_Orig)) {
-	  car = car.replace(/X/g, "Ḥ");
-	  car = car.replace(/x/g, "ḥ");
-  }  
-  car = car.replace(/X/g, "H");
-  car = car.replace(/j/g, "ž");
+  car = car.replace(/X/g, "Ḥ");
   car = car.replace(/j/g, "ž");
   car = car.replace(/c/g, "đ");
   car = car.replace(/ğ/g, "ġ");
@@ -78,7 +77,7 @@ var car_Orig = car;
   car = car.replace(/ţ/g, "c");
   car = car.replace(/ş/g, "š");
   car = car.replace(/ñ/g, "ṅ");
-  car = car.replace(/x/g, "h");  
+  car = car.replace(/x/g, "ḥ");  
   car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }
