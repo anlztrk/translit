@@ -17,6 +17,10 @@ var car_Orig = car;
   
   car = car.replace(/Ä/g, "Ə");
   car = car.replace(/Ç/g, "\u2060");
+  if (/C|c/.test(car_Orig) == false) {
+	  car = car.replace(/J/g, "C");
+	  car = car.replace(/j/g, "c");
+  }
   car = car.replace(/C/g, "Ç");
   car = car.replace(/\u2060/g, "C");
   car = car.replace(/Ğ/g, "Ƣ");
@@ -27,10 +31,6 @@ var car_Orig = car;
   if (/İ|ı/.test(car_Orig)) {
 	  car = car.replace(/I/g, "Ь");
 	  car = car.replace(/b/g, "ʙ");
-  }
-    if (/C|c/.test(car_Orig) == false) {
-	  car = car.replace(/J/g, "Ç");
-	  car = car.replace(/j/g, "ç");
   }
   car = car.replace(/J/g, "Ƶ");
   car = car.replace(/Ñ/g, "Ꞑ");
@@ -49,7 +49,6 @@ var car_Orig = car;
   car = car.replace(/ö/g, "ɵ");
   car = car.replace(/y/g, "j");
   car = car.replace(/ü/g, "y");
-
   if (/Ţ|ţ/.test(car_Orig)) {
 	  if (/C|c/.test(car_Orig) == false) {
 	  car = car.replace(/Ţ/g, "Ç");
@@ -80,7 +79,11 @@ car = car.replace(/I(\p{M})/ug, "Ь$1");
   car = car.replace(/ts\u2060/g, "ţ");
 
   car = car.replace(/\u2060/g, "");
-
+  
+  if (/Ƶ|ƶ/.test(car_Orig) == false) {
+	  car = car.replace(/Ç/g, "Ƶ");
+	  car = car.replace(/ç/g, "ƶ");
+  }
   car = car.replace(/C/g, "\u2060");
   car = car.replace(/Ç/g, "C");
   car = car.replace(/\u2060/g, "Ç");
