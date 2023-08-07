@@ -45,6 +45,9 @@ var car_Orig = car;
   car = car.replace(/Д/g, "D");
   car = car.replace(/Ж/g, "J");
   car = car.replace(/З/g, "Z");
+  if (/Ы|ы/.test(car_Orig) == false) {
+	  car = car.replace(/И/g, "I");
+  }
   car = car.replace(/И/g, "İ");
   car = car.replace(/Й/g, "Y");
   car = car.replace(/К/g, "K");
@@ -60,7 +63,7 @@ var car_Orig = car;
   car = car.replace(/С/g, "S");
   car = car.replace(/Т/g, "T");
   car = car.replace(/У/g, "U");
-  if (/В/.test(car_Orig)) {
+  if (/В|в/.test(car_Orig)) {
 	  car = car.replace(/Ў/g, "W");
 	  car = car.replace(/ў/g, "w");
   }
@@ -133,13 +136,6 @@ var car_Orig = car;
   car = car.replace(/G/g, "Г");
   car = car.replace(/Ğ/g, "Ғ");
   car = car.replace(/D/g, "Д");
-  if (/J|j/.test(car_Orig) == false){
-	  car = car.replace(/C/g, "Ж");
-	  car = car.replace(/c/g, "ж");
-  } else {    
-	  car = car.replace(/C/g, "Џ");
-	  car = car.replace(/c/g, "џ");
-  }
   car = car.replace(/J/g, "Ж");
   car = car.replace(/Z/g, "З");
   car = car.replace(/İ/g, "И");
@@ -175,9 +171,17 @@ var car_Orig = car;
   }
   car = car.replace(/X/g, "Х");
   car = car.replace(/Ţ/g, "Ц");
+  if (/J|j/.test(car_Orig) == false){
+	  car = car.replace(/C/g, "Ж");
+	  car = car.replace(/c/g, "ж");
+  }
+  car = car.replace(/C/g, "Џ");
   car = car.replace(/Ç/g, "Ч");
   car = car.replace(/Ş/g, "Ш");
   car = car.replace(/Ś/g, "Щ");
+  if (/İ|ı/.test(car_Orig) == false) {
+	  car = car.replace(/I/g, "И");
+  }
   car = car.replace(/I/g, "Ы");
   car = car.replace(/E/g, "Э");
   car = car.replace(/È/g, "Э\u0300");
@@ -213,6 +217,7 @@ var car_Orig = car;
   car = car.replace(/f/g, "ф");
   car = car.replace(/x/g, "х");
   car = car.replace(/ţ/g, "ц");
+  car = car.replace(/c/g, "џ");
   car = car.replace(/ç/g, "ч");
   car = car.replace(/ş/g, "ш");
   car = car.replace(/ś/g, "щ");
