@@ -11,11 +11,12 @@ var letters = ["Ä","Č","Ġ","Ï","Ž","Ṅ","Ö","Š","Ü","Ḥ","ä","č","ġ
   }
 car = car.replace(/I(\p{M})/ug, "Ï$1");   
 }
-  if (/Č|č/.test(car_Orig)) {
-	  car = car.replace(/C/g, "Ţ");
-	  car = car.replace(/c/g, "ţ");
+  if (/Č|č/.test(car_Orig) == false) {
+	  car = car.replace(/C/g, "Č");
+	  car = car.replace(/c/g, "č");
   }  
-  car = car.replace(/C/g, "Ç");
+  car = car.replace(/C/g, "Ţ");
+  car = car.replace(/c/g, "ţ");	
   if (/Ž|ž/.test(car_Orig)) {
 	  car = car.replace(/J/g, "C");
 	  car = car.replace(/j/g, "c");
@@ -30,7 +31,6 @@ car = car.replace(/I(\p{M})/ug, "Ï$1");
   car = car.replace(/Ġ/g, "Ğ");
   car = car.replace(/Ṅ/g, "Ñ");
   car = car.replace(/Ḥ/g, "X");
-  car = car.replace(/c/g, "ç");
   car = car.replace(/ž/g, "j");
   car = car.replace(/ï/g, "ı");
   car = car.replace(/č/g, "ç");
