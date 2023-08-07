@@ -1,5 +1,4 @@
-﻿//  copyright lexilogos.com
-var car;
+﻿var car;
 function cyrlat () {
 car = document.transcription.text1.value;
 translit = document.transcription.text1.value;
@@ -60,12 +59,12 @@ translit = document.transcription.text1.value;
   car = car.replace(/N'G'H/g, "NGH");
   
   car = car.replace(/j/g, "c");
-  car = car.replace(/e/g, "ə");
+  car = car.replace(/e/g, "ä");
   car = car.replace(/ë/g, "e");
   car = car.replace(/é/g, "e");
   car = car.replace(/w/g, "v");
   car = car.replace(/J/g, "C");
-  car = car.replace(/E/g, "Ə");
+  car = car.replace(/E/g, "Ä");
   car = car.replace(/Ë/g, "E");
   car = car.replace(/É/g, "E");
   car = car.replace(/W/g, "V");
@@ -102,7 +101,7 @@ car = document.transcription.text2.value;
   car = car.replace(/c/g, "j");
   car = car.replace(/ç/g, "ch");
   car = car.replace(/e/g, "ë");
-  car = car.replace(/ə/g, "e");
+  car = car.replace(/ä/g, "e");
   car = car.replace(/ğ/g, "gh");
   car = car.replace(/ñ/g, "ng");
   car = car.replace(/ş/g, "sh");
@@ -111,7 +110,7 @@ car = document.transcription.text2.value;
   car = car.replace(/C/g, "J");
   car = car.replace(/Ç/g, "Ch");
   car = car.replace(/E/g, "Ë");
-  car = car.replace(/Ə/g, "E");
+  car = car.replace(/Ä/g, "E");
   car = car.replace(/Ğ/g, "Gh");
   car = car.replace(/Ñ/g, "NG");
   car = car.replace(/Ş/g, "Sh");

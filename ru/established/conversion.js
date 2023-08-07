@@ -103,8 +103,8 @@ car = document.transcription.text1.value;
 
   car = car.replace(/Й(А|а)/g, "Й$1\u0300");
   car = car.replace(/йа/g, "йа\u0300");
-  car = car.replace(/Й(Е|е)/g, "Й$1\u0300");
-  car = car.replace(/йе/g, "йе\u0300");
+  car = car.replace(/Й(Э|э)/g, "Й$1\u0300");
+  car = car.replace(/йэ/g, "йе\u0300");
   car = car.replace(/Й(О|о)/g, "Й$1\u0300");
   car = car.replace(/йо/g, "йо\u0300");
   car = car.replace(/Й(У|у)/g, "Й$1\u0300");

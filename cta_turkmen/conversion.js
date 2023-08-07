@@ -20,14 +20,13 @@ car = car.replace(/I(\p{M})/ug, "Y$1");
   }
   if (/Ý|ý/.test(car_Orig)) {
 	  car = car.replace(/I/g, "İ");
-      car = car.replace(/Y/g, "I");
-      car = car.replace(/Ý/g, "Y");
+      car = car.replace(/Y/g, "I");      
 	  car = car.replace(/y/g, "ı");
-      car = car.replace(/ý/g, "y");
   }
+  car = car.replace(/Ý/g, "Y");
   car = car.replace(/Ǧ/g, "Ğ");
   car = car.replace(/Ň/g, "Ñ");
-
+  car = car.replace(/ý/g, "y");
   car = car.replace(/c/g, "ţ");
   car = car.replace(/j/g, "c");
   car = car.replace(/ž/g, "j");
@@ -59,16 +58,16 @@ var car_Orig = car;
   }
   if (/İ|ı/.test(car_Orig)) {
 	  car = car.replace(/Y/g, "Ý");
-	  car = car.replace(/I/g, "Y");
-	  car = car.replace(/İ/g, "I");
+	  car = car.replace(/I/g, "Y");	  
 	  car = car.replace(/y/g, "ý");
-	  car = car.replace(/ı/g, "y");
   }
+  car = car.replace(/İ/g, "I");
   car = car.replace(/Ñ/g, "Ň");
   car = car.replace(/j/g, "ž");
   car = car.replace(/c/g, "j");
   car = car.replace(/ţ/g, "c");
   car = car.replace(/ğ/g, "ǧ");
+  car = car.replace(/ı/g, "y");
   car = car.replace(/ñ/g, "ň");
   car = car.normalize('NFC');
 document.transcription.text2.value=car;
