@@ -36,6 +36,22 @@ var car_Orig = car;
   car = car.replace(/Ю/g, "Йу");
   car = car.replace(/ю/g, "йу");
   
+  if (/Ҕ|Ҡ|Ң|Ҥ|Һ|Џ|Җ|Ҷ|Ҹ|Ӂ|Ә|Ы|Ӣ|Ө|Ӧ|Ү|Ӱ|Ӯ|ҕ|ҡ|ң|ҥ|һ|џ|җ|ҷ|ҹ|ӂ|ә|ы|ӣ|ө|ӧ|ү|ӱ|ӯ/.test(car_Orig) == false) {
+	  if (/Ў|ў|Қ|қ|Ғ|ғ|Ҳ|ҳ/.test(car_Orig) ) {
+		car = car.replace(/НГ(А|Э|И|О|У|Ў)/g, "ÑG$1");
+		car = car.replace(/нг(а|э|и|о|у|ў)/g, "ñg$1");		
+		car = car.replace(/НГГ/g, "Ñ\u2060G");
+		car = car.replace(/нгг/g, "ñ\u2060g");
+		car = car.replace(/НГ/g, "Ñ");
+		car = car.replace(/нг/g, "ñ");
+		car = car.replace(/А/g, "Ä")
+		car = car.replace(/а/g, "ä")
+		car = car.replace(/О/g, "A");
+		car = car.replace(/о/g, "a");
+		car = car.replace(/Ў/g, "O");
+		car = car.replace(/ў/g, "o");		
+	}
+  }
   car = car.replace(/А/g, "A");
   car = car.replace(/(Ә|Ӓ)/g, "Ä");
   car = car.replace(/Б/g, "B");
@@ -118,9 +134,9 @@ var car_Orig = car;
   car = car.replace(/(џ|җ|ҷ|ҹ|ӂ)/g, "c");
   car = car.replace(/ш/g, "ş");
   car = car.replace(/щ/g, "ś");
-  car = car.replace(/(Ъ|ъ)/g, "\u02ee");
+  car = car.replace(/(Ъ|ъ)/g, "\u02bc");
   car = car.replace(/ы/g, "ı");
-  car = car.replace(/(Ь|ь)/g, "\u02bc");
+  car = car.replace(/(Ь|ь)/g, "");
   car = car.replace(/э/g, "e");
   car = car.normalize('NFC');
 document.transcription.text1.value=car;
@@ -221,9 +237,7 @@ var car_Orig = car;
   car = car.replace(/ç/g, "ч");
   car = car.replace(/ş/g, "ш");
   car = car.replace(/ś/g, "щ");
-  car = car.replace(/\u02ee/g, "ъ");
   car = car.replace(/ı/g, "ы");
-  car = car.replace(/\u02bc/g, "ь");
   car = car.replace(/e/g, "э");
   car = car.replace(/è/g, "э\u0300");
   
@@ -252,6 +266,7 @@ var car_Orig = car;
   
   car = car.replace(/Е\u0300/g, "Э");
   car = car.replace(/е\u0300/g, "э");
+  car = car.replace(/\u02bc/g, "ъ");
   car = car.replace(/(\u0300|\u2060)/g, "");
   car = car.normalize('NFC');
 document.transcription.text2.value=car;

@@ -21,7 +21,9 @@ car = car.replace(/I(\p{M})/ug, "Ï$1");
 	  car = car.replace(/j/g, "c");
   } 
   car = car.replace(/Ž/g, "J");
-  car = car.replace(/I/g, "İ");
+  if (/Ï|ï/.test(car_Orig)) {
+	car = car.replace(/I/g, "İ");
+  }
   car = car.replace(/Ï/g, "I");  
   car = car.replace(/Č/g, "Ç");
   car = car.replace(/Š/g, "Ş");
@@ -63,7 +65,9 @@ var car_Orig = car;
   } 
   car = car.replace(/C/g, "J");
   car = car.replace(/Ğ/g, "Ġ");
-  car = car.replace(/I/g, "Ï");
+  if (/İ|ı/.test(car_Orig)) {
+	  car = car.replace(/I/g, "Ï");
+  }   
   car = car.replace(/İ/g, "I");
   if (/Ţ|ţ/.test(car_Orig)) {
 	  car = car.replace(/Ç/g, "Č");
