@@ -72,11 +72,8 @@ var car_Orig = car;
   car = car.replace(/Ţ/g, "C");
   car = car.replace(/Ş/g, "Š");
   car = car.replace(/Ñ/g, "Ṅ");
-  if (/H|h/.test(car_Orig)) {
-	  car = car.replace(/X/g, "Ḥ");
-	  car = car.replace(/x/g, "ḥ");
-  }
-  car = car.replace(/X/g, "H");
+  car = car.replace(/X/g, "Ḥ");
+  car = car.replace(/x/g, "ḥ");
   car = car.replace(/c/g, "j");  
   car = car.replace(/ç/g, "c");
   car = car.replace(/ţ/g, "c");
