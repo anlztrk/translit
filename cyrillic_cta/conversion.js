@@ -2,13 +2,17 @@ var car;
 function cyrlat () {
 car = document.transcription.text1.value;
 var car_Orig = car;
-var iotatedE = true;
 var lang;
+var iotatedE = true;
 var phonemicYeru = true;
 var shortUIsVowel = false;
 var phonemicShortU = false;
 var phonemicKha = false;
 var phonemicZhe = true;
+//ҸҹҜҝЈјӘәЯяЮюЁё
+if(/Ј|ј/.test(car_Orig) && /Й|й/.test(car_Orig)) {
+    iotatedE = false;
+}
 if(/Ы|ы/.test(car_Orig) == false) {
     phonemicYeru = false;
 }
