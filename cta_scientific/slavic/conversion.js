@@ -17,7 +17,9 @@ car = car.replace(/I(\p{M})/ug, "Y$1");
   }
   car = car.replace(/C/g, "Ţ");
   car = car.replace(/Đ/g, "C");
+  if (/Y|y/.test(car_Orig)) {
   car = car.replace(/I/g, "İ");
+  }
   car = car.replace(/Y/g, "I");  
   car = car.replace(/J/g, "Y");
   car = car.replace(/Ž/g, "J");
@@ -50,8 +52,10 @@ var car_Orig = car;
         car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
       }
     }
+    if (/İ|ı/.test(car_Orig)) {
     car = car.replace(/I(\p{M})/ug, "İ$1");
 	car = car.replace(/İ\u0307/g, "İ");
+    }
   }  
   if (/C|c/.test(car_Orig) == false) {
 	  car = car.replace(/J/g, "Đ");
