@@ -9,7 +9,9 @@ var letters = ["Ä","Č","Ġ","Ï","Ž","Ṅ","Ö","Š","Ü","Ḥ","ä","č","ġ
       car = car.replace(car.charAt(i),car.charAt(i).normalize('NFD'));
       }
   }
-car = car.replace(/I(\p{M})/ug, "Ï$1");   
+if (/Ï|ï/.test(car_Orig)) {
+  car = car.replace(/I(\p{M})/ug, "Ï$1");  
+  } 
 }
   if (/Č|č/.test(car_Orig) == false) {
 	  car = car.replace(/C/g, "Č");
