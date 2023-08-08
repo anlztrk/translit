@@ -174,7 +174,9 @@ car = document.transcription.text1.value;
   car = car.replace(/ы/g, "ı");
   car = car.replace(/э/g, "i");  
   car = car.replace(/(Ъ|ъ|Ь|ь|\u2060)/g, "");  
-  car = car.normalize('NFC');
+  car = car.normalize('NFC');  
+  car = car.replace(/\u00bb/g, "\u201d");
+  car = car.replace(/\u00ab/g, "\u201c");
 document.transcription.text2.value=car;
 }
 function copy1()
