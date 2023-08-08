@@ -105,6 +105,8 @@ if(lang == "Azeri") {
   car = car.replace(/ҝ/g, "г");
   car = car.replace(/Ј/g, "Й");
   car = car.replace(/ј/g, "й");
+  car = car.replace(/е/g, "э");
+  car = car.replace(/Е/g, "Э");
   }
 
     if(lang == "Kazakh") {
