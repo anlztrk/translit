@@ -27,7 +27,7 @@ if(/Џ|Җ|Ҷ|Ҹ|Ӂ|џ|җ|ҷ|ҹ|ӂ/.test(car_Orig)) {
 }
 if(/Ҹ|ҹ|Ҝ|ҝ/.test(car_Orig) || (/Ә|ә|Ғ|ғ/.test(car_Orig) && /Ј|ј/.test(car_Orig))) {
 	lang = "Azeri";
-} else if(/Ҕ|Ҡ|Ң|Ҥ|Һ|Џ|Җ|Ҷ|Ҹ|Ӂ|Ә|Ы|Ӣ|Ө|Ӧ|Ү|Ӱ|Ӯ|ҕ|ҡ|ң|ҥ|һ|џ|җ|ҷ|ҹ|ӂ|ә|ы|ӣ|ө|ӧ|ү|ӱ|ӯ/.test(car_Orig) == false || /Ў|ў|Қ|қ|Ғ|ғ|Ҳ|ҳ/.test(car_Orig)){
+} else if(/Ҕ|Ҡ|Ң|Ҥ|Һ|Џ|Җ|Ҷ|Ҹ|Ӂ|Ә|Ы|Ӣ|Ө|Ӧ|Ү|Ӱ|Ӯ|ҕ|ҡ|ң|ҥ|һ|џ|җ|ҷ|ҹ|ӂ|ә|ы|ӣ|ө|ӧ|ү|ӱ|ӯ/.test(car_Orig) == false && /Ў|ў|Қ|қ|Ғ|ғ|Ҳ|ҳ/.test(car_Orig)){
 	lang = "Uzbek";
 } else if(/Ұ|ұ/.test(car_Orig) || (/І|і/.test(car_Orig) && /Ә|ә|Ң|ң|Ө|ө|Ү|ү/.test(car_Orig))) {
 	lang = "Kazakh";
