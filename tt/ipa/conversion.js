@@ -1,5 +1,4 @@
-﻿//  copyright lexilogos.com
-varcar;
+var car;
 var translit;
 function latcyr () {
 }
