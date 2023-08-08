@@ -701,7 +701,6 @@ translit = translit.replace(/SH/g, "Ş");
 translit = translit.replace(/ch/g, "ç");
 translit = translit.replace(/Ch/g, "Ç");
 translit = translit.replace(/CH/g, "Ç");
-translit = translit.replace(/ʼ/g, "ng");
 translit = translit.replace(/ñ/g, "ng");
 translit = translit.replace(/Ň/g, "NG");
 translit = translit.replace(/Ñ/g, "NG");
