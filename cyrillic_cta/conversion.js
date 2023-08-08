@@ -9,8 +9,8 @@ var shortUIsVowel = false;
 var phonemicShortU = false;
 var phonemicKha = false;
 var phonemicZhe = true;
-//ҸҹҜҝЈјӘәЯяЮюЁё
-if(/Ј|ј/.test(car_Orig) && /Й|й/.test(car_Orig)) {
+
+if(/Ј|ј/.test(car_Orig) && /Й|й|Я|я|Ё|ё|Ю|ю/.test(car_Orig) == false) {
     iotatedE = false;
 }
 if(/Ы|ы/.test(car_Orig) == false) {
@@ -25,12 +25,13 @@ if(/Ҳ|ҳ|Һ|һ/.test(car_Orig)) {
 if(/Џ|Җ|Ҷ|Ҹ|Ӂ|џ|җ|ҷ|ҹ|ӂ/.test(car_Orig)) {
     phonemicZhe = true;
 }
-if(/Ҕ|Ҡ|Ң|Ҥ|Һ|Џ|Җ|Ҷ|Ҹ|Ӂ|Ә|Ы|Ӣ|Ө|Ӧ|Ү|Ӱ|Ӯ|ҕ|ҡ|ң|ҥ|һ|џ|җ|ҷ|ҹ|ӂ|ә|ы|ӣ|ө|ӧ|ү|ӱ|ӯ/.test(car_Orig) == false || /Ў|ў|Қ|қ|Ғ|ғ|Ҳ|ҳ/.test(car_Orig)){
+if(/Ҹ|ҹ|Ҝ|ҝ/.test(car_Orig) || (/Ә|ә|Ғ|ғ/.test(car_Orig) && /Ј|ј/.test(car_Orig))) {
+	lang = "Azeri";
+} else if(/Ҕ|Ҡ|Ң|Ҥ|Һ|Џ|Җ|Ҷ|Ҹ|Ӂ|Ә|Ы|Ӣ|Ө|Ӧ|Ү|Ӱ|Ӯ|ҕ|ҡ|ң|ҥ|һ|џ|җ|ҷ|ҹ|ӂ|ә|ы|ӣ|ө|ӧ|ү|ӱ|ӯ/.test(car_Orig) == false || /Ў|ў|Қ|қ|Ғ|ғ|Ҳ|ҳ/.test(car_Orig)){
 	lang = "Uzbek";
-	}
-if(/Ұ|ұ/.test(car_Orig) || (/І|і/.test(car_Orig) && /Ә|ә|Ң|ң|Ө|ө|Ү|ү/.test(car_Orig))) {
+} else if(/Ұ|ұ/.test(car_Orig) || (/І|і/.test(car_Orig) && /Ә|ә|Ң|ң|Ө|ө|Ү|ү/.test(car_Orig))) {
 	lang = "Kazakh";
-	}
+}
 if(lang == "Uzbek") {
 	iotatedE = true;
 	phonemicYeru = false;
@@ -47,6 +48,14 @@ if(lang == "Kazakh") {
 	phonemicKha = true;
 	phonemicZhe = true;
    }
+if(lang == "Azeri") {
+	iotatedE = false;
+	phonemicYeru = true;
+	shortUIsVowel = false;
+	phonemicShortU = false;
+	phonemicKha = true;
+	phonemicZhe = true;
+}	
   if(iotatedE == true) {
   car = car.replace(/(Б|В|Г|Ғ|Ҕ|Д|Ж|З|К|Қ|Ҡ|Л|М|Н|Ң|Ҥ|П|Р|С|Т|Ф|Х|Һ|Ҳ|Ц|Ч|Џ|Җ|Ҷ|Ҹ|Ӂ|Ш|Щ|б|в|г|ғ|ҕ|д|ж|з|к|қ|ҡ|л|м|н|ң|ҥ|п|р|с|т|ф|х|һ|ҳ|ц|ч|џ|җ|ҷ|ҹ|ӂ|ш|щ)(Э|э)/g, "$1$2\u0300");
   car = car.replace(/(Б|В|Г|Ғ|Ҕ|Д|Ж|З|К|Қ|Ҡ|Л|М|Н|Ң|Ҥ|П|Р|С|Т|Ф|Х|Һ|Ҳ|Ц|Ч|Џ|Җ|Ҷ|Ҹ|Ӂ|Ш|Щ|б|в|г|ғ|ҕ|д|ж|з|к|қ|ҡ|л|м|н|ң|ҥ|п|р|с|т|ф|х|һ|ҳ|ц|ч|џ|җ|ҷ|ҹ|ӂ|ш|щ)Е/g, "$1Э");
@@ -57,7 +66,7 @@ if(lang == "Kazakh") {
   car = car.replace(/ўэ/g, "ў\u0300э");
   car = car.replace(/ЎЕ/g, "ЎЭ");
   car = car.replace(/(Ў|ў)е/g, "$1э");
-    }	
+  }	
   car = car.replace(/Й(А|а)/g, "Й$1\u0300");
   car = car.replace(/йа/g, "йа\u0300");
   car = car.replace(/Й(Э|э)/g, "Й$1\u0300");
@@ -66,7 +75,6 @@ if(lang == "Kazakh") {
   car = car.replace(/йо/g, "йо\u0300");
   car = car.replace(/Й(У|у)/g, "Й$1\u0300");
   car = car.replace(/йу/g, "йу\u0300");
-
   car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
   car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2");
   car = car.replace(/Я(\p{Uppercase})/ug, "ЙА$1");
@@ -89,6 +97,15 @@ if(lang == "Kazakh") {
   car = car.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
   car = car.replace(/Ю/g, "Йу");
   car = car.replace(/ю/g, "йу");
+  
+    if(lang == "Azeri") {
+  car = car.replace(/Г/g, "Қ");
+  car = car.replace(/г/g, "қ");
+  car = car.replace(/Ҝ/g, "Г");
+  car = car.replace(/ҝ/g, "г");
+  car = car.replace(/Ј/g, "Й");
+  car = car.replace(/ј/g, "й");
+  }
 
     if(lang == "Kazakh") {
   car = car.replace(/(Е|Э|Ә|І|Ө|Ү|Ӱ|Ӥ)(Б|В|Г|Ғ|Д|Ж|З|И|Й|К|Қ|Л|М|Н|Ң|П|Р|С|Т|Ў|Ф|Х|Һ|Ц|Ч|Ш|Ъ|Ь)(Б|В|Г|Ғ|Д|Ж|З|И|Й|К|Қ|Л|М|Н|Ң|П|Р|С|Т|Ў|Ф|Х|Һ|Ц|Ч|Ш|Ъ|Ь)?(Б|В|Г|Ғ|Д|Ж|З|И|Й|К|Қ|Л|М|Н|Ң|П|Р|С|Т|Ў|Ф|Х|Һ|Ц|Ч|Ш|Ъ|Ь)?И/g, "$1$2$3$4Ӥ");
