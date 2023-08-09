@@ -1,9 +1,10 @@
-﻿
-//  copyright lexilogos.com
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
-car = car.replace(/а/g, "a");
+  car = car.replace(/(Ь|Ъ|ь|ъ)(е|и|о)/g, "$1й$2");
+  car = car.replace(/(Ь|Ъ)(Е|И|О)/g, "$1Й$2");
+  
+  car = car.replace(/а/g, "a");
   car = car.replace(/ә/g, "ä");
   car = car.replace(/б/g, "b");
   car = car.replace(/в/g, "v");
@@ -88,6 +89,93 @@ car = car.replace(/а/g, "a");
   car = car.replace(/«/g, "\u201c");
   car = car.replace(/»/g, "\u201d");
 document.transcription.text2.value=car;
+}
+function latcyr () {
+car = document.transcription.text2.value;
+var car_Orig = car;
+  car = car.replace(/A/g, "А");
+  car = car.replace(/(Á|Ä)/g, "Ә");
+  car = car.replace(/B/g, "Б");
+  car = car.replace(/V/g, "В");
+  car = car.replace(/G/g, "Г");
+  car = car.replace(/(Ǵ|Ğ)/g, "Ғ");
+  car = car.replace(/D/g, "Д");
+  car = car.replace(/E/g, "Е");
+  car = car.replace(/J/g, "Ж");
+  car = car.replace(/Z/g, "З");
+  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü/.test(car_Orig)) {
+  car = car.replace(/I/g, "Ы");
+  }
+  car = car.replace(/(I|İ)/g, "И");
+  car = car.replace(/Y/g, "Й");
+  car = car.replace(/K/g, "К");
+  car = car.replace(/Q/g, "Қ");
+  car = car.replace(/L/g, "Л");
+  car = car.replace(/M/g, "М");
+  car = car.replace(/N/g, "Н");
+  car = car.replace(/(Ń|Ñ)/g, "Ң");
+  car = car.replace(/O/g, "О");
+  car = car.replace(/(Ó|Ö)/g, "Ө");
+  car = car.replace(/P/g, "П");
+  car = car.replace(/R/g, "Р");
+  car = car.replace(/S/g, "С");
+  car = car.replace(/T/g, "Т");
+  car = car.replace(/U/g, "У");
+  car = car.replace(/W/g, "Ў");
+  car = car.replace(/(Ú|Ü)/g, "Ү");
+  car = car.replace(/F/g, "Ф");
+  car = car.replace(/H/g, "Ҳ");
+  car = car.replace(/X/g, "Х");
+  car = car.replace(/C/g, "Ц");
+  car = car.replace(/Ç/g, "Ч");
+  car = car.replace(/Ş/g, "Ш");
+  car = car.replace(/Í/g, "Ы");
+  car = car.replace(/a/g, "а");
+  car = car.replace(/(á|ä)/g, "ә");
+  car = car.replace(/b/g, "б");
+  car = car.replace(/v/g, "в");
+  car = car.replace(/g/g, "г");
+  car = car.replace(/(ǵ|ğ)/g, "ғ");
+  car = car.replace(/d/g, "д");
+  car = car.replace(/j/g, "ж");
+  car = car.replace(/z/g, "з");
+  car = car.replace(/i/g, "и");
+  car = car.replace(/y/g, "й");
+  car = car.replace(/k/g, "к");
+  car = car.replace(/q/g, "қ");
+  car = car.replace(/l/g, "л");
+  car = car.replace(/m/g, "м");
+  car = car.replace(/n/g, "н");
+  car = car.replace(/(ń|ñ)/g, "ң");
+  car = car.replace(/o/g, "о");
+  car = car.replace(/ó/g, "ө");
+  car = car.replace(/p/g, "п");
+  car = car.replace(/r/g, "р");
+  car = car.replace(/s/g, "с");
+  car = car.replace(/t/g, "т");
+  car = car.replace(/u/g, "у");
+  car = car.replace(/w/g, "ў");
+  car = car.replace(/(ú|ü)/g, "ү");
+  car = car.replace(/f/g, "ф");
+  car = car.replace(/h/g, "ҳ");
+  car = car.replace(/x/g, "х");
+  car = car.replace(/c/g, "ц");
+  car = car.replace(/i/g, "и");
+  car = car.replace(/(ı|í)/g, "ы");
+  car = car.replace(/Й(А|а)/g, "Я");
+  car = car.replace(/Й(У|у)/g, "Ю");
+  car = car.replace(/йа/g, "я");
+  car = car.replace(/йу/g, "ю");
+  
+  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü/.test(car_Orig) == false || /Á|á|Ǵ|ǵ|Í|Ń|ń|Ó|ó|Ú|ú/.test(car_Orig)) {
+  car = car.replace(/цҳ/g, "ч");
+  car = car.replace(/Ц(Ҳ|ҳ)/g, "Ч");
+  car = car.replace(/сҳ/g, "ш");
+  car = car.replace(/С(Ҳ|ҳ)/g, "Ш");
+  }  
+  car = car.replace(/\u201c/g, "«");
+  car = car.replace(/\u201d/g, "»");
+document.transcription.text1.value=car;
 }
 function copy1()
 { textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
