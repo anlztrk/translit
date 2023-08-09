@@ -3,6 +3,13 @@ var car;
 var translit;
 function latcyr () {
 translit = document.transcription.text2.value;
+var car_Orig = translit;
+if(/Ä|ä/.test(car_Orig)) {
+translit = translit.replace(/A/g, "Â");
+translit = translit.replace(/a/g, "â");
+translit = translit.replace(/Ä/g, "A");
+translit = translit.replace(/ä/g, "a");
+}
 translit = translit.replace(/H\u2060/g, "X");
 translit = translit.replace(/h\u2060/g, "x");
 translit = translit.replace(/SH/g, "S’H");
