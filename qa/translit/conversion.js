@@ -1,8 +1,6 @@
-﻿
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
-
   car = car.replace(/(Ь|Ъ|ь|ъ)(е|и|о)/g, "$1й$2");
   car = car.replace(/(Ь|Ъ)(Е|И|О)/g, "$1Й$2");
   
@@ -92,7 +90,7 @@ car = document.transcription.text1.value;
   car = car.replace(/»/g, "\u201d");
 document.transcription.text2.value=car;
 }
-function cyrlat () {
+function latcyr () {
 car = document.transcription.text2.value;
 var car_Orig = car;
   car = car.replace(/A/g, "А");
@@ -104,6 +102,9 @@ var car_Orig = car;
   car = car.replace(/D/g, "Д");
   car = car.replace(/J/g, "Ж");
   car = car.replace(/Z/g, "З");
+  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü/.test(car_Orig)) {
+  car = car.replace(/I/g, "Ы");
+  }
   car = car.replace(/(I|İ)/g, "И");
   car = car.replace(/Y/g, "Й");
   car = car.replace(/K/g, "К");
@@ -126,11 +127,7 @@ var car_Orig = car;
   car = car.replace(/X/g, "Х");
   car = car.replace(/C/g, "Ц");
   car = car.replace(/Ç/g, "Ч");
-  car = car.replace(/Ş/g, "Ш");шч
-  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü/.test(car_Orig)) {
-  car = car.replace(/I/g, "Ы");
-  }
-  car = car.replace(/(I|İ)/g, "И");
+  car = car.replace(/Ş/g, "Ш");
   car = car.replace(/Í/g, "Ы");
   car = car.replace(/a/g, "а");
   car = car.replace(/(á|ä)/g, "ә");
@@ -164,13 +161,12 @@ var car_Orig = car;
   car = car.replace(/c/g, "ц");
   car = car.replace(/i/g, "и");
   car = car.replace(/(ı|í)/g, "ы");
-  car = car.replace(/(ı|í)/g, "ы");
   car = car.replace(/Й(А|а)/g, "Я");
   car = car.replace(/Й(У|у)/g, "Ю");
   car = car.replace(/йа/g, "я");
   car = car.replace(/йу/g, "ю");
   
-  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü/.test(car_Orig) == false ) {
+  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü/.test(car_Orig) == false || /Á|á|Ǵ|ǵ|Í|Ń|ń|Ó|ó|Ú|ú/.test(car_Orig)) {
   car = car.replace(/цҳ/g, "ч");
   car = car.replace(/Ц(Ҳ|ҳ)/g, "Ч");
   car = car.replace(/сҳ/g, "ш");
@@ -178,7 +174,7 @@ var car_Orig = car;
   }  
   car = car.replace(/\u201c/g, "«");
   car = car.replace(/\u201d/g, "»");
-document.transcription.text2.value=car;
+document.transcription.text1.value=car;
 }
 function copy1()
 { textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
