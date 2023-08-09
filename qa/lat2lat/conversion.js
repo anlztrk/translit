@@ -1,9 +1,6 @@
-﻿//  copyright lexilogos.com
 var car;
 function latcyr () {
 car = document.transcription.text2.value;
-  car = car.replace(/'/g, "ʼ");
-  car = car.replace(/’/g, "ʼ");
   car = car.replace(/Ch/g, "Ç");
   car = car.replace(/CH/g, "Ç");
   car = car.replace(/ch/g, "ç");
@@ -21,24 +18,11 @@ car = document.transcription.text2.value;
   car = car.replace(/ó/g, "ö");
   car = car.replace(/Ó/g, "Ö");
   car = car.replace(/ú/g, "ü");
-  car = car.replace(/Ú/g, "Ü");
-  car = car.replace(/sʼh/g, "sh");
-  car = car.replace(/Sʼh/g, "Sh");
-  car = car.replace(/SʼH/g, "SH");
-  car = car.replace(/cʼh/g, "ch");
-  car = car.replace(/Cʼh/g, "Ch");
-  car = car.replace(/CʼH/g, "CH");  
-  
+  car = car.replace(/Ú/g, "Ü");  
 document.transcription.text1.value=car;
 }
 function cyrlat () {
 car = document.transcription.text1.value;
-  car = car.replace(/ch/g, "cʼh");
-  car = car.replace(/Ch/g, "Cʼh");
-  car = car.replace(/CH/g, "CʼH");
-  car = car.replace(/sh/g, "sʼh");
-  car = car.replace(/Sh/g, "Sʼh");
-  car = car.replace(/SH/g, "SʼH");
   car = car.replace(/ç/g, "ch");
   car = car.replace(/Ç/g, "Ch");
   car = car.replace(/ş/g, "sh");
