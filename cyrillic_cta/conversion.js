@@ -5,9 +5,12 @@ var car_Orig = car;
 var lang;
 var iotatedE = true;
 var phonemicYeru = true;
+var phonemicYer = true;
 var shortUIsVowel = false;
 var phonemicShortU = false;
 var phonemicKha = false;
+var phonemicShcha = true;
+var phonemicTse = true;
 var phonemicZhe = true;
 
 if(/Ј|ј/.test(car_Orig) && /Й|й|Я|я|Ё|ё|Ю|ю/.test(car_Orig) == false) {
@@ -37,33 +40,45 @@ if(/Ҹ|ҹ|Ҝ|ҝ/.test(car_Orig) || (/Ә|ә|Ғ|ғ/.test(car_Orig) && /Ј|ј/.test
 if(lang == "Uzbek") {
 	iotatedE = true;
 	phonemicYeru = false;
+ phonemicYer = false;
 	shortUIsVowel = true;
 	phonemicShortU = true;
 	phonemicKha = true;
+ phonemicShcha = false;
+ phonemicTse = false;
 	phonemicZhe = false;
    }
 if(lang == "Kazakh") {
 	iotatedE = false;
 	phonemicYeru = true;
+ phonemicYer = false
 	shortUIsVowel = false;
 	phonemicShortU = true;
 	phonemicKha = true;
+ phonemicShcha = false;
+ phonemicTse = false;
 	phonemicZhe = true;
    }
 if(lang == "Azeri") {
 	iotatedE = false;
 	phonemicYeru = true;
+ phonemicYer = false;
 	shortUIsVowel = false;
 	phonemicShortU = false;
 	phonemicKha = true;
+ phonemicShcha = false;
+ phonemicTse = false;
 	phonemicZhe = true;
 }
 if(lang == "Karakalpak") {
 	iotatedE = false;
 	phonemicYeru = true;
+ phonemicYer = false;
 	shortUIsVowel = false;
 	phonemicShortU = true;
 	phonemicKha = true;
+ phonemicShcha = false;
+ phonemicTse = true;
 	phonemicZhe = true;
    }
   if(iotatedE == true) {
@@ -278,9 +293,13 @@ if(lang == "Karakalpak") {
   car = car.replace(/(џ|җ|ҷ|ҹ|ӂ)/g, "c");
   car = car.replace(/ш/g, "ş");
   car = car.replace(/щ/g, "ś");
-  car = car.replace(/(Ъ|ъ)/g, "\u02bc");
+  if(phonemicYer == false) {
+	  car = car.replace(/(Ъ|ъ)/g, "\u02bc");
+   car = car.replace(/(Ь|ь)/g, "");
+  }
+  car = car.replace(/(Ъ|ъ)/g, "\u02ba");
   car = car.replace(/ы/g, "ı");
-  car = car.replace(/(Ь|ь)/g, "");
+  car = car.replace(/(Ь|ь)/g, "\u02b9");
   car = car.replace(/э/g, "e");
   car = car.normalize('NFC');
   car = car.replace(/«/g, "\u201c");
