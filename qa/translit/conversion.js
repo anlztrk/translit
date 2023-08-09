@@ -127,7 +127,7 @@ var car_Orig = car;
   car = car.replace(/C/g, "Ц");
   car = car.replace(/Ç/g, "Ч");
   car = car.replace(/Ş/g, "Ш");шч
-  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü)/.test(car_Orig)) {
+  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü/.test(car_Orig)) {
   car = car.replace(/I/g, "Ы");
   }
   car = car.replace(/(I|İ)/g, "И");
@@ -170,7 +170,7 @@ var car_Orig = car;
   car = car.replace(/йа/g, "я");
   car = car.replace(/йу/g, "ю");
   
-  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü)/.test(car_Orig)) {
+  if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü/.test(car_Orig) == false ) {
   car = car.replace(/цҳ/g, "ч");
   car = car.replace(/Ц(Ҳ|ҳ)/g, "Ч");
   car = car.replace(/сҳ/g, "ш");
