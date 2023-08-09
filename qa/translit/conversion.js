@@ -93,6 +93,8 @@ document.transcription.text2.value=car;
 function latcyr () {
 car = document.transcription.text2.value;
 var car_Orig = car;
+  car_Orig = car_Orig.replace(/í/g, "ı");
+
   car = car.replace(/A/g, "А");
   car = car.replace(/(Á|Ä)/g, "Ә");
   car = car.replace(/B/g, "Б");
@@ -175,6 +177,7 @@ var car_Orig = car;
   }  
   car = car.replace(/\u201c/g, "«");
   car = car.replace(/\u201d/g, "»");
+document.transcription.text2.value=car_Orig;
 document.transcription.text1.value=car;
 }
 function copy1()
