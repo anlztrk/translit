@@ -31,6 +31,8 @@ if(/Ҹ|ҹ|Ҝ|ҝ/.test(car_Orig) || (/Ә|ә|Ғ|ғ/.test(car_Orig) && /Ј|ј/.test
 	lang = "Uzbek";
 } else if(/Ұ|ұ/.test(car_Orig) || (/І|і/.test(car_Orig) && /Ә|ә|Ң|ң|Ө|ө|Ү|ү/.test(car_Orig))) {
 	lang = "Kazakh";
+} else if(/Ҳ|ҳ/.test(car_Orig) && /Ә|ә|Ң|ң|Ө|ө|Ү|ү/.test(car_Orig)){
+	lang = "Karakalpak";
 }
 if(lang == "Uzbek") {
 	iotatedE = true;
@@ -55,7 +57,15 @@ if(lang == "Azeri") {
 	phonemicShortU = false;
 	phonemicKha = true;
 	phonemicZhe = true;
-}	
+}
+if(lang == "Karakalpak") {
+	iotatedE = false;
+	phonemicYeru = true;
+	shortUIsVowel = false;
+	phonemicShortU = true;
+	phonemicKha = true;
+	phonemicZhe = true;
+   }
   if(iotatedE == true) {
   car = car.replace(/(Б|В|Г|Ғ|Ҕ|Д|Ж|З|К|Қ|Ҡ|Л|М|Н|Ң|Ҥ|П|Р|С|Т|Ф|Х|Һ|Ҳ|Ц|Ч|Џ|Җ|Ҷ|Ҹ|Ӂ|Ш|Щ|б|в|г|ғ|ҕ|д|ж|з|к|қ|ҡ|л|м|н|ң|ҥ|п|р|с|т|ф|х|һ|ҳ|ц|ч|џ|җ|ҷ|ҹ|ӂ|ш|щ)(Э|э)/g, "$1$2\u0300");
   car = car.replace(/(Б|В|Г|Ғ|Ҕ|Д|Ж|З|К|Қ|Ҡ|Л|М|Н|Ң|Ҥ|П|Р|С|Т|Ф|Х|Һ|Ҳ|Ц|Ч|Џ|Җ|Ҷ|Ҹ|Ӂ|Ш|Щ|б|в|г|ғ|ҕ|д|ж|з|к|қ|ҡ|л|м|н|ң|ҥ|п|р|с|т|ф|х|һ|ҳ|ц|ч|џ|җ|ҷ|ҹ|ӂ|ш|щ)Е/g, "$1Э");
