@@ -283,6 +283,8 @@ if(lang == "Karakalpak") {
   car = car.replace(/(Ь|ь)/g, "");
   car = car.replace(/э/g, "e");
   car = car.normalize('NFC');
+  car = car.replace(/«/g, "\u201c");
+  car = car.replace(/»/g, "\u201d");
 document.transcription.text2.value=car;
 }
 function latcyr () {
@@ -426,8 +428,8 @@ jDistinct = true;
   car = car.replace(/\u02bc/g, "ъ");
   car = car.replace(/(\u0300|\u2060)/g, "");
   car = car.normalize('NFC');
-  car = car.replace(/«/g, "\u201c");
-  car = car.replace(/»/g, "\u201d");
+  car = car.replace(/\u201c/g, "«");
+  car = car.replace(/\u201d/g, "»");
 document.transcription.text1.value=car;
 }
 function copy1()
