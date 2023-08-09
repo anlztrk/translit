@@ -100,6 +100,7 @@ var car_Orig = car;
   car = car.replace(/G/g, "Г");
   car = car.replace(/(Ǵ|Ğ)/g, "Ғ");
   car = car.replace(/D/g, "Д");
+  car = car.replace(/E/g, "Е");
   car = car.replace(/J/g, "Ж");
   car = car.replace(/Z/g, "З");
   if(/Ä|ä|Ç|ç|Ğ|ğ|İ|Ñ|ñ|Ö|ö|Ş|ş|Ü|ü/.test(car_Orig)) {
