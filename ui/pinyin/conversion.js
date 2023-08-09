@@ -44,12 +44,14 @@ car = document.transcription.text2.value;
   
   car = car.replace(/e/g, "ë");
   car = car.replace(/ə/g, "e");
+  car = car.replace(/ɵ/g, "ö");
   car = car.replace(/h/g, "\u2060x");
   car = car.replace(/ⱨ/g, "h");
   car = car.replace(/v/g, "w");
   car = car.replace(/ⱪ/g, "\u2060q");
   car = car.replace(/E/g, "Ë");
   car = car.replace(/Ə/g, "E");
+  car = car.replace(/Ɵ/g, "Ö");
   car = car.replace(/H/g, "\u2060X");
   car = car.replace(/Ⱨ/g, "H");
   car = car.replace(/V/g, "W");
