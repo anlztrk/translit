@@ -42,6 +42,7 @@ car = document.transcription.text1.value;
   car = car.replace(/Ə/g, "E");
   car = car.replace(/x/g, "ḥ");
   car = car.replace(/X/g, "Ḥ");
+  car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }
 function latcyr () {
