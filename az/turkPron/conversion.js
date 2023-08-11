@@ -35,7 +35,9 @@ car = document.transcription.text1.value;
 
   car = car.replace(/(E|Ə|İ|Ö|Ü)(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Ẏ|Z)Q/g, "$1$2Ġ");  
   car = car.replace(/(E|Ə|İ|Ö|Ü|e|ə|i|ö|ü)(b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|ẏ|z)q/g, "$1$2ġ");
-  
+
+  car = car.replace(/(Ġ|ġ)q/g, "$1ġ");
+  car = car.replace(/ĠQ/g, "ĠĠ");  
   car = car.replace(/q/g, "g");
   car = car.replace(/Q/g, "G");
   car = car.replace(/e/g, "é");
