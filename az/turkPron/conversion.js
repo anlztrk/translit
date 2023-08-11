@@ -6,10 +6,10 @@ car = document.transcription.text1.value;
   car = car.replace(/x/g, "ḥ");
   car = car.replace(/X/g, "Ḥ");
   
-  car = car.replace(/(G|g)(a|o|u)/g, "$1$2\u0302");
-  car = car.replace(/G(A|O|U)/g, "G$1\u0302");
-  car = car.replace(/(K|k)(a|o|u)/g, "$1$2\u0302");
-  car = car.replace(/K(A|O|U)/g, "K$1\u0302");
+  car = car.replace(/(G|K|k|g)(a|o|u)/g, "$1$2\u0302");
+  car = car.replace(/(G|K)G(A|O|U)/g, "G$1\u0302");
+  car = car.replace(/(G|K|k|g)(a|o|u)/g, "$1$2\u0302");
+  car = car.replace(/(G|K)(A|O|U)/g, "K$1\u0302");
   
   car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü)Q(B|C|D|G|Ğ|J|L|M|N|R|V|Y|Z|b|c|d|g|ğ|j|l|m|n|r|v|y|z)/g, "$1Ğ$2");
   car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü|a|e|ə|ı|i|o|ö|u|ü)q(b|c|d|g|ğ|j|l|m|n|r|v|y|z)/g, "$1ğ$2");
