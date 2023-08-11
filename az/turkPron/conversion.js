@@ -1,6 +1,8 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
+  car = car.replace(/ä/g, "ə");
+  car = car.replace(/Ä/g, "Ə");
   car = car.replace(/x/g, "ḥ");
   car = car.replace(/X/g, "Ḥ");
   
