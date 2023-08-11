@@ -8,8 +8,6 @@ car = document.transcription.text1.value;
   
   car = car.replace(/(G|K|k|g)(a|o|u)/g, "$1$2\u0302");
   car = car.replace(/(G|K)(A|O|U)/g, "$1$2\u0302");
-  car = car.replace(/(G|K|k|g)(a|o|u)/g, "$1$2\u0302");
-  car = car.replace(/(G|K)(A|O|U)/g, "$1$2\u0302");
   
   car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü)Q(B|C|D|G|Ğ|J|L|M|N|R|V|Y|Z)/g, "$1Ğ$2");
   car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü|a|e|ə|ı|i|o|ö|u|ü)q(b|c|d|g|ğ|j|l|m|n|r|v|y|z)/g, "$1ğ$2");
@@ -39,9 +37,7 @@ car = document.transcription.text1.value;
 
   car = car.replace(/(E|Ə|İ|Ö|Ü)(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Ẏ|Z)Q/g, "$1$2Ġ");  
   car = car.replace(/(E|Ə|İ|Ö|Ü|e|ə|i|ö|ü)(b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|ẏ|z)q/g, "$1$2ġ");
-  car = car.replace(/(A|I|O|U)(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Ẏ|Z)K/g, "$1$2Ẏ");  
-  car = car.replace(/(A|I|O|U|a|ı|o|u)(b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|ẏ|z)k/g, "$1$2ẏ");
-
+  
   car = car.replace(/(Ġ|ġ)q/g, "$1ġ");
   car = car.replace(/ĠQ/g, "ĠĠ");  
   car = car.replace(/q/g, "g");
