@@ -95,7 +95,7 @@ car = car.replace(/e/g, "ე");
 car = car.replace(/v/g, "ვ");
 car = car.replace(/t'/g, "ტ");
 car = car.replace(/t/g, "თ");
-car = car.replace(/i/g, "ი");
+car = car.replace(/(i|y)/g, "ი");
 car = car.replace(/k'/g, "კ");
 car = car.replace(/l/g, "ლ");
 car = car.replace(/m/g, "მ");
@@ -106,7 +106,7 @@ car = car.replace(/j/g, "ჟ");
 car = car.replace(/r/g, "რ");
 car = car.replace(/s/g, "ს");
 car = car.replace(/u/g, "უ");
-car = car.replace(/p/g, "ფ");
+car = car.replace(/(p|f)/g, "ფ");
 car = car.replace(/k/g, "ქ");
 car = car.replace(/ǧ/g, "ღ");
 car = car.replace(/q/g, "ყ");
@@ -120,13 +120,13 @@ car = car.replace(/3/g, "ც");
 car = car.replace(/x/g, "ხ");
 car = car.replace(/c/g, "ჯ");
 car = car.replace(/h/g, "ჰ");
-car = car.replace(/f/g, "ჶ");
-car = car.replace(/y/g, "ჲ");
 
    document.transcription.text1.value=car;
 }
 function geolat () {
 car = document.transcription.text1.value;
+car = car.replace(/(ა|ე|ი|ო|უ)ი/g, "$1ჲ");
+car = car.replace(/ი(ა|ე|ი|ო|უ)/g, "ჲ$1");
 car = car.replace(/ა/g, "a");
 car = car.replace(/ბ/g, "b");
 car = car.replace(/გ/g, "g");
