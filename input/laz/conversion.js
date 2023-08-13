@@ -1,6 +1,7 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
+  car = car.replace(/(\u2018|\u2019|\u02bc)/g, "\u0027");
   car = car.replace(/İ/g, "I");
   car = car.replace(/ı/g, "i");
   car = car.normalize('NFD');
