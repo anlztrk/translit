@@ -193,10 +193,8 @@ function cyrlat() {
 function latcyr() {
 	car = document.transcription.text2.value;
 	var car_Orig = car;
-	var tseDistinct = true;
 	var wDistinct = true;
 	var xDistinct = true;
-	var jDistinct = true;
 	if (/V|v/.test(car_Orig) && /W|w/.test(car_Orig)) {
 		wDistinct = true;
 	}
