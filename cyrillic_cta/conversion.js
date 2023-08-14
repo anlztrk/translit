@@ -17,6 +17,9 @@ function cyrlat() {
 	if (/Ј|ј/.test(car_Orig) && /Й|й|Я|я|Ё|ё|Ю|ю/.test(car_Orig) == false) {
 		iotatedE = false;
 	}
+	if (/Ц|ц/.test(car_Orig) == false) {
+		phonemicTse = false;
+	}
 	if (/Ы|ы/.test(car_Orig) == false) {
 		phonemicYeru = false;
 	}
