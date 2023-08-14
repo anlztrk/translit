@@ -258,8 +258,9 @@ function latcyr() {
 	car = car.replace(/Ḥ/g, "Х");
   if (tsDistinct == false) {
 	car = car.replace(/C/g, "Ч");
-  car = car.replace(/c/g, "ч");
+        car = car.replace(/c/g, "ч");
 	}
+  car = car.replace(/C/g, "Ц");
   if (jDistinct == false) {
 		car = car.replace(/J/g, "Ж");
 		car = car.replace(/j/g, "ж");
