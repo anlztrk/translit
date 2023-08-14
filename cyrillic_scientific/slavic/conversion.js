@@ -243,14 +243,15 @@ function latcyr() {
 		car = car.replace(/h/g, "х");
 	}
 	car = car.replace(/Ḥ/g, "Х");
-  car = car.replace(/C/g, "Ц");
+	car = car.replace(/C/g, "Ц");
 	car = car.replace(/Ž/g, "Ж");
 	car = car.replace(/C/g, "Ц");
 	car = car.replace(/Đ/g, "Җ");
 	car = car.replace(/Č/g, "Ч");
-	car = car.replace(/Ş/g, "Ш");
+	car = car.replace(/Š/g, "Ш");
 	car = car.replace(/Ś/g, "Щ");
 	car = car.replace(/I/g, "И");
+	car = car.replace(/Y/g, "Ы");
 	car = car.replace(/E/g, "Э");
 	car = car.replace(/È/g, "Э\u0300");
 	car = car.replace(/a/g, "а");
