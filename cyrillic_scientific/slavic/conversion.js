@@ -319,10 +319,10 @@ function latcyr() {
 
 	car = car.replace(/Е\u0300/g, "Э");
 	car = car.replace(/е\u0300/g, "э");
-	car = car.replace(/\u02ba/g, "ь");
-	car = car.replace(/(\u02b9|\u02bc)/g, "ъ");
-	car = car.replace(/(\p{M})ь/g, "$1Ь");
-	car = car.replace(/(\p{M})ъ/g, "$1Ъ");
+	car = car.replace(/\u02b9/g, "ь");
+	car = car.replace(/(\u02ba|\u02bc)/g, "ъ");
+	car = car.replace(/(\(p{M})ь/g, "$1Ь");
+	car = car.replace(/(\(p{M})ъ/g, "$1Ъ");
 	car = car.replace(/(\u0300|\u2060)/g, "");
 	car = car.normalize('NFC');
 	car = car.replace(/\u201c/g, "«");
