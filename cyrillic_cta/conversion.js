@@ -6,12 +6,12 @@ function cyrlat() {
 	var lang = "unknown";
 	var iotatedE = true;
 	var phonemicYeru = true;
-	var phonemicYer = false;
+	var phonemicYer = true;
 	var shortUIsVowel = false;
 	var phonemicShortU = false;
 	var phonemicKha = false;
-	var phonemicShcha = false;
-	var phonemicTse = false;
+	var phonemicShcha = true;
+	var phonemicTse = true;
 	var phonemicZhe = false;
 
 	if (/Ј|ј/.test(car_Orig) && /Й|й|Я|я|Ё|ё|Ю|ю/.test(car_Orig) == false) {
