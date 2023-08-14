@@ -1,5 +1,4 @@
-﻿//  copyright lexilogos.com
-var car;
+﻿var car;
 function geolat () {
 car = document.transcription.text1.value;
 car = car.replace(/ა/g, "a");
