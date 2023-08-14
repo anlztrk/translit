@@ -1,4 +1,3 @@
-﻿//  copyright lexilogos.com
 var car;
 var translit;
 function cyrlat () {
