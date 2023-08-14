@@ -1,6 +1,4 @@
-﻿
-//  copyright lexilogos.com
-var car;
+﻿var car;
 function cyrlat () {
 translit = document.transcription.text1.value;
 car = document.transcription.text1.value;
