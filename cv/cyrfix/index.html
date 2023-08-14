@@ -1,4 +1,4 @@
-﻿<html> 
+<html> 
 <head> 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tinos&family=Vollkorn&display=swap');
@@ -6,8 +6,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <!-- d --> 
 <meta NAME="ROBOTS" CONTENT="NOARCHIVE"> 
-<title>Chuvash Cyrillic - Latin converter</title> 
-<meta name="description" content="Chuvash Cyrillic - Latin converter" /> 
+<title>Chuvash text corrector</title> 
+<meta name="description" content="Chuvash text corrector" /> 
 <meta http-equiv="Content-Language" content="en, ru"> 
 <meta name="revisit-after" content="2 Days"> 
 <base target="_top"> 
@@ -17,32 +17,25 @@
 		textarea {
 			font-family: Vollkorn, Cambria, 'Times New Roman', serif;
 			font-size: 15px;
-			width: 500px;
-			height: 300px;
+			width: 1000px;
+			height: 450px;
 		}
 		</style> 
 </head> 
 <body> 
-	<h1>Chuvash Cyrillic - Latin converter</h1> 
+	<h1>Chuvash text corrector</h1>
 
-
-<div align="center"> Type or copy a text:<br> 
+<div align="center"> Type your text to have it corrected:<br> 
   <form name=transcription> 
 	<table width=90%><tr align=center> 
-		<td> that uses Latin homoglyphs here: <br> 
+		<td><br> 
 	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
 		  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
 	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
-		</td> 
-		<td> here you get it using proper characters:<br> 
-	<textarea name="text2" onKeyUp="latcyr()"></textarea> 
-			  <br> 
-		  <br> 
-	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
-	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
+		</td>
 	</td></tr></table> 
-</form>
+</form>  
 </body> 
 </html> 
