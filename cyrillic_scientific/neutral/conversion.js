@@ -201,7 +201,7 @@ function cyrlat() {
 function latcyr() {
 	car = document.transcription.text2.value;
 	var car_Orig = car;
-	var tseDistinct = true;
+	var tsDistinct = true;
 	var wDistinct = true;
 	var xDistinct = true;
 	var jDistinct = true;
@@ -256,11 +256,11 @@ function latcyr() {
 		car = car.replace(/h/g, "х");
 	}
 	car = car.replace(/Ḥ/g, "Х");
-  if (tseDistinct == false) {
+  if (tsDistinct == false) {
 	car = car.replace(/C/g, "Ч");
   car = car.replace(/c/g, "ч");
 	}
-  if (zheDistinct == false) {
+  if (jDistinct == false) {
 		car = car.replace(/J/g, "Ж");
 		car = car.replace(/j/g, "ж");
 	}
