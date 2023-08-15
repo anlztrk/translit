@@ -106,6 +106,8 @@ translit = translit.replace(/ЏЮ/g, "JU");
 translit = translit.replace(/ЖЮ/g, "JHU");
 translit = translit.replace(/ШЮ/g, "SHU");
 
+translit = translit.replace(/(Б|В|Г|Д|Џ|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|У|Ф|Х|Ц|Ч|Ш|Щ)ЫЙ/g, "$1IĬ");
+translit = translit.replace(/(Б|б|В|в|Г|г|Д|д|Џ|џ|Ж|ж|З|з|Й|й|К|к|Л|л|М|м|Н|н|П|п|Р|р|С|с|Т|т|У|у|Ф|ф|Х|х|Ц|ц|Ч|ч|Ш|ш|Щ|щ)ый/g, "$1iĭ");
 translit = translit.replace(/ЫЙ|Ый/g, "Y");
 translit = translit.replace(/ый/g, "y");
 translit = translit.replace(/ИЙ|Ий/g, "Y");
