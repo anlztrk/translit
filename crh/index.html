@@ -1,13 +1,47 @@
-<html>
-<head>
+<html> 
+<head> 
 <style>
-        iframe::-webkit-scrollbar {  
-        display: none;
-    }  
-    </style>
-<title>Crimean Tatar Latin input - Kazakh (bidirectional) Latin converter</title>
-</head>
-<body>
-<iframe src="http://tools.zenverse.net/string-replacer/?tobereplaced[]=%C3%B3&replacement[]=%C3%BDo&tobereplaced[]=%C3%A1&replacement[]=%C3%BDa&tobereplaced[]=u&replacement[]=w&tobereplaced[]=%C3%93&replacement[]=%C3%9Do&tobereplaced[]=%C3%81&replacement[]=%C3%9Da&tobereplaced[]=U&replacement[]=W&tobereplaced[]=q&replacement[]=k%C2%B4%C2%B4&tobereplaced[]=Q&replacement[]=K%C2%B4%C2%B4&tobereplaced[]=%C3%B1&replacement[]=n%C2%B4%C2%B4&tobereplaced[]=%C3%91&replacement[]=N%C2%B4%C2%B4&tobereplaced[]=%C4%9F&replacement[]=g%C2%B4%C2%B4&tobereplaced[]=%C4%9E&replacement[]=G%C2%B4%C2%B4&tobereplaced[]=c&replacement[]=dj&tobereplaced[]=C&replacement[]=Dj&tobereplaced[]=i&replacement[]=%C3%AF&tobereplaced[]=%C4%B0&replacement[]=%C3%8F&tobereplaced[]=%C3%BA&replacement[]=%C3%BDu&tobereplaced[]=%C3%9A&replacement[]=%C3%9Du&tobereplaced[]=h&replacement[]=x&tobereplaced[]=H&replacement[]=X&tobereplaced[]=%27&replacement[]=%C2%B4&tobereplaced[]=%22&replacement[]=%C2%B4%C2%B4" style="width: 100%; height: 100%" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0"></iframe>
-</body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Tinos&family=Vollkorn&display=swap');
+</style>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<!-- d --> 
+<meta NAME="ROBOTS" CONTENT="NOARCHIVE"> 
+<title>Crimean Tatar Cyrillic - Latin converter</title> 
+<meta name="description" content="Crimean Tatar Cyrillic - Latin converter" /> 
+<meta http-equiv="Content-Language" content="en, ru"> 
+<meta name="revisit-after" content="2 Days"> 
+<base target="_top"> 
+<!-- d --> 
+		<script type="text/javascript" src="conversion.js"></script>
+		<style type="text/css"> 
+		textarea {
+			font-family: Cambria, 'Times New Roman', serif;
+			font-size: 15px;
+			width: 500px;
+			height: 300px;
+		}
+		</style> 
+</head> 
+<body> 
+	<h1>Crimean Tatar Cyrillic - Latin converter</h1> 
+	<div align="center"> Type or copy a text:<br> 
+  <form name=transcription> 
+	<table width=90%><tr align=center> 
+		<td> in Crimean Tatar Cyrillic alphabet: <br> 
+	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
+		  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
+		</td> 
+		<td> here you get it in Latin alphabet:<br> 
+	<textarea name="text2" onKeyUp="latcyr()"></textarea> 
+			  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
+	</td></tr></table> 
+</form>
+</body> 
+</html> 
