@@ -34,6 +34,8 @@ car = document.transcription.text1.value;
 	car = car.replace(/I/g, "Y");
 	car = car.replace(/İ/g, "I");
 	car = car.replace(/ı/g, "y");
+	car = car.replace(/Ý/g, "Y");
+	car = car.replace(/ý/g, "y");
 	car = car.replace(/(G|K|L)(A|O)/g, "$1I$2");
 	car = car.replace(/(G|K|g|k)(a|o)/g, "$1i$2");
 	car = car.replace(/(C|Ç|F|H|X|J|Q|Ş)Ə/g, "$1A");
@@ -67,10 +69,6 @@ car = document.transcription.text1.value;
 	car = car.replace(/x/g, "kh");
 	car = car.replace(/Q/g, "G");
 	car = car.replace(/q/g, "g");
-	car = car.replace(/ö/g, "o");
-	car = car.replace(/Ö/g, "O");
-	car = car.replace(/ü/g, "u");
-	car = car.replace(/Ü/g, "U");
 document.transcription.text2.value=car;
 }
 function copy1()
