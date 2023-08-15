@@ -8,8 +8,7 @@ car = document.transcription.text1.value;
 	car = car.replace(/Y(İ|i)/g, "Ý$1");
 	car = car.replace(/yi/g, "ýi");
 	car = car.replace(/Y/g, "İ");
-	car = car.replace(/y/g, "i");
-	
+	car = car.replace(/y/g, "i");	
 	car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z)Iİ/g, "$1I");
 	car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z|b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|z)ıi/g, "$1ı");
 	car = car.replace(/Iİ/g, "İÝ");
@@ -18,23 +17,21 @@ car = document.transcription.text1.value;
 	car = car.replace(/İI/g, "Ýİ");
 	car = car.replace(/İı/g, "Ýi");
 	car = car.replace(/iı/g, "ýi");
-
 	car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Ý|Z)I/g, "$1İ\u2060");
 	car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Ý|Z|b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|ý|z)ı/g, "$1i\u2060");
 	car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Ý|Z)İ\u2060(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Ý|Z)/g, "$1I$2");
 	car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Ý|Z|b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|ý|z)i\u2060(b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|ý|z)/g, "$1ı$2");
 	car = car.replace(/(A|B|C|Ç|D|E|Ə|F|G|Ğ|H|X|I|İ|J|K|Q|L|M|N|O|Ö|P|R|S|Ş|T|U|Ü|V|Y|Ý|Z)(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Ý|Z)İ\u2060/g, "$1$2I");
 	car = car.replace(/(A|B|C|Ç|D|E|Ə|F|G|Ğ|H|X|I|İ|J|K|Q|L|M|N|O|Ö|P|R|S|Ş|T|U|Ü|V|Y|Ý|Z|a|b|c|ç|d|e|ə|f|g|ğ|h|x|ı|i|j|k|q|l|m|n|o|ö|p|r|s|ş|t|u|ü|v|y|ý|z)(b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|ý|z)i\u2060/g, "$1$2ı");
-
 	car = car.replace(/\u2060/g, "");
 	car = car.replace(/İ(A|E|Ə|O|Ö|U|Ü|a|e|ə|o|ö|u|ü)/g, "Y$1");
 	car = car.replace(/i(a|e|ə|o|ö|u|ü)/g, "y$1");
-
 	car = car.replace(/I/g, "Y");
 	car = car.replace(/İ/g, "I");
 	car = car.replace(/ı/g, "y");
 	car = car.replace(/Ý/g, "Y");
 	car = car.replace(/ý/g, "y");
+	
 	car = car.replace(/(B|D|Ğ|M|N|P|R|S|T|V|Y|Z)Ə/g, "$1E");
 	car = car.replace(/(B|D|Ğ|M|N|P|R|S|T|V|Y|Z|b|d|g|ğ|k|l|m|n|p|r|s|t|v|y|z)ə/g, "$1e");
 	car = car.replace(/Ə/g, "A");
