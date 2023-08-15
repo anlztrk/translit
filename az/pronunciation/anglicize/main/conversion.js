@@ -3,10 +3,10 @@ function cyrlat () {
 car = document.transcription.text1.value;
 	car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü)(I|İ)/g, "$1\u2019$2");
 	car = car.replace(/(A|E|Ə|I|İ|O|Ö|U|Ü|a|e|ə|ı|i|o|ö|u|ü)(ı|i)/g, "$1\u2019$2");
-	car = car.replace(/Y(İ|i)/g, "Ý$1");
-	car = car.replace(/yi/g, "ýi");
 	car = car.replace(/İY/g, "İÝ");
 	car = car.replace(/(İ|i)y/g, "$1ý");
+	car = car.replace(/Y(İ|i)/g, "Ý$1");
+	car = car.replace(/yi/g, "ýi");
 	car = car.replace(/Y/g, "İ");
 	car = car.replace(/y/g, "i");
 	
