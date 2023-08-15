@@ -1,4 +1,3 @@
-
 var car;
 
 function cyrlat () {
@@ -25,12 +24,19 @@ car = car.replace(/ИЮ/g, "ИЙ\u2060У");
 car = car.replace(/(И|и)ю/g, "$1й\u2060у");
 car = car.replace(/ИЯ/g, "ИЙ\u2060А");
 car = car.replace(/(И|и)я/g, "$1й\u2060а");
-car = car.replace(/Ё/g, "Ио");
-car = car.replace(/Ю/g, "Иу");
-car = car.replace(/Я/g, "Иа");
-car = car.replace(/ё/g, "ио");
-car = car.replace(/ю/g, "иу");
-car = car.replace(/я/g, "иа");
+car = car.replace(/Й(АОУ)/g, "Й\u2060$1");
+car = car.replace(/(Й|й)(а|о|у)/g, "$1\u2060$2");
+car = car.replace(/Ю/g, "Йу");
+car = car.replace(/Я/g, "Йа");
+car = car.replace(/Ё/g, "Йо");
+car = car.replace(/Ю/g, "Йу");
+car = car.replace(/Я/g, "Йа");
+car = car.replace(/Ё/g, "Йо");
+car = car.replace(/Ю/g, "Йу");
+car = car.replace(/Я/g, "Йа");
+car = car.replace(/ё/g, "йо");
+car = car.replace(/ю/g, "йу");
+car = car.replace(/я/g, "йа");
 car = car.replace(/Й/g, "И");
 car = car.replace(/й/g, "и");
 car = car.replace(/(Б|В|Г|Д|Џ|Ж|З|К|Л|М|Н|П|Р|С|Т|У|Ф|Х|Ц|Ч|Ш|Щ)ЫИ/g, "$1Ы");
