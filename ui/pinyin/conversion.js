@@ -1,9 +1,8 @@
 ﻿var car;
+var translit;
 function cyrlat () {
 car = document.transcription.text1.value;
-translit = document.transcription.text1.value;
-  
-  
+  car = car.replace(/(\u2019|\u02bc)/g, "");
   car = car.replace(/C(H|h)/g, "Q");
   car = car.replace(/Z(H|h)/g, "J");
   car = car.replace(/S(H|h)/g, "X");
@@ -26,8 +25,10 @@ translit = document.transcription.text1.value;
   car = car.replace(/V/g, "W");
   car = car.replace(/Ⱪ/g, "\u2060Q");
   
-  car = car.replace(/G(H|h)/g, "G'$1");
-  car = car.replace(/gh/g, "g'h");
+  car = car.replace(/N(Ƣ|ƣ)/g, "N\u0027$1");
+  car = car.replace(/nƣ/g, "n\u0027ƣ");
+  car = car.replace(/G(H|h)/g, "G\u0027$1");
+  car = car.replace(/gh/g, "g\u0027h");
   
   car = car.replace(/c/g, "s");
   car = car.replace(/C/g, "S");
@@ -43,11 +44,11 @@ translit = document.transcription.text1.value;
   car = car.replace(/\u2060ch/g, "q");
   car = car.replace(/\u2060S(H|h)/g, "X");
   car = car.replace(/\u2060sh/g, "x");
-  document.transcription.text1.value=translit;
   document.transcription.text2.value=car;
 }
 function latcyr () {
 car = document.transcription.text2.value;
+translit = document.transcription.text2.value;
   translit = translit.replace(/é/g, "ë");
   translit = translit.replace(/É/g, "Ë");
   car = car.replace(/G(H|h)/g, "Ƣ");
@@ -58,8 +59,10 @@ car = document.transcription.text2.value;
   car = car.replace(/ch/g, "\u2060q");
   car = car.replace(/sh/g, "\u2060x");
   car = car.replace(/zh/g, "ⱬ");
-  car = car.replace(/G'(H|h)/g, "G$1");
-  car = car.replace(/g'h/g, "gh");
+  car = car.replace(/N\u0027(Ƣ|ƣ)/g, "N$1");
+  car = car.replace(/n\u0027ƣ/g, "nƣ");
+  car = car.replace(/G\u0027(H|h)/g, "G$1");
+  car = car.replace(/g\u0027h/g, "gh");
   car = car.replace(/e/g, "ə");
   car = car.replace(/(é|ë)/g, "e");
   car = car.replace(/ö/g, "ɵ");
@@ -76,6 +79,10 @@ car = document.transcription.text2.value;
   car = car.replace(/\u2060Ⱪ/g, "Q");
   car = car.replace(/X/g, "H");
   car = car.replace(/\u2060H/g, "X");
+  
+  car = car.replace(/(A|E|Ə|I|O|Ɵ|U|Ü)(A|E|Ə|I|O|Ɵ|U|Ü|a|e|ə|i|o|ɵ|u|ü)/g, "$1\u02bc$2");
+  car = car.replace(/(a|e|ə|i|o|ɵ|u|ü)(a|e|ə|i|o|ɵ|u|ü)/g, "$1\u02bc$2");
+  document.transcription.text2.value=translit;
   document.transcription.text1.value=car;
 }
 function copy1()
