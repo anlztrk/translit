@@ -96,7 +96,7 @@ car = car.replace(/՛/g, "");
 document.transcription.text2.value=car;
 }
 function latcyr () {
-car = document.transcription.text1.value;
+car = document.transcription.text2.value;
 car = car.replace(/(A|Â|E|I|İ|Î|O|Ö|U|Û|Ü)Y/g, "$1Ẏ");
 car = car.replace(/(A|Â|E|I|İ|Î|O|Ö|U|Û|Ü|a|â|e|ı|i|î|o|ö|u|û|ü)y/g, "$1ẏ");
 car = car.replace(/Ẏ(A|Â|E|I|İ|Î|O|Ö|U|Û|Ü|a|â|e|ı|i|î|o|ö|u|û|ü)/g, "Y$1");
@@ -192,7 +192,7 @@ car = car.replace(/Ẏ/g, "Յ");
 car = car.replace(/ẏ/g, "յ");
 car = car.replace(/Z/g, "Զ");
 car = car.replace(/z/g, "զ"); 
-document.transcription.text2.value=car;
+document.transcription.text1.value=car;
 }
 function copy1()
 { textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
