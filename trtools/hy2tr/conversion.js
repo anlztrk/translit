@@ -104,16 +104,16 @@ car = car.replace(/(E|İ|Ö|Ü|e|i|ö|ü)ğ(a|ı|o|u)/g, "$1g$2");
 car = car.replace(/Ġ/g, "G");
 car = car.replace(/ġ/g, "g");
 
-car = car.replace(/:/g, "։");
-car = car.replace(/՝/g, ";");
-car = car.replace(/`/g, ";");
-car = car.replace(/․/g, ":");
-car = car.replace(/։/g, ".");
-car = car.replace(/՜/g, "");
-car = car.replace(/՞/g, "");
-car = car.replace(/֊/g, "-");
-car = car.replace(/՚/g, "’");
-car = car.replace(/՛/g, "");
+car = car.replace(/\u055d/g, "\u003b");
+car = car.replace(/\u0060/g, "\u003b");
+car = car.replace(/\u2024/g, "\u003a");
+car = car.replace(/\u0589/g, "\u002e");
+car = car.replace(/\u003a/g, "\u0589");
+car = car.replace(/\u055c/g, "");
+car = car.replace(/\u055e/g, "");
+car = car.replace(/\u058a/g, "\u002d");
+car = car.replace(/\u055a/g, "\u2019");
+car = car.replace(/\u055b/g, "");
 document.transcription.text2.value=car;
 }
 function latcyr () {
@@ -223,6 +223,11 @@ car = car.replace(/Ẏ/g, "Յ");
 car = car.replace(/ẏ/g, "յ");
 car = car.replace(/Z/g, "Զ");
 car = car.replace(/z/g, "զ"); 
+
+car = car.replace(/\u002e/g, "\u0589");
+car = car.replace(/\u003a/g, "\u2024");
+car = car.replace(/\u003b/g, "\u055d");
+car = car.replace(/\u002d/g, "\u058a");
 document.transcription.text1.value=car;
 }
 function copy1()
