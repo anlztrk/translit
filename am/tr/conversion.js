@@ -120,10 +120,10 @@ car = car.replace(/(A|I|O|U|a|ı|o|u)ğ/g, "$1ġ");
 car = car.replace(/(E|İ|Ö|Ü)Ğ/g, "$1G");
 car = car.replace(/(E|İ|Ö|Ü|e|i|ö|ü)ğ/g, "$1g");
 
-car = car.replace(/(K|G)Â/g, "$YA");
-car = car.replace(/(K|G|k|g)â/g, "$ya");
-car = car.replace(/(K|G)Û/g, "$YU");
-car = car.replace(/(K|G|k|g)û/g, "$yu");
+car = car.replace(/(K|G)Â/g, "$1YA");
+car = car.replace(/(K|G|k|g)â/g, "$1ya");
+car = car.replace(/(K|G)Û/g, "$1YU");
+car = car.replace(/(K|G|k|g)û/g, "$1yu");
 
 car = car.replace(/Â/g, "A");
 car = car.replace(/â/g, "a");
