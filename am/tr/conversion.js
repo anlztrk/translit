@@ -146,6 +146,8 @@ car = car.replace(/Â/g, "A");
 car = car.replace(/â/g, "a");
 car = car.replace(/Î/g, "İẎ");
 car = car.replace(/î/g, "iẏ");
+car = car.replace(/Û/g, "U");
+car = car.replace(/û/g, "u");
 
 car = car.replace(/A/g, "Ա");
 car = car.replace(/a/g, "ա");
