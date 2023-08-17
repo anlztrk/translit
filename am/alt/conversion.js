@@ -1,6 +1,8 @@
 var car;
 function armlat () {
 car = document.transcription.text1.value;
+car = car.replace(/Ե(Ւ|ւ)/g, "Վ");
+car = car.replace(/եւ/g, "վ");
 car = car.replace(/(Տ|տ|Ճ|ճ|Պ|պ|Ծ|ծ|Կ|կ)(Հ|հ)/g ,"$1\u2019$2");
 car = car.replace(/(Դ|դ)(Զ|զ)/g, "$1\u2019$2");
 car = car.replace(/(Ր|ր)(Ր|ր)/g, "$1\u2019$2");  
