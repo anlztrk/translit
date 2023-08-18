@@ -104,16 +104,12 @@ car = car.replace(/(E|İ|Ö|Ü|e|i|ö|ü)ğ(a|ı|o|u)/g, "$1g$2");
 car = car.replace(/Ġ/g, "G");
 car = car.replace(/ġ/g, "g");
 
-car = car.replace(/\u055d/g, "\u003b");
-car = car.replace(/\u0060/g, "\u003b");
+car = car.replace(/\(u055b|\u055c|\u055e)/g, "");
+car = car.replace(/(\u055d|\u0060)/g, "\u003b");
+car = car.replace(/(\u003a|\u0589)/g, "\u002e");
 car = car.replace(/\u2024/g, "\u003a");
-car = car.replace(/\u0589/g, "\u002e");
-car = car.replace(/\u003a/g, "\u0589");
-car = car.replace(/\u055c/g, "");
-car = car.replace(/\u055e/g, "");
 car = car.replace(/\u058a/g, "\u002d");
 car = car.replace(/\u055a/g, "\u2019");
-car = car.replace(/\u055b/g, "");
 document.transcription.text2.value=car;
 }
 function latcyr () {
