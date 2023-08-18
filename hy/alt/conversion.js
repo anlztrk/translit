@@ -89,16 +89,12 @@ car = car.replace(/ք/g, "kh"); //kʰ/
 car = car.replace(/և/g, "ew");
 car = car.replace(/օ/g, "ô");
 car = car.replace(/ֆ/g, "f");
-car = car.replace(/:/g, "։");
-car = car.replace(/՝/g, ";");
-car = car.replace(/`/g, ";");
-car = car.replace(/․/g, ":");
-car = car.replace(/։/g, ".");
-car = car.replace(/՜/g, "");
-car = car.replace(/՞/g, "");
-car = car.replace(/֊/g, "-");
-car = car.replace(/՚/g, "’");
-car = car.replace(/՛/g, "");
+car = car.replace(/\(u055b|\u055c|\u055e)/g, "");
+car = car.replace(/(\u055d|\u0060)/g, "\u003b");
+car = car.replace(/(\u003a|\u0589)/g, "\u002e");
+car = car.replace(/\u2024/g, "\u003a");
+car = car.replace(/\u058a/g, "\u002d");
+car = car.replace(/\u055a/g, "\u2019");
 document.transcription.text2.value=car;
 }
 function copy1()
