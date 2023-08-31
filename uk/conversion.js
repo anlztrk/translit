@@ -26,10 +26,10 @@ car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|
 car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ьо/g, "$1io");
 car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ьи/g, "$1iy");
 
-car = car.replace(/Д(Ь|ь)/g, "Ď");
-car = car.replace(/дь/g, "ď");
-car = car.replace(/Т(Ь|ь)/g, "Ť");
-car = car.replace(/ть/g, "ť");
+car = car.replace(/Д(Ь|ь)/g, "Ḑ");
+car = car.replace(/дь/g, "ḑ");
+car = car.replace(/Т(Ь|ь)/g, "Ț");
+car = car.replace(/ть/g, "ț");
 car = car.replace(/(Ь|ь)/g, "\u0301");
   
 car = car.replace(/а/g, "a");
