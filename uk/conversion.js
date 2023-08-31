@@ -3,6 +3,8 @@ var car;
 
 function cyrlat () {
 car = document.transcription.text1.value;
+car = car.normalize('NFC');
+  
 car = car.replace(/ЛЄ/g, "ЉЕ");
 car = car.replace(/ЛЮ/g, "ЉУ");
 car = car.replace(/ЛЯ/g, "ЉА");
