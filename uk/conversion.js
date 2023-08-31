@@ -14,7 +14,8 @@ car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|
 car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)я/g, "$1ia");
 car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ьо/g, "$1io");
 car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ьи/g, "$1iy");
-
+car = car.replace(/(Ь|ь)/g, "\u0301");
+  
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
 car = car.replace(/в/g, "v");
@@ -48,7 +49,6 @@ car = car.replace(/ш/g, "sz");
 car = car.replace(/щ/g, "szcz");
 car = car.replace(/ю/g, "ju");
 car = car.replace(/я/g, "ja");
-car = car.replace(/ь/g, "\u0301");
 
 car = car.replace(/А/g, "A");
 car = car.replace(/Б/g, "B");
