@@ -8,6 +8,7 @@ car = car.normalize('NFC');
 car = car.replace(/ЛЄ/g, "ЉЕ");
 car = car.replace(/ЛЮ/g, "ЉУ");
 car = car.replace(/ЛЯ/g, "ЉА");
+car = car.replace(/Л(І|і)/g, "Љ$1");
 car = car.replace(/Л(Ь|ь)/g, "Љ");
 car = car.replace(/Лє/g, "Ље");
 car = car.replace(/Лю/g, "Љу");
@@ -15,6 +16,7 @@ car = car.replace(/Ля/g, "Ља");
 car = car.replace(/лє/g, "ље");
 car = car.replace(/лю/g, "љу");
 car = car.replace(/ля/g, "ља");
+car = car.replace(/лі/g, "љі");
 car = car.replace(/ль/g, "љ");
 
 car = car.replace(/(Б|В|Г|Ґ|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Є/g, "$1IE");
