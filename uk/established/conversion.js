@@ -3,6 +3,8 @@ var car;
 
 function cyrlat () {
 car = document.transcription.text1.value;
+car = car.normalize('NFC');
+
 car = car.replace(/(К|к)(Г|г)/g, "$1ъ$2");
 car = car.replace(/ʼ/g, "ъ");
 car = car.replace(/’/g, "ъ");
@@ -42,7 +44,7 @@ car = car.replace(/с/g, "s");
 car = car.replace(/т/g, "t");
 car = car.replace(/у/g, "u");
 car = car.replace(/ф/g, "f");
-car = car.replace(/х/g, "ch");
+car = car.replace(/х/g, "kh");
 car = car.replace(/ц/g, "c");
 car = car.replace(/ч/g, "č");
 car = car.replace(/ш/g, "š");
@@ -78,7 +80,7 @@ car = car.replace(/С/g, "S");
 car = car.replace(/Т/g, "T");
 car = car.replace(/У/g, "U");
 car = car.replace(/Ф/g, "F");
-car = car.replace(/Х/g, "Ch");
+car = car.replace(/Х/g, "Kh");
 car = car.replace(/Ц/g, "C");
 car = car.replace(/Ч/g, "Č");
 car = car.replace(/Ш/g, "Š");
