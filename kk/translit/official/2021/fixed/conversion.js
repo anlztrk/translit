@@ -16,7 +16,9 @@ car = document.transcription.text1.value;
   car = car.replace(/Ю/g, "Йу");  
   
   car = car.replace(/(А|Е|І|О|Ы|Э|Ә|Ө|Ү|Ұ|а|е|і|о|ы|э|ә|ө|ү|ұ)у/g, "$1ў");
+  car = car.replace(/у(а|е|і|о|ы|э|ә|ө|ү|ұ)/g, "ў$1");
   car = car.replace(/(А|Е|І|О|Ы|Э|Ә|Ө|Ү|Ұ)У/g, "$1Ў");
+  car = car.replace(/У(А|Е|І|О|Ы|Э|Ә|Ө|Ү|Ұ|а|е|і|о|ы|э|ә|ө|ү|ұ)/g, "Ў$1");
   
   car = car.replace(/а/g, "a");
   car = car.replace(/ә/g, "ä");
@@ -43,6 +45,7 @@ car = document.transcription.text1.value;
   car = car.replace(/с/g, "s");
   car = car.replace(/т/g, "t");
   car = car.replace(/у/g, "ū");
+  car = car.replace(/ў/g, "w");
   car = car.replace(/ұ/g, "u");
   car = car.replace(/ү/g, "ü");
   car = car.replace(/ф/g, "f");
@@ -82,6 +85,7 @@ car = document.transcription.text1.value;
   car = car.replace(/С/g, "S");
   car = car.replace(/Т/g, "T");
   car = car.replace(/У/g, "Ū");
+  car = car.replace(/Ў/g, "W");
   car = car.replace(/Ұ/g, "U");
   car = car.replace(/Ү/g, "Ü");
   car = car.replace(/Ф/g, "F");
