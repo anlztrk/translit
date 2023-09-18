@@ -1,16 +1,1 @@
-H. Şükür
-Ümit D.
-Okan
-Emre
-Hasan Şaş
-Popescu
-Suat
-Ergün
-Taffarel
-Capone
-Marcio
-Hagi
-Tugay
-Arif
-Bülent
-Mehmet
+http://loca-tool-env.eba-dgcu7zyq.us-east-1.elasticbeanstalk.com/projects/cb4aaf20-13dc-4af5-ba09-74a2b3609dea/translations
