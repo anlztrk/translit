@@ -1,0 +1,35 @@
+Arma çapı;;15
+Arma dikey konumu;;2
+Arma yatay konumu;;9
+;;
+Arma yarıçapı;7,5;7,5
+Merkez dikey konumu;9,5;9,5
+Merkez yatay konumu;16,5;16,5
+;;
+Dış çizgi çapı;14,28571429;14,29
+Dış çizgi yarıçapı;7,142857143;7,14
+Dış çizgi dikey konumu;2,357142857;2,36
+Dış çizgi yatay konumu;9,357142857;9,36
+;;
+Elmas kenarı;0,75;0,75
+Elmas dikey konumu;9,125;9,13
+Elmas 1 yatay konumu;9,875;9,88
+Elmas 2 yatay konumu;22,375;22,38
+;;
+;;
+Metin kutusu 1 kenarı;11,9047619;11,9
+Metin kutusu 1 dikey konumu;3,547619048;3,55
+Metin kutusu 1 yatay konumu;10,54761905;10,55
+;;
+Metin kutusu 2 kenarı;13,0952381;13,1
+Metin kutusu 2 dikey konumu;2,952380952;2,95
+Metin kutusu 2 yatay konumu;9,952380952;9,95
+;;
+İç çizgi çapı;10,71428571;10,71
+İç çizgi yarıçapı;5,357142857;5,36
+İç çizgi dikey konumu;4,142857143;4,14
+İç çizgi yatay konumu;11,14285714;11,14
+;;
+Ay-yıldız genişliği;8,035714286;8,04
+Ay-yıldız dikey konumu;3,645856585;3,65
+Ay-yıldız yatay konumu;12,48214286;12,48
