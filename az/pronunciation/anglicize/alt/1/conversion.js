@@ -45,7 +45,7 @@ car = car.replace(/ş/g, "sh");
 car = car.replace(/q/g, "g");
 car = car.replace(/ö/g, "o");
 car = car.replace(/ü/g, "u");
-document.transcription.text1.value=car;
+document.transcription.text2.value=car;
 }
 function copy1()
 { textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
