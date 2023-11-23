@@ -21,8 +21,8 @@ car = car.replace(/ь/g, "i");
 car = car.replace(/(G|K)I/g, "$1İ");
 car = car.replace(/(G|K|g|k)ı/g, "$1i");
 
-car = car.replace(/(G|K)(A|O|U)/g, "$1Y$2");
-car = car.replace(/(G|K|g|k)(a|o|u)/g, "$1y$2");
+car = car.replace(/G(A|O|U)/g, "Y$1");
+car = car.replace(/(G|g)(a|o|u)/g, "$1y$2");
 
 car = car.replace(/Ə/g, "A");
 car = car.replace(/J/g, "Jh");
