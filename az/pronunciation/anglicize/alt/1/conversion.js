@@ -9,20 +9,26 @@ car = car.replace(/YI/g, "Yİ");
 car = car.replace(/(B|D|G|Ğ|K|L|M|N|P|R|S|T|V|Y|Z)Ə/g, "$1E");
 car = car.replace(/(B|D|G|Ğ|K|L|M|N|P|R|S|T|V|Y|Z|b|d|g|ğ|k|l|m|n|p|r|s|t|v|y|z)ə/g, "$1e");
 
-car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z)I/g, "$1Ь");
-car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z)(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z)Ь/g, "$1$2I");
-car = car.replace(/Ь(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Z)/g, "I$1");
-car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z|b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|z)ı/g, "$1ь");
-car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z|b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|z)(b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|z)ь/g, "$1$2ı");
-car = car.replace(/ь(b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|z)/g, "ı$1");
-car = car.replace(/Ь/g, "İ");
-car = car.replace(/ь/g, "i");
+car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z)I/g, "$1\u200b");
+car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z)(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z)\u200b/g, "$1$2I");
+car = car.replace(/\u200b(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Z)/g, "I$1");
+car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z|b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|z)ı/g, "$1\u200c");
+car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|X|J|K|Q|L|M|N|P|R|S|Ş|T|V|Y|Z|b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|z)(b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|y|z)\u200c/g, "$1$2ı");
+car = car.replace(/\u200c(b|c|ç|d|f|g|ğ|h|x|j|k|q|l|m|n|p|r|s|ş|t|v|z)/g, "ı$1");
+car = car.replace(/\u200b/g, "İ");
+car = car.replace(/\u200c/g, "i");
 
 car = car.replace(/(G|K)I/g, "$1İ");
 car = car.replace(/(G|K|g|k)ı/g, "$1i");
 
 car = car.replace(/G(A|O|U)/g, "Y$1");
 car = car.replace(/(G|g)(a|o|u)/g, "$1y$2");
+
+car = car.replace(/Y(A|E|Ə|O|Ö|U|Ü|a|e|ə|o|ö|u|ü)/g, "\u200cY$1");
+car = car.replace(/y(a|e|ə|o|ö|u|ü)/g, "\u200cy$1");
+car = car.replace(/(A|E|Ə|O|Ö|U|Ü)Y/g, "$1İ");
+car = car.replace(/(A|E|Ə|O|Ö|U|Ü|a|e|ə|o|ö|u|ü)y/g, "$1i");
+car = car.replace(/\u200c/g, "");
 
 car = car.replace(/Ə/g, "A");
 car = car.replace(/J/g, "Jh");
