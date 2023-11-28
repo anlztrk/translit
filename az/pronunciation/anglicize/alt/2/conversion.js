@@ -28,6 +28,8 @@ car = car.replace(/Y(A|E|Ə|I|İ|O|Ö|U|Ü|a|e|ə|ı|i|o|ö|u|ü)/g, "\u200cY$1"
 car = car.replace(/y(a|e|ə|ı|i|o|ö|u|ü)/g, "\u200cy$1");
 car = car.replace(/(A|O|Ö|U|Ü)Y/g, "$1İ");
 car = car.replace(/(A|O|Ö|U|Ü|a|o|ö|u|ü)y/g, "$1i");
+car = car.replace(/E(Y|y)/g, "A$1");
+car = car.replace(/ey/g, "ay");
 car = car.replace(/\u200c/g, "");
 
 car = car.replace(/Ə/g, "A");
