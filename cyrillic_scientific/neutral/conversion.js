@@ -133,8 +133,8 @@ function cyrlat() {
 	car = car.replace(/(Ү|Ӱ)/g, "Ü");
 	car = car.replace(/Ф/g, "F");
 	if (phonemicKha == true) {
-		car = car.replace(/Х/g, "Ḥ");
-		car = car.replace(/х/g, "ḥ");
+		car = car.replace(/Х/g, "Ȟ");
+		car = car.replace(/х/g, "ȟ");
 	} else {
 		car = car.replace(/Х/g, "H");
 		car = car.replace(/х/g, "h");
@@ -208,7 +208,7 @@ function latcyr() {
 	if (/V|v/.test(car_Orig) && /W|w/.test(car_Orig)) {
 		wDistinct = true;
 	}
-	if (/Ḥ|ḥ/.test(car_Orig)) {
+	if (/Ȟ|ȟ/.test(car_Orig)) {
 		xDistinct = true;
 	}
 	if (/Ž|ž/.test(car_Orig)) {
@@ -255,7 +255,7 @@ function latcyr() {
 		car = car.replace(/H/g, "Х");
 		car = car.replace(/h/g, "х");
 	}
-	car = car.replace(/Ḥ/g, "Х");
+	car = car.replace(/Ȟ/g, "Х");
   if (tsDistinct == false) {
 	car = car.replace(/C/g, "Ч");
         car = car.replace(/c/g, "ч");
@@ -302,7 +302,7 @@ function latcyr() {
 	car = car.replace(/w/g, "в");
 	car = car.replace(/ü/g, "ү");
 	car = car.replace(/f/g, "ф");
-	car = car.replace(/ḥ/g, "х");
+	car = car.replace(/ȟ/g, "х");
 	car = car.replace(/c/g, "ц");
 	car = car.replace(/j/g, "җ");
 	car = car.replace(/č/g, "ч");
