@@ -2,16 +2,14 @@
 
 function cyrlat () {
 car = document.transcription.text1.value;
-
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)(Э|э)/g, "$1$2\u0300");
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)Е/g, "$1Э");
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)е/g, "$1э");
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)(Э|э)/g, "$1$2\u0300");
+car = car.replace(/(б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)э/g, "$1э\u0300");
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)Е/g, "$1Э");
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)е/g, "$1э");
 car = car.replace(/(Э|э)\u0300(Э|э)/g, "$1$2");
 
 car = car.replace(/Й(А|а)/g, "Й$1\u0300");
 car = car.replace(/йа/g, "йа\u0300");
-car = car.replace(/Й(Э|э)/g, "Й$1\u0300");
-car = car.replace(/йэ/g, "йе\u0300");
 car = car.replace(/Й(О|о)/g, "Й$1\u0300");
 car = car.replace(/йо/g, "йо\u0300");
 car = car.replace(/Й(У|у)/g, "Й$1\u0300");
@@ -48,7 +46,7 @@ car = car.replace(/Ғ/g, "Ǧ");
 car = car.replace(/Д/g, "D");
 car = car.replace(/Ж/g, "Ž");
 car = car.replace(/З/g, "Z");
-car = car.replace(/И/g, "I");
+car = car.replace(/(И|Ы)/g, "I");
 car = car.replace(/Ӣ/g, "Ī");
 car = car.replace(/Й/g, "Y");
 car = car.replace(/К/g, "K");
@@ -70,6 +68,8 @@ car = car.replace(/Ч/g, "C");
 car = car.replace(/Ҷ/g, "J");
 car = car.replace(/Ш/g, "Š");
 car = car.replace(/Ъ/g, "\u2019");
+car = car.replace(/Ы/g, "И");
+car = car.replace(/Ь/g, "");
 car = car.replace(/Э/g, "E");
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
@@ -79,7 +79,7 @@ car = car.replace(/ғ/g, "ǧ");
 car = car.replace(/д/g, "d");
 car = car.replace(/ж/g, "ž");
 car = car.replace(/з/g, "z");
-car = car.replace(/и/g, "i");
+car = car.replace(/(и|ы)/g, "i");
 car = car.replace(/ӣ/g, "ī");
 car = car.replace(/й/g, "y");
 car = car.replace(/к/g, "k");
@@ -101,14 +101,16 @@ car = car.replace(/ч/g, "c");
 car = car.replace(/ҷ/g, "j");
 car = car.replace(/ш/g, "š");
 car = car.replace(/ъ/g, "\u2019");
+car = car.replace(/ь/g, "");
 car = car.replace(/э/g, "e");
+car = car.normalize('NFC');
 document.transcription.text2.value = car;
 }
 
 function latcyr () {
 car = document.transcription.text2.value;
 car = car.replace(/(A|E|I|Ī|O|U|Ū|Y)Y(I|Ī)/g, "$1$2");
-car = car.replace(/(A|E|I|Ī|O|U|Ū|Y|a|e|i|ī|o|u|ū|y)y(i|ī)/g, "$1$2");
+car = car.replace(/(A|E|I|Ī|O|U|Ū|Y|a|e|i|ī|o|u|ū|y)y(i|ū)/g, "$1$2");
 
 car = car.replace(/Y(A|a)/g, "Я");
 car = car.replace(/ya/g, "я");
@@ -182,8 +184,10 @@ car = car.replace(/š/g, "ш");
 car = car.replace(/\u2019/g, "ъ");
 car = car.replace(/e/g, "э");
 
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)Е/g, "$1ЙЕ");
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)е/g, "$1йе");
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)Е/g, "$1ЙЕ");
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)е/g, "$1йе");
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)Э/g, "$1Е");
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)э/g, "$1е");
 document.transcription.text1.value=car;
 }
 
