@@ -1,16 +1,28 @@
-﻿var car;
+var car;
 
 function cyrlat () {
 car = document.transcription.text1.value;
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)(Э|э)/g, "$1$2\u0300");
+car = car.replace(/Ц/g, "С");
+car = car.replace(/ц/g, "с");
+car = car.replace(/Щ/g, "Ш");
+car = car.replace(/щ/g, "ш");
+car = car.replace(/Ы/g, "И");
+car = car.replace(/ы/g, "и");
+
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)(Э|э)/g, "$1$2\u0300");
+car = car.replace(/(б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)э/g, "$1э\u0300");
 car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)Е/g, "$1Э");
 car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)е/g, "$1э");
 car = car.replace(/(Э|э)\u0300(Э|э)/g, "$1$2");
+car = car.replace(/(Ь|ь)/g, "");
 
 car = car.replace(/Й(А|а)/g, "Й$1\u0300");
 car = car.replace(/йа/g, "йа\u0300");
-car = car.replace(/Й(Э|э)/g, "Й$1\u0300");
-car = car.replace(/йэ/g, "йе\u0300");
+car = car.replace(/ЙЕ/g, "Й\u0300Э");
+car = car.replace(/Йе/g, "Й\u0300э");
+car = car.replace(/йе/g, "й\u0300э");
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)(Й|й)\u0300/g, "$1$2");
+car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)й\u0300/g, "$1й");
 car = car.replace(/Й(О|о)/g, "Й$1\u0300");
 car = car.replace(/йо/g, "йо\u0300");
 car = car.replace(/Й(У|у)/g, "Й$1\u0300");
@@ -68,9 +80,7 @@ car = car.replace(/Ҳ/g, "H");
 car = car.replace(/Ч/g, "Ç");
 car = car.replace(/Ҷ/g, "C");
 car = car.replace(/Ш/g, "Ş");
-car = car.replace(/Ъ/g, "\u2019");
-car = car.replace(/Ы/g, "И");
-car = car.replace(/Ь/g, "");
+car = car.replace(/(Ъ|ъ)/g, "\u2019");
 car = car.replace(/Э/g, "E");
 car = car.replace(/а/g, "a");
 car = car.replace(/б/g, "b");
@@ -101,37 +111,50 @@ car = car.replace(/ҳ/g, "h");
 car = car.replace(/ч/g, "ç");
 car = car.replace(/ҷ/g, "c");
 car = car.replace(/ш/g, "ş");
-car = car.replace(/ъ/g, "\u2019");
-car = car.replace(/ы/g, "и");
-car = car.replace(/ь/g, "");
 car = car.replace(/э/g, "e");
+car = car.normalize('NFC');
 document.transcription.text2.value = car;
 }
 
 function latcyr () {
 car = document.transcription.text2.value;
-car = car.replace(/(A|E|I|Î|O|U|Û|Y)Y(I|Î)/g, "$1$2");
-car = car.replace(/(A|E|I|Î|O|U|Û|Y|a|e|i|î|o|u|û|y)y(i|î)/g, "$1$2");
+
+car = car.replace(/(A|E|I|Ī|O|U|Ū|Y)Y(I|Ī)/g, "$1$2");
+car = car.replace(/(A|E|I|Ī|O|U|Ū|Y|a|e|i|ī|o|u|ū|y)y(i|ū)/g, "$1$2");
 
 car = car.replace(/Y(A|a)/g, "Я");
 car = car.replace(/ya/g, "я");
 car = car.replace(/Y(E|e)/g, "Е");
 car = car.replace(/ye/g, "е");
+car = car.replace(/(B|C|Ç|D|F|G|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Ẍ|Y|Z)(Е|е)/g, "$1ЙЕ");
+car = car.replace(/(B|C|Ç|D|F|G|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Ẍ|Y|Z|b|c|ç|d|f|g|ğ|h|j|k|l|m|n|p|q|r|s|ş|t|v|y|x|ẍ|y|z)е/g, "$1йе");
+car = car.replace(/(B|C|Ç|D|F|G|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Ẍ|Y|Z)(E|e)/g, "$1Е");
+car = car.replace(/(B|C|Ç|D|F|G|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Ẍ|Y|Z|b|c|ç|d|f|g|ğ|h|j|k|l|m|n|p|q|r|s|ş|t|v|y|x|ẍ|y|z)e/g, "$1е");
 car = car.replace(/Y(O|o)/g, "Ё");
 car = car.replace(/yo/g, "ё");
 car = car.replace(/Y(U|u)/g, "Ю");
 car = car.replace(/yu/g, "ю");
 
+car = car.replace(/Ẍ/g, "Ғ");
+car = car.replace(/Î/g, "Ӣ");
+car = car.replace(/Û/g, "Ӯ");
+car = car.replace(/Ç/g, "Ч");
+car = car.replace(/Ş/g, "Ш");
+car = car.replace(/ẍ/g, "ғ");
+car = car.replace(/î/g, "ӣ");
+car = car.replace(/û/g, "ӯ");
+car = car.replace(/ç/g, "ч");
+car = car.replace(/ş/g, "ш");
+
+car = car.normalize('NFD');
 car = car.replace(/A/g, "А");
 car = car.replace(/B/g, "Б");
 car = car.replace(/V/g, "В");
 car = car.replace(/G/g, "Г");
-car = car.replace(/Ẍ/g, "Ғ");
 car = car.replace(/D/g, "Д");
-car = car.replace(/J/g, "Ж");
 car = car.replace(/Z/g, "З");
+car = car.replace(/J/g, "Ж");
 car = car.replace(/I/g, "И");
-car = car.replace(/Î/g, "Ӣ");
 car = car.replace(/Y/g, "Й");
 car = car.replace(/K/g, "К");
 car = car.replace(/Q/g, "Қ");
@@ -144,25 +167,19 @@ car = car.replace(/R/g, "Р");
 car = car.replace(/S/g, "С");
 car = car.replace(/T/g, "Т");
 car = car.replace(/U/g, "У");
-car = car.replace(/Û/g, "Ӯ");
+car = car.replace(/C/g, "Ҷ");
 car = car.replace(/F/g, "Ф");
 car = car.replace(/X/g, "Х");
 car = car.replace(/H/g, "Ҳ");
-car = car.replace(/Ç/g, "Ч");
-car = car.replace(/C/g, "Ҷ");
-car = car.replace(/Ş/g, "Ш");
-car = car.replace(/\u2019/g, "Ъ");
 car = car.replace(/E/g, "Э");
 car = car.replace(/a/g, "а");
 car = car.replace(/b/g, "б");
 car = car.replace(/v/g, "в");
 car = car.replace(/g/g, "г");
-car = car.replace(/ẍ/g, "ғ");
 car = car.replace(/d/g, "д");
-car = car.replace(/j/g, "ж");
 car = car.replace(/z/g, "з");
+car = car.replace(/j/g, "ж");
 car = car.replace(/i/g, "и");
-car = car.replace(/î/g, "ӣ");
 car = car.replace(/y/g, "й");
 car = car.replace(/k/g, "к");
 car = car.replace(/q/g, "қ");
@@ -175,20 +192,20 @@ car = car.replace(/r/g, "р");
 car = car.replace(/s/g, "с");
 car = car.replace(/t/g, "т");
 car = car.replace(/u/g, "у");
-car = car.replace(/û/g, "ӯ");
+car = car.replace(/c/g, "ҷ");
 car = car.replace(/f/g, "ф");
 car = car.replace(/x/g, "х");
 car = car.replace(/h/g, "ҳ");
-car = car.replace(/ç/g, "ч");
-car = car.replace(/c/g, "ҷ");
-car = car.replace(/ş/g, "ш");
-car = car.replace(/\u2019/g, "ъ");
 car = car.replace(/e/g, "э");
 
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)Е/g, "$1ЙЕ");
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)е/g, "$1йе");
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш)Э/g, "$1Е");
-car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|П|Р|С|Т|Ф|Х|Ҳ|Ч|Ҷ|Ш|б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|п|р|с|т|ф|х|ҳ|ч|ҷ|ш)э/g, "$1е");
+car = car.replace(/\u2019/g, "ъ");
+car = car.replace(/(\p{Uppercase})ъ/ug, "$1Ъ");
+car = car.replace(/Ъ(\p{Lowercase})/ug, "ъ$1");
+
+car = car.replace(/Й\u0300Э/g, "ЙЕ");
+car = car.replace(/(Й|й)\u0300э/g, "$1е");
+car = car.replace(/\u0300/g, "");
+car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
 
