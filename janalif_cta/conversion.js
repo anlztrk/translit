@@ -48,6 +48,7 @@ function latcyr() {
 	car = car.replace(/İ/g, "I");
 	car = car.replace(/ı/g, "ь");
 	car = car.replace(/ä/g, "ə");
+	car = car.replace(/b/g, "ʙ");
 	car = car.replace(/ç/g, "\u2060");
 	car = car.replace(/c/g, "ç");
 	car = car.replace(/\u2060/g, "c");

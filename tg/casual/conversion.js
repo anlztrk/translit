@@ -120,7 +120,7 @@ function latcyr () {
 car = document.transcription.text2.value;
 
 car = car.replace(/(A|E|I|Ī|O|U|Ū|Y)Y(I|Ī)/g, "$1$2");
-car = car.replace(/(A|E|I|Ī|O|U|Ū|Y|a|e|i|ī|o|u|ū|y)y(i|ū)/g, "$1$2");
+car = car.replace(/(A|E|I|Ī|O|U|Ū|Y|a|e|i|ī|o|u|ū|y)y(i|ī)/g, "$1$2");
 
 car = car.replace(/Y(A|a)/g, "Я");
 car = car.replace(/ya/g, "я");

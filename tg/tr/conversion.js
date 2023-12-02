@@ -119,16 +119,16 @@ document.transcription.text2.value = car;
 function latcyr () {
 car = document.transcription.text2.value;
 
-car = car.replace(/(A|E|I|Ī|O|U|Ū|Y)Y(I|Ī)/g, "$1$2");
-car = car.replace(/(A|E|I|Ī|O|U|Ū|Y|a|e|i|ī|o|u|ū|y)y(i|ū)/g, "$1$2");
+car = car.replace(/(A|E|I|Î|O|U|Û|Y)Y(I|Î)/g, "$1$2");
+car = car.replace(/(A|E|I|Î|O|U|Û|Y|a|e|i|î|o|u|û|y)y(i|î)/g, "$1$2");
 
 car = car.replace(/Y(A|a)/g, "Я");
 car = car.replace(/ya/g, "я");
 car = car.replace(/Y(E|e)/g, "Е");
 car = car.replace(/ye/g, "е");
-car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Y|Z)(Е|е)/g, "$1ЙЕ");
+car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Y|Z)Е/g, "$1ЙЕ");
 car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Y|Z|b|c|ç|d|f|g|ğ|h|j|k|l|m|n|p|q|r|s|ş|t|v|y|x|y|z)е/g, "$1йе");
-car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Y|Z)(E|e)/g, "$1Е");
+car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Y|Z)E/g, "$1Е");
 car = car.replace(/(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|P|Q|R|S|Ş|T|V|Y|X|Y|Z|b|c|ç|d|f|g|ğ|h|j|k|l|m|n|p|q|r|s|ş|t|v|y|x|y|z)e/g, "$1е");
 car = car.replace(/Y(O|o)/g, "Ё");
 car = car.replace(/yo/g, "ё");
