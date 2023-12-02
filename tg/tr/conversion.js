@@ -59,7 +59,7 @@ car = car.replace(/Ғ/g, "Ğ");
 car = car.replace(/Д/g, "D");
 car = car.replace(/Ж/g, "J");
 car = car.replace(/З/g, "Z");
-car = car.replace(/И/g, "I");
+car = car.replace(/И/g, "İ");
 car = car.replace(/Ӣ/g, "Î");
 car = car.replace(/Й/g, "Y");
 car = car.replace(/К/g, "K");
@@ -119,8 +119,8 @@ document.transcription.text2.value = car;
 function latcyr () {
 car = document.transcription.text2.value;
 
-car = car.replace(/(A|E|I|Î|O|U|Û|Y)Y(I|Î)/g, "$1$2");
-car = car.replace(/(A|E|I|Î|O|U|Û|Y|a|e|i|î|o|u|û|y)y(i|î)/g, "$1$2");
+car = car.replace(/(A|E|İ|Î|O|U|Û|Y)Y(İ|Î)/g, "$1$2");
+car = car.replace(/(A|E|İ|Î|O|U|Û|Y|a|e|i|î|o|u|û|y)y(i|î)/g, "$1$2");
 
 car = car.replace(/Y(A|a)/g, "Я");
 car = car.replace(/ya/g, "я");
