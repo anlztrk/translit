@@ -2,8 +2,13 @@ var car;
 function cyrlat () {
 car = document.transcription.text1.value;
 car = car.replace(/\u005bLatin alfabesi/g, "\u005bLatin harfleri\u007cLatin alfabesi");
-car = car.replace(/\u005bLatin Alfabesi/g, "\u005bLatin harfleri\u007cLatin alfabesi");
+car = car.replace(/\u005bLatin abecesi/g, "\u005bLatin harfleri\u007cLatin abecesi");
+car = car.replace(/\u005bLatin Alfabesi/g, "\u005bLatin harfleri\u007cLatin Alfabesi");
+car = car.replace(/\u005bLatin Abecesi/g, "\u005bLatin harfleri\u007cLatin Abecesi");
 car = car.replace(/Latin harfleri\u007cLatin alfabesi\u007c/g, "Latin harfleri\u007c");
+car = car.replace(/Latin harfleri\u007cLatin Alfabesi\u007c/g, "Latin harfleri\u007c");
+car = car.replace(/Latin harfleri\u007cLatin abecesi\u007c/g, "Latin harfleri\u007c");
+car = car.replace(/Latin harfleri\u007cLatin Abecesi\u007c/g, "Latin harfleri\u007c");
 car = car.replace(/\u005bLatin harfleri\u007cLatin harfleri\u005d/g, "\u005bLatin harfleri\u005d");
 document.transcription.text2.value=car;
 }
