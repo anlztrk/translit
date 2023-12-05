@@ -136,6 +136,9 @@ car = car.replace(/Ы/g, "Î");
 car = car.replace(/ы/g, "î");
 car = car.replace(/Э/g, "Ă");
 car = car.replace(/э/g, "ă");
+
+car = car.replace(/(A|Â|Ă|B|C|D|E|F|G|H|I|Î|J|K|L|M|N|O|P|R|S|Ș|T|Ț|U|V|X|Z)Î(A|Â|Ă|B|C|D|E|F|G|H|I|Î|J|K|L|M|N|O|P|R|S|Ș|T|Ț|U|V|X|Z)/g, "$1Â$2");
+car = car.replace(/(A|Â|Ă|B|C|D|E|F|G|H|I|Î|J|K|L|M|N|O|P|R|S|Ș|T|Ț|U|V|X|Z|a|â|ă|b|c|d|e|f|g|h|i|î|j|k|l|m|n|o|p|r|s|ș|t|ț|u|v|x|z)î(a|â|ă|b|c|d|e|f|g|h|i|î|j|k|l|m|n|o|p|r|s|ș|t|ț|u|v|x|z)/g, "$1â$2");
 document.transcription.text2.value=car;
 }
 function copy1()
