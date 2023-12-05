@@ -48,9 +48,9 @@ car = car.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
 car = car.replace(/Ю/g, "Йу");
 car = car.replace(/ю/g, "йу");
 
-car = car.replace(/(А|Э|И|Ӣ|О|У|Ӯ|а|э|и|ӣ|й|о|у|ӯ)й(и|ӣ)/g, "$1йй$2");
+car = car.replace(/(А|Э|И|Ӣ|О|У|Ӯ|а|э|и|ӣ|о|у|ӯ)й(и|ӣ)/g, "$1йй$2");
 car = car.replace(/(А|Э|И|Ӣ|О|У|Ӯ)Й(И|Ӣ)/g, "$1ЙЙ$2");
-car = car.replace(/(А|Э|И|Ӣ|О|У|Ӯ|а|э|и|ӣ|й|о|у|ӯ)(и|ӣ)/g, "$1й$2");
+car = car.replace(/(А|Э|И|Ӣ|О|У|Ӯ|а|э|и|ӣ|о|у|ӯ)(и|ӣ)/g, "$1й$2");
 car = car.replace(/(А|Э|И|Ӣ|О|У|Ӯ)(И|Ӣ)/g, "$1Й$2");
 
 car = car.replace(/А/g, "A");
