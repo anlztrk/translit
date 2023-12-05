@@ -2,6 +2,8 @@
 var car;
 function cyrlat () {
 car = document.transcription.text1.value;
+car = car.replace(/Д(Ж|ж)/g, "Ӂ");
+car = car.replace(/дж/g, "ӂ");
 car = car.replace(/Й(О|о)/g, "Ё");
 car = car.replace(/йо/g, "ё");
 
@@ -57,9 +59,9 @@ car = car.replace(/(Г|г)(е|и)/g, "$1х$2");
 car = car.replace(/К(Е|И)/g, "КХ$1");
 car = car.replace(/(К|к)(е|и)/g, "$1х$2");
 
-car = car.replace(/ӁA/g, "ГЕА");
-car = car.replace(/Ӂa/g, "Геа");
-car = car.replace(/ӂa/g, "геа");
+car = car.replace(/ӁА/g, "ГЕА");
+car = car.replace(/Ӂа/g, "Геа");
+car = car.replace(/ӂа/g, "геа");
 car = car.replace(/Ӂ(Е|И|е|и)/g, "Г$1");
 car = car.replace(/ӂ(е|и)/g, "г$1");
 car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ӂ/ug, "$1$2 ГИ");
@@ -68,9 +70,9 @@ car = car.replace(/Ӂ(\p{Uppercase})/ug, "ГИ$1");
 car = car.replace(/Ӂ/g, "Ги");
 car = car.replace(/ӂ/g, "ги");
 
-car = car.replace(/ЧA/g, "КЕА");
-car = car.replace(/Чa/g, "Кеа");
-car = car.replace(/чa/g, "кеа");
+car = car.replace(/ЧА/g, "КЕА");
+car = car.replace(/Ча/g, "Кеа");
+car = car.replace(/ча/g, "кеа");
 car = car.replace(/Ч(Е|И|е|и)/g, "К$1");
 car = car.replace(/ч(е|и)/g, "к$1");
 car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ч/ug, "$1$2 КИ");
