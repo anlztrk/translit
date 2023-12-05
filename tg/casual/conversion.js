@@ -2,6 +2,8 @@ var car;
 
 function cyrlat () {
 car = document.transcription.text1.value;
+car = car.replace(/(А|Е|Ё|И|Ӣ|О|У|Ӯ|Ы|Э|Ю|Я)Ц/g, "$1ТС");
+car = car.replace(/(А|Е|Ё|И|Ӣ|О|У|Ӯ|Ы|Э|Ю|Я|а|е|ё|и|ӣ|о|у|ӯ|ы|э|ю|я)ц/g, "$1тс");
 car = car.replace(/Ц/g, "С");
 car = car.replace(/ц/g, "с");
 car = car.replace(/Щ/g, "Ш");
