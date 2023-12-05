@@ -20,8 +20,9 @@ car = car.replace(/Ьё/g, "Ио");
 car = car.replace(/ьё/g, "ио");
 car = car.replace(/ИЁ/g, "ИО");
 car = car.replace(/(И|и)ё/g, "$1о");
-car = car.replace(/(А|Е|Ё|О|У|Ы|Э|Ю|Я)Ё/g, "$1ИО");
-car = car.replace(/(А|Е|Ё|О|У|Ы|Э|Ю|Я|а|е|ё|о|у|ы|э|ю|я)ё/g, "$1ио");
+car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ИО");
+car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ИО $1$2");
+car = car.replace(/Ё(\p{Uppercase})/ug, "ИО$1");
 car = car.replace(/Ё/g, "Ио");
 car = car.replace(/ё/g, "ио");
 
@@ -30,8 +31,9 @@ car = car.replace(/Ью/g, "Иу");
 car = car.replace(/ью/g, "иу");
 car = car.replace(/ИЮ/g, "ИУ");
 car = car.replace(/(И|и)ю/g, "$1у");
-car = car.replace(/(А|Е|Ё|О|У|Ы|Э|Ю|Я)Ю/g, "$1ИУ");
-car = car.replace(/(А|Е|Ё|О|У|Ы|Э|Ю|Я|а|е|ё|о|у|ы|э|ю|я)ю/g, "$1иу");
+car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ИУ");
+car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ИУ $1$2");
+car = car.replace(/Ю(\p{Uppercase})/ug, "ИУ$1");
 car = car.replace(/Ю/g, "Иу");
 car = car.replace(/ю/g, "иу");
 
