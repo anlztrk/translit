@@ -1,2 +1,11 @@
 63MS0094046
 INT2023000207458
+
+Cihaz adı	CB0651041
+Cihazın tam adı	CB0651041.vakifbank.intra
+İşlemci	11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz   1.50 GHz
+Takılı RAM	16,0 GB (kullanılabilir: 15,7 GB)
+Cihaz Kimliği	CF7CCB95-76A1-43DB-8EFA-B7A442922B7B
+Ürün Kimliği	00329-00000-00003-AA001
+Sistem türü	64 bit işletim sistemi, x64 tabanlı işlemci
+Kalem ve dokunma	Bu görüntü biriminde kalem girdisi veya dokunarak giriş yok
