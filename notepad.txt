@@ -1,6 +1,4 @@
-63MS0094046
-INT2023000207458
-
+Dell Latitude 5520
 Cihaz adı	CB0651041
 Cihazın tam adı	CB0651041.vakifbank.intra
 İşlemci	11th Gen Intel(R) Core(TM) i5-1145G7 @ 2.60GHz   1.50 GHz
