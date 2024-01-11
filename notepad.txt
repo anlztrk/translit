@@ -7,3 +7,5 @@ Cihaz Kimliği	CF7CCB95-76A1-43DB-8EFA-B7A442922B7B
 Ürün Kimliği	00329-00000-00003-AA001
 Sistem türü	64 bit işletim sistemi, x64 tabanlı işlemci
 Kalem ve dokunma	Bu görüntü biriminde kalem girdisi veya dokunarak giriş yok
+
+Parliamo di come tutto è iniziato: la storia della domesticazione dei gatti. Da quello che abbiamo dalle prove, pensiamo che i gatti abbiano iniziato la sua relazione unica con gli umani tra 10.000 e 12.000 anni fa nella Mezzaluna Fertile. È la regione geografica in cui si sono verificati i primi sviluppi della civiltà umana. Uno dei questi sviluppi è stata l'agricoltura. Gli umani abbandonarono il suo stile di vita nomade, si stabilirono in insediamenti e iniziarono a coltivare. Alla fine, immagazzinarono abbastanza grano per attirare i roditori. E ovviamente, inevitabilmente questa nuova fonte di cibo attirò i gatti selvatici del Medio Oritente.
