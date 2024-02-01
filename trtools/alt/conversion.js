@@ -1,5 +1,5 @@
 var car;
-function latcyr () {
+function cyrlat () {
 car = document.transcription.text2.value;
   car = car.replace(/i/g, "ï");
   car = car.replace(/ı/g, "i");
