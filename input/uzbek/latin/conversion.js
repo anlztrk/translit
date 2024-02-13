@@ -1,5 +1,4 @@
-﻿//  copyright lexilogos.com
-var car;
+﻿var car;
 function cyrlat () {
 car = document.transcription.text1.value;
   car = car.replace(/'/g, "ъ");
@@ -27,14 +26,16 @@ car = document.transcription.text1.value;
   car = car.replace(/՛/g, "ъ");
   car = car.replace(/ˋ/g, "ъ");
 
-  car = car.replace(/é/g, "ye");
-  car = car.replace(/É/g, "Ye");
-  car = car.replace(/á/g, "я");
-  car = car.replace(/Á/g, "Я");
+  car = car.replace(/ê/g, "ye");
+  car = car.replace(/Ê/g, "Ye");
+  car = car.replace(/â/g, "я");
+  car = car.replace(/Â/g, "Я");
   car = car.replace(/ë/g, "ё");
   car = car.replace(/Ë/g, "Ё");
-  car = car.replace(/ú/g, "ю");
-  car = car.replace(/Ú/g, "Ю");
+  car = car.replace(/ô/g, "ё");
+  car = car.replace(/Ô/g, "Ё");
+  car = car.replace(/û/g, "ю");
+  car = car.replace(/Û/g, "Ю");
   car = car.replace(/ç/g, "ч");
   car = car.replace(/ğ/g, "ғ");
   car = car.replace(/ı/g, "и");
