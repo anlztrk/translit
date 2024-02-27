@@ -1,0 +1,24 @@
+{{logo fur
+<!-- REQUIRED -->
+ |Article           = Turkish Women's Football Super league
+ |Use               = Org
+<!-- HIGHLY RECOMMENDED -->
+ |Source            = tff.org/default.aspx?pageID=1000
+<!-- ADDITIONAL INFORMATION -->
+ |Used for          = 
+ |Owner             = 
+ |Website           = 
+ |History           = 
+ |Commentary        = 
+<!-- OVERRIDE FIELDS -->
+ |Description       = 
+ |Portion           = 
+ |Low_resolution    = 
+ |Purpose           = 
+ |Replaceability    = 
+ |other_information = 
+}}
+
+== Licensing ==
+{{Non-free logo|image has rationale=yes}}
+{{SVG-Logo}}
