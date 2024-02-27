@@ -1,9 +1,0 @@
-{{logo fur
-|Author = [[Çorum F.K.]]
-|Source = https://corumfk.com.tr/
-|Article = Çorum F.K.
-|Use = Infobox
-}}
-
-==Licensing==
-{{Non-free logo|image has rationale=yes}}
