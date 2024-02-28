@@ -1,23 +1,44 @@
-{{logo fur
-<!-- REQUIRED -->
- |Article           = Cricket Turkey
- |Use               = Org
-<!-- HIGHLY RECOMMENDED -->
- |Source            = kriketturkiye.com
-<!-- ADDITIONAL INFORMATION -->
- |Used for          = 
- |Owner             = 
- |Website           = 
- |History           = 
- |Commentary        = 
-<!-- OVERRIDE FIELDS -->
- |Description       = 
- |Portion           = 
- |Low_resolution    = 
- |Purpose           = 
- |Replaceability    = 
- |other_information = 
-}}
+Şimdi uzundan uzun gecelere
+Yoldaşım durmadan bakarak
+Belki işe yarar diye sözlerim
+Duruyorum seni bekleyip
 
-== Licensing ==
-{{Non-free logo|image has rationale=yes}}
+Sen ise gittin, gönlümü anlamadan
+Sevgim gönlümde kaldı
+Senle olan bu arzularımda
+Şimdi anlam kalmadı
+
+Şimdi gözlerini özlesem de
+Geceleri gökyüzümde görünmüyor
+Şimdi başkası beni düşünse de
+Yürek senle gitmiş, o dönmüyor
+
+Şimdi gözlerini özlesem de
+Geceleri gökyüzümde görünmüyor
+Şimdi başkası beni istese de
+Yürek senle gitmiş, o dönmüyor
+
+Yine gönlüm dolmuş hicranlara
+Bir seni özlüyorum
+Yürüdüğüm yolumda bir seni düşünüp
+Özlemimi avutuyorum!
+
+Etrafımda görünür varlığın
+Sanki sen yanımdasın!
+Senle var olmuş sevgi kalemde
+Bil, tek sen kalıyorsun!
+
+Şimdi gözlerini özlesem de
+Geceleri gökyüzümde görünmüyor
+Şimdi başkası beni düşünse de
+Yürek senle gitmiş, o dönmüyor
+
+Şimdi gözlerini özlesem de
+Geceleri gökyüzümde görünmüyor
+Şimdi başkası beni düşünse de
+Yürek senle gitmiş, o dönmüyor
+
+Şimdi gözlerini özlesem de
+Geceleri gökyüzümde görünmüyor
+Şimdi başkası beni istese de
+Yürek senle gitmiş, o dönmüyor
