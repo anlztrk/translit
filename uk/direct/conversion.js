@@ -3,6 +3,7 @@ function latcyr () {
 }
 function cyrlat () {
 car = document.transcription.text1.value;
+car = car.normalize('NFC');
 car = car.replace(/ʼ/g, "ъ");
 car = car.replace(/’/g, "ъ");
 car = car.replace(/'/g, "ъ");
@@ -78,6 +79,7 @@ car = car.replace(/Ю/g, "Û");
 car = car.replace(/Я/g, "Â");
 car = car.replace(/«/g, "\u201e");
 car = car.replace(/»/g, "\u201c");
+car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }
 function copy1()
