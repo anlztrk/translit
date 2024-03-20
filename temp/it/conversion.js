@@ -54,6 +54,7 @@ car = car.replace(/kĉ/g, "ĉĉ");
 car = car.replace(/GĜ/g, "ĜĜ");
 car = car.replace(/gĝ/g, "ĝĝ");
 
+car = car.normalize('NFC');
 document.transcription.text2.value = car;
 }
 
