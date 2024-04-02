@@ -69,6 +69,11 @@ car = car.replace(/kç/g, "çç");
 car = car.replace(/GĜ/g, "ĜĜ");
 car = car.replace(/gĝ/g, "ĝĝ");
 
+car = car.replace(/(A|E|I|Y|O|U)X(A|E|I|O|U)/g, "$1GZ$2");
+car = car.replace(/(A|E|I|Y|O|U|a|e|i|y|o|u)x(a|e|i|o|u)/g, "$1gz$2");
+car = car.replace(/X/g, "KS");
+car = car.replace(/x/g, "ks");
+
 car = car.replace(/Ĝ/g, "C");
 car = car.replace(/ĝ/g, "c");
 
