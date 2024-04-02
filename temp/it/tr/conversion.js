@@ -77,6 +77,8 @@ car = car.replace(/x/g, "ks");
 car = car.replace(/Ĝ/g, "C");
 car = car.replace(/ĝ/g, "c");
 
+car = car.replace(/I/g, "İ");
+
 car = car.normalize('NFC');
 document.transcription.text2.value = car;
 }
