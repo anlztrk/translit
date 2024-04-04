@@ -78,9 +78,9 @@ translit = translit.replace(/^(\p{L})\u0301(\p{Uppercase})/ug, "$1J$2");
 translit = translit.replace(/^(\p{L})\u0301 (\p{Uppercase})(\p{Uppercase})/ug, "$1J$2$3");
 translit = translit.replace(/^(\p{L})\u0301/ug, "$1j");
 translit = translit.normalize('NFC');
-translit = translit.replace(/(\p{Uppercase})(\p{Uppercase})\u0301/ug; "$1$2Í");
-translit = translit.replace(/(\p{Uppercase})\u0301(\p{Uppercase})/ug; "$1Í$2");
-translit = translit.replace(/\u0301/g; "í");
+translit = translit.replace(/(\p{Uppercase})(\p{Uppercase})\u0301/ug, "$1$2Í");
+translit = translit.replace(/(\p{Uppercase})\u0301(\p{Uppercase})/ug, "$1Í$2");
+translit = translit.replace(/\u0301/g, "í");
 
 translit = translit.replace(/«/g, "\u201e");
 translit = translit.replace(/»/g, "\u201c");
