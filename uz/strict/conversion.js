@@ -224,6 +224,9 @@ car = document.transcription.text2.value;
  car = car.replace(/МЎТАРИЗА/g, "МЎЪТАРИЗА");
  
  car = car.replace(/(\p{Uppercase})ъ/ug, "$1Ъ");
+
+ car = car.replace(/\u201e/g, "\u00ab");
+ car = car.replace(/\u201c/g, "\u00bb");
 document.transcription.text1.value = car;
 }
 
