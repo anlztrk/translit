@@ -84,7 +84,8 @@ car = document.transcription.text1.value;
   car = car.replace(/Ə/g, "Ә");
   car = car.replace(/Ň/g, "Ң");
   car = car.replace(/\u0027/g, "ь");
-  car = car.replace(/\u0022/g, "ъ"); 
+  car = car.replace(/\u0022/g, "ъ");
+  car = car.replace(/\u007c/g, "ӏ"); 
   car = car.replace(/<</g, "«");
   car = car.replace(/>>/g, "»");
   
@@ -230,6 +231,9 @@ car = document.transcription.text1.value;
   
   car = car.replace(/ъ(\u002a|\u005c)/g, "Ъ");
   car = car.replace(/Ъ(\u002a|\u005c)/g, "ъ");
+  
+  car = car.replace(/ӏ(\u002a|\u005c)/g, "Ӏ");
+  car = car.replace(/Ӏ(\u002a|\u005c)/g, "ӏ");
 document.transcription.text1.value=car;
 }
 function copy1()
