@@ -12,16 +12,18 @@ car = document.transcription.text1.value;
  car = car.replace(/Γ(Γ|Ξ|Χ|γ|ξ|χ)/g, "Ν$1");
  car = car.replace(/γ(γ|ξ|χ)/g, "ν$1");
 
+ car = car.replace(/(\p{L})\u0308/ug, "\u2060$1\u0308");
+
  car = car.replace(/ΟΥ/g, "OU");
  car = car.replace(/Ου/g, "Ou");
  car = car.replace(/ου/g, "οu");
  
- car = car.replace(/Μ(Π|π)/g, "\u2060B");
- car = car.replace(/μπ/g, "\u2060b");
- car = car.replace(/(\p{Lu})\u2060B(\p{Lu})/ug, "$1MP$2");
- car = car.replace(/(\p{Lu})\u2060B(\p{L})/ug, "$1Mp$2");
- car = car.replace(/(\p{L})\u2060b(\p{L})/ug, "$1mp$2");
- car = car.replace(/\u2060/g, "");
+ car = car.replace(/Μ(Π|π)/g, "\u200cB");
+ car = car.replace(/μπ/g, "\u200cb");
+ car = car.replace(/(\p{Lu})\u200cB(\p{Lu})/ug, "$1MP$2");
+ car = car.replace(/(\p{Lu})\u200cB(\p{L})/ug, "$1Mp$2");
+ car = car.replace(/(\p{L})\u200cb(\p{L})/ug, "$1mp$2");
+ car = car.replace(/\u200c/g, "");
  
  car = car.replace(/(\p{Uppercase})Θ/ug, "$1TH");
  car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Θ/ug, "$1$2 TH");
@@ -89,6 +91,8 @@ car = document.transcription.text1.value;
  car = car.replace(/ω/g, "o");
  car = car.replace(/\u037e/g, "\u003f");
  car = car.normalize('NFC');
+
+ car = car.replace(/\u2060/g, "");
 document.transcription.text2.value=car;
 }
 function latcyr () {
