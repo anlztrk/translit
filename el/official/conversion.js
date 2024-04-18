@@ -2,10 +2,10 @@ var car;
 function cyrlat () {
 car = document.transcription.text1.value;
  car = car.normalize('NFD');
- car = car.replace(/(\p{L})\u0308/ug, "\u2060$1\u0308");
+ car = car.replace(/(\p{L}|\p({Mn})\u0308/ug, "\u2060$1\u0308");
  
- car = car.replace(/(Α|Ε|Η)Υ(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Β$2");
- car = car.replace(/(Α|Ε|Η|α|ε|η)υ(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1β$2");
+ car = car.replace(/(Α|Ε|Η)Υ(\u0301)?(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Β$3");
+ car = car.replace(/(Α|Ε|Η|α|ε|η)υ(\u0301)?(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1β$3");
  car = car.replace(/(Α|Ε|Η)Υ/g, "$1Φ");
  car = car.replace(/(Α|Ε|Η|α|ε|η)υ/g, "$1φ");
  
@@ -20,29 +20,29 @@ car = document.transcription.text1.value;
  
  car = car.replace(/Μ(Π|π)/g, "\u200cB");
  car = car.replace(/μπ/g, "\u200cb");
- car = car.replace(/(\p{Lu})\u200cB(\p{Lu})/ug, "$1MP$2");
- car = car.replace(/(\p{Lu})\u200cB(\p{L})/ug, "$1Mp$2");
- car = car.replace(/(\p{L})\u200cb(\p{L})/ug, "$1mp$2");
+ car = car.replace(/(\p{Lu}|\p({Mn})\u200cB(\p{Lu}|\p({Mn})/ug, "$1MP$2");
+ car = car.replace(/(\p{Lu}|\p({Mn})\u200cB(\p{L}|\p({Mn})/ug, "$1Mp$2");
+ car = car.replace(/(\p{L}|\p({Mn})\u200cb(\p{L}|\p({Mn})/ug, "$1mp$2");
  car = car.replace(/\u200c/g, "");
  
- car = car.replace(/(\p{Uppercase})Θ/ug, "$1TH");
- car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Θ/ug, "$1$2 TH");
- car = car.replace(/Θ (\p{Uppercase})(\p{Uppercase})/ug, "TH $1$2");
- car = car.replace(/Θ(\p{Uppercase})/ug, "TH$1");
+ car = car.replace(/(\p{Lu}|\p({Mn})Θ/ug, "$1TH");
+ car = car.replace(/(\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn}) Θ/ug, "$1$2 TH");
+ car = car.replace(/Θ (\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn})/ug, "TH $1$2");
+ car = car.replace(/Θ(\p{Lu}|\p({Mn})/ug, "TH$1");
  car = car.replace(/Θ/g, "Th");
  car = car.replace(/θ/g, "th");
  
- car = car.replace(/(\p{Uppercase})Χ/ug, "$1CH");
- car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Χ/ug, "$1$2 CH");
- car = car.replace(/Χ (\p{Uppercase})(\p{Uppercase})/ug, "CH $1$2");
- car = car.replace(/Χ(\p{Uppercase})/ug, "CH$1");
+ car = car.replace(/(\p{Lu}|\p({Mn})Χ/ug, "$1CH");
+ car = car.replace(/(\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn}) Χ/ug, "$1$2 CH");
+ car = car.replace(/Χ (\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn})/ug, "CH $1$2");
+ car = car.replace(/Χ(\p{Lu}|\p({Mn})/ug, "CH$1");
  car = car.replace(/Χ/g, "Ch");
  car = car.replace(/χ/g, "ch");
  
- car = car.replace(/(\p{Uppercase})Ψ/ug, "$1PS");
- car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ψ/ug, "$1$2 PS");
- car = car.replace(/Ψ (\p{Uppercase})(\p{Uppercase})/ug, "PS $1$2");
- car = car.replace(/Ψ(\p{Uppercase})/ug, "PS$1");
+ car = car.replace(/(\p{Lu}|\p({Mn})Ψ/ug, "$1PS");
+ car = car.replace(/(\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn}) Ψ/ug, "$1$2 PS");
+ car = car.replace(/Ψ (\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn})/ug, "PS $1$2");
+ car = car.replace(/Ψ(\p{Lu}|\p({Mn})/ug, "PS$1");
  car = car.replace(/Ψ/g, "Ps");
  car = car.replace(/ψ/g, "ps");
 
