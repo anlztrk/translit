@@ -14,9 +14,9 @@ car = document.transcription.text1.value;
  car = car.replace(/ου/g, "οu");
  car = car.replace(/Μ(Π|π)/g, "B");
  car = car.replace(/μπ/g, "b");
- car = car.replace(/\p{Lu}B\p{Lu}/ug, "$1MP$2");
- car = car.replace(/\p{Lu}B\p{L}/ug, "$1Mp$2");
- car = car.replace(/\p{L}b\p{L}/ug, "$1mp$2");
+ car = car.replace(/(\p{Lu})B(\p{Lu})/ug, "$1MP$2");
+ car = car.replace(/(\p{Lu})B(\p{L})/ug, "$1Mp$2");
+ car = car.replace(/(\p{L})b(\p{L})/ug, "$1mp$2");
  
  car = car.replace(/(\p{Uppercase})Θ/ug, "$1TH");
  car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Θ/ug, "$1$2 TH");
