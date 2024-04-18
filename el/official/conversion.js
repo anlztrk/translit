@@ -37,7 +37,7 @@ car = document.transcription.text1.value;
  car = car.replace(/Χ/g, "Ch");
  car = car.replace(/χ/g, "ch");
  
- car = car.replace(/(\p{Uppercase})Ψ/ug, "$PS");
+ car = car.replace(/(\p{Uppercase})Ψ/ug, "$1PS");
  car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ψ/ug, "$1$2 PS");
  car = car.replace(/Ψ (\p{Uppercase})(\p{Uppercase})/ug, "PS $1$2");
  car = car.replace(/Ψ(\p{Uppercase})/ug, "PS$1");
