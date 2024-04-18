@@ -2,7 +2,7 @@ var car;
 function cyrlat () {
 car = document.transcription.text1.value;
  car = car.normalize('NFD');
- car = car.replace(/(\p{L}|\p{Mn})(\u0301|\u0308)/ug, "\u2060$1$2");
+ car = car.replace(/(\p{L}|\p{Mn})\u0308/ug, "\u2060$1\u0308");
  
  car = car.replace(/(Α|Ε|Η)Υ(\u0301)?(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Β$3");
  car = car.replace(/(Α|Ε|Η|α|ε|η)υ(\u0301)?(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1β$3");
