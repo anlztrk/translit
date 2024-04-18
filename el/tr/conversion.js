@@ -15,7 +15,7 @@ car = document.transcription.text1.value;
  car = car.replace(/γ(γ|ξ|χ)/g, "ν$1");
 
  car = car.replace(/Ο(Υ|υ)/g, "U");
- car = car.replace(/υ/g, "u");
+ car = car.replace(/ου/g, "u");
 
  car = car.replace(/(\p{Lu}|\p{Mn})Ξ/ug, "$KS");
  car = car.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Ξ/ug, "$1$2 KS");
@@ -76,9 +76,9 @@ car = document.transcription.text1.value;
  car = car.replace(/(Ε|Η|Ο|Υ)(Ι|ι)/g, "İ");
  car = car.replace(/(ε|η|ο|υ)ι/g, "i");
  
- car = car.replace(/Γ(Ε|Η|Ι|Υ|E|İ)(Ο|Ω|U)/g, "Y$2");
- car = car.replace(/Γ(ε|η|ι|υ|e|i)(ο|ω|u)/g, "Y$2");
- car = car.replace(/γ(ε|η|ι|υ|e|i)(ο|ω|u)/g, "y$2");
+ car = car.replace(/Γ(Ε|Η|Ι|Υ|E|İ)(Α|Ο|Ω|U)/g, "Y$2");
+ car = car.replace(/Γ(ε|η|ι|υ|e|i)(α|ο|ω|u)/g, "Y$2");
+ car = car.replace(/γ(ε|η|ι|υ|e|i)(α|ο|ω|u)/g, "y$2");
  
  car = car.replace(/Γ(Ε|Η|Ι|Υ|E|İ|ε|η|ι|υ|e|i)/g, "Y$1");
  car = car.replace(/γ(ε|η|ι|υ|e|i)/g, "y$1");
