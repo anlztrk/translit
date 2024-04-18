@@ -9,14 +9,17 @@ car = document.transcription.text1.value;
  
  car = car.replace(/(Β|β|Φ|φ)\u0301/g, "\u0301$1");
  
- car = car.replace(/Γ(Γ|Κ|Ξ|γ|κ|ξ)/g, "Ν$1");
+ car = car.replace(/Γ(Γ|Ξ|Χ|γ|ξ|χ)/g, "Ν$1");
  car = car.replace(/γ(γ|κ|ξ)/g, "ν$1");
+ 
  car = car.replace(/ου/g, "οu");
- car = car.replace(/Μ(Π|π)/g, "B");
- car = car.replace(/μπ/g, "b");
- car = car.replace(/(\p{Lu})B(\p{Lu})/ug, "$1MP$2");
- car = car.replace(/(\p{Lu})B(\p{L})/ug, "$1Mp$2");
- car = car.replace(/(\p{L})b(\p{L})/ug, "$1mp$2");
+ 
+ car = car.replace(/Μ(Π|π)/g, "\u2060B");
+ car = car.replace(/μπ/g, "\u2060b");
+ car = car.replace(/(\p{Lu})\u2060B(\p{Lu})/ug, "$1MP$2");
+ car = car.replace(/(\p{Lu})\u2060B(\p{L})/ug, "$1Mp$2");
+ car = car.replace(/(\p{L})\u2060b(\p{L})/ug, "$1mp$2");
+ car = car.replace(/\u2060/g, "");
  
  car = car.replace(/(\p{Uppercase})Θ/ug, "$1TH");
  car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Θ/ug, "$1$2 TH");
