@@ -70,11 +70,11 @@ car = document.transcription.text1.value;
  car = car.replace(/Χ/g, "H");
  car = car.replace(/χ/g, "h");
 
- car = car.replace(/Α(Ι|ι)/g, "E");
- car = car.replace(/αι/g, "e");
+ car = car.replace(/Α(\u0301)?(Ι|ι)/g, "E");
+ car = car.replace(/α(\u0301)?ι/g, "e");
 
- car = car.replace(/(Ε|Η|Ο|Υ)(Ι|ι)/g, "İ");
- car = car.replace(/(ε|η|ο|υ)ι/g, "i");
+ car = car.replace(/(Ε|Η|Ο|Υ)(\u0301)?(Ι|ι)/g, "İ");
+ car = car.replace(/(ε|η|ο|υ)(\u0301)?ι/g, "i");
  
  car = car.replace(/Γ(Ε|Η|Ι|Υ|E|İ)(Α|Ο|Ω|U)/g, "Y$2");
  car = car.replace(/Γ(ε|η|ι|υ|e|i)(α|ο|ω|u)/g, "Y$2");
