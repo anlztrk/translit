@@ -4,10 +4,10 @@ car = document.transcription.text1.value;
  car = car.normalize('NFD');
  car = car.replace(/(\p{L})\u0308/ug, "\u2060$1\u0308");
  
- car = car.replace(/(Α|Ε|Η)Υ(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Φ$2");
- car = car.replace(/(Α|Ε|Η|α|ε|η)υ(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1φ$2");
- car = car.replace(/(Α|Ε|Η)Υ/g, "$1Β");
- car = car.replace(/(Α|Ε|Η|α|ε|η)υ/g, "$1β");
+ car = car.replace(/(Α|Ε|Η)Υ(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Β$2");
+ car = car.replace(/(Α|Ε|Η|α|ε|η)υ(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1β$2");
+ car = car.replace(/(Α|Ε|Η)Υ/g, "$1Φ");
+ car = car.replace(/(Α|Ε|Η|α|ε|η)υ/g, "$1φ");
  
  car = car.replace(/(Β|β|Φ|φ)\u0301/g, "\u0301$1");
  
