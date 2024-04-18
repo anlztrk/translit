@@ -10,7 +10,7 @@ car = document.transcription.text1.value;
  car = car.replace(/(Β|β|Φ|φ)\u0301/g, "\u0301$1");
  
  car = car.replace(/Γ(Γ|Ξ|Χ|γ|ξ|χ)/g, "Ν$1");
- car = car.replace(/γ(γ|κ|ξ)/g, "ν$1");
+ car = car.replace(/γ(γ|ξ|χ)/g, "ν$1");
  
  car = car.replace(/ου/g, "οu");
  
