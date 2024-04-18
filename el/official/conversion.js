@@ -20,29 +20,29 @@ car = document.transcription.text1.value;
  
  car = car.replace(/Μ(Π|π)/g, "\u200cB");
  car = car.replace(/μπ/g, "\u200cb");
- car = car.replace(/(\p{Lu}|\p({Mn})\u200cB(\p{Lu}|\p({Mn})/ug, "$1MP$2");
- car = car.replace(/(\p{Lu}|\p({Mn})\u200cB(\p{L}|\p({Mn})/ug, "$1Mp$2");
- car = car.replace(/(\p{L}|\p({Mn})\u200cb(\p{L}|\p({Mn})/ug, "$1mp$2");
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(\p{Lu}|\p{Mn})/ug, "$1MP$2");
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(\p{L}|\p{Mn})/ug, "$1Mp$2");
+ car = car.replace(/(\p{L}|\p{Mn})\u200cb(\p{L}|\p{Mn})/ug, "$1mp$2");
  car = car.replace(/\u200c/g, "");
  
- car = car.replace(/(\p{Lu}|\p({Mn})Θ/ug, "$1TH");
- car = car.replace(/(\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn}) Θ/ug, "$1$2 TH");
- car = car.replace(/Θ (\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn})/ug, "TH $1$2");
- car = car.replace(/Θ(\p{Lu}|\p({Mn})/ug, "TH$1");
+ car = car.replace(/(\p{Lu}|\p{Mn})Θ/ug, "$1TH");
+ car = car.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Θ/ug, "$1$2 TH");
+ car = car.replace(/Θ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "TH $1$2");
+ car = car.replace(/Θ(\p{Lu}|\p{Mn})/ug, "TH$1");
  car = car.replace(/Θ/g, "Th");
  car = car.replace(/θ/g, "th");
  
- car = car.replace(/(\p{Lu}|\p({Mn})Χ/ug, "$1CH");
- car = car.replace(/(\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn}) Χ/ug, "$1$2 CH");
- car = car.replace(/Χ (\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn})/ug, "CH $1$2");
- car = car.replace(/Χ(\p{Lu}|\p({Mn})/ug, "CH$1");
+ car = car.replace(/(\p{Lu}|\p{Mn})Χ/ug, "$1CH");
+ car = car.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Χ/ug, "$1$2 CH");
+ car = car.replace(/Χ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "CH $1$2");
+ car = car.replace(/Χ(\p{Lu}|\p{Mn})/ug, "CH$1");
  car = car.replace(/Χ/g, "Ch");
  car = car.replace(/χ/g, "ch");
  
- car = car.replace(/(\p{Lu}|\p({Mn})Ψ/ug, "$1PS");
- car = car.replace(/(\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn}) Ψ/ug, "$1$2 PS");
- car = car.replace(/Ψ (\p{Lu}|\p({Mn})(\p{Lu}|\p({Mn})/ug, "PS $1$2");
- car = car.replace(/Ψ(\p{Lu}|\p({Mn})/ug, "PS$1");
+ car = car.replace(/(\p{Lu}|\p{Mn})Ψ/ug, "$1PS");
+ car = car.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Ψ/ug, "$1$2 PS");
+ car = car.replace(/Ψ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "PS $1$2");
+ car = car.replace(/Ψ(\p{Lu}|\p{Mn})/ug, "PS$1");
  car = car.replace(/Ψ/g, "Ps");
  car = car.replace(/ψ/g, "ps");
 
