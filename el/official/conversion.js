@@ -2,6 +2,8 @@ var car;
 function cyrlat () {
 car = document.transcription.text1.value;
  car = car.normalize('NFD');
+  car = car.replace(/(\p{L})\u0308/ug, "\u2060$1\u0308");
+ 
  car = car.replace(/(Α|Ε|Η)Υ(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Φ$2");
  car = car.replace(/(Α|Ε|Η|α|ε|η)υ(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1φ$2");
  car = car.replace(/(Α|Ε|Η)Υ/g, "$1Β");
@@ -11,8 +13,6 @@ car = document.transcription.text1.value;
  
  car = car.replace(/Γ(Γ|Ξ|Χ|γ|ξ|χ)/g, "Ν$1");
  car = car.replace(/γ(γ|ξ|χ)/g, "ν$1");
-
- car = car.replace(/(\p{L})\u0308/ug, "\u2060$1\u0308");
 
  car = car.replace(/ΟΥ/g, "OU");
  car = car.replace(/Ου/g, "Ou");
