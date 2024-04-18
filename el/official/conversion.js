@@ -11,7 +11,9 @@ car = document.transcription.text1.value;
  
  car = car.replace(/Γ(Γ|Ξ|Χ|γ|ξ|χ)/g, "Ν$1");
  car = car.replace(/γ(γ|ξ|χ)/g, "ν$1");
- 
+
+ car = car.replace(/ΟΥ/g, "OU");
+ car = car.replace(/Ου/g, "Ou");
  car = car.replace(/ου/g, "οu");
  
  car = car.replace(/Μ(Π|π)/g, "\u2060B");
