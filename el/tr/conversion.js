@@ -86,8 +86,8 @@ car = document.transcription.text1.value;
  car = car.replace(/(Η|Ι|Υ|İ)(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)/g, "Y$2");
  car = car.replace(/(η|ι|υ|i)(α|ο|ω|u|ε|e)/g, "y$2");
  
- car = car.replace(/(Α|Ο|Ω|U|Ε|E)(Η|Ι|Υ|İ)/g, "$1Y");
- car = car.replace(/(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)(η|ι|υ|i)/g, "$1y");
+ car = car.replace(/(Α|Ο|Ω|U|Ε|E)(\u0301)?(Η|Ι|Υ|İ)/g, "$1Y");
+ car = car.replace(/(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)(\u0301)?(η|ι|υ|i)/g, "$1y");
  
  car = car.replace(/Y\u0301/g, "İ");
  car = car.replace(/y\u0301/g, "i");
