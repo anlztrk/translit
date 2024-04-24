@@ -48,14 +48,14 @@ car = car.replace(/i/g, "ı");
 car = car.replace(/I(Ñ|ñ)/g, "İ$1");
 car = car.replace(/ıñ/g, "iñ");
 
-car = car.replace(/(G|H|K|L)A/g, "$1Ä");
-car = car.replace(/(G|H|K|L)I/g, "$1İ");
-car = car.replace(/(G|H|K|L)O/g, "$1Ö");
-car = car.replace(/(G|H|K|L)U/g, "$1Ü");
-car = car.replace(/(G|H|K|L|g|h|k|l)a/g, "$1ä");
-car = car.replace(/(G|H|K|L|g|h|k|l)ı/g, "$1i");
-car = car.replace(/(G|H|K|L|g|h|k|l)o/g, "$1ö");
-car = car.replace(/(G|H|K|L|g|h|k|l)u/g, "$1ü");
+car = car.replace(/(G|H|K)A/g, "$1Ä");
+car = car.replace(/(G|H|K)I/g, "$1İ");
+car = car.replace(/(G|H|K)O/g, "$1Ö");
+car = car.replace(/(G|H|K)U/g, "$1Ü");
+car = car.replace(/(G|H|K|g|h|k)a/g, "$1ä");
+car = car.replace(/(G|H|K|g|h|k)ı/g, "$1i");
+car = car.replace(/(G|H|K|g|h|k)o/g, "$1ö");
+car = car.replace(/(G|H|K|g|h|k)u/g, "$1ü");
 
 car = car.replace(/Ä(Ğ|X|Q|ğ|x|q)/g, "A$1");
 car = car.replace(/İ(Ğ|X|Q|ğ|x|q)/g, "I$1");
