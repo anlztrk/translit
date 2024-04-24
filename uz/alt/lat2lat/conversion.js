@@ -57,6 +57,15 @@ car = car.replace(/(G|H|K|L|g|h|k|l)ı/g, "$1i");
 car = car.replace(/(G|H|K|L|g|h|k|l)o/g, "$1ö");
 car = car.replace(/(G|H|K|L|g|h|k|l)u/g, "$1ü");
 
+car = car.replace(/Ä(Ğ|X|Q|ğ|x|q)/g, "A$1");
+car = car.replace(/İ(Ğ|X|Q|ğ|x|q)/g, "I$1");
+car = car.replace(/Ö(Ğ|X|Q|ğ|x|q)/g, "O$1");
+car = car.replace(/Ü(Ğ|X|Q|ğ|x|q)/g, "U$1");
+car = car.replace(/ä(ğ|x|q)/g, "a$1");
+car = car.replace(/i(ğ|x|q)/g, "ı$1");
+car = car.replace(/ö(ğ|x|q)/g, "o$1");
+car = car.replace(/ü(ğ|x|q)/g, "u$1");
+
 car = car.replace(/A(B|C|Ç|D|F|G|H|K|L|M|N|Ñ|P|R|S|Ş|T|V|Y|Z)(B|C|Ç|D|F|G|H|K|L|M|N|Ñ|P|R|S|Ş|T|V|Y|Z)?(Ä|İ|Ö|Ü)/g, "Ä$1$2$3");
 car = car.replace(/A(b|c|ç|d|f|g|h|k|l|m|n|ñ|p|r|s|ş|t|v|y|z)(b|c|ç|d|f|g|h|k|l|m|n|ñ|p|r|s|ş|t|v|y|z)?(ä|i|ö|ü)/g, "Ä$1$2$3");
 car = car.replace(/a(b|c|ç|d|f|g|h|k|l|m|n|ñ|p|r|s|ş|t|v|y|z)(b|c|ç|d|f|g|h|k|l|m|n|ñ|p|r|s|ş|t|v|y|z)?(ä|i|ö|ü)/g, "ä$1$2$3");
