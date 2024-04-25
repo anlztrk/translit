@@ -52,10 +52,10 @@ car = car.replace(/A(G|H|K|g|h|k|l)/g, "Ä$1");
 car = car.replace(/I(G|H|K|g|h|k|l)/g, "İ$1");
 car = car.replace(/O(G|H|K|g|h|k|l)/g, "Ö$1");
 car = car.replace(/U(G|H|K|g|h|k|l)/g, "Ü$1");
-car = car.replace(/a(g|h|k|l)/g, "A$1");
-car = car.replace(/ı(g|h|k|l)/g, "I$1");
-car = car.replace(/o(g|h|k|l)/g, "O$1");
-car = car.replace(/u(g|h|k|l)/g, "U$1");
+car = car.replace(/a(g|h|k|l)/g, "ä$1");
+car = car.replace(/ı(g|h|k|l)/g, "i$1");
+car = car.replace(/o(g|h|k|l)/g, "ö$1");
+car = car.replace(/u(g|h|k|l)/g, "ü$1");
 
 car = car.replace(/Ä(Ğ|X|Q|ğ|x|q)/g, "A$1");
 car = car.replace(/İ(Ğ|X|Q|ğ|x|q)/g, "I$1");
