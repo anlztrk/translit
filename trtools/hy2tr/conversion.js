@@ -116,8 +116,6 @@ function latcyr () {
 car = document.transcription.text2.value;
 car = car.replace(/(A|Â|E|I|İ|Î|O|Ö|U|Û|Ü)Y/g, "$1Ẏ");
 car = car.replace(/(A|Â|E|I|İ|Î|O|Ö|U|Û|Ü|a|â|e|ı|i|î|o|ö|u|û|ü)y/g, "$1ẏ");
-car = car.replace(/Ẏ(A|Â|E|I|İ|Î|O|Ö|U|Û|Ü|a|â|e|ı|i|î|o|ö|u|û|ü)/g, "Y$1");
-car = car.replace(/ẏ(a|â|e|ı|i|î|o|ö|u|û|ü)/g, "y$1");
 
 car = car.replace(/(A|I|O|U)G/g, "$1Ġ");
 car = car.replace(/(A|I|O|U|a|ı|o|u)g/g, "$1ġ");
