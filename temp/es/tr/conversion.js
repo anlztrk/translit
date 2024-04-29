@@ -45,8 +45,8 @@ car = car.replace(/ñ/g, "n");
 car = car.replace(/L(L|l)/g, "Y");
 car = car.replace(/ll/g, "y");
 
-car = car.replace(/(\A|[^\p{L}])Y([^\p{L}]|\Z)/ug, "$1I$2");
-car = car.replace(/(\A|[^\p{L}])y([^\p{L}]|\Z)/ug, "$1i$2");
+car = car.replace(/(\A|[^\p{L}])Y([^\p{L}]|\Z)/gm, "$1I$2");
+car = car.replace(/(\A|[^\p{L}])y([^\p{L}]|\Z)/gm, "$1i$2");
 
 car = car.replace(/I/g, "İ");
 
