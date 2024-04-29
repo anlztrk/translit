@@ -37,10 +37,10 @@ car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?d( )?(a|e|i|o|u)/g, "$1$2$3
 car = car.replace(/(A|E|I|O|U)(\u0301)?( )?G( )?(A|E|I|O|U)/g, "$1$2$3Ġ$4$5");
 car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?g( )?(a|e|i|o|u)/g, "$1$2$3ġ$4$5");
 
-car = car.replace(/Ñ(A|E|I|O|U)/g, "NY$1");
-car = car.replace(/Ñ(a|e|i|o|u)/g, "Ny$1");
-car = car.replace(/ñ(a|e|i|o|u)/g, "ny$1");
-car = car.replace(/ñ/g, "n");
+car = car.replace(/N\u0303(A|E|I|O|U)/g, "NY$1");
+car = car.replace(/N\u0303(a|e|i|o|u)/g, "Ny$1");
+car = car.replace(/n\u0303(a|e|i|o|u)/g, "ny$1");
+car = car.replace(/n\u0303/g, "n");
 
 car = car.replace(/L(L|l)/g, "Y");
 car = car.replace(/ll/g, "y");
