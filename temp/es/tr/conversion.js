@@ -45,8 +45,15 @@ car = car.replace(/n\u0303/g, "n");
 car = car.replace(/L(L|l)/g, "Y");
 car = car.replace(/ll/g, "y");
 
-car = car.replace(/(\A|[^\p{L}])Y([^\p{L}]|\Z)/g, "$1I$2");
-car = car.replace(/(\A|[^\p{L}])y([^\p{L}]|\Z)/g, "$1i$2");
+car = car.replace(/Y(\p{L})/ug, "Ẏ$1");
+car = car.replace(/(\p{L})Y/ug, "$1Ẏ");
+car = car.replace(/y(\p{L})/ug, "ẏ$1");
+car = car.replace(/(\p{L})y/ug, "$1ẏ");
+
+car = car.replace(/Y/g, "İ");
+car = car.replace(/y/g, "i");
+car = car.replace(/Ẏ/g, "Y");
+car = car.replace(/ẏ/g, "y");
 
 car = car.replace(/I/g, "İ");
 
