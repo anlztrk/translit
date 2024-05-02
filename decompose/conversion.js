@@ -4,7 +4,7 @@ car = document.transcription.text1.value;
   car = car.normalize('NFD');
 document.transcription.text2.value=car;
 }
-function cyrlat () {
+function latcyr () {
 car = document.transcription.text2.value;
   car = car.normalize('NFC');
 document.transcription.text1.value=car;
