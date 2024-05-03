@@ -58,7 +58,7 @@ car = car.replace(/ẏ/g, "y");
 
 car = car.replace(/I/g, "İ");
 
-car = car.replace(/\u301/g, "");
+car = car.replace(/\u0301/g, "");
 
 car = car.normalize('NFC');
 document.transcription.text2.value = car;
