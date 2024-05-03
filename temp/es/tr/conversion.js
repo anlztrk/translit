@@ -34,8 +34,8 @@ car = car.replace(/(b|v)( )?(a|e|i|o|u)/g, "bv$2$3");
 car = car.replace(/(A|E|I|O|U)(\u0301)?( )?(B|V)/g, "$1$2$3VB");
 car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?(b|v)/g, "$1$2$3vb");
 
-car = car.replace(/ V(BV|bv)/g, "V $1");
-car = car.replace(/ vbv/g, "v bv");
+car = car.replace(/\u0020V(BV|bv)/g, "V $1");
+car = car.replace(/\u0020vbv/g, "v bv");
 
 car = car.replace(/N\u0303(A|E|I|O|U)/g, "NY$1");
 car = car.replace(/N\u0303(a|e|i|o|u)/g, "Ny$1");
