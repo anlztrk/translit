@@ -28,8 +28,8 @@ car = car.replace(/gu(e|i)/g, "g$1");
 car = car.replace(/Ü/g, "U");
 car = car.replace(/ü/g, "u");
   
-car = car.replace(/(A|E|I|O|U)(\u0301)?( )?(B|V)( )?(A|E|I|O|U)/g, "$1$2$3BV$4$5");
-car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?(b|v)( )?(a|e|i|o|u)/g, "$1$2$3bv$4$5");
+car = car.replace(/(A|E|I|O|U)(\u0301)?( )?(B|V)( )?(A|E|I|O|U)/g, "$1$2$3VBV$4$5");
+car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?(b|v)( )?(a|e|i|o|u)/g, "$1$2$3vbv$4$5");
 
 car = car.replace(/(B|V)( )?(A|E|I|O|U)/g, "BV$2$3");
 car = car.replace(/(B|V)( )?(a|e|i|o|u)/g, "Bv$2$2");
