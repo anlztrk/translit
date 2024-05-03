@@ -28,14 +28,15 @@ car = car.replace(/gu(e|i)/g, "g$1");
 car = car.replace(/Ü/g, "U");
 car = car.replace(/ü/g, "u");
   
-car = car.replace(/(A|E|I|O|U)(\u0301)?( )?B( )?(A|E|I|O|U)/g, "$1$2$3V$4$5");
-car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?b( )?(a|e|i|o|u)/g, "$1$2$3v$4$5");
+car = car.replace(/(A|E|I|O|U)(\u0301)?( )?(B|V)( )?(A|E|I|O|U)/g, "$1$2$3BV$4$5");
+car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?(b|v)( )?(a|e|i|o|u)/g, "$1$2$3bv$4$5");
 
-car = car.replace(/(A|E|I|O|U)(\u0301)?( )?D( )?(A|E|I|O|U)/g, "$1$2$3Đ$4$5");
-car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?d( )?(a|e|i|o|u)/g, "$1$2$3đ$4$5");
+car = car.replace(/(B|V)( )?(A|E|I|O|U)/g, "BV$2$3");
+car = car.replace(/(B|V)( )?(a|e|i|o|u)/g, "Bv$2$2");
+car = car.replace(/(b|v)( )?(a|e|i|o|u)/g, "bv$2$2");
 
-car = car.replace(/(A|E|I|O|U)(\u0301)?( )?G( )?(A|E|I|O|U)/g, "$1$2$3Ġ$4$5");
-car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?g( )?(a|e|i|o|u)/g, "$1$2$3ġ$4$5");
+car = car.replace(/(A|E|I|O|U)(\u0301)?( )?(B|V)/g, "$1$2$3VB");
+car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?(b|v)/g, "$1$2$3vb");
 
 car = car.replace(/N\u0303(A|E|I|O|U)/g, "NY$1");
 car = car.replace(/N\u0303(a|e|i|o|u)/g, "Ny$1");
