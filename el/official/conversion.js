@@ -89,7 +89,7 @@ car = document.transcription.text1.value;
  car = car.replace(/υ/g, "y");
  car = car.replace(/φ/g, "f");
  car = car.replace(/ω/g, "o");
- car = car.replace(/\u037e/g, "\u003f");
+ car = car.replace(/(\u003b|\u037e)/g, "\u003f");
  car = car.normalize('NFC');
 
  car = car.replace(/\u2060/g, "");

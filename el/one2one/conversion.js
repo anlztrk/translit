@@ -56,7 +56,7 @@ car = car.replace(/Ψ/g, "Ṕ");
 car = car.replace(/ψ/g, "ṕ");
 car = car.replace(/Ω/g, "Ô");
 car = car.replace(/ω/g, "ô");
-
+car = car.replace(/(\u003b|\u037e)/g, "\u003f");
 
 document.transcription.text2.value=car;
 }

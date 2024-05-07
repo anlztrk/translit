@@ -334,7 +334,7 @@ car = car.replace(/oy/g, "ou");
 car = car.replace(/OỲ/g, "OY");
 car = car.replace(/Oỳ/g, "Oy");
 car = car.replace(/oỳ/g, "oy");
-
+car = car.replace(/(\u003b|\u037e)/g, "\u003f");
 document.transcription.text2.value=car;
 }
 function latcyr () {

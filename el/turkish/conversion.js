@@ -136,7 +136,7 @@ car = document.transcription.text1.value;
  car = car.replace(/υ/g, "i");
  car = car.replace(/φ/g, "f");
  car = car.replace(/ω/g, "o");
- car = car.replace(/\u037e/g, "\u003f");
+ car = car.replace(/(\u003b|\u037e)/g, "\u003f");
 
  car = car.replace(/(\u0301|\u0308)/g, "");
  car = car.normalize('NFC');
