@@ -4,10 +4,10 @@ car = document.transcription.text1.value;
  car = car.normalize('NFD');
  car = car.replace(/(\p{L}|\p{Mn})\u0308/ug, "\u2060$1\u0308");
  
- car = car.replace(/(Α|Ε|Η)Υ(\u0301)?(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Β$3");
- car = car.replace(/(Α|Ε|Η|α|ε|η)υ(\u0301)?(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1β$3");
- car = car.replace(/(Α|Ε|Η)Υ/g, "$1Φ");
- car = car.replace(/(Α|Ε|Η|α|ε|η)υ/g, "$1φ");
+ car = car.replace(/(Α|Ε|Η)Υ(\u0301)?(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Β$2$3");
+ car = car.replace(/(Α|Ε|Η|α|ε|η)υ(\u0301)?(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1β$2$3");
+ car = car.replace(/(Α|Ε|Η)(\u0301)?Υ/g, "$1$2Φ");
+ car = car.replace(/(Α|Ε|Η|α|ε|η)(\u0301)?υ/g, "$1$2φ");
  
  car = car.replace(/(Β|β|Φ|φ)\u0301/g, "\u0301$1");
  
@@ -70,11 +70,11 @@ car = document.transcription.text1.value;
  car = car.replace(/Χ/g, "H");
  car = car.replace(/χ/g, "h");
 
- car = car.replace(/Α(\u0301)?(Ι|ι)/g, "E");
- car = car.replace(/α(\u0301)?ι/g, "e");
+ car = car.replace(/Α(Ι|ι)/g, "E");
+ car = car.replace(/αι/g, "e");
 
- car = car.replace(/(Ε|Η|Ο|Υ)(\u0301)?(Ι|ι)/g, "İ");
- car = car.replace(/(ε|η|ο|υ)(\u0301)?ι/g, "i");
+ car = car.replace(/(Ε|Η|Ο|Υ)(Ι|ι)/g, "İ");
+ car = car.replace(/(ε|η|ο|υ)ι/g, "i");
  
  car = car.replace(/Γ(Ε|Η|Ι|Υ|E|İ)(Α|Ο|Ω|U)/g, "Y$2");
  car = car.replace(/Γ(ε|η|ι|υ|e|i)(α|ο|ω|u)/g, "Y$2");
@@ -83,6 +83,9 @@ car = document.transcription.text1.value;
  car = car.replace(/Γ(Ε|Η|Ι|Υ|E|İ|ε|η|ι|υ|e|i)/g, "Y$1");
  car = car.replace(/γ(ε|η|ι|υ|e|i)/g, "y$1");
 
+ car = car.replace(/(Η|Ι|Υ|İ)(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)\u0301/g, "$1\u2060$2\u0301");
+ car = car.replace(/(η|ι|υ|i)(α|ο|ω|u|ε|e)\u0301/g, "$1\u2060$2\u0301");
+ 
  car = car.replace(/(Η|Ι|Υ|İ)(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)/g, "Y$2");
  car = car.replace(/(η|ι|υ|i)(α|ο|ω|u|ε|e)/g, "y$2");
  
