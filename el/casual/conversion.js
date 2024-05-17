@@ -4,10 +4,10 @@ car = document.transcription.text1.value;
  car = car.normalize('NFD');
  car = car.replace(/(\p{L}|\p{Mn})\u0308/ug, "\u2060$1\u0308");
  
- car = car.replace(/(Α|Ε|Η)Υ(\u0301)?(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Β$3");
- car = car.replace(/(Α|Ε|Η|α|ε|η)υ(\u0301)?(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1β$3");
- car = car.replace(/(Α|Ε|Η)Υ/g, "$1Φ");
- car = car.replace(/(Α|Ε|Η|α|ε|η)υ/g, "$1φ");
+ car = car.replace(/(Α|Ε|Η)Υ(\u0301)?(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/g, "$1Β$2$3");
+ car = car.replace(/(Α|Ε|Η|α|ε|η)υ(\u0301)?(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/g, "$1β$2$3");
+ car = car.replace(/(Α|Ε|Η)(\u0301)?Υ/g, "$1$2Φ");
+ car = car.replace(/(Α|Ε|Η|α|ε|η)(\u0301)?υ/g, "$1$2φ");
  
  car = car.replace(/(Β|β|Φ|φ)\u0301/g, "\u0301$1");
  
@@ -58,11 +58,17 @@ car = document.transcription.text1.value;
  car = car.replace(/Ψ/g, "Ps");
  car = car.replace(/ψ/g, "ps");
  
- car = car.replace(/Α(\u0301)?(Ι|ι)/g, "E");
- car = car.replace(/α(\u0301)?ι/g, "e");
+ car = car.replace(/Α(\u0301)?(Ι|ι)/g, "E$1");
+ car = car.replace(/α(\u0301)?ι/g, "e$1");
 
- car = car.replace(/(Ε|Η|Ο|Υ)(\u0301)?(Ι|ι)/g, "I");
- car = car.replace(/(ε|η|ο|υ)(\u0301)?ι/g, "i");
+ car = car.replace(/(Ε|Η|Ο|Υ|E)(\u0301)?(Ι|ι)/g, "$3$2");
+ car = car.replace(/(ε|η|ο|υ|e)(\u0301)?ι/g, "ι$2");
+ 
+ car = car.replace(/Α(\u0301)?(Ι|ι)/g, "E$1");
+ car = car.replace(/α(\u0301)?ι/g, "e$1");
+ 
+ car = car.replace(/(Ε|Η|Ο|Υ|E)(\u0301)?(Ι|ι)/g, "$3$2");
+ car = car.replace(/(ε|η|ο|υ|e)(\u0301)?ι/g, "ι$2");
  
  car = car.replace(/Γ(Ε|Η|Ι|Υ|E|I)(Α|Ο|Ω|U)/g, "Y$2");
  car = car.replace(/Γ(ε|η|ι|υ|e|i)(α|ο|ω|u)/g, "Y$2");
