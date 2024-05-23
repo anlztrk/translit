@@ -38,8 +38,8 @@ car = car.replace(/ʒ/g, "j");
 car = car.replace(/θ/g, "t");
 car = car.replace(/ɡ/g, "g");
 car = car.replace(/(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|p|r|s|ş|t|v|y|z)yû/g, "$1üğu");
-car = car.replace(/(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|p|r|s|ş|t|v|y|z)yu/g, "$1ü");
-car = car.replace(/(\u02c8|\u02cc)/g, "");
+car = car.replace(/(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|p|r|s|ş|t|v|y|z)yu/g, "$1û");
+car = car.replace(/(\u02c8|\u02cc|\u02d0)/g, "");
 document.transcription.text2.value=car;
 }
 function copy1()
