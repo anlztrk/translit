@@ -1,19 +1,53 @@
-﻿
+var car;
 var translit;
 
 function cyrlat () {
 translit = document.transcription.text1.value;
+car = document.transcription.text1.value;
+car = car.replace(/<</g, "«");
+car = car.replace(/>>/g, "»");
+translit = translit.replace(/<</g, "«");
+translit = translit.replace(/>>/g, "»");
+
 translit = translit.replace(/Ъ/g, "ъ");
+
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Я/g, "$1Ä");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)я/g, "$1ä");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ё/g, "$1Ö");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ё/g, "$1ö");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ю/g, "$1Ü");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ю/g, "$1ü");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Э/g, "$1Ë");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)э/g, "$1ë");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ы/g, "$1Ï");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ы/g, "$1ï");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Е/g, "$1E");
+translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)е/g, "$1e");
+
+translit = translit.replace(/Ь(А|Э|Ы|О|У|а|э|ы|о|у)/g, "Ь\u2019$1");
+translit = translit.replace(/ь(а|э|ы|о|у)/g, "ь\u2019$1");
+translit = translit.replace(/ЬЯ/g, "ЬA");
+translit = translit.replace(/ЬЕ/g, "ЬE");
+translit = translit.replace(/ЬИ/g, "ЬI");
+translit = translit.replace(/ЬЁ/g, "ЬO");
+translit = translit.replace(/ЬЮ/g, "ЬU");
+translit = translit.replace(/(Ь|ь)я/g, "$1a");
+translit = translit.replace(/(Ь|ь)е/g, "$1e");
+translit = translit.replace(/(Ь|ь)и/g, "$1i");
+translit = translit.replace(/(Ь|ь)ё/g, "$1o");
+translit = translit.replace(/(Ь|ь)ю/g, "$1u");
+
+translit = translit.replace(/ъ/g, "");
 
 translit = translit.replace(/а/g, "a");
 translit = translit.replace(/б/g, "b");
 translit = translit.replace(/в/g, "v");
 translit = translit.replace(/г/g, "g");
 translit = translit.replace(/д/g, "d");
-translit = translit.replace(/е/g, "\u0301e");
+translit = translit.replace(/е/g, "je");
 translit = translit.replace(/ж/g, "ž");
 translit = translit.replace(/з/g, "z");
-translit = translit.replace(/и/g, "\u0301i");
+translit = translit.replace(/и/g, "i");
 translit = translit.replace(/й/g, "j");
 translit = translit.replace(/к/g, "k");
 translit = translit.replace(/л/g, "l");
@@ -31,23 +65,22 @@ translit = translit.replace(/ц/g, "c");
 translit = translit.replace(/ч/g, "č");
 translit = translit.replace(/ш/g, "š");
 translit = translit.replace(/щ/g, "ś");
-translit = translit.replace(/ъ/g, "\u2bc");
 translit = translit.replace(/ы/g, "i");
-translit = translit.replace(/ь/g, "\u0301");
+translit = translit.replace(/ь/g, "y");
 translit = translit.replace(/э/g, "e");
-translit = translit.replace(/ю/g, "\u0301u");
-translit = translit.replace(/ё/g, "\u0301o");
-translit = translit.replace(/я/g, "\u0301a");
+translit = translit.replace(/ю/g, "ju");
+translit = translit.replace(/ё/g, "jo");
+translit = translit.replace(/я/g, "ja");
 
 translit = translit.replace(/А/g, "A");
 translit = translit.replace(/Б/g, "B");
 translit = translit.replace(/В/g, "V");
 translit = translit.replace(/Г/g, "G");
 translit = translit.replace(/Д/g, "D");
-translit = translit.replace(/Е/g, "\u0301\u200cE");
+translit = translit.replace(/Е/g, "Je");
 translit = translit.replace(/Ж/g, "Ž");
 translit = translit.replace(/З/g, "Z");
-translit = translit.replace(/И/g, "\u0301\u200cI");
+translit = translit.replace(/И/g, "I");
 translit = translit.replace(/Й/g, "J");
 translit = translit.replace(/К/g, "K");
 translit = translit.replace(/Л/g, "L");
@@ -66,24 +99,13 @@ translit = translit.replace(/Ч/g, "Č");
 translit = translit.replace(/Ш/g, "Š");
 translit = translit.replace(/Щ/g, "Ś");
 translit = translit.replace(/Ы/g, "I");
-translit = translit.replace(/Ь/g, "\u0301");
+translit = translit.replace(/Ь/g, "Y");
 translit = translit.replace(/Э/g, "E");
-translit = translit.replace(/Ю/g, "\u0301\u200cU");
-translit = translit.replace(/Ё/g, "\u0301\u200cO");
-translit = translit.replace(/Я/g, "\u0301\u200cA");
+translit = translit.replace(/Ю/g, "Ju");
+translit = translit.replace(/Ё/g, "Jo");
+translit = translit.replace(/Я/g, "Ja");
 
-translit = translit.replace(/(A|E|I|O|U)\u0301(A|E|I|O|U)/g, "$1J$2")
-translit = translit.replace(/(A|E|I|O|U|a|e|i|o|u)\u0301(a|e|i|o|u)/g, "$1j$2")
-translit = translit.replace(/[^\p{L}]\u0301(\p{Uppercase})/ug, "$1J$2");
-translit = translit.replace(/[^\p{L}]\u0301 (\p{Uppercase})(\p{Uppercase})/ug, "$1J$2$3");
-translit = translit.replace(/[^\p{L}]\u0301/ug, "$1j");
-translit = translit.normalize('NFC');
-translit = translit.replace(/(\p{Uppercase})(\p{Uppercase})\u0301/ug, "$1$2Í");
-translit = translit.replace(/(\p{Uppercase})\u0301(\p{Uppercase})/ug, "$1Í$2");
-translit = translit.replace(/\u0301/g, "í");
-
-translit = translit.replace(/«/g, "\u201e");
-translit = translit.replace(/»/g, "\u201c");
+document.transcription.text1.value = car;
 document.transcription.text2.value = translit;
 }
 

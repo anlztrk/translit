@@ -1,4 +1,4 @@
-﻿//  copyright lexilogos.com
+﻿
 var car;
 function newLineUppercase($0,$1) {return '\n' + $1.toUpperCase()};
 function latgeo () {

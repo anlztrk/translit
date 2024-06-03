@@ -1,4 +1,4 @@
-﻿//  copyright lexilogos.com
+﻿
 var car
 function geolat () {
 car = document.transcription.text1.value;
