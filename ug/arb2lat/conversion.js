@@ -247,6 +247,7 @@ translit = translit.replace(/ئ/g, "\u0027");
 translit = translit.replace(/\u060c/g, "\u002c"); 
 translit = translit.replace(/\u061f/g, "\u003f"); 
 translit = translit.replace(/\u061b/g, "\u003b");
+translit = translit.replace(/\u06d4/g, "\u002e"); 
 translit = translit.replace(/\u0640/g, "");
 document.transcription.text2.value=translit; 
 }
@@ -628,6 +629,7 @@ translit = translit.replace(/ئاللاھ/g, "الله");
 translit = translit.replace(/\u002c/g, "\u060c"); 
 translit = translit.replace(/\u003f/g, "\u061f"); 
 translit = translit.replace(/\u003b/g, "\u061b"); 
+translit = translit.replace(/\u002e/g, "\u06d4");
 document.transcription.text2.value=car; 
 document.transcription.text1.value=translit; 
 } 
