@@ -27,15 +27,6 @@ car = car.replace(/Gu(e|i)/g, "G$1");
 car = car.replace(/gu(e|i)/g, "g$1");
 car = car.replace(/Ü/g, "U");
 car = car.replace(/ü/g, "u");
-  
-car = car.replace(/(B|V)( )?(A|E|I|O|U)/g, "BV$2$3");
-car = car.replace(/(B|V)( )?(a|e|i|o|u)/g, "Bv$2$3");
-car = car.replace(/(b|v)( )?(a|e|i|o|u)/g, "bv$2$3");
-car = car.replace(/(A|E|I|O|U)(\u0301)?( )?(B|V)/g, "$1$2$3VB");
-car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?(b|v)/g, "$1$2$3vb");
-
-car = car.replace(/\u0020V(BV|bv)/g, "V $1");
-car = car.replace(/\u0020vbv/g, "v bv");
 
 car = car.replace(/N\u0303(A|E|I|O|U)/g, "NY$1");
 car = car.replace(/N\u0303(a|e|i|o|u)/g, "Ny$1");
@@ -54,6 +45,14 @@ car = car.replace(/Y/g, "İ");
 car = car.replace(/y/g, "i");
 car = car.replace(/Ẏ/g, "Y");
 car = car.replace(/ẏ/g, "y");
+  
+car = car.replace(/V/g, "B");
+car = car.replace(/v/g, "b");
+car = car.replace(/(A|E|I|O|U)(\u0301)?( )?B( )?(A|E|I|O|U)/g, "$1$2$3V$4$5");
+car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?b( )?(a|e|i|o|u)/g, "$1$2$3v$4$5");
+
+car = car.replace(/(A|E|I|O|U)(\u0301)?( )?B( )?(A|E|I|O|U)/g, "$1$2$3V$4$5");
+car = car.replace(/(A|E|I|O|U|a|e|i|o|u)(\u0301)?( )?b( )?(a|e|i|o|u)/g, "$1$2$3v$4$5");
 
 car = car.replace(/I/g, "İ");
 
