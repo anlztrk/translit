@@ -5,9 +5,15 @@ car = document.transcription.text1.value;
 car = car.normalize('NFD');
 car = car.replace(/C(H|h)/g, "Ç");
 car = car.replace(/ch/g, "ç");
-car = car.toUpperCase(/(H\p{Ll})/g);
+
+car = car.replace(/Ha/g, "A");
+car = car.replace(/He/g, "E");
+car = car.replace(/Hi/g, "I");
+car = car.replace(/Ho/g, "O");
+car = car.replace(/Hu/g, "U");
 car = car.replace(/H/g, "");
 car = car.replace(/h/g, "");
+
 car = car.replace(/J/g, "H");
 car = car.replace(/j/g, "h");
 car = car.replace(/Z/g, "Ṡ");
