@@ -5,6 +5,7 @@ car = document.transcription.text1.value;
 car = car.normalize('NFD');
 car = car.replace(/C(H|h)/g, "Ç");
 car = car.replace(/ch/g, "ç");
+car = car.replace(/(H\p{Ll})/g, $1.toUpperCase());
 car = car.replace(/H/g, "");
 car = car.replace(/h/g, "");
 car = car.replace(/J/g, "H");
