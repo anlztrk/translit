@@ -17,50 +17,51 @@ function transformString(input) {
     }
 
     function matchCase(source, target) {
+        if (source === 'I') return 'I';
+        if (source === 'ı') return 'ı';
+        if (source === 'İ') return 'İ';
+        if (source === 'i') return 'i';
         return source === source.toUpperCase() ? target.toUpperCase() : target.toLowerCase();
     }
 
-    function transform(input) {
-        let lastVowelIndex = -1;
-        let lastVowelType = null;
-        for (let i = 0; i < input.length; i++) {
-            if (isBackVowel(input[i]) || isFrontVowel(input[i])) {
-                lastVowelIndex = i;
-                lastVowelType = isBackVowel(input[i]) ? 'back' : 'front';
+    let lastVowelIndex = -1;
+    let lastVowelType = null;
+
+    for (let i = 0; i < input.length; i++) {
+        if (isBackVowel(input[i]) || isFrontVowel(input[i])) {
+            lastVowelIndex = i;
+            lastVowelType = isBackVowel(input[i]) ? 'back' : 'front';
+        }
+
+        if (input[i] === 'i' || input[i] === 'I' || input[i] === 'ı' || input[i] === 'İ') {
+            let foundVowel = false;
+            for (let j = i + 1; j < input.length && j <= i + 3; j++) {
+                if (isBackVowel(input[j])) {
+                    input = input.slice(0, i) + matchCase(input[i], 'ı') + input.slice(i + 1);
+                    foundVowel = true;
+                    break;
+                }
+                if (isFrontVowel(input[j])) {
+                    input = input.slice(0, i) + matchCase(input[i], 'i') + input.slice(i + 1);
+                    foundVowel = true;
+                    break;
+                }
+                if (!isConsonant(input[j])) {
+                    break;
+                }
             }
 
-            if (input[i] === 'i' || input[i] === 'I') {
-                let foundVowel = false;
-                for (let j = i + 1; j < input.length && j <= i + 3; j++) {
-                    if (isBackVowel(input[j])) {
-                        input = input.slice(0, i) + matchCase(input[i], 'ı') + input.slice(i + 1);
-                        foundVowel = true;
-                        break;
-                    }
-                    if (isFrontVowel(input[j])) {
-                        input = input.slice(0, i) + matchCase(input[i], 'i') + input.slice(i + 1);
-                        foundVowel = true;
-                        break;
-                    }
-                    if (!isConsonant(input[j])) {
-                        break;
-                    }
-                }
-
-                if (!foundVowel && lastVowelIndex !== -1) {
-                    if (lastVowelType === 'back') {
-                        input = input.slice(0, i) + matchCase(input[i], 'ı') + input.slice(i + 1);
-                    } else if (lastVowelType === 'front') {
-                        input = input.slice(0, i) + matchCase(input[i], 'i') + input.slice(i + 1);
-                    }
+            if (!foundVowel && lastVowelIndex !== -1) {
+                if (lastVowelType === 'back') {
+                    input = input.slice(0, i) + matchCase(input[i], 'ı') + input.slice(i + 1);
+                } else if (lastVowelType === 'front') {
+                    input = input.slice(0, i) + matchCase(input[i], 'i') + input.slice(i + 1);
                 }
             }
         }
-
-        return input;
     }
 
-    return transform(input);
+    return input;
 }
 
 function cyrlat () {
