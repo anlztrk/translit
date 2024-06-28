@@ -1,4 +1,70 @@
 ﻿var car;
+function transformString(input) {
+    const consonants = "BCÇDFGĞHJKLMNÑPQRSTVXYZbcçdfgğhklmnñpqrstvyz";
+    const backVowels = "AIUOaiuoı"; // Including 'ı'
+    const frontVowels = "ÄEİÖÜäeiöü";
+
+    function isConsonant(char) {
+        return consonants.includes(char);
+    }
+
+    function isBackVowel(char) {
+        return backVowels.includes(char);
+    }
+
+    function isFrontVowel(char) {
+        return frontVowels.includes(char);
+    }
+
+    function matchCase(source, target) {
+        return source === source.toUpperCase() ? target.toUpperCase() : target.toLowerCase();
+    }
+
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === 'i' || input[i] === 'I') {
+            let foundVowel = false;
+
+            for (let j = i + 1; j < input.length && j <= i + 3; j++) {
+                if (isBackVowel(input[j])) {
+                    input = input.slice(0, i) + matchCase(input[i], 'ı') + input.slice(i + 1);
+                    foundVowel = true;
+                    break;
+                }
+                if (isFrontVowel(input[j])) {
+                    input = input.slice(0, i) + matchCase(input[i], 'i') + input.slice(i + 1);
+                    foundVowel = true;
+                    break;
+                }
+                if (!isConsonant(input[j])) {
+                    break;
+                }
+            }
+
+            if (!foundVowel) {
+                if (i === input.length - 1 || input.slice(i + 1).match(/^[BCÇDFGĞHJKLMNÑPQRSTVXYZbcçdfgğhklmnñpqrstvyz]*$/)) {
+                    for (let k = i - 1; k >= 0; k--) {
+                        if (isBackVowel(input[k])) {
+                            input = input.slice(0, i) + matchCase(input[i], 'ı') + input.slice(i + 1);
+                            foundVowel = true;
+                            break;
+                        }
+                        if (isFrontVowel(input[k])) {
+                            input = input.slice(0, i) + matchCase(input[i], 'i') + input.slice(i + 1);
+                            foundVowel = true;
+                            break;
+                        }
+                        if (!isConsonant(input[k])) {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return input;
+}
+
 function cyrlat () {
 car = document.transcription.text1.value;
 translit = document.transcription.text1.value;
@@ -70,6 +136,8 @@ translit = document.transcription.text1.value;
   car = car.replace(/W/g, "V");
   car = car.replace(/ј/g, "j");
   car = car.replace(/Ј/g, "J");
+
+  car = transformString(car);
   document.transcription.text1.value=translit;
   document.transcription.text2.value=car;
 }
