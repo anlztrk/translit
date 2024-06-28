@@ -1,7 +1,7 @@
 var car;
 function transformString(input) {
     const consonants = "BCÇDFGĞHJKLMNÑPQRSTVXYZbcçdfgğhklmnñpqrstvyz";
-    const backVowels = "AIUOaiuoı";
+    const backVowels = "AIUOauoı";
     const frontVowels = "ÄEİÖÜäeiöü";
 
     function isConsonant(char) {
