@@ -73,10 +73,10 @@ function cyrlat () {
     car = car.replace(/Ј/g, "J");
     car = car.replace(/I/g, "İ");
 
-    car = car.replace(/[AIOUaıou][bcçdfgğhjklmnñpqrsştvxyz][bcçdfgğhjklmnñpqrsştvxyz]?[bcçdfgğhjklmnñpqrsştvxyz]?i/g, "$1$2$3$4ı");
-    car = car.replace(/[ÄEİÖÜeiöü][bcçdfgğhjklmnñpqrsştvxyz][bcçdfgğhjklmnñpqrsştvxyz]?[bcçdfgğhjklmnñpqrsştvxyz]?ı/g, "$1$2$3$4i");
-    car = car.replace(/[AIOU][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?[BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?İ/g, "$1$2$3$4I");
-    car = car.replace(/[ÄEİÖÜ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?[BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?I/g, "$1$2$3$4İ");
+    car = car.replace(/[AIOUaıou][bcçdfgğhjklmnñpqrsştvxyz][bcçdfgğhjklmnñpqrsştvxyz]?[bcçdfgğhjklmnñpqrsştvxyz]?i/g, "{1}{2}{3}{4}ı");
+    car = car.replace(/[ÄEİÖÜeiöü][bcçdfgğhjklmnñpqrsştvxyz][bcçdfgğhjklmnñpqrsştvxyz]?[bcçdfgğhjklmnñpqrsştvxyz]?ı/g, "{1}{2}{3}{4}i");
+    car = car.replace(/[AIOU][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?[BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?İ/g, "{1}{2}{3}{4}I");
+    car = car.replace(/[ÄEİÖÜ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?[BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?I/g, "{1}{2}{3}{4}İ");
     
     document.transcription.text1.value = translit;
     document.transcription.text2.value = car;
