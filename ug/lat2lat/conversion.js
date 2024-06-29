@@ -71,17 +71,6 @@ function cyrlat () {
     car = car.replace(/W/g, "V");
     car = car.replace(/ј/g, "j");
     car = car.replace(/Ј/g, "J");
-    car = car.replace(/I/g, "İ");
-
-    car = car.replace(/([AIOUaıou][bcçdfgğhjklmnñpqrsştvxyz][bcçdfgğhjklmnñpqrsştvxyz]?[bcçdfgğhjklmnñpqrsştvxyz]?)i/g, "$1ı");
-    car = car.replace(/([ÄEİÖÜeiöü][bcçdfgğhjklmnñpqrsştvxyz][bcçdfgğhjklmnñpqrsştvxyz]?[bcçdfgğhjklmnñpqrsştvxyz]?)ı/g, "$1i");
-    car = car.replace(/([AIOU][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?[BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?)İ/g, "$1I");
-    car = car.replace(/([ÄEİÖÜ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?[BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?)I/g, "$1İ");
-
-    car = car.replace(/i([bcçdfgğhjklmnñpqrsştvxyz][bcçdfgğhjklmnñpqrsştvxyz]?[bcçdfgğhjklmnñpqrsştvxyz]?[aıou])/g, "ı$1");
-    car = car.replace(/ı([bcçdfgğhjklmnñpqrsştvxyz][bcçdfgğhjklmnñpqrsştvxyz]?[bcçdfgğhjklmnñpqrsştvxyz]?[äeiöü])/g, "i$1");
-    car = car.replace(/İ([BCÇDFGĞHJKLMNÑPQRSŞTVXYZ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?[BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?[AIOU])/g, "I$1");
-    car = car.replace(/I([BCÇDFGĞHJKLMNÑPQRSŞTVXYZ][BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?[BCÇDFGĞHJKLMNÑPQRSŞTVXYZ]?)[ÄEİÖÜ]/g, "İ$1");
     
     document.transcription.text1.value = translit;
     document.transcription.text2.value = car;
