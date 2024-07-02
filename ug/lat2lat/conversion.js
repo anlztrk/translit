@@ -18,27 +18,28 @@ function cyrlat() {
              .replace(/s'h/g, "sh").replace(/S'h/g, "Sh").replace(/S'H/g, "SH")
              .replace(/z'h/g, "zh").replace(/Z'h/g, "Zh").replace(/Z'H/g, "ZH")
              .replace(/n'g/g, "ng").replace(/N'g/g, "Ng").replace(/N'G/g, "NG")
-             .replace(/n'g'h/g, "ngh").replace(/N'g'h/g, "Ngh").replace(/N'G'h/g, "NGh").replace(/N'G'H/g, "NGH")
-             .replace(/j/g, "c").replace(/e/g, "ä").replace(/ë/g, "e").replace(/é/g, "e").replace(/w/g, "v")
+             .replace(/n'g'h/g, "ngh").replace(/N'g'h/g, "Ngh").replace(/N'G'h/g, "NGh").replace(/N'G'H/g, "NGH");
+
+    car = car.replace(/j/g, "c").replace(/e/g, "ä").replace(/ë/g, "e").replace(/é/g, "e").replace(/w/g, "v")
              .replace(/J/g, "C").replace(/E/g, "Ä").replace(/Ë/g, "E").replace(/É/g, "E").replace(/W/g, "V")
              .replace(/ј/g, "j").replace(/Ј/g, "J").replace(/I/g, "İ");
 
     // Long regex replacements
     car = car.replace(/(A|I|O|U)(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ/g, "$1$2I$3I")
              .replace(/(A|I|O|U|a|ı|o|u)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i/g, "$1$2ı$3ı")
-             .replace(/(A|I|O|U)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}İ/g, "$1$2I")
+             .replace(/(A|I|O|U)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}İ/g, "$1$2İ")
              .replace(/(A|I|O|U|a|ı|o|u)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i/g, "$1$2ı")
              .replace(/(Ä|E|İ|Ö|Ü)(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I/g, "$1$2İ$3İ")
              .replace(/(Ä|E|İ|Ö|Ü|ä|e|i|ö|ü)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı/g, "$1$2i$3i")
-             .replace(/İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(A|I|O|U)/g, "I$1I$2$3")
-             .replace(/İ(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "I$1ı$2$3")                 
+             .replace(/İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(A|I|O|U)/g, "I$1$2$3")
+             .replace(/İ(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "I$1$2$3")                 
              .replace(/i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "ı$1ı$2$3")
              .replace(/İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(A|I|O|U)/g, "I$1$2")
              .replace(/İ(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "I$1$2")
              .replace(/i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "ı$1$2")
              .replace(/I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(Ä|E|İ|Ö|Ü)/g, "İ$1İ$2$3")
-             .replace(/I(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "İ$1i$2$3")
-             .replace(/ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "i$1i$2$3")
+             .replace(/I(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "İ$1ı$2$3")
+             .replace(/ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "ı$1ı$2$3")
              .replace(/I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(Ä|E|İ|Ö|Ü)/g, "I$1$2")
              .replace(/I(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "I$1$2")
              .replace(/ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "ı$1$2");
