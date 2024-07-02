@@ -31,9 +31,9 @@ function cyrlat() {
              .replace(/İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(A|I|O|U)/g, "I$1$2I$3$4")
              .replace(/İ(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "I$1$2ı$3$4")
              .replace(/i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "ı$1$2ı$3$4")
-             .replace(/I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(Ä|E|İ|Ö|Ü)/g, "I$1$2I$3$4")
-             .replace(/I(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "I$1$2ı$3$4")
-             .replace(/ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "ı$1$2ı$3$4");
+             .replace(/I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(Ä|E|İ|Ö|Ü)/g, "İ$1$2İ$3$4")
+             .replace(/I(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "İ$1$2i$3$4")
+             .replace(/ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "i$1$2i$3$4");
 
     document.transcription.text1.value = translit;
     document.transcription.text2.value = car;
