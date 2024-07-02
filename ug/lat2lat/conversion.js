@@ -5,27 +5,22 @@ function transformCar(car) {
     const frontVowels = "[äeiöüÄEİÖÜ]";
     const consonants = "[bcçdfgğhjklmnñpqrsştvxyzBCÇDFGĞHJKLMNÑPQRSŞTVXYZ]";
 
-    // Replace İ/i if followed by a back vowel (considering up to four consonants in between)
+    // First handle 'i' or 'İ' if followed by up to four consonants and then a vowel
     car = car.replace(new RegExp(`İ(?=${consonants}{0,4}${backVowels})`, 'g'), 'I');
     car = car.replace(new RegExp(`i(?=${consonants}{0,4}${backVowels})`, 'g'), 'ı');
-
-    // Replace İ/i if followed by a front vowel (considering up to four consonants in between)
     car = car.replace(new RegExp(`İ(?=${consonants}{0,4}${frontVowels})`, 'g'), 'İ');
     car = car.replace(new RegExp(`i(?=${consonants}{0,4}${frontVowels})`, 'g'), 'i');
 
-    // Use regex to find the last vowel before each I, i, İ, ı
-    car = car.replace(new RegExp(`([aäeıioöuüAÄEİOÖUÜ])([^aäeıioöuüAÄEİOÖUÜ]*)[Iİıi]`, 'g'), (match, p1, p2, p3, offset, string) => {
-        const lastVowel = p1;
-        const afterConsonants = p2;
-        const targetLetter = p3;
-        if (/[aıouAIOU]/.test(lastVowel)) {  // last vowel is a back vowel
-            return lastVowel + afterConsonants + (targetLetter === 'İ' || targetLetter === 'i' ? 'I' : 'ı');
-        } else {  // last vowel is a front vowel
-            return lastVowel + afterConsonants + (targetLetter === 'İ' || targetLetter === 'i' ? 'İ' : 'i');
+    // Handle case where 'i' or 'İ' has no following vowels but might have a preceding one
+    car = car.replace(new RegExp(`([aäeıioöuüAÄEİOÖUÜ])${consonants}{0,4}([Iİıi])`, 'g'), (match, p1, p2) => {
+        if (/[aıouAIOU]/.test(p1)) { // last vowel is a back vowel
+            return p1 + (p2 === 'İ' || p2 === 'i' ? 'I' : 'ı');
+        } else { // last vowel is a front vowel
+            return p1 + (p2 === 'İ' || p2 === 'i' ? 'İ' : 'i');
         }
     });
 
-    // Default case if no vowels are found before or after the specific letters
+    // Default case if no preceding or following vowels influence the character
     car = car.replace(/[Iİıi]/g, (match) => {
         return /[Iİ]/.test(match) ? 'İ' : 'i';
     });
