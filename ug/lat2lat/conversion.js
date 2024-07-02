@@ -26,8 +26,8 @@ function cyrlat() {
     // Long regex replacements
     car = car.replace(/(A|I|O|U)(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ/g, "$1$2I$3I")
              .replace(/(A|I|O|U|a|ı|o|u)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i/g, "$1$2ı$3ı")
-             .replace(/(A|I|O|U)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}İ/g, "$1$2I");
-             .replace(/(A|I|O|U|a|ı|o|u)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i/g, "$1$2ı");
+             .replace(/(A|I|O|U)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}İ/g, "$1$2I")
+             .replace(/(A|I|O|U|a|ı|o|u)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i/g, "$1$2ı")
              .replace(/(Ä|E|İ|Ö|Ü)(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I/g, "$1$2İ$3İ")
              .replace(/(Ä|E|İ|Ö|Ü|ä|e|i|ö|ü)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı/g, "$1$2i$3i")
              .replace(/İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(A|I|O|U)/g, "I$1I$2$3")
