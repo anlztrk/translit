@@ -1,8 +1,8 @@
 var car;
 
 function cyrlat () {
-car =document.transcription.text1.value;
-translit =document.transcription.text1.value;
+car = document.transcription.text1.value;
+translit = document.transcription.text1.value;
 translit = translit.replace(/é/g, "ë");
 translit = translit.replace(/É/g, "Ë");
 
@@ -99,7 +99,7 @@ document.transcription.text2.value = car;
 }
 
 function latcyr () {
-   car =document.transcription.text2.value;
+   car = document.transcription.text2.value;
 car = car.replace(/ngh/g, "n'g'h");
 car = car.replace(/Ngh/g, "N'g'h");
 car = car.replace(/NGh/g, "N'G'h");
@@ -144,13 +144,13 @@ document.transcription.text1.value = car;
 }
 
 function copy1() {
-textRange =document.transcription.text1.createTextRange();
+textRange = document.transcription.text1.createTextRange();
 textRange.execCommand("Copy");
 textRange = "";
 }
 
 function copy2() {
-textRange =document.transcription.text2.createTextRange();
+textRange = document.transcription.text2.createTextRange();
 textRange.execCommand("Copy");
 textRange = "";
 }
