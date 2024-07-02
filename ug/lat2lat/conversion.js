@@ -24,16 +24,24 @@ function cyrlat() {
              .replace(/ј/g, "j").replace(/Ј/g, "J").replace(/I/g, "İ");
 
     // Long regex replacements
-    car = car.replace(/(A|I|O|U)(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ/g, "$1$2I$3$4I")
-             .replace(/(A|I|O|U|a|ı|o|u)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i/g, "$1$2ı$3$4ı")
-             .replace(/(Ä|E|İ|Ö|Ü)(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I/g, "$1$2İ$3$4İ")
-             .replace(/(Ä|E|İ|Ö|Ü|ä|e|i|ö|ü)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı/g, "$1$2i$3$4i")
-             .replace(/İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(A|I|O|U)/g, "I$1$2I$3$4")
-             .replace(/İ(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "I$1$2ı$3$4")
-             .replace(/i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "ı$1$2ı$3$4")
-             .replace(/I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(Ä|E|İ|Ö|Ü)/g, "İ$1$2İ$3$4")
-             .replace(/I(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "İ$1$2i$3$4")
-             .replace(/ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "i$1$2i$3$4");
+    car = car.replace(/(A|I|O|U)(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ/g, "$1$2I$3I")
+             .replace(/(A|I|O|U|a|ı|o|u)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i/g, "$1$2ı$3ı")
+             .replace(/(A|I|O|U)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}İ/g, "$1$2I");
+             .replace(/(A|I|O|U|a|ı|o|u)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i/g, "$1$2ı");
+             .replace(/(Ä|E|İ|Ö|Ü)(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I/g, "$1$2İ$3İ")
+             .replace(/(Ä|E|İ|Ö|Ü|ä|e|i|ö|ü)(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı/g, "$1$2i$3i")
+             .replace(/İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(A|I|O|U)/g, "I$1I$2$3")
+             .replace(/İ(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "I$1ı$2$3")                 
+             .replace(/i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "ı$1ı$2$3")
+             .replace(/İ(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(A|I|O|U)/g, "I$1$2")
+             .replace(/İ(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "I$1$2")
+             .replace(/i(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(a|ı|o|u)/g, "ı$1$2")
+             .replace(/I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(Ä|E|İ|Ö|Ü)/g, "İ$1İ$2$3")
+             .replace(/I(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "İ$1i$2$3")
+             .replace(/ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "i$1i$2$3")
+             .replace(/I(B|C|Ç|D|F|G|Ğ|H|J|K|L|M|N|Ñ|P|Q|R|S|Ş|T|V|X|Y|Z){1,4}(Ä|E|İ|Ö|Ü)/g, "I$1$2")
+             .replace(/I(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "I$1$2")
+             .replace(/ı(b|c|ç|d|f|g|ğ|h|j|k|l|m|n|ñ|p|q|r|s|ş|t|v|x|y|z){1,4}(ä|e|i|ö|ü)/g, "ı$1$2");
 
     document.transcription.text1.value = translit;
     document.transcription.text2.value = car;
