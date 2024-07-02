@@ -1,28 +1,42 @@
 var car;
 
 function transformCar(car) {
-    const backVowels = "[aıouAIOU]";
-    const frontVowels = "[äeiöüÄEİÖÜ]";
-    const consonants = "[bcçdfgğhjklmnñpqrsştvxyzBCÇDFGĞHJKLMNÑPQRSŞTVXYZ]";
+    const backVowels = "aıouAIOU";
+    const frontVowels = "äeiöüÄEİÖÜ";
+    const consonants = "bcçdfgğhjklmnñpqrsştvxyzBCÇDFGĞHJKLMNÑPQRSŞTVXYZ";
+    const vowelPattern = `[${backVowels}${frontVowels}]`;
+    const consonantPattern = `[${consonants}]`;
 
-    // First handle 'i' or 'İ' if followed by up to four consonants and then a vowel
-    car = car.replace(new RegExp(`İ(?=${consonants}{0,4}${backVowels})`, 'g'), 'I');
-    car = car.replace(new RegExp(`i(?=${consonants}{0,4}${backVowels})`, 'g'), 'ı');
-    car = car.replace(new RegExp(`İ(?=${consonants}{0,4}${frontVowels})`, 'g'), 'İ');
-    car = car.replace(new RegExp(`i(?=${consonants}{0,4}${frontVowels})`, 'g'), 'i');
-
-    // Handle case where 'i' or 'İ' has no following vowels but might have a preceding one
-    car = car.replace(new RegExp(`([aäeıioöuüAÄEİOÖUÜ])${consonants}{0,4}([Iİıi])`, 'g'), (match, p1, p2) => {
-        if (/[aıouAIOU]/.test(p1)) { // last vowel is a back vowel
-            return p1 + (p2 === 'İ' || p2 === 'i' ? 'I' : 'ı');
-        } else { // last vowel is a front vowel
-            return p1 + (p2 === 'İ' || p2 === 'i' ? 'İ' : 'i');
+    // Function to determine the vowel type
+    function getVowelType(vowel) {
+        if (new RegExp(`[${backVowels}]`).test(vowel)) {
+            return 'back';
+        } else if (new RegExp(`[${frontVowels}]`).test(vowel)) {
+            return 'front';
         }
-    });
+        return null;
+    }
 
-    // Default case if no preceding or following vowels influence the character
-    car = car.replace(/[Iİıi]/g, (match) => {
-        return /[Iİ]/.test(match) ? 'İ' : 'i';
+    // Replace İ/i based on following vowel type within four consonants
+    car = car.replace(new RegExp(`i(?=${consonantPattern}{0,4}([${backVowels}]))`, 'g'), 'ı'); // i to ı if followed by back vowel
+    car = car.replace(new RegExp(`i(?=${consonantPattern}{0,4}([${frontVowels}]))`, 'g'), 'i'); // i to i if followed by front vowel
+
+    // Default replacements when no following vowel within four consonants
+    car = car.replace(/i/g, (match, offset, string) => {
+        const precedingText = string.substring(0, offset);
+        const lastVowelMatch = precedingText.match(new RegExp(`([${vowelPattern}])${consonantPattern}{0,4}$`));
+        
+        if (lastVowelMatch) {
+            const lastVowel = lastVowelMatch[1];
+            if (getVowelType(lastVowel) === 'back') {
+                return 'ı'; // i to ı based on last back vowel
+            } else {
+                return 'i'; // i to i based on last front vowel
+            }
+        }
+        
+        // Default to i if no clear preceding vowel context
+        return 'i';
     });
 
     return car;
