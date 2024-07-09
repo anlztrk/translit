@@ -1,6 +1,10 @@
-var car;
 function cyrlat () {
+var car;
+var translit;
 car = document.transcription.text1.value;
+car = car.replace(/Ä/g, "Ə");
+car = car.replace(/ä/g, "ə");
+translit = car;
 car = car.replace(/Ə(\p{L})/ug, "A$1");
 car = car.replace(/ə(\p{L})/ug, "a$1");
 car = car.replace(/Ə/g, "EH");
@@ -25,6 +29,7 @@ car = car.replace(/ş/g, "sh");
 car = car.replace(/q/g, "g");
 car = car.replace(/ö/g, "o");
 car = car.replace(/ü/g, "u");
+document.transcription.text1.value=translit;
 document.transcription.text2.value=car;
 }
 function copy1()
