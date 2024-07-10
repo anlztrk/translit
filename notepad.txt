@@ -1,0 +1,47 @@
+<table>
+<tr>
+<th colspan="3" style="text-align:center;">SER</th>
+</tr>
+<tr>
+<th style="text-align:center;">Türkçe</th>
+<th style="text-align:center;">Şahıs</th>
+<th style="text-align:center;">Fiil</th>
+</tr><tr>
+<td style="text-align:center;">ben</td>
+<td style="text-align:center;">yo</td>
+<td style="text-align:center;">soy</td>
+</tr><tr>
+<td style="text-align:center;">sen</td>
+<td style="text-align:center;">tú</td>
+<td style="text-align:center;">eres</td>
+</tr><tr>
+<td style="text-align:center;"><em>siz</em> (1. tekil)</td>
+<td style="text-align:center;">usted</td>
+<td rowspan="3" style="vertical-align:middle; text-align:center;">es</td>
+</tr><tr>
+<td rowspan="2" style="vertical-align:middle; text-align:center;"><em>o</em></td>
+<td style="text-align:center;">él</td>
+</tr><tr>
+<td style="text-align:center;">ella</td>
+</tr><tr>
+<td rowspan="2" style="vertical-align:middle; text-align:center;"><em>biz</em></td>
+<td style="text-align:center;">nosotros</td>
+<td rowspan="2" style="vertical-align:middle; text-align:center;">somos</td>
+</tr><tr>
+<td style="vertical-align:middle; text-align:center;">nosotras</td>
+</tr><tr>
+<td rowspan="2" style="vertical-align:middle; text-align:center;"><em>siz</em> (2. çoğul)</td>
+<td style="text-align:center;">vosotros</td>
+<td rowspan="2" style="vertical-align:middle; text-align:center;">sois</td>
+</tr><tr>
+<td style="text-align:center;">vosotras</td>
+</tr><tr>
+<td style="text-align:center;"><em>sizler</em></td>
+<td style="text-align:center;">ustedes</td>
+<td rowspan="3" style="vertical-align:middle; text-align:center;">son</td>
+</tr><tr>
+<td rowspan="2" style="vertical-align:middle; text-align:center;"><em>onlar</em></td>
+<td style="text-align:center;">ellos</td>
+</tr><tr>
+<td style="text-align:center;">ellas</td>
+</table>
