@@ -39,288 +39,6 @@ Here's the vowels and consonants of my dialect. For each I give the IPA, the rep
 
 The IPA is given in Unicode; if it doesn't look right you have a nasty old non-Unicode-compliant browser.
 
-> **
-> 
-> Vowels
-> 
-> **
-> 
-> **
-> 
-> Consonants
-> 
-> **
-> 
-> **IPA**
-> 
-> **Phoneme**
-> 
-> **Samples**
-> 
-> **IPA**
-> 
-> **Phoneme**
-> 
-> **Samples**
-> 
-> e
-> 
-> eɪ
-> 
-> rate
-> 
-> p
-> 
-> p
-> 
-> paper
-> 
-> æ
-> 
-> æ
-> 
-> rat
-> 
-> b
-> 
-> b
-> 
-> book
-> 
-> i
-> 
-> i
-> 
-> meet, machine
-> 
-> t
-> 
-> t
-> 
-> take
-> 
-> ɛ
-> 
-> ɛ
-> 
-> met, dread
-> 
-> d
-> 
-> d
-> 
-> dead
-> 
-> aj
-> 
-> aɪ
-> 
-> bite, cycle
-> 
-> g
-> 
-> g
-> 
-> get
-> 
-> ɪ
-> 
-> ɪ
-> 
-> bit, lick
-> 
-> k
-> 
-> k
-> 
-> cape, talk, quite
-> 
-> o
-> 
-> oʊ
-> 
-> note, sow
-> 
-> m
-> 
-> m
-> 
-> moon
-> 
-> a
-> 
-> ɑ
-> 
-> not, clock
-> 
-> n
-> 
-> n
-> 
-> new
-> 
-> ju
-> 
-> ju
-> 
-> cute, you
-> 
-> ŋ
-> 
-> ŋ
-> 
-> sing, think
-> 
-> ʌ
-> 
-> ʌ
-> 
-> cut, come
-> 
-> f
-> 
-> f
-> 
-> four, physics
-> 
-> v
-> 
-> v
-> 
-> vine
-> 
-> u
-> 
-> u
-> 
-> coot
-> 
-> θ
-> 
-> θ
-> 
-> thin
-> 
-> ɔ
-> 
-> ɔ
-> 
-> caught, dog
-> 
-> ð
-> 
-> ð
-> 
-> this
-> 
-> ʊ
-> 
-> ʊ
-> 
-> cook, put
-> 
-> s
-> 
-> s
-> 
-> so
-> 
-> ə
-> 
-> ə
-> 
-> above, cynic, until
-> 
-> z
-> 
-> z
-> 
-> zoo
-> 
-> ʃ
-> 
-> ʃ
-> 
-> shack
-> 
-> aw
-> 
-> aʊ
-> 
-> crowd, loud
-> 
-> ʒ
-> 
-> ʒ
-> 
-> measure
-> 
-> oj
-> 
-> oɪ
-> 
-> boy, droid
-> 
-> tʃ
-> 
-> tʃ
-> 
-> chew
-> 
-> dʒ
-> 
-> dʒ
-> 
-> judge
-> 
-> j
-> 
-> j
-> 
-> you, million
-> 
-> r
-> 
-> ɹ
-> 
-> ran
-> 
-> w
-> 
-> w
-> 
-> wait, cow
-> 
-> l
-> 
-> l
-> 
-> late
-> 
-> h
-> 
-> h
-> 
-> hang
-> 
-> ɚ
-> 
-> əɹ
-> 
-> search, manor, bird
-> 
-> n̩
-> 
-> ən
-> 
-> button, happen
-> 
-> l̩
-> 
-> əl
-> 
-> battle, final
-
 ### Who cares about dialects?
 
 Ideally you shouldn't have to worry about my dialect at all: you could simply take (say) ɛ to represent whatever _you_ pronounce as the vowel in met. Unfortunately, English dialects are not uniform enough to share a single phonology. There are many words that are not only _pronounced_ differently in different dialects-- that is, they have a distinct _phonetic_ realization-- but also have their own _phonemic_ representation.
@@ -391,41 +109,35 @@ English has more phonemes than the alphabet has available symbols; the usual exp
 
 1. Make the following unconditional replacements:
 
-ch
-
-tʃ
-
-sh
-
-ʃ
-
-ph
-
-f
-
-th
-
-θ
-
-qu
-
-kw
-
-wr
-
-ɹ
-
-wh
-
-w
-
-xh
-
-x
-
-rh
-
-ɹ
+<table border=1 cellspacing=0 cellpadding=0>
+	  <td> <cite>ch</cite>     
+	  <td> <tt>tʃ</tt>    
+	</tr><tr>
+	  <td> <cite>sh</cite>
+	  <td> <tt>ʃ</tt>
+	</tr><tr>
+	  <td> <cite>ph</cite>
+	  <td> <tt>f</tt>
+	</tr><tr>
+	  <td> <cite>th</cite>
+	  <td> <tt>θ</tt>
+	</tr><tr>
+	  <td> <cite>qu</cite>
+	  <td> <tt>kw</tt>
+	</tr><tr>
+	  <td> <cite>wr</cite>
+	  <td> <tt>ɹ</tt>
+	</tr><tr>
+	  <td> <cite>wh</cite>
+	  <td> <tt>w</tt>
+	</tr><tr>
+	  <td> <cite>xh</cite>
+	  <td> <tt>x</tt>
+	</tr><tr>
+	  <td> <cite>rh</cite>
+	  <td> <tt>ɹ</tt>
+	</tr>
+	</table>
 
 Before an o, replace wh with h instead: who, whore, whole.
 
@@ -640,77 +352,63 @@ Besides the long/short trick, English expands its repertoire of vowel representa
 
 37. Make the following substitutions:
 
-eau
-
-oʊ
-
-ai
-
-eɪ
-
-au, aw
-
-ɔ
-
-ee
-
-i
-
-ea
-
-i
-
-ei
-
-eɪ
-
-eo
-
-iə
-
-eu, ew
-
-ju
-
-ie
-
-i
-
-iV
-
-iə
-
-oa
-
-oʊ
-
-oe
-
-oʊ
-
-oo
-
-u
-
-ou, ow
-
-aʊ
-
-oi
-
-oɪ
-
-ua
-
-juə
-
-ue
-
-u
-
-ui
-
-u
+<table border=1 cellspacing=0 cellpadding=0>
+	<tr>
+	  <td> <cite>eau</cite>      
+	  <td> <tt>oʊ</tt>      
+	</tr><tr>
+	  <td> <cite>ai</cite>
+	  <td> <tt>eɪ</tt>
+	</tr><tr>
+	  <td> <cite>au, aw</cite>
+	  <td> <tt>ɔ</tt>
+	</tr><tr>
+	  <td> <cite>ee</cite>
+	  <td> <tt>i</tt>
+	</tr><tr>
+	  <td> <cite>ea</cite>
+	  <td> <tt>i</tt>
+	</tr><tr>
+	  <td> <cite>ei</cite>
+	  <td> <tt>eɪ</tt>
+	</tr><tr>
+	  <td> <cite>eo</cite>
+	  <td> <tt>iə</tt>
+	</tr><tr>
+	  <td> <cite>eu, ew</cite>
+	  <td> <tt>ju</tt>
+	</tr><tr>
+	  <td> <cite>ie</cite>
+	  <td> <tt>i</tt>
+	</tr><tr>
+	  <td> <cite>iV</cite>
+	  <td> <tt>iə</tt>
+	</tr><tr>
+	  <td> <cite>oa</cite>
+	  <td> <tt>oʊ</tt>
+	</tr><tr>
+	  <td> <cite>oe</cite>
+	  <td> <tt>oʊ</tt>
+	</tr><tr>
+	  <td> <cite>oo</cite>
+	  <td> <tt>u</tt>
+	</tr><tr>
+	  <td> <cite>ou, ow</cite>
+	  <td> <tt>aʊ</tt>
+	</tr><tr>
+	  <td> <cite>oi</cite>
+	  <td> <tt>oɪ</tt>
+	</tr><tr>
+	  <td> <cite>ua</cite>
+	  <td> <tt>juə</tt>
+	</tr><tr>
+	  <td> <cite>ue</cite>
+	  <td> <tt>u</tt>
+	</tr><tr>
+	  <td> <cite>ui</cite>
+	  <td> <tt>u</tt>
+	</tr>
+	</table>
 
 Again, the program is not smart enough to recognize when the digraph spans a morpheme boundary, and thus should be treated as two separate vowels: goer = goʊəɹ, coaxial = koʊæksiəl.
 
