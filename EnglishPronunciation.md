@@ -58,7 +58,7 @@ Thus g refers to the letter , while g refers to the sound /g/, and I will write 
 
 Linguists can take the 'pronunciations' as **phonemic**; e.g. I haven't attempted to indicate aspiration, the flapping of medial t and d, the appearance of clear and dark l, etc. I indicate some but not all vowel reductions (basically, those that are reduced in all forms of the morpheme).
 
-# represents the beginning or end of a word. For instance, #rh represents an rh that begins a word; g# refers to a final g.
+\# represents the beginning or end of a word. For instance, #rh represents an rh that begins a word; g# refers to a final g.
 
 Capital letters represent variables; e.g. V represents any vowel.
 
