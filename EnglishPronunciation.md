@@ -54,7 +54,7 @@ Some examples:
 
 **Spellings** are in teal italics; **pronunciations** are in blue Courier. This convention avoids cluttering the text with brackets and quotation marks.
 
-Thus g refers to the letter , while g refers to the sound /g/, and I will write that laugh is pronounced læf.
+Thus g refers to the letter , while g refers to the sound /g/, and I will write that laugh is pronounced [læf].
 
 Linguists can take the 'pronunciations' as **phonemic**; e.g. I haven't attempted to indicate aspiration, the flapping of medial t and d, the appearance of clear and dark l, etc. I indicate some but not all vowel reductions (basically, those that are reduced in all forms of the morpheme).
 
