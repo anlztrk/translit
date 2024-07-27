@@ -136,26 +136,31 @@ function cyrlat () {
   car = car.replace(/ᇂ/g, 'т');
 
   car = car.replace(/ᅡ/g, 'а');
-  car = car.replace(/ᅢ/g, 'ә');
+  car = car.replace(/ᅢ/g, 'э');
   car = car.replace(/ᅣ/g, 'я');
-  car = car.replace(/ᅤ/g, 'йә');
-  car = car.replace(/ᅥ/g, 'ӑ');
-  car = car.replace(/ᅦ/g, 'э');
-  car = car.replace(/ᅧ/g, 'йӑ');
-  car = car.replace(/ᅨ/g, 'е');
+  car = car.replace(/ᅤ/g, 'йэ');
+  car = car.replace(/ᅥ/g, 'o');
+  car = car.replace(/ᅦ/g, 'е');
+  car = car.replace(/ᅧ/g, 'йo');
+  car = car.replace(/ᅨ/g, 'йе');
   car = car.replace(/ᅩ/g, 'o');
   car = car.replace(/ᅪ/g, 'ва');
-  car = car.replace(/ᅫ/g, 'вә');
+  car = car.replace(/ᅫ/g, 'вэ');
   car = car.replace(/ᅬ/g, 'ве');
   car = car.replace(/ᅭ/g, 'ё');
   car = car.replace(/ᅮ/g, 'у');
-  car = car.replace(/ᅯ/g, 'вӑ');
+  car = car.replace(/ᅯ/g, 'вo');
   car = car.replace(/ᅰ/g, 'ве');
   car = car.replace(/ᅱ/g, 'ви');
   car = car.replace(/ᅲ/g, 'ю');
   car = car.replace(/ᅳ/g, 'ы');
   car = car.replace(/ᅴ/g, 'ый');
-  car = car.replace(/ᅵ/g, 'и');
+  car = car.replace(/ᅵ/g, 'и');   
+  
+  car = car.replace(/ьа/g, 'я');
+  car = car.replace(/ьэ/g, 'е');
+  car = car.replace(/ьo/g, 'ё');
+  car = car.replace(/ьу/g, 'ю');
   car = car.normalize('NFC');
 document.transcription.text2.value = car;
 }
