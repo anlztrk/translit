@@ -151,12 +151,12 @@ function cyrlat () {
   car = car.replace(/ᅩ/g, 'o');
   car = car.replace(/ᅪ/g, 'va');
   car = car.replace(/ᅫ/g, 've');
-  car = car.replace(/ᅬ/g, 'ö');
+  car = car.replace(/ᅬ/g, 've');
   car = car.replace(/ᅭ/g, 'yo');
   car = car.replace(/ᅮ/g, 'u');
   car = car.replace(/ᅯ/g, 'vô');
   car = car.replace(/ᅰ/g, 've');
-  car = car.replace(/ᅱ/g, 'ü');
+  car = car.replace(/ᅱ/g, 'vi');
   car = car.replace(/ᅲ/g, 'yu');
   car = car.replace(/ᅳ/g, 'ı');
   car = car.replace(/ᅴ/g, 'ıy');
