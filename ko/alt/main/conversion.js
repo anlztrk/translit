@@ -151,9 +151,9 @@ function cyrlat () {
   car = car.replace(/ᅢ/g, 'e');
   car = car.replace(/ᅣ/g, 'ya');
   car = car.replace(/ᅤ/g, 'ye');
-  car = car.replace(/ᅥ/g, 'ŏ');
+  car = car.replace(/ᅥ/g, 'ơ ');
   car = car.replace(/ᅦ/g, 'é');
-  car = car.replace(/ᅧ/g, 'yŏ');
+  car = car.replace(/ᅧ/g, 'yơ');
   car = car.replace(/ᅨ/g, 'yé');
   car = car.replace(/ᅩ/g, 'o');
   car = car.replace(/ᅪ/g, 'wa');
@@ -161,12 +161,12 @@ function cyrlat () {
   car = car.replace(/ᅬ/g, 'wé');
   car = car.replace(/ᅭ/g, 'yo');
   car = car.replace(/ᅮ/g, 'u');
-  car = car.replace(/ᅯ/g, 'wŏ');
+  car = car.replace(/ᅯ/g, 'wơ');
   car = car.replace(/ᅰ/g, 'wé');
   car = car.replace(/ᅱ/g, 'wi');
   car = car.replace(/ᅲ/g, 'yu');
-  car = car.replace(/ᅳ/g, 'ŭ');
-  car = car.replace(/ᅴ/g, 'ŭi');
+  car = car.replace(/ᅳ/g, 'ư');
+  car = car.replace(/ᅴ/g, 'ưi');
   car = car.replace(/ᅵ/g, 'i');
 document.transcription.text2.value = car;
 }
