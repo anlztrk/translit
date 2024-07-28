@@ -1,4 +1,4 @@
-var car;
+﻿var car;
 
 function cyrlat () {
   car = document.transcription.text1.value;
@@ -97,12 +97,12 @@ function cyrlat () {
   car = car.replace(/씨/g, 'ṡhi');
   car = car.replace(/샤/g, 'shya');
   car = car.replace(/쌰/g, 'ṡhya');
-  car = car.replace(/섀/g, 'shye');
-  car = car.replace(/썌/g, 'ṡhye');
-  car = car.replace(/셔/g, 'shyơ');
+  car = car.replace(/섀/g, 'shyè');
+  car = car.replace(/썌/g, 'ṡhyè');
+  car = car.replace(/셔/g, 'shyõ');
   car = car.replace(/쎠/g, 'ṡhyõ');
-  car = car.replace(/셰/g, 'shyé');
-  car = car.replace(/쎼/g, 'ṡhyé');
+  car = car.replace(/셰/g, 'shye');
+  car = car.replace(/쎼/g, 'ṡhye');
   car = car.replace(/쇼/g, 'shyo');
   car = car.replace(/쑈/g, 'ṡhyo');
   car = car.replace(/슈/g, 'shyu');
@@ -148,21 +148,21 @@ function cyrlat () {
   car = car.replace(/ᇂ/g, 't');
 
   car = car.replace(/ᅡ/g, 'a');
-  car = car.replace(/ᅢ/g, 'e');
+  car = car.replace(/ᅢ/g, 'è');
   car = car.replace(/ᅣ/g, 'ya');
-  car = car.replace(/ᅤ/g, 'ye');
+  car = car.replace(/ᅤ/g, 'yè');
   car = car.replace(/ᅥ/g, 'õ');
-  car = car.replace(/ᅦ/g, 'é');
+  car = car.replace(/ᅦ/g, 'e');
   car = car.replace(/ᅧ/g, 'yõ');
-  car = car.replace(/ᅨ/g, 'yé');
+  car = car.replace(/ᅨ/g, 'ye');
   car = car.replace(/ᅩ/g, 'o');
   car = car.replace(/ᅪ/g, 'wa');
-  car = car.replace(/ᅫ/g, 'we');
-  car = car.replace(/ᅬ/g, 'wé');
+  car = car.replace(/ᅫ/g, 'wè');
+  car = car.replace(/ᅬ/g, 'we');
   car = car.replace(/ᅭ/g, 'yo');
   car = car.replace(/ᅮ/g, 'u');
   car = car.replace(/ᅯ/g, 'wõ');
-  car = car.replace(/ᅰ/g, 'wé');
+  car = car.replace(/ᅰ/g, 'we');
   car = car.replace(/ᅱ/g, 'wi');
   car = car.replace(/ᅲ/g, 'yu');
   car = car.replace(/ᅳ/g, 'ũ');
