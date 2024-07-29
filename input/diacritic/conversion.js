@@ -13,6 +13,7 @@ car = car.replace(/\u0023hook(above)?\u0023/g, "\u0309");
 car = car.replace(/\u0023ring(above)?\u0023/g, "\u030a");
 car = car.replace(/\u0023doubleacute\u0023/g, "\u030b");
 car = car.replace(/\u0023(caron|hacek|hachek)\u0023/g, "\u030c");
+car = car.replace(/\u0023(turned)?commaabove\u0023/g, "\u0312");
 car = car.replace(/\u0023acute(accent)?below\u0023/g, "\u0317");
 car = car.replace(/\u0023horn\u0023/g, "\u031b");
 car = car.replace(/\u0023dotbelow\u0023/g, "\u0323");
