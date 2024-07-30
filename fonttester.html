@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>/*
+@font-face {
+  font-family: 'LastResort-Regular';
+  src: local('Last Resort');
+       url('../LastResort-Regular.woff2') format('woff2');
+       url('../LastResort-Regular.woff') format('woff');
+}
+*/
+body {
+  background-color: white;
+  font-size: 20px;
+}
+.table, td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  font-family: 'Last Resort',LastResort-Regular;
+  padding: 15px;
+}
+</style>
+<script type="text/javascript">
+function changeFont() {
+  var textField = document.getElementById('fontname');
+  var value = textField.value;  
+  var tables = document.querySelectorAll('.table, .table td');
+  tables.forEach(function(table) {
+    table.style.fontFamily = value + ", 'Last Resort', LastResort-Regular";
+  });
+}
+
+function loadGoogleFont() {
+  var textField = document.getElementById('fontname');
+  var fontName = textField.value.replace(/ /g, '+');
+  var linkId = 'google-font-link';
+
+  // Remove existing Google Font link if present
+  var existingLink = document.getElementById(linkId);
+  if (existingLink) {
+    existingLink.parentNode.removeChild(existingLink);
+  }
+
+  // Create new Google Font link
+  var link = document.createElement('link');
+  link.id = linkId;
+  link.href = 'https://fonts.googleapis.com/css2?family=' + fontName + '&display=swap';
+  link.rel = 'stylesheet';
+  document.head.appendChild(link);
+
+  // Apply the Google Font to tables
+  var tables = document.querySelectorAll('.table, .table td');
+  tables.forEach(function(table) {
+    table.style.fontFamily = textField.value + ", 'Last Resort', LastResort-Regular";
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var textField = document.getElementById('fontname');
+  textField.addEventListener('keyup', changeFont);
+});
+</script>
+</head>
+<body>
+Font to be previewed:
+  <form name="typeface"> 
+    <textarea id="fontname" name="fontname"></textarea> 
+    <br>
+    <button type="button" onclick="loadGoogleFont()">Apply a Google Font</button>
+  </form>
+  <br> 
+  <br> 
+Base set:
+<br><br> 
+<table class="table">
+<tbody><tr>
+<td align="center">A</td>
+<td align="center">Á</td>
+<td align="center">Ă</td>
+<td align="center">Ǎ</td>
+<td align="center">Â</td>
+<td align="center">Ä</td>
+<td align="center">Ạ</td>
+<td align="center">À</td>
+<td align="center">Ā</td>
+<td align="center">Ą</td>
+</tr>
+<tr>
+<td align="center">Å</td>
+<td align="center">Ã</td>
+<td align="center">Æ</td>
+<td align="center">B</td>
+<td align="center">Ḅ</td>
+<td align="center">Ɓ</td>
+<td align="center">C</td>
+<td align="center">Ć</td>
+<td align="center">Č</td>
+<td align="center">Ç</td>
+</tr>
+<tr>
+<td align="center">Ĉ</td>
+<td align="center">Ċ</td>
+<td align="center">D</td>
+<td align="center">Ð</td>
+<td align="center">Ď</td>
+<td align="center">Đ</td>
+<td align="center">Ḍ</td>
+<td align="center">Ɗ</td>
+<td align="center">E</td>
+<td align="center">É</td>
+</tr>
+<tr>
+<td align="center">Ĕ</td>
+<td align="center">Ě</td>
+<td align="center">Ê</td>
+<td align="center">Ë</td>
+<td align="center">Ė</td>
+<td align="center">Ẹ</td>
+<td align="center">È</td>
+<td align="center">Ē</td>
+<td align="center">Ę</td>
+<td align="center">Ɛ</td>
+</tr>
+<tr>
+<td align="center">Ǝ</td>
+<td align="center">Ẽ</td>
+<td align="center">F</td>
+<td align="center">G</td>
+<td align="center">Ğ</td>
+<td align="center">Ĝ</td>
+<td align="center">Ģ</td>
+<td align="center">Ġ</td>
+<td align="center">Ḡ</td>
+<td align="center">Ǧ</td>
+</tr>
+<tr>
+<td align="center">H</td>
+<td align="center">Ħ</td>
+<td align="center">Ĥ</td>
+<td align="center">Ḧ</td>
+<td align="center">Ḥ</td>
+<td align="center">I</td>
+<td align="center">Í</td>
+<td align="center">Ĭ</td>
+<td align="center">Ǐ</td>
+<td align="center">Î</td>
+</tr>
+<tr>
+<td align="center">Ï</td>
+<td align="center">İ</td>
+<td align="center">Ị</td>
+<td align="center">Ì</td>
+<td align="center">Ī</td>
+<td align="center">Į</td>
+<td align="center">Ɨ</td>
+<td align="center">Ĩ</td>
+<td align="center">J</td>
+<td align="center">Ĵ</td>
+</tr>
+<tr>
+<td align="center">K</td>
+<td align="center">Ķ</td>
+<td align="center">Ƙ</td>
+<td align="center">L</td>
+<td align="center">Ĺ</td>
+<td align="center">Ľ</td>
+<td align="center">Ļ</td>
+<td align="center">Ł</td>
+<td align="center">M</td>
+<td align="center">N</td>
+</tr>
+<tr>
+<td align="center">Ń</td>
+<td align="center">Ň</td>
+<td align="center">Ņ</td>
+<td align="center">Ṅ</td>
+<td align="center">Ṇ</td>
+<td align="center">Ɲ</td>
+<td align="center">Ñ</td>
+<td align="center">Ŋ</td>
+<td align="center">O</td>
+<td align="center">Ó</td>
+</tr>
+<tr>
+<td align="center">Ŏ</td>
+<td align="center">Ǒ</td>
+<td align="center">Ô</td>
+<td align="center">Ö</td>
+<td align="center">Ọ</td>
+<td align="center">Ò</td>
+<td align="center">Ő</td>
+<td align="center">Ō</td>
+<td align="center">Ɔ</td>
+<td align="center">Ø</td>
+</tr>
+<tr>
+<td align="center">Õ</td>
+<td align="center">Œ</td>
+<td align="center">P</td>
+<td align="center">Ṗ</td>
+<td align="center">Þ</td>
+<td align="center">Q</td>
+<td align="center">R</td>
+<td align="center">Ŕ</td>
+<td align="center">Ř</td>
+<td align="center">Ŗ</td>
+</tr>
+<tr>
+<td align="center">S</td>
+<td align="center">Ś</td>
+<td align="center">Š</td>
+<td align="center">Ş</td>
+<td align="center">Ŝ</td>
+<td align="center">Ș</td>
+<td align="center">Ṣ</td>
+<td align="center">ẞ</td>
+<td align="center">Ə</td>
+<td align="center">T</td>
+</tr>
+<tr>
+<td align="center">Ť</td>
+<td align="center">Ţ</td>
+<td align="center">Ț</td>
+<td align="center">U</td>
+<td align="center">Ú</td>
+<td align="center">Ŭ</td>
+<td align="center">Ǔ</td>
+<td align="center">Û</td>
+<td align="center">Ü</td>
+<td align="center">Ụ</td>
+</tr>
+<tr>
+<td align="center">Ù</td>
+<td align="center">Ű</td>
+<td align="center">Ū</td>
+<td align="center">Ų</td>
+<td align="center">Ů</td>
+<td align="center">Ũ</td>
+<td align="center">V</td>
+<td align="center">Ʌ</td>
+<td align="center">W</td>
+<td align="center">Ẃ</td>
+</tr>
+<tr>
+<td align="center">Ŵ</td>
+<td align="center">Ẅ</td>
+<td align="center">Ẁ</td>
+<td align="center">X</td>
+<td align="center">Ẍ</td>
+<td align="center">Y</td>
+<td align="center">Ý</td>
+<td align="center">Ŷ</td>
+<td align="center">Ÿ</td>
+<td align="center">Ỳ</td>
+</tr>
+<tr>
+<td align="center">Ƴ</td>
+<td align="center">Ỹ</td>
+<td align="center">Ȳ</td>
+<td align="center">Z</td>
+<td align="center">Ź</td>
+<td align="center">Ž</td>
+<td align="center">Ż</td>
+<td align="center">Ẓ</td>
+<td align="center">a</td>
+<td align="center">á</td>
+</tr>
+<tr>
+<td align="center">ă</td>
+<td align="center">ǎ</td>
+<td align="center">â</td>
+<td align="center">ä</td>
+<td align="center">ạ</td>
+<td align="center">à</td>
+<td align="center">ā</td>
+<td align="center">ą</td>
+<td align="center">å</td>
+<td align="center">ã</td>
+</tr>
+<tr>
+<td align="center">æ</td>
+<td align="center">b</td>
+<td align="center">ḅ</td>
+<td align="center">ɓ</td>
+<td align="center">c</td>
+<td align="center">ć</td>
+<td align="center">č</td>
+<td align="center">ç</td>
+<td align="center">ĉ</td>
+<td align="center">ċ</td>
+</tr>
+<tr>
+<td align="center">d</td>
+<td align="center">ð</td>
+<td align="center">ď</td>
+<td align="center">đ</td>
+<td align="center">ḍ</td>
+<td align="center">ɗ</td>
+<td align="center">e</td>
+<td align="center">é</td>
+<td align="center">ĕ</td>
+<td align="center">ě</td>
+</tr>
+<tr>
+<td align="center">ê</td>
+<td align="center">ë</td>
+<td align="center">ė</td>
+<td align="center">ẹ</td>
+<td align="center">è</td>
+<td align="center">ē</td>
+<td align="center">ę</td>
+<td align="center">ɛ</td>
+<td align="center">ẽ</td>
+<td align="center">ǝ</td>
+</tr>
+<tr>
+<td align="center">ə</td>
+<td align="center">f</td>
+<td align="center">g</td>
+<td align="center">ğ</td>
+<td align="center">ĝ</td>
+<td align="center">ģ</td>
+<td align="center">ġ</td>
+<td align="center">ḡ</td>
+<td align="center">ǧ</td>
+<td align="center">h</td>
+</tr>
+<tr>
+<td align="center">ħ</td>
+<td align="center">ĥ</td>
+<td align="center">ḧ</td>
+<td align="center">ḥ</td>
+<td align="center">i</td>
+<td align="center">ı</td>
+<td align="center">í</td>
+<td align="center">ĭ</td>
+<td align="center">ǐ</td>
+<td align="center">î</td>
+</tr>
+<tr>
+<td align="center">ï</td>
+<td align="center">ị</td>
+<td align="center">ì</td>
+<td align="center">ī</td>
+<td align="center">į</td>
+<td align="center">ɨ</td>
+<td align="center">ĩ</td>
+<td align="center">j</td>
+<td align="center">ȷ</td>
+<td align="center">ĵ</td>
+</tr>
+<tr>
+<td align="center">k</td>
+<td align="center">ķ</td>
+<td align="center">ƙ</td>
+<td align="center">l</td>
+<td align="center">ĺ</td>
+<td align="center">ľ</td>
+<td align="center">ļ</td>
+<td align="center">ł</td>
+<td align="center">m</td>
+<td align="center">n</td>
+</tr>
+<tr>
+<td align="center">ń</td>
+<td align="center">ň</td>
+<td align="center">ņ</td>
+<td align="center">ṅ</td>
+<td align="center">ṇ</td>
+<td align="center">ɲ</td>
+<td align="center">ñ</td>
+<td align="center">ŋ</td>
+<td align="center">o</td>
+<td align="center">ó</td>
+</tr>
+<tr>
+<td align="center">ŏ</td>
+<td align="center">ǒ</td>
+<td align="center">ô</td>
+<td align="center">ö</td>
+<td align="center">ọ</td>
+<td align="center">ò</td>
+<td align="center">ő</td>
+<td align="center">ō</td>
+<td align="center">ɔ</td>
+<td align="center">ø</td>
+</tr>
+<tr>
+<td align="center">õ</td>
+<td align="center">œ</td>
+<td align="center">p</td>
+<td align="center">ṗ</td>
+<td align="center">þ</td>
+<td align="center">q</td>
+<td align="center">r</td>
+<td align="center">ŕ</td>
+<td align="center">ř</td>
+<td align="center">ŗ</td>
+</tr>
+<tr>
+<td align="center">s</td>
+<td align="center">ś</td>
+<td align="center">š</td>
+<td align="center">ş</td>
+<td align="center">ŝ</td>
+<td align="center">ș</td>
+<td align="center">ṣ</td>
+<td align="center">ß</td>
+<td align="center">t</td>
+<td align="center">ť</td>
+</tr>
+<tr>
+<td align="center">ţ</td>
+<td align="center">ț</td>
+<td align="center">u</td>
+<td align="center">ú</td>
+<td align="center">ŭ</td>
+<td align="center">ǔ</td>
+<td align="center">û</td>
+<td align="center">ü</td>
+<td align="center">ụ</td>
+<td align="center">ù</td>
+</tr>
+<tr>
+<td align="center">ű</td>
+<td align="center">ū</td>
+<td align="center">ų</td>
+<td align="center">ů</td>
+<td align="center">ũ</td>
+<td align="center">v</td>
+<td align="center">ʌ</td>
+<td align="center">w</td>
+<td align="center">ẃ</td>
+<td align="center">ŵ</td>
+</tr>
+<tr>
+<td align="center">ẅ</td>
+<td align="center">ẁ</td>
+<td align="center">x</td>
+<td align="center">ẍ</td>
+<td align="center">y</td>
+<td align="center">ý</td>
+<td align="center">ŷ</td>
+<td align="center">ÿ</td>
+<td align="center">ỳ</td>
+<td align="center">ƴ</td>
+</tr>
+<tr>
+<td align="center">ỹ</td>
+<td align="center">ȳ</td>
+<td align="center">z</td>
+<td align="center">ź</td>
+<td align="center">ž</td>
+<td align="center">ż</td>
+<td align="center">ẓ</td>
+<td align="center">₵</td>
+<td align="center">₡</td>
+<td align="center">₲</td>
+</tr>
+<tr>
+<td align="center">₺</td>
+<td align="center">₼</td>
+<td align="center">₦</td>
+<td align="center">₹</td>
+<td align="center">̈</td>
+<td align="center">̇</td>
+<td align="center">̀</td>
+<td align="center">́</td>
+<td align="center">̋</td>
+<td align="center">̂</td>
+</tr>
+<tr>
+<td align="center">̌</td>
+<td align="center">̆</td>
+<td align="center">̊</td>
+<td align="center">̃</td>
+<td align="center">̄</td>
+<td align="center">̒</td>
+<td align="center">̣</td>
+<td align="center">̦</td>
+<td align="center">̧</td>
+<td align="center">̨</td>
+</tr>
+<tr>
+<td align="center">ʼ</td>
+<td align="center">ʻ</td>
+<td align="center">̵</td>
+<td align="center" bgcolor="black"></td>
+<td align="center" bgcolor="black"></td>
+<td align="center" bgcolor="black"></td>
+<td align="center" bgcolor="black"></td>
+<td align="center" bgcolor="black"></td>
+<td align="center" bgcolor="black"></td>
+<td align="center" bgcolor="black"></td>
+</tr>
+</tbody></table>
+<br>
+Additional Latin characters:
+<br><br>
+<table class="table">
+<tbody><tr>
+<td align="center">Ắ</td>
+<td align="center">Ặ</td>
+<td align="center">Ằ</td>
+<td align="center">Ẳ</td>
+<td align="center">Ẵ</td>
+<td align="center">Ấ</td>
+<td align="center">Ậ</td>
+<td align="center">Ầ</td>
+<td align="center">Ẩ</td>
+<td align="center">Ẫ</td>
+</tr>
+<tr>
+<td align="center">Ả</td>
+<td align="center">Ǣ</td>
+<td align="center">Ḏ</td>
+<td align="center">Ế</td>
+<td align="center">Ệ</td>
+<td align="center">Ề</td>
+<td align="center">Ể</td>
+<td align="center">Ễ</td>
+<td align="center">Ẻ</td>
+<td align="center">Ḫ</td>
+</tr>
+<tr>
+<td align="center">Ḩ</td>
+<td align="center">Ỉ</td>
+<td align="center">Ḳ</td>
+<td align="center">Ḵ</td>
+<td align="center">Ḷ</td>
+<td align="center">Ḹ</td>
+<td align="center">Ḻ</td>
+<td align="center">Ṁ</td>
+<td align="center">Ṃ</td>
+<td align="center">Ṉ</td>
+</tr>
+<tr>
+<td align="center">Ố</td>
+<td align="center">Ộ</td>
+<td align="center">Ồ</td>
+<td align="center">Ổ</td>
+<td align="center">Ỗ</td>
+<td align="center">Ỏ</td>
+<td align="center">Ơ</td>
+<td align="center">Ớ</td>
+<td align="center">Ợ</td>
+<td align="center">Ờ</td>
+</tr>
+<tr>
+<td align="center">Ở</td>
+<td align="center">Ỡ</td>
+<td align="center">Ṙ</td>
+<td align="center">Ṛ</td>
+<td align="center">Ṝ</td>
+<td align="center">Ṟ</td>
+<td align="center">Ṭ</td>
+<td align="center">Ṯ</td>
+<td align="center">Ǘ</td>
+<td align="center">Ǚ</td>
+</tr>
+<tr>
+<td align="center">Ǜ</td>
+<td align="center">Ǖ</td>
+<td align="center">Ủ</td>
+<td align="center">Ư</td>
+<td align="center">Ứ</td>
+<td align="center">Ự</td>
+<td align="center">Ừ</td>
+<td align="center">Ử</td>
+<td align="center">Ữ</td>
+<td align="center">Ẉ</td>
+</tr>
+<tr>
+<td align="center">Ẏ</td>
+<td align="center">Ỵ</td>
+<td align="center">Ỷ</td>
+<td align="center">Ẕ</td>
+<td align="center">ắ</td>
+<td align="center">ặ</td>
+<td align="center">ằ</td>
+<td align="center">ẳ</td>
+<td align="center">ẵ</td>
+<td align="center">ấ</td>
+</tr>
+<tr>
+<td align="center">ậ</td>
+<td align="center">ầ</td>
+<td align="center">ẩ</td>
+<td align="center">ẫ</td>
+<td align="center">ả</td>
+<td align="center">ǣ</td>
+<td align="center">ḏ</td>
+<td align="center">ế</td>
+<td align="center">ệ</td>
+<td align="center">ề</td>
+</tr>
+<tr>
+<td align="center">ể</td>
+<td align="center">ễ</td>
+<td align="center">ẻ</td>
+<td align="center">ḫ</td>
+<td align="center">ḩ</td>
+<td align="center">ẖ</td>
+<td align="center">ỉ</td>
+<td align="center">ḳ</td>
+<td align="center">ḵ</td>
+<td align="center">ḷ</td>
+</tr>
+<tr>
+<td align="center">ḹ</td>
+<td align="center">ḻ</td>
+<td align="center">ṁ</td>
+<td align="center">ṃ</td>
+<td align="center">ṉ</td>
+<td align="center">ố</td>
+<td align="center">ộ</td>
+<td align="center">ồ</td>
+<td align="center">ổ</td>
+<td align="center">ỗ</td>
+</tr>
+<tr>
+<td align="center">ỏ</td>
+<td align="center">ơ</td>
+<td align="center">ớ</td>
+<td align="center">ợ</td>
+<td align="center">ờ</td>
+<td align="center">ở</td>
+<td align="center">ỡ</td>
+<td align="center">ṙ</td>
+<td align="center">ṛ</td>
+<td align="center">ṝ</td>
+</tr>
+<tr>
+<td align="center">ṟ</td>
+<td align="center">ṭ</td>
+<td align="center">ṯ</td>
+<td align="center">ǘ</td>
+<td align="center">ǚ</td>
+<td align="center">ǜ</td>
+<td align="center">ǖ</td>
+<td align="center">ủ</td>
+<td align="center">ư</td>
+<td align="center">ứ</td>
+</tr>
+<tr>
+<td align="center">ự</td>
+<td align="center">ừ</td>
+<td align="center">ử</td>
+<td align="center">ữ</td>
+<td align="center">ẉ</td>
+<td align="center">ẏ</td>
+<td align="center">ỵ</td>
+<td align="center">ỷ</td>
+<td align="center">ẕ</td>
+<td align="center">₫</td>
+</tr>
+<tr>
+<td align="center">̉</td>
+<td align="center">̛</td>
+<td align="center">̮</td>
+<td align="center">̱</td>
+<td align="center">ʿ</td>
+<td align="center">ʾ</td>
+<td align="center" bgcolor="black"></td>
+<td align="center" bgcolor="black"></td>
+<td align="center" bgcolor="black"></td>
+<td align="center" bgcolor="black"></td>
+</tr>
+</tbody></table>
+<br>
+Cyrillic letters:
+<br><br>
+<table class="table">
+<tbody><tr>
+<td align="center">А</td>
+<td align="center">Ә</td>
+<td align="center">Б</td>
+<td align="center">В</td>
+<td align="center">Г</td>
+<td align="center">Ѓ</td>
+<td align="center">Ґ</td>
+<td align="center">Ғ</td>
+<td align="center">Д</td>
+<td align="center">Ђ</td>
+</tr>
+<tr>
+<td align="center">Е</td>
+<td align="center">Ё</td>
+<td align="center">Є</td>
+<td align="center">Ж</td>
+<td align="center">Җ</td>
+<td align="center">З</td>
+<td align="center">Ѕ</td>
+<td align="center">И</td>
+<td align="center">Ӣ</td>
+<td align="center">І</td>
+</tr>
+<tr>
+<td align="center">Ї</td>
+<td align="center">Й</td>
+<td align="center">Ј</td>
+<td align="center">К</td>
+<td align="center">Ќ</td>
+<td align="center">Қ</td>
+<td align="center">Л</td>
+<td align="center">Љ</td>
+<td align="center">М</td>
+<td align="center">Н</td>
+</tr>
+<tr>
+<td align="center">Ң</td>
+<td align="center">Њ</td>
+<td align="center">О</td>
+<td align="center">Ө</td>
+<td align="center">П</td>
+<td align="center">Р</td>
+<td align="center">С</td>
+<td align="center">Т</td>
+<td align="center">Ћ</td>
+<td align="center">У</td>
+</tr>
+<tr>
+<td align="center">Ў</td>
+<td align="center">Ӯ</td>
+<td align="center">Ү</td>
+<td align="center">Ұ</td>
+<td align="center">Ф</td>
+<td align="center">Х</td>
+<td align="center">Ҳ</td>
+<td align="center">Һ</td>
+<td align="center">Ц</td>
+<td align="center">Ч</td>
+</tr>
+<tr>
+<td align="center">Ҷ</td>
+<td align="center">Џ</td>
+<td align="center">Ш</td>
+<td align="center">Щ</td>
+<td align="center">Ъ</td>
+<td align="center">Ы</td>
+<td align="center">Ь</td>
+<td align="center">Э</td>
+<td align="center">Ю</td>
+<td align="center">Я</td>
+</tr>
+<tr>
+<td align="center">а</td>
+<td align="center">ә</td>
+<td align="center">б</td>
+<td align="center">в</td>
+<td align="center">г</td>
+<td align="center">ѓ</td>
+<td align="center">ґ</td>
+<td align="center">ғ</td>
+<td align="center">д</td>
+<td align="center">ђ</td>
+</tr>
+<tr>
+<td align="center">е</td>
+<td align="center">ё</td>
+<td align="center">є</td>
+<td align="center">ж</td>
+<td align="center">җ</td>
+<td align="center">з</td>
+<td align="center">ѕ</td>
+<td align="center">и</td>
+<td align="center">ӣ</td>
+<td align="center">і</td>
+</tr>
+<tr>
+<td align="center">ї</td>
+<td align="center">й</td>
+<td align="center">ј</td>
+<td align="center">к</td>
+<td align="center">ќ</td>
+<td align="center">қ</td>
+<td align="center">л</td>
+<td align="center">љ</td>
+<td align="center">м</td>
+<td align="center">н</td>
+</tr>
+<tr>
+<td align="center">ң</td>
+<td align="center">њ</td>
+<td align="center">о</td>
+<td align="center">ө</td>
+<td align="center">п</td>
+<td align="center">р</td>
+<td align="center">с</td>
+<td align="center">т</td>
+<td align="center">ћ</td>
+<td align="center">у</td>
+</tr>
+<tr>
+<td align="center">ў</td>
+<td align="center">ӯ</td>
+<td align="center">ү</td>
+<td align="center">ұ</td>
+<td align="center">ф</td>
+<td align="center">х</td>
+<td align="center">ҳ</td>
+<td align="center">һ</td>
+<td align="center">ц</td>
+<td align="center">ч</td>
+</tr>
+<tr>
+<td align="center">ҷ</td>
+<td align="center">џ</td>
+<td align="center">ш</td>
+<td align="center">щ</td>
+<td align="center">ъ</td>
+<td align="center">ы</td>
+<td align="center">ь</td>
+<td align="center">э</td>
+<td align="center">ю</td>
+<td align="center">я</td>
+</tr>
+</tbody></table>
+</body></html>
