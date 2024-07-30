@@ -15,7 +15,7 @@ body {
 .table, td {
   border-collapse: collapse;
   border: 1px solid black;
-  font-family: 'Last Resort',LastResort-Regular;
+  font-family: LastResort-Regular,'Last Resort';
   padding: 15px;
 }
 </style>
@@ -25,7 +25,7 @@ function changeFont() {
   var value = textField.value;  
   var tables = document.querySelectorAll('.table, .table td');
   tables.forEach(function(table) {
-    table.style.fontFamily = value + ", 'Last Resort', LastResort-Regular";
+    table.style.fontFamily = value + ", LastResort-Regular, 'Last Resort'";
   });
 }
 
@@ -50,7 +50,7 @@ function loadGoogleFont() {
   // Apply the Google Font to tables
   var tables = document.querySelectorAll('.table, .table td');
   tables.forEach(function(table) {
-    table.style.fontFamily = textField.value + ", 'Last Resort', LastResort-Regular";
+    table.style.fontFamily = textField.value + ", LastResort-Regular, 'Last Resort'";
   });
 }
 
