@@ -13,12 +13,15 @@ car = car.replace(/\u0023hook(above)?\u0023/g, "\u0309");
 car = car.replace(/\u0023ring(above)?\u0023/g, "\u030a");
 car = car.replace(/\u0023doubleacute\u0023/g, "\u030b");
 car = car.replace(/\u0023(caron|hacek|hachek)\u0023/g, "\u030c");
+car = car.replace(/\u0023(turned)?commaabove\u0023/g, "\u0312");
+car = car.replace(/\u0023acute(accent)?below\u0023/g, "\u0317");
 car = car.replace(/\u0023horn\u0023/g, "\u031b");
 car = car.replace(/\u0023dotbelow\u0023/g, "\u0323");
 car = car.replace(/\u0023comma(below)?\u0023/g, "\u0326");
 car = car.replace(/\u0023(cedilla|tail)\u0023/g, "\u0327");
 car = car.replace(/\u0023ogonek\u0023/g, "\u0328");
 car = car.replace(/\u0023(vertical)?line(below)?\u0023/g, "\u0329");
+car = car.replace(/\u0023(circumflex|caret)below\u0023/g, "\u032d");
 car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
