@@ -7,6 +7,10 @@ body {
   background-color: white;
   font-size: 20px;
 }
+@font-face {
+   font-family: fallback-cnb;
+   src: local('CourierNewPS-BoldMT');
+}
 .table, td {
   border-collapse: collapse;
   border: 1px solid black;
@@ -20,7 +24,7 @@ function changeFont() {
   var value = textField.value;  
   var tables = document.querySelectorAll('.table, .table td');
   tables.forEach(function(table) {
-    table.style.fontFamily = value + ", 'Last Resort', CourierNewPS-BoldMT, Courier New, Courier, monospace";
+    table.style.fontFamily = value + ", 'Last Resort', fallback-cnb, Courier New, Courier, monospace";
   });
 }
 
