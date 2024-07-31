@@ -18,6 +18,8 @@ body {
   font-optical-sizing: auto;
   padding: 15px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
 </style>
 <script type="text/javascript">
 function changeFont() {
@@ -32,32 +34,6 @@ function changeFont() {
 function loadGoogleFont() {
   var textField = document.getElementById('fontname');
   var fontName = textField.value.replace(/ /g, '+');
-  var linkId = 'google-font-link';
-
-  // Remove existing Google Font link if present
-  var existingLink = document.getElementById(linkId);
-  if (existingLink) {
-    existingLink.parentNode.removeChild(existingLink);
-  }
-
-  // Create new preconnect links
-  var preconnectGoogle = document.createElement('link');
-  preconnectGoogle.rel = 'preconnect';
-  preconnectGoogle.href = 'https://fonts.googleapis.com';
-  document.head.appendChild(preconnectGoogle);
-
-  var preconnectGstatic = document.createElement('link');
-  preconnectGstatic.rel = 'preconnect';
-  preconnectGstatic.href = 'https://fonts.gstatic.com';
-  preconnectGstatic.setAttribute('crossorigin', '');
-  document.head.appendChild(preconnectGstatic);
-
-  // Create new Google Font link with support for variable fonts
-  var link = document.createElement('link');
-  link.id = linkId;
-  link.href = 'https://fonts.googleapis.com/css2?family=' + fontName + ':wght@100..900&display=swap';
-  link.rel = 'stylesheet';
-  document.head.appendChild(link);
 
   // Apply the Google Font to tables
   var tables = document.querySelectorAll('.table, .table td');
