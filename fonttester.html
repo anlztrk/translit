@@ -7,14 +7,8 @@ body {
   font-size: 20px;
 }
 @font-face {
-   font-family: fallback-cni;
-   src: local('CourierNewPS-ItalicMT');
-}
-@font-face {
-    font-family: 'adobe_notdefregular';
-    font-display: block;
-    src: url('https://github.com/anlztrk/translit/raw/master/and-regular.woff2') format('woff2'),
-         url('https://github.com/anlztrk/translit/raw/master/and-regular.woff') format('woff');
+   font-family: fallback-cnbi;
+   src: local('CourierNewPS-BoldItalicMT');
 }
 .table, td {
   border-collapse: collapse;
@@ -29,7 +23,7 @@ function changeFont() {
   var value = textField.value;  
   var tables = document.querySelectorAll('.table, .table td');
   tables.forEach(function(table) {
-    table.style.fontFamily = value + ", 'Last Resort', adobe_notdefregular, fallback-cni, Courier New, Courier, monospace";
+    table.style.fontFamily = value + ", 'Last Resort', fallback-cnbi, Courier New, Courier, monospace";
   });
 }
 
@@ -54,7 +48,7 @@ function loadGoogleFont() {
   // Apply the Google Font to tables
   var tables = document.querySelectorAll('.table, .table td');
   tables.forEach(function(table) {
-    table.style.fontFamily = textField.value + ", 'Last Resort', adobe_notdefregular, fallback-cni, Courier New, Courier, monospace";
+    table.style.fontFamily = textField.value + ", 'Last Resort', fallback-cnbi, Courier New, Courier, monospace";
   });
 }
 
