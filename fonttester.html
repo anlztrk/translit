@@ -39,7 +39,19 @@ function loadGoogleFont() {
     existingLink.parentNode.removeChild(existingLink);
   }
 
-  // Create new Google Font link
+  // Create new preconnect links
+  var preconnectGoogle = document.createElement('link');
+  preconnectGoogle.rel = 'preconnect';
+  preconnectGoogle.href = 'https://fonts.googleapis.com';
+  document.head.appendChild(preconnectGoogle);
+
+  var preconnectGstatic = document.createElement('link');
+  preconnectGstatic.rel = 'preconnect';
+  preconnectGstatic.href = 'https://fonts.gstatic.com';
+  preconnectGstatic.setAttribute('crossorigin', '');
+  document.head.appendChild(preconnectGstatic);
+
+  // Create new Google Font link with support for variable fonts
   var link = document.createElement('link');
   link.id = linkId;
   link.href = 'https://fonts.googleapis.com/css2?family=' + fontName + ':wght@100..900&display=swap';
