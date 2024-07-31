@@ -48,7 +48,7 @@ function loadGoogleFont() {
   // Apply the Google Font to tables
   var tables = document.querySelectorAll('.table, .table td');
   tables.forEach(function(table) {
-    table.style.fontFamily = textField.value + ", 'Last Resort', CourierNewPS-BoldMT, Courier New, Courier, monospace";
+    table.style.fontFamily = textField.value + ", 'Last Resort', fallback-cni, Courier New, Courier, monospace";
   });
 }
 
