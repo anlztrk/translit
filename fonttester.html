@@ -59,13 +59,11 @@ function loadGoogleFont() {
   link.rel = 'stylesheet';
   document.head.appendChild(link);
 
-  link.onload = function() {
-    // Apply the Google Font to tables
-    var tables = document.querySelectorAll('.table, .table td');
-    tables.forEach(function(table) {
-      table.style.fontFamily = textField.value + ", 'Last Resort', fallback-notdef, 'Courier New', Courier, monospace";
-    });
-  };
+  // Apply the Google Font to tables
+  var tables = document.querySelectorAll('.table, .table td');
+  tables.forEach(function(table) {
+    table.style.fontFamily = textField.value + ", 'Last Resort', fallback-notdef, 'Courier New', Courier, monospace";
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
