@@ -154,6 +154,33 @@ function cyrlat () {
    car = car.replace(/ᅳ/g, 'eu');
    car = car.replace(/ᅴ/g, 'ui');
    car = car.replace(/ᅵ/g, 'i');
+   
+   car = car.replace(/(^\s*|\n\s*)a/g, "$1A");
+   car = car.replace(/(^\s*|\n\s*)b/g, "$1B");
+   car = car.replace(/(^\s*|\n\s*)c/g, "$1C");
+   car = car.replace(/(^\s*|\n\s*)d/g, "$1D");
+   car = car.replace(/(^\s*|\n\s*)e/g, "$1E");
+   car = car.replace(/(^\s*|\n\s*)f/g, "$1F");
+   car = car.replace(/(^\s*|\n\s*)g/g, "$1G");
+   car = car.replace(/(^\s*|\n\s*)h/g, "$1H");
+   car = car.replace(/(^\s*|\n\s*)i/g, "$1I");
+   car = car.replace(/(^\s*|\n\s*)j/g, "$1J");
+   car = car.replace(/(^\s*|\n\s*)k/g, "$1K");
+   car = car.replace(/(^\s*|\n\s*)l/g, "$1L");
+   car = car.replace(/(^\s*|\n\s*)m/g, "$1M");
+   car = car.replace(/(^\s*|\n\s*)n/g, "$1N");
+   car = car.replace(/(^\s*|\n\s*)o/g, "$1O");
+   car = car.replace(/(^\s*|\n\s*)p/g, "$1P");
+   car = car.replace(/(^\s*|\n\s*)q/g, "$1Q");
+   car = car.replace(/(^\s*|\n\s*)r/g, "$1R");
+   car = car.replace(/(^\s*|\n\s*)s/g, "$1S");
+   car = car.replace(/(^\s*|\n\s*)t/g, "$1T");
+   car = car.replace(/(^\s*|\n\s*)u/g, "$1U");
+   car = car.replace(/(^\s*|\n\s*)v/g, "$1V");
+   car = car.replace(/(^\s*|\n\s*)w/g, "$1W");
+   car = car.replace(/(^\s*|\n\s*)x/g, "$1X");
+   car = car.replace(/(^\s*|\n\s*)y/g, "$1Y");
+   car = car.replace(/(^\s*|\n\s*)z/g, "$1Z");
 document.transcription.text2.value = car;
 }
 
