@@ -2,20 +2,18 @@ var car;
 function latcyr () {
 car = document.transcription.text2.value;
 translit = document.transcription.text2.value;
-  translit = translit.replace(/ı/g, "i");
   translit = translit.toUpperCase();
-  car = car.replace(/İ/g, "I");
   car = car.toLowerCase();
+  car = car.normalize('NFC');
    document.transcription.text2.value=translit;
    document.transcription.text1.value=car;
 }
 function cyrlat () {
 car = document.transcription.text1.value;
 translit = document.transcription.text1.value;
-  translit = translit.replace(/İ/g, "I");
   translit = translit.toLowerCase();
-  car = car.replace(/ı/g, "i");
   car = car.toUpperCase();
+  car = car.normalize('NFC');
 document.transcription.text1.value=translit;
 document.transcription.text2.value=car;
 }
