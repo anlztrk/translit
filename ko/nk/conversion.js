@@ -69,11 +69,11 @@ function cyrlat () {
   car = car.replace(/(ᆨ|ᆿ)ᄂ/g, 'ᆼᄂ');
   car = car.replace(/(ᆸ|ᇁ)ᄂ/g, 'ᆷᄂ');
   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄂ/g, 'ᆫᄂ');
-  car = car.replace(/(ᆨ|ᆿ)ᄅ/g, 'ᆼᄂ');
+  car = car.replace(/(ᆨ|ᆿ)ᄅ/g, 'ᆼᄅ');
   car = car.replace(/ᆫᄅ/g, 'ᆯᄅ');
-  car = car.replace(/(ᆷ|ᆸ)ᄅ/g, 'ᆷᄂ');
-  car = car.replace(/ᆼᄅ/g, 'ᆼᄂ');
-  car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄅ/g, 'ᆫᄂ');
+  car = car.replace(/(ᆷ|ᆸ)ᄅ/g, 'ᆷᄅ');
+  car = car.replace(/ᆼᄅ/g, 'ᆼᄅ');
+  car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄅ/g, 'ᆫᄅ');
   car = car.replace(/(ᆨ|ᆿ)ᄆ/g, 'ᆼᄆ');
   car = car.replace(/(ᆸ|ᇁ)ᄆ/g, 'ᆷᄆ');
   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄆ/g, 'ᆫᄆ');
@@ -89,14 +89,14 @@ function cyrlat () {
   car = car.replace(/ᆫᄅ/g, 'ᆯᄅ');
   car = car.replace(/ᆯᄂ/g, 'ᆯᄅ');
 
-  car = car.replace(/(ᅡ|ᅪ|ᅣ)에/g, '$1에\u0308');
-  car = car.replace(/ᆫᄀ/g, 'ᆫ\u002dᄀ');
-  car = car.replace(/ᆼᄋ/g, 'ᆼᄋ');
+  car = car.replace(/(ᅡ|ᅪ|ᅣ)에/g, '$1-에');
+  car = car.replace(/ᆼᄋ/g, 'ᆼ-ᄋ');
 
-  car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ\u002d|ᆯ|ᆷ|ᆼ)ᄀ/g, '$1g');
+  car = car.replace(/(^\s*|\n\s*)(ᄀ|ᄁ|ᄂ|ᄃ|ᄄ|ᄅ|ᄆ|ᄇ|ᄈ|ᄉ|ᄊ|ᄋ|ᄌ|ᄍ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ)/g, '$1\u2060$2');
+
+  car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄀ/g, '$1g');
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄃ/g, '$1d');
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄇ/g, '$1b');
-  car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄌ/g, '$1j');
   car = car.replace(/ᄀ/g, 'k');
   car = car.replace(/ᆨ/g, 'k');
   car = car.replace(/ᄁ/g, 'kk');
@@ -154,6 +154,35 @@ function cyrlat () {
   car = car.replace(/ᅳ/g, 'ŭ');
   car = car.replace(/ᅴ/g, 'ŭi');
   car = car.replace(/ᅵ/g, 'i');
+  
+  car = car.replace(/\u2060a/g, "A");
+  car = car.replace(/\u2060b/g, "B");
+  car = car.replace(/\u2060c/g, "C");
+  car = car.replace(/\u2060d/g, "D");
+  car = car.replace(/\u2060e/g, "E");
+  car = car.replace(/\u2060f/g, "F");
+  car = car.replace(/\u2060g/g, "G");
+  car = car.replace(/\u2060h/g, "H");
+  car = car.replace(/\u2060i/g, "I");
+  car = car.replace(/\u2060j/g, "J");
+  car = car.replace(/\u2060k/g, "K");
+  car = car.replace(/\u2060l/g, "L");
+  car = car.replace(/\u2060m/g, "M");
+  car = car.replace(/\u2060n/g, "N");
+  car = car.replace(/\u2060o/g, "O");
+  car = car.replace(/\u2060ŏ/g, "Ŏ");
+  car = car.replace(/\u2060p/g, "P");
+  car = car.replace(/\u2060q/g, "Q");
+  car = car.replace(/\u2060r/g, "R");
+  car = car.replace(/\u2060s/g, "S");
+  car = car.replace(/\u2060t/g, "T");
+  car = car.replace(/\u2060u/g, "U");
+  car = car.replace(/\u2060ŭ/g, "Ŭ");
+  car = car.replace(/\u2060v/g, "V");
+  car = car.replace(/\u2060w/g, "W");
+  car = car.replace(/\u2060x/g, "X");
+  car = car.replace(/\u2060y/g, "Y");
+  car = car.replace(/\u2060z/g, "Z");
   car = car.normalize('NFC');
 document.transcription.text2.value = car;
 }
