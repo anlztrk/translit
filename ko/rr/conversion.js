@@ -96,7 +96,7 @@ function cyrlat () {
 // car = car.replace(/ᆫᄀ/g, 'ᆫ-ᄀ');
    car = car.replace(/ᆼᄋ/g, 'ᆼ-ᄋ');
 
-   car = car.replace(/(^\s*|\n\s*)(ᄀ|ᄁ|ᄂ|ᄃ|ᄄ|ᄅ|ᄆ|ᄇ|ᄈ|ᄉ|ᄊ|ᄋ|ᄌ|ᄍ|ᄎ|ᄏ|ᄐ|ᄑ)/g, "$1\u2060$2");
+   car = car.replace(/(^\s*|\n\s*)(ᄀ|ᄁ|ᄂ|ᄃ|ᄄ|ᄅ|ᄆ|ᄇ|ᄈ|ᄉ|ᄊ|ᄋ|ᄌ|ᄍ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ)/g, "$1\u2060$2");
 
    car = car.replace(/ᆯᄅ/g, 'll');
    car = car.replace(/ᄀ/g, 'g');
