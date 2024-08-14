@@ -126,6 +126,8 @@ function cyrlat () {
 
   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄎ/g, 'ᄎᄎ');
 
+  car = car.replace(/(^\s*|\n\s*)(ᄀ|ᄁ|ᄂ|ᄃ|ᄄ|ᄅ|ᄆ|ᄇ|ᄈ|ᄉ|ᄊ|ᄋ|ᄌ|ᄍ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ)/g, '$1\u2060$2');
+
   car = car.replace(/ᆯᄅ/g, 'll');
   car = car.replace(/ᄀ/g, 'g');
   car = car.replace(/ᆨ/g, 'k');
@@ -189,6 +191,32 @@ function cyrlat () {
   car = car.replace(/ᅳ/g, 'ı');
   car = car.replace(/ᅴ/g, 'ıy');
   car = car.replace(/ᅵ/g, 'i');
+
+  car = car.replace(/\u2060a/g, "A");
+  car = car.replace(/\u2060b/g, "B");
+  car = car.replace(/\u2060c/g, "C");
+  car = car.replace(/\u2060ç/g, "Ç");
+  car = car.replace(/\u2060d/g, "D");
+  car = car.replace(/\u2060e/g, "E");
+  car = car.replace(/\u2060f/g, "F");
+  car = car.replace(/\u2060g/g, "G");
+  car = car.replace(/\u2060h/g, "H");
+  car = car.replace(/\u2060ı/g, "I");
+  car = car.replace(/\u2060i/g, "İ");
+  car = car.replace(/\u2060k/g, "K");
+  car = car.replace(/\u2060l/g, "L");
+  car = car.replace(/\u2060m/g, "M");
+  car = car.replace(/\u2060n/g, "N");
+  car = car.replace(/\u2060o/g, "O");
+  car = car.replace(/\u2060ô/g, "Ô");
+  car = car.replace(/\u2060p/g, "P");
+  car = car.replace(/\u2060r/g, "R");
+  car = car.replace(/\u2060s/g, "S");
+  car = car.replace(/\u2060ş/g, "Ş");
+  car = car.replace(/\u2060t/g, "T");
+  car = car.replace(/\u2060u/g, "U");
+  car = car.replace(/\u2060v/g, "V");
+  car = car.replace(/\u2060y/g, "Y");
 document.transcription.text2.value = car;
 }
 
