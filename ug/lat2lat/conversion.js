@@ -4,7 +4,7 @@ function handleDotlessI(text) {
     const consonants = "BCÇDFGHJKLMNÑPQRSŞTVXYZbcçdfghjklmnñpqrsştvxyz";
     const backVowels = "AOUaouı";
     const frontVowels = "ÄEİÖÜäeöü";
-    const vowels = backVowels + frontVowels + Ii; // Combine all vowels for easy checking
+    const vowels = backVowels + frontVowels + "Ii"; // Combine all vowels for easy checking
 
     function getVowelType(char) {
         if (backVowels.includes(char)) return 'back';
