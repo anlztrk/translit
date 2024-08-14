@@ -4,7 +4,7 @@ function handleDotlessI(text) {
     const consonants = "BCÇDFGHJKLMNÑPQRSŞTVXYZbcçdfghjklmnñpqrsştvxyz";
     const backVowels = "AOUaouı";
     const frontVowels = "ÄEİÖÜäeöü";
-    const vowels = backVowels + frontVowels; // Combine all vowels for easy checking
+    const vowels = backVowels + frontVowels + Ii; // Combine all vowels for easy checking
 
     function getVowelType(char) {
         if (backVowels.includes(char)) return 'back';
@@ -126,7 +126,10 @@ function cyrlat() {
     car = car.replace(/Ë/g, "E");
     car = car.replace(/É/g, "E");
     car = car.replace(/W/g, "V");
-    
+
+    car = car.replace(/(Ğ|Q|X|ğ|q|x)i/g, "$1ı");
+    car = car.replace(/i(ğ|q|x)/g, "ı$1");
+	
     car = handleDotlessI(car);
     
     document.transcription.text1.value = translit;
@@ -162,7 +165,7 @@ function latcyr () {
     car = car.replace(/ç/g, "ch");
     car = car.replace(/e/g, "ë");
     car = car.replace(/ä/g, "e");
-	car = car.replace(/ı/g, "i");
+    car = car.replace(/ı/g, "i");
     car = car.replace(/ğ/g, "gh");
     car = car.replace(/ñ/g, "ng");
     car = car.replace(/ş/g, "sh");
@@ -172,7 +175,7 @@ function latcyr () {
     car = car.replace(/Ç/g, "Ch");
     car = car.replace(/E/g, "Ë");
     car = car.replace(/Ä/g, "E");
-	car = car.replace(/İ/g, "I");
+    car = car.replace(/İ/g, "I");
     car = car.replace(/Ğ/g, "Gh");
     car = car.replace(/Ñ/g, "NG");
     car = car.replace(/Ş/g, "Sh");
