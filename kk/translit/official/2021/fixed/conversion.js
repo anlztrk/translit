@@ -54,12 +54,11 @@ car = document.transcription.text1.value;
   car = car.replace(/(Ь|ь)/g, "");
   
   //У
-  car = car.replace(/(А|Ә|Е|И|О|Ө|У|Ұ|Ү|Ы|І|Э)У/g, "$1Ў");
-  car = car.replace(/(А|Ә|Е|И|О|Ө|У|Ұ|Ү|Ы|І|Э|а|ә|е|и|о|ө|у|ұ|ү|ы|і|э)у/g, "$1ў");
-  car = car.replace(/У(А|Ә|Е|И|О|Ө|У|Ұ|Ү|Ы|І|Э|а|ә|е|и|о|ө|у|ұ|ү|ы|і|э)/g, "Ў$1");
-  car = car.replace(/у(а|ә|е|и|о|ө|у|ұ|ү|ы|і|э)/g, "ў$1");
-  car = car.replace(/(^А|Ә|Е|И|О|Ө|У|Ұ|Ү|Ы|І|Э)?(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ш|Ъ)Ў/g, "$1$2У");
-  car = car.replace(/(^А|Ә|Е|И|О|Ө|У|Ұ|Ү|Ы|І|Э|а|ә|е|и|о|ө|у|ұ|ү|ы|і|э)?(б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|ң|п|р|с|т|ф|х|ш|ъ)ў/g, "$1$2у");
+  car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ш|Ъ)У/g, "$1Ӯ");
+  car = car.replace(/(Б|В|Г|Ғ|Д|Ж|З|Й|К|Қ|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ш|Ъ|б|в|г|ғ|д|ж|з|й|к|қ|л|м|н|ң|п|р|с|т|ф|х|ш|ъ)у/g, "$1ӯ");
+
+  car = car.replace(/Ӯ(А|Ә|Е|И|О|Ө|У|Ұ|Ү|Ы|І|Э|а|ә|е|и|о|ө|у|ұ|ү|ы|і|э)/g, "У$1");
+  car = car.replace(/ӯ(а|ә|е|и|о|ө|у|ұ|ү|ы|і|э)/g, "у$1");
   
   car = car.replace(/а/g, "a");
   car = car.replace(/ә/g, "ä");
@@ -85,8 +84,8 @@ car = document.transcription.text1.value;
   car = car.replace(/р/g, "r");
   car = car.replace(/с/g, "s");
   car = car.replace(/т/g, "t");
-  car = car.replace(/у/g, "ū");
-  car = car.replace(/ў/g, "w");
+  car = car.replace(/у/g, "w");
+  car = car.replace(/ӯ/g, "ū");
   car = car.replace(/ұ/g, "u");
   car = car.replace(/ү/g, "ü");
   car = car.replace(/ф/g, "f");
@@ -120,8 +119,8 @@ car = document.transcription.text1.value;
   car = car.replace(/Р/g, "R");
   car = car.replace(/С/g, "S");
   car = car.replace(/Т/g, "T");
-  car = car.replace(/У/g, "Ū");
-  car = car.replace(/Ў/g, "W");
+  car = car.replace(/У/g, "W");
+  car = car.replace(/Ӯ/g, "Ū");
   car = car.replace(/Ұ/g, "U");
   car = car.replace(/Ү/g, "Ü");
   car = car.replace(/Ф/g, "F");
