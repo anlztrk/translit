@@ -109,8 +109,8 @@ translit = translit.replace(/SH/g, "SʼH");
 translit = translit.replace(/ş/g, "sh");
 translit = translit.replace(/Ş/g, "Sh");
 
-translit = translit.replace(/ç/g, "ch");
-translit = translit.replace(/Ç/g, "Ch");
+translit = translit.replace(/(c|ç)/g, "ch");
+translit = translit.replace(/(C|Ç)/g, "Ch");
 
 translit = translit.replace(/ŏ/g, "oʻ");
 translit = translit.replace(/Ŏ/g, "Oʻ");
