@@ -95,8 +95,8 @@ car = document.transcription.text1.value;
   car = car.replace(/ц/g, "c");
   car = car.replace(/ч/g, "č");
   car = car.replace(/ш/g, "š");
-  car = car.replace(/(Ъ|ъ)/g, "\u02ee");
-  car = car.replace(/(Ь|ь)/g, "\u02bc");
+  car = car.replace(/(\u0027|\u2019|\u02bc)/g, "\u0022");
+  car = car.replace(/(Ь|ь)/g, "\u0027");
   car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }

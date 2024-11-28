@@ -9,7 +9,7 @@ car = car.replace(/>>/g, "»");
 translit = translit.replace(/<</g, "«");
 translit = translit.replace(/>>/g, "»");
 
-translit = translit.replace(/Ъ/g, "ъ");
+translit = translit.replace(/(\u2019|\u0027)/g, "\u02bc");
 
 translit = translit.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)(ь|Ь)О/g, "$1Ö");
 translit = translit.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)(ь|Ь)о/g, "$1ö");
@@ -34,7 +34,7 @@ translit = translit.replace(/(Ь|ь)є/g, "$1e");
 translit = translit.replace(/(Ь|ь)ї/g, "$1i");
 translit = translit.replace(/(Ь|ь)ю/g, "$1u");
 
-translit = translit.replace(/ъ/g, "");
+translit = translit.replace(/\u02bc/g, "");
 
 translit = translit.replace(/а/g, "a");
 translit = translit.replace(/б/g, "b");
@@ -45,7 +45,7 @@ translit = translit.replace(/д/g, "d");
 translit = translit.replace(/е/g, "e");
 translit = translit.replace(/ж/g, "ž");
 translit = translit.replace(/з/g, "z");
-translit = translit.replace(/и/g, "ɨ");
+translit = translit.replace(/и/g, "ý");
 translit = translit.replace(/і/g, "i");
 translit = translit.replace(/й/g, "j");
 translit = translit.replace(/к/g, "k");
@@ -79,7 +79,7 @@ translit = translit.replace(/Д/g, "D");
 translit = translit.replace(/Е/g, "E");
 translit = translit.replace(/Ж/g, "Ž");
 translit = translit.replace(/З/g, "Z");
-translit = translit.replace(/И/g, "Ɨ");
+translit = translit.replace(/И/g, "Ý");
 translit = translit.replace(/І/g, "I");
 translit = translit.replace(/Й/g, "J");
 translit = translit.replace(/К/g, "K");
@@ -98,7 +98,6 @@ translit = translit.replace(/Ц/g, "C");
 translit = translit.replace(/Ч/g, "Č");
 translit = translit.replace(/Ш/g, "Š");
 translit = translit.replace(/Щ/g, "Šč");
-translit = translit.replace(/Ы/g, "I");
 translit = translit.replace(/Ь/g, "Y");
 translit = translit.replace(/Є/g, "Je");
 translit = translit.replace(/Ї/g, "Ji");
