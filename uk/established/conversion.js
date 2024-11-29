@@ -111,8 +111,7 @@ car = document.transcription.text1.value;
   car = car.replace(/у/g, "u");
   car = car.replace(/ф/g, "f");
   car = car.replace(/х/g, "h");
-  car = car.replace(/(\u0027|\u2019|\u02bc)/g, "\u0022");
-  car = car.replace(/(Ь|ь)/g, "\u0027");
+  car = car.replace(/(Ь|ь|\u0027|\u2019|\u02bc)/g, "");
 
   car = car.replace(/(A|B|C|D|E|F|G|H|I|K|L|M|N|O|P|R|S|T|U|V|Y|Z)ẎI/g, "$1I");
   car = car.replace(/(A|B|C|D|E|F|G|H|I|K|L|M|N|O|P|R|S|T|U|V|Y|Z|a|b|c|d|e|f|g|h|i|k|l|m|n|o|p|r|s|t|u|v|y|z)ẏi/g, "$1i");
