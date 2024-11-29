@@ -113,9 +113,11 @@ car = document.transcription.text1.value;
   car = car.replace(/х/g, "h");
   car = car.replace(/(\u0027|\u2019|\u02bc)/g, "\u0022");
   car = car.replace(/(Ь|ь)/g, "\u0027");
-  
-  car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z)Ẏ/g, "$1I");
-  car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z|b|c|d|f|g|h|k|l|m|n|p|r|s|t|v|z)ẏ/g, "$1i");
+
+  car = car.replace(/(A|B|C|D|E|F|G|H|I|K|L|M|N|O|P|R|S|T|U|V|Y|Z)ẎI/g, "$1I");
+  car = car.replace(/(A|B|C|D|E|F|G|H|I|K|L|M|N|O|P|R|S|T|U|V|Y|Z|a|b|c|d|e|f|g|h|i|k|l|m|n|o|p|r|s|t|u|v|y|z)ẏi/g, "$1i");
+  car = car.replace(/(A|B|C|D|E|F|G|H|I|K|L|M|N|O|P|R|S|T|U|V|Y|Z)Ẏ/g, "$1I");
+  car = car.replace(/(A|B|C|D|E|F|G|H|I|K|L|M|N|O|P|R|S|T|U|V|Y|Z|a|b|c|d|e|f|g|h|i|k|l|m|n|o|p|r|s|t|u|v|y|z)ẏ/g, "$1i");
   car = car.replace(/Ẏ/g, "Y");
   car = car.replace(/ẏ/g, "y");
   car = car.normalize('NFC');
