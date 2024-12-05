@@ -27,13 +27,15 @@ translit = translit.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф
 
 translit = translit.replace(/\u02bc/g, "");
 
+translit = translit.replace(/ль/g, "љ");
+translit = translit.replace(/Л(Ь|ь)/g, "Љ");
+translit = translit.replace(/лі/g, "љі");
+translit = translit.replace(/Л(І|і)/g, "Љ$1");
+
 translit = translit.replace(/Ь(А|Е|И|О|У|а|е|и|о|у)/g, "І$1");
 translit = translit.replace(/ь(А|Е|И|О|У|а|е|и|о|у)/g, "і$1");
 translit = translit.replace(/(Ь|ь)І/g, "І");
 translit = translit.replace(/ьі/g, "і");
-
-translit = translit.replace(/л(ь|і)/g, "l$1");
-translit = translit.replace(/Л(Ь|І|ь|і)/g, "L$1");
  
 translit = translit.replace(/а/g, "a");
 translit = translit.replace(/б/g, "b");
@@ -48,6 +50,7 @@ translit = translit.replace(/и/g, "y");
 translit = translit.replace(/і/g, "i");
 translit = translit.replace(/й/g, "j");
 translit = translit.replace(/к/g, "k");
+translit = translit.replace(/љ/g, "l");
 translit = translit.replace(/л/g, "ł");
 translit = translit.replace(/м/g, "m");
 translit = translit.replace(/н/g, "n");
@@ -82,6 +85,7 @@ translit = translit.replace(/И/g, "Y");
 translit = translit.replace(/І/g, "I");
 translit = translit.replace(/Й/g, "J");
 translit = translit.replace(/К/g, "K");
+translit = translit.replace(/Љ/g, "L");
 translit = translit.replace(/Л/g, "Ł");
 translit = translit.replace(/М/g, "M");
 translit = translit.replace(/Н/g, "N");
@@ -102,7 +106,7 @@ translit = translit.replace(/Є/g, "Je");
 translit = translit.replace(/Ї/g, "Ji");
 translit = translit.replace(/Ю/g, "Ju");
 translit = translit.replace(/Я/g, "Ja");
-
+translit = translit.normalize('NFC');
 document.transcription.text1.value = car;
 document.transcription.text2.value = translit;
 }
