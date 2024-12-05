@@ -32,6 +32,9 @@ translit = translit.replace(/ь(А|Е|И|О|У|а|е|и|о|у)/g, "і$1");
 translit = translit.replace(/(Ь|ь)І/g, "І");
 translit = translit.replace(/ьі/g, "і");
 
+translit = translit.replace(/л(ь|і)/g, "l$1");
+translit = translit.replace(/Л(Ь|І|ь|і)/g, "L$1");
+ 
 translit = translit.replace(/а/g, "a");
 translit = translit.replace(/б/g, "b");
 translit = translit.replace(/в/g, "w");
@@ -45,7 +48,7 @@ translit = translit.replace(/и/g, "y");
 translit = translit.replace(/і/g, "i");
 translit = translit.replace(/й/g, "j");
 translit = translit.replace(/к/g, "k");
-translit = translit.replace(/л/g, "l");
+translit = translit.replace(/л/g, "ł");
 translit = translit.replace(/м/g, "m");
 translit = translit.replace(/н/g, "n");
 translit = translit.replace(/о/g, "o");
@@ -79,7 +82,7 @@ translit = translit.replace(/И/g, "Y");
 translit = translit.replace(/І/g, "I");
 translit = translit.replace(/Й/g, "J");
 translit = translit.replace(/К/g, "K");
-translit = translit.replace(/Л/g, "L");
+translit = translit.replace(/Л/g, "Ł");
 translit = translit.replace(/М/g, "M");
 translit = translit.replace(/Н/g, "N");
 translit = translit.replace(/О/g, "O");
