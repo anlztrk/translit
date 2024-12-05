@@ -107,8 +107,8 @@ translit = translit.replace(/Ї/g, "Ji");
 translit = translit.replace(/Ю/g, "Ju");
 translit = translit.replace(/Я/g, "Ja");
 
-translit = translit.replace(/d\u0301/, "d\u0315");
- translit = translit.replace(/t\u0301/, "t\u0315");
+translit = translit.replace(/d\u0301/g, "d\u0315");
+ translit = translit.replace(/t\u0301/g, "t\u0315");
 translit = translit.normalize('NFC');
 document.transcription.text1.value = car;
 document.transcription.text2.value = translit;
