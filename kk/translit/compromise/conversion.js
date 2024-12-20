@@ -66,6 +66,12 @@ car = document.transcription.text1.value;
   car = car.replace(/(А|Ә|Е|И|О|Ө|У|Ұ|Ү|Ы|І|Э)Ӯ/g, "$1У");
   car = car.replace(/(А|Ә|Е|И|О|Ө|У|Ұ|Ү|Ы|І|Э|а|ә|е|и|о|ө|у|ұ|ү|ы|і|э)ӯ/g, "$1у");
   
+  car = car.replace(/Ӯ(А|Ә|Е|И|О|Ө|Ӯ|Ұ|Ү|Ы|І|Э)/g, "ӮУ$1");
+  car = car.replace(/(Ӯ|ӯ)(а|ә|е|и|о|ө|ӯ|ұ|ү|ы|і|э)/g, "$1у$2");
+
+  car = car.replace(/И(А|Ә|Е|И|О|Ө|Ӯ|Ұ|Ү|Ы|І|Э)/g, "ИЙ$1");
+  car = car.replace(/(И|и)(а|ә|е|и|о|ө|ӯ|ұ|ү|ы|і|э)/g, "$1й$2");
+  
   car = car.replace(/а/g, "a");
   car = car.replace(/ә/g, "ä");
   car = car.replace(/б/g, "b");
