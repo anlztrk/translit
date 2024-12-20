@@ -26,17 +26,17 @@ translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х
 
 translit = translit.replace(/Ь(А|Э|Ы|О|У|а|э|ы|о|у)/g, "Ь\u2019$1");
 translit = translit.replace(/ь(а|э|ы|о|у)/g, "ь\u2019$1");
-translit = translit.replace(/ЬЯ/g, "Ь\u0301A");
-translit = translit.replace(/ЬЕ/g, "Ь\u0301E");
-translit = translit.replace(/ЬИ/g, "Ь\u0301I");
-translit = translit.replace(/ЬЁ/g, "Ь\u0301O");
-translit = translit.replace(/ЬЮ/g, "Ь\u0301U");
-translit = translit.replace(/(Ь|ь)я/g, "$1\u0301a");
-translit = translit.replace(/(Ь|ь)е/g, "$1\u0301e");
-translit = translit.replace(/(Ь|ь)и/g, "$1\u0301i");
-translit = translit.replace(/(Ь|ь)ё/g, "$1\u0301o");
-translit = translit.replace(/(Ь|ь)ю/g, "$1\u0301u");
-
+translit = translit.replace(/ЬЯ/g, "ЬÄ");
+translit = translit.replace(/ЬЕ/g, "ЬE");
+translit = translit.replace(/ЬИ/g, "ЬI");
+translit = translit.replace(/ЬЁ/g, "ЬÖ");
+translit = translit.replace(/ЬЮ/g, "ЬÜ");
+translit = translit.replace(/(Ь|ь)я/g, "$1ä");
+translit = translit.replace(/(Ь|ь)е/g, "$1e");
+translit = translit.replace(/(Ь|ь)и/g, "$1i");
+translit = translit.replace(/(Ь|ь)ё/g, "$1ö");
+translit = translit.replace(/(Ь|ь)ю/g, "$1ü");
+  
 translit = translit.replace(/ъ/g, "");
 
 translit = translit.replace(/а/g, "a");
