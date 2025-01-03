@@ -11,6 +11,8 @@ car = document.transcription.text1.value;
   car = car.replace(/йі/g, "йі\u0300");
   car = car.replace(/Й(У|у)/g, "Й$1\u0300");
   car = car.replace(/йу/g, "йу\u0300");
+  car = car.replace(/Ь(О|о)/g, "Й$1");
+  car = car.replace(/ьо/g, "йо");
 
   car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ẎA");
   car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ẎA $1$2");
@@ -112,13 +114,10 @@ car = document.transcription.text1.value;
   car = car.replace(/ф/g, "f");
   car = car.replace(/х/g, "h");
   car = car.replace(/(Ь|ь|\u0027|\u2019|\u02bc)/g, "");
-
-  car = car.replace(/(B|C|D|F|G|H|I|K|L|M|N|P|R|S|T|V|Y|Z)ẎI/g, "$1I");
-  car = car.replace(/(B|C|D|F|G|H|I|K|L|M|N|P|R|S|T|V|Y|Z|b|c|d|f|g|h|i|k|l|m|n|p|r|s|t|v|y|z)ẏi/g, "$1i");
-  car = car.replace(/Ẏ((?!A|E|I|O|U|Y|Ẏ|a|e|i|o|u|y|ẏ))/g, "I$1");
-  car = car.replace(/ẏ((?!a|e|i|o|u|y|ẏ))/g, "i$1");
-  car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z)Ẏ/g, "$1I");
-  car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z|b|c|d|f|g|h|k|l|m|n|p|r|s|t|v|z)ẏ/g, "$1i");  
+  car = car.replace(/ẎY/g, "YI");
+  car = car.replace(/(Ẏ|ẏ)y/g, "$1i");
+  car = car.replace(/Y(Ẏ|ẏ)/g, "I$1");
+  car = car.replace(/yẏ/g, "iy");
   car = car.replace(/Ẏ/g, "Y");
   car = car.replace(/ẏ/g, "y");
   car = car.normalize('NFC');
