@@ -65,8 +65,8 @@ car = document.transcription.text1.value;
   car = car.replace(/Ц/g, "Ts");
   car = car.replace(/ц/g, "ts");
   
-  car = car.replace(/ЗГ/g, "ZGH");
-  car = car.replace(/(З|з)г/g, "$1gh");
+  car = car.replace(/(З|С|К)Г/g, "$1GH");
+  car = car.replace(/(З|з|С|с|К|к)г/g, "$1gh");
   
   car = car.replace(/А/g, "A");
   car = car.replace(/Б/g, "B");
