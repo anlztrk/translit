@@ -115,8 +115,8 @@ car = document.transcription.text1.value;
 
   car = car.replace(/(B|C|D|F|G|H|I|K|L|M|N|P|R|S|T|V|Y|Z)ẎI/g, "$1I");
   car = car.replace(/(B|C|D|F|G|H|I|K|L|M|N|P|R|S|T|V|Y|Z|b|c|d|f|g|h|i|k|l|m|n|p|r|s|t|v|y|z)ẏi/g, "$1i");
-  car = car.replace(/(A|E|I|O|U|Y)Ẏ(?!A|E|I|O|U|Y|Ẏ)/g, "$1I$2");
-  car = car.replace(/(A|E|I|O|U|Y|a|e|i|o|u)ẏ(?!a|e|i|o|u|y|ẏ)/g, "$1i$2");
+  car = car.replace(/(A|E|I|O|U|Y)Ẏ(?!A|E|I|O|U|Y|Ẏ)?/g, "$1I$2");
+  car = car.replace(/(A|E|I|O|U|Y|a|e|i|o|u)ẏ(?!a|e|i|o|u|y|ẏ)?/g, "$1i$2");
   car = car.replace(/Ẏ/g, "Y");
   car = car.replace(/ẏ/g, "y");
   car = car.normalize('NFC');
