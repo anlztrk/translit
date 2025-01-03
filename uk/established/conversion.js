@@ -14,6 +14,13 @@ car = document.transcription.text1.value;
   car = car.replace(/Ь(О|о)/g, "Й$1");
   car = car.replace(/ьо/g, "йо");
 
+  car = car.replace(/З(Г|г)/g, "З\u0060$1");
+  car = car.replace(/зг/g, "з\u0060г");  
+  car = car.replace(/С(Г|г)/g, "С\u0060$1");
+  car = car.replace(/сг/g, "с\u0060г");
+  car = car.replace(/К(Г|г)/g, "К\u0060$1");
+  car = car.replace(/кг/g, "к\u0060г");
+
   car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ẎA");
   car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ẎA $1$2");
   car = car.replace(/Я(\p{Uppercase})/ug, "ẎA$1");
