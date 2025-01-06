@@ -143,16 +143,16 @@ car = car.replace(/(Ь|Ъ|ь|ъ)/g, "");
 
 car = car.replace(/ẎY/g, "ẎI");
 car = car.replace(/(Ẏ|ẏ)y/g, "$1i");
+car = car.replace(/Y(Ẏ|ẏ)/g, "Y");
+car = car.replace(/yẏ/g, "y");
+car = car.replace(/I(Ẏ|ẏ)/g, "I");
+car = car.replace(/iẏ/g, "i");
 car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z)ẎI/g, "$1I");
 car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z|b|c|d|f|g|h|k|l|m|n|p|r|s|t|v|z)ẏi/g, "$1i");
 car = car.replace(/Ẏ((?!A|E|I|O|U|Y|Ẏ|a|e|i|o|u|y|ẏ))/g, "I$1");
 car = car.replace(/ẏ((?!a|e|i|o|u|y|ẏ))/g, "i$1");
 car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z)Ẏ/g, "$1I");
-car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z|b|c|d|f|g|h|k|l|m|n|p|r|s|t|v|z)ẏ/g, "$1i"); 
-car = car.replace(/Y(Ẏ|ẏ)/g, "Y");
-car = car.replace(/yẏ/g, "y");
-car = car.replace(/I(Ẏ|ẏ)/g, "I");
-car = car.replace(/iẏ/g, "i");
+car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z|b|c|d|f|g|h|k|l|m|n|p|r|s|t|v|z)ẏ/g, "$1i");
 car = car.replace(/Ẏ/g, "Y");
 car = car.replace(/ẏ/g, "y");
   
