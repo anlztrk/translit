@@ -31,11 +31,11 @@ car = car.replace(/ɩ/g, "і");
 car = car.replace(/Ɩ/g, "І");
 
 car = car.replace(/(С|К|З)Г/g, "$1\u2019Г");
-car = car.replace(/(С|К|З|с|к|з)г/g, "$1\u2019г");
+car = car.replace(/(С|К|З|с|к|з)г/g, "$1\u2019г");/*
 car = car.replace(/Ш(Ч|ч)/g, "Ш\u2019$1");
 car = car.replace(/шч/g, "ш\u2019ч");
 car = car.replace(/Т(С|с)/g, "Т\u2019$1");
-car = car.replace(/тс/g, "т\u2019с");
+car = car.replace(/тс/g, "т\u2019с");*/
 
 car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЬА");
 car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЬА $1$2");
