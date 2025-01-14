@@ -159,7 +159,7 @@ car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z|b|c|d|f|g|h|k|l|m|n|p|r|s|t|
 car = car.replace(/(A|E|O|U|Y|Ẏ)Ẏ((?!A|E|I|O|U|Y|Ẏ))/g, "$1I$2");
 car = car.replace(/(A|E|O|U|Y|Ẏ|a|e|o|u|y|ẏ)ẏ((?!a|e|i|o|u|y|ẏ))/g, "$1i$2");
 car = car.replace(/IẎ((?!A|E|I|O|U|Y|Ẏ))/g, "I$1");
-car = car.replace(/(I|i)ẏ((?!a|e|i|o|u|y|ẏ))/g, "i$1");
+car = car.replace(/(I|i)ẏ((?!a|e|i|o|u|y|ẏ))/g, "$1$2");
 
 car = car.replace(/Ẏ/g, "Y");
 car = car.replace(/ẏ/g, "y");
