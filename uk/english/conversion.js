@@ -30,6 +30,9 @@ car = car.replace(/(А|а|Б|б|В|в|Г|г|Ґ|ґ|Д|д|Е|е|Є|є|Ж|ж|З|з|
 car = car.replace(/ɩ/g, "і");
 car = car.replace(/Ɩ/g, "І");
 
+car = car.replace(/дж/g, "џ");
+car = car.replace(/Д(Ж|ж)/g, "Џ");
+
 car = car.replace(/(С|К|З)Г/g, "$1\u2019Г");
 car = car.replace(/(С|К|З|с|к|з)г/g, "$1\u2019г");/*
 car = car.replace(/Ш(Ч|ч)/g, "Ш\u2019$1");
@@ -87,9 +90,6 @@ car = car.replace(/Ц (\p{Uppercase})(\p{Uppercase})/ug, "ТС $1$2");
 car = car.replace(/Ц(\p{Uppercase})/ug, "ТС$1");
 car = car.replace(/Ц/g, "Тс");
 car = car.replace(/ц/g, "тс");
-
-car = car.replace(/дж/g, "џ");
-car = car.replace(/Д(Ж|ж)/g, "Џ");
 
 car = car.replace(/(Б|В|Г|Ґ|Д|Џ|З|К|Л|М|Н|П|Р|С|Т|Ф)Ь(А|Е|І|И|О|У)/g, "$1І$2");
 car = car.replace(/(Б|В|Г|Ґ|Д|Џ|З|К|Л|М|Н|П|Р|С|Т|Ф|б|в|г|ґ|д|џ|з|к|л|м|н|п|р|с|т|ф)ь(а|е|і|и|о|у)/g, "$1і$2");
