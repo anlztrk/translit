@@ -1,8 +1,8 @@
 var car;
 function latcyr () {
 car = document.transcription.text2.value;
-  car = car.replace(/č/g, "c");
   car = car.replace(/c/g, "ç");
+  car = car.replace(/č/g, "c");
   car = car.replace(/ǧ/g, "ğ");
   car = car.replace(/š/g, "ş");
   car = car.replace(/y/g, "ı");
@@ -10,8 +10,8 @@ car = document.transcription.text2.value;
   car = car.replace(/ž/g, "j");
   car = car.replace(/g/g, "q");
 
-  car = car.replace(/Č/g, "C");
   car = car.replace(/C/g, "Ç");
+  car = car.replace(/Č/g, "C");
   car = car.replace(/Ǧ/g, "Ğ");
   car = car.replace(/Š/g, "Ş");
   car = car.replace(/I/g, "İ");
