@@ -3,15 +3,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Tinos&family=Vollkorn&display=swap');
 </style>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-<!-- d --> 
-<meta NAME="ROBOTS" CONTENT="NOARCHIVE"> 
 <title>Talysh Latin converter</title> 
-<meta name="description" content="Talysh Latin converter" /> 
-<meta http-equiv="Content-Language" content="en, ru"> 
-<meta name="revisit-after" content="2 Days"> 
-<base target="_top"> 
-<!-- d --> 
 		<script type="text/javascript" src="conversion.js"></script>
 		<style type="text/css"> 
 		textarea {
@@ -28,19 +20,19 @@
 <div align="center"> Type or copy a text:<br> 
   <form name=transcription> 
 	<table width=90%><tr align=center> 
-		<td> in Talysh Latin alphabet (as used in Azerbaijan): <br> 
-	<textarea name="text2" onKeyUp="cyrlat()"></textarea> 
+		<td> in Talysh Latin alphabet (Azerbaijani variant):<br> 
+	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
 		  <br> 
-		  <br> 
-	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
-	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
-		</td> 
-		<td> here you get it  in Talysh Latin alphabet (as used in Iran):<br> 
-	<textarea name="text1" onKeyUp="latcyr()"></textarea> 
-			  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
 	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
+		</td> 
+		<td> here you get it in the Iranian variant:<br> 
+	<textarea name="text2" onKeyUp="latcyr()"></textarea> 
+			  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
 	</td></tr></table> 
 </form>
 </body> 
