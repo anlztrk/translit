@@ -1,5 +1,5 @@
 var car;
-function cyrlat () {
+function latcyr () {
 car = document.transcription.text2.value;
   car = car.replace(/č/g, "c");
   car = car.replace(/c/g, "ç");
@@ -19,7 +19,7 @@ car = document.transcription.text2.value;
   car = car.replace(/G/g, "Q");
 document.transcription.text1.value=car;
 }
-function latcyr () {
+function cyrlat () {
 car = document.transcription.text1.value;
   car = car.replace(/ç/g, "c");
   car = car.replace(/c/g, "č");
