@@ -34,6 +34,7 @@ car = car.replace(/ʃ/g, 'ś');
 car = car.replace(/ð/g, 'ð');
 car = car.replace(/ʒ/g, 'ź');
 car = car.replace(/j/g, 'y');
+car = car.replace(/ɡ/g, 'g');
 document.transcription.text2.value=car;
 }
 function copy1()
