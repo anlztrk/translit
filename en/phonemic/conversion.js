@@ -27,13 +27,13 @@ car = car.replace(/ɛ/g, 'e');
 car = car.replace(/ɒ/g, 'å');
 car = car.replace(/ɚ/g, 'ĕr');
 car = car.replace(/ŋ/g, 'ń');
+car = car.replace(/j/g, 'y');
 car = car.replace(/(tʃ|ʧ)/g, 'ć');
 car = car.replace(/(dʒ|ʤ)/g, 'j');
 car = car.replace(/θ/g, 'þ');
 car = car.replace(/ʃ/g, 'ś');
 car = car.replace(/ð/g, 'ð');
 car = car.replace(/ʒ/g, 'ź');
-car = car.replace(/j/g, 'y');
 car = car.replace(/ɡ/g, 'g');
 document.transcription.text2.value=car;
 }
