@@ -2,12 +2,6 @@ var car;
 
 function cyrlat() {
 	car = document.transcription.text1.value;
-	car = car.replace(/<</g, "«");
-	car = car.replace(/>>/g, "»");
-	car = car.replace(/<</g, "«");
-	car = car.replace(/>>/g, "»");
-
-
 	car = car.replace(/(А|Е|Ё|И|О|Ө|У|Ү|Ы|Ю|Я)Ц/g, "$1ТС");
 	car = car.replace(/(а|е|ё|и|о|ө|у|ү|ы|ю|я)Ц/g, "$1Тс");
 	car = car.replace(/(а|е|ё|и|о|ө|у|ү|ы|ю|я)ц/g, "$1тс");
@@ -117,6 +111,12 @@ function cyrlat() {
 	car = car.replace(/Ь/g, "");
 	car = car.replace(/Ы/g, "I");
 	car = car.replace(/Э/g, "E");
+
+        car = car.replace(/\u2039/g, "\u2018");
+	car = car.replace(/\u203a/g, "\u2019");
+	car = car.replace(/\u00ab/g, "\u201c");
+	car = car.replace(/\u00bb/g, "\u201d");
+	
 	car = car.normalize('NFC');
 	document.transcription.text1.value = car;
 }
