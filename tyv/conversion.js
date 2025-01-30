@@ -1,143 +1,169 @@
-﻿
-var car;
-function latcyr () {
+﻿var car;
+
+function cyrlat() {
+	car = document.transcription.text1.value;
+
+	car = car.replace(/(А|Е|Ё|И|О|Ө|У|Ү|Ы|Ю|Я)Ц/g, "$1ТС");
+	car = car.replace(/(а|е|ё|и|о|ө|у|ү|ы|ю|я)Ц/g, "$1Тс");
+	car = car.replace(/(а|е|ё|и|о|ө|у|ү|ы|ю|я)ц/g, "$1тс");
+	car = car.replace(/Ц/g, "С");
+	car = car.replace(/ц/g, "с");
+
+	car = car.replace(/(А|Е|Ё|И|О|Ө|У|Ү|Ы|Ю|Я)Щ(А|Е|Ё|И|О|Ө|У|Ү|Ы|Ю|Я)/g, "$1ШШ$2");
+	car = car.replace(/(А|Е|Ё|И|О|Ө|У|Ү|Ы|Ю|Я)щ(а|е|ё|и|о|ө|у|ү|ы|ю|я)/g, "$1Шш$2");
+	car = car.replace(/(а|е|ё|и|о|ө|у|ү|ы|ю|я)щ(а|е|ё|и|о|ө|у|ү|ы|ю|я)/g, "$1шш$2");
+	car = car.replace(/щ/g, "ш");
+	car = car.replace(/Щ/g, "Ш");
+
+	car = car.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ч|Ш)Я/g, "$1ЬА");
+	car = car.replace(/(б|в|г|д|ж|з|к|л|м|н|ң|п|р|с|т|ф|х|ч|ш)Я/g, "$1ьА");
+	car = car.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|ң|п|р|с|т|ф|х|ч|ш)я/g, "$1ьа");
+	car = car.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|ң|п|р|с|т|ф|х|ч|ш)Ю/g, "$1Ү");
+	car = car.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|ң|п|р|с|т|ф|х|ч|ш)ю/g, "$1ү");
+	car = car.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|ң|п|р|с|т|ф|х|ч|ш)Е/g, "$1Э");
+	car = car.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|ң|п|р|с|т|ф|х|ч|ш)е/g, "$1э");
+	car = car.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|ң|п|р|с|т|ф|х|ч|ш)Ё/g, "$1Ө");
+	car = car.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|ң|п|р|с|т|ф|х|ч|ш)ё/g, "$1ө");
+
+	car = car.replace(/Ь(И|и)/g, "Й$1");
+	car = car.replace(/ьи/g, "йи");
+
+	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
+	car = car.replace(/(\p{Uppercase})Я/ug, "$1ЙА");
+	car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2");
+	car = car.replace(/Я(\p{Uppercase})/ug, "ЙА$1");
+	car = car.replace(/Я/g, "Йа");
+	car = car.replace(/я/g, "йа");
+	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
+	car = car.replace(/(\p{Uppercase})Е/ug, "$1ЙЭ");
+	car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЭ $1$2");
+	car = car.replace(/Е(\p{Uppercase})/g, "ЙЭ$1");
+	car = car.replace(/Е/g, "Йэ");
+	car = car.replace(/е/g, "йэ");
+	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО");
+	car = car.replace(/(\p{Uppercase})Ё/ug, "$1ЙО");
+	car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2");
+	car = car.replace(/Ё(\p{Uppercase})/ug, "ЙО$1");
+	car = car.replace(/Ё/g, "Йо");
+	car = car.replace(/ё/g, "йо");
+	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ");
+	car = car.replace(/(\p{Uppercase})Ю/ug, "$1ЙУ");
+	car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2");
+	car = car.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
+	car = car.replace(/Ю/g, "Йу");
+	car = car.replace(/ю/g, "йу");
+
+	car = car.replace(/ааъ/g, "āā");
+	car = car.replace(/аъ/g, "ā");
+	car = car.replace(/а/g, "a");
+	car = car.replace(/б/g, "b");
+	car = car.replace(/в/g, "v");
+	car = car.replace(/г/g, "g");
+	car = car.replace(/д/g, "d");
+	car = car.replace(/ж/g, "j");
+	car = car.replace(/з/g, "z");
+	car = car.replace(/ииъ/g, "ĩĩ");
+	car = car.replace(/иъ/g, "ĩ");
+	car = car.replace(/и/g, "i");
+	car = car.replace(/й/g, "y");
+	car = car.replace(/к/g, "k");
+	car = car.replace(/л/g, "l");
+	car = car.replace(/м/g, "m");
+	car = car.replace(/н/g, "n");
+	car = car.replace(/ң/g, "ñ");
+	car = car.replace(/ооъ/g, "ōō");
+	car = car.replace(/оъ/g, "ō");
+	car = car.replace(/о/g, "o");
+	car = car.replace(/өөъ/g, "õõ");
+	car = car.replace(/өъ/g, "õ");
+	car = car.replace(/ө/g, "ö");
+	car = car.replace(/п/g, "p");
+	car = car.replace(/р/g, "r");
+	car = car.replace(/с/g, "s");
+	car = car.replace(/т/g, "t");
+	car = car.replace(/ууъ/g, "ūū");
+	car = car.replace(/уъ/g, "ū");
+	car = car.replace(/у/g, "u");
+	car = car.replace(/үүъ/g, "ũũ");
+	car = car.replace(/үъ/g, "ũ");
+	car = car.replace(/ү/g, "ü");
+	car = car.replace(/ф/g, "f");
+	car = car.replace(/х/g, "h");
+	car = car.replace(/ч/g, "ç");
+	car = car.replace(/ш/g, "ş");
+	car = car.replace(/ь/g, "");
+	car = car.replace(/ыыъ/g, "īī");
+	car = car.replace(/ыъ/g, "ī");
+	car = car.replace(/ы/g, "ı");
+	car = car.replace(/ээъ/g, "ēē");
+	car = car.replace(/эъ/g, "ē");
+	car = car.replace(/э/g, "e");
+
+	car = car.replace(/ААЪ/g, "ĀĀ");
+	car = car.replace(/А(Ъ|ъ)/g, "Ā");
+	car = car.replace(/А/g, "A");
+	car = car.replace(/Б/g, "B");
+	car = car.replace(/В/g, "V");
+	car = car.replace(/Г/g, "G");
+	car = car.replace(/Д/g, "D");
+	car = car.replace(/Ж/g, "J");
+	car = car.replace(/З/g, "Z");
+	car = car.replace(/ИИЪ/g, "ĨĨ");
+	car = car.replace(/И(Ъ|ъ)/g, "Ĩ");
+	car = car.replace(/И/g, "İ");
+	car = car.replace(/Й/g, "Y");
+	car = car.replace(/К/g, "K");
+	car = car.replace(/Л/g, "L");
+	car = car.replace(/М/g, "M");
+	car = car.replace(/Н/g, "N");
+	car = car.replace(/Ң/g, "Ñ");
+	car = car.replace(/ООЪ/g, "ŌŌ");
+	car = car.replace(/О(Ъ|ъ)/g, "Ō");
+	car = car.replace(/О/g, "O");
+	car = car.replace(/ӨӨЪ/g, "ÕÕ");
+	car = car.replace(/Ө(Ъ|ъ)/g, "Õ");
+	car = car.replace(/Ө/g, "Ö");
+	car = car.replace(/П/g, "P");
+	car = car.replace(/Р/g, "R");
+	car = car.replace(/С/g, "S");
+	car = car.replace(/Т/g, "T");
+	car = car.replace(/УУЪ/g, "ŪŪ");
+	car = car.replace(/У(Ъ|ъ)/g, "Ū");
+	car = car.replace(/У/g, "U");
+	car = car.replace(/ҮҮЪ/g, "ŨŨ");
+	car = car.replace(/Ү(Ъ|ъ)/g, "Ũ");
+	car = car.replace(/Ү/g, "Ü");
+	car = car.replace(/Ф/g, "F");
+	car = car.replace(/Х/g, "H");
+	car = car.replace(/Ч/g, "Ç");
+	car = car.replace(/Ш/g, "Ş");
+	car = car.replace(/Ь/g, "");
+	car = car.replace(/ЫЫЪ/g, "ĪĪ");
+	car = car.replace(/Ы(Ъ|ъ)/g, "Ī");
+	car = car.replace(/Ы/g, "I");
+	car = car.replace(/ЭЭЪ/g, "ĒĒ");
+	car = car.replace(/Э(Ъ|ъ)/g, "Ē");
+	car = car.replace(/Э/g, "E");
+
+	car = car.replace(/\u2039/g, "\u2018");
+	car = car.replace(/\u203a/g, "\u2019");
+	car = car.replace(/\u00ab/g, "\u201c");
+	car = car.replace(/\u00bb/g, "\u201d");
+
+	car = car.replace(/(Ъ|ъ)/g, "");
+
+	car = car.normalize('NFC');
+	document.transcription.text2.value = car;
 }
-function cyrlat () {
-car = document.transcription.text1.value;
 
-car = car.replace(/ е/g, " ye");
-car = car.replace(/\nе/g, "\nye");
-car = car.replace(/\rе/g, "\rye");
-car = car.replace(/^е/g, "ye");
-
-car = car.replace(/ае/g, "аye");
-car = car.replace(/ие/g, "иye");
-car = car.replace(/ые/g, "ыye");
-car = car.replace(/ее/g, "еye");
-car = car.replace(/эе/g, "эye");
-car = car.replace(/уе/g, "уye");
-car = car.replace(/ое/g, "оye");
-car = car.replace(/өе/g, "өye");
-car = car.replace(/ёе/g, "ёye");
-car = car.replace(/үе/g, "үye");
-car = car.replace(/йе/g, "йye");
-car = car.replace(/юе/g, "юye");
-car = car.replace(/яе/g, "яye");
-car = car.replace(/ье/g, "ye");
-car = car.replace(/ъе/g, "ye");
-
-car = car.replace(/ Е/g, " Ye");
-car = car.replace(/\nЕ/g, "\nYe");
-car = car.replace(/\rЕ/g, "\rYe");
-car = car.replace(/^Е/g, "Ye");
-
-car = car.replace(/Ае/g, "Аye");
-car = car.replace(/Ие/g, "Иye");
-car = car.replace(/Ые/g, "Ыye");
-car = car.replace(/Ее/g, "Еye");
-car = car.replace(/Эе/g, "Эye");
-car = car.replace(/Уе/g, "Уye");
-car = car.replace(/Ое/g, "Оye");
-car = car.replace(/Өе/g, "Өye");
-car = car.replace(/Ёе/g, "Ёye");
-car = car.replace(/Үе/g, "Үye");
-car = car.replace(/Йе/g, "Йye");
-car = car.replace(/Юе/g, "Юye");
-car = car.replace(/Яе/g, "Яye");
-
-car = car.replace(/АЕ/g, "АYE");
-car = car.replace(/ИЕ/g, "ИYE");
-car = car.replace(/ЫЕ/g, "ЫYE");
-car = car.replace(/ЕЕ/g, "ЕYE");
-car = car.replace(/ЭЕ/g, "ЭYE");
-car = car.replace(/УЕ/g, "УYE");
-car = car.replace(/ОЕ/g, "ОYE");
-car = car.replace(/ӨЕ/g, "ӨYE");
-car = car.replace(/ЁЕ/g, "ЁYE");
-car = car.replace(/ҮЕ/g, "ҮYE");
-car = car.replace(/ЙЕ/g, "ЙYE");
-car = car.replace(/ЮЕ/g, "ЮYE");
-car = car.replace(/ЯЕ/g, "ЯYE");
-car = car.replace(/ЬЕ/g, "YE");
-car = car.replace(/ЪЕ/g, "YE");
-
-car = car.replace(/а/g, "a");
-  car = car.replace(/б/g, "b");
-  car = car.replace(/в/g, "v");
-  car = car.replace(/г/g, "g");
-  car = car.replace(/д/g, "d");
-  car = car.replace(/е/g, "e");
-  car = car.replace(/ё/g, "yo");
-  car = car.replace(/ж/g, "j");
-  car = car.replace(/з/g, "z");
-  car = car.replace(/и/g, "i");
-  car = car.replace(/й/g, "y");
-  car = car.replace(/к/g, "k");
-  car = car.replace(/л/g, "l");
-  car = car.replace(/м/g, "m");
-  car = car.replace(/н/g, "n");
-  car = car.replace(/ң/g, "ñ");
-  car = car.replace(/о/g, "o");
-  car = car.replace(/ө/g, "ö");
-  car = car.replace(/п/g, "p");
-  car = car.replace(/р/g, "r");
-  car = car.replace(/с/g, "s");
-  car = car.replace(/т/g, "t");
-  car = car.replace(/у/g, "u");
-  car = car.replace(/ү/g, "ü");
-  car = car.replace(/ф/g, "f");
-  car = car.replace(/х/g, "h");
-  car = car.replace(/ц/g, "ts");
-  car = car.replace(/ч/g, "ç");
-  car = car.replace(/ш/g, "ş");
-  car = car.replace(/щ/g, "ș");
-  car = car.replace(/ъ/g, "");
-  car = car.replace(/ы/g, "ı");
-  car = car.replace(/ь/g, "");
-  car = car.replace(/э/g, "e");
-  car = car.replace(/ю/g, "yu");
-  car = car.replace(/я/g, "ya");
-  car = car.replace(/А/g, "A");
-  car = car.replace(/Б/g, "B");
-  car = car.replace(/В/g, "V");
-  car = car.replace(/Г/g, "G");
-  car = car.replace(/Д/g, "D");
-  car = car.replace(/Е/g, "E");
-  car = car.replace(/Ё/g, "Yo");
-  car = car.replace(/Ж/g, "J");
-  car = car.replace(/З/g, "Z");
-  car = car.replace(/И/g, "İ");
-  car = car.replace(/Й/g, "Y");
-  car = car.replace(/К/g, "K");
-  car = car.replace(/Л/g, "L");
-  car = car.replace(/М/g, "M");
-  car = car.replace(/Н/g, "N");
-  car = car.replace(/Ң/g, "Ñ");
-  car = car.replace(/О/g, "O");
-  car = car.replace(/Ө/g, "Ö");
-  car = car.replace(/П/g, "P");
-  car = car.replace(/Р/g, "R");
-  car = car.replace(/С/g, "S");
-  car = car.replace(/Т/g, "T");
-  car = car.replace(/У/g, "U");
-  car = car.replace(/Ү/g, "Ü");
-  car = car.replace(/Ф/g, "F");
-  car = car.replace(/Х/g, "H");
-  car = car.replace(/Ц/g, "Ts");
-  car = car.replace(/Ч/g, "Ç");
-  car = car.replace(/Ш/g, "Ş");
-  car = car.replace(/Щ/g, "Ș");
-  car = car.replace(/Ъ/g, "");
-  car = car.replace(/Ы/g, "I");
-  car = car.replace(/Ь/g, "");
-  car = car.replace(/Э/g, "E");
-  car = car.replace(/Ю/g, "Yu");
-  car = car.replace(/Я/g, "Ya");
-document.transcription.text2.value=car;
+function copy1() {
+	textRange = document.transcription.text1.createTextRange();
+	textRange.execCommand("Copy");
+	textRange = "";
 }
-function copy1()
-{ textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
-}
-function copy2()
-{ textRange=document.transcription.text2.createTextRange();   textRange.execCommand("Copy");   textRange="";
+
+function copy2() {
+	textRange = document.transcription.text2.createTextRange();
+	textRange.execCommand("Copy");
+	textRange = "";
 }
