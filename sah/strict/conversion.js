@@ -16,33 +16,45 @@ function cyrlat() {
 
 	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш)Я/g, "$1ЬА");
 	car = car.replace(/(б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)Я/g, "$1ьА");
-	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш|Щ|б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)я/g, "$1ьа");
-	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш|Щ|б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)Ю/g, "$1Ү");
-	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш|Щ|б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)ю/g, "$1ү");
-	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш|Щ|б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)Ё/g, "$1Ө");
-	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш|Щ|б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)ё/g, "$1ө");
+	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш|б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)я/g, "$1ьа");
+	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш)Ю/g, "$1ЬҮ");
+	car = car.replace(/(б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)Ю/g, "$1ьҮ");
+	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш|б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)ю/g, "$1ьү");
+	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш)Е/g, "$1ЬЄ");
+	car = car.replace(/(б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)Е/g, "$1ьЄ");
+	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш|б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)е/g, "$1ьє");
+	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш)Ё/g, "$1ЬӨ");
+	car = car.replace(/(б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)Ё/g, "$1ьӨ");
+	car = car.replace(/(Б|В|Г|Ҕ|Д|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Һ|Т|Ф|Х|Ч|Ш|б|в|г|ҕ|д|ж|з|к|л|м|н|ҥ|п|р|с|һ|т|ф|х|ч|ш)ё/g, "$1ьө");
 
-	car = car.replace(/НЬ/g, "НЙ");
+
+	car = car.replace(/Д(Ь|ь)/g, "Ђ");
+	car = car.replace(/дь/g, "ђ");
+	car = car.replace(/НЬ/g, "$1Й");
 	car = car.replace(/(Н|н)ь/g, "$1й");
 	car = car.replace(/Ь(И|и)/g, "Й$1");
 	car = car.replace(/ьи/g, "йи");
 
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
+	car = car.replace(/(\p{Uppercase})Я/ug, "$1ЙА");
 	car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2");
 	car = car.replace(/Я(\p{Uppercase})/ug, "ЙА$1");
 	car = car.replace(/Я/g, "Йа");
 	car = car.replace(/я/g, "йа");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
+	car = car.replace(/(\p{Uppercase})Е/ug, "$1ЙЭ");
 	car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЭ $1$2");
 	car = car.replace(/Е(\p{Uppercase})/g, "ЙЭ$1");
 	car = car.replace(/Е/g, "Йэ");
 	car = car.replace(/е/g, "йэ");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО");
+	car = car.replace(/(\p{Uppercase})Ё/ug, "$1ЙО");
 	car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2");
 	car = car.replace(/Ё(\p{Uppercase})/ug, "ЙО$1");
 	car = car.replace(/Ё/g, "Йо");
 	car = car.replace(/ё/g, "йо");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ");
+	car = car.replace(/(\p{Uppercase})Ю/ug, "$1ЙУ");
 	car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2");
 	car = car.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
 	car = car.replace(/Ю/g, "Йу");
@@ -50,16 +62,15 @@ function cyrlat() {
 
 	car = car.replace(/(Ъ|ъ)/g, "");
 
-	car = car.replace(/Д(Ь|ь)/g, "C");
-	car = car.replace(/дь/g, "c");
-
 	car = car.replace(/а/g, "a");
 	car = car.replace(/б/g, "b");
 	car = car.replace(/в/g, "v");
 	car = car.replace(/г/g, "g");
 	car = car.replace(/ҕ/g, "ğ");
 	car = car.replace(/д/g, "d");
-	car = car.replace(/е/g, "ë");
+	car = car.replace(/ђ/g, "c");
+	car = car.replace(/е/g, "e");
+	car = car.replace(/є/g, "ë");
 	car = car.replace(/ж/g, "j");
 	car = car.replace(/з/g, "z");
 	car = car.replace(/и/g, "i");
@@ -92,7 +103,9 @@ function cyrlat() {
 	car = car.replace(/Г/g, "G");
 	car = car.replace(/Ҕ/g, "Ğ");
 	car = car.replace(/Д/g, "D");
-	car = car.replace(/Е/g, "Ë");
+	car = car.replace(/Ђ/g, "C");
+	car = car.replace(/Е/g, "E");
+	car = car.replace(/Є/g, "Ë");
 	car = car.replace(/Ж/g, "J");
 	car = car.replace(/З/g, "Z");
 	car = car.replace(/И/g, "İ");
