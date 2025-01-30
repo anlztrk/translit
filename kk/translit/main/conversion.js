@@ -15,16 +15,19 @@ car = document.transcription.text1.value;
 
   //Я, Ё, Ю 
   car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЬА");
+  car = car.replace(/(\p{Uppercase})Я/ug, "$1ЬА");
   car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЬА $1$2");
   car = car.replace(/Я(\p{Uppercase})/ug, "ЬА$1");
   car = car.replace(/Я/g, "Ьа");
   car = car.replace(/я/g, "ьа");
   car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЬО");
+  car = car.replace(/(\p{Uppercase})Ё/ug, "$1ЬО");
   car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЬО $1$2");
   car = car.replace(/Ё(\p{Uppercase})/g, "ЬО$1");
   car = car.replace(/Ё/g, "Ьо");
   car = car.replace(/ё/g, "ьо"); 
   car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЬУ");
+  car = car.replace(/(\p{Uppercase})Ю/ug, "$1ЬУ");
   car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЬУ $1$2");
   car = car.replace(/Ю(\p{Uppercase})/ug, "ЬУ$1");
   car = car.replace(/Ю/g, "Ьу");
