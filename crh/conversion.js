@@ -1,6 +1,4 @@
 var car;
-function latcyr () {
-}
 function cyrlat () {
 car = document.transcription.text1.value;
   car = car.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|Ъ|Ь|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ|ъ|ь)(Э|э)/g, "$1\u2060$2");
