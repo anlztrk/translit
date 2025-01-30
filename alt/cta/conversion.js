@@ -2,6 +2,14 @@ var car;
 
 function cyrlat() {
 	car = document.transcription.text1.value;
+
+	car = car.replace(/j/g, "ј");
+	car = car.replace(/J/g, "Ј");
+	car = car.replace(/ö/g, "ӧ");
+	car = car.replace(/ÿ/g, "ӱ");
+	car = car.replace(/Ö/g, "Ӧ");
+	car = car.replace(/Ÿ/g, "Ӱ");
+	
 	car = car.replace(/(А|Е|Ё|И|О|Ӧ|У|Ӱ|Ы|Ю|Я)Ц/g, "$1ТС");
 	car = car.replace(/(а|е|ё|и|о|ӧ|у|ӱ|ы|ю|я)Ц/g, "$1Тс");
 	car = car.replace(/(а|е|ё|и|о|ӧ|у|ӱ|ы|ю|я)ц/g, "$1тс");
