@@ -139,8 +139,7 @@ function cyrlat() {
 	translit = translit.replace(/Ц/g, "C");
 	translit = translit.replace(/Ь/g, "\u0301");
 
-	translit = translit.replace(/d\u0301/g, "d\u0317");
-	translit = translit.replace(/t\u0301/g, "t\u0317");
+	translit = translit.replace(/(D|d|T|t)\u0301/g, "$1\u0326");
 
 	translit = translit.replace(/\u2039/g, "\u2018");
 	translit = translit.replace(/\u203a/g, "\u2019");
