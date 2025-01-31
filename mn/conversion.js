@@ -45,8 +45,8 @@ function cyrlat() {
 	car = car.replace(/Ю/g, "Йу");
 	car = car.replace(/ю/g, "йу");
 
-	car = car.replace(/ЬЙ/g, "J\u0308");
-	car = car.replace(/(Ь|ь)й/g, "j\u0308");
+	car = car.replace(/ЬЙ/g, "J\u0306");
+	car = car.replace(/(Ь|ь)й/g, "j\u0306");
 	car = car.replace(/а/g, "a");
 	car = car.replace(/б/g, "b");
 	car = car.replace(/в/g, "v");
