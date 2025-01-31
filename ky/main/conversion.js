@@ -122,6 +122,7 @@ function cyrlat() {
 	car = car.replace(/\u00bb/g, "\u201d");
 
 	car = car.normalize('NFC');
+	document.transcription.text2.value = car;
 }
 
 function copy1() {
