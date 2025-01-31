@@ -11,40 +11,42 @@ function cyrlat() {
 
 	car = car.replace(/Ъ(А|Б|В|Г|Д|Е|Ё|Ж|З|И|Й|К|Л|М|Н|О|Ө|П|Р|С|Т|У|Ү|Ф|Х|Ц|Ч|Ш|Щ|Ъ|Ы|Ь|Э|Ю|Я|а|б|в|г|д|е|ё|ж|з|и|й|к|л|м|н|о|ө|п|р|с|т|у|ү|ф|х|ц|ч|ш|щ|ъ|ы|ь|э|ю|я)/g, "\u2019$1");
 	car = car.replace(/ъ(а|б|в|г|д|е|ё|ж|з|и|й|к|л|м|н|о|ө|п|р|с|т|у|ү|ф|х|ц|ч|ш|щ|ъ|ы|ь|э|ю|я)/g, "\u2019$1");
-		
-	car = car.replace(/еө/g, "jȯȯ");
-	car = car.replace(/Еө/g, "Jȯȯ");
-	car = car.replace(/ЕӨ/g, "JȮȮ");
 
-	car = car.replace(/юү/g, "ju̇u̇");
-	car = car.replace(/Юү/g, "Ju̇u̇");
-	car = car.replace(/ЮҮ/g, "JU̇U̇");
+	car = car.replace(/еө/g, "йөө");
+	car = car.replace(/Еө/g, "Йөө");
+	car = car.replace(/ЕӨ/g, "ЙӨӨ");
 
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 JA");
-	car = car.replace(/(\p{Uppercase})Я/ug, "$1JA");
-	car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "JA $1$2");
-	car = car.replace(/Я(\p{Uppercase})/ug, "JA$1");
-	car = car.replace(/Я/g, "Ja");
-	car = car.replace(/я/g, "ja");
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 JE");
-	car = car.replace(/(\p{Uppercase})Е/ug, "$1JE");
-	car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "JE $1$2");
-	car = car.replace(/Е(\p{Uppercase})/g, "JE$1");
-	car = car.replace(/Е/g, "Je");
-	car = car.replace(/е/g, "je");
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 JO");
-	car = car.replace(/(\p{Uppercase})Ё/ug, "$1JO");
-	car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "JO $1$2");
-	car = car.replace(/Ё(\p{Uppercase})/ug, "JO$1");
-	car = car.replace(/Ё/g, "Jo");
-	car = car.replace(/ё/g, "jo");
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 JU");
-	car = car.replace(/(\p{Uppercase})Ю/ug, "$1JU");
-	car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "JU $1$2");
-	car = car.replace(/Ю(\p{Uppercase})/ug, "JU$1");
-	car = car.replace(/Ю/g, "Ju");
-	car = car.replace(/ю/g, "ju");
+	car = car.replace(/юү/g, "йүү̇");
+	car = car.replace(/Юү/g, "Йүү̇");
+	car = car.replace(/ЮҮ/g, "ЙҮҮ̇");
 
+	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
+	car = car.replace(/(\p{Uppercase})Я/ug, "$1ЙА");
+	car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2");
+	car = car.replace(/Я(\p{Uppercase})/ug, "ЙА$1");
+	car = car.replace(/Я/g, "Йа");
+	car = car.replace(/я/g, "йа");
+	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
+	car = car.replace(/(\p{Uppercase})Е/ug, "$1ЙЭ");
+	car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЭ $1$2");
+	car = car.replace(/Е(\p{Uppercase})/g, "ЙЭ$1");
+	car = car.replace(/Е/g, "Йэ");
+	car = car.replace(/е/g, "йэ");
+	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО");
+	car = car.replace(/(\p{Uppercase})Ё/ug, "$1ЙО");
+	car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2");
+	car = car.replace(/Ё(\p{Uppercase})/ug, "ЙО$1");
+	car = car.replace(/Ё/g, "Йо");
+	car = car.replace(/ё/g, "йо");
+	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ");
+	car = car.replace(/(\p{Uppercase})Ю/ug, "$1ЙУ");
+	car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2");
+	car = car.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
+	car = car.replace(/Ю/g, "Йу");
+	car = car.replace(/ю/g, "йу");
+
+	car = car.replace(/ЬЙ/g, "J\u0308");
+	car = car.replace(/(Ь|ь)й/g, "j\u0308");
 	car = car.replace(/а/g, "a");
 	car = car.replace(/б/g, "b");
 	car = car.replace(/в/g, "v");
