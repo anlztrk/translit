@@ -28,21 +28,25 @@ function cyrlat() {
 	car = car.replace(/ьи/g, "йи");
 
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
+	car = car.replace(/(\p{Uppercase})Я/ug, "$1ЙА");
 	car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2");
 	car = car.replace(/Я(\p{Uppercase})/ug, "ЙА$1");
 	car = car.replace(/Я/g, "Йа");
 	car = car.replace(/я/g, "йа");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
+	car = car.replace(/(\p{Uppercase})Е/ug, "$1ЙЭ");
 	car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЭ $1$2");
 	car = car.replace(/Е(\p{Uppercase})/g, "ЙЭ$1");
 	car = car.replace(/Е/g, "Йэ");
 	car = car.replace(/е/g, "йэ");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО");
+	car = car.replace(/(\p{Uppercase})Ё/ug, "$1ЙО");
 	car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2");
 	car = car.replace(/Ё(\p{Uppercase})/ug, "ЙО$1");
 	car = car.replace(/Ё/g, "Йо");
 	car = car.replace(/ё/g, "йо");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ");
+	car = car.replace(/(\p{Uppercase})Ю/ug, "$1ЙУ");
 	car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2");
 	car = car.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
 	car = car.replace(/Ю/g, "Йу");
@@ -112,13 +116,12 @@ function cyrlat() {
 	car = car.replace(/Ы/g, "I");
 	car = car.replace(/Э/g, "E");
 
-        car = car.replace(/\u2039/g, "\u2018");
+	car = car.replace(/\u2039/g, "\u2018");
 	car = car.replace(/\u203a/g, "\u2019");
 	car = car.replace(/\u00ab/g, "\u201c");
 	car = car.replace(/\u00bb/g, "\u201d");
-	
+
 	car = car.normalize('NFC');
-	document.transcription.text2.value = car;
 }
 
 function copy1() {
