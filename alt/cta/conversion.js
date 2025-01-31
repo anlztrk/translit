@@ -9,7 +9,7 @@ function cyrlat() {
 	car = car.replace(/ÿ/g, "ӱ");
 	car = car.replace(/Ö/g, "Ӧ");
 	car = car.replace(/Ÿ/g, "Ӱ");
-	
+
 	car = car.replace(/(А|Е|Ё|И|О|Ӧ|У|Ӱ|Ы|Ю|Я)Ц/g, "$1ТС");
 	car = car.replace(/(а|е|ё|и|о|ӧ|у|ӱ|ы|ю|я)Ц/g, "$1Тс");
 	car = car.replace(/(а|е|ё|и|о|ӧ|у|ӱ|ы|ю|я)ц/g, "$1тс");
@@ -23,7 +23,7 @@ function cyrlat() {
 	car = car.replace(/Щ/g, "Ш");
 
 	car = car.replace(/(Б|В|Г|Д|Ј|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Т|Ф|Х|Ч|Ш)Я/g, "$1ЬА");
-	car = car.replace(/(б|в|г|д|ј|ж|з|к|л|м|н|ҥ|п|р|с|т|ф|х|ч|ш)Я/g, "$ьА");
+	car = car.replace(/(б|в|г|д|ј|ж|з|к|л|м|н|ҥ|п|р|с|т|ф|х|ч|ш)Я/g, "$1ьА");
 	car = car.replace(/(Б|В|Г|Д|Ј|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ј|ж|з|к|л|м|н|ҥ|п|р|с|т|ф|х|ч|ш)я/g, "$1ьа");
 	car = car.replace(/(Б|В|Г|Д|Ј|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ј|ж|з|к|л|м|н|ҥ|п|р|с|т|ф|х|ч|ш)Ю/g, "$1Ӱ");
 	car = car.replace(/(Б|В|Г|Д|Ј|Ж|З|К|Л|М|Н|Ҥ|П|Р|С|Т|Ф|Х|Ч|Ш|Щ|б|в|г|д|ј|ж|з|к|л|м|н|ҥ|п|р|с|т|ф|х|ч|ш)ю/g, "$1ӱ");
@@ -36,21 +36,25 @@ function cyrlat() {
 	car = car.replace(/ьи/g, "йи");
 
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
+	car = car.replace(/(\p{Uppercase})Я/ug, "$1ЙА");
 	car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2");
 	car = car.replace(/Я(\p{Uppercase})/ug, "ЙА$1");
 	car = car.replace(/Я/g, "Йа");
 	car = car.replace(/я/g, "йа");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
+	car = car.replace(/(\p{Uppercase})Е/ug, "$1ЙЭ");
 	car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЭ $1$2");
 	car = car.replace(/Е(\p{Uppercase})/g, "ЙЭ$1");
 	car = car.replace(/Е/g, "Йэ");
 	car = car.replace(/е/g, "йэ");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО");
+	car = car.replace(/(\p{Uppercase})Ё/ug, "$1ЙО");
 	car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2");
 	car = car.replace(/Ё(\p{Uppercase})/ug, "ЙО$1");
 	car = car.replace(/Ё/g, "Йо");
 	car = car.replace(/ё/g, "йо");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ");
+	car = car.replace(/(\p{Uppercase})Ю/ug, "$1ЙУ");
 	car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2");
 	car = car.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
 	car = car.replace(/Ю/g, "Йу");
