@@ -44,9 +44,9 @@ function cyrlat() {
 			car = car.replace(/(А|Е|И|О|У|Ы|Э|а|е|и|о|у|ы|э)у/g, "$1ў");
 			car = car.replace(/(А|Е|И|О|У|Ы|Э)У/g, "$1Ў");
 
-			car = car.replace(/кхъ/g, "къхъ")
-			car = car.replace(/Кхъ/g, "Къхъ")
-			car = car.replace(/КХЪ/g, "КЪХЪ")
+			car = car.replace(/кхъ/g, "къхъ");
+			car = car.replace(/Кхъ/g, "Къхъ");
+			car = car.replace(/КХЪ/g, "КЪХЪ");
 			car = car.replace(/жь/g, "j");
 			car = car.replace(/Ж(Ь|ь)/g, "J");
 			car = car.replace(/хь/g, "ħ");
@@ -64,7 +64,11 @@ function cyrlat() {
 			car = car.replace(/чъ/g, "ċ");
 			car = car.replace(/Ч(Ъ|ъ)/g, "Ċ");
 			car = car.replace(/шъ/g, "ṣ");
-			car = car.replace(/Ш(Ъ|ъ)/g, "Ș");
+			car = car.replace(/Ш(Ъ|ъ)/g, "Ṣ");
+			car = car.replace(/чӏ/g, "ċӏ");
+			car = car.replace(/Ч(Ӏ|ӏ)/g, "Ċ$1");
+			car = car.replace(/кӏ/g, "čӏ");
+			car = car.replace(/Ч(Ӏ|ӏ)/g, "Č$1");
 
 			car = car.replace(/а/g, "a");
 			car = car.replace(/б/g, "b");
