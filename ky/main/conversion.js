@@ -53,6 +53,21 @@ function cyrlat() {
 	car = car.replace(/ю/g, "йу");
 
 	car = car.replace(/(Ъ|ъ)/g, "");
+	
+	car = car.replace(/аа/g, "á");
+	car = car.replace(/ээ/g, "é");
+	car = car.replace(/ыы/g, "í");
+	car = car.replace(/оо/g, "ó");
+	car = car.replace(/өө/g, "ő");
+	car = car.replace(/уу/g, "ú");
+	car = car.replace(/үү/g, "ű");
+	car = car.replace(/А(А|а)/g, "Á");
+	car = car.replace(/Э(Э|э)/g, "É");
+	car = car.replace(/Ы(Ы|ы)/g, "Í");
+	car = car.replace(/О(О|о)/g, "Ó");
+	car = car.replace(/Ө(Ө|ө)/g, "Ő");
+	car = car.replace(/У(У|у)/g, "Ú");
+	car = car.replace(/Ү(Ү|ү)/g, "Ű");
 
 	car = car.replace(/а/g, "a");
 	car = car.replace(/б/g, "b");
