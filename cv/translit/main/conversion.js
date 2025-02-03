@@ -40,6 +40,8 @@ function cyrlat() {
 
 	car = car.replace(/Ь(И|и)/g, "Й$1");
 	car = car.replace(/ьи/g, "йи");
+	car = car.replace(/Ь(О|о)/g, "Й$1");
+	car = car.replace(/ьо/g, "йо");
 
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
 	car = car.replace(/(\p{Uppercase})Я/ug, "$1ЙА");
@@ -122,7 +124,7 @@ function cyrlat() {
 	car = car.replace(/Л/g, "L");
 	car = car.replace(/М/g, "M");
 	car = car.replace(/Н/g, "N");
-	car = car.replace(/О/g, "O");
+	car = car.replace(/О/g, "Ó");
 	car = car.replace(/П/g, "P");
 	car = car.replace(/Р/g, "R");
 	car = car.replace(/С/g, "S");
