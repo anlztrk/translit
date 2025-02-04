@@ -3,7 +3,7 @@ var fix;
 
 function cyrlat() {
 	car = document.transcription.text1.value;
-	fix = car
+	fix = car;
 	fix = fix.replace(/(\p{Script=Cyrl})(I|1)/ug, "$1Ӏ");
 	fix = fix.replace(/(I|1)(\p{Script=Cyrl})/ug, "Ӏ$2");
 	fix = fix.replace(/(\p{Script=Cyrl})l/ug, "$1ӏ");
