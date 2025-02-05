@@ -1,9 +1,8 @@
-var fix;
 var car;
 
 function cyrlat() {
 	car = document.transcription.text1.value;
-	fix = car;
+	var fix = car;
 	fix = fix.replace(/<</g, "«");
 	fix = fix.replace(/>>/g, "»");
 	document.transcription.text1.value = fix;
