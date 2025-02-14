@@ -34,7 +34,7 @@ function cyrlat () {
  car = car.replace(/MO\u0027TAD/g, "MO\u0027\u0027TAD");
  car = car.replace(/MO\u0027TAZILA/g, "MO\u0027\u0027TAZILA");
  car = car.replace(/MO\u0027TARIZA/g, "MO\u0027\u0027TARIZA");
- car = car.replace(/(O|G|o|g)\u0027/g, "$1\u0307");
+ car = car.replace(/(O|G|o|g)\u0027/g, "$1\u0306");
  car = car.replace(/\u0027/g, "\u02bc");
  car = car.normalize('NFC');
 document.transcription.text2.value = car;
