@@ -150,8 +150,11 @@ car = car.replace(/(Ь|Ъ|ь|ъ)/g, "");
 
 car = car.replace(/ẎY/g, "ẎI");
 car = car.replace(/(Ẏ|ẏ)y/g, "$1i");
-car = car.replace(/Y(Ẏ|ẏ)/g, "Y");
-car = car.replace(/yẏ/g, "y");
+car = car.replace(/Y(Ẏ|ẏ)((?!A|E|I|O|U|Y|Ẏ))/g, "Y$2");
+car = car.replace(/yẏ((?!a|e|i|o|u|y|ẏ))/g, "y$1");
+car = car.replace(/YẎ(A|E|I|O|U|Y|Ẏ)/g, "IẎ$1");
+car = car.replace(/Yẏ(a|e|i|o|u|y|ẏ)/g, "Iẏ$1");
+car = car.replace(/yẏ(a|e|i|o|u|y|ẏ)/g, "iẏ$1");
 
 car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z)ẎI/g, "$1I");
 car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z|b|c|d|f|g|h|k|l|m|n|p|r|s|t|v|z)ẏi/g, "$1i");
