@@ -14,9 +14,6 @@ car = document.transcription.text1.value;
  car = car.replace(/Γ(Γ|Ξ|Χ|γ|ξ|χ)/g, "Ν$1");
  car = car.replace(/γ(γ|ξ|χ)/g, "ν$1");
 
- car = car.replace(/Ο(Υ|υ)/g, "U");
- car = car.replace(/ου/g, "u");
-
  car = car.replace(/(\p{Lu}|\p{Mn})Ξ/ug, "$KS");
  car = car.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Ξ/ug, "$1$2 KS");
  car = car.replace(/Ξ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "KS $1$2");
@@ -70,33 +67,36 @@ car = document.transcription.text1.value;
  car = car.replace(/Χ/g, "H");
  car = car.replace(/χ/g, "h");
 
- car = car.replace(/Α(Ι|ι)/g, "E");
- car = car.replace(/αι/g, "e");
+ car = car.replace(/Α(Ι|ι)/g, "Ε");
+ car = car.replace(/αι/g, "ε");
 
- car = car.replace(/(Ε|Η|Ο|Υ)(Ι|ι)/g, "İ");
- car = car.replace(/(ε|η|ο|υ)ι/g, "i");
+ car = car.replace(/(Ε|Η|Ο|Υ)(Ι|ι)/g, "Ι");
+ car = car.replace(/(ε|η|ο|υ)ι/g, "ι");
  
- car = car.replace(/Γ(Ε|Η|Ι|Υ|E|İ)(Α|Ο|Ω|U)/g, "Y$2");
- car = car.replace(/Γ(ε|η|ι|υ|e|i)(α|ο|ω|u)/g, "Y$2");
- car = car.replace(/γ(ε|η|ι|υ|e|i)(α|ο|ω|u)/g, "y$2");
+ car = car.replace(/Γ(Ε|Η|Ι|Υ)(Α|Ο|Ω|U)/g, "Y$2");
+ car = car.replace(/Γ(ε|η|ι|υ)(α|ο|ω|u)/g, "Y$2");
+ car = car.replace(/γ(ε|η|ι|υ)(α|ο|ω|u)/g, "y$2");
  
- car = car.replace(/Γ(Ε|Η|Ι|Υ|E|İ|ε|η|ι|υ|e|i)/g, "Y$1");
- car = car.replace(/γ(ε|η|ι|υ|e|i)/g, "y$1");
+ car = car.replace(/Γ(Ε|Η|Ι|Υ|ε|η|ι|υ)/g, "Y$1");
+ car = car.replace(/γ(ε|η|ι|υ)/g, "y$1");
 
- car = car.replace(/(Η|Ι|Υ|İ)(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)\u0301/g, "$1\u2060$2\u0301");
- car = car.replace(/(η|ι|υ|i)(α|ο|ω|u|ε|e)\u0301/g, "$1\u2060$2\u0301");
+ car = car.replace(/(Η|Ι|Υ)(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)\u0301/g, "$1\u2060$2\u0301");
+ car = car.replace(/(η|ι|υ)(α|ο|ω|u|ε|e)\u0301/g, "$1\u2060$2\u0301");
  
- car = car.replace(/(Η|Ι|Υ|İ)(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)/g, "Y$2");
- car = car.replace(/(η|ι|υ|i)(α|ο|ω|u|ε|e)/g, "y$2");
+ car = car.replace(/(Η|Ι|Υ)(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)/g, "Y$2");
+ car = car.replace(/(η|ι|υ)(α|ο|ω|u|ε|e)/g, "y$2");
  
- car = car.replace(/(Α|Ο|Ω|U|Ε|E)(\u0301)?(Η|Ι|Υ|İ)/g, "$1Y");
- car = car.replace(/(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)(\u0301)?(η|ι|υ|i)/g, "$1y");
+ car = car.replace(/(Α|Ο|Ω|Ε)(\u0301)?(Η|Ι|Υ)/g, "$1Y");
+ car = car.replace(/(Α|Ο|Ω|Ε|α|ο|ω|ε)(\u0301)?(η|ι|υ)/g, "$1y");
  
  car = car.replace(/Y\u0301/g, "İ");
  car = car.replace(/y\u0301/g, "i");
  
  car = car.replace(/Γ(Κ|κ)/g, "G");
  car = car.replace(/γκ/g, "g");
+ 
+ car = car.replace(/Ο(Υ|υ)/g, "U");
+ car = car.replace(/ου/g, "u");
 
  car = car.replace(/Α/g, "A");
  car = car.replace(/Β/g, "V");
