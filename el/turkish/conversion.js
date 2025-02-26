@@ -14,89 +14,78 @@ car = document.transcription.text1.value;
  car = car.replace(/Γ(Γ|Ξ|Χ|γ|ξ|χ)/g, "Ν$1");
  car = car.replace(/γ(γ|ξ|χ)/g, "ν$1");
 
- car = car.replace(/(\p{Lu}|\p{Mn})Ξ/ug, "$KS");
- car = car.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Ξ/ug, "$1$2 KS");
- car = car.replace(/Ξ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "KS $1$2");
- car = car.replace(/Ξ(\p{Lu}|\p{Mn})/ug, "KS$1");
- car = car.replace(/Ξ/g, "Ks");
- car = car.replace(/ξ/g, "ks");
-  
+ car = car.replace(/ΟΥ/g, "ΟU");
+ car = car.replace(/Ου/g, "Οu");
+ car = car.replace(/ου/g, "οu");
+ 
  car = car.replace(/Μ(Π|π)/g, "\u200cB");
  car = car.replace(/μπ/g, "\u200cb");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1MB$2");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(\p{Lu}|\p{Mn})/ug, "$1MP$2");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1Mb$2");  
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(\p{L}|\p{Mn})/ug, "$1Mp$2");
- car = car.replace(/(\p{L}|\p{Mn})\u200cb(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1mb$2");
- car = car.replace(/(\p{L}|\p{Mn})\u200cb(\p{L}|\p{Mn})/ug, "$1mp$2");
- car = car.replace(/\u200c/g, "");
-
- car = car.replace(/Ν(Τ|τ)/g, "\u200cD");
- car = car.replace(/ντ/g, "\u200cd");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1ND$2");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(\p{Lu}|\p{Mn})/ug, "$1NT$2");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1Nd$2");  
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(\p{L}|\p{Mn})/ug, "$1Nt$2");
- car = car.replace(/(\p{L}|\p{Mn})\u200cd(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1nd$2");
- car = car.replace(/(\p{L}|\p{Mn})\u200cd(\p{L}|\p{Mn})/ug, "$1nt$2");
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1ΜB$2");
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(\p{Lu}|\p{Mn})/ug, "$1ΜΠ$2");
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1Μb$2");  
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(\p{L}|\p{Mn})/ug, "$1Μπ$2");
+ car = car.replace(/(\p{L}|\p{Mn})\u200cb(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1μb$2");
+ car = car.replace(/(\p{L}|\p{Mn})\u200cb(\p{L}|\p{Mn})/ug, "$1μπ$2");
  car = car.replace(/\u200c/g, "");
  
- car = car.replace(/Τ(Ζ|ζ)/g, "C");
- car = car.replace(/τζ/g, "c");
-
- car = car.replace(/Τ(Σ|σ|ς)/g, "Ç");
- car = car.replace(/τ(σ|ς)/g, "ç");
-
+ car = car.replace(/Ν(Τ|τ)/g, "\u200cD");
+ car = car.replace(/ντ/g, "\u200cd");
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1ΝD$2");
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(\p{Lu}|\p{Mn})/ug, "$1ΝΤ$2");
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1Νd$2");  
+ car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(\p{L}|\p{Mn})/ug, "$1Ντ$2");
+ car = car.replace(/(\p{L}|\p{Mn})\u200cd(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1νd$2");
+ car = car.replace(/(\p{L}|\p{Mn})\u200cd(\p{L}|\p{Mn})/ug, "$1ντ$2");
+ car = car.replace(/\u200c/g, "");
+ 
  car = car.replace(/(\p{Lu}|\p{Mn})Ψ/ug, "$1PS");
  car = car.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Ψ/ug, "$1$2 PS");
  car = car.replace(/Ψ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "PS $1$2");
  car = car.replace(/Ψ(\p{Lu}|\p{Mn})/ug, "PS$1");
  car = car.replace(/Ψ/g, "Ps");
  car = car.replace(/ψ/g, "ps");
-
- car = car.replace(/(\p{Lu}|\p{Mn})Ξ/ug, "$KS");
- car = car.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Ξ/ug, "$1$2 KS");
- car = car.replace(/Ξ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "KS $1$2");
- car = car.replace(/Ξ(\p{Lu}|\p{Mn})/ug, "KS$1");
- car = car.replace(/Ξ/g, "Ks");
- car = car.replace(/ξ/g, "ks");
-
- car = car.replace(/Θ/g, "T");
- car = car.replace(/θ/g, "t");
-
- car = car.replace(/Χ/g, "H");
- car = car.replace(/χ/g, "h");
-
- car = car.replace(/Α(Ι|ι)/g, "Ε");
- car = car.replace(/αι/g, "ε");
-
- car = car.replace(/(Ε|Η|Ο|Υ)(Ι|ι)/g, "Ι");
- car = car.replace(/(ε|η|ο|υ)ι/g, "ι");
  
- car = car.replace(/Γ(Ε|Η|Ι|Υ)(Α|Ο|Ω|U)/g, "Y$2");
- car = car.replace(/Γ(ε|η|ι|υ)(α|ο|ω|u)/g, "Y$2");
- car = car.replace(/γ(ε|η|ι|υ)(α|ο|ω|u)/g, "y$2");
+ car = car.replace(/(\p{Lu}|\p{Mn})Ξ/ug, "$1ΚΣ");
+ car = car.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Ξ/ug, "$1$2 ΚΣ");
+ car = car.replace(/Ξ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "ΚΣ $1$2");
+ car = car.replace(/Ξ(\p{Lu}|\p{Mn})/ug, "ΚΣ$1");
+ car = car.replace(/Ξ/g, "Κσ");
+ car = car.replace(/ξ/g, "κσ");
  
- car = car.replace(/Γ(Ε|Η|Ι|Υ|ε|η|ι|υ)/g, "Y$1");
- car = car.replace(/γ(ε|η|ι|υ)/g, "y$1");
-
- car = car.replace(/(Η|Ι|Υ)(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)\u0301/g, "$1\u2060$2\u0301");
- car = car.replace(/(η|ι|υ)(α|ο|ω|u|ε|e)\u0301/g, "$1\u2060$2\u0301");
+ car = car.replace(/Α(Ο|Ε|Υ)?Ι/g, "Ε");
+ car = car.replace(/Α(ο|ε|υ)?ι/g, "Ε");
+ car = car.replace(/α(ο|ε|υ)?ι/g, "ε");
  
- car = car.replace(/(Η|Ι|Υ)(Α|Ο|Ω|U|Ε|E|α|ο|ω|u|ε|e)/g, "Y$2");
- car = car.replace(/(η|ι|υ)(α|ο|ω|u|ε|e)/g, "y$2");
+ car = car.replace(/(Ο|Ε|Υ)(Ο|Ε|Υ)?Ι/g, "Ι");
+ car = car.replace(/(Ο|Ε|Υ)(ο|ε|υ)?ι/g, "Ι");
+ car = car.replace(/(ο|ε|υ)(ο|ε|υ)?ι/g, "ι");
  
- car = car.replace(/(Α|Ο|Ω|Ε)(\u0301)?(Η|Ι|Υ)/g, "$1Y");
- car = car.replace(/(Α|Ο|Ω|Ε|α|ο|ω|ε)(\u0301)?(η|ι|υ)/g, "$1y");
+ car = car.replace(/Γ(Ε|Ι|Η|Υ)(Α|Ο|Ω)/g, "Y$2");
+ car = car.replace(/Γ(ε|ι|η|υ)(α|ο|ω)/g, "Y$2");
+ car = car.replace(/γ(ε|ι|η|υ)(α|ο|ω)/g, "y$2");
  
- car = car.replace(/Y\u0301/g, "İ");
- car = car.replace(/y\u0301/g, "i");
+ car = car.replace(/Γ(Ε|Ι|Η|Υ|ε|ι|η|υ)/g, "Y$1");
+ car = car.replace(/γ(ε|ι|η|υ)/g, "y$1");
  
- car = car.replace(/Γ(Κ|κ)/g, "G");
- car = car.replace(/γκ/g, "g");
+ car = car.replace(/(Ι|Η|Υ)(Α|Ε|Ι|Η|Ο|Ω|α|ε|ι|η|ο|ω)/g, "Y$2");
+ car = car.replace(/(ι|η|υ)(α|ε|ι|η|ο|ω)/g, "y$2");
  
- car = car.replace(/Ο(Υ|υ)/g, "U");
- car = car.replace(/ου/g, "u");
+ car = car.replace(/(Α|Ε|Ι|Η|Υ|Ο|Ω)(\u0301)?(Ι|Η|Υ)((?!\u0301))/g, "$1$2Y$4");
+ car = car.replace(/(Α|Ε|Ι|Η|Υ|Ο|Ω|α|ε|ι|ο|ω)(\u0301)?(ι|η|υ)((?!\u0301))/g, "$1$2y$4");
+ 
+ car = car.replace(/Ο(U|u)/g, "U");
+ car = car.replace(/οu/g, "u");
+ 
+ car = car.replace(/Τ(Σ|σ|ς)/g, "Ç");
+ car = car.replace(/τ(σ|ς)/g, "ç");
+ 
+ car = car.replace(/Τ(Ζ|ζ)/g, "C");
+ car = car.replace(/τζ/g, "c");
+ 
+ car = car.replace(/(\p{Lu}|\p{Mn})ΓΚ/ug, "$1ΝΓ");
+ car = car.replace(/(\p{Ll}|\p{Mn})γκ/ug, "$1νγ");
+ car = car.replace(/Γ(Κ|κ)/ug, "Γ");
+ car = car.replace(/γκ/ug, "γ");
 
  car = car.replace(/Α/g, "A");
  car = car.replace(/Β/g, "V");
@@ -105,11 +94,13 @@ car = document.transcription.text1.value;
  car = car.replace(/Ε/g, "E");
  car = car.replace(/Ζ/g, "Z");
  car = car.replace(/Η/g, "İ");
+ car = car.replace(/Θ/g, "T");
  car = car.replace(/Ι/g, "İ");
  car = car.replace(/Κ/g, "K");
  car = car.replace(/Λ/g, "L");
  car = car.replace(/Μ/g, "M");
  car = car.replace(/Ν/g, "N");
+ car = car.replace(/Ξ/g, "X");
  car = car.replace(/Ο/g, "O");
  car = car.replace(/Π/g, "P");
  car = car.replace(/Ρ/g, "R");
@@ -117,6 +108,7 @@ car = document.transcription.text1.value;
  car = car.replace(/Τ/g, "T");
  car = car.replace(/Υ/g, "İ");
  car = car.replace(/Φ/g, "F");
+ car = car.replace(/Χ/g, "H");
  car = car.replace(/Ω/g, "O");
  car = car.replace(/α/g, "a");
  car = car.replace(/β/g, "v");
@@ -125,11 +117,13 @@ car = document.transcription.text1.value;
  car = car.replace(/ε/g, "e");
  car = car.replace(/ζ/g, "z");
  car = car.replace(/η/g, "i");
+ car = car.replace(/θ/g, "t");
  car = car.replace(/ι/g, "i");
  car = car.replace(/κ/g, "k");
  car = car.replace(/λ/g, "l");
  car = car.replace(/μ/g, "m");
  car = car.replace(/ν/g, "n");
+ car = car.replace(/ξ/g, "x");
  car = car.replace(/ο/g, "o");
  car = car.replace(/π/g, "p");
  car = car.replace(/ρ/g, "r");
@@ -138,12 +132,11 @@ car = document.transcription.text1.value;
  car = car.replace(/τ/g, "t");
  car = car.replace(/υ/g, "i");
  car = car.replace(/φ/g, "f");
+ car = car.replace(/χ/g, "h");
  car = car.replace(/ω/g, "o");
  car = car.replace(/(\u003b|\u037e)/g, "\u003f");
-
- car = car.replace(/(\u0301|\u0308)/g, "");
+ car = car.replace(/\u0301/g, "");
  car = car.normalize('NFC');
-
  car = car.replace(/\u2060/g, "");
 document.transcription.text2.value=car;
 }
