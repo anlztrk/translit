@@ -20,22 +20,22 @@ car = document.transcription.text1.value;
  
  car = car.replace(/Μ(Π|π)/g, "\u200cB");
  car = car.replace(/μπ/g, "\u200cb");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1ΜB$2");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(\p{Lu}|\p{Mn})/ug, "$1ΜΠ$2");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1Μb$2");  
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cB(\p{L}|\p{Mn})/ug, "$1Μπ$2");
- car = car.replace(/(\p{L}|\p{Mn})\u200cb(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1μb$2");
- car = car.replace(/(\p{L}|\p{Mn})\u200cb(\p{L}|\p{Mn})/ug, "$1μπ$2");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1$2ΜB$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cB(\p{Lu}|\p{Mn})/ug, "$1$2ΜΠ$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2Μb$3");  
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cB(\p{L}|\p{Mn})/ug, "$1$2Μπ$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?\u200cb(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2μb$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)\u200cb(\p{L}|\p{Mn})/ug, "$1$2μπ$3");
  car = car.replace(/\u200c/g, "");
  
  car = car.replace(/Ν(Τ|τ)/g, "\u200cD");
  car = car.replace(/ντ/g, "\u200cd");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1ΝD$2");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(\p{Lu}|\p{Mn})/ug, "$1ΝΤ$2");
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1Νd$2");  
- car = car.replace(/(\p{Lu}|\p{Mn})\u200cD(\p{L}|\p{Mn})/ug, "$1Ντ$2");
- car = car.replace(/(\p{L}|\p{Mn})\u200cd(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1νd$2");
- car = car.replace(/(\p{L}|\p{Mn})\u200cd(\p{L}|\p{Mn})/ug, "$1ντ$2");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1$2ΝD$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cD(\p{Lu}|\p{Mn})/ug, "$1$2ΝΤ$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2Νd$3");  
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cD(\p{L}|\p{Mn})/ug, "$1$2Ντ$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?\u200cd(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2νd$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?\u200cd(\p{L}|\p{Mn})/ug, "$1$2ντ$3");
  car = car.replace(/\u200c/g, "");
  
  car = car.replace(/(\p{Lu}|\p{Mn})Ψ/ug, "$1PS");
