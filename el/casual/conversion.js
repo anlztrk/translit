@@ -79,8 +79,11 @@ car = document.transcription.text1.value;
  car = car.replace(/Γ(Κ|κ)/ug, "Γ");
  car = car.replace(/γκ/ug, "γ");
 
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?Χ/ug, "$1$2ΚΧ");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?χ/ug, "$1$2κχ");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?Χ/ug, "$1$2ΚΧ\u200c");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?χ/ug, "$1$2κχ\u200c");
+ car = car.replace(/ΚΧ\u200c(Α|Ε|Ι|Η|Ο|Ω|Υ)/g, "Χ$1");
+ car = car.replace(/κχ\u200c(α|ε|ι|η|ο|ω|υ)/g, "χ$1");
+ car = car.replace(/\u200c/g, "");
  
  car = car.replace(/Ο(U|u)/g, "U");
  car = car.replace(/οu/g, "u");
