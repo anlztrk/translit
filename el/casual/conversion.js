@@ -18,24 +18,24 @@ car = document.transcription.text1.value;
  car = car.replace(/Ου/g, "Οu");
  car = car.replace(/ου/g, "οu");
  
- car = car.replace(/Μ(Π|π)/g, "\u200cB");
- car = car.replace(/μπ/g, "\u200cb");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1$2ΜB$3");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cB(\p{Lu}|\p{Mn})/ug, "$1$2ΜΠ$3");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cB(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2Μb$3");  
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cB(\p{L}|\p{Mn})/ug, "$1$2Μπ$3");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?\u200cb(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2μb$3");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)\u200cb(\p{L}|\p{Mn})/ug, "$1$2μπ$3");
+ car = car.replace(/Μ(Π|π)/g, "\u200cБ");
+ car = car.replace(/μπ/g, "\u200cб");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cБ(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1$2ΜБ$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cБ(\p{Lu}|\p{Mn})/ug, "$1$2ΜΠ$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cБ(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2Μб$3");  
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cБ(\p{L}|\p{Mn})/ug, "$1$2Μπ$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?\u200cб(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2μб$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)\u200cб(\p{L}|\p{Mn})/ug, "$1$2μπ$3");
  car = car.replace(/\u200c/g, "");
  
- car = car.replace(/Ν(Τ|τ)/g, "\u200cD");
- car = car.replace(/ντ/g, "\u200cd");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1$2ΝD$3");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cD(\p{Lu}|\p{Mn})/ug, "$1$2ΝΤ$3");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cD(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2Νd$3");  
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cD(\p{L}|\p{Mn})/ug, "$1$2Ντ$3");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?\u200cd(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2νd$3");
- car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?\u200cd(\p{L}|\p{Mn})/ug, "$1$2ντ$3");
+ car = car.replace(/Ν(Τ|τ)/g, "\u200cД");
+ car = car.replace(/ντ/g, "\u200cд");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cД(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ)/ug, "$1$2ΝД$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cД(\p{Lu}|\p{Mn})/ug, "$1$2ΝΤ$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cД(Α|Ε|Ι|Η|Ο|Ω|Υ|Β|Γ|Δ|Ζ|Λ|Μ|Ν|Ρ|α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2Νд$3");  
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ)(\p{Mn})?\u200cД(\p{L}|\p{Mn})/ug, "$1$2Ντ$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?\u200cд(α|ε|ι|η|ο|ω|υ|β|γ|δ|ζ|λ|μ|ν|ρ)/ug, "$1$2νд$3");
+ car = car.replace(/(Α|Ε|Ι|Η|Ο|Ω|Υ|α|ε|ι|η|ο|ω|υ)(\p{Mn})?\u200cд(\p{L}|\p{Mn})/ug, "$1$2ντ$3");
  car = car.replace(/\u200c/g, "");
  
  car = car.replace(/(\p{Lu}|\p{Mn})Ψ/ug, "$1PS");
@@ -67,10 +67,6 @@ car = document.transcription.text1.value;
  car = car.replace(/(Ο|Ε|Υ)(ο|ε|υ)?ι/g, "Ι");
  car = car.replace(/(ο|ε|υ)(ο|ε|υ)?ι/g, "ι");
  
- car = car.replace(/Γ(Ε|Ι|Η|Υ)(Α|Ο|Ω)/g, "Y$2");
- car = car.replace(/Γ(ε|ι|η|υ)(α|ο|ω)/g, "Y$2");
- car = car.replace(/γ(ε|ι|η|υ)(α|ο|ω)/g, "y$2");
- 
  car = car.replace(/Γ(Ε|Ι|Η|Υ|ε|ι|η|υ)/g, "Y$1");
  car = car.replace(/γ(ε|ι|η|υ)/g, "y$1");
   
@@ -90,7 +86,9 @@ car = document.transcription.text1.value;
                    
  car = car.replace(/Α/g, "A");
  car = car.replace(/Β/g, "V");
+ car = car.replace(/Б/g, "B");
  car = car.replace(/Γ/g, "G");
+ car = car.replace(/Д/g, "D");
  car = car.replace(/Ε/g, "E");
  car = car.replace(/Ζ/g, "Z");
  car = car.replace(/Η/g, "I");
@@ -112,7 +110,9 @@ car = document.transcription.text1.value;
  car = car.replace(/Ω/g, "O");
  car = car.replace(/α/g, "a");
  car = car.replace(/β/g, "v");
+ car = car.replace(/б/g, "b");
  car = car.replace(/γ/g, "g");
+ car = car.replace(/д/g, "d");
  car = car.replace(/ε/g, "e");
  car = car.replace(/ζ/g, "z");
  car = car.replace(/η/g, "i");
