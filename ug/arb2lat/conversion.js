@@ -61,7 +61,7 @@ function latcyr () {
 car = document.transcription.text2.value; 
 car = car.replace(/\u2019/g, "\u0027");
 
-car = car.replace(/(b|ch|d|f|g|gh|h|j|k|l|m|n|ng|p|q|r|s|sh|t|w|x|y|z|zh)(a|e|ë|i|o|ö|u|ü)/g, "$1\u200c$2");
+car = car.replace(/(?<!(a|e|ë|i|o|ö|u|ü))(a|e|ë|i|o|ö|u|ü)/g, "$1\u200c$2");
 car = car.replace(/\u0027/g, "ئ");
 
 car = car.replace(/ch/g, "چ"); 
