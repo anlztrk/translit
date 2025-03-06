@@ -60,8 +60,9 @@ function latcyr () {
   car = car.replace(/\u00b4/g, "\u2019"); 
   car = car.replace(/\u02bc/g, "\u2019"); 
   car = car.replace(/\u0027/g, "\u2019");
-  
-  car = car.replace(/(b|d|f|g|h|j|k|l|m|n|p|q|r|s|t|w|x|y|z)(a|e|ë|i|o|ö|u|ü)/g, "$1\u200c$2");
+
+  car = car.replace(/(B|D|F|G|H|J|K|L|M|N|P|Q|R|S|T|W|X|Y|Z)(A|E|Ë|I|O|Ö|U|Ü)/g, "$1\u200c$2");
+  car = car.replace(/(B|D|F|G|H|J|K|L|M|N|P|Q|R|S|T|W|X|Y|Z|b|d|f|g|h|j|k|l|m|n|p|q|r|s|t|w|x|y|z)(a|e|ë|i|o|ö|u|ü)/g, "$1\u200c$2");
 
   car = car.replace(/(CH|Ch|ch)/g, "چ"); 
   car = car.replace(/(GH|Gh|gh)/g, "غ"); 
