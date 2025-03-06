@@ -56,7 +56,7 @@ function cyrlat () {
   car = car.replace(/\u0640/g, "");
 
   car = car.replace(/(\p{Lu})([\p{L}\p{N}ëéöüËéöü\s,;?!"'()]+)/gu, function(_, first, second) {
-    return first + second.toLowercase();
+    return first + second.toLowerCase();
 });
 document.transcription.text2.value=car; 
 }
