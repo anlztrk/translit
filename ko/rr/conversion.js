@@ -157,7 +157,7 @@ function cyrlat () {
    car = car.replace(/ᅴ/g, 'UI');
    car = car.replace(/ᅵ/g, 'I');
 
-   car = car.replace(/(\p{Lu})([\p{L}\p{N}\s,;"'\-()]+)/gu, function(_, first, second) {
+   car = car.replace(/(\p{Lu})([\p{L}\p{N}\s,;"'‘’“”\-()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
 });
 document.transcription.text2.value = car;
