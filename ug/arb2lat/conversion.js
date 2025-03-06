@@ -11,6 +11,8 @@ function cyrlat () {
   car = car.replace(/زھ/g, "زئھ"); 
 
   car = car.replace(/(ا|ە|ې|ى|و|ۆ|ۇ|ۈ)ئ(ا|ە|ې|ى|و|ۆ|ۇ|ۈ)/g, "$1$2");
+  car = car.replace(/(ب|چ|د|ف|گ|غ|ھ|ج|ك|ل|م|ن|ڭ|پ|ق|ر|س|ش|ت|ۋ|خ|ي|ز|ژ)ئ/g, "$1ئئ");
+  car = car.replace(/ئ(ا|ە|ې|ى|و|ۆ|ۇ|ۈ)/g, "$1");  
   car = car.replace(/ا/g, "a"); 
   car = car.replace(/ە/g, "e"); 
   car = car.replace(/ې/g, "ë"); 
