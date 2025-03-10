@@ -62,6 +62,8 @@ function cyrlat() {
     translit = translit.replace(/é/g, "ë");
     translit = translit.replace(/É/g, "Ë");
 
+    car = car.replace(/[\u2019|\u02bc]/g, "\u0027");
+	
     car = car.replace(/gh/g, "ğ");
     car = car.replace(/Gh/g, "Ğ");
     car = car.replace(/GH/g, "Ğ");
