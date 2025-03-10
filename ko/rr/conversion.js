@@ -1,7 +1,7 @@
 ﻿var car;
 
 function cyrlat () {
-  car = document.transcription.text1.value;
+   car = document.transcription.text1.value;
    car = car.normalize('NFD');
 
    let latinWords = {};
@@ -167,7 +167,7 @@ function cyrlat () {
    car = car.replace(/ᅴ/g, 'UI');
    car = car.replace(/ᅵ/g, 'I');
 
-   car = car.replace(/([\n]?\p{Lu})([\p{sc=Latin}\p{N}\t\u0020,;\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
+   car = car.replace(/([\n]?\p{Lu})([\p{sc=Latin}\p{N}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
 });
 
