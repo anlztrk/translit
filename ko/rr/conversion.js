@@ -6,7 +6,7 @@ function cyrlat () {
 
    let latinWords = {};
    let index = 0;
-   car = car.replace(/[A-Za-z]+/ug, function(match) {
+   car = car.replace(/\p{sc=Latin}+/ug, function(match) {
      let key = `__placeholder${index}__`;
      latinWords[key] = match;
      index++;
