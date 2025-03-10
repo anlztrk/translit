@@ -67,6 +67,10 @@ function cyrlat () {
   car = car.replace(/([\n]?\p{L}|__placeholder\d+__)([\p{L}\p{N}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
 });
+
+   Object.keys(latinWords).forEach(key => {
+     car = car.replace(key, latinWords[key]);
+});
 document.transcription.text2.value=car; 
 }
 
