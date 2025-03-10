@@ -171,7 +171,7 @@ function cyrlat () {
     return first + second.toLowerCase();
 });
 
-   Object.keys(latinWords).forEach(key ==> {
+   Object.keys(latinWords).forEach(key => {
      car = car.replace(key, latinWords[key]);
 });
 document.transcription.text2.value = car;
