@@ -167,7 +167,7 @@ function cyrlat () {
    car = car.replace(/ᅴ/g, 'UI');
    car = car.replace(/ᅵ/g, 'I');
 
-   car = car.replace(/(\p{Lu})([\p{L}\p{N}\s,;"'‘’“”\-()]+)/gu, function(_, first, second) {
+   car = car.replace(/([\n]?\p{Lu})([\p{L}\p{N}ëéöüËéöü\t\u0020,;\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
 });
 
