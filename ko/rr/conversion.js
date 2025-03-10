@@ -3,6 +3,16 @@
 function cyrlat () {
   car = document.transcription.text1.value;
    car = car.normalize('NFD');
+
+   let latinWords = {};
+   let index = 0;
+   car = car.replace(/[\p{sc=Latin}]+/ug, function(match) {
+     let key = `__placeholder${index}__`;
+     latinWords[key] = match;
+     index++;
+     return key;
+   });
+  
    car = car.replace(/ᆪᄉ/g, 'ᆨᄊ');
    car = car.replace(/ᆬᄌ/g, 'ᆫᄍ');
    car = car.replace(/ᆰᄀ/g, 'ᆯᄁ');
@@ -159,6 +169,10 @@ function cyrlat () {
 
    car = car.replace(/(\p{Lu})([\p{L}\p{N}\s,;"'‘’“”\-()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
+});
+
+   Object.keys(latinWords).forEach(key ==> {
+     car = car.replace(key, latinWords[key]);
 });
 document.transcription.text2.value = car;
 }
