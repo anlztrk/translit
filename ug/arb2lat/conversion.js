@@ -1,6 +1,15 @@
 var car; 
 function cyrlat () { 
   car = document.transcription.text1.value;
+  
+  let latinWords = {};
+   let index = 0;
+   car = car.replace(/\p{sc=Latin}+/ug, function(match) {
+     let key = `__placeholder${index}__`;
+     latinWords[key] = match;
+     index++;
+     return key;
+  });
 
   car = car.replace(/(الله|ﷲ)/g, "ئاللاھ"); 
 
@@ -55,7 +64,7 @@ function cyrlat () {
   car = car.replace(/\u06d4/g, "\u002e"); 
   car = car.replace(/\u0640/g, "");
 
-  car = car.replace(/(\p{Lu})([\p{L}\p{N}ëéöüËÉÖÜ,;()"'’‘”“\-: \t\u00a0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000]+)/gu, function(_, first, second) {
+  car = car.replace(/([\n]?\p{L}|__placeholder\d+__)([\p{L}\p{N}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
 });
 document.transcription.text2.value=car; 
