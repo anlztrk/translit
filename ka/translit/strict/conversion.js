@@ -1,6 +1,15 @@
 ﻿var car;
 function geolat () {
 car = document.transcription.text1.value;
+let latinWords = {};
+   let index = 0;
+   car = car.replace(/\p{sc=Latin}+/ug, function(match) {
+     let key = `__placeholder${index}__`;
+     latinWords[key] = match;
+     index++;
+     return key;
+  });
+  
 car = car.replace(/ქქ/g, "ქ-ქ");
 car = car.replace(/ფფ/g, "ფ-ფ");
 car = car.replace(/თთ/g, "თ-თ");
@@ -40,6 +49,14 @@ car = car.replace(/ჭ/g, "čč");
 car = car.replace(/ხ/g, "x");
 car = car.replace(/ჯ/g, "j");
 car = car.replace(/ჰ/g, "h");
+
+car = car.replace(/([\n]?\p{L}|__placeholder\d+__)([\p{L}\p{N}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
+    return first + second.toLowerCase();
+});
+
+   Object.keys(latinWords).forEach(key => {
+     car = car.replace(key, latinWords[key]);
+});
 document.transcription.text2.value=car;
 }
 function copy1()
