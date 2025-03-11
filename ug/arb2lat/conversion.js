@@ -35,7 +35,7 @@ function cyrlat () {
   car = car.replace(/ج/g, "J"); 
   car = car.replace(/چ/g, "CH"); 
   car = car.replace(/د/g, "D"); 
-  car = car.replace(/ف/g, "F"); 
+  car = car.replace(/ف|ڧ/g, "F"); 
   car = car.replace(/گ/g, "G"); 
   car = car.replace(/غ/g, "GH"); 
   car = car.replace(/ھ/g, "H"); 
