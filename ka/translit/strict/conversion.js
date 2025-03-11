@@ -5,7 +5,7 @@ car = car.replace(/ქქ/g, "ქ-ქ");
 car = car.replace(/ფფ/g, "ფ-ფ");
 car = car.replace(/თთ/g, "თ-თ");
 car = car.replace(/ცც/g, "ც-ც");
-car = car.replace(/ცც/g, "ც-ც");
+car = car.replace(/ჩჩ/g, "ჩ-ჩ");
   
 car = car.replace(/ა/g, "a");
 car = car.replace(/ბ/g, "b");
