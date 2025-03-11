@@ -64,7 +64,7 @@ function cyrlat () {
   car = car.replace(/\u06d4/g, "\u002e"); 
   car = car.replace(/\u0640/g, "");
 
-  car = car.replace(/([\n]?\p{L}|__placeholder\d+__)([\p{L}\p{N}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
+  car = car.replace(/([\n]?\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
 });
 
