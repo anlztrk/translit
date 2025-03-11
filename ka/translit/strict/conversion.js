@@ -50,7 +50,7 @@ car = car.replace(/ხ/g, "X");
 car = car.replace(/ჯ/g, "J");
 car = car.replace(/ჰ/g, "H");
 
-car = car.replace(/([\n]?\p{L}|[\n]?\p{N}|__placeholder\d+__)([\p{L}\p{N}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
+car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
 });
 
