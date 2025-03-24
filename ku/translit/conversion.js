@@ -30,13 +30,13 @@ function cyrlat () {
   car = car.replace(/ژ/g, "J"); 
   car = car.replace(/ک|ك/g, "K"); 
   car = car.replace(/ل/g, "L"); 
-  car = car.replace(/ڵ/g, "LL");
+  car = car.replace(/ڵ/g, "L");
   car = car.replace(/م/g, "M"); 
   car = car.replace(/ن/g, "N");
   car = car.replace(/پ/g, "P"); 
   car = car.replace(/ق/g, "Q"); 
   car = car.replace(/ر/g, "R"); 
-  car = car.replace(/ڕ/g, "RR"); 
+  car = car.replace(/ڕ/g, "R"); 
   car = car.replace(/س/g, "S"); 
   car = car.replace(/ش/g, "Ş"); 
   car = car.replace(/ت/g, "T"); 
