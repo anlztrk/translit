@@ -1,7 +1,7 @@
-﻿﻿<!doctype html>
+<!doctype html>
 <html> 
 <head> 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
 <title>Kurdish Arabic - Latin converter</title><script type="text/javascript" src="conversion.js"></script>
 		<style type="text/css"> 
 		textarea {
@@ -22,14 +22,14 @@
   <form name=transcription> 
 	<table width=90%><tr align=center> 
 		<td> in Kurdish Arabic alphabet: <br> 
-	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
+	<textarea class="Arabic" name="text1" onKeyUp="cyrlat()" dir="rtl"></textarea> 
 		  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
 	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
 		</td> 
 		<td> here you get it in Latin alphabet:<br> 
-	<textarea class="Arabic" name="text2" onKeyUp="latcyr()" dir="rtl"></textarea> 
+	<textarea name="text2" onKeyUp="latcyr()"></textarea> 
 			  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
