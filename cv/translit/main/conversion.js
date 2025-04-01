@@ -2,6 +2,7 @@ var car;
 
 function cyrlat() {
 	car = document.transcription.text1.value;
+	car = car.replace(/\u0301/g, "");
 
 	car = car.replace(/Ÿ/g, "Ӳ");
 	car = car.replace(/ÿ/g, "ӳ");
