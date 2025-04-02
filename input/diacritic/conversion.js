@@ -22,6 +22,7 @@ car = car.replace(/\u0023(cedilla|tail)\u0023/g, "\u0327");
 car = car.replace(/\u0023ogonek\u0023/g, "\u0328");
 car = car.replace(/\u0023(vertical)?line(below)?\u0023/g, "\u0329");
 car = car.replace(/\u0023(circumflex|caret)below\u0023/g, "\u032d");
+car = car.replace(/\u0023u(....)\u0023/g, "\u$1");
 car = car.normalize('NFC');
 document.transcription.text1.value=car;
 }
