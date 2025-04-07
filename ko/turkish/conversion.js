@@ -141,9 +141,13 @@ function cyrlat () {
   car = car.replace(/ᆯᄅ/g, 'LL');
   
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅵ|ᆷ|ᆫ|ᆼ|ᆯ)ᄀ/g, '$1G');
+  car = car.replace(/ᄀ(ᅱ|ᅬ)/g, 'G$1');
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅵ|ᆷ|ᆫ|ᆼ|ᆯ)ᄃ/g, '$1D');
+  car = car.replace(/ᄀ(ᅱ|ᅬ)/g, 'D$1');
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅵ|ᆷ|ᆫ|ᆼ|ᆯ)ᄇ/g, '$1B');
+  car = car.replace(/ᄀ(ᅱ|ᅬ)/g, 'B$1');
   car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅵ|ᆷ|ᆫ|ᆼ|ᆯ)ᄌ/g, '$1C');
+  car = car.replace(/ᄀ(ᅱ|ᅬ)/g, 'C$1');
   car = car.replace(/ᄀ/g, 'K');
   car = car.replace(/ᆨ/g, 'K');
   car = car.replace(/ᄁ/g, 'K');
