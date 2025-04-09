@@ -3,9 +3,9 @@ var car;
 function cyrlat () {
 car = document.transcription.text1.value;
 car = car.normalize('NFD');
-car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/g, "\u0303ṅ$2");
-car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/g, "\u0303n$2");
-car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "\u0303m$2");
+car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह|ड|ठ|ढ)/g, "\u0303ṅ$2");
+car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स|च|छ|ज|झ)/g, "\u0303n$2");
+car = car.replace(/(ं|ँ)(प|फ|ब|भ|व|फ़)/g, "\u0303m$2");
 car = car.replace(/(ं|ँ)/g, "\u0303");
 car = car.replace(/क़/g, "\u200bq\u200c");
 car = car.replace(/ख़/g, "\u200bx\u200c");
