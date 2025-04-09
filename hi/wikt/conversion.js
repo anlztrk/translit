@@ -75,6 +75,8 @@ car = car.replace(/ै/g, "ai");
 car = car.replace(/औ/g, "au");
 car = car.replace(/ौ/g, "au");
 car = car.replace(/ः/g, "ḥ");
+car = car.replace(/\u0964/g, "\u002e");
+car = car.replace(/\u0965/g, "");  
 car = car.normalize('NFC');
 document.transcription.text2.value = car;
 }
