@@ -52,7 +52,7 @@ car = car.replace(/ळ/g, "\u200bḷ\u200c");
 car = car.replace(/व़/g, "\u200bw\u200c");
 car = car.replace(/\u200c(ि|ु|ृ|े|ो|ा|ी|ू|ै|ौ)/g, "$1");
 car = car.replace(/्/g, "\u200b");
-car = car.replace(/(\p{script=Deva})\u200c\u200b\1/g, "$1$1");
+car = car.replace(/(\p{script=Deva})\u200c\u200b\1/ug, "$1$1");
 car = car.replace(/अ/g, "\u200ba");
 car = car.replace(/इ/g, "\u200bi");
 car = car.replace(/ि/g, "\u200bi");
