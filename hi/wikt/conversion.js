@@ -2,6 +2,7 @@
 
 function cyrlat () {
 car = document.transcription.text1.value;
+car = car.normalize('NFD');
 car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/, "\u0303ṅ$2");
 car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/, "\u0303n$2");
 car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/, "\u0303m$2");
@@ -50,6 +51,7 @@ car = car.replace(/व/, "v\u200c");
 car = car.replace(/ळ/, "ḷ\u200c");
 car = car.replace(/व़/, "w\u200c");
 car = car.replace(/\u200c(ि|ु|ृ|े|ो|ा|ी|ू|ै|ौ)/, "$1");
+car = car.replace(/u200c्/, "");
 car = car.replace(/\u200c/, "a");
 car = car.replace(/अ/, "a");
 car = car.replace(/इ/, "i");
@@ -73,6 +75,7 @@ car = car.replace(/ै/, "ai");
 car = car.replace(/औ/, "au");
 car = car.replace(/ौ/, "au");
 car = car.replace(/ः/, "ḥ");
+car = car.normalize('NFC');
 document.transcription.text2.value = car;
 }
 function copy1()
