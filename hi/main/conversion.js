@@ -58,7 +58,7 @@ function cyrlat() {
 	car = car.replace(/ब/g, "\u200bB\u200c");
 	car = car.replace(/भ/g, "\u200bBH\u200c");
 	car = car.replace(/म/g, "\u200bM\u200c");
-	car = car.replace(/व/g, "\u200bV\u200c");
+	car = car.replace(/व/g, "\u200bW\u200c");
 	car = car.replace(/ळ/g, "\u200bL\u200c");
 	car = car.replace(/व़/g, "\u200bW\u200c");
 	car = car.replace(/\u200c्/g, "");
@@ -74,12 +74,12 @@ function cyrlat() {
 	car = car.replace(/े/g, "E");
 	car = car.replace(/ओ/g, "O");
 	car = car.replace(/ो/g, "O");
-	car = car.replace(/आ/g, "A");
-	car = car.replace(/ा/g, "A");
-	car = car.replace(/ई/g, "I");
-	car = car.replace(/ी/g, "I");
-	car = car.replace(/ऊ/g, "U");
-	car = car.replace(/ू/g, "U");
+	car = car.replace(/आ/g, "AA");
+	car = car.replace(/ा/g, "AA");
+	car = car.replace(/ई/g, "EE");
+	car = car.replace(/ी/g, "EE");
+	car = car.replace(/ऊ/g, "OO");
+	car = car.replace(/ू/g, "OO");
 	car = car.replace(/ऐ/g, "AI");
 	car = car.replace(/ै/g, "AI");
 	car = car.replace(/औ/g, "AU");
@@ -100,7 +100,7 @@ function cyrlat() {
 	car = car.replace(/#/g, "\u200c");
 
 	// Step 5a: Break CCCC → CCəCC
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1$2\u200c$3$4");
+	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,4})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,4})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,4})/g, "$1$2\u200c$3$4");
 
 	// Step 5b: Break CCC → CəCC
 	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c$2$3");
