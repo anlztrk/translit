@@ -13,13 +13,10 @@ function cyrlat() {
 		return key;
 	});
 
-	// Nasal + consonant rules
-	car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/g, "N$2");
-	car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/g, "N$2");
-	car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "M$2");
-	car = car.replace(/(ं|ँ)(?![\u093e-\u094c])/g, "N");
-
-	// Special consonants with nukta
+	car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/g, "\u200bN$2");
+	car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/g, "\u200bN$2");
+	car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "\u200bM$2");
+	car = car.replace(/(ं|ँ)(?![\u093e-\u094c])/g, "\u200bN");
 	car = car.replace(/क़/g, "\u200bQ\u200c");
 	car = car.replace(/ख़/g, "\u200bKH\u200c");
 	car = car.replace(/ग़/g, "\u200bGH\u200c");
@@ -29,8 +26,6 @@ function cyrlat() {
 	car = car.replace(/ड़/g, "\u200bR\u200c");
 	car = car.replace(/ढ़/g, "\u200bRH\u200c");
 	car = car.replace(/ज्ञ/g, "\u200bGY\u200c");
-
-	// Regular consonants
 	car = car.replace(/क/g, "\u200bK\u200c");
 	car = car.replace(/ख/g, "\u200bKH\u200c");
 	car = car.replace(/ग/g, "\u200bG\u200c");
@@ -63,79 +58,56 @@ function cyrlat() {
 	car = car.replace(/ब/g, "\u200bB\u200c");
 	car = car.replace(/भ/g, "\u200bBH\u200c");
 	car = car.replace(/म/g, "\u200bM\u200c");
-	car = car.replace(/व/g, "\u200bW\u200c");
+	car = car.replace(/व/g, "\u200bV\u200c");
 	car = car.replace(/ळ/g, "\u200bL\u200c");
 	car = car.replace(/व़/g, "\u200bW\u200c");
-
-	// Independent vowels
-	car = car.replace(/अ/g, "\u200bA");
-	car = car.replace(/इ/g, "\u200bI");
-	car = car.replace(/उ/g, "\u200bU");
-	car = car.replace(/ऋ/g, "\u200bRI");
-	car = car.replace(/ए/g, "\u200bE");
-	car = car.replace(/ओ/g, "\u200bO");
-	car = car.replace(/आ/g, "\u200bAA");
-	car = car.replace(/ई/g, "\u200bEE");
-	car = car.replace(/ऊ/g, "\u200bOO");
-	car = car.replace(/ऐ/g, "\u200bAI");
-	car = car.replace(/औ/g, "\u200bAU");
-
-	// Matras (dependent vowels)
+	car = car.replace(/\u200c्/g, "");
+	car = car.replace(/\u200c(ि|ु|ृ|े|ो|ा|ी|ू|ै|ौ)/g, "$1");
+	car = car.replace(/अ/g, "A");
+	car = car.replace(/इ/g, "I");
 	car = car.replace(/ि/g, "I");
+	car = car.replace(/उ/g, "U");
 	car = car.replace(/ु/g, "U");
+	car = car.replace(/ऋ/g, "RI");
 	car = car.replace(/ृ/g, "RI");
+	car = car.replace(/ए/g, "E");
 	car = car.replace(/े/g, "E");
+	car = car.replace(/ओ/g, "O");
 	car = car.replace(/ो/g, "O");
-	car = car.replace(/ा/g, "AA");
-	car = car.replace(/ी/g, "EE");
-	car = car.replace(/ू/g, "OO");
+	car = car.replace(/आ/g, "A");
+	car = car.replace(/ा/g, "A");
+	car = car.replace(/ई/g, "I");
+	car = car.replace(/ी/g, "I");
+	car = car.replace(/ऊ/g, "U");
+	car = car.replace(/ू/g, "U");
+	car = car.replace(/ऐ/g, "AI");
 	car = car.replace(/ै/g, "AI");
+	car = car.replace(/औ/g, "AU");
 	car = car.replace(/ौ/g, "AU");
-
-	// Visarga
 	car = car.replace(/ः/g, "\u200bH");
-
-	// Protect first schwa in each sequence of consonant-schwa patterns
-	car = car.replace(/((?:\u200b[^\u200b\u200c\s]{1,2}\u200c)+)/g, function(group) {
-		let protected = false;
-		return group.replace(/(\u200b[^\u200b\u200c\s]{1,2})\u200c/g, function(_, cons) {
-			if (!protected) {
-				protected = true;
-				return cons + "#";
-			} else {
-				return cons + "\u200c\u200b";
-			}
-		});
-	});
-
-	// Restore protected schwas
-	car = car.replace(/#/g, "\u200c");
-
-	// Reinsert schwa in 4-consonant clusters → CCəCC
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1$2\u200c$3$4");
-
-	// Reinsert schwa in 3-consonant clusters → CəCC
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c$2$3");
-
-	// Realize and delete schwas
-	car = car.replace(/\u200c(?!\u200b)/g, "A"); // Realized schwa
-	car = car.replace(/\u200c\u200b/g, "");     // Deleted schwa
-	car = car.replace(/\u200b/g, "");           // Cleanup ZWSP
-
-	// Other punctuation handling
+	car = car.replace(/\u200c(\u200b|\u0303)/g, "A$1");
+	car = car.replace(/(\u200b|\u200c)/g, "");
 	car = car.replace(/\u0964/g, "\u002e");
 	car = car.replace(/\u0965/g, "");
-
-	// Normalize and fix casing
 	car = car.normalize('NFC');
 	car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
 		return first + second.toLowerCase();
 	});
 
-	// Restore placeholders
 	Object.keys(latinWords).forEach(key => {
 		car = car.replace(key, latinWords[key]);
 	});
-
 	document.transcription.text2.value = car;
+}
+
+function copy1() {
+	textRange = document.transcription.text1.createTextRange();
+	textRange.execCommand("Copy");
+	textRange = "";
+}
+
+function copy2() {
+	textRange = document.transcription.text2.createTextRange();
+	textRange.execCommand("Copy");
+	textRange = "";
 }
