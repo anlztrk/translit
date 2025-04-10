@@ -12,19 +12,7 @@ function cyrlat() {
 		index++;
 		return key;
 	});
-
-	// Protect the first inherent schwa in each Devanagari word by marking it as realized
-	car = car.replace(/(?:\p{sc=Devanagari}+)/gu, function(word) {
-		let protected = false;
-		return word.replace(/([^\u200c\s]{1,2})\u200c/g, function(_, cons) {
-			if (!protected) {
-				protected = true;
-				return cons + "\u200c\u200b"; // mark as realized
-			}
-			return cons + "\u200c"; // leave as possible/deletable
-		});
-	});
-
+	
 	car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/g, "\u200bN$2");
 	car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/g, "\u200bN$2");
 	car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "\u200bM$2");
