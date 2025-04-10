@@ -12,7 +12,7 @@ function cyrlat() {
 		index++;
 		return key;
 	});
-	
+
 	car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/g, "N$2");
 	car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/g, "N$2");
 	car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "M$2");
@@ -89,17 +89,26 @@ function cyrlat() {
 	// 1. Protect the first schwa in each word (replace \u200c with # after first consonant)
 	car = car.replace(/(^|\s)(\u200b[^\u200b\u200c\s]{1,2})\u200c/g, "$1$2#");
 
-	// 2. Delete all remaining schwas between consonants
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})\u200c(\u200b[^\u200b\u200c\s]{1,2})/g, "$1$2");
+	// 2. Mark all remaining schwas as deleted (replace \u200c with \u200c\u200b)
+	car = car.replace(/\u200c/g, "\u200c\u200b");
 
-	// 3. Restore protected schwas (turn # into \u200c\u200b)
-	car = car.replace(/#/g, "\u200c\u200b");
+	// 3. Restore protected schwas (turn # into \u200c)
+	car = car.replace(/#/g, "\u200c");
 
-	// 4. Break 4-consonant clusters → CCəCC
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1$2\u200c\u200b$3$4");
+	// 4. Reinsert schwa in 4-consonant clusters → CCəCC
+	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1$2\u200c$3$4");
 
-	// 5. Break 3-consonant clusters → CəCC
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c\u200b$2$3");
+	// 5. Reinsert schwa in 3-consonant clusters → CəCC
+	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c$2$3");
+
+	// 6. Replace realized schwa with "A"
+	car = car.replace(/\u200c(?!\u200b)/g, "A");
+
+	// 7. Remove deleted schwas
+	car = car.replace(/\u200c\u200b/g, "");
+
+	// 8. Clean up zero-width markers
+	car = car.replace(/\u200b/g, "");
 
 	car = car.replace(/\u200c\u200b/g, "A");
 	car = car.replace(/(\u200b|\u200c)/g, "");
