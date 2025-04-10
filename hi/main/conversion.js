@@ -58,7 +58,7 @@ function cyrlat() {
 	car = car.replace(/ब/g, "\u200bB\u200c");
 	car = car.replace(/भ/g, "\u200bBH\u200c");
 	car = car.replace(/म/g, "\u200bM\u200c");
-	car = car.replace(/व/g, "\u200bV\u200c");
+	car = car.replace(/व/g, "\u200bW\u200c");
 	car = car.replace(/ळ/g, "\u200bL\u200c");
 	car = car.replace(/व़/g, "\u200bW\u200c");
 	car = car.replace(/\u200c्/g, "");
