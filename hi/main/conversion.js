@@ -86,19 +86,26 @@ function cyrlat() {
 	car = car.replace(/ै/g, "AI");
 	car = car.replace(/ौ/g, "AU");
 	car = car.replace(/ः/g, "\u200bH");
-	// 1. Protect the first schwa in each word (replace \u200c with # after first consonant)
-	car = car.replace(/(^|\s)([^\s\u200c]*?)\u200c/g, "$1$2#");
+	// Protect first schwa in each word, delete others
+	car = car.replace(/\S+/g, function(word) {
+		let protected = false;
+		return word.replace(/(\u200b[^\u200b\u200c\s]{1,2})\u200c/g, function(match, cons) {
+			if (!protected) {
+				protected = true;
+				return cons + "#"; // protect first schwa
+			} else {
+				return cons + "\u200c\u200b"; // delete others
+			}
+		});
+	});
 
-	// 2. Mark all remaining schwas as deleted (replace \u200c with \u200c\u200b)
-	car = car.replace(/\u200c/g, "\u200c\u200b");
-
-	// 3. Restore protected schwas (turn # into \u200c)
+	// Restore protected schwas
 	car = car.replace(/#/g, "\u200c");
 
-	// 4. Reinsert schwa in 4-consonant clusters → CCəCC
+	// Reinsert schwa in 4-consonant clusters → CCəCC
 	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1$2\u200c$3$4");
 
-	// 5. Reinsert schwa in 3-consonant clusters → CəCC
+	// Reinsert schwa in 3-consonant clusters → CəCC
 	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c$2$3");
 
 	// 6. Replace realized schwa with "A"
