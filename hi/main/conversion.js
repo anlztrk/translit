@@ -109,6 +109,7 @@ function cyrlat() {
 			}
 		});
 	});
+	car = car.replace(/\u200c\u200b/g, "[A]");  // debug marker
 	car = car.replace(/\u200c\u200b/g, "A");
 	car = car.replace(/(\u200b|\u200c)/g, "");
 	car = car.replace(/\u0964/g, "\u002e");
