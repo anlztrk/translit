@@ -7,15 +7,12 @@ function cyrlat() {
 	let latinWords = {};
 	let index = 0;
 	car = car.replace(/\p{sc=Latin}+/ug, function(match) {
-		let key = __placeholder$ {
-			index
-		}
-		__;
+		let key = `__placeholder${index}__`;
 		latinWords[key] = match;
 		index++;
 		return key;
 	});
-
+	
 	car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/g, "N$2");
 	car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/g, "N$2");
 	car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "M$2");
