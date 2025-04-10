@@ -87,7 +87,7 @@ function cyrlat() {
 	car = car.replace(/ौ/g, "AU");
 	car = car.replace(/ः/g, "\u200bH");
 	// 1. Protect the first schwa in each word (replace \u200c with # after first consonant)
-	car = car.replace(/(^|\s)(\u200b[^\u200b\u200c\s]{1,2})\u200c/g, "$1$2#");
+	car = car.replace(/(?:^|[\s।॥,;()\"“”‘’\-])((?:\u200b[^\u200b\u200c\s]{1,2})+?)\u200c/g, "$1#");
 
 	// 2. Mark all remaining schwas as deleted (replace \u200c with \u200c\u200b)
 	car = car.replace(/\u200c/g, "\u200c\u200b");
