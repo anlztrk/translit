@@ -7,7 +7,10 @@ function cyrlat() {
 	let latinWords = {};
 	let index = 0;
 	car = car.replace(/\p{sc=Latin}+/ug, function(match) {
-		let key = `__placeholder${index}__`;
+		let key = __placeholder$ {
+			index
+		}
+		__;
 		latinWords[key] = match;
 		index++;
 		return key;
@@ -75,16 +78,16 @@ function cyrlat() {
 	car = car.replace(/\u200c(ि|ु|ृ|े|ो|ा|ी|ू|ै|ौ)/g, "$1");
 	car = car.replace(/\u200c्/g, "");
 
-	car = car.replace(/ि/g, "\u200bWI");
-	car = car.replace(/ु/g, "\u200bU");
-	car = car.replace(/ृ/g, "\u200bRI");
-	car = car.replace(/े/g, "\u200bE");
-	car = car.replace(/ो/g, "\u200bO");
-	car = car.replace(/ा/g, "\u200bAA");
-	car = car.replace(/ी/g, "\u200bEE");
-	car = car.replace(/ू/g, "\u200bOO");
-	car = car.replace(/ै/g, "\u200bAI");
-	car = car.replace(/ौ/g, "\u200bAU");
+	car = car.replace(/ि/g, "I");
+	car = car.replace(/ु/g, "U");
+	car = car.replace(/ृ/g, "RI");
+	car = car.replace(/े/g, "E");
+	car = car.replace(/ो/g, "O");
+	car = car.replace(/ा/g, "AA");
+	car = car.replace(/ी/g, "EE");
+	car = car.replace(/ू/g, "OO");
+	car = car.replace(/ै/g, "AI");
+	car = car.replace(/ौ/g, "AU");
 	car = car.replace(/ः/g, "\u200bH");
 	// 1. Protect the first schwa in each word (replace \u200c with # after first consonant)
 	car = car.replace(/(^|\s)(\u200b[^\u200b\u200c\s]{1,2})\u200c/g, "$1$2#");
@@ -101,8 +104,7 @@ function cyrlat() {
 	// 5. Break 3-consonant clusters → CəCC
 	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c\u200b$2$3");
 
-	car = car.replace(/\u200c\u200b(?![AIEOU])/g, "A");
-	car = car.replace(/\u200c\u200b(?=[AIEOU])/g, "");
+	car = car.replace(/\u200c\u200b/g, "A");
 	car = car.replace(/(\u200b|\u200c)/g, "");
 	car = car.replace(/\u0964/g, "\u002e");
 	car = car.replace(/\u0965/g, "");
