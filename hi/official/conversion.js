@@ -85,28 +85,6 @@ function cyrlat() {
 	car = car.replace(/औ/g, "AU");
 	car = car.replace(/ौ/g, "AU");
 	car = car.replace(/ः/g, "\u200bH");
-	// === Schwa Deletion with First + Second-Last Schwa Preservation ===
-
-	// 1. Preserve second-last schwa if followed by another schwa-ending consonant at word end (punctuation allowed)
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,4})\u200c(?=(\u200b[^\u200b\u200c\s]{1,4})\u200c(?=[\s.,:;!?।]|$))/g,"$1#");
-
-	// 2. Preserve first schwa in word
-	car = car.replace(/(^|\s)(\u200b[^\u200b\u200c\s]{1,4})\u200c/g, "$1$2#");
-
-	// 3. Delete other schwas between consonants
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,4})\u200c(\u200b[^\u200b\u200c\s]{1,4})/g, "$1$2");
-
-	// Step 4: Restore protected schwas
-	car = car.replace(/#/g, "\u200c");
-
-	// Step 5a: Break CCCC → CCəCC
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1$2\u200c$3$4");
-
-	// Step 5b: Break CCC → CəCC
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c$2$3");
-
-
-
 	car = car.replace(/\u200c(\u200b|\u0303)/g, "A$1");
 	car = car.replace(/(\u200b|\u200c)/g, "");
 	car = car.replace(/\u0964/g, "\u002e");
