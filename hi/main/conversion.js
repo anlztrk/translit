@@ -13,10 +13,10 @@ function cyrlat() {
 		return key;
 	});
 
-	car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/g, "\u200bN$2");
-	car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/g, "\u200bN$2");
-	car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "\u200bM$2");
-	car = car.replace(/(ं|ँ)(?![\u093e-\u094c])/g, "\u200bN");
+	car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/g, "N$2");
+	car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/g, "N$2");
+	car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "M$2");
+	car = car.replace(/(ं|ँ)(?![\u093e-\u094c])/g, "N");
 	car = car.replace(/क़/g, "\u200bQ\u200c");
 	car = car.replace(/ख़/g, "\u200bKH\u200c");
 	car = car.replace(/ग़/g, "\u200bGH\u200c");
@@ -61,53 +61,32 @@ function cyrlat() {
 	car = car.replace(/व/g, "\u200bW\u200c");
 	car = car.replace(/ळ/g, "\u200bL\u200c");
 	car = car.replace(/व़/g, "\u200bW\u200c");
-	car = car.replace(/\u200c्/g, "");
+	car = car.replace(/अ/g, "\u200bA");
+	car = car.replace(/इ/g, "\u200bI");
+	car = car.replace(/उ/g, "\u200bU");
+	car = car.replace(/ऋ/g, "\u200bRI");
+	car = car.replace(/ए/g, "\u200bE");
+	car = car.replace(/ओ/g, "\u200bO");
+	car = car.replace(/आ/g, "\u200bAA");
+	car = car.replace(/ई/g, "\u200bEE");
+	car = car.replace(/ऊ/g, "\u200bOO");
+	car = car.replace(/ऐ/g, "\u200bAI");
+	car = car.replace(/औ/g, "\u200bAU");
 	car = car.replace(/\u200c(ि|ु|ृ|े|ो|ा|ी|ू|ै|ौ)/g, "$1");
-	car = car.replace(/अ/g, "A");
-	car = car.replace(/इ/g, "I");
+	car = car.replace(/\u200c्/g, "");
+	car = car.replace(/\u200c/g, "X");
 	car = car.replace(/ि/g, "I");
-	car = car.replace(/उ/g, "U");
 	car = car.replace(/ु/g, "U");
-	car = car.replace(/ऋ/g, "RI");
 	car = car.replace(/ृ/g, "RI");
-	car = car.replace(/ए/g, "E");
 	car = car.replace(/े/g, "E");
-	car = car.replace(/ओ/g, "O");
 	car = car.replace(/ो/g, "O");
-	car = car.replace(/आ/g, "AA");
 	car = car.replace(/ा/g, "AA");
-	car = car.replace(/ई/g, "EE");
 	car = car.replace(/ी/g, "EE");
-	car = car.replace(/ऊ/g, "OO");
 	car = car.replace(/ू/g, "OO");
-	car = car.replace(/ऐ/g, "AI");
 	car = car.replace(/ै/g, "AI");
-	car = car.replace(/औ/g, "AU");
 	car = car.replace(/ौ/g, "AU");
 	car = car.replace(/ः/g, "\u200bH");
-	// === Schwa Deletion with First + Second-Last Schwa Preservation ===
-
-	// 1. Preserve second-last schwa if followed by another schwa-ending consonant at word end (punctuation allowed)
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,4})\u200c(?=(\u200b[^\u200b\u200c\s]{1,4})\u200c(?=[\s.,:;!?।]|$))/g,"$1#");
-
-	// 2. Preserve first schwa in word
-	car = car.replace(/(^|\s)(\u200b[^\u200b\u200c\s]{1,4})\u200c/g, "$1$2#");
-
-	// 3. Delete other schwas between consonants
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,4})\u200c(\u200b[^\u200b\u200c\s]{1,4})/g, "$1$2");
-
-	// Step 4: Restore protected schwas
-	car = car.replace(/#/g, "\u200c");
-
-	// Step 5a: Break CCCC → CCəCC
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,4})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,4})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,4})/g, "$1$2\u200c$3$4");
-
-	// Step 5b: Break CCC → CəCC
-	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c$2$3");
-
-
-
-	car = car.replace(/\u200c(\u200b|\u0303)/g, "A$1");
+	car = car.replace(/\u200c\u200b/g, "A$1");
 	car = car.replace(/(\u200b|\u200c)/g, "");
 	car = car.replace(/\u0964/g, "\u002e");
 	car = car.replace(/\u0965/g, "");
