@@ -108,17 +108,10 @@ function cyrlat() {
 	// Reinsert schwa in 3-consonant clusters → CəCC
 	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c$2$3");
 
-	// 6. Replace realized schwa with "A"
-	car = car.replace(/\u200c(?!\u200b)/g, "A");
-
-	// 7. Remove deleted schwas
-	car = car.replace(/\u200c\u200b/g, "");
-
-	// 8. Clean up zero-width markers
-	car = car.replace(/\u200b/g, "");
-
-	car = car.replace(/\u200c\u200b/g, "A");
-	car = car.replace(/(\u200b|\u200c)/g, "");
+	car = car.replace(/\u200c(?!\u200b)/g, "A"); // keep realized schwas
+	car = car.replace(/\u200c\u200b/g, "");     // delete marked schwas
+	car = car.replace(/\u200b/g, "");           // cleanup
+	car = car.replace(/\u200c/g, "");
 	car = car.replace(/\u0964/g, "\u002e");
 	car = car.replace(/\u0965/g, "");
 	car = car.normalize('NFC');
