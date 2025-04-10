@@ -74,7 +74,7 @@ function cyrlat() {
 	car = car.replace(/औ/g, "\u200bAU");
 	car = car.replace(/\u200c(ि|ु|ृ|े|ो|ा|ी|ू|ै|ौ)/g, "$1");
 	car = car.replace(/\u200c्/g, "");
-	car = car.replace(/\u200c\u200b/g, "X");
+
 	car = car.replace(/ि/g, "I");
 	car = car.replace(/ु/g, "U");
 	car = car.replace(/ृ/g, "RI");
@@ -86,6 +86,21 @@ function cyrlat() {
 	car = car.replace(/ै/g, "AI");
 	car = car.replace(/ौ/g, "AU");
 	car = car.replace(/ः/g, "\u200bH");
+	// Step A: Preserve first schwa in each word
+	car = car.replace(/(^|\s)(\u200b[^\u200b\u200c\s]{1,6})\u200c/g, "$1$2#");
+
+	// Step B: Delete all remaining schwas
+	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,6})\u200c/g, "$1");
+
+	// Step C: Restore preserved schwa
+	car = car.replace(/#/g, "\u200c");
+
+	// Step D1: Reinsert schwa in CCCC clusters → CCəCC
+	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,6})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,6})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,6})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,6})/g, "$1$2\u200c$3$4");
+
+	// Step D2: Reinsert schwa in CCC clusters → CəCC
+	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,6})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,6})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,6})/g, "$1\u200c$2$3");
+	car = car.replace(/\u200c\u200b/g, "A");
 	car = car.replace(/(\u200b|\u200c)/g, "");
 	car = car.replace(/\u0964/g, "\u002e");
 	car = car.replace(/\u0965/g, "");
