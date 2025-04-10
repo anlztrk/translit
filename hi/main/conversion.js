@@ -101,7 +101,8 @@ function cyrlat() {
 	// 5. Break 3-consonant clusters → CəCC
 	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})(?!\u200c)(\u200b[^\u200b\u200c\s]{1,2})/g, "$1\u200c\u200b$2$3");
 
-	car = car.replace(/\u200c\u200b/g, "A");
+	car = car.replace(/\u200c\u200b(?![AIEOU])/g, "A");
+	car = car.replace(/\u200c\u200b(?=[AIEOU])/g, "");
 	car = car.replace(/(\u200b|\u200c)/g, "");
 	car = car.replace(/\u0964/g, "\u002e");
 	car = car.replace(/\u0965/g, "");
