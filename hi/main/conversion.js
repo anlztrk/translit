@@ -72,7 +72,7 @@ function cyrlat() {
 	car = car.replace(/ऊ/g, "\u200bOO");
 	car = car.replace(/ऐ/g, "\u200bAI");
 	car = car.replace(/औ/g, "\u200bAU");
-	car = car.replace(/\u200c(ि|ु|ृ|े|ो|ा|ी|ू|ै|ौ)/g, "$1");
+	car = car.replace(/(\u200b[^\u200b\u200c\s]{1,2})\u200c([िुृेोाीूैौ])/g, "$1$2");
 	car = car.replace(/\u200c्/g, "");
 
 	car = car.replace(/ि/g, "I");
