@@ -14,7 +14,7 @@ function realizeFirstValidSchwa(text) {
 }
 
 function cyrlat() {
-	let car = document.transcription.text1.value;
+	car = document.transcription.text1.value;
 
 	// Normalize to decomposed form
 	car = car.normalize('NFD');
