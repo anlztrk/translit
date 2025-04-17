@@ -4,6 +4,19 @@ function cyrlat() {
 	car = document.transcription.text1.value;
 	car = car.replace(/([БВГДЖҖЗЙКЛМНҢПРСТФХҺЦЧШЩ])Е/g, "$1Э");
 	car = car.replace(/([БВГДЖҖЗЙКЛМНҢПРСТФХҺЦЧШЩбвгджҗзйклмнңпрстфхһцчшщ])е/g, "$1э");
+	
+	car = car.replace(/ЬЕ/g, "ЙЭ");
+	car = car.replace(/Ье/g, "Йэ");
+	car = car.replace(/ье/g, "йэ");
+	car = car.replace(/ЬЁ/g, "ЙО");
+	car = car.replace(/Ьё/g, "Йо");
+	car = car.replace(/ьё/g, "йо");
+	car = car.replace(/ЬЯ/g, "ЙА");
+	car = car.replace(/Ья/g, "Йа");
+	car = car.replace(/ья/g, "йа");
+	car = car.replace(/ЬЮ/g, "ЙУ");
+	car = car.replace(/Ью/g, "Йу");
+	car = car.replace(/ью/g, "йу");
 
 	car = car.replace(/([АЕЁИОУЫЮЯӘӨҮ])Ц/g, "$1ТС");
 	car = car.replace(/([аеёиоуыюяәөү])Ц/g, "$1Тс");
@@ -30,12 +43,12 @@ function cyrlat() {
 		{
 			test: /[ӘЭИӨҮ][БВГДЖҖЗЙКЛМНҢПРСТФХҺЦЧШЩ]{0,3}Ю/,
 			pattern: /([ӘЭИӨҮ])([БВГДЖҖЗЙКЛМНҢПРСТФХҺЦЧШЩ]{0,3})Ю/g,
-			replace: "$1$2ЙӨ",
+			replace: "$1$2ЙҮ",
 		},
 		{
 			test: /[ӘЭИӨҮәэиөү][бвгджҗзйклмнңпрстфхһцчшщ]{0,3}ю/,
 			pattern: /([ӘЭИӨҮәэиөү])([бвгджҗзйклмнңпрстфхһцчшщ]{0,3})ю/g,
-			replace: "$1$2йө",
+			replace: "$1$2йү",
 		},
 		{
 			test: /[ӘЭИӨ][БВГДЖҖЗЙКЛМНҢПРСТФХҺЦЧШЩ]{0,3}Е/,
