@@ -50,34 +50,25 @@ car = car.replace(/A/g, "Ȧ");
 car = car.replace(/I(Ñ|ñ)/g, "İ$1");
 car = car.replace(/ıñ/g, "iñ");
 
-car = car.replace(/Ȧ(Ğ|X|Q|ğ|x|q)/g, "A$1");
+car = car.replace(/A(G|H|K|Y|g|h|k|y)/g, "Ȧ$1");
 car = car.replace(/I(G|H|K|Y|g|h|k|y)/g, "İ$1");
 car = car.replace(/O(G|H|K|Y|g|h|k|y)/g, "Ȯ$1");
 car = car.replace(/U(G|H|K|Y|g|h|k|y)/g, "U̇$1");
-car = car.replace(/ȧ(ğ|x|q)/g, "a$1");
+car = car.replace(/a(g|h|k|y)/g, "ȧ$1");
 car = car.replace(/ı(g|h|k|y)/g, "i$1");
 car = car.replace(/o(g|h|k|y)/g, "ȯ$1");
 car = car.replace(/u(g|h|k|y)/g, "u̇$1");
 
-car = car.replace(/A(G|H|K|Y|g|h|k|y)/g, "Ȧ$1");
-car = car.replace(/İ(Ğ|X|Q|ğ|x|q)/g, "I$1");
-car = car.replace(/Ȯ(Ğ|X|Q|ğ|x|q)/g, "O$1");
-car = car.replace(/U̇(Ğ|X|Q|ğ|x|q)/g, "U$1");
-car = car.replace(/a(g|h|k|y)/g, "ȧ$1");
-car = car.replace(/i(ğ|x|q)/g, "ı$1");
-car = car.replace(/ȯ(ğ|x|q)/g, "o$1");
-car = car.replace(/u̇(ğ|x|q)/g, "u$1");
-
-car = car.replace(/(Ğ|X|Q)Ȧ/g, "$1A");
+car = car.replace(/(G|H|K|Y)A/g, "$1Ȧ");
 car = car.replace(/(G|H|K|Y)I/g, "$1İ");
 car = car.replace(/(G|H|K|Y)O/g, "$1Ȯ");
-car = car.replace(/(G|H|K|Y)U/g, "$1Ü");
+car = car.replace(/(G|H|K|Y)U/g, "$1U̇");
 car = car.replace(/(Ğ|X|Q|ğ|x|q)ȧ/g, "$1a");
 car = car.replace(/(G|H|K|Y|g|h|k|y)ı/g, "$1i");
 car = car.replace(/(G|H|K|Y|g|h|k|y)o/g, "$1ȯ");
 car = car.replace(/(G|H|K|Y|g|h|k|y)u/g, "$1u̇");
 
-car = car.replace(/(G|H|K|Y)A/g, "$1Ȧ");
+car = car.replace(/(Ğ|X|Q)Ȧ/g, "$1A");
 car = car.replace(/(Ğ|X|Q)İ/g, "$1I");
 car = car.replace(/(Ğ|X|Q)Ȯ/g, "$1O");
 car = car.replace(/(Ğ|X|Q)U̇/g, "$1U");
@@ -85,6 +76,15 @@ car = car.replace(/(G|H|K|Y|g|h|k|y)a/g, "$1ȧ");
 car = car.replace(/(Ğ|X|Q|ğ|x|q)i/g, "$1ı");
 car = car.replace(/(Ğ|X|Q|ğ|x|q)ȯ/g, "$1o");
 car = car.replace(/(Ğ|X|Q|ğ|x|q)u̇/g, "$1u");
+
+car = car.replace(/Ȧ(Ğ|X|Q|ğ|x|q)/g, "A$1");
+car = car.replace(/İ(Ğ|X|Q|ğ|x|q)/g, "I$1");
+car = car.replace(/Ȯ(Ğ|X|Q|ğ|x|q)/g, "O$1");
+car = car.replace(/U̇(Ğ|X|Q|ğ|x|q)/g, "U$1");
+car = car.replace(/ȧ(ğ|x|q)/g, "a$1");
+car = car.replace(/i(ğ|x|q)/g, "ı$1");
+car = car.replace(/ȯ(ğ|x|q)/g, "o$1");
+car = car.replace(/u̇(ğ|x|q)/g, "u$1");
 
 car = car.replace(/X/g, "H");
 car = car.replace(/x/g, "h");
