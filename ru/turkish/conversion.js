@@ -9,6 +9,17 @@ translit = translit.replace(/>>/g, "»");
 translit = translit.replace(/<</g, "«");
 translit = translit.replace(/>>/g, "»");
 
+translit = translit.replace(/Ы(А|Б|В|Г|Д|Е|Ё|Ж|З|И|Й|К|Л|М|Н|О|П|Р|С|Т|У|Ф|Х|Ц|Ч|Ш|Щ|Ъ|Ы|Ь|Э|Ю|Я|а|б|в|г|д|е|ё|ж|з|и|й|к|л|м|н|о|п|р|с|т|у|ф|х|ц|ч|ш|щ|ъ|ы|ь|э|ю|я)/g, "Ӹ$1");
+translit = translit.replace(/ы(а|б|в|г|д|е|ё|ж|з|и|й|к|л|м|н|о|п|р|с|т|у|ф|х|ц|ч|ш|щ|ъ|ы|ь|э|ю|я)/g, "ӹ$1");
+translit = translit.replace(/(\p{Uppercase})(\p{Uppercase}) Ы/ug, "$1$2 ЫЙ");
+translit = translit.replace(/(\p{Uppercase})Ы/ug, "$1ЫЙ");
+translit = translit.replace(/Ы (\p{Uppercase})(\p{Uppercase})/ug, "ЫЙ $1$2");
+translit = translit.replace(/Ы(\p{Uppercase})/ug, "ЫЙ$1");
+translit = translit.replace(/Ы/g, "Ый");
+translit = translit.replace(/ы/g, "ый");
+translit = translit.replace(/Ӹ/g, "Ы");
+translit = translit.replace(/ӹ/g, "ы");
+
 translit = translit.replace(/Ъ/g, "ъ");
 translit = translit.replace(/Ь/g, "ь");
 

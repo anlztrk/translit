@@ -1,13 +1,18 @@
 <html> 
 <head> 
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap&subset=latin,latin-ext,greek,cyrillic,vietnamese" rel="stylesheet">
 <title>Diacritic attacher</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Tinos&family=Gentium+Book+Plus&display=swap');
-</style>
 		<script type="text/javascript" src="conversion.js"></script>
 		<style type="text/css"> 
+		@font-face {
+			font-family: 'GentiumBP';
+			src: url('https://anlztrk.github.io/translit/fonts/GentiumBookPlus-Regular.ttf') format('ttf');
+			font-weight: normal;
+			font-style: normal;
+			unicode-range: U+000-10FFFF; /* Optional: this covers everything */
+		}
 		textarea {
-			font-family: 'Gentium Book Plus', 'Liberation Serif', Tinos, Cambria, 'Times New Roman', serif;
+			font-family: 'Gentium Book Plus', 'GentiumBP', 'Liberation Serif', Tinos, Cambria, 'Times New Roman', serif;
 			font-size: 15px;
 			width: 1000px;
 			height: 450px;
