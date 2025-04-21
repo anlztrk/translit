@@ -155,7 +155,7 @@ function cyrlat() {
 	car = car.replace(/я/g, "йа");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
 	car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЫ $1$2");
-	car = car.replace(/Е(\p{Uppercase})/g, "ЙЫ$1");
+	car = car.replace(/Е(\p{Uppercase})/ug, "ЙЫ$1");
 	car = car.replace(/Е/g, "Йы");
 	car = car.replace(/е/g, "йы");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО");

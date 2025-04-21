@@ -29,7 +29,7 @@ function cyrlat() {
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЬЭ");
 	car = car.replace(/(\p{Uppercase})Е/ug, "$1ЬЭ");
 	car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЬЭ $1$2");
-	car = car.replace(/Е(\p{Uppercase})/g, "ЬЭ$1");
+	car = car.replace(/Е(\p{Uppercase})/ug, "ЬЭ$1");
 	car = car.replace(/Е/g, "Ьэ");
 	car = car.replace(/е/g, "ьэ");
 	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЬО");

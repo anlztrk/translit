@@ -10,7 +10,7 @@ car = car.replace(/(Э|э)\u0300(Э|э)/g, "$1$2");
 
 car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
 car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЭ $1$2");
-car = car.replace(/Е(\p{Uppercase})/g, "ЙЭ$1");
+car = car.replace(/Е(\p{Uppercase})/ug, "ЙЭ$1");
 car = car.replace(/(Е|е|Э|э)Е/g, "$1Э");
 car = car.replace(/(Е|е|Э|э)е/g, "$1э");
 car = car.replace(/Е/g, "Йэ");
