@@ -8,9 +8,9 @@ function cyrlat() {
 	car = car.replace(/ЬЕ/g, "ЙЭ");
 	car = car.replace(/Ье/g, "Йэ");
 	car = car.replace(/ье/g, "йэ");
-	car = car.replace(/ЬЁ/g, "ЙО");
-	car = car.replace(/Ьё/g, "Йо");
-	car = car.replace(/ьё/g, "йо");
+	car = car.replace(/Ь[ЁО]/g, "ЙО");
+	car = car.replace(/Ь[ёо]/g, "Йо");
+	car = car.replace(/ь[ёо]/g, "йо");
 	car = car.replace(/ЬЯ/g, "ЙА");
 	car = car.replace(/Ья/g, "Йа");
 	car = car.replace(/ья/g, "йа");
