@@ -77,8 +77,8 @@ car = car.replace(/(Ğ|X|Q|ğ|x|q)ü/g, "$1u");
 car = car.replace(/I(Ñ|ñ)/g, "İ$1");
 car = car.replace(/ıñ/g, "iñ");
 
-car = car.replace(/((?<![BCÇDFGĞHKLMNÑPRSŞTVXYZ]))I/g, "$1İ");
-car = car.replace(/((?<![BCÇDFGĞHKLMNÑPRSŞTVXYZbcçdfgğhklmnñprsştvxyz]))ı/g, "$1i");
+car = car.replace(/((?<![BCÇDFGĞHKLMNÑPQRSŞTVXYZ]))I/g, "$1İ");
+car = car.replace(/((?<![BCÇDFGĞHKLMNÑPQRSŞTVXYZbcçdfgğhklmnñpqrsştvxyz]))ı/g, "$1i");
 
 car = car.replace(/Ä/g, "Ȧ");
 car = car.replace(/ä/g, "ȧ");
