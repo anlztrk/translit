@@ -76,7 +76,13 @@ car = car.replace(/(Ğ|X|Q|ğ|x|q)ü/g, "$1u");
 
 car = car.replace(/I(Ñ|ñ)/g, "İ$1");
 car = car.replace(/ıñ/g, "iñ");
-  
+
+car = car.replace(/Ä/g, "Ȧ");
+car = car.replace(/ä/g, "ȧ");
+car = car.replace(/Ö/g, "Ȯ");
+car = car.replace(/ö/g, "ȯ");
+car = car.replace(/Ü/g, "U̇");
+car = car.replace(/ü/g, "u̇");
 car = car.replace(/X/g, "H");
 car = car.replace(/x/g, "h");
 document.transcription.text2.value = car;
