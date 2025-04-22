@@ -77,6 +77,9 @@ car = car.replace(/(Ğ|X|Q|ğ|x|q)ü/g, "$1u");
 car = car.replace(/I(Ñ|ñ)/g, "İ$1");
 car = car.replace(/ıñ/g, "iñ");
 
+car = car.replace(/((?<!\p{Latin}))I/ug, "$1İ");
+car = car.replace(/((?<!\p{Latin}))ı/ug, "$1i");
+
 car = car.replace(/Ä/g, "Ȧ");
 car = car.replace(/ä/g, "ȧ");
 car = car.replace(/Ö/g, "Ȯ");
