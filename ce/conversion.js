@@ -7,14 +7,14 @@ car = document.transcription.text1.value;
 	fix = fix.replace(/(\p{Script=Cyrl})(I|1)/ug, "$1Ӏ");
 	fix = fix.replace(/(I|1)(\p{Script=Cyrl})/ug, "Ӏ$2");
 	fix = fix.replace(/(\p{Script=Cyrl})l/ug, "$1ӏ");
-	fix = fix.replace(/l(\p{Script=Cyrl})/ug, "$1");
+	fix = fix.replace(/l(\p{Script=Cyrl})/ug, "ӏ$1");
 	fix = fix.replace(/(\p{Lowercase})( )?Ӏ/ug, "$1$2ӏ");
 	fix = fix.replace(/(\p{Uppercase})( )?Ӏ( )?(\p{Lowercase})/ug, "$1$2ӏ$3$4");
 	document.transcription.text1.value = fix;
 	car = car.replace(/(\p{Script=Cyrl})(I|1)/ug, "$1Ӏ");
 	car = car.replace(/(I|1)(\p{Script=Cyrl})/ug, "Ӏ$2");
 	car = car.replace(/(\p{Script=Cyrl})l/ug, "$1ӏ");
-	car = car.replace(/l(\p{Script=Cyrl})/ug, "$1");
+	car = car.replace(/l(\p{Script=Cyrl})/ug, "ӏ$1");
 	car = car.replace(/(\p{Lowercase})( )?Ӏ/ug, "$1$2ӏ");
 	car = car.replace(/(\p{Uppercase})( )?Ӏ( )?(\p{Lowercase})/ug, "$1$2ӏ$3$4");
 
