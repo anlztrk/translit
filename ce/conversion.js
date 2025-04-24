@@ -15,6 +15,8 @@ car = document.transcription.text1.value;
 	car = car.replace(/(I|1)(\p{Script=Cyrl})/ug, "Ӏ$2");
 	car = car.replace(/(\p{Script=Cyrl})l/ug, "$1ӏ");
 	car = car.replace(/l(\p{Script=Cyrl})/ug, "$1");
+	car = car.replace(/(\p{Lowercase})( )?Ӏ/ug, "$1$2ӏ");
+	car = car.replace(/(\p{Uppercase})( )?Ӏ( )?(\p{Lowercase})/ug, "$1$2ӏ$3$4");
 
 	car = car.replace(/(А|Е|Ё|И|О|У|Ы|Ю|Я)Щ(А|Е|Ё|И|О|У|Ы|Ю|Я)/g, "$1ШШ$2");
 	car = car.replace(/(А|Е|Ё|И|О|У|Ы|Ю|Я)щ(а|е|ё|и|о|у|ы|ю|я)/g, "$1Шш$2");
