@@ -23,12 +23,7 @@ translit = translit.replace(/ӹ/g, "ы");
 translit = translit.replace(/Ъ/g, "ъ");
 translit = translit.replace(/Ь/g, "ь");
 
-translit = translit.replace(/(А|Э|Ы|И|О|У|Я|Е|Ё|Ю|а|э|ы|и|о|у|я|е|ё|ю)щ(А|Э|Ы|И|О|У|Я|Е|Ё|Ю|а|э|ы|и|о|у|я|е|ё|ю)/g, "$1шш$2");
-translit = translit.replace(/(А|Э|Ы|И|О|У|Я|Е|Ё|Ю)Щ(А|Э|Ы|И|О|У|Я|Е|Ё|Ю)/g, "$1ШШ$2");
-translit = translit.replace(/(А|Э|Ы|И|О|У|Я|Е|Ё|Ю)Щ(а|э|ы|и|о|у|я|е|ё|ю)/g, "$1Шш$2");
-translit = translit.replace(/(а|э|ы|и|о|у|я|е|ё|ю)Щ(А|Э|Ы|И|О|У|Я|Е|Ё|Ю)/g, "$1ШШ$2");
-translit = translit.replace(/щ/g, "ш");
-translit = translit.replace(/Щ/g, "Ш");
+
 
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Е/g, "$1E");
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)е/g, "$1e");
@@ -42,6 +37,18 @@ translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ю/g, "$1ьU");
 translit = translit.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ю/g, "$1ьu");
 
+translit = translit.replace(/ьA(Бь|Вь|Гь|Дь|Зь|Й|Кь|Ль|Мь|Нь|Пь|Рь|Сь|Ть|Фь|Хь|Ч|Щ|бь|вь|гь|дь|зь|й|кь|ль|мь|нь|пь|рь|сь|ть|фь|хь|ч|щ)/g, "ьE$1");
+translit = translit.replace(/ьa(бь|вь|гь|дь|зь|й|кь|ль|мь|нь|пь|рь|сь|ть|фь|хь|ч|щ)/g, "ьe$1");
+translit = translit.replace(/ьO(Бь|Вь|Гь|Дь|Зь|Й|Кь|Ль|Мь|Нь|Пь|Рь|Сь|Ть|Фь|Хь|Ч|Щ|бь|вь|гь|дь|зь|й|кь|ль|мь|нь|пь|рь|сь|ть|фь|хь|ч|щ)/g, "ьÖ$1");
+translit = translit.replace(/ьo(бь|вь|гь|дь|зь|й|кь|ль|мь|нь|пь|рь|сь|ть|фь|хь|ч|щ)/g, "ьö$1");
+translit = translit.replace(/ьU(Бь|Вь|Гь|Дь|Зь|Й|Кь|Ль|Мь|Нь|Пь|Рь|Сь|Ть|Фь|Хь|Ч|Щ|бь|вь|гь|дь|зь|й|кь|ль|мь|нь|пь|рь|сь|ть|фь|хь|ч|щ)/g, "ьÜ$1");
+translit = translit.replace(/ьu(бь|вь|гь|дь|зь|й|кь|ль|мь|нь|пь|рь|сь|ть|фь|хь|ч|щ)/g, "ьü$1");
+
+translit = translit.replace(/(Ж|Ц|Ш)И/g, "$1Ы");
+translit = translit.replace(/(Ж|Ц|Ш|ж|ц|ш)и/g, "$1ы");
+translit = translit.replace(/(Й|Ч|Щ)Ы/g, "$1И");
+translit = translit.replace(/(Й|Ч|Щ|й|ч|щ)ы/g, "$1и");
+  
 translit = translit.replace(/ьa/g, "à");
 translit = translit.replace(/ьA/g, "À");
 translit = translit.replace(/ьu/g, "ù");
@@ -74,7 +81,6 @@ translit = translit.replace(/ф/g, "f");
 translit = translit.replace(/х/g, "h");
 translit = translit.replace(/ч/g, "ç");
 translit = translit.replace(/ш/g, "ş");
-translit = translit.replace(/щ/g, "ş");
 translit = translit.replace(/ъ/g, "");
 translit = translit.replace(/ы/g, "ı");
 translit = translit.replace(/ь/g, "");
@@ -107,7 +113,6 @@ translit = translit.replace(/Ф/g, "F");
 translit = translit.replace(/Х/g, "H");
 translit = translit.replace(/Ч/g, "Ç");
 translit = translit.replace(/Ш/g, "Ş");
-translit = translit.replace(/Щ/g, "Ş");
 translit = translit.replace(/Ы/g, "I");
 translit = translit.replace(/Ь/g, "");
 translit = translit.replace(/Э/g, "E");
@@ -115,8 +120,15 @@ translit = translit.replace(/Ю/g, "Yu");
 translit = translit.replace(/Ё/g, "Yo");
 translit = translit.replace(/Я/g, "Ya");
 
-translit = translit.replace(/(A|E|I|İ|O|U|a|e|ı|i|o|u)ц/g, "$1ts");
-translit = translit.replace(/(A|E|I|İ|O|U)Ц/g, "$1TS");
+translit = translit.replace(/(A|À|E|I|İ|O|Ö|U|Ù|Ü|a|à|e|ı|i|o|ö|u|ù|ü)щ(A|À|E|I|İ|O|Ö|U|Ù|Ü|a|à|e|ı|i|o|ö|u|ù|ü)/g, "$1şş$2");
+translit = translit.replace(/(A|À|E|I|İ|O|Ö|U|Ù|Ü)Щ(A|À|E|I|İ|O|Ö|U|Ù|Ü)/g, "$1ŞŞ$2");
+translit = translit.replace(/(A|À|E|I|İ|O|Ö|U|Ù|Ü)Щ(a|à|e|ı|i|o|ö|u|ù|ü)/g, "$1Şş$2");
+translit = translit.replace(/(a|à|e|ı|i|o|ö|u|ù|ü)Щ(A|À|E|I|İ|O|Ö|U|Ù|Ü)/g, "$1ŞŞ$2");
+translit = translit.replace(/щ/g, "ş");
+translit = translit.replace(/Щ/g, "Ş");
+  
+translit = translit.replace(/(A|À|E|I|İ|O|Ö|U|Ù|Ü|a|à|e|ı|i|o|ö|u|ù|ü)ц/g, "$1ts");
+translit = translit.replace(/(A|À|E|I|İ|O|Ö|U|Ù|Ü)Ц/g, "$1TS");
 translit = translit.replace(/ц/g, "s");
 translit = translit.replace(/Ц/g, "S");
 
