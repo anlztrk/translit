@@ -708,6 +708,8 @@ function cyrlat() {
 
 	car = car.replace(/Ȧ(Ğ|X|Q|ğ|x|q)/g, "A$1");
 	car = car.replace(/Ä(Ğ|X|Q|ğ|x|q)/g, "Ȧ$1");
+	car = car.replace(/A(G|H|K|g|h|k)/g, "Ȧ$1");
+	car = car.replace(/Ȧ(G|H|K|g|h|k)/g, "Ä$1");
 	car = car.replace(/I(G|H|K|g|h|k)/g, "İ$1");
 	car = car.replace(/O(G|H|K|g|h|k)/g, "Ö$1");
 	car = car.replace(/U(G|H|K|g|h|k)/g, "Ü$1");
