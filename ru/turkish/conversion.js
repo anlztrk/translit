@@ -9,6 +9,11 @@ translit = translit.replace(/>>/g, "»");
 translit = translit.replace(/<</g, "«");
 translit = translit.replace(/>>/g, "»");
 
+translit = translit.replace(/(Ж|Ц|Ш)И/g, "$1Ы");
+translit = translit.replace(/(Ж|Ц|Ш|ж|ц|ш)и/g, "$1ы");
+translit = translit.replace(/(Й|Ч|Щ)Ы/g, "$1И");
+translit = translit.replace(/(Й|Ч|Щ|й|ч|щ)ы/g, "$1и");
+
 translit = translit.replace(/Ы(А|Б|В|Г|Д|Е|Ё|Ж|З|И|Й|К|Л|М|Н|О|П|Р|С|Т|У|Ф|Х|Ц|Ч|Ш|Щ|Ъ|Ы|Ь|Э|Ю|Я|а|б|в|г|д|е|ё|ж|з|и|й|к|л|м|н|о|п|р|с|т|у|ф|х|ц|ч|ш|щ|ъ|ы|ь|э|ю|я)/g, "Ӹ$1");
 translit = translit.replace(/ы(а|б|в|г|д|е|ё|ж|з|и|й|к|л|м|н|о|п|р|с|т|у|ф|х|ц|ч|ш|щ|ъ|ы|ь|э|ю|я)/g, "ӹ$1");
 translit = translit.replace(/(\p{Uppercase})(\p{Uppercase}) Ы/ug, "$1$2 ЫЙ");
@@ -43,11 +48,6 @@ translit = translit.replace(/ьO(Бь|Вь|Гь|Дь|Зь|Й|Кь|Ль|Мь|Нь
 translit = translit.replace(/ьo(бь|вь|гь|дь|зь|й|кь|ль|мь|нь|пь|рь|сь|ть|фь|хь|ч|щ)/g, "ьö$1");
 translit = translit.replace(/ьU(Бь|Вь|Гь|Дь|Зь|Й|Кь|Ль|Мь|Нь|Пь|Рь|Сь|Ть|Фь|Хь|Ч|Щ|бь|вь|гь|дь|зь|й|кь|ль|мь|нь|пь|рь|сь|ть|фь|хь|ч|щ)/g, "ьÜ$1");
 translit = translit.replace(/ьu(бь|вь|гь|дь|зь|й|кь|ль|мь|нь|пь|рь|сь|ть|фь|хь|ч|щ)/g, "ьü$1");
-
-translit = translit.replace(/(Ж|Ц|Ш)И/g, "$1Ы");
-translit = translit.replace(/(Ж|Ц|Ш|ж|ц|ш)и/g, "$1ы");
-translit = translit.replace(/(Й|Ч|Щ)Ы/g, "$1И");
-translit = translit.replace(/(Й|Ч|Щ|й|ч|щ)ы/g, "$1и");
   
 translit = translit.replace(/ьa/g, "à");
 translit = translit.replace(/ьA/g, "À");
