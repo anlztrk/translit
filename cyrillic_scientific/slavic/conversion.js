@@ -22,7 +22,7 @@ function cyrlat() {
 	if (/В|в/.test(car_Orig) && /Ў|ў/.test(car_Orig)) {
 		phonemicShortU = true;
 	}
-  if (/Ы|ы/.test(car_Orig) == false) {
+	if (/Ы|ы/.test(car_Orig) == false) {
 		phonemicYeru = false;
 	}
 	if (/Ҳ|ҳ|Һ|һ/.test(car_Orig)) {
@@ -30,7 +30,7 @@ function cyrlat() {
 	}
 	if (/Џ|Җ|Ҷ|Ҹ|Ӂ|џ|җ|ҷ|ҹ|ӂ/.test(car_Orig)) {
 		phonemicZhe = true;
-  }
+	}
 	if (iotatedE == true) {
 		car = car.replace(/(Б|В|Г|Ғ|Ҕ|Д|Ж|З|К|Қ|Ҡ|Л|М|Н|Ң|Ҥ|П|Р|С|Т|Ф|Х|Һ|Ҳ|Ц|Ч|Џ|Җ|Ҷ|Ҹ|Ӂ|Ш|Щ|б|в|г|ғ|ҕ|д|ж|з|к|қ|ҡ|л|м|н|ң|ҥ|п|р|с|т|ф|х|һ|ҳ|ц|ч|џ|җ|ҷ|ҹ|ӂ|ш|щ)(Э|э)/g, "$1$2\u0300");
 		car = car.replace(/(Б|В|Г|Ғ|Ҕ|Д|Ж|З|К|Қ|Ҡ|Л|М|Н|Ң|Ҥ|П|Р|С|Т|Ф|Х|Һ|Ҳ|Ц|Ч|Џ|Җ|Ҷ|Ҹ|Ӂ|Ш|Щ|б|в|г|ғ|ҕ|д|ж|з|к|қ|ҡ|л|м|н|ң|ҥ|п|р|с|т|ф|х|һ|ҳ|ц|ч|џ|җ|ҷ|ҹ|ӂ|ш|щ)Е/g, "$1Э");
@@ -44,13 +44,13 @@ function cyrlat() {
 		car = car.replace(/(Ў|ў)е/g, "$1э");
 	}
 	if (phonemicShcha != true) {
-		if (lang == "unknown" || lang == "Kazakh" ) {
+		if (lang == "unknown" || lang == "Kazakh") {
 			car = car.replace(/(А|Ӓ|Ә|Э|Ы|И|О|Ө|Ӧ|У|Ү|Ӱ|Ұ|Я|Е|Ё|Ю)Щ(А|Ӓ|Ә|Э|Ы|И|О|Ө|Ӧ|У|Ү|Ӱ|Ұ)/g, "$1ШШ$2");
 			car = car.replace(/(А|Ӓ|Ә|Э|Ы|И|О|Ө|Ӧ|У|Ү|Ӱ|Ұ|Я|Е|Ё|Ю|а|ӓ|ә|э|ы|и|о|ө|ӧ|у|ү|ӱ|ұ|я|е|ё|ю)щ(а|ӓ|ә|э|ы|и|о|ө|ӧ|у|ү|ӱ|ұ)/g, "$1шш$2");
-				if (iotatedE == false){
+			if (iotatedE == false) {
 				car = car.replace(/(А|Ӓ|Ә|Э|Ы|И|О|Ө|Ӧ|У|Ү|Ӱ|Ұ|Я|Е|Ё|Ю)ЩЕ/g, "$1ШШЕ");
 				car = car.replace(/(А|Ӓ|Ә|Э|Ы|И|О|Ө|Ӧ|У|Ү|Ӱ|Ұ|Я|Е|Ё|Ю|а|ӓ|ә|э|ы|и|о|ө|ӧ|у|ү|ӱ|ұ|я|е|ё|ю)ще/g, "$1шше");
-				}
+			}
 			car = car.replace(/Щ/g, "Ш");
 			car = car.replace(/щ/g, "ш");
 		} else {
@@ -59,7 +59,7 @@ function cyrlat() {
 		}
 	}
 	if (phonemicTse == false) {
-    {
+		{
 			car = car.replace(/(А|Ӓ|Ә|Э|Ы|И|О|Ө|Ӧ|У|Ү|Ӱ|Ұ|Я|Е|Ё|Ю)Ц/g, "$1ТС");
 			car = car.replace(/(А|Ӓ|Ә|Э|Ы|И|О|Ө|Ӧ|У|Ү|Ӱ|Ұ|Я|Е|Ё|Ю|а|ӓ|ә|э|ы|и|о|ө|ӧ|у|ү|ӱ|ұ|я|е|ё|ю)ц/g, "$1тс");
 			car = car.replace(/Ц/g, "С");
@@ -104,7 +104,7 @@ function cyrlat() {
 	car = car.replace(/Г/g, "G");
 	car = car.replace(/(Ғ|Ҕ)/g, "Ġ");
 	car = car.replace(/Д/g, "D");
-  car = car.replace(/Ж/g, "Ž");
+	car = car.replace(/Ж/g, "Ž");
 	car = car.replace(/З/g, "Z");
 	car = car.replace(/И/g, "I");
 	car = car.replace(/Й/g, "J");
@@ -137,7 +137,7 @@ function cyrlat() {
 	}
 	car = car.replace(/(Һ|Ҳ)/g, "H");
 	car = car.replace(/Ц/g, "C");
-        car = car.replace(/Ч/g, "Č");
+	car = car.replace(/Ч/g, "Č");
 	car = car.replace(/(Џ|Җ|Ҷ|Ҹ|Ӂ)/g, "Đ");
 	car = car.replace(/Ш/g, "Š");
 	car = car.replace(/Щ/g, "Ś");
@@ -181,7 +181,7 @@ function cyrlat() {
 		car = car.replace(/(Ь|ь)/g, "");
 	}
 	car = car.replace(/(Ъ|ъ)/g, "\u02ba");
-	car = car.replace(/ы/g, "Y");
+	car = car.replace(/ы/g, "y");
 	car = car.replace(/(Ь|ь)/g, "\u02b9");
 	car = car.replace(/э/g, "e");
 	car = car.normalize('NFC');
