@@ -68,7 +68,7 @@ car = car.replace(/ı(g|h|k)/g, "i$1");
 car = car.replace(/o(g|h|k)/g, "ö$1");
 car = car.replace(/u(g|h|k)/g, "ü$1");
 
-car = car.replace(/(G|H|K|g|h|k)a/g, "$1ä");
+car = car.replace(/(G|H|K)A/g, "$1ä");
 car = car.replace(/(Ğ|X|Q)İ/g, "$1I");
 car = car.replace(/(Ğ|X|Q)Ö/g, "$1O");
 car = car.replace(/(Ğ|X|Q)Ü/g, "$1U");
