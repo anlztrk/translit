@@ -94,13 +94,7 @@ car = car.replace(/LI((?![BCÇDFGĞHKLMNÑPQRSŞTVXYZ]))/g, "$1Lİ$2");
 
 car = car.replace(/((?<![BCÇDFGĞHKLMNÑPQRSŞTVXYZ]))I/g, "$1İ");
 car = car.replace(/((?<![BCÇDFGĞHKLMNÑPQRSŞTVXYZbcçdfgğhklmnñpqrsştvxyz]))ı/g, "$1i");
-  
-car = car.replace(/Ä/g, "Ȧ");
-car = car.replace(/ä/g, "ȧ");
-car = car.replace(/Ö/g, "Ȯ");
-car = car.replace(/ö/g, "ȯ");
-car = car.replace(/Ü/g, "U̇");
-car = car.replace(/ü/g, "u̇");
+
 car = car.replace(/X/g, "H");
 car = car.replace(/x/g, "h");
 document.transcription.text2.value = car;
