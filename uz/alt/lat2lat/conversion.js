@@ -47,8 +47,8 @@ car = car.replace(/i/g, "ı");
 car = car.replace(/a/g, "ä");
 car = car.replace(/A/g, "Ä");
 
-car = car.replace(/I(Y|y)/g, "İ$1");
-car = car.replace(/ıy/g, "iy");
+car = car.replace(/I(Ñ|Y|ñ|y)/g, "İ$1");
+car = car.replace(/ı(ñ|y)/g, "i$1");
 
 car = car.replace(/Ä(Ğ|X|Q|ğ|x|q)/g, "A$1");
 car = car.replace(/İ(Ğ|X|Q|ğ|x|q)/g, "I$1");
@@ -85,9 +85,6 @@ car = car.replace(/(G|H|K|g|h|k)a/g, "$1ä");
 car = car.replace(/(G|H|K|g|h|k)ı/g, "$1i");  
 car = car.replace(/(G|H|K|g|h|k)o/g, "$1ö");  
 car = car.replace(/(G|H|K|g|h|k)u/g, "$1ü");  
-
-car = car.replace(/I(Ñ|ñ)/g, "İ$1");
-car = car.replace(/ıñ/g, "iñ");
 
 car = car.replace(/(L|l)ı((?![bcçdfgğhklmnñpqrsştvxyz]))/g, "$1i$2");
 car = car.replace(/LI((?![BCÇDFGĞHKLMNÑPQRSŞTVXYZ]))/g, "$1Lİ$2");
