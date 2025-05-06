@@ -2,7 +2,6 @@ var car;
 
 function cyrlat() {
 	car = document.transcription.text1.value;
-	car = document.transcription.text1.value;
 	car = car.replace(/Щ/g, "Ш");
 	car = car.replace(/щ/g, "ш");
 	car = car.replace(/Ы/g, "И");
