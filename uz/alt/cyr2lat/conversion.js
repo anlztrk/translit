@@ -209,7 +209,7 @@ function cyrlat() {
 	car = car.replace(/ü/g, "u̇");
 	car = car.replace(/X/g, "H");
 	car = car.replace(/x/g, "h");
-	document.transcription.text1.value = car;
+	document.transcription.text2.value = car;
 }
 
 function copy1() {
