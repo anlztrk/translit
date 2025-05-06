@@ -1,7 +1,14 @@
 var car;
 
-function cyrlat() {
+function apostropheFix (car) {
 	car = document.transcription.text1.value;
+	car = car.replace(/['ˈ’ʼ‘ʻ´`ʿʹˊ׳′ʽߵ՚ߴ᾿ՙ῾‛ʾ՛ˋ]/g, "ʼ")
+	         .replace(/([OoGg])ʼ/g, "$1ʻ");
+	return car;
+}
+
+function cyrlat() {
+	car = apostropheFix(document.transcription.text1.value);
 	car = car.replace(/Щ/g, "Ш");
 	car = car.replace(/щ/g, "ш");
 	car = car.replace(/Ы/g, "И");
