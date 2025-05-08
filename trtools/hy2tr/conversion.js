@@ -98,6 +98,40 @@ car = car.replace(/ֆ/g, "f");
 car = car.replace(/Î(A|I|O|U|E|İ|Ö|Ü)/g, "İY$1");
 car = car.replace(/Î(a|ı|o|u|e|i|ö|ü)/g, "İy$1");
 car = car.replace(/î(a|ı|o|u|e|i|ö|ü)/g, "iy$1");
+
+const rules = [{
+			test: /Î[AIOUEİÖÜ]/,
+			pattern: /Î([AIOUEİÖÜ])/g,
+			replace: "İY$1",
+		},
+		{
+			test: /Î[aıoueiöü]/,
+			pattern: /Î([aıoueiöü])/g,
+			replace: "İy$1",
+		},
+		{
+			test: /î[aıoueiöü]/,
+			pattern: /î([aıoueiöü])/g,
+			replace: "iy$1",
+		}
+	];
+
+	// 2. Loop until none of the rules fire
+	let changed = true;
+	while (changed) {
+		changed = false;
+		for (const {
+				test,
+				pattern,
+				replace
+			}
+			of rules) {
+			if (test.test(car)) {
+				car = car.replace(pattern, replace);
+				changed = true;
+			}
+		}
+	}
   
 car = car.replace(/(A|I|O|U|E|İ|Ö|Ü)(G|Ġ)/g, "$1Ğ");
 car = car.replace(/(A|I|O|U|E|İ|Ö|Ü|a|ı|o|u|e|i|ö|ü)(g|ġ)/g, "$1ğ");
