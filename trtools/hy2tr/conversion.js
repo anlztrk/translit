@@ -95,6 +95,10 @@ car = car.replace(/ք/g, "k");
 car = car.replace(/օ/g, "o");
 car = car.replace(/ֆ/g, "f");
 
+car = car.replace(/Î(A|I|O|U|E|İ|Ö|Ü)/g, "İY$1");
+car = car.replace(/Î(a|ı|o|u|e|i|ö|ü)/g, "İy$1");
+car = car.replace(/î(a|ı|o|u|e|i|ö|ü)/g, "iy$1");
+  
 car = car.replace(/(A|I|O|U|E|İ|Ö|Ü)(G|Ġ)/g, "$1Ğ");
 car = car.replace(/(A|I|O|U|E|İ|Ö|Ü|a|ı|o|u|e|i|ö|ü)(g|ġ)/g, "$1ğ");
 car = car.replace(/(A|I|O|U)Ğ(E|İ|Ö|Ü)/g, "$1G$2");
