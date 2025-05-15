@@ -18,6 +18,7 @@ car = document.transcription.text1.value;
   car = car.replace(/q/g, "ć");
   car = car.replace(/x/g, "dz");
   car = car.replace(/y/g, "ü");
+  car = car.replace(/ë/g, "y");
   car = car.replace(/Ç/g, "Č");
   car = car.replace(/Q/g, "Ć");
   car = car.replace(/X/g, "Dz");
