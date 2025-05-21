@@ -57,11 +57,7 @@ car = document.transcription.text1.value;
 }
 function latcyr () {
 car = document.transcription.text2.value;
-  car = car.replace(/KA/g, "KÂ")
-           .replace(/KU/g, "KÛ")
-           .replace(/([Kk])a/g, "$1â")
-           .replace(/([Kk])u/g, "$1û")
-           .replace(/S[Hh]/g, "Ş")
+  car = car.replace(/S[Hh]/g, "Ş")
            .replace(/sh/g, "ş")
            .replace(/C[Hh]/g, "Ç")
            .replace(/ch/g, "ç")
@@ -78,6 +74,10 @@ car = document.transcription.text2.value;
            .replace(/oe/g, "ö")
            .replace(/U[Ee]/g, "Ü")
            .replace(/ue/g, "ü")
+           .replace(/KA/g, "KÂ")
+           .replace(/KU/g, "KÛ")
+           .replace(/([Kk])a/g, "$1â")
+           .replace(/([Kk])u/g, "$1û")
            .replace(/Q/g, "K")
            .replace(/q/g, "k")
            .replace(/W/g, "Ğ")
