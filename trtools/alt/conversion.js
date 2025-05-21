@@ -45,7 +45,7 @@ car = document.transcription.text1.value;
            .replace(/C([EIei])/g, "K$1")
            .replace(/c([ei])/g, "k$1")
            .replace(/C([Uu])/g, "Q$1")
-           .replace(/cu/g, "q$1") 
+           .replace(/cu/g, "qu") 
            .replace(/CH([EI])/g, "C$1")
            .replace(/Ch([ei])/g, "C$1")
            .replace(/ch([ei])/g, "c$1")
