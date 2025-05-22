@@ -54,10 +54,10 @@ car = document.transcription.text1.value;
            .replace(/ch([ei])/g, "c$1")
 
            .replace(/GH([EI])/g, "G-H$1");
-           .replace(/Gh([ei])/g, "G-h$1");
+           .replace(/Gh([ei])/g, "G-h$1")
            .replace(/gh([ei])/g, "g-h$1")
-           .replace(/G([EI])/g, "GH$1");
-           .replace(/G([ei])/g, "Gh$1");
+           .replace(/G([EI])/g, "GH$1")
+           .replace(/G([ei])/g, "Gh$1")
            .replace(/g([ei])/g, "gh$1")
            .replace(/J([EIei])/g, "G$1")
            .replace(/j([ei])/g, "g$1")
