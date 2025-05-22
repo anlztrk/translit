@@ -79,7 +79,7 @@ car = document.transcription.text1.value;
            .replace(/ch([ei])/g, "c$1");
    document.transcription.text2.value=car;
 }
-function latcyr () {
+function latcyr () {/*
 car = document.transcription.text2.value;
   car = car.replace(/C([EI])/g, "CH$1")
            .replace(/C([ei])/g, "Ch$1")
@@ -128,7 +128,7 @@ car = document.transcription.text2.value;
            .replace(/(E|e)-u/g, "$1u")
            .replace(/(C|c)-h/g, "$1h");
    document.transcription.text1.value=car;
-}
+*/}
 function copy1()
 { textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
 }
