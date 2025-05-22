@@ -46,6 +46,24 @@ car = document.transcription.text1.value;
            .replace(/c([ei])/g, "k$1")
            .replace(/C([Uu])/g, "Q$1")
            .replace(/cu/g, "qu") 
+           .replace(/CCH([EI])/g, "QC$1")
+           .replace(/Cch([ei])/g, "Qc$1")
+           .replace(/cch([ei])/g, "qc$1")
+           .replace(/CH([EI])/g, "C$1")
+           .replace(/Ch([ei])/g, "C$1")
+           .replace(/ch([ei])/g, "c$1")
+
+           .replace(/GH([EI])/g, "G-H$1");
+           .replace(/Gh([ei])/g, "G-h$1");
+           .replace(/gh([ei])/g, "g-h$1")
+           .replace(/G([EI])/g, "GH$1");
+           .replace(/G([ei])/g, "Gh$1");
+           .replace(/g([ei])/g, "gh$1")
+           .replace(/J([EIei])/g, "G$1")
+           .replace(/j([ei])/g, "g$1")
+           .replace(/GJ([EI])/g, "QC$1")
+           .replace(/Cch([ei])/g, "Qc$1")
+           .replace(/cch([ei])/g, "qc$1")
            .replace(/CH([EI])/g, "C$1")
            .replace(/Ch([ei])/g, "C$1")
            .replace(/ch([ei])/g, "c$1")
