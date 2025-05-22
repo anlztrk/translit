@@ -50,6 +50,8 @@ car = document.transcription.text1.value;
            .replace(/Y/g, "I\u200c")
            .replace(/i\u200c([aeiou])/g, "y$1")
            .replace(/I\u200c([AEIOUaeiou])/g, "Y$1")
+           .replace(/([Ii])i\u200c/g, "$1y")
+           .replace(/II\u200c/g, "IY")
            .replace(/\u200c/g, "")
   
            .replace(/C([EIei])/g, "K$1")
