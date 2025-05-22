@@ -53,7 +53,7 @@ car = document.transcription.text1.value;
            .replace(/Ch([ei])/g, "C$1")
            .replace(/ch([ei])/g, "c$1")
 
-           .replace(/GH([EI])/g, "G-H$1");
+           .replace(/GH([EI])/g, "G-H$1")
            .replace(/Gh([ei])/g, "G-h$1")
            .replace(/gh([ei])/g, "g-h$1")
            .replace(/G([EI])/g, "GH$1")
@@ -66,7 +66,7 @@ car = document.transcription.text1.value;
            .replace(/cch([ei])/g, "qc$1")
            .replace(/CH([EI])/g, "C$1")
            .replace(/Ch([ei])/g, "C$1")
-           .replace(/ch([ei])/g, "c$1")
+           .replace(/ch([ei])/g, "c$1");
    document.transcription.text2.value=car;
 }
 function latcyr () {
