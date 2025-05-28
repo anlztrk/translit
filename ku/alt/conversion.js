@@ -9,12 +9,12 @@ translit = translit.replace(/İ/g, "Î");
 car = car.replace(/ı/g, "i");
 car = car.replace(/İ/g, "Î");
 
-car = car.replace(/c/g, "ġ");
+car = car.replace(/c/g, "ĝ");
 car = car.replace(/ç/g, "c");
-car = car.replace(/ş/g, "ṡ");
-car = car.replace(/C/g, "Ġ");
+car = car.replace(/ş/g, "ŝ");
+car = car.replace(/C/g, "Ĝ");
 car = car.replace(/Ç/g, "C");
-car = car.replace(/Ş/g, "Ṡ");
+car = car.replace(/Ş/g, "Ŝ");
 document.transcription.text1.value = translit;
 document.transcription.text2.value = car;
 }
