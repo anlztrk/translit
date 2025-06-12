@@ -38,12 +38,10 @@ function cyrlat() {
 	car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "\u200bM$2");
 	car = car.replace(/(ं|ँ)(?![\u093e-\u094c])/g, "\u200bN");
 
-	// Remove schwa before halant
-	car = car.replace(/\u094d/g, "");
-
-	// Remove schwa before matras
-	car = car.replace(/\u093f|\u0941|\u0943|\u0947|\u094b|\u093e|\u0940|\u0942|\u0948|\u094c/g, "");
-
+	// only strip out the ZWJ marker, not the script signs themselves
+ 	car = car.replace(/\u200c(?=\u094d)/g, "");
+	car = car.replace(/\u200c(?=[\u093e\u093f\u0940\u0941\u0942\u0947\u0948\u094b\u094c])/g, "");
+	
 	// Consonant transliteration block
 	// Consonants with nukta
 	car = car.replace(/क़\u200c\u200b/g, "\u200bQ\u200c\u200b");
