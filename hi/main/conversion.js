@@ -210,6 +210,14 @@ function cyrlat() {
 	car = car.replace(/\u200b/g, "");
 
 	// punctuation / normalize
+	// 1) Strip out any leftover virama (halant) characters:
+	car = car.replace(/\u094d/g, "");
+
+	// 2) Convert danda (।) to period, drop double-danda (॥):
+	car = car.replace(/\u0964/g, ".")
+		.replace(/\u0965/g, "");
+
+	// 3) Then normalize and restore Latin placeholders as before:
 	car = car.normalize('NFC');
 
 	// lowercase rest (cross-browser):
