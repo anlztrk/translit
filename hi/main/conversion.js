@@ -1,7 +1,7 @@
 var car;
 
 function realizeFirstValidSchwa(text) {
-	return text.replace(/\p{sc=Devanagari}+/gu, function(word) {
+	return text.replace(/[\u0900-\u097F]+/g, function(word) {
 		// If word starts with a standalone vowel, skip
 		if (/^[अआइईउऊएऐओऔऋ]/.test(word)) return word;
 
@@ -15,21 +15,17 @@ function realizeFirstValidSchwa(text) {
 
 function cyrlat() {
 	car = document.transcription.text1.value;
-
-	// Normalize to decomposed form
 	car = car.normalize('NFD');
-
-	// Realize first valid schwa before any transliteration
 	car = realizeFirstValidSchwa(car);
 
-	// Protect Latin-script words
-	let latinWords = {};
-	let index = 0;
-	car = car.replace(/\p{sc=Latin}+/ug, function(match) {
-		let key = `__placeholder${index}__`;
-		latinWords[key] = match;
-		index++;
-		return key;
+	// protect Latin-script words
+	let latinWords = {},
+		idx = 0;
+	car = car.replace(/[A-Za-z]+/g, m => {
+		let k = `__p${idx}__`;
+		latinWords[k] = m;
+		idx++;
+		return k;
 	});
 
 	// Nasal handling
@@ -39,9 +35,9 @@ function cyrlat() {
 	car = car.replace(/(ं|ँ)(?![\u093e-\u094c])/g, "\u200bN");
 
 	// only strip out the ZWJ marker, not the script signs themselves
- 	car = car.replace(/\u200c(?=\u094d)/g, "");
+	car = car.replace(/\u200c(?=\u094d)/g, "");
 	car = car.replace(/\u200c(?=[\u093e\u093f\u0940\u0941\u0942\u0947\u0948\u094b\u094c])/g, "");
-	
+
 	// Consonant transliteration block
 	// Consonants with nukta
 	car = car.replace(/क़\u200c\u200b/g, "\u200bQ\u200c\u200b");
@@ -209,22 +205,21 @@ function cyrlat() {
 	// Optional cluster-breaking step would go here
 
 	// Realize and remove schwas
-	car = car.replace(/\u200c\u200b/g, "A"); // realized schwas
-	car = car.replace(/\u200c/g, ""); // deleted schwas
-	car = car.replace(/\u200b/g, ""); // remove ZWSPs
+	car = car.replace(/\u200c\u200b/g, "A");
+	car = car.replace(/\u200c/g, "");
+	car = car.replace(/\u200b/g, "");
 
-	// Punctuation and cleanup
-	car = car.replace(/\u0964/g, ".");
-	car = car.replace(/\u0965/g, "");
+	// punctuation / normalize
 	car = car.normalize('NFC');
-	car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'\"()]+)/gu, function(_, first, second) {
-		return first + second.toLowerCase();
-	});
 
-	// Restore Latin placeholders
-	Object.keys(latinWords).forEach(key => {
-		car = car.replace(key, latinWords[key]);
-	});
+	// lowercase rest (cross-browser):
+	car = car.replace(
+		/([\w]|__placeholder\d+__)([A-Za-z0-9\t ,;\-\u2010\u201c\u201d\u2018\u2019'"()]+)/g,
+		(_, first, rest) => first + rest.toLowerCase()
+	);
+
+	// restore Latin
+	for (let k in latinWords) car = car.replace(k, latinWords[k]);
 
 	document.transcription.text2.value = car;
 }
