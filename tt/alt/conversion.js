@@ -243,7 +243,7 @@ function cyrlat() {
 	car = car.replace(/ж/g, "j");
 	car = car.replace(/җ/g, "ɉ");
 	car = car.replace(/з/g, "z");
-	car = car.replace(/и/g, "ī");
+	car = car.replace(/и/g, "í");
 	car = car.replace(/й/g, "y");
 	car = car.replace(/к/g, "k");
 	car = car.replace(/қ/g, "q");
