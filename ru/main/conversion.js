@@ -28,8 +28,8 @@ translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])Ю/
 translit = translit.replace(/([бвгджзклмнпрстфхцчшщъь])Ю/g, "$1ьУ");
 translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])ю/g, "$1ьу");
 
-translit = translit.replace(/([АЭЫОУЯЕИЙЁЮЪЬ])Ь/g, "$1Й");
-translit = translit.replace(/([АЭЫОУЯЕИЙЁЮЪЬаэыоуяеийёюъь])ь/g, "$1й");
+translit = translit.replace(/([АЭЫОУЯЕИЙЁЮ])Ь/g, "$1Й");
+translit = translit.replace(/([АЭЫОУЯЕИЙЁЮаэыоуяеийёю])ь/g, "$1й");
 translit = translit.replace(/[ьЬ]А/g, "Ä");
 translit = translit.replace(/ьа/g, "ä");
 translit = translit.replace(/[ьЬ]Э/g, "Ë");
