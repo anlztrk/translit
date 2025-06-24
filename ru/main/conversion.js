@@ -29,14 +29,19 @@ translit = translit.replace(/([АЭЫОУЯЕИЙЁЮЪЬ])Ь/g, "$1Й");
 translit = translit.replace(/([АЭЫОУЯЕИЙЁЮЪЬаэыоуяеийёюъь])ь/g, "$1й");
 translit = translit.replace(/[ьЬ]А/g, "Ä");
 translit = translit.replace(/ьа/g, "ä");
-translit = translit.replace(/[ьЬ]Э/g, "E");
-translit = translit.replace(/ьэ/g, "e");
+translit = translit.replace(/[ьЬ]Э/g, "Ë");
+translit = translit.replace(/ьэ/g, "ë");
 translit = translit.replace(/[ьЬ]Ы/g, "I");
 translit = translit.replace(/ьы/g, "i");
 translit = translit.replace(/[ьЬ]О/g, "Ö");
 translit = translit.replace(/ьо/g, "ö");
 translit = translit.replace(/[ьЬ]У/g, "Ü");
 translit = translit.replace(/ьу/g, "ü");
+
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])Э/g, "$1È");
+translit = translit.replace(/([ЪЬбвгджзклмнпрстфхцчшщъь])э/g, "$1è");
+translit = translit.replace(/Ë/g, "E");
+translit = translit.replace(/ë/g, "e");
   
 translit = translit.replace(/а/g, "a");
 translit = translit.replace(/б/g, "b");
