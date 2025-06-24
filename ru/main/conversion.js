@@ -9,6 +9,9 @@ car = car.replace(/>>/g, "»");
 translit = translit.replace(/<</g, "«");
 translit = translit.replace(/>>/g, "»");
 
+translit = translit.replace(/Ь([АЭЫОУ])/g, "Й$1");
+translit = translit.replace(/ь([АЭЫОУаэыоу])/g, "й$1");
+
 translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])Я/g, "$1ЬА");
 translit = translit.replace(/([бвгджзклмнпрстфхцчшщъь])Я/g, "$1ьА");
 translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])я/g, "$1ьа");
