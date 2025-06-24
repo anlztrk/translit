@@ -9,9 +9,6 @@ car = car.replace(/>>/g, "»");
 translit = translit.replace(/<</g, "«");
 translit = translit.replace(/>>/g, "»");
 
-translit = translit.replace(/Ь([АЭЫОУ])/g, "Й$1");
-translit = translit.replace(/ь([АЭЫОУаэыоу])/g, "й$1");
-
 translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])Я/g, "$1Ä");
 translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])я/g, "$1ä");
 translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])Е/g, "$1Ë");
@@ -23,17 +20,42 @@ translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбв�
 translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])Ю/g, "$1Ü");
 translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])ю/g, "$1ü");
 
-translit = translit.replace(/[ьЬ]А/g, "Ä");
-translit = translit.replace(/ьа/g, "ä");
-translit = translit.replace(/[ьЬ]Э/g, "Ë");
-translit = translit.replace(/ьэ/g, "ë");
-translit = translit.replace(/[ьЬ]Ы/g, "I");
-translit = translit.replace(/ьы/g, "i");
-translit = translit.replace(/[ьЬ]О/g, "Ö");
-translit = translit.replace(/ьо/g, "ö");
-translit = translit.replace(/[ьЬ]У/g, "Ü");
-translit = translit.replace(/ьу/g, "ü");
-
+translit = translit.replace(/ЬЯ/g, "ЙÄ");
+translit = translit.replace(/ья/g, "йä");
+translit = translit.replace(/ЬЕ/g, "ЙE");
+translit = translit.replace(/ье/g, "йe");
+translit = translit.replace(/ЬИ/g, "ЙI");
+translit = translit.replace(/ьи/g, "йi");
+translit = translit.replace(/ЬЁ/g, "ЙÖ");
+translit = translit.replace(/ьё/g, "йö");
+translit = translit.replace(/ЬЮ/g, "ЙÜ");
+translit = translit.replace(/ью/g, "йü");
+  
+translit = translit.replace(/(\p{Uppercase})Я/ug, "$1ЙА");
+translit = translit.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
+translit = translit.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2");
+translit = translit.replace(/Я(\p{Uppercase})/ug, "ЙА$1");
+translit = translit.replace(/Я/g, "Йа");
+translit = translit.replace(/я/g, "йа");
+translit = translit.replace(/(\p{Uppercase})Е/ug, "$1ЙЭ");
+translit = translit.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
+translit = translit.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЭ $1$2");
+translit = translit.replace(/Е(\p{Uppercase})/ug, "ЙЭ$1");
+translit = translit.replace(/Е/g, "Йэ");
+translit = translit.replace(/е/g, "йэ");
+translit = translit.replace(/(\p{Uppercase})Ё/ug, "$1ЙО");
+translit = translit.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО");
+translit = translit.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2");
+translit = translit.replace(/Ё(\p{Uppercase})/ug, "ЙО$1");
+translit = translit.replace(/Ё/g, "Йо");
+translit = translit.replace(/ё/g, "йо");
+translit = translit.replace(/(\p{Uppercase})Ю/ug, "$1ЙУ");
+translit = translit.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ");
+translit = translit.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2");
+translit = translit.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
+translit = translit.replace(/Ю/g, "Йу");
+translit = translit.replace(/ю/g, "йу");
+  
 translit = translit.replace(/([АЭЫОУЯЕИЙЁЮ])Ь/g, "$1Й");
 translit = translit.replace(/([АЭЫОУЯЕИЙЁЮаэыоуяеийёю])ь/g, "$1й");
 
