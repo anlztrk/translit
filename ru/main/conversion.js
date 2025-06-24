@@ -12,24 +12,17 @@ translit = translit.replace(/>>/g, "»");
 translit = translit.replace(/Ь([АЭЫОУ])/g, "Й$1");
 translit = translit.replace(/ь([АЭЫОУаэыоу])/g, "й$1");
 
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])Я/g, "$1ЬА");
-translit = translit.replace(/([бвгджзклмнпрстфхцчшщъь])Я/g, "$1ьА");
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])я/g, "$1ьа");
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])Е/g, "$1ЬЭ");
-translit = translit.replace(/([бвгджзклмнпрстфхцчшщъь])Е/g, "$1ьЭ");
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])е/g, "$1ьэ");
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])И/g, "$1ЬЫ");
-translit = translit.replace(/([бвгджзклмнпрстфхцчшщъь])И/g, "$1ьЫ");
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])и/g, "$1ьы");
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])Ё/g, "$1ЬО");
-translit = translit.replace(/([бвгджзклмнпрстфхцчшщъь])Ё/g, "$1ьО");
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])ё/g, "$1ьо");
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])Ю/g, "$1ЬУ");
-translit = translit.replace(/([бвгджзклмнпрстфхцчшщъь])Ю/g, "$1ьУ");
-translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])ю/g, "$1ьу");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])Я/g, "$1Ä");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])я/g, "$1ä");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])Е/g, "$1Ë");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])е/g, "$1ë");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])И/g, "$1I");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])и/g, "$1i");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])Ё/g, "$1Ö");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])ё/g, "$1ö");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])Ю/g, "$1Ü");
+translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬбвгджзклмнпрстфхцчшщъь])ю/g, "$1ü");
 
-translit = translit.replace(/([АЭЫОУЯЕИЙЁЮ])Ь/g, "$1Й");
-translit = translit.replace(/([АЭЫОУЯЕИЙЁЮаэыоуяеийёю])ь/g, "$1й");
 translit = translit.replace(/[ьЬ]А/g, "Ä");
 translit = translit.replace(/ьа/g, "ä");
 translit = translit.replace(/[ьЬ]Э/g, "Ë");
@@ -40,6 +33,9 @@ translit = translit.replace(/[ьЬ]О/g, "Ö");
 translit = translit.replace(/ьо/g, "ö");
 translit = translit.replace(/[ьЬ]У/g, "Ü");
 translit = translit.replace(/ьу/g, "ü");
+
+translit = translit.replace(/([АЭЫОУЯЕИЙЁЮ])Ь/g, "$1Й");
+translit = translit.replace(/([АЭЫОУЯЕИЙЁЮаэыоуяеийёю])ь/g, "$1й");
 
 translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])Э/g, "$1È");
 translit = translit.replace(/([ЪЬбвгджзклмнпрстфхцчшщъь])э/g, "$1è");
