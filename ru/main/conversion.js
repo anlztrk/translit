@@ -9,15 +9,19 @@ function cyrlat() {
 	translit = translit.replace(/<</g, "«");
 	translit = translit.replace(/>>/g, "»");
 
-	translit = translit.replace(/([ЪЬ])([АЭЫОУ])/g, "$1\u2019$2");
-	translit = translit.replace(/([ЪЬъь])([аэыоу])/g, "$1\u2019$2");
+	translit = translit.replace(/([ЪЬ])([АОУ])/g, "$1\u2019$2");
+	translit = translit.replace(/([ЪЬъь])([аоу])/g, "$1\u2019$2");
+	translit = translit.replace(/Ъ([Ее])/g, "\u2019$1");
+	translit = translit.replace(/ъе/g, "\u2019е");
+	translit = translit.replace(/Ъ([Ээ])/g, "\u2019$1");
+	translit = translit.replace(/ъэ/g, "\u2019э");
 
 	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])Я/g, "$1Ä");
 	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])я/g, "$1ä");
-	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])Е/g, "$1Ë");
-	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])е/g, "$1ë");
-	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])И/g, "$1I");
-	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])и/g, "$1i");
+	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])Э/g, "$1È");
+	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])э/g, "$1è");
+	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])Е/g, "$1E");
+	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])е/g, "$1e");
 	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])Ё/g, "$1Ö");
 	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])ё/g, "$1ö");
 	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])Ю/g, "$1Ü");
@@ -47,14 +51,6 @@ function cyrlat() {
 	translit = translit.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
 	translit = translit.replace(/Ю/g, "Йу");
 	translit = translit.replace(/ю/g, "йу");
-
-	translit = translit.replace(/([АЭЫОУЯЕИЙЁЮ])Ь/g, "$1Й");
-	translit = translit.replace(/([АЭЫОУЯЕИЙЁЮаэыоуяеийёю])ь/g, "$1й");
-
-	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЪЬ])Э/g, "$1È");
-	translit = translit.replace(/([ЪЬбвгджзклмнпрстфхцчшщъь])э/g, "$1è");
-	translit = translit.replace(/Ë/g, "E");
-	translit = translit.replace(/ë/g, "e");
 
 	translit = translit.replace(/а/g, "a");
 	translit = translit.replace(/б/g, "b");
