@@ -10,7 +10,7 @@ function cyrlat() {
 	translit = translit.replace(/>>/g, "»");
 
 	translit = translit.replace(/([ЪЬ])([АЭЫОУ])/g, "$1\u2019$2");
-	translit = translit.replace(/([ЪЬъь)]([аэыоу])/g, "$1\u2019$2");
+	translit = translit.replace(/([ЪЬъь])([аэыоу])/g, "$1\u2019$2");
 
 	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])Я/g, "$1Ä");
 	translit = translit.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])я/g, "$1ä");
