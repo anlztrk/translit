@@ -2,39 +2,37 @@ var car;
 var fix;
 
 function cyrlat() {
+	document.transcription.text1.value = document.transcription.text1.value.replace(/<</g, "«")
+	.replace(/>>/g, "»")
+	.replace(/(\p{Script=Cyrl})A/ug, "$1А")
+	.replace(/(\p{Script=Cyrl})C/ug, "$1С")
+	.replace(/(\p{Script=Cyrl})E/ug, "$1Е")
+	.replace(/(\p{Script=Cyrl})Ë/ug, "$1Ё")
+	.replace(/(\p{Script=Cyrl})O/ug, "$1О")
+	.replace(/(\p{Script=Cyrl})P/ug, "$1Р")
+	.replace(/(\p{Script=Cyrl})X/ug, "$1Х")
+	.replace(/(\p{Script=Cyrl})a/ug, "$1а")
+	.replace(/(\p{Script=Cyrl})c/ug, "$1с")
+	.replace(/(\p{Script=Cyrl})e/ug, "$1е")
+	.replace(/(\p{Script=Cyrl})ë/ug, "$1ё")
+	.replace(/(\p{Script=Cyrl})o/ug, "$1о")
+	.replace(/(\p{Script=Cyrl})p/ug, "$1р")
+	.replace(/(\p{Script=Cyrl})x/ug, "$1х")
+	.replace(/A(\p{Script=Cyrl})/ug, "А$1")
+	.replace(/C(\p{Script=Cyrl})/ug, "С$1")
+	.replace(/E(\p{Script=Cyrl})/ug, "Е$1")
+	.replace(/Ë(\p{Script=Cyrl})/ug, "Ё$1")
+	.replace(/O(\p{Script=Cyrl})/ug, "О$1")
+	.replace(/P(\p{Script=Cyrl})/ug, "Р$1")
+	.replace(/X(\p{Script=Cyrl})/ug, "Х$1")
+	.replace(/a(\p{Script=Cyrl})/ug, "а$1")
+	.replace(/c(\p{Script=Cyrl})/ug, "с$1")
+	.replace(/e(\p{Script=Cyrl})/ug, "е$1")
+	.replace(/ë(\p{Script=Cyrl})/ug, "ё$1")
+	.replace(/o(\p{Script=Cyrl})/ug, "о$1")
+	.replace(/p(\p{Script=Cyrl})/ug, "р$1")
+	.replace(/x(\p{Script=Cyrl})/ug, "х$1");
 	car = document.transcription.text1.value;
-	fix = car;
-	fix = fix.replace(/<</g, "«");
-	fix = fix.replace(/>>/g, "»");
-	fix = fix.replace(/(\p{Script=Cyrl})A/ug, "$1А");
-	fix = fix.replace(/(\p{Script=Cyrl})C/ug, "$1С");
-	fix = fix.replace(/(\p{Script=Cyrl})E/ug, "$1Е");
-	fix = fix.replace(/(\p{Script=Cyrl})Ë/ug, "$1Ё");
-	fix = fix.replace(/(\p{Script=Cyrl})O/ug, "$1О");
-	fix = fix.replace(/(\p{Script=Cyrl})P/ug, "$1Р");
-	fix = fix.replace(/(\p{Script=Cyrl})X/ug, "$1Х");
-	fix = fix.replace(/(\p{Script=Cyrl})a/ug, "$1а");
-	fix = fix.replace(/(\p{Script=Cyrl})c/ug, "$1с");
-	fix = fix.replace(/(\p{Script=Cyrl})e/ug, "$1е");
-	fix = fix.replace(/(\p{Script=Cyrl})ë/ug, "$1ё");
-	fix = fix.replace(/(\p{Script=Cyrl})o/ug, "$1о");
-	fix = fix.replace(/(\p{Script=Cyrl})p/ug, "$1р");
-	fix = fix.replace(/(\p{Script=Cyrl})x/ug, "$1х");
-	fix = fix.replace(/A(\p{Script=Cyrl})/ug, "А$1");
-	fix = fix.replace(/C(\p{Script=Cyrl})/ug, "С$1");
-	fix = fix.replace(/E(\p{Script=Cyrl})/ug, "Е$1");
-	fix = fix.replace(/Ë(\p{Script=Cyrl})/ug, "Ё$1");
-	fix = fix.replace(/O(\p{Script=Cyrl})/ug, "О$1");
-	fix = fix.replace(/P(\p{Script=Cyrl})/ug, "Р$1");
-	fix = fix.replace(/X(\p{Script=Cyrl})/ug, "Х$1");
-	fix = fix.replace(/a(\p{Script=Cyrl})/ug, "а$1");
-	fix = fix.replace(/c(\p{Script=Cyrl})/ug, "с$1");
-	fix = fix.replace(/e(\p{Script=Cyrl})/ug, "е$1");
-	fix = fix.replace(/ë(\p{Script=Cyrl})/ug, "ё$1");
-	fix = fix.replace(/o(\p{Script=Cyrl})/ug, "о$1");
-	fix = fix.replace(/p(\p{Script=Cyrl})/ug, "р$1");
-	fix = fix.replace(/x(\p{Script=Cyrl})/ug, "х$1");
-	document.transcription.text1.value = fix;
 	car = car.replace(/([ЪЬ])([АОУ])/g, "$1\u2019$2");
 	car = car.replace(/([ЪЬъь])([аоу])/g, "$1\u2019$2");
 	car = car.replace(/ЪЕ/g, "ЙÈ");
