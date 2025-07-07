@@ -89,8 +89,8 @@ car = document.transcription.text1.value;
   car = car.replace(/(Ь|ь)/g, "");
   
   car = car.replace(/И(А|О|Ұ|Ы)/g, "ЫЙ$1");
-  car = car.replace(/И(а|о|ұ|ы)/g, "Ый$2");
-  car = car.replace(/и(а|о|ұ|ы)/g, "ый$2");
+  car = car.replace(/И(а|о|ұ|ы)/g, "Ый$1");
+  car = car.replace(/и(а|о|ұ|ы)/g, "ый$1");
   car = car.replace(/И(Ә|Е|И|Ө|Ү|І|Э)/g, "ІЙ$1");
   car = car.replace(/И(ә|е|и|ө|ү|і|э)/g, "Ій$1");
   car = car.replace(/и(ә|е|и|ө|ү|і|э)/g, "ій$1");
