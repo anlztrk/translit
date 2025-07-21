@@ -178,13 +178,13 @@ document.transcription.text2.value=car;
 function latcyr () {
 car = document.transcription.text2.value;
 
-  car = car.replace(/[Iİ]Y([AEIİÎOÖUÛÜ])/g, "Î$2");
-  car = car.replace(/[Iİ]y([aeıiîoöuûü])/g, "Î$2");
-  car = car.replace(/[ıi]y([aeıiîoöuûü])/g, "î$2");
+  car = car.replace(/[Iİ]Y([AEIİÎOÖUÛÜ])/g, "Î$1");
+  car = car.replace(/[Iİ]y([aeıiîoöuûü])/g, "Î$1");
+  car = car.replace(/[ıi]y([aeıiîoöuûü])/g, "î$1");
   
-  car = car.replace(/[UÜ]W([AEIİÎOÖUÛÜ])/g, "Û$2");
-  car = car.replace(/[UÜ]w([aeıiîoöuûü])/g, "Û$2");
-  car = car.replace(/[uü]w([aeıiîoöuûü])/g, "û$2");
+  car = car.replace(/[UÜ]W([AEIİÎOÖUÛÜ])/g, "Û$1");
+  car = car.replace(/[UÜ]w([aeıiîoöuûü])/g, "Û$1");
+  car = car.replace(/[uü]w([aeıiîoöuûü])/g, "û$1");
   
   car = car.replace(/Y[Aa]/g, "Я");
   car = car.replace(/ya/g, "я");
