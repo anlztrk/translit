@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html> 
+<head> 
+<link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+<title>Turkish misencoded text fixer</title><script type="text/javascript" src="conversion.js"></script>
+		<style type="text/css"> 
+		@font-face {
+			font-family: 'GB-Plus';
+			src: url('/translit/fonts/GentiumBookPlus-Regular.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+			unicode-range: U+000-10FFFF;
+		}
+		textarea {
+			font-family: 'Gentium Book Plus', 'GB-Plus', 'Liberation Serif', Tinos, Cambria, 'Times New Roman', serif;
+			font-size: 15px;
+			width: 1000px;
+			height: 450px;
+		}
+		</style> 
+</head> 
+<body> 
+	<h1>Turkish misencoded text fixer</h1> 
+
+<div align="center"> Type text encoded with ISO/IEC 8859-1 to get ISO/IEC 8859-9 equivalent:<br> 
+  <form name=transcription> 
+	<table width=90%><tr align=center> 
+		<td><br> 
+	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
+		  <br> 
+		  <br> 
+	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
+	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
+		</td>
+	</td></tr></table> 
+</form>  
+</body> 
+</html> 
