@@ -901,7 +901,7 @@ function cyrlat() {
 	car = car.replace(/\u0023U\+([0-9A-Fa-f]+)\u0023|\u0023u([0-9A-Fa-f]{4})\u0023/g, (_, uPlus, uLower) => {
 			const hex = uPlus || uLower;
 			return String.fromCodePoint(parseInt(hex, 16));
-		}
+		});
 		document.transcription.text1.value = car;
 	}
 
