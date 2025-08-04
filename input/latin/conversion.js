@@ -899,20 +899,21 @@ function cyrlat() {
 	car = car.replace(/\u0023(vertical)?line(below)?\u0023/g, "\u0329");
 	car = car.replace(/\u0023(circumflex|caret)below\u0023/g, "\u032d");
 	car = car.replace(/\u0023U\+([0-9A-Fa-f]+)\u0023|\u0023u([0-9A-Fa-f]{4})\u0023/g, (_, uPlus, uLower) => {
-			const hex = uPlus || uLower;
-			return String.fromCodePoint(parseInt(hex, 16));
-		});
-		document.transcription.text1.value = car;
-	}
+		const hex = uPlus || uLower;
+		return String.fromCodePoint(parseInt(hex, 16));
+	});
+	car = car.normalize('NFC');
+	document.transcription.text1.value = car;
+}
 
-	function copy1() {
-		textRange = document.transcription.text1.createTextRange();
-		textRange.execCommand("Copy");
-		textRange = "";
-	}
+function copy1() {
+	textRange = document.transcription.text1.createTextRange();
+	textRange.execCommand("Copy");
+	textRange = "";
+}
 
-	function copy2() {
-		textRange = document.transcription.text2.createTextRange();
-		textRange.execCommand("Copy");
-		textRange = "";
-	}
+function copy2() {
+	textRange = document.transcription.text2.createTextRange();
+	textRange.execCommand("Copy");
+	textRange = "";
+}
