@@ -3,6 +3,13 @@ function cyrlat () {
 car = document.transcription.text1.value;
   car = car.replace(/(Ь|Ъ|ь|ъ)(е|и|о)/g, "$1й$2");
   car = car.replace(/(Ь|Ъ)(Е|И|О)/g, "$1Й$2");
+
+  car = car.replace(/(\p{Uppercase})Ч/ug, "$1CH");
+  car = car.replace(/Ч (\p{Uppercase})(\p{Uppercase})/ug, "CH $1$2");
+  car = car.replace(/Ч(\p{Uppercase})/ug, "CH$1");
+  car = car.replace(/(\p{Uppercase})Ш/ug, "$1SH");
+  car = car.replace(/Ш (\p{Uppercase})(\p{Uppercase})/ug, "SH $1$2");
+  car = car.replace(/Ш(\p{Uppercase})/ug, "SH$1");
   
   car = car.replace(/а/g, "a");
   car = car.replace(/ә/g, "á");
