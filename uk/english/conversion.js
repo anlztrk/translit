@@ -149,19 +149,19 @@ car = car.replace(/([ЬЪьъ])/g, "");
 
 car = car.replace(/ẎY/g, "ẎI");
 car = car.replace(/([Ẏẏ])y/g, "$1i");
-car = car.replace(/Y([Ẏẏ])(?![AEIOUYẎ])/g, "Y$2");
-car = car.replace(/yẏ(?![aeiouyẏ])/g, "y$1");
+car = car.replace(/Y([Ẏẏ])((?![AEIOUYẎ]))/g, "Y$2");
+car = car.replace(/yẏ((?![aeiouyẏ]))/g, "y$1");
 car = car.replace(/YẎ([AEIOUYẎ])/g, "IẎ$1");
 car = car.replace(/Yẏ([aeiouyẏ])/g, "Iẏ$1");
 car = car.replace(/yẏ([aeiouyẏ])/g, "iẏ$1");
 
-car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z)ẎI/g, "$1I");
-car = car.replace(/(B|C|D|F|G|H|K|L|M|N|P|R|S|T|V|Z|b|c|d|f|g|h|k|l|m|n|p|r|s|t|v|z)ẏi/g, "$1i");
+car = car.replace(/([BCDFGHKLMNPRSTVZ])ẎI/g, "$1I");
+car = car.replace(/([BCDFGHKLMNPRSTVZbcdfghklmnprstvz])ẏi/g, "$1i");
 
-car = car.replace(/([AEOUYẎ])Ẏ(?![AEIOUYẎ])/g, "$1I$2");
-car = car.replace(/([AEOUYẎaeouyẏ])ẏ(?![aeiouyẏ])/g, "$1i$2");
-car = car.replace(/IẎ(?![AEIOUYẎ])/g, "I$1");
-car = car.replace(/([Ii])ẏ(?![aeiouyẏ])/g, "$1$2");
+car = car.replace(/([AEOUYẎ])Ẏ((?![AEIOUYẎ]))/g, "$1I$2");
+car = car.replace(/([AEOUYẎaeouyẏ])ẏ((?![aeiouyẏ]))/g, "$1i$2");
+car = car.replace(/IẎ((?![AEIOUYẎ]))/g, "I$1");
+car = car.replace(/([Ii])ẏ((?![aeiouyẏ]))/g, "$1$2");
 
 car = car.replace(/Ẏ/g, "Y");
 car = car.replace(/ẏ/g, "y");
