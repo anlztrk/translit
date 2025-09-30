@@ -70,7 +70,7 @@ car = document.transcription.text1.value;
   car = car.replace(/Џ/g, "ˈΖ");
   car = car.replace(/Ш/g, "ˈΣ");
 
-  car = car.replace(/ς(\p{Lowercase})/g, "σ$1");
+  car = car.replace(/ς(\p{Lowercase})/ug, "σ$1");
 
   car = car.replace(/Κ[Σσς]/g, "Ξ");
   car = car.replace(/κ[σς]/g, "ξ");
