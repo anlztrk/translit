@@ -1,7 +1,7 @@
 var car;
 function armlat () {
 car = document.transcription.text1.value;
-car = car.replace(/Ե(Ւ|ւ)/g, "Վ");
+car = car.replace(/Ե([Ււ])/g, "Վ");
 car = car.replace(/եւ/g, "վ");
 car = car.replace(/ԵՎ/g, "EW");
 car = car.replace(/Եվ/g, "Ew");
