@@ -111,6 +111,7 @@ function cyrlat() {
 	car = car.replace(/[oœ]jɾ/g, 'OIR');
 	car = car.replace(/[oœ]j/g, 'OY');
 	car = car.replace(/œɾ/g, 'UR');
+	car = car.replace(/oːɾ|oɾ/g, 'OR');
 	car = car.replace(/oː|o|œː|œ/g, 'OH');
 	car = car.replace(/ɑɾ/g, 'URR');
 	car = car.replace(/ɑ([bʤʧdfɡɟʒkclɫmnŋɲpsʃtvβz])/g, 'U$1');
