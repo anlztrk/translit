@@ -101,7 +101,7 @@ function cyrlat() {
 	car = car.replace(/(ej|eː|e)/g, 'AY');
 	car = car.replace(/iɾ/g, 'IRR');
 	car = car.replace(/i([bʤʧdfɡɟʒkclɫmnŋɲpsʃtvβz])/g, 'I$1');
-	car = car.replace(/(ij|iː|i|ɯː)/g, 'EE');
+	car = car.replace(/(iː|ij|ɯː|i|)/g, 'EE');
 	car = car.replace(/ɯːɾ/g, 'EER');
 	car = car.replace(/ɑjɾ/g, 'IRE');
 	car = car.replace(/([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])ɑj/g, '$1Y');
@@ -114,7 +114,7 @@ function cyrlat() {
 	car = car.replace(/ɑ([bʤʧdfɡɟʒkclɫmnŋɲpsʃtvβz])/g, 'U$1');
 	car = car.replace(/[uy]ɾ/g, 'UURR');
 	car = car.replace(/[uy]([bʤʧdfɡɟʒkclɫmnŋɲpsʃtvβz])/g, 'UU$1');
-	car = car.replace(/(u|uː|y|yː)/g, 'OO');
+	car = car.replace(/(uː|u|yː|y)/g, 'OO');
 	car = car.replace(/ɑ/g, 'Ə');
 	car = car.replace(/ɯ/g, 'Ə');
 	car = car.replace(/ʧ/g, 'J');
