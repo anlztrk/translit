@@ -87,7 +87,7 @@ function cyrlat() {
 	
 	car = car.replace(/([ɑeæɯioœuy])h/g, '$1ː');
 	car = car.replace(/([ɑeiuy])\.([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβjz])/g, '$1$2\.');
-	car = car.replace(/[uy]j/g, "wi");
+	car = car.replace(/[uy]j\.([ɑeæɯioœuy])/g, "uː\.j$1");
 	car = car.replace(/([ɑeæɯioœuy])β/g, '$1v');
 	car = car.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾsʃvβz])(yɾ|yːɾ)/g, '$1URE');
 	car = car.replace(/(juɾ|juːɾ|jyɾ|jyːɾ)/g, 'YOOR');
