@@ -136,7 +136,8 @@ function cyrlat() {
 	car = car.replace(/[ŋɲ]/g, 'NG');
 	car = car.replace(/ɾ/g, 'R');
 	car = car.replace(/ʃ/g, 'SH');
-	car = car.replace(/(β|hw)/g, 'W');
+	car = car.replace(/hw/g, 'WH');
+	car = car.replace(/β/g, 'W');
 	car = car.replace(/j/g, 'Y');
 	car = car.replace(/\u002e/g, '\u002d');
 	car = car.toLowerCase();
