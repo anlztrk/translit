@@ -215,8 +215,11 @@ function cyrlat() {
 	car = car.replace(/ö/g, "ȯ");
 	car = car.replace(/Ü/g, "U̇");
 	car = car.replace(/ü/g, "u̇");
+	car = car.replace(/([0-9])x/g, "$1×");
+	car = car.replace(/x([0-9])/g, "×$1");
 	car = car.replace(/X/g, "H");
 	car = car.replace(/x/g, "h");
+	car = car.replace(/×/g, "x");
 	document.transcription.text2.value = car;
 }
 
