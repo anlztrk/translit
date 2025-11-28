@@ -176,14 +176,14 @@ function cyrlat() {
 	car = car.replace(/ö(ğ|x|q)/g, "o$1");
 	car = car.replace(/ü(ğ|x|q)/g, "u$1");
 
-	car = car.replace(/A(G|H|K|g|h|k)/g, "Ä$1");
-	car = car.replace(/I(G|H|K|g|h|k)/g, "İ$1");
-	car = car.replace(/O(G|H|K|g|h|k)/g, "Ö$1");
-	car = car.replace(/U(G|H|K|g|h|k)/g, "Ü$1");
-	car = car.replace(/a(g|h|k)/g, "ä$1");
-	car = car.replace(/ı(g|h|k)/g, "i$1");
-	car = car.replace(/o(g|h|k)/g, "ö$1");
-	car = car.replace(/u(g|h|k)/g, "ü$1");
+	car = car.replace(/A(G|K|g|k)/g, "Ä$1");
+	car = car.replace(/I(G|K|g|k)/g, "İ$1");
+	car = car.replace(/O(G|K|g|k)/g, "Ö$1");
+	car = car.replace(/U(G|K|g|k)/g, "Ü$1");
+	car = car.replace(/a(g|k)/g, "ä$1");
+	car = car.replace(/ı(g|k)/g, "i$1");
+	car = car.replace(/o(g|k)/g, "ö$1");
+	car = car.replace(/u(g|k)/g, "ü$1");
 
 	car = car.replace(/(Ğ|X|Q)Ä/g, "$1A");
 	car = car.replace(/(Ğ|X|Q)İ/g, "$1I");
@@ -194,14 +194,14 @@ function cyrlat() {
 	car = car.replace(/(Ğ|X|Q|ğ|x|q)ö/g, "$1o");
 	car = car.replace(/(Ğ|X|Q|ğ|x|q)ü/g, "$1u");
 
-	car = car.replace(/(G|H|K)A/g, "$1Ä");
-	car = car.replace(/(G|H|K)I/g, "$1İ");
-	car = car.replace(/(G|H|K)O/g, "$1Ö");
-	car = car.replace(/(G|H|K)U/g, "$1Ü");
-	car = car.replace(/(G|H|K|g|h|k)a/g, "$1ä");
-	car = car.replace(/(G|H|K|g|h|k)ı/g, "$1i");
-	car = car.replace(/(G|H|K|g|h|k)o/g, "$1ö");
-	car = car.replace(/(G|H|K|g|h|k)u/g, "$1ü");
+	car = car.replace(/(G|K)A/g, "$1Ä");
+	car = car.replace(/(G|K)I/g, "$1İ");
+	car = car.replace(/(G|K)O/g, "$1Ö");
+	car = car.replace(/(G|K)U/g, "$1Ü");
+	car = car.replace(/(G|K|g|k)a/g, "$1ä");
+	car = car.replace(/(G|K|g|k)ı/g, "$1i");
+	car = car.replace(/(G|K|g|k)o/g, "$1ö");
+	car = car.replace(/(G|K|g|k)u/g, "$1ü");
 
 	car = car.replace(/(L|l)ı((?![bcçdfgğhklmnñpqrsştvxyz]))/g, "$1i$2");
 	car = car.replace(/LI((?![BCÇDFGĞHKLMNÑPQRSŞTVXYZ]))/g, "$1Lİ$2");
