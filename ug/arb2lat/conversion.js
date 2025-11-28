@@ -117,12 +117,12 @@ function latcyr () {
   car = car.replace(/[Ww]/g, "ۋ"); 
   car = car.replace(/[Xx]/g, "خ"); 
   car = car.replace(/[Yy]/g, "ي"); 
-  car = car.replace(/[Zz]/g, "ز"); 
-  car = car.replace(/\u2019/g, "ئ");  
+  car = car.replace(/[Zz]/g, "ز");  
   car = car.replace(/ئاللاھ/g, "ﷲ"); 
   
-  car = car.replace(/(گ|س|ز)ئھ/g, "$1ھ")
-  car = car.replace(/نئغ/g, "نغ");
+  car = car.replace(/(گ|ڭ|س|ز)\u2019ھ/g, "$1ھ")
+  car = car.replace(/ن\u2019غ/g, "نغ");
+  car = car.replace(/\u2019/g, "ئ"); 
   car = car.replace(/\u200cئ/g, "");
   
   car = car.replace(/\u002c/g, "\u060c"); 
