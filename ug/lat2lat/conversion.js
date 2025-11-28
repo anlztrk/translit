@@ -130,7 +130,9 @@ function cyrlat() {
     car = car.replace(/W/g, "V");
 
     car = car.replace(/(Ğ|Q|X|ğ|q|x)i/g, "$1ı");
+	car = car.replace(/(H|h|K|k)ı/g, "$1i");
     car = car.replace(/i(ğ|q|x)/g, "ı$1");
+	car = car.replace(/ı(h|k)/g, "i$1");
 	
     car = handleDotlessI(car);
     
