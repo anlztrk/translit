@@ -158,18 +158,14 @@ function cyrlat () {
    car = car.replace(/ᅫ/g, 'WAE');
    car = car.replace(/ᅬ/g, 'OE');
    car = car.replace(/ᅭ/g, 'YO');
-   car = car.replace(/ᅮ/g, 'WU');
+   car = car.replace(/ᅮ/g, 'U');
    car = car.replace(/ᅯ/g, 'WO');
    car = car.replace(/ᅰ/g, 'WE');
    car = car.replace(/ᅱ/g, 'WI');
    car = car.replace(/ᅲ/g, 'YU');
    car = car.replace(/ᅳ/g, 'EU');
    car = car.replace(/ᅴ/g, 'UI');
-   car = car.replace(/ᅵ/g, 'YI');
-   car = car.replace(/([ABDEGHIJKLMNOPRSTWYZ])WU/g, '$1U');
-   car = car.replace(/([ABDEGHIJKLMNOPRSTWYZ])YI/g, '$1I');
-   car = car.replace(/WU([ABDEGHIJKLMNOPRSTWYZ])/g, 'U$1');
-   car = car.replace(/YI([ABDEGHIJKLMNOPRSTWYZ])/g, 'I$1');
+   car = car.replace(/ᅵ/g, 'I');
 
    car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
