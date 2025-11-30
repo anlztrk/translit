@@ -1,245 +1,213 @@
+/* Cleaned Hindi(Devanagari) → Latin transliteration script
+   - Uses a deterministic mapping table
+   - Inserts a temporary schwa-marker (MARK) for the first realizable schwa,
+     then transliterates and finally replaces MARK with 'A'
+*/
+
 var car;
 
+const ZWNJ = '\u200c'; // zero-width non-joiner
+const ZWSP = '\u200b'; // zero-width space
+const MARK = ZWNJ + ZWSP; // temporary schwa marker inserted into syllable
+const REALIZED_SCHWA = 'A';
+
+// Devanagari sets (explicit, including common nukta forms)
+const VOWELS = 'अआइईउऊएऐओऔऋ';
+const MATRAS = 'ािीुूेैोौृ';
+const HALANT = '\u094d'; // virama
+
+// consonants base + nukta variants included explicitly
+const CONSONANTS = [
+  'क','ख','ग','घ','ङ',
+  'च','छ','ज','झ','ञ',
+  'ट','ठ','ड','ढ','ण',
+  'त','थ','द','ध','न',
+  'प','फ','ब','भ','म',
+  'य','र','ल','व','श','ष','स','ह','ळ'
+];
+// common nukta variants (single-char letters in Devanagari block)
+const NUKTA_FORMS = ['क़','ख़','ग़','ज़','ड़','ढ़','फ़','य़','व़','झ़']; // include variants you use
+
+// helper: escape for regex
+function reEscape(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+// Realize first valid schwa in each Devanagari word
 function realizeFirstValidSchwa(text) {
-	return text.replace(/[\u0900-\u097F]+/g, function(word) {
-		// If word starts with a standalone vowel, skip
-		if (/^[अआइईउऊएऐओऔऋ]/.test(word)) return word;
+  // Build class strings for regex
+  const vowelClass = '[' + VOWELS.split('').map(reEscape).join('') + ']';
+  const matraClass  = '[' + MATRAS.split('').map(reEscape).join('') + HALANT + ']';
+  const consonantClass = '[' + CONSONANTS.concat(NUKTA_FORMS).map(reEscape).join('') + ']';
 
-		// If the first consonant is followed by a vowel sign or halant, skip
-		if (/^[क-हक़-य़](ा|ि|ी|ु|ू|े|ै|ो|ौ|ृ|्)/.test(word)) return word;
+  return text.replace(/[\u0900-\u097F]+/g, function(word) {
+    // If word starts with a standalone vowel, skip
+    if (new RegExp('^' + vowelClass).test(word)) return word;
 
-		// Else: mark first schwa as realized
-		return word.replace(/^([क-हक़-य़])/, "$1\u200c\u200b");
-	});
+    // If the first consonant is immediately followed by a matra or halant, skip
+    if (new RegExp('^' + consonantClass + '(?:' + matraClass + ')').test(word)) return word;
+
+    // Else: insert the MARK after the first consonant to mark realized schwa
+    return word.replace(new RegExp('^(' + consonantClass + ')'), `$1${MARK}`);
+  });
 }
+
+// Programmatic mapping tables (nukta forms + regular)
+const mappingPairs = [
+  // Nukta-added consonants first (explicit)
+  ['क़','Q'], ['ख़','KH'], ['ग़','GH'], ['ज़','Z'], ['झ़','ZH'], ['फ़','F'],
+  ['ड़','R'], ['ढ़','RH'], ['य़','Y'], ['व़','W'],
+
+  // Common ligature
+  ['ज्ञ','GY'],
+
+  // Regular consonants
+  ['क','K'], ['ख','KH'], ['ग','G'], ['घ','GH'], ['ङ','N'],
+  ['च','CH'], ['छ','CHH'], ['ज','J'], ['झ','JH'], ['ञ','N'],
+  ['ट','T'], ['ठ','TH'], ['ड','D'], ['ढ','DH'], ['ण','N'],
+  ['त','T'], ['थ','TH'], ['द','D'], ['ध','DH'], ['न','N'],
+  ['प','P'], ['फ','PH'], ['ब','B'], ['भ','BH'], ['म','M'],
+  ['य','Y'], ['र','R'], ['ल','L'], ['व','W'],
+  ['श','SH'], ['ष','SH'], ['स','S'], ['ह','H'], ['ळ','L']
+];
+
+// Vowel letters (independent)
+const vowelPairs = [
+  ['अ','A'], ['आ','AA'], ['इ','I'], ['ई','EE'], ['उ','U'], ['ऊ','OO'],
+  ['ए','E'], ['ऐ','AI'], ['ओ','O'], ['औ','AU'], ['ऋ','RI']
+];
+
+// Matra signs (dependent vowels) — note these map to strings without leading marker
+const matraPairs = [
+  ['ा','AA'], ['ि','I'], ['ी','EE'], ['ु','U'], ['ू','OO'],
+  ['े','E'], ['ै','AI'], ['ो','O'], ['ौ','AU'], ['ृ','RI']
+];
+
+// Visarga
+const visargaPair = ['ः', 'H'];
+
+// Additional punctuation conversions
+const punctuationPairs = [
+  ['\u0964', '.'], // danda -> period
+  ['\u0965', '']   // double danda -> drop
+];
 
 function cyrlat() {
-	car = document.transcription.text1.value;
-	car = car.normalize('NFD');
-	car = realizeFirstValidSchwa(car);
+  // Read input
+  car = document.transcription.text1.value || '';
 
-	// protect Latin-script words
-	let latinWords = {},
-		idx = 0;
-	car = car.replace(/[A-Za-z]+/g, m => {
-		let k = `__p${idx}__`;
-		latinWords[k] = m;
-		idx++;
-		return k;
-	});
+  // Normalize to NFD to ensure diacritics are separate
+  car = car.normalize('NFD');
 
-	// Nasal handling
-	car = car.replace(/(ं|ँ)(क|ख|ग|घ|ह)/g, "\u200bN$2");
-	car = car.replace(/(ं|ँ)(त|थ|द|ध|ल|स)/g, "\u200bN$2");
-	car = car.replace(/(ं|ँ)(प|फ|ब|भ|व)/g, "\u200bM$2");
-	car = car.replace(/(ं|ँ)(?![\u093e-\u094c])/g, "\u200bN");
+  // 1) Realize first schwa in each Devanagari word by inserting MARK
+  car = realizeFirstValidSchwa(car);
 
-	// only strip out the ZWJ marker, not the script signs themselves
-	car = car.replace(/\u200c(?=\u094d)/g, "");
-	car = car.replace(/\u200c(?=[\u093e\u093f\u0940\u0941\u0942\u0947\u0948\u094b\u094c])/g, "");
+  // 2) Protect Latin-script words (and numbers) with placeholders
+  const latinWords = {};
+  let idx = 0;
+  car = car.replace(/[A-Za-z0-9]+/g, function(m){
+    const key = `__p${idx}__`;
+    latinWords[key] = m;
+    idx++;
+    return key;
+  });
 
-	// Consonant transliteration block
-	// Consonants with nukta
-	car = car.replace(/क़\u200c\u200b/g, "\u200bQ\u200c\u200b");
-	car = car.replace(/क़/g, "\u200bQ\u200c");
+  // 3) Nasal handling (including nukta forms)
+  // velars (k-series) -> nasal N
+  car = car.replace(/(ं|ँ)(क|ख|ग|घ|ङ|क़|ख़|ग़)/g, ZWSP + 'N$2');
+  // dentals/coronals -> N
+  car = car.replace(/(ं|ँ)(त|थ|द|ध|न|ट|ठ|ड|ढ|ण)/g, ZWSP + 'N$2');
+  // labials -> M
+  car = car.replace(/(ं|ँ)(प|फ|ब|भ|व|फ़)/g, ZWSP + 'M$2');
+  // fallback nasal -> N (if not followed by a matra immediately)
+  car = car.replace(/(ं|ँ)(?![\u093E-\u094C])/g, ZWSP + 'N');
 
-	car = car.replace(/ख़\u200c\u200b/g, "\u200bKH\u200c\u200b");
-	car = car.replace(/ख़/g, "\u200bKH\u200c");
+  // 4) Remove ZWNJ only when it's immediately before a halant or matra (protect consonant clusters)
+  car = car.replace(new RegExp(reEscape(ZWNJ) + '(?=' + '[' + reEscape(MATRAS) + reEscape(HALANT) + '])', 'g'), '');
 
-	car = car.replace(/ग़\u200c\u200b/g, "\u200bGH\u200c\u200b");
-	car = car.replace(/ग़/g, "\u200bGH\u200c");
+  // 5) Transliterate: perform mapping pairs in deterministic order
+  // First handle multi-character sequences (like ज्ञ), nukta forms, then single characters.
+  function replaceAllPairs(text, pairs) {
+    for (const [dev, lat] of pairs) {
+      const devEsc = reEscape(dev);
+      // two-phase replacement to preserve MARK if present:
+      //  - If dev is followed by MARK, keep MARK in output (so schwa realization remains)
+      //  - If dev followed by anything else, just replace dev
+      text = text.replace(new RegExp(devEsc + reEscape(MARK), 'g'), lat + MARK);
+      text = text.replace(new RegExp(devEsc, 'g'), lat);
+    }
+    return text;
+  }
 
-	car = car.replace(/ज़\u200c\u200b/g, "\u200bZ\u200c\u200b");
-	car = car.replace(/ज़/g, "\u200bZ\u200c");
+  // apply nukta & consonant/vowel maps
+  car = replaceAllPairs(car, mappingPairs);
+  car = replaceAllPairs(car, vowelPairs);
+  car = replaceAllPairs(car, matraPairs);
 
-	car = car.replace(/झ़\u200c\u200b/g, "\u200bZH\u200c\u200b");
-	car = car.replace(/झ़/g, "\u200bZH\u200c");
+  // visarga
+  car = car.replace(new RegExp(reEscape(visargaPair[0]), 'g'), visargaPair[1]);
 
-	car = car.replace(/फ़\u200c\u200b/g, "\u200bF\u200c\u200b");
-	car = car.replace(/फ़/g, "\u200bF\u200c");
+  // punctuation
+  for (const [dev, repl] of punctuationPairs) {
+    car = car.replace(new RegExp(reEscape(dev), 'g'), repl);
+  }
 
-	car = car.replace(/ड़\u200c\u200b/g, "\u200bR\u200c\u200b");
-	car = car.replace(/ड़/g, "\u200bR\u200c");
+  // 6) Now replace MARK with realized schwa letter 'A'
+  car = car.replace(new RegExp(reEscape(MARK), 'g'), REALIZED_SCHWA);
 
-	car = car.replace(/ढ़\u200c\u200b/g, "\u200bRH\u200c\u200b");
-	car = car.replace(/ढ़/g, "\u200bRH\u200c");
+  // 7) Remove remaining halants (virama) which should not appear in Latin output
+  car = car.replace(new RegExp(reEscape(HALANT), 'g'), '');
 
-	// Ligature: ज्ञ = GY
-	car = car.replace(/ज्ञ\u200c\u200b/g, "\u200bGY\u200c\u200b");
-	car = car.replace(/ज्ञ/g, "\u200bGY\u200c");
+  // 8) Remove any stray ZWNJ/ZWSP that may remain
+  car = car.replace(new RegExp(reEscape(ZWNJ), 'g'), '');
+  car = car.replace(new RegExp(reEscape(ZWSP), 'g'), '');
 
-	// Regular consonants
-	car = car.replace(/क\u200c\u200b/g, "\u200bK\u200c\u200b");
-	car = car.replace(/क/g, "\u200bK\u200c");
+  // 9) Normalize back to NFC
+  car = car.normalize('NFC');
 
-	car = car.replace(/ख\u200c\u200b/g, "\u200bKH\u200c\u200b");
-	car = car.replace(/ख/g, "\u200bKH\u200c");
+  // 10) Lowercase Latin sequences but preserve placeholders like __p0__
+  // Lowercase any run of Latin letters/digits while skipping placeholders
+  car = car.replace(/__p\d+__/g, function(ph){ return ph; }); // ensure placeholders intact
+  car = car.replace(/[A-Za-z][A-Za-z0-9'"\-() ,;]*/g, function(m){
+    // If it is a placeholder, keep as-is
+    if (/^__p\d+__$/.test(m)) return m;
+    return m.toLowerCase();
+  });
 
-	car = car.replace(/ग\u200c\u200b/g, "\u200bG\u200c\u200b");
-	car = car.replace(/ग/g, "\u200bG\u200c");
+  // 11) Restore Latin placeholders
+  for (let k in latinWords) {
+    car = car.replace(new RegExp(reEscape(k), 'g'), latinWords[k]);
+  }
 
-	car = car.replace(/घ\u200c\u200b/g, "\u200bGH\u200c\u200b");
-	car = car.replace(/घ/g, "\u200bGH\u200c");
-
-	car = car.replace(/ङ\u200c\u200b/g, "\u200bN\u200c\u200b");
-	car = car.replace(/ङ/g, "\u200bN\u200c");
-
-	car = car.replace(/च\u200c\u200b/g, "\u200bCH\u200c\u200b");
-	car = car.replace(/च/g, "\u200bCH\u200c");
-
-	car = car.replace(/छ\u200c\u200b/g, "\u200bCHH\u200c\u200b");
-	car = car.replace(/छ/g, "\u200bCHH\u200c");
-
-	car = car.replace(/ज\u200c\u200b/g, "\u200bJ\u200c\u200b");
-	car = car.replace(/ज/g, "\u200bJ\u200c");
-
-	car = car.replace(/झ\u200c\u200b/g, "\u200bJH\u200c\u200b");
-	car = car.replace(/झ/g, "\u200bJH\u200c");
-
-	car = car.replace(/ञ\u200c\u200b/g, "\u200bN\u200c\u200b");
-	car = car.replace(/ञ/g, "\u200bN\u200c");
-
-	car = car.replace(/ट\u200c\u200b/g, "\u200bT\u200c\u200b");
-	car = car.replace(/ट/g, "\u200bT\u200c");
-
-	car = car.replace(/ठ\u200c\u200b/g, "\u200bTH\u200c\u200b");
-	car = car.replace(/ठ/g, "\u200bTH\u200c");
-
-	car = car.replace(/ड\u200c\u200b/g, "\u200bD\u200c\u200b");
-	car = car.replace(/ड/g, "\u200bD\u200c");
-
-	car = car.replace(/ढ\u200c\u200b/g, "\u200bDH\u200c\u200b");
-	car = car.replace(/ढ/g, "\u200bDH\u200c");
-
-	car = car.replace(/ण\u200c\u200b/g, "\u200bN\u200c\u200b");
-	car = car.replace(/ण/g, "\u200bN\u200c");
-
-	car = car.replace(/त\u200c\u200b/g, "\u200bT\u200c\u200b");
-	car = car.replace(/त/g, "\u200bT\u200c");
-
-	car = car.replace(/थ\u200c\u200b/g, "\u200bTH\u200c\u200b");
-	car = car.replace(/थ/g, "\u200bTH\u200c");
-
-	car = car.replace(/द\u200c\u200b/g, "\u200bD\u200c\u200b");
-	car = car.replace(/द/g, "\u200bD\u200c");
-
-	car = car.replace(/ध\u200c\u200b/g, "\u200bDH\u200c\u200b");
-	car = car.replace(/ध/g, "\u200bDH\u200c");
-
-	car = car.replace(/न\u200c\u200b/g, "\u200bN\u200c\u200b");
-	car = car.replace(/न/g, "\u200bN\u200c");
-
-	car = car.replace(/प\u200c\u200b/g, "\u200bP\u200c\u200b");
-	car = car.replace(/प/g, "\u200bP\u200c");
-
-	car = car.replace(/फ\u200c\u200b/g, "\u200bPH\u200c\u200b");
-	car = car.replace(/फ/g, "\u200bPH\u200c");
-
-	car = car.replace(/ब\u200c\u200b/g, "\u200bB\u200c\u200b");
-	car = car.replace(/ब/g, "\u200bB\u200c");
-
-	car = car.replace(/भ\u200c\u200b/g, "\u200bBH\u200c\u200b");
-	car = car.replace(/भ/g, "\u200bBH\u200c");
-
-	car = car.replace(/म\u200c\u200b/g, "\u200bM\u200c\u200b");
-	car = car.replace(/म/g, "\u200bM\u200c");
-
-	car = car.replace(/य\u200c\u200b/g, "\u200bY\u200c\u200b");
-	car = car.replace(/य/g, "\u200bY\u200c");
-
-	car = car.replace(/र\u200c\u200b/g, "\u200bR\u200c\u200b");
-	car = car.replace(/र/g, "\u200bR\u200c");
-
-	car = car.replace(/ल\u200c\u200b/g, "\u200bL\u200c\u200b");
-	car = car.replace(/ल/g, "\u200bL\u200c");
-
-	car = car.replace(/व\u200c\u200b/g, "\u200bW\u200c\u200b");
-	car = car.replace(/व/g, "\u200bW\u200c");
-
-	car = car.replace(/श\u200c\u200b/g, "\u200bSH\u200c\u200b");
-	car = car.replace(/श/g, "\u200bSH\u200c");
-
-	car = car.replace(/ष\u200c\u200b/g, "\u200bSH\u200c\u200b");
-	car = car.replace(/ष/g, "\u200bSH\u200c");
-
-	car = car.replace(/स\u200c\u200b/g, "\u200bS\u200c\u200b");
-	car = car.replace(/स/g, "\u200bS\u200c");
-
-	car = car.replace(/ह\u200c\u200b/g, "\u200bH\u200c\u200b");
-	car = car.replace(/ह/g, "\u200bH\u200c");
-
-	car = car.replace(/ळ\u200c\u200b/g, "\u200bL\u200c\u200b");
-	car = car.replace(/ळ/g, "\u200bL\u200c");
-
-	car = car.replace(/व़\u200c\u200b/g, "\u200bW\u200c\u200b");
-	car = car.replace(/व़/g, "\u200bW\u200c");
-
-	// Vowel transliteration
-	car = car.replace(/अ/g, "\u200bA");
-	car = car.replace(/आ/g, "\u200bAA");
-	car = car.replace(/इ/g, "\u200bI");
-	car = car.replace(/ई/g, "\u200bEE");
-	car = car.replace(/उ/g, "\u200bU");
-	car = car.replace(/ऊ/g, "\u200bOO");
-	car = car.replace(/ए/g, "\u200bE");
-	car = car.replace(/ऐ/g, "\u200bAI");
-	car = car.replace(/ओ/g, "\u200bO");
-	car = car.replace(/औ/g, "\u200bAU");
-	car = car.replace(/ऋ/g, "\u200bRI");
-
-	// Matras (handled after schwa stripping)
-	car = car.replace(/ि/g, "I");
-	car = car.replace(/ु/g, "U");
-	car = car.replace(/ृ/g, "RI");
-	car = car.replace(/े/g, "E");
-	car = car.replace(/ो/g, "O");
-	car = car.replace(/ा/g, "AA");
-	car = car.replace(/ी/g, "EE");
-	car = car.replace(/ू/g, "OO");
-	car = car.replace(/ै/g, "AI");
-	car = car.replace(/ौ/g, "AU");
-
-	// Visarga
-	car = car.replace(/ः/g, "\u200bH");
-
-	// Optional cluster-breaking step would go here
-
-	// Realize and remove schwas
-	car = car.replace(/\u200c\u200b/g, "A");
-	car = car.replace(/\u200c/g, "");
-	car = car.replace(/\u200b/g, "");
-
-	// punctuation / normalize
-	// 1) Strip out any leftover virama (halant) characters:
-	car = car.replace(/\u094d/g, "");
-
-	// 2) Convert danda (।) to period, drop double-danda (॥):
-	car = car.replace(/\u0964/g, ".")
-		.replace(/\u0965/g, "");
-
-	// 3) Then normalize and restore Latin placeholders as before:
-	car = car.normalize('NFC');
-
-	// lowercase rest (cross-browser):
-	car = car.replace(
-		/([\w]|__placeholder\d+__)([A-Za-z0-9\t ,;\-\u2010\u201c\u201d\u2018\u2019'"()]+)/g,
-		(_, first, rest) => first + rest.toLowerCase()
-	);
-
-	// restore Latin
-	for (let k in latinWords) car = car.replace(k, latinWords[k]);
-
-	document.transcription.text2.value = car;
+  // Output
+  document.transcription.text2.value = car;
 }
 
+// Modern copy functions (navigator.clipboard) with fallback
 function copy1() {
-	textRange = document.transcription.text1.createTextRange();
-	textRange.execCommand("Copy");
-	textRange = "";
+  const text = document.transcription.text1.value || '';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).catch(()=> { fallbackCopy(text); });
+  } else {
+    fallbackCopy(text);
+  }
 }
-
 function copy2() {
-	textRange = document.transcription.text2.createTextRange();
-	textRange.execCommand("Copy");
-	textRange = "";
+  const text = document.transcription.text2.value || '';
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).catch(()=> { fallbackCopy(text); });
+  } else {
+    fallbackCopy(text);
+  }
+}
+function fallbackCopy(text) {
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed'; ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  } catch (e) {
+    console.warn('Copy failed', e);
+  }
 }
