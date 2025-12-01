@@ -1,72 +1,101 @@
-var car; 
-function cyrlat () { 
-  car = document.transcription.text1.value;
-  
-  let latinWords = {};
-   let index = 0;
-   car = car.replace(/\p{sc=Latin}+/ug, function(match) {
-     let key = `__placeholder${index}__`;
-     latinWords[key] = match;
-     index++;
-     return key;
-  });
+var car;
 
-  car = car.replace(/(ا|ە|ێ|ۆ)و/g, "$1W");
-  car = car.replace(/(ا|ە|ێ|ۆ)ی/g, "$1Y");
-  car = car.replace(/و(ا|ە|ێ|ۆ)/g, "W$1");
-  car = car.replace(/ی(ا|ە|ێ|ۆ)/g, "Y$1");
+function cyrlat() {
+	car = document.transcription.text1.value;
 
-  car = car.replace(/یی(ب|ج|چ|د|ف|گ|غ|ھ|ژ|ک|ك|ل|ڵ|م|ن|پ|ق|ر|ڕ|س|ش|ت|خ|ز|ئ|ع)/g, "یY$1");
-  
-  car = car.replace(/وو/g, "Û");
-  car = car.replace(/ا/g, "A"); 
-  car = car.replace(/ە/g, "E"); 
-  car = car.replace(/ێ/g, "Ê"); 
-  car = car.replace(/ی/g, "Î"); 
-  car = car.replace(/ۆ/g, "O"); 
-  car = car.replace(/و/g, "U");   
+	let latinWords = {};
+	let index = 0;
+	car = car.replace(/\p{sc=Latin}+/ug, function(match) {
+		let key = `__placeholder${index}__`;
+		latinWords[key] = match;
+		index++;
+		return key;
+	});
 
-  car = car.replace(/ب/g, "B"); 
-  car = car.replace(/ج/g, "C"); 
-  car = car.replace(/چ/g, "Ç"); 
-  car = car.replace(/د/g, "D"); 
-  car = car.replace(/ف/g, "F"); 
-  car = car.replace(/گ/g, "G"); 
-  car = car.replace(/غ/g, "X"); 
-  car = car.replace(/ھ/g, "H"); 
-  car = car.replace(/ژ/g, "J"); 
-  car = car.replace(/ک|ك/g, "K"); 
-  car = car.replace(/ل/g, "L"); 
-  car = car.replace(/ڵ/g, "L");
-  car = car.replace(/م/g, "M"); 
-  car = car.replace(/ن/g, "N");
-  car = car.replace(/پ/g, "P"); 
-  car = car.replace(/ق/g, "Q"); 
-  car = car.replace(/ر/g, "R"); 
-  car = car.replace(/ڕ/g, "R"); 
-  car = car.replace(/س/g, "S"); 
-  car = car.replace(/ش/g, "Ş"); 
-  car = car.replace(/ت/g, "T"); 
-  car = car.replace(/خ/g, "X"); 
-  car = car.replace(/ز/g, "Z"); 
-  
-  car = car.replace(/ئ/g, "");
-  car = car.replace(/ع/g, "");
+    car = car.replace(/\u200c/g, "");
+	car = car.replace(/ي/g, "ی");
 
-  car = car.replace(/\u060c/g, "\u002c"); 
-  car = car.replace(/\u061f/g, "\u003f"); 
-  car = car.replace(/\u061b/g, "\u003b");
-  car = car.replace(/\u06d4/g, "\u002e"); 
-  car = car.replace(/\u0640/g, "");
+	car = car.replace(/ووی/g, "ÛY");
 
-  car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019\u00ab\u00bb\u2039\u203a'"()]+)/gu, function(_, first, second) {
-    return first + second.toLowerCase();
-});
+	car = car.replace(/([اەێۆ])وو/g, "$1WÛ");
+	car = car.replace(/([اەێۆ])و/g, "$1W");
+	car = car.replace(/([اەێۆو])یی/g, "$1YÎ");
+	car = car.replace(/([اەێۆو])ی/g, "$1Y");
+	car = car.replace(/وو([اەێۆ])/g, "ÛW$1");
+	car = car.replace(/و([اەێۆ])/g, "W$1");
+	car = car.replace(/یی([اەێۆو])/g, "ÎY$1");
+	car = car.replace(/ی([اەێۆو])/g, "Y$1");
 
-   Object.keys(latinWords).forEach(key => {
-     car = car.replace(key, latinWords[key]);
-});
-document.transcription.text2.value=car; 
+	car = car.replace(/یی([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])/g, "یY$1");
+	car = car.replace(/([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])یی/g, "$1یY");
+
+	car = car.replace(/وو/g, "Û");
+	car = car.replace(/ا/g, "A");
+	car = car.replace(/ە/g, "E");
+	car = car.replace(/ێ/g, "Ê");
+	car = car.replace(/ی/g, "Î");
+	car = car.replace(/ۆ/g, "O");
+	car = car.replace(/و/g, "U");
+
+	car = car.replace(/ب/g, "B");
+	car = car.replace(/ج/g, "C");
+	car = car.replace(/چ/g, "Ç");
+	car = car.replace(/د/g, "D");
+	car = car.replace(/ف/g, "F");
+	car = car.replace(/گ/g, "G");
+	car = car.replace(/غ/g, "X");
+	car = car.replace(/ھ|ه/g, "H");
+	car = car.replace(/ح/g, "H");
+	car = car.replace(/ژ/g, "J");
+	car = car.replace(/ک|ك/g, "K");
+	car = car.replace(/ل/g, "L");
+	car = car.replace(/ڵ/g, "L");
+	car = car.replace(/م/g, "M");
+	car = car.replace(/ن/g, "N");
+	car = car.replace(/پ/g, "P");
+	car = car.replace(/ق/g, "Q");
+	car = car.replace(/ر/g, "R");
+	car = car.replace(/ڕ/g, "R");
+	car = car.replace(/س/g, "S");
+	car = car.replace(/ش/g, "Ş");
+	car = car.replace(/ت/g, "T");
+	car = car.replace(/خ/g, "X");
+	car = car.replace(/ڤ/g, "V");
+	car = car.replace(/ز/g, "Z");
+
+	car = car.replace(/ئ/g, "");
+	car = car.replace(/ع/g, "");
+
+	car = car.replace(/\u060c/g, "\u002c");
+	car = car.replace(/\u061f/g, "\u003f");
+	car = car.replace(/\u061b/g, "\u003b");
+	car = car.replace(/\u06d4/g, "\u002e");
+	car = car.replace(/\u0640/g, "");
+	
+	car = car.replace(/([AEÊIÎOUÛ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1$2$3I$4");
+	car = car.replace(/([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1I$2$3");
+	car = car.replace(/(?<![AEÊIÎOUÛ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1I$2");
+	car = car.replace(/XIW/g, "XW");
+	
+	car = car.replace(/٠/g, "0");
+	car = car.replace(/١/g, "1");
+	car = car.replace(/٢/g, "2");
+	car = car.replace(/٣/g, "3");
+	car = car.replace(/٤|۴|۴/g, "4");
+	car = car.replace(/٥|۵/g, "5");
+	car = car.replace(/٦|۶|۶/g, "6");
+	car = car.replace(/٧|۷/g, "7");
+	car = car.replace(/٨/g, "8");
+	car = car.replace(/٩/g, "9");	
+	
+	car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019\u00ab\u00bb\u2039\u203a'"()]+)/gu, function(_, first, second) {
+		return first + second.toLowerCase();
+	});
+
+	Object.keys(latinWords).forEach(key => {
+		car = car.replace(key, latinWords[key]);
+	});
+	document.transcription.text2.value = car;
 }
 /*
 function latcyr () { 
@@ -126,9 +155,14 @@ function latcyr () {
   car = car.replace(/\u002e/g, "\u06d4");
 document.transcription.text1.value=car; 
 } */
-function copy1()
-{ textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
+function copy1() {
+	textRange = document.transcription.text1.createTextRange();
+	textRange.execCommand("Copy");
+	textRange = "";
 }
-function copy2()
-{ textRange=document.transcription.text2.createTextRange();   textRange.execCommand("Copy");   textRange="";
+
+function copy2() {
+	textRange = document.transcription.text2.createTextRange();
+	textRange.execCommand("Copy");
+	textRange = "";
 }
