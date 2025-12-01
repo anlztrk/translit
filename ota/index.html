@@ -1,8 +1,8 @@
-﻿<!doctype html>
+!doctype html>
 <html> 
 <head> 
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
-<title>Uyghur Arabic - Latin converter</title><script type="text/javascript" src="conversion.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
+<title>Ottoman Turkish alphabet - Latin converter</title><script type="text/javascript" src="conversion.js"></script>
 		<style type="text/css"> 
 		@font-face {
 			font-family: 'GB-Plus';
@@ -12,21 +12,24 @@
 			unicode-range: U+000-10FFFF;
 		}
 		textarea {
-			font-family: 'Noto Naskh Arabic', Spectral, Cambria, 'Times New Roman', serif;
+			font-family: 'Gentium Book Plus', 'GB-Plus', 'Liberation Serif', Tinos, Cambria, 'Times New Roman', serif;
 			font-size: 15px;
 			width: 500px;
 			height: 300px;
 		}
+		.Arabic {
+			font-family: 'Noto Naskh Arabic', Spectral, Cambria, 'Times New Roman', serif;
+		}
 		</style>
 </head> 
 <body> 
-	<h1>Uyghur Arabic - Latin converter</h1> 
+	<h1>Ottoman Turkish alphabet - Latin converter</h1> 
 
 <div align="center"> Type or copy a text:<br> 
   <form name=transcription> 
 	<table width=90%><tr align=center> 
-		<td> in Uyghur Arabic alphabet: <br> 
-	<textarea name="text1" onKeyUp="cyrlat()" dir="rtl"></textarea> 
+		<td> in Ottoman Turkish alphabet: <br> 
+	<textarea class="Arabic" name="text1" onKeyUp="cyrlat()" dir="rtl"></textarea> 
 		  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
