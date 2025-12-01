@@ -75,7 +75,14 @@ function cyrlat() {
 	car = car.replace(/([AEÊIÎOUÛ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1$2$3I$4");
 	car = car.replace(/([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1I$2$3");
 	car = car.replace(/(?<![AEÊIÎOUÛ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1I$2");
-	car = car.replace(/XIW/g, "XW");
+	car = car.replace(/([FHJSŞVXZ])([CÇYWFHJSŞVXZ])(?![AEÊIÎOUÛ])/g, "$1I$2");
+	car = car.replace(/([BDGKPQT])([FHJSŞVXZCÇYWBDGKPQT])(?![AEÊIÎOUÛ])/g, "$1I$2");
+	car = car.replace(/([CÇ])([FHJSŞVXZMNRLYWCÇ])(?![AEÊIÎOUÛ])/g, "$1I$2");
+	car = car.replace(/([MN])([RLYWMN])(?![AEÊIÎOUÛ])/g, "$1I$2");
+	car = car.replace(/R([LYWR])(?![AEÊIÎOUÛ])/g, "RI$1");
+	car = car.replace(/L([FHJSŞVXZCÇRYWL])(?![AEÊIÎOUÛ])/g, "LI$1");
+	car = car.replace(/([YW])([CÇLYW])(?![AEÊIÎOUÛ])/g, "$1I$2");
+	car = car.replace(/XIW/g, "XW");	
 	
 	car = car.replace(/٠/g, "0");
 	car = car.replace(/١/g, "1");
