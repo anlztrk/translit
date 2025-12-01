@@ -75,7 +75,7 @@ document.transcription.text2.value=car;
 }
 
 function acuteFix (car) {
-	car = document.transcription.text1.value;
+	car = document.transcription.text2.value;
 	car = car.replace(/É/g, "Ë")
 	         .replace(/é/g, "ë");
 	return car;
