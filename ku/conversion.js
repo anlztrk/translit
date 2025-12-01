@@ -12,19 +12,20 @@ function cyrlat() {
 		return key;
 	});
 
-    car = car.replace(/\u200c/g, "");
+	car = car.replace(/\u200c/g, "");
 	car = car.replace(/ي/g, "ی");
 
 	car = car.replace(/ووی/g, "ÛY");
 
-	car = car.replace(/([اەێۆ])وو/g, "$1WÛ");
-	car = car.replace(/([اەێۆ])و/g, "$1W");
-	car = car.replace(/([اەێۆو])یی/g, "$1YÎ");
-	car = car.replace(/([اەێۆو])ی/g, "$1Y");
-	car = car.replace(/وو([اەێۆ])/g, "ÛW$1");
-	car = car.replace(/و([اەێۆ])/g, "W$1");
+	car = car.replace(/وو([اەێۆی])/g, "ÛW$1");
+	car = car.replace(/و([اەێۆی])/g, "W$1");
 	car = car.replace(/یی([اەێۆو])/g, "ÎY$1");
 	car = car.replace(/ی([اەێۆو])/g, "Y$1");
+	car = car.replace(/([اەێۆی])وو/g, "$1WÛ");
+	car = car.replace(/([اەێۆی])و/g, "$1W");
+	car = car.replace(/([اەێۆو])یی/g, "$1YÎ");
+	car = car.replace(/([اەێۆو])ی/g, "$1Y");
+
 
 	car = car.replace(/یی([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])/g, "یY$1");
 	car = car.replace(/([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])یی/g, "$1یY");
@@ -71,19 +72,19 @@ function cyrlat() {
 	car = car.replace(/\u061b/g, "\u003b");
 	car = car.replace(/\u06d4/g, "\u002e");
 	car = car.replace(/\u0640/g, "");
-	
+
 	car = car.replace(/([AEÊIÎOUÛ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1$2$3I$4");
 	car = car.replace(/([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1I$2$3");
 	car = car.replace(/(?<![AEÊIÎOUÛ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1I$2");
 	car = car.replace(/([FHJSŞVXZ])([CÇYWFHJSŞVXZ])(?![AEÊIÎOUÛ])/g, "$1I$2");
-	car = car.replace(/([BDGKPQT])([FHJSŞVXZCÇYWBDGKPQT])(?![AEÊIÎOUÛ])/g, "$1I$2");
+	car = car.replace(/([BDGKPQT])([FHJSŞVXZCÇYWBDGKPQTMN])(?![AEÊIÎOUÛ])/g, "$1I$2");
 	car = car.replace(/([CÇ])([FHJSŞVXZMNRLYWCÇ])(?![AEÊIÎOUÛ])/g, "$1I$2");
 	car = car.replace(/([MN])([RLYWMN])(?![AEÊIÎOUÛ])/g, "$1I$2");
 	car = car.replace(/R([LYWR])(?![AEÊIÎOUÛ])/g, "RI$1");
 	car = car.replace(/L([FHJSŞVXZCÇRYWL])(?![AEÊIÎOUÛ])/g, "LI$1");
 	car = car.replace(/([YW])([CÇLYW])(?![AEÊIÎOUÛ])/g, "$1I$2");
-	car = car.replace(/XIW/g, "XW");	
-	
+	car = car.replace(/XIW/g, "XW");
+
 	car = car.replace(/٠/g, "0");
 	car = car.replace(/١/g, "1");
 	car = car.replace(/٢/g, "2");
@@ -93,8 +94,8 @@ function cyrlat() {
 	car = car.replace(/٦|۶|۶/g, "6");
 	car = car.replace(/٧|۷/g, "7");
 	car = car.replace(/٨/g, "8");
-	car = car.replace(/٩/g, "9");	
-	
+	car = car.replace(/٩/g, "9");
+
 	car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019\u00ab\u00bb\u2039\u203a'"()]+)/gu, function(_, first, second) {
 		return first + second.toLowerCase();
 	});
