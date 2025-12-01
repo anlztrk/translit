@@ -74,10 +74,16 @@ function cyrlat () {
 document.transcription.text2.value=car; 
 }
 
+function acuteFix (car) {
+	car = document.transcription.text1.value;
+	car = car.replace(/É/g, "Ë")
+	         .replace(/é/g, "ë");
+	return car;
+}
+
 function latcyr () { 
+  document.transcription.text2.value = acuteFix(document.transcription.text2.value);
   car = document.transcription.text2.value;
-  car = car.replace(/É/g, "Ë");
-  car = car.replace(/é/g, "ë");
   car = car.replace(/\u00b4/g, "\u2019"); 
   car = car.replace(/\u02bc/g, "\u2019"); 
   car = car.replace(/\u0027/g, "\u2019");
