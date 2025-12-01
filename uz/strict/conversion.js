@@ -116,6 +116,8 @@ document.transcription.text2.value = car;
 }
 
 function latcyr () {
+document.transcription.text2.value = document.transcription.text2.value.replace(/['ˈ’‘ʻʼ´`ʿʹˊ׳′ʽߵ՚ߴ᾿ՙ῾‛ʾ՛ˋ]/g, "ʼ")
+                                                                       .replace(/([OoGg])ʼ/g, "$1ʻ");
 car = document.transcription.text2.value;
  car = car.replace(/(\u0027|\u2018|\u2019|\u02bb|\u02bc|\u00b4|\u0060)/g, "ъ");
  car = car.replace(/a/g, "а");
