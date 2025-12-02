@@ -17,6 +17,8 @@ function cyrlat() {
 
 	car = car.replace(/ووی/g, "ÛY");
 
+	car = car.replace(/([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])ی([اەێۆو])/g, "$1ÎY$2");
+	
 	car = car.replace(/وو([اەێۆی])/g, "ÛW$1");
 	car = car.replace(/و([اەێۆی])/g, "W$1");
 	car = car.replace(/یی([اەێۆو])/g, "ÎY$1");
@@ -26,7 +28,6 @@ function cyrlat() {
 	car = car.replace(/([اەێۆو])ییی/g, "$1ÎYی");
 	car = car.replace(/([اەێۆو])یی/g, "$1Yی");
 	car = car.replace(/([اەێۆو])ی/g, "$1Y");
-
 
 	car = car.replace(/یی([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])/g, "YÎ$1");
 	car = car.replace(/([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])یی/g, "$1یYی");
