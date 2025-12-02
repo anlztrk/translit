@@ -55,7 +55,7 @@ function cyrlat() {
 	car = car.replace(/\u061b/g, "\u003b");
 	car = car.replace(/\u06d4/g, "\u002e");
 	car = car.replace(/\u0640/g, "");
-
+	
 	car = car.replace(/UU/g, "Û");
 	car = car.replace(/Û([AEÊÎO])/g, "ÛW$1");
 	car = car.replace(/U([AEÊÎO])/g, "W$1");
@@ -64,7 +64,7 @@ function cyrlat() {
 	car = car.replace(/([AEÊÎO])Û/g, "$1WÛ");
 	car = car.replace(/([AEÊÎO])U/g, "$1W");
 	car = car.replace(/([AEÊOU])ÎÎ(?![ABCÇDEÊFGHIÎJKLMNOPQRSŞTUÛVWXYZ])/g, "$1Y");
-	car = car.replace(/([AEÊOU])Î(?![AEÊÎO])/g, "$1YÎ");
+	car = car.replace(/([AEÊOU])Î(?![ABCÇDEÊFGHIÎJKLMNOPQRSŞTUÛVWXYZ])/g, "$1YÎ");
 	car = car.replace(/([AEÊOU])Î/g, "$1Y");
 	car = car.replace(/ÎÎ/g, "ÎYÎ");
 
