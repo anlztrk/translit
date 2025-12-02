@@ -1,6 +1,9 @@
 var car;
 
 function cyrlat() {
+	document.transcription.text1.value = document.transcription.text1.value.replace(/([اەێیۆوبجچدفگغھحژکكلڵمنپقرڕسشتخڤزئع])ه/g, "$1ە")
+																		   .replace(/ه/g, "ە")
+																		   .replace(/ك/g, "ک");
 	car = document.transcription.text1.value;
 	let latinWords = {};
 	let index = 0;
@@ -13,6 +16,8 @@ function cyrlat() {
 
 	car = car.replace(/\u200c/g, "");
 	car = car.replace(/ي/g, "ی");
+	car = car.replace(/([اەێیۆوبجچدفگغھحژکكلڵمنپقرڕسشتخڤزئع])ه/g, "$1ە");
+	car = car.replace(/ه/g, "ە");
 
 	car = car.replace(/ا/g, "A");
 	car = car.replace(/ە/g, "E");
@@ -28,7 +33,7 @@ function cyrlat() {
 	car = car.replace(/ف/g, "F");
 	car = car.replace(/گ/g, "G");
 	car = car.replace(/غ/g, "X");
-	car = car.replace(/ھ|ه/g, "H");
+	car = car.replace(/ھ/g, "H");
 	car = car.replace(/ح/g, "H");
 	car = car.replace(/ژ/g, "J");
 	car = car.replace(/ک|ك/g, "K");
@@ -59,14 +64,12 @@ function cyrlat() {
 	car = car.replace(/UU/g, "Û");
 	car = car.replace(/Û([AEÊÎO])/g, "ÛW$1");
 	car = car.replace(/U([AEÊÎO])/g, "W$1");
-	car = car.replace(/ÎÎ([AEÊOU])/g, "ÎY$1");
 	car = car.replace(/Î([AEÊOU])/g, "Y$1");
 	car = car.replace(/([AEÊÎO])Û/g, "$1WÛ");
 	car = car.replace(/([AEÊÎO])U/g, "$1W");
-	car = car.replace(/([AEÊOU])ÎÎ(?![ABCÇDEÊFGHIÎJKLMNOPQRSŞTUÛVWXYZ])/g, "$1Y");
-	car = car.replace(/([AEÊOU])Î(?![ABCÇDEÊFGHIÎJKLMNOPQRSŞTUÛVWXYZ])/g, "$1YÎ");
 	car = car.replace(/([AEÊOU])Î/g, "$1Y");
-	car = car.replace(/ÎÎ/g, "ÎYÎ");
+    car = car.replace(/([BCÇDFGHJKLMNPQRSŞTVWXZ])ÎÎ/g, "$1ÎY");
+	car = car.replace(/ÎÎ/g, "YÎ");
 
 	car = car.replace(/([AEÊIÎOUÛ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1$2$3I$4");
 	car = car.replace(/([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])([BCÇDFGHJKLMNPQRSŞTVWXYZ])/g, "$1I$2$3");
