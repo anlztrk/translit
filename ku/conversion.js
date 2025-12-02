@@ -21,14 +21,14 @@ function cyrlat() {
 	car = car.replace(/و([اەێۆی])/g, "W$1");
 	car = car.replace(/یی([اەێۆو])/g, "ÎY$1");
 	car = car.replace(/ی([اەێۆو])/g, "Y$1");
-	car = car.replace(/([اەێۆی])وو/g, "$1WÛ");
+	car = car.replace(/([اەێۆی])وو/g, "$1Wوو");
 	car = car.replace(/([اەێۆی])و/g, "$1W");
-	car = car.replace(/([اەێۆو])یی/g, "$1YÎ");
+	car = car.replace(/([اەێۆو])یی/g, "$1Yی");
 	car = car.replace(/([اەێۆو])ی/g, "$1Y");
 
 
-	car = car.replace(/یی([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])/g, "یY$1");
-	car = car.replace(/([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])یی/g, "$1یY");
+	car = car.replace(/یی([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])/g, "YÎ$1");
+	car = car.replace(/([بجچدفگغھژکكلڵمنپقرڕسشتخزئع])یی/g, "$1Yی");
 
 	car = car.replace(/وو/g, "Û");
 	car = car.replace(/ا/g, "A");
@@ -103,6 +103,7 @@ function cyrlat() {
 	Object.keys(latinWords).forEach(key => {
 		car = car.replace(key, latinWords[key]);
 	});
+	car = car.normalize('NFC');
 	document.transcription.text2.value = car;
 }
 /*
