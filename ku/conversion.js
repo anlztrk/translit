@@ -23,6 +23,7 @@ function cyrlat() {
 	car = car.replace(/ی([اەێۆو])/g, "Y$1");
 	car = car.replace(/([اەێۆی])وو/g, "$1Wوو");
 	car = car.replace(/([اەێۆی])و/g, "$1W");
+	car = car.replace(/([اەێۆو])ییی/g, "$1ÎYی");
 	car = car.replace(/([اەێۆو])یی/g, "$1Yی");
 	car = car.replace(/([اەێۆو])ی/g, "$1Y");
 
