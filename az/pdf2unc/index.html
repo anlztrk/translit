@@ -62,14 +62,19 @@
 function syncScroll(e) {
     const t1 = document.getElementsByName("text1")[0];
     const t2 = document.getElementsByName("text2")[0];
-    
+
     const source = e.target;
-    const top = source.scrollTop;
 
-    if (t1 !== source) t1.scrollTop = top;
-    if (t2 !== source) t2.scrollTop = top;
+    // Scroll percentage of source
+    const percent = source.scrollTop / (source.scrollHeight - source.clientHeight);
+
+    // Apply to other textarea
+    [t1, t2].forEach(t => {
+        if (t !== source) {
+            t.scrollTop = percent * (t.scrollHeight - t.clientHeight);
+        }
+    });
 }
-
 window.addEventListener("DOMContentLoaded", function() {
     const t1 = document.getElementsByName("text1")[0];
     const t2 = document.getElementsByName("text2")[0];
