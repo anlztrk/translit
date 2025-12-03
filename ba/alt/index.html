@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html> 
 <head> 
 <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
@@ -27,20 +27,20 @@
   <form name=transcription> 
 	<table width=90%><tr align=center> 
 		<td> in Bashkir Cyrillic alphabet: <br> 
-	<textarea name="text1" style="resize: none;" onKeyUp="cyrlat()"></textarea> 
+	<textarea name="text1" style="resize: none;" onKeyUp"="cyrlat()"></textarea> 
 		  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
 	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
 		</td> 
 		<td> here you get it in Latin alphabet:<br> 
-	<textarea name="text2" style="resize: none;" onKeyUp="latcyr()"></textarea> 
+	<textarea name="text2" style="resize: none;" onKeyUp"="latcyr()"></textarea> 
 			  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
 	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
-	</td></tr></table> 
-	<script>
+	</td></tr></table>
+<script>
 // Sync scroll positions of both textareas
 function syncScroll(e) {
     const t1 = document.getElementsByName("text1")[0];
@@ -58,6 +58,7 @@ function syncScroll(e) {
         }
     });
 }
+
 window.addEventListener("DOMContentLoaded", function() {
     const t1 = document.getElementsByName("text1")[0];
     const t2 = document.getElementsByName("text2")[0];
@@ -69,3 +70,4 @@ window.addEventListener("DOMContentLoaded", function() {
 </form>
 </body> 
 </html> 
+
