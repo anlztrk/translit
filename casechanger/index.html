@@ -26,19 +26,40 @@
   <form name=transcription> 
 	<table width=90%><tr align=center> 
 		<td> in lowercase: <br> 
-	<textarea name="text1" onKeyUp="cyrlat()"></textarea> 
+	<textarea name="text1" style="resize: none;" onKeyUp="cyrlat()"></textarea> 
 		  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
 	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf> 
 		</td> 
 		<td> here you get it in uppercase:<br> 
-	<textarea name="text2" onKeyUp="latcyr()"></textarea> 
+	<textarea name="text2" style="resize: none;" onKeyUp="latcyr()"></textarea> 
 			  <br> 
 		  <br> 
 	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
 	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf> 
 	</td></tr></table> 
+	<script>
+// Sync scroll positions of both textareas
+function syncScroll(e) {
+    const t1 = document.getElementsByName("text1")[0];
+    const t2 = document.getElementsByName("text2")[0];
+    
+    const source = e.target;
+    const top = source.scrollTop;
+
+    if (t1 !== source) t1.scrollTop = top;
+    if (t2 !== source) t2.scrollTop = top;
+}
+
+window.addEventListener("DOMContentLoaded", function() {
+    const t1 = document.getElementsByName("text1")[0];
+    const t2 = document.getElementsByName("text2")[0];
+
+    t1.addEventListener("scroll", syncScroll);
+    t2.addEventListener("scroll", syncScroll);
+});
+</script>
 </form> 
 </body> 
 </html> 
