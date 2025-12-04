@@ -1,5 +1,61 @@
 var car;
 
+function handleDotlessI(text) {
+	const consonants = "BCÇDFGHJKLMNÑPQRSŞTVXYZbcçdfghjklmnñpqrsştvxyz";
+	const backVowels = "AOUaouı";
+	const frontVowels = "ÄEİÖÜäeöü";
+	const vowels = backVowels + frontVowels + "Ii"; // Combine all vowels for easy checking
+
+	function getVowelType(char) {
+		if (backVowels.includes(char)) return 'back';
+		if (frontVowels.includes(char)) return 'front';
+		return 'uncertain';
+	}
+
+	function findNextVowelWithKnownBackness(index, text) {
+		// Search forward
+		for (let i = index + 1; i < text.length; i++) {
+			const type = getVowelType(text[i]);
+			if (type !== 'uncertain') {
+				return type;
+			}
+		}
+		// Search backward if no forward match
+		for (let i = index - 1; i >= 0; i--) {
+			const type = getVowelType(text[i]);
+			if (type !== 'uncertain') {
+				return type;
+			}
+		}
+		return null; // No known vowel type found
+	}
+
+	function transformWord(word) {
+		let modifiedWord = word.split('');
+		let lastKnownVowelBackness = null;
+
+		// Start from the end of the word, find the last 'I' or 'i'
+		for (let i = modifiedWord.length - 1; i >= 0; i--) {
+			if (modifiedWord[i] === 'I' || modifiedWord[i] === 'i') {
+				lastKnownVowelBackness = findNextVowelWithKnownBackness(i, modifiedWord.join(''));
+				if (lastKnownVowelBackness === null && modifiedWord[i] === 'I') {
+					modifiedWord[i] = 'İ'; // Default to 'İ' if 'I' is the only vowel and no known backness
+				} else {
+					modifiedWord[i] = modifiedWord[i] === 'I' ?
+						(lastKnownVowelBackness === 'front' ? 'İ' : 'I') :
+						(lastKnownVowelBackness === 'back' ? 'ı' : 'i');
+				}
+			}
+		}
+
+		return modifiedWord.join('');
+	}
+
+	let words = text.split(/(\s+)/);
+	let transformedText = words.map(word => /\s/.test(word) ? word : transformWord(word));
+	return transformedText.join('');
+}
+
 function cyrlat() {
 	car = document.transcription.text1.value;
 
@@ -81,62 +137,6 @@ function cyrlat() {
 	document.transcription.text2.value = car;
 }
 
-function handleDotlessI(text) {
-	const consonants = "BCÇDFGHJKLMNÑPQRSŞTVXYZbcçdfghjklmnñpqrsştvxyz";
-	const backVowels = "AOUaouı";
-	const frontVowels = "ÄEİÖÜäeöü";
-	const vowels = backVowels + frontVowels + "Ii"; // Combine all vowels for easy checking
-
-	function getVowelType(char) {
-		if (backVowels.includes(char)) return 'back';
-		if (frontVowels.includes(char)) return 'front';
-		return 'uncertain';
-	}
-
-	function findNextVowelWithKnownBackness(index, text) {
-		// Search forward
-		for (let i = index + 1; i < text.length; i++) {
-			const type = getVowelType(text[i]);
-			if (type !== 'uncertain') {
-				return type;
-			}
-		}
-		// Search backward if no forward match
-		for (let i = index - 1; i >= 0; i--) {
-			const type = getVowelType(text[i]);
-			if (type !== 'uncertain') {
-				return type;
-			}
-		}
-		return null; // No known vowel type found
-	}
-
-	function transformWord(word) {
-		let modifiedWord = word.split('');
-		let lastKnownVowelBackness = null;
-
-		// Start from the end of the word, find the last 'I' or 'i'
-		for (let i = modifiedWord.length - 1; i >= 0; i--) {
-			if (modifiedWord[i] === 'I' || modifiedWord[i] === 'i') {
-				lastKnownVowelBackness = findNextVowelWithKnownBackness(i, modifiedWord.join(''));
-				if (lastKnownVowelBackness === null && modifiedWord[i] === 'I') {
-					modifiedWord[i] = 'İ'; // Default to 'İ' if 'I' is the only vowel and no known backness
-				} else {
-					modifiedWord[i] = modifiedWord[i] === 'I' ?
-						(lastKnownVowelBackness === 'front' ? 'İ' : 'I') :
-						(lastKnownVowelBackness === 'back' ? 'ı' : 'i');
-				}
-			}
-		}
-
-		return modifiedWord.join('');
-	}
-
-	let words = text.split(/(\s+)/);
-	let transformedText = words.map(word => /\s/.test(word) ? word : transformWord(word));
-	return transformedText.join('');
-}
-
 function latcyr() {
 	car = document.transcription.text2.value;
 	car = car.replace(/A/g, "А");
@@ -198,7 +198,7 @@ function latcyr() {
 	car = car.replace(/u/g, "у");
 	car = car.replace(/ü/g, "ү");
 	car = car.replace(/f/g, "ф");
-	car = car.replace(/h/g, "ҳ");
+	car = car.replace(/h/g, "һ");
 	car = car.replace(/x/g, "х");
 	car = car.replace(/ç/g, "ч");
 	car = car.replace(/ş/g, "ш");
