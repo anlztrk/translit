@@ -59,8 +59,8 @@ function handleDotlessI(text) {
 function cyrlat() {
 	car = document.transcription.text1.value;
 
-	car = car.replace(/[АӘБВГҒДЕЖҖЗИЙКҚЛМНҢОӨПРСТУҮФХҺЧШЮЯ]Ж/g, "$1J");
-	car = car.replace(/[АӘБВГҒДЕЖҖЗИЙКҚЛМНҢОӨПРСТУҮФХҺЧШЮЯаәбвгғдежҗзийкқлмнңоөпрстуүфхһчшюя]ж/g, "$1j");
+	car = car.replace(/([АӘБВГҒДЕЖҖЗИЙКҚЛМНҢОӨПРСТУҮФХҺЧШЮЯ])Ж/g, "$1J");
+	car = car.replace(/([АӘБВГҒДЕЖҖЗИЙКҚЛМНҢОӨПРСТУҮФХҺЧШЮЯаәбвгғдежҗзийкқлмнңоөпрстуүфхһчшюя])ж/g, "$1j");
 
 	car = car.replace(/а/g, "a");
 	car = car.replace(/ә/g, "ä");
