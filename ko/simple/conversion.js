@@ -182,6 +182,8 @@ function cyrlat () {
    car = car.replace(/([ABDEGHIJKLMNOPRSTWYZ])YI/g, '$1I');
    car = car.replace(/WU([ABDEGHIJKLMNOPRSTWYZ])/g, 'U$1');
    car = car.replace(/YI([ABDEGHIJKLMNOPRSTWYZ])/g, 'I$1');
+   
+   car = car.replace(/HW/g, "WH");
 
    car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
     return first + second.toLowerCase();
