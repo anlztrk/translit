@@ -76,6 +76,8 @@ function cyrlat() {
 	car = car.replace(/Я/g, "Ya");
 	car = car.replace(/«/g, "\u201c");
 	car = car.replace(/»/g, "\u201d");
+	
+	car = handleDotlessI(car);
 	document.transcription.text2.value = car;
 }
 
@@ -207,8 +209,6 @@ function latcyr() {
 	car = car.replace(/йу/g, "ю");
 	car = car.replace(/\u201c/g, "«");
 	car = car.replace(/\u201d/g, "»");
-
-	car = handleDotlessI(car);
 	document.transcription.text1.value = car;
 }
 
