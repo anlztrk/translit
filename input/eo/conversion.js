@@ -24,5 +24,5 @@ car = document.transcription.text1.value;
    document.transcription.text1.value=car;
 }
 function copy1()
-{ textRange=document.transcription.text1.createTextRange();   textRange.execCommand("Copy");   textRange="";
+{ navigator.clipboard.writeText(document.transcription.text1.value);
 }
