@@ -1,6 +1,8 @@
 var car;
 function cyrlat() {
 	car = document.transcription.text1.value;
+	car = car.replace(/[ЬЪьъ]/g, "");
+	
 	car = car.replace(/([СЦ])Ҳ/g, "$1\u0027Ҳ");
 	car = car.replace(/([СЦсц])ҳ/g, "$1\u0027ҳ");
 	
@@ -28,7 +30,7 @@ function cyrlat() {
 	car = car.replace(/г/g, "g");
 	car = car.replace(/ғ/g, "ǵ");
 	car = car.replace(/д/g, "d");
-	car = car.replace(/е|э/g, "e");
+	car = car.replace(/[еэ]/g, "e");
 	car = car.replace(/ж/g, "j");
 	car = car.replace(/з/g, "z");
 	car = car.replace(/и/g, "i");
@@ -53,7 +55,7 @@ function cyrlat() {
 	car = car.replace(/ҳ/g, "h");
 	car = car.replace(/ц/g, "c");
 	car = car.replace(/ч/g, "ch");
-	car = car.replace(/ш|щ/g, "sh");
+	car = car.replace(/[шщ]/g, "sh");
 	car = car.replace(/ы/g, "ı");
 	car = car.replace(/ю/g, "yu");
 	car = car.replace(/я/g, "ya");
@@ -64,7 +66,7 @@ function cyrlat() {
 	car = car.replace(/Г/g, "G");
 	car = car.replace(/Ғ/g, "Ǵ");
 	car = car.replace(/Д/g, "D");
-	car = car.replace(/Е|Э/g, "E");
+	car = car.replace(/[ЕЭ]/g, "E");
 	car = car.replace(/Ж/g, "J");
 	car = car.replace(/З/g, "Z");
 	car = car.replace(/И/g, "I");
@@ -89,7 +91,7 @@ function cyrlat() {
 	car = car.replace(/Ҳ/g, "H");
 	car = car.replace(/Ц/g, "C");
 	car = car.replace(/Ч/g, "Ch");
-	car = car.replace(/Ш|Щ/g, "Sh");
+	car = car.replace(/[ШЩ]/g, "Sh");
 	car = car.replace(/Ы/g, "Í");
 	car = car.replace(/Ю/g, "Yu");
 	car = car.replace(/Я/g, "Ya");
