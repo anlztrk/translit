@@ -104,6 +104,7 @@ function latcyr() {
 	document.transcription.text2.value = document.transcription.text2.value.replace(/['ˈ’‘ʻʼ´`ʿʹˊ׳′ʽߵ՚ߴ᾿ՙ῾‛ʾ՛ˋ]/g, "\u0027")
                                                                      	   .replace(/([AaGgIiNnOoUu])\u0027/g, "$1\u0301")
                                                                      	   .replace(/i\u0301/g, "ı")
+                                                                     	   .replace(/İ/g, "I")								
                                                                      	   .normalize('NFC');
 	car = document.transcription.text2.value;	
 	car = car.replace(/C[Hh]/g, "Ч");
