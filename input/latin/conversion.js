@@ -1,915 +1,912 @@
-var car;
-
 function cyrlat() {
-	car = document.transcription.text1.value;
-	car = car.replace(/\u0021(\u002a|\u005d|\u003e)/g, "\u00a1");
-	car = car.replace(/\u00a1(\u002a|\u005d|\u003e)/g, "\u0021");
-	car = car.replace(/\u003f(\u002a|\u005d|\u003e)/g, "\u00bf");
-	car = car.replace(/\u00bf(\u002a|\u005d|\u003e)/g, "\u003f");
-	car = car.replace(/\u0027(\u002a|\u005d|\u003e)/g, "\u2019");
-	car = car.replace(/\u2019(\u002a|\u005d|\u003e)/g, "\u2018");
-	car = car.replace(/\u2018(\u002a|\u005d|\u003e)/g, "\u2039");
-	car = car.replace(/\u2039(\u002a|\u005d|\u003e)/g, "\u203a");
-	car = car.replace(/\u203a(\u002a|\u005d|\u003e)/g, "\u0027");
-	car = car.replace(/\u0022(\u002a|\u005d|\u003e)/g, "\u201c");
-	car = car.replace(/\u201c(\u002a|\u005d|\u003e)/g, "\u201d");
-	car = car.replace(/\u201d(\u002a|\u005d|\u003e)/g, "\u00ab");
-	car = car.replace(/\u00ab(\u002a|\u005d|\u003e)/g, "\u00bb");
-	car = car.replace(/\u00bb(\u002a|\u005d|\u003e)/g, "\u0022");
-	car = car.replace(/\u00a1(\u005b|\u003c)/g, "\u0021");
-	car = car.replace(/\u0021(\u005b|\u003c)/g, "\u00a1");
-	car = car.replace(/\u00bf(\u005b|\u003c)/g, "\u003f");
-	car = car.replace(/\u003f(\u005b|\u003c)/g, "\u00bf");
-	car = car.replace(/\u2019(\u005b|\u003c)/g, "\u0027");
-	car = car.replace(/\u2018(\u005b|\u003c)/g, "\u2019");
-	car = car.replace(/\u2039(\u005b|\u003c)/g, "\u2018");
-	car = car.replace(/\u203a(\u005b|\u003c)/g, "\u2039");
-	car = car.replace(/\u0027(\u005b|\u003c)/g, "\u203a");
-	car = car.replace(/\u201c(\u005b|\u003c)/g, "\u0022");
-	car = car.replace(/\u201d(\u005b|\u003c)/g, "\u201c");
-	car = car.replace(/\u00ab(\u005b|\u003c)/g, "\u201d");
-	car = car.replace(/\u00bb(\u005b|\u003c)/g, "\u00ab");
-	car = car.replace(/\u0022(\u005b|\u003c)/g, "\u00bb");
-	car = car.replace(/A(\u002a|\u005d|\u003e)/g, "Å");
-	car = car.replace(/Å(\u002a|\u005d|\u003e)/g, "Ȧ");
-	car = car.replace(/Ȧ(\u002a|\u005d|\u003e)/g, "Á");
-	car = car.replace(/Á(\u002a|\u005d|\u003e)/g, "À");
-	car = car.replace(/À(\u002a|\u005d|\u003e)/g, "Â");
-	car = car.replace(/Â(\u002a|\u005d|\u003e)/g, "Ǎ");
-	car = car.replace(/Ǎ(\u002a|\u005d|\u003e)/g, "Ă");
-	car = car.replace(/Ă(\u002a|\u005d|\u003e)/g, "Ā");
-	car = car.replace(/Ā(\u002a|\u005d|\u003e)/g, "Ä");
-	car = car.replace(/Ä(\u002a|\u005d|\u003e)/g, "Ã");
-	car = car.replace(/Ã(\u002a|\u005d|\u003e)/g, "Ą");
-	car = car.replace(/Ą(\u002a|\u005d|\u003e)/g, "Ạ");
-	car = car.replace(/Ạ(\u002a|\u005d|\u003e)/g, "Ả");
-	car = car.replace(/Ả(\u002a|\u005d|\u003e)/g, "Ⱥ");
-	car = car.replace(/Ⱥ(\u002a|\u005d|\u003e)/g, "Æ");
-	car = car.replace(/Æ(\u002a|\u005d|\u003e)/g, "A");
-	car = car.replace(/Å(\u005b|\u003c)/g, "A");
-	car = car.replace(/Ȧ(\u005b|\u003c)/g, "Å");
-	car = car.replace(/Á(\u005b|\u003c)/g, "Ȧ");
-	car = car.replace(/À(\u005b|\u003c)/g, "Á");
-	car = car.replace(/Â(\u005b|\u003c)/g, "À");
-	car = car.replace(/Ǎ(\u005b|\u003c)/g, "Â");
-	car = car.replace(/Ă(\u005b|\u003c)/g, "Ǎ");
-	car = car.replace(/Ā(\u005b|\u003c)/g, "Ă");
-	car = car.replace(/Ä(\u005b|\u003c)/g, "Ā");
-	car = car.replace(/Ã(\u005b|\u003c)/g, "Ä");
-	car = car.replace(/Ą(\u005b|\u003c)/g, "Ã");
-	car = car.replace(/Ạ(\u005b|\u003c)/g, "Ą");
-	car = car.replace(/Ả(\u005b|\u003c)/g, "Ạ");
-	car = car.replace(/Ⱥ(\u005b|\u003c)/g, "Ả");
-	car = car.replace(/Æ(\u005b|\u003c)/g, "Ⱥ");
-	car = car.replace(/A(\u005b|\u003c)/g, "Æ");
-	car = car.replace(/B(\u002a|\u005d|\u003e)/g, "Ḃ");
-	car = car.replace(/Ḃ(\u002a|\u005d|\u003e)/g, "Ḅ");
-	car = car.replace(/Ḅ(\u002a|\u005d|\u003e)/g, "Ƀ");
-	car = car.replace(/Ƀ(\u002a|\u005d|\u003e)/g, "B");
-	car = car.replace(/Ḃ(\u005b|\u003c)/g, "B");
-	car = car.replace(/Ḅ(\u005b|\u003c)/g, "Ḃ");
-	car = car.replace(/Ƀ(\u005b|\u003c)/g, "Ḅ");
-	car = car.replace(/B(\u005b|\u003c)/g, "Ƀ");
-	car = car.replace(/C(\u002a|\u005d|\u003e)/g, "Ċ");
-	car = car.replace(/Ċ(\u002a|\u005d|\u003e)/g, "Ć");
-	car = car.replace(/Ć(\u002a|\u005d|\u003e)/g, "Ĉ");
-	car = car.replace(/Ĉ(\u002a|\u005d|\u003e)/g, "Č");
-	car = car.replace(/Č(\u002a|\u005d|\u003e)/g, "Ç");
-	car = car.replace(/Ç(\u002a|\u005d|\u003e)/g, "Ȼ");
-	car = car.replace(/Ȼ(\u002a|\u005d|\u003e)/g, "C");
-	car = car.replace(/Ċ(\u005b|\u003c)/g, "C");
-	car = car.replace(/Ć(\u005b|\u003c)/g, "Ċ");
-	car = car.replace(/Ĉ(\u005b|\u003c)/g, "Ć");
-	car = car.replace(/Č(\u005b|\u003c)/g, "Ĉ");
-	car = car.replace(/Ç(\u005b|\u003c)/g, "Č");
-	car = car.replace(/Ȼ(\u005b|\u003c)/g, "Ç");
-	car = car.replace(/C(\u005b|\u003c)/g, "Ȼ");
-	car = car.replace(/D(\u002a|\u005d|\u003e)/g, "Ḋ");
-	car = car.replace(/Ḋ(\u002a|\u005d|\u003e)/g, "Ď");
-	car = car.replace(/Ď(\u002a|\u005d|\u003e)/g, "Ḑ");
-	car = car.replace(/Ḑ(\u002a|\u005d|\u003e)/g, "Ḍ");
-	car = car.replace(/Ḍ(\u002a|\u005d|\u003e)/g, "Đ");
-	car = car.replace(/Đ(\u002a|\u005d|\u003e)/g, "Ð");
-	car = car.replace(/Ð(\u002a|\u005d|\u003e)/g, "D");
-	car = car.replace(/Ḋ(\u005b|\u003c)/g, "D");
-	car = car.replace(/Ď(\u005b|\u003c)/g, "Ḋ");
-	car = car.replace(/Ḑ(\u005b|\u003c)/g, "Ď");
-	car = car.replace(/Ḍ(\u005b|\u003c)/g, "Ḑ");
-	car = car.replace(/Đ(\u005b|\u003c)/g, "Ḍ");
-	car = car.replace(/Ð(\u005b|\u003c)/g, "Đ");
-	car = car.replace(/D(\u005b|\u003c)/g, "Ð");
-	car = car.replace(/E(\u002a|\u005d|\u003e)/g, "Ė");
-	car = car.replace(/Ė(\u002a|\u005d|\u003e)/g, "É");
-	car = car.replace(/É(\u002a|\u005d|\u003e)/g, "È");
-	car = car.replace(/È(\u002a|\u005d|\u003e)/g, "Ê");
-	car = car.replace(/Ê(\u002a|\u005d|\u003e)/g, "Ě");
-	car = car.replace(/Ě(\u002a|\u005d|\u003e)/g, "Ĕ");
-	car = car.replace(/Ĕ(\u002a|\u005d|\u003e)/g, "Ē");
-	car = car.replace(/Ē(\u002a|\u005d|\u003e)/g, "Ë");
-	car = car.replace(/Ë(\u002a|\u005d|\u003e)/g, "Ẽ");
-	car = car.replace(/Ẽ(\u002a|\u005d|\u003e)/g, "Ȩ");
-	car = car.replace(/Ȩ(\u002a|\u005d|\u003e)/g, "Ę");
-	car = car.replace(/Ę(\u002a|\u005d|\u003e)/g, "Ẹ");
-	car = car.replace(/Ẹ(\u002a|\u005d|\u003e)/g, "Ẻ");
-	car = car.replace(/Ẻ(\u002a|\u005d|\u003e)/g, "Ɇ");
-	car = car.replace(/Ɇ(\u002a|\u005d|\u003e)/g, "Ə");
-	car = car.replace(/Ə(\u002a|\u005d|\u003e)/g, "E");
-	car = car.replace(/Ė(\u005b|\u003c)/g, "E");
-	car = car.replace(/É(\u005b|\u003c)/g, "Ė");
-	car = car.replace(/È(\u005b|\u003c)/g, "É");
-	car = car.replace(/Ê(\u005b|\u003c)/g, "È");
-	car = car.replace(/Ě(\u005b|\u003c)/g, "Ê");
-	car = car.replace(/Ĕ(\u005b|\u003c)/g, "Ě");
-	car = car.replace(/Ē(\u005b|\u003c)/g, "Ĕ");
-	car = car.replace(/Ë(\u005b|\u003c)/g, "Ē");
-	car = car.replace(/Ẽ(\u005b|\u003c)/g, "Ë");
-	car = car.replace(/Ȩ(\u005b|\u003c)/g, "Ẽ");
-	car = car.replace(/Ę(\u005b|\u003c)/g, "Ȩ");
-	car = car.replace(/Ẹ(\u005b|\u003c)/g, "Ę");
-	car = car.replace(/Ẻ(\u005b|\u003c)/g, "Ẹ");
-	car = car.replace(/Ɇ(\u005b|\u003c)/g, "Ẻ");
-	car = car.replace(/Ə(\u005b|\u003c)/g, "Ɇ");
-	car = car.replace(/E(\u005b|\u003c)/g, "Ə");
-	car = car.replace(/F(\u002a|\u005d|\u003e)/g, "Ḟ");
-	car = car.replace(/Ḟ(\u002a|\u005d|\u003e)/g, "F");
-	car = car.replace(/Ḟ(\u005b|\u003c)/g, "F");
-	car = car.replace(/F(\u005b|\u003c)/g, "Ḟ");
-	car = car.replace(/G(\u002a|\u005d|\u003e)/g, "Ġ");
-	car = car.replace(/Ġ(\u002a|\u005d|\u003e)/g, "Ǵ");
-	car = car.replace(/Ǵ(\u002a|\u005d|\u003e)/g, "Ĝ");
-	car = car.replace(/Ĝ(\u002a|\u005d|\u003e)/g, "Ǧ");
-	car = car.replace(/Ǧ(\u002a|\u005d|\u003e)/g, "Ğ");
-	car = car.replace(/Ğ(\u002a|\u005d|\u003e)/g, "Ḡ");
-	car = car.replace(/Ḡ(\u002a|\u005d|\u003e)/g, "Ģ");
-	car = car.replace(/Ģ(\u002a|\u005d|\u003e)/g, "G\u02bb");
-	car = car.replace(/G\u02bb(\u002a|\u005d|\u003e)/g, "Ǥ");
-	car = car.replace(/Ǥ(\u002a|\u005d|\u003e)/g, "G");
-	car = car.replace(/Ġ(\u005b|\u003c)/g, "G");
-	car = car.replace(/Ǵ(\u005b|\u003c)/g, "Ġ");
-	car = car.replace(/Ĝ(\u005b|\u003c)/g, "Ǵ");
-	car = car.replace(/Ǧ(\u005b|\u003c)/g, "Ĝ");
-	car = car.replace(/Ğ(\u005b|\u003c)/g, "Ǧ");
-	car = car.replace(/Ḡ(\u005b|\u003c)/g, "Ğ");
-	car = car.replace(/Ģ(\u005b|\u003c)/g, "Ḡ");
-	car = car.replace(/G\u02bb(\u005b|\u003c)/g, "Ģ");
-	car = car.replace(/Ǥ(\u005b|\u003c)/g, "G\u02bb");
-	car = car.replace(/G(\u005b|\u003c)/g, "Ǥ");
-	car = car.replace(/H(\u002a|\u005d|\u003e)/g, "Ḣ");
-	car = car.replace(/Ḣ(\u002a|\u005d|\u003e)/g, "Ĥ");
-	car = car.replace(/Ĥ(\u002a|\u005d|\u003e)/g, "Ȟ");
-	car = car.replace(/Ȟ(\u002a|\u005d|\u003e)/g, "Ḧ");
-	car = car.replace(/Ḧ(\u002a|\u005d|\u003e)/g, "Ḩ");
-	car = car.replace(/Ḩ(\u002a|\u005d|\u003e)/g, "Ḥ");
-	car = car.replace(/Ḥ(\u002a|\u005d|\u003e)/g, "Ħ");
-	car = car.replace(/Ħ(\u002a|\u005d|\u003e)/g, "H");
-	car = car.replace(/Ḣ(\u005b|\u003c)/g, "H");
-	car = car.replace(/Ĥ(\u005b|\u003c)/g, "Ḣ");
-	car = car.replace(/Ȟ(\u005b|\u003c)/g, "Ĥ");
-	car = car.replace(/Ḧ(\u005b|\u003c)/g, "Ȟ");
-	car = car.replace(/Ḩ(\u005b|\u003c)/g, "Ḧ");
-	car = car.replace(/Ḥ(\u005b|\u003c)/g, "Ḩ");
-	car = car.replace(/Ħ(\u005b|\u003c)/g, "Ḥ");
-	car = car.replace(/H(\u005b|\u003c)/g, "Ħ");
-	car = car.replace(/I(\u002a|\u005d|\u003e)/g, "İ");
-	car = car.replace(/İ(\u002a|\u005d|\u003e)/g, "Í");
-	car = car.replace(/Í(\u002a|\u005d|\u003e)/g, "Ì");
-	car = car.replace(/Ì(\u002a|\u005d|\u003e)/g, "Î");
-	car = car.replace(/Î(\u002a|\u005d|\u003e)/g, "Ǐ");
-	car = car.replace(/Ǐ(\u002a|\u005d|\u003e)/g, "Ĭ");
-	car = car.replace(/Ĭ(\u002a|\u005d|\u003e)/g, "Ī");
-	car = car.replace(/Ī(\u002a|\u005d|\u003e)/g, "Ï");
-	car = car.replace(/Ï(\u002a|\u005d|\u003e)/g, "Ĩ");
-	car = car.replace(/Ĩ(\u002a|\u005d|\u003e)/g, "Į");
-	car = car.replace(/Į(\u002a|\u005d|\u003e)/g, "Ị");
-	car = car.replace(/Ị(\u002a|\u005d|\u003e)/g, "Ỉ");
-	car = car.replace(/Ỉ(\u002a|\u005d|\u003e)/g, "Ɨ");
-	car = car.replace(/Ɨ(\u002a|\u005d|\u003e)/g, "I");
-	car = car.replace(/İ(\u005b|\u003c)/g, "I");
-	car = car.replace(/Í(\u005b|\u003c)/g, "İ");
-	car = car.replace(/Ì(\u005b|\u003c)/g, "Í");
-	car = car.replace(/Î(\u005b|\u003c)/g, "Ì");
-	car = car.replace(/Ǐ(\u005b|\u003c)/g, "Î");
-	car = car.replace(/Ĭ(\u005b|\u003c)/g, "Ǐ");
-	car = car.replace(/Ī(\u005b|\u003c)/g, "Ĭ");
-	car = car.replace(/Ï(\u005b|\u003c)/g, "Ī");
-	car = car.replace(/Ĩ(\u005b|\u003c)/g, "Ï");
-	car = car.replace(/Į(\u005b|\u003c)/g, "Ĩ");
-	car = car.replace(/Ị(\u005b|\u003c)/g, "Į");
-	car = car.replace(/Ỉ(\u005b|\u003c)/g, "Ị");
-	car = car.replace(/Ɨ(\u005b|\u003c)/g, "Ỉ");
-	car = car.replace(/I(\u005b|\u003c)/g, "Ɨ");
-	car = car.replace(/J(\u002a|\u005d|\u003e)/g, "Ĵ");
-	car = car.replace(/Ĵ(\u002a|\u005d|\u003e)/g, "Ɉ");
-	car = car.replace(/Ɉ(\u002a|\u005d|\u003e)/g, "J");
-	car = car.replace(/Ĵ(\u005b|\u003c)/g, "J");
-	car = car.replace(/Ɉ(\u005b|\u003c)/g, "Ĵ");
-	car = car.replace(/J(\u005b|\u003c)/g, "Ɉ");
-	car = car.replace(/K(\u002a|\u005d|\u003e)/g, "Ḱ");
-	car = car.replace(/Ḱ(\u002a|\u005d|\u003e)/g, "Ǩ");
-	car = car.replace(/Ǩ(\u002a|\u005d|\u003e)/g, "Ķ");
-	car = car.replace(/Ķ(\u002a|\u005d|\u003e)/g, "Ḳ");
-	car = car.replace(/Ḳ(\u002a|\u005d|\u003e)/g, "Ꝁ");
-	car = car.replace(/Ꝁ(\u002a|\u005d|\u003e)/g, "Ⱪ");
-	car = car.replace(/Ⱪ(\u002a|\u005d|\u003e)/g, "K");
-	car = car.replace(/Ḱ(\u005b|\u003c)/g, "K");
-	car = car.replace(/Ǩ(\u005b|\u003c)/g, "Ḱ");
-	car = car.replace(/Ķ(\u005b|\u003c)/g, "Ǩ");
-	car = car.replace(/Ḳ(\u005b|\u003c)/g, "Ķ");
-	car = car.replace(/Ꝁ(\u005b|\u003c)/g, "Ḳ");
-	car = car.replace(/Ⱪ(\u005b|\u003c)/g, "Ꝁ");
-	car = car.replace(/K(\u005b|\u003c)/g, "Ⱪ");
-	car = car.replace(/L(\u002a|\u005d|\u003e)/g, "Ĺ");
-	car = car.replace(/Ĺ(\u002a|\u005d|\u003e)/g, "Ľ");
-	car = car.replace(/Ľ(\u002a|\u005d|\u003e)/g, "Ļ");
-	car = car.replace(/Ļ(\u002a|\u005d|\u003e)/g, "Ḷ");
-	car = car.replace(/Ḷ(\u002a|\u005d|\u003e)/g, "Ł");
-	car = car.replace(/Ł(\u002a|\u005d|\u003e)/g, "L");
-	car = car.replace(/Ĺ(\u005b|\u003c)/g, "L");
-	car = car.replace(/Ľ(\u005b|\u003c)/g, "Ĺ");
-	car = car.replace(/Ļ(\u005b|\u003c)/g, "Ľ");
-	car = car.replace(/Ḷ(\u005b|\u003c)/g, "Ļ");
-	car = car.replace(/Ł(\u005b|\u003c)/g, "Ḷ");
-	car = car.replace(/L(\u005b|\u003c)/g, "Ł");
-	car = car.replace(/M(\u002a|\u005d|\u003e)/g, "Ṁ");
-	car = car.replace(/Ṁ(\u002a|\u005d|\u003e)/g, "Ḿ");
-	car = car.replace(/Ḿ(\u002a|\u005d|\u003e)/g, "Ṃ");
-	car = car.replace(/Ṃ(\u002a|\u005d|\u003e)/g, "M");
-	car = car.replace(/Ṁ(\u005b|\u003c)/g, "M");
-	car = car.replace(/Ḿ(\u005b|\u003c)/g, "Ṁ");
-	car = car.replace(/Ṃ(\u005b|\u003c)/g, "Ḿ");
-	car = car.replace(/M(\u005b|\u003c)/g, "Ṃ");
-	car = car.replace(/N(\u002a|\u005d|\u003e)/g, "Ṅ");
-	car = car.replace(/Ṅ(\u002a|\u005d|\u003e)/g, "Ń");
-	car = car.replace(/Ń(\u002a|\u005d|\u003e)/g, "Ǹ");
-	car = car.replace(/Ǹ(\u002a|\u005d|\u003e)/g, "Ň");
-	car = car.replace(/Ň(\u002a|\u005d|\u003e)/g, "Ñ");
-	car = car.replace(/Ñ(\u002a|\u005d|\u003e)/g, "Ņ");
-	car = car.replace(/Ņ(\u002a|\u005d|\u003e)/g, "Ṇ");
-	car = car.replace(/Ṇ(\u002a|\u005d|\u003e)/g, "Ꞥ");
-	car = car.replace(/Ꞥ(\u002a|\u005d|\u003e)/g, "Ꞑ");
-	car = car.replace(/Ꞑ(\u002a|\u005d|\u003e)/g, "N");
-	car = car.replace(/Ṅ(\u005b|\u003c)/g, "N");
-	car = car.replace(/Ń(\u005b|\u003c)/g, "Ṅ");
-	car = car.replace(/Ǹ(\u005b|\u003c)/g, "Ń");
-	car = car.replace(/Ň(\u005b|\u003c)/g, "Ǹ");
-	car = car.replace(/Ñ(\u005b|\u003c)/g, "Ň");
-	car = car.replace(/Ņ(\u005b|\u003c)/g, "Ñ");
-	car = car.replace(/Ṇ(\u005b|\u003c)/g, "Ņ");
-	car = car.replace(/Ꞥ(\u005b|\u003c)/g, "Ṇ");
-	car = car.replace(/Ꞑ(\u005b|\u003c)/g, "Ꞥ");
-	car = car.replace(/N(\u005b|\u003c)/g, "Ꞑ");
-	car = car.replace(/O(\u002a|\u005d|\u003e)/g, "Ȯ");
-	car = car.replace(/Ȯ(\u002a|\u005d|\u003e)/g, "Ó");
-	car = car.replace(/Ó(\u002a|\u005d|\u003e)/g, "Ò");
-	car = car.replace(/Ò(\u002a|\u005d|\u003e)/g, "Ô");
-	car = car.replace(/Ô(\u002a|\u005d|\u003e)/g, "Ǒ");
-	car = car.replace(/Ǒ(\u002a|\u005d|\u003e)/g, "Ŏ");
-	car = car.replace(/Ŏ(\u002a|\u005d|\u003e)/g, "Ō");
-	car = car.replace(/Ō(\u002a|\u005d|\u003e)/g, "Ö");
-	car = car.replace(/Ö(\u002a|\u005d|\u003e)/g, "Ő");
-	car = car.replace(/Ő(\u002a|\u005d|\u003e)/g, "Õ");
-	car = car.replace(/Õ(\u002a|\u005d|\u003e)/g, "Ǫ");
-	car = car.replace(/Ǫ(\u002a|\u005d|\u003e)/g, "Ọ");
-	car = car.replace(/Ọ(\u002a|\u005d|\u003e)/g, "Ỏ");
-	car = car.replace(/Ỏ(\u002a|\u005d|\u003e)/g, "Ơ");
-	car = car.replace(/Ơ(\u002a|\u005d|\u003e)/g, "O\u02bb");
-	car = car.replace(/O\u02bb(\u002a|\u005d|\u003e)/g, "Ø");
-	car = car.replace(/Ø(\u002a|\u005d|\u003e)/g, "Œ");
-	car = car.replace(/Œ(\u002a|\u005d|\u003e)/g, "O");
-	car = car.replace(/Ȯ(\u005b|\u003c)/g, "O");
-	car = car.replace(/Ó(\u005b|\u003c)/g, "Ȯ");
-	car = car.replace(/Ò(\u005b|\u003c)/g, "Ó");
-	car = car.replace(/Ô(\u005b|\u003c)/g, "Ò");
-	car = car.replace(/Ǒ(\u005b|\u003c)/g, "Ô");
-	car = car.replace(/Ŏ(\u005b|\u003c)/g, "Ǒ");
-	car = car.replace(/Ō(\u005b|\u003c)/g, "Ŏ");
-	car = car.replace(/Ö(\u005b|\u003c)/g, "Ō");
-	car = car.replace(/Ő(\u005b|\u003c)/g, "Ö");
-	car = car.replace(/Õ(\u005b|\u003c)/g, "Ő");
-	car = car.replace(/Ǫ(\u005b|\u003c)/g, "Õ");
-	car = car.replace(/Ọ(\u005b|\u003c)/g, "Ǫ");
-	car = car.replace(/Ỏ(\u005b|\u003c)/g, "Ọ");
-	car = car.replace(/Ơ(\u005b|\u003c)/g, "Ỏ");
-	car = car.replace(/O\u02bb(\u005b|\u003c)/g, "Ơ");
-	car = car.replace(/Ø(\u005b|\u003c)/g, "O\u02bb");
-	car = car.replace(/Œ(\u005b|\u003c)/g, "Ø");
-	car = car.replace(/O(\u005b|\u003c)/g, "Œ");
-	car = car.replace(/P(\u002a|\u005d|\u003e)/g, "Ṗ");
-	car = car.replace(/Ṗ(\u002a|\u005d|\u003e)/g, "Ṕ");
-	car = car.replace(/Ṕ(\u002a|\u005d|\u003e)/g, "Ᵽ");
-	car = car.replace(/Ᵽ(\u002a|\u005d|\u003e)/g, "P");
-	car = car.replace(/Ṗ(\u005b|\u003c)/g, "P");
-	car = car.replace(/Ṕ(\u005b|\u003c)/g, "Ṗ");
-	car = car.replace(/Ᵽ(\u005b|\u003c)/g, "Ṕ");
-	car = car.replace(/P(\u005b|\u003c)/g, "Ᵽ");
-	car = car.replace(/Q(\u002a|\u005d|\u003e)/g, "Ƣ");
-	car = car.replace(/Ƣ(\u002a|\u005d|\u003e)/g, "Q");
-	car = car.replace(/Ƣ(\u005b|\u003c)/g, "Q");
-	car = car.replace(/Q(\u005b|\u003c)/g, "Ƣ");
-	car = car.replace(/R(\u002a|\u005d|\u003e)/g, "Ṙ");
-	car = car.replace(/Ṙ(\u002a|\u005d|\u003e)/g, "Ŕ");
-	car = car.replace(/Ŕ(\u002a|\u005d|\u003e)/g, "Ř");
-	car = car.replace(/Ř(\u002a|\u005d|\u003e)/g, "Ŗ");
-	car = car.replace(/Ŗ(\u002a|\u005d|\u003e)/g, "Ṛ");
-	car = car.replace(/Ṛ(\u002a|\u005d|\u003e)/g, "Ɍ");
-	car = car.replace(/Ɍ(\u002a|\u005d|\u003e)/g, "R");
-	car = car.replace(/Ṙ(\u005b|\u003c)/g, "R");
-	car = car.replace(/Ŕ(\u005b|\u003c)/g, "Ṙ");
-	car = car.replace(/Ř(\u005b|\u003c)/g, "Ŕ");
-	car = car.replace(/Ŗ(\u005b|\u003c)/g, "Ř");
-	car = car.replace(/Ṛ(\u005b|\u003c)/g, "Ŗ");
-	car = car.replace(/Ɍ(\u005b|\u003c)/g, "Ṛ");
-	car = car.replace(/R(\u005b|\u003c)/g, "Ɍ");
-	car = car.replace(/S(\u002a|\u005d|\u003e)/g, "Ṡ");
-	car = car.replace(/Ṡ(\u002a|\u005d|\u003e)/g, "Ś");
-	car = car.replace(/Ś(\u002a|\u005d|\u003e)/g, "Ŝ");
-	car = car.replace(/Ŝ(\u002a|\u005d|\u003e)/g, "Š");
-	car = car.replace(/Š(\u002a|\u005d|\u003e)/g, "Ş");
-	car = car.replace(/Ş(\u002a|\u005d|\u003e)/g, "Ș");
-	car = car.replace(/Ș(\u002a|\u005d|\u003e)/g, "Ṣ");
-	car = car.replace(/Ṣ(\u002a|\u005d|\u003e)/g, "Ꞩ");
-	car = car.replace(/Ꞩ(\u002a|\u005d|\u003e)/g, "S");
-	car = car.replace(/Ṡ(\u005b|\u003c)/g, "S");
-	car = car.replace(/Ś(\u005b|\u003c)/g, "Ṡ");
-	car = car.replace(/Ŝ(\u005b|\u003c)/g, "Ś");
-	car = car.replace(/Š(\u005b|\u003c)/g, "Ŝ");
-	car = car.replace(/Ş(\u005b|\u003c)/g, "Š");
-	car = car.replace(/Ș(\u005b|\u003c)/g, "Ş");
-	car = car.replace(/Ṣ(\u005b|\u003c)/g, "Ș");
-	car = car.replace(/Ꞩ(\u005b|\u003c)/g, "Ṣ");
-	car = car.replace(/S(\u005b|\u003c)/g, "Ꞩ");
-	car = car.replace(/T(\u002a|\u005d|\u003e)/g, "Ṫ");
-	car = car.replace(/Ṫ(\u002a|\u005d|\u003e)/g, "Ť");
-	car = car.replace(/Ť(\u002a|\u005d|\u003e)/g, "Ţ");
-	car = car.replace(/Ţ(\u002a|\u005d|\u003e)/g, "Ț");
-	car = car.replace(/Ț(\u002a|\u005d|\u003e)/g, "Ṭ");
-	car = car.replace(/Ṭ(\u002a|\u005d|\u003e)/g, "Ŧ");
-	car = car.replace(/Ŧ(\u002a|\u005d|\u003e)/g, "Þ");
-	car = car.replace(/Þ(\u002a|\u005d|\u003e)/g, "T");
-	car = car.replace(/Ṫ(\u005B|\u003c)/g, "T");
-	car = car.replace(/Ť(\u005B|\u003c)/g, "Ṫ");
-	car = car.replace(/Ţ(\u005B|\u003c)/g, "Ť");
-	car = car.replace(/Ț(\u005B|\u003c)/g, "Ţ");
-	car = car.replace(/Ṭ(\u005B|\u003c)/g, "Ț");
-	car = car.replace(/Ŧ(\u005B|\u003c)/g, "Ṭ");
-	car = car.replace(/Þ(\u005B|\u003c)/g, "Ŧ");
-	car = car.replace(/T(\u005B|\u003c)/g, "Þ");
-	car = car.replace(/U(\u002a|\u005d|\u003e)/g, "Ů");
-	car = car.replace(/Ů(\u002a|\u005d|\u003e)/g, "Ú");
-	car = car.replace(/Ú(\u002a|\u005d|\u003e)/g, "Ù");
-	car = car.replace(/Ù(\u002a|\u005d|\u003e)/g, "Û");
-	car = car.replace(/Û(\u002a|\u005d|\u003e)/g, "Ǔ");
-	car = car.replace(/Ǔ(\u002a|\u005d|\u003e)/g, "Ŭ");
-	car = car.replace(/Ŭ(\u002a|\u005d|\u003e)/g, "Ū");
-	car = car.replace(/Ū(\u002a|\u005d|\u003e)/g, "Ü");
-	car = car.replace(/Ü(\u002a|\u005d|\u003e)/g, "Ű");
-	car = car.replace(/Ű(\u002a|\u005d|\u003e)/g, "Ũ");
-	car = car.replace(/Ũ(\u002a|\u005d|\u003e)/g, "Ų");
-	car = car.replace(/Ų(\u002a|\u005d|\u003e)/g, "Ụ");
-	car = car.replace(/Ụ(\u002a|\u005d|\u003e)/g, "Ủ");
-	car = car.replace(/Ủ(\u002a|\u005d|\u003e)/g, "Ư");
-	car = car.replace(/Ư(\u002a|\u005d|\u003e)/g, "Ʉ");
-	car = car.replace(/Ʉ(\u002a|\u005d|\u003e)/g, "U");
-	car = car.replace(/Ů(\u005b|\u003c)/g, "U");
-	car = car.replace(/Ú(\u005b|\u003c)/g, "Ů");
-	car = car.replace(/Ú(\u005b|\u003c)/g, "Ú");
-	car = car.replace(/Ù(\u005b|\u003c)/g, "Ú");
-	car = car.replace(/Û(\u005b|\u003c)/g, "Ù");
-	car = car.replace(/Ǔ(\u005b|\u003c)/g, "Û");
-	car = car.replace(/Ŭ(\u005b|\u003c)/g, "Ǔ");
-	car = car.replace(/Ū(\u005b|\u003c)/g, "Ŭ");
-	car = car.replace(/Ü(\u005b|\u003c)/g, "Ū");
-	car = car.replace(/Ű(\u005b|\u003c)/g, "Ü");
-	car = car.replace(/Ũ(\u005b|\u003c)/g, "Ű");
-	car = car.replace(/Ų(\u005b|\u003c)/g, "Ũ");
-	car = car.replace(/Ụ(\u005b|\u003c)/g, "Ų");
-	car = car.replace(/Ủ(\u005b|\u003c)/g, "Ụ");
-	car = car.replace(/Ư(\u005b|\u003c)/g, "Ủ");
-	car = car.replace(/Ʉ(\u005b|\u003c)/g, "Ư");
-	car = car.replace(/U(\u005b|\u003c)/g, "Ʉ");
-	car = car.replace(/V(\u002a|\u005d|\u003e)/g, "Ṽ");
-	car = car.replace(/Ṽ(\u002a|\u005d|\u003e)/g, "Ṿ");
-	car = car.replace(/Ṿ(\u002a|\u005d|\u003e)/g, "Ꝟ");
-	car = car.replace(/Ꝟ(\u002a|\u005d|\u003e)/g, "V");
-	car = car.replace(/Ṽ(\u005b|\u003c)/g, "V");
-	car = car.replace(/Ṿ(\u005b|\u003c)/g, "Ṽ");
-	car = car.replace(/Ꝟ(\u005b|\u003c)/g, "Ṿ");
-	car = car.replace(/V(\u005b|\u003c)/g, "Ꝟ");
-	car = car.replace(/W(\u002a|\u005d|\u003e)/g, "Ẇ");
-	car = car.replace(/Ẇ(\u002a|\u005d|\u003e)/g, "Ẃ");
-	car = car.replace(/Ẃ(\u002a|\u005d|\u003e)/g, "Ẁ");
-	car = car.replace(/Ẁ(\u002a|\u005d|\u003e)/g, "Ŵ");
-	car = car.replace(/Ŵ(\u002a|\u005d|\u003e)/g, "Ẅ");
-	car = car.replace(/Ẅ(\u002a|\u005d|\u003e)/g, "Ẉ");
-	car = car.replace(/Ẉ(\u002a|\u005d|\u003e)/g, "W");
-	car = car.replace(/Ẇ(\u005b|\u003c)/g, "W");
-	car = car.replace(/Ẃ(\u005b|\u003c)/g, "Ẇ");
-	car = car.replace(/Ẁ(\u005b|\u003c)/g, "Ẃ");
-	car = car.replace(/Ŵ(\u005b|\u003c)/g, "Ẁ");
-	car = car.replace(/Ẅ(\u005b|\u003c)/g, "Ŵ");
-	car = car.replace(/Ẉ(\u005b|\u003c)/g, "Ẅ");
-	car = car.replace(/W(\u005b|\u003c)/g, "Ẉ");
-	car = car.replace(/X(\u002a|\u005d|\u003e)/g, "Ẋ");
-	car = car.replace(/Ẋ(\u002a|\u005d|\u003e)/g, "Ẍ");
-	car = car.replace(/Ẍ(\u002a|\u005d|\u003e)/g, "X");
-	car = car.replace(/Ẋ(\u005b|\u003c)/g, "X");
-	car = car.replace(/Ẍ(\u005b|\u003c)/g, "Ẋ");
-	car = car.replace(/X(\u005b|\u003c)/g, "Ẍ");
-	car = car.replace(/Y(\u002a|\u005d|\u003e)/g, "Ẏ");
-	car = car.replace(/Ẏ(\u002a|\u005d|\u003e)/g, "Ý");
-	car = car.replace(/Ý(\u002a|\u005d|\u003e)/g, "Ỳ");
-	car = car.replace(/Ỳ(\u002a|\u005d|\u003e)/g, "Ŷ");
-	car = car.replace(/Ŷ(\u002a|\u005d|\u003e)/g, "Ȳ");
-	car = car.replace(/Ȳ(\u002a|\u005d|\u003e)/g, "Ÿ");
-	car = car.replace(/Ÿ(\u002a|\u005d|\u003e)/g, "Ỹ");
-	car = car.replace(/Ỹ(\u002a|\u005d|\u003e)/g, "Ỵ");
-	car = car.replace(/Ỵ(\u002a|\u005d|\u003e)/g, "Ỷ");
-	car = car.replace(/Ỷ(\u002a|\u005d|\u003e)/g, "Ɏ");
-	car = car.replace(/Ɏ(\u002a|\u005d|\u003e)/g, "Y");
-	car = car.replace(/Ẏ(\u005b|\u003c)/g, "Y");
-	car = car.replace(/Ý(\u005b|\u003c)/g, "Ẏ");
-	car = car.replace(/Ỳ(\u005b|\u003c)/g, "Ý");
-	car = car.replace(/Ŷ(\u005b|\u003c)/g, "Ỳ");
-	car = car.replace(/Ȳ(\u005b|\u003c)/g, "Ŷ");
-	car = car.replace(/Ÿ(\u005b|\u003c)/g, "Ȳ");
-	car = car.replace(/Ỹ(\u005b|\u003c)/g, "Ÿ");
-	car = car.replace(/Ỵ(\u005b|\u003c)/g, "Ỹ");
-	car = car.replace(/Ỷ(\u005b|\u003c)/g, "Ỵ");
-	car = car.replace(/Ɏ(\u005b|\u003c)/g, "Ỷ");
-	car = car.replace(/Y(\u005b|\u003c)/g, "Ɏ");
-	car = car.replace(/Z(\u002a|\u005d|\u003e)/g, "Ż");
-	car = car.replace(/Ż(\u002a|\u005d|\u003e)/g, "Ź");
-	car = car.replace(/Ź(\u002a|\u005d|\u003e)/g, "Ẑ");
-	car = car.replace(/Ẑ(\u002a|\u005d|\u003e)/g, "Ž");
-	car = car.replace(/Ž(\u002a|\u005d|\u003e)/g, "Ẓ");
-	car = car.replace(/Ẓ(\u002a|\u005d|\u003e)/g, "Ƶ");
-	car = car.replace(/Ƶ(\u002a|\u005d|\u003e)/g, "Ⱬ");
-	car = car.replace(/Ⱬ(\u002a|\u005d|\u003e)/g, "Z");
-	car = car.replace(/Ż(\u005b|\u003c)/g, "Z");
-	car = car.replace(/Ź(\u005b|\u003c)/g, "Ż");
-	car = car.replace(/Ẑ(\u005b|\u003c)/g, "Ź");
-	car = car.replace(/Ž(\u005b|\u003c)/g, "Ẑ");
-	car = car.replace(/Ẓ(\u005b|\u003c)/g, "Ž");
-	car = car.replace(/Ƶ(\u005b|\u003c)/g, "Ẓ");
-	car = car.replace(/Ⱬ(\u005b|\u003c)/g, "Ƶ");
-	car = car.replace(/Z(\u005b|\u003c)/g, "Ⱬ");
-	car = car.replace(/a(\u002a|\u005d|\u003e)/g, "å");
-	car = car.replace(/å(\u002a|\u005d|\u003e)/g, "ȧ");
-	car = car.replace(/ȧ(\u002a|\u005d|\u003e)/g, "á");
-	car = car.replace(/á(\u002a|\u005d|\u003e)/g, "à");
-	car = car.replace(/à(\u002a|\u005d|\u003e)/g, "â");
-	car = car.replace(/â(\u002a|\u005d|\u003e)/g, "ǎ");
-	car = car.replace(/ǎ(\u002a|\u005d|\u003e)/g, "ă");
-	car = car.replace(/ă(\u002a|\u005d|\u003e)/g, "ā");
-	car = car.replace(/ā(\u002a|\u005d|\u003e)/g, "ä");
-	car = car.replace(/ä(\u002a|\u005d|\u003e)/g, "ã");
-	car = car.replace(/ã(\u002a|\u005d|\u003e)/g, "ą");
-	car = car.replace(/ą(\u002a|\u005d|\u003e)/g, "ạ");
-	car = car.replace(/ạ(\u002a|\u005d|\u003e)/g, "ả");
-	car = car.replace(/ả(\u002a|\u005d|\u003e)/g, "ⱥ");
-	car = car.replace(/ⱥ(\u002a|\u005d|\u003e)/g, "æ");
-	car = car.replace(/æ(\u002a|\u005d|\u003e)/g, "a");
-	car = car.replace(/å(\u005b|\u003c)/g, "a");
-	car = car.replace(/ȧ(\u005b|\u003c)/g, "å");
-	car = car.replace(/á(\u005b|\u003c)/g, "ȧ");
-	car = car.replace(/à(\u005b|\u003c)/g, "á");
-	car = car.replace(/â(\u005b|\u003c)/g, "à");
-	car = car.replace(/ǎ(\u005b|\u003c)/g, "â");
-	car = car.replace(/ă(\u005b|\u003c)/g, "ǎ");
-	car = car.replace(/ā(\u005b|\u003c)/g, "ă");
-	car = car.replace(/ä(\u005b|\u003c)/g, "ā");
-	car = car.replace(/ã(\u005b|\u003c)/g, "ä");
-	car = car.replace(/ą(\u005b|\u003c)/g, "ã");
-	car = car.replace(/ạ(\u005b|\u003c)/g, "ą");
-	car = car.replace(/ả(\u005b|\u003c)/g, "ạ");
-	car = car.replace(/ⱥ(\u005b|\u003c)/g, "ả");
-	car = car.replace(/æ(\u005b|\u003c)/g, "ⱥ");
-	car = car.replace(/a(\u005b|\u003c)/g, "æ");
-	car = car.replace(/b(\u002a|\u005d|\u003e)/g, "ḃ");
-	car = car.replace(/ḃ(\u002a|\u005d|\u003e)/g, "ḅ");
-	car = car.replace(/ḅ(\u002a|\u005d|\u003e)/g, "ƀ");
-	car = car.replace(/ƀ(\u002a|\u005d|\u003e)/g, "b");
-	car = car.replace(/ḃ(\u005b|\u003c)/g, "b");
-	car = car.replace(/ḅ(\u005b|\u003c)/g, "ḃ");
-	car = car.replace(/ƀ(\u005b|\u003c)/g, "ḅ");
-	car = car.replace(/b(\u005b|\u003c)/g, "ƀ");
-	car = car.replace(/c(\u002a|\u005d|\u003e)/g, "ċ");
-	car = car.replace(/ċ(\u002a|\u005d|\u003e)/g, "ć");
-	car = car.replace(/ć(\u002a|\u005d|\u003e)/g, "ĉ");
-	car = car.replace(/ĉ(\u002a|\u005d|\u003e)/g, "č");
-	car = car.replace(/č(\u002a|\u005d|\u003e)/g, "ç");
-	car = car.replace(/ç(\u002a|\u005d|\u003e)/g, "ȼ");
-	car = car.replace(/ȼ(\u002a|\u005d|\u003e)/g, "c");
-	car = car.replace(/ċ(\u005b|\u003c)/g, "c");
-	car = car.replace(/ć(\u005b|\u003c)/g, "ċ");
-	car = car.replace(/ĉ(\u005b|\u003c)/g, "ć");
-	car = car.replace(/č(\u005b|\u003c)/g, "ĉ");
-	car = car.replace(/ç(\u005b|\u003c)/g, "č");
-	car = car.replace(/ȼ(\u005b|\u003c)/g, "ç");
-	car = car.replace(/c(\u005b|\u003c)/g, "ȼ");
-	car = car.replace(/d(\u002a|\u005d|\u003e)/g, "ḋ");
-	car = car.replace(/ḋ(\u002a|\u005d|\u003e)/g, "ď");
-	car = car.replace(/ď(\u002a|\u005d|\u003e)/g, "ḑ");
-	car = car.replace(/ḑ(\u002a|\u005d|\u003e)/g, "ḍ");
-	car = car.replace(/ḍ(\u002a|\u005d|\u003e)/g, "đ");
-	car = car.replace(/đ(\u002a|\u005d|\u003e)/g, "ð");
-	car = car.replace(/ð(\u002a|\u005d|\u003e)/g, "d");
-	car = car.replace(/ḋ(\u005b|\u003c)/g, "d");
-	car = car.replace(/ď(\u005b|\u003c)/g, "ḋ");
-	car = car.replace(/ḑ(\u005b|\u003c)/g, "ď");
-	car = car.replace(/ḍ(\u005b|\u003c)/g, "ḑ");
-	car = car.replace(/đ(\u005b|\u003c)/g, "ḍ");
-	car = car.replace(/ð(\u005b|\u003c)/g, "đ");
-	car = car.replace(/d(\u005b|\u003c)/g, "ð");
-	car = car.replace(/e(\u002a|\u005d|\u003e)/g, "ė");
-	car = car.replace(/ė(\u002a|\u005d|\u003e)/g, "é");
-	car = car.replace(/é(\u002a|\u005d|\u003e)/g, "è");
-	car = car.replace(/è(\u002a|\u005d|\u003e)/g, "ê");
-	car = car.replace(/ê(\u002a|\u005d|\u003e)/g, "ě");
-	car = car.replace(/ě(\u002a|\u005d|\u003e)/g, "ĕ");
-	car = car.replace(/ĕ(\u002a|\u005d|\u003e)/g, "ē");
-	car = car.replace(/ē(\u002a|\u005d|\u003e)/g, "ë");
-	car = car.replace(/ë(\u002a|\u005d|\u003e)/g, "ẽ");
-	car = car.replace(/ẽ(\u002a|\u005d|\u003e)/g, "ȩ");
-	car = car.replace(/ȩ(\u002a|\u005d|\u003e)/g, "ę");
-	car = car.replace(/ę(\u002a|\u005d|\u003e)/g, "ẹ");
-	car = car.replace(/ẹ(\u002a|\u005d|\u003e)/g, "ẻ");
-	car = car.replace(/ẻ(\u002a|\u005d|\u003e)/g, "ɇ");
-	car = car.replace(/ɇ(\u002a|\u005d|\u003e)/g, "ə");
-	car = car.replace(/ə(\u002a|\u005d|\u003e)/g, "e");
-	car = car.replace(/ė(\u005b|\u003c)/g, "e");
-	car = car.replace(/é(\u005b|\u003c)/g, "ė");
-	car = car.replace(/è(\u005b|\u003c)/g, "é");
-	car = car.replace(/ê(\u005b|\u003c)/g, "è");
-	car = car.replace(/ě(\u005b|\u003c)/g, "ê");
-	car = car.replace(/ĕ(\u005b|\u003c)/g, "ě");
-	car = car.replace(/ē(\u005b|\u003c)/g, "ĕ");
-	car = car.replace(/ë(\u005b|\u003c)/g, "ē");
-	car = car.replace(/ẽ(\u005b|\u003c)/g, "ë");
-	car = car.replace(/ȩ(\u005b|\u003c)/g, "ẽ");
-	car = car.replace(/ę(\u005b|\u003c)/g, "ȩ");
-	car = car.replace(/ẹ(\u005b|\u003c)/g, "ę");
-	car = car.replace(/ẻ(\u005b|\u003c)/g, "ẹ");
-	car = car.replace(/ɇ(\u005b|\u003c)/g, "ẻ");
-	car = car.replace(/ə(\u005b|\u003c)/g, "ɇ");
-	car = car.replace(/e(\u005b|\u003c)/g, "ə");
-	car = car.replace(/f(\u002a|\u005d|\u003e)/g, "ḟ");
-	car = car.replace(/ḟ(\u002a|\u005d|\u003e)/g, "f");
-	car = car.replace(/ḟ(\u005b|\u003c)/g, "f");
-	car = car.replace(/f(\u005b|\u003c)/g, "ḟ");
-	car = car.replace(/g(\u002a|\u005d|\u003e)/g, "ġ");
-	car = car.replace(/ġ(\u002a|\u005d|\u003e)/g, "ǵ");
-	car = car.replace(/ǵ(\u002a|\u005d|\u003e)/g, "ĝ");
-	car = car.replace(/ĝ(\u002a|\u005d|\u003e)/g, "ǧ");
-	car = car.replace(/ǧ(\u002a|\u005d|\u003e)/g, "ğ");
-	car = car.replace(/ğ(\u002a|\u005d|\u003e)/g, "ḡ");
-	car = car.replace(/ḡ(\u002a|\u005d|\u003e)/g, "ģ");
-	car = car.replace(/ģ(\u002a|\u005d|\u003e)/g, "g\u02bb");
-	car = car.replace(/g\u02bb(\u002a|\u005d|\u003e)/g, "ǥ");
-	car = car.replace(/ǥ(\u002a|\u005d|\u003e)/g, "g");
-	car = car.replace(/ġ(\u005b|\u003c)/g, "g");
-	car = car.replace(/ǵ(\u005b|\u003c)/g, "ġ");
-	car = car.replace(/ĝ(\u005b|\u003c)/g, "ǵ");
-	car = car.replace(/ǧ(\u005b|\u003c)/g, "ĝ");
-	car = car.replace(/ğ(\u005b|\u003c)/g, "ǧ");
-	car = car.replace(/ḡ(\u005b|\u003c)/g, "ğ");
-	car = car.replace(/ģ(\u005b|\u003c)/g, "ḡ");
-	car = car.replace(/g\u02bb(\u005b|\u003c)/g, "ģ");
-	car = car.replace(/ǥ(\u005b|\u003c)/g, "g\u02bb");
-	car = car.replace(/g(\u005b|\u003c)/g, "ǥ");
-	car = car.replace(/h(\u002a|\u005d|\u003e)/g, "ḣ");
-	car = car.replace(/ḣ(\u002a|\u005d|\u003e)/g, "ĥ");
-	car = car.replace(/ĥ(\u002a|\u005d|\u003e)/g, "ȟ");
-	car = car.replace(/ȟ(\u002a|\u005d|\u003e)/g, "ḧ");
-	car = car.replace(/ḧ(\u002a|\u005d|\u003e)/g, "ḩ");
-	car = car.replace(/ḩ(\u002a|\u005d|\u003e)/g, "ḥ");
-	car = car.replace(/ḥ(\u002a|\u005d|\u003e)/g, "ħ");
-	car = car.replace(/ħ(\u002a|\u005d|\u003e)/g, "h");
-	car = car.replace(/ḣ(\u005b|\u003c)/g, "h");
-	car = car.replace(/ĥ(\u005b|\u003c)/g, "ḣ");
-	car = car.replace(/ȟ(\u005b|\u003c)/g, "ĥ");
-	car = car.replace(/ḧ(\u005b|\u003c)/g, "ȟ");
-	car = car.replace(/ḩ(\u005b|\u003c)/g, "ḧ");
-	car = car.replace(/ḥ(\u005b|\u003c)/g, "ḩ");
-	car = car.replace(/ħ(\u005b|\u003c)/g, "ḥ");
-	car = car.replace(/h(\u005b|\u003c)/g, "ħ");
-	car = car.replace(/i(\u002a|\u005d|\u003e)/g, "ı");
-	car = car.replace(/ı(\u002a|\u005d|\u003e)/g, "í");
-	car = car.replace(/í(\u002a|\u005d|\u003e)/g, "ì");
-	car = car.replace(/ì(\u002a|\u005d|\u003e)/g, "î");
-	car = car.replace(/î(\u002a|\u005d|\u003e)/g, "ǐ");
-	car = car.replace(/ǐ(\u002a|\u005d|\u003e)/g, "ĭ");
-	car = car.replace(/ĭ(\u002a|\u005d|\u003e)/g, "ī");
-	car = car.replace(/ī(\u002a|\u005d|\u003e)/g, "ï");
-	car = car.replace(/ï(\u002a|\u005d|\u003e)/g, "ĩ");
-	car = car.replace(/ĩ(\u002a|\u005d|\u003e)/g, "į");
-	car = car.replace(/į(\u002a|\u005d|\u003e)/g, "ị");
-	car = car.replace(/ị(\u002a|\u005d|\u003e)/g, "ỉ");
-	car = car.replace(/ỉ(\u002a|\u005d|\u003e)/g, "ɨ");
-	car = car.replace(/ɨ(\u002a|\u005d|\u003e)/g, "i");
-	car = car.replace(/ı(\u005b|\u003c)/g, "i");
-	car = car.replace(/í(\u005b|\u003c)/g, "ı");
-	car = car.replace(/ì(\u005b|\u003c)/g, "í");
-	car = car.replace(/î(\u005b|\u003c)/g, "ì");
-	car = car.replace(/ǐ(\u005b|\u003c)/g, "î");
-	car = car.replace(/ĭ(\u005b|\u003c)/g, "ǐ");
-	car = car.replace(/ī(\u005b|\u003c)/g, "ĭ");
-	car = car.replace(/ï(\u005b|\u003c)/g, "ī");
-	car = car.replace(/ĩ(\u005b|\u003c)/g, "ï");
-	car = car.replace(/į(\u005b|\u003c)/g, "ĩ");
-	car = car.replace(/ị(\u005b|\u003c)/g, "į");
-	car = car.replace(/ỉ(\u005b|\u003c)/g, "ị");
-	car = car.replace(/ɨ(\u005b|\u003c)/g, "ỉ");
-	car = car.replace(/i(\u005b|\u003c)/g, "ɨ");
-	car = car.replace(/j(\u002a|\u005d|\u003e)/g, "ĵ");
-	car = car.replace(/ĵ(\u002a|\u005d|\u003e)/g, "ɉ");
-	car = car.replace(/ɉ(\u002a|\u005d|\u003e)/g, "j");
-	car = car.replace(/ĵ(\u005b|\u003c)/g, "j");
-	car = car.replace(/ɉ(\u005b|\u003c)/g, "ĵ");
-	car = car.replace(/j(\u005b|\u003c)/g, "ɉ");
-	car = car.replace(/k(\u002a|\u005d|\u003e)/g, "ḱ");
-	car = car.replace(/ḱ(\u002a|\u005d|\u003e)/g, "ǩ");
-	car = car.replace(/ǩ(\u002a|\u005d|\u003e)/g, "ķ");
-	car = car.replace(/ķ(\u002a|\u005d|\u003e)/g, "ḳ");
-	car = car.replace(/ḳ(\u002a|\u005d|\u003e)/g, "ꝁ");
-	car = car.replace(/ꝁ(\u002a|\u005d|\u003e)/g, "ⱪ");
-	car = car.replace(/ⱪ(\u002a|\u005d|\u003e)/g, "k");
-	car = car.replace(/ḱ(\u005b|\u003c)/g, "k");
-	car = car.replace(/ǩ(\u005b|\u003c)/g, "ḱ");
-	car = car.replace(/ķ(\u005b|\u003c)/g, "ǩ");
-	car = car.replace(/ḳ(\u005b|\u003c)/g, "ķ");
-	car = car.replace(/ꝁ(\u005b|\u003c)/g, "ḳ");
-	car = car.replace(/ⱪ(\u005b|\u003c)/g, "ꝁ");
-	car = car.replace(/k(\u005b|\u003c)/g, "ⱪ");
-	car = car.replace(/l(\u002a|\u005d|\u003e)/g, "ĺ");
-	car = car.replace(/ĺ(\u002a|\u005d|\u003e)/g, "ľ");
-	car = car.replace(/ľ(\u002a|\u005d|\u003e)/g, "ļ");
-	car = car.replace(/ļ(\u002a|\u005d|\u003e)/g, "ḷ");
-	car = car.replace(/ḷ(\u002a|\u005d|\u003e)/g, "ł");
-	car = car.replace(/ł(\u002a|\u005d|\u003e)/g, "l");
-	car = car.replace(/ĺ(\u005b|\u003c)/g, "l");
-	car = car.replace(/ľ(\u005b|\u003c)/g, "ĺ");
-	car = car.replace(/ļ(\u005b|\u003c)/g, "ľ");
-	car = car.replace(/ḷ(\u005b|\u003c)/g, "ļ");
-	car = car.replace(/ł(\u005b|\u003c)/g, "ḷ");
-	car = car.replace(/l(\u005b|\u003c)/g, "ł");
-	car = car.replace(/m(\u002a|\u005d|\u003e)/g, "ṁ");
-	car = car.replace(/ṁ(\u002a|\u005d|\u003e)/g, "ḿ");
-	car = car.replace(/ḿ(\u002a|\u005d|\u003e)/g, "ṃ");
-	car = car.replace(/ṃ(\u002a|\u005d|\u003e)/g, "m");
-	car = car.replace(/ṁ(\u005b|\u003c)/g, "m");
-	car = car.replace(/ḿ(\u005b|\u003c)/g, "ṁ");
-	car = car.replace(/ṃ(\u005b|\u003c)/g, "ḿ");
-	car = car.replace(/m(\u005b|\u003c)/g, "ṃ");
-	car = car.replace(/n(\u002a|\u005d|\u003e)/g, "ṅ");
-	car = car.replace(/ṅ(\u002a|\u005d|\u003e)/g, "ń");
-	car = car.replace(/ń(\u002a|\u005d|\u003e)/g, "ǹ");
-	car = car.replace(/ǹ(\u002a|\u005d|\u003e)/g, "ň");
-	car = car.replace(/ň(\u002a|\u005d|\u003e)/g, "ñ");
-	car = car.replace(/ñ(\u002a|\u005d|\u003e)/g, "ņ");
-	car = car.replace(/ņ(\u002a|\u005d|\u003e)/g, "ṇ");
-	car = car.replace(/ṇ(\u002a|\u005d|\u003e)/g, "ꞥ");
-	car = car.replace(/ꞥ(\u002a|\u005d|\u003e)/g, "ꞑ");
-	car = car.replace(/ꞑ(\u002a|\u005d|\u003e)/g, "n");
-	car = car.replace(/ṅ(\u005b|\u003c)/g, "n");
-	car = car.replace(/ń(\u005b|\u003c)/g, "ṅ");
-	car = car.replace(/ǹ(\u005b|\u003c)/g, "ń");
-	car = car.replace(/ň(\u005b|\u003c)/g, "ǹ");
-	car = car.replace(/ñ(\u005b|\u003c)/g, "ň");
-	car = car.replace(/ņ(\u005b|\u003c)/g, "ñ");
-	car = car.replace(/ṇ(\u005b|\u003c)/g, "ņ");
-	car = car.replace(/ꞥ(\u005b|\u003c)/g, "ṇ");
-	car = car.replace(/ꞑ(\u005b|\u003c)/g, "ꞥ");
-	car = car.replace(/n(\u005b|\u003c)/g, "ꞑ");
-	car = car.replace(/o(\u002a|\u005d|\u003e)/g, "ȯ");
-	car = car.replace(/ȯ(\u002a|\u005d|\u003e)/g, "ó");
-	car = car.replace(/ó(\u002a|\u005d|\u003e)/g, "ò");
-	car = car.replace(/ò(\u002a|\u005d|\u003e)/g, "ô");
-	car = car.replace(/ô(\u002a|\u005d|\u003e)/g, "ǒ");
-	car = car.replace(/ǒ(\u002a|\u005d|\u003e)/g, "ŏ");
-	car = car.replace(/ŏ(\u002a|\u005d|\u003e)/g, "ō");
-	car = car.replace(/ō(\u002a|\u005d|\u003e)/g, "ö");
-	car = car.replace(/ö(\u002a|\u005d|\u003e)/g, "ő");
-	car = car.replace(/ő(\u002a|\u005d|\u003e)/g, "õ");
-	car = car.replace(/õ(\u002a|\u005d|\u003e)/g, "ǫ");
-	car = car.replace(/ǫ(\u002a|\u005d|\u003e)/g, "ọ");
-	car = car.replace(/ọ(\u002a|\u005d|\u003e)/g, "ỏ");
-	car = car.replace(/ỏ(\u002a|\u005d|\u003e)/g, "ơ");
-	car = car.replace(/ơ(\u002a|\u005d|\u003e)/g, "o\u02bb");
-	car = car.replace(/o\u02bb(\u002a|\u005d|\u003e)/g, "ø");
-	car = car.replace(/ø(\u002a|\u005d|\u003e)/g, "œ");
-	car = car.replace(/œ(\u002a|\u005d|\u003e)/g, "o");
-	car = car.replace(/ȯ(\u005b|\u003c)/g, "o");
-	car = car.replace(/ó(\u005b|\u003c)/g, "ȯ");
-	car = car.replace(/ò(\u005b|\u003c)/g, "ó");
-	car = car.replace(/ô(\u005b|\u003c)/g, "ò");
-	car = car.replace(/ǒ(\u005b|\u003c)/g, "ô");
-	car = car.replace(/ŏ(\u005b|\u003c)/g, "ǒ");
-	car = car.replace(/ō(\u005b|\u003c)/g, "ŏ");
-	car = car.replace(/ö(\u005b|\u003c)/g, "ō");
-	car = car.replace(/ő(\u005b|\u003c)/g, "ö");
-	car = car.replace(/õ(\u005b|\u003c)/g, "ő");
-	car = car.replace(/ǫ(\u005b|\u003c)/g, "õ");
-	car = car.replace(/ọ(\u005b|\u003c)/g, "ǫ");
-	car = car.replace(/ỏ(\u005b|\u003c)/g, "ọ");
-	car = car.replace(/ơ(\u005b|\u003c)/g, "ỏ");
-	car = car.replace(/o\u02bb(\u005b|\u003c)/g, "ơ");
-	car = car.replace(/ø(\u005b|\u003c)/g, "o\u02bb");
-	car = car.replace(/œ(\u005b|\u003c)/g, "ø");
-	car = car.replace(/o(\u005b|\u003c)/g, "œ");
-	car = car.replace(/p(\u002a|\u005d|\u003e)/g, "ṗ");
-	car = car.replace(/ṗ(\u002a|\u005d|\u003e)/g, "ṕ");
-	car = car.replace(/ṕ(\u002a|\u005d|\u003e)/g, "ᵽ");
-	car = car.replace(/ᵽ(\u002a|\u005d|\u003e)/g, "p");
-	car = car.replace(/ṗ(\u005b|\u003c)/g, "p");
-	car = car.replace(/ṕ(\u005b|\u003c)/g, "ṗ");
-	car = car.replace(/ᵽ(\u005b|\u003c)/g, "ṕ");
-	car = car.replace(/p(\u005b|\u003c)/g, "ᵽ");
-	car = car.replace(/q(\u002a|\u005d|\u003e)/g, "ƣ");
-	car = car.replace(/ƣ(\u002a|\u005d|\u003e)/g, "q");
-	car = car.replace(/ƣ(\u005b|\u003c)/g, "q");
-	car = car.replace(/q(\u005b|\u003c)/g, "ƣ");
-	car = car.replace(/r(\u002a|\u005d|\u003e)/g, "ṙ");
-	car = car.replace(/ṙ(\u002a|\u005d|\u003e)/g, "ŕ");
-	car = car.replace(/ŕ(\u002a|\u005d|\u003e)/g, "ř");
-	car = car.replace(/ř(\u002a|\u005d|\u003e)/g, "ŗ");
-	car = car.replace(/ŗ(\u002a|\u005d|\u003e)/g, "ṛ");
-	car = car.replace(/ṛ(\u002a|\u005d|\u003e)/g, "ɍ");
-	car = car.replace(/ɍ(\u002a|\u005d|\u003e)/g, "r");
-	car = car.replace(/ṙ(\u005b|\u003c)/g, "r");
-	car = car.replace(/ŕ(\u005b|\u003c)/g, "ṙ");
-	car = car.replace(/ř(\u005b|\u003c)/g, "ŕ");
-	car = car.replace(/ŗ(\u005b|\u003c)/g, "ř");
-	car = car.replace(/ṛ(\u005b|\u003c)/g, "ŗ");
-	car = car.replace(/ɍ(\u005b|\u003c)/g, "ṛ");
-	car = car.replace(/r(\u005b|\u003c)/g, "ɍ");
-	car = car.replace(/s(\u002a|\u005d|\u003e)/g, "ṡ");
-	car = car.replace(/ṡ(\u002a|\u005d|\u003e)/g, "ś");
-	car = car.replace(/ś(\u002a|\u005d|\u003e)/g, "ŝ");
-	car = car.replace(/ŝ(\u002a|\u005d|\u003e)/g, "š");
-	car = car.replace(/š(\u002a|\u005d|\u003e)/g, "ş");
-	car = car.replace(/ş(\u002a|\u005d|\u003e)/g, "ș");
-	car = car.replace(/ș(\u002a|\u005d|\u003e)/g, "ṣ");
-	car = car.replace(/ṣ(\u002a|\u005d|\u003e)/g, "ꞩ");
-	car = car.replace(/ꞩ(\u002a|\u005d|\u003e)/g, "s");
-	car = car.replace(/ṡ(\u005b|\u003c)/g, "s");
-	car = car.replace(/ś(\u005b|\u003c)/g, "ṡ");
-	car = car.replace(/ŝ(\u005b|\u003c)/g, "ś");
-	car = car.replace(/š(\u005b|\u003c)/g, "ŝ");
-	car = car.replace(/ş(\u005b|\u003c)/g, "š");
-	car = car.replace(/ș(\u005b|\u003c)/g, "ş");
-	car = car.replace(/ṣ(\u005b|\u003c)/g, "ș");
-	car = car.replace(/ꞩ(\u005b|\u003c)/g, "ṣ");
-	car = car.replace(/s(\u005b|\u003c)/g, "ꞩ");
-	car = car.replace(/t(\u002a|\u005d|\u003e)/g, "ṫ");
-	car = car.replace(/ṫ(\u002a|\u005d|\u003e)/g, "ť");
-	car = car.replace(/ť(\u002a|\u005d|\u003e)/g, "ţ");
-	car = car.replace(/ţ(\u002a|\u005d|\u003e)/g, "ț");
-	car = car.replace(/ț(\u002a|\u005d|\u003e)/g, "ṭ");
-	car = car.replace(/ṭ(\u002a|\u005d|\u003e)/g, "ŧ");
-	car = car.replace(/ŧ(\u002a|\u005d|\u003e)/g, "þ");
-	car = car.replace(/þ(\u002a|\u005d|\u003e)/g, "t");
-	car = car.replace(/ṫ(\u005b|\u003c)/g, "t");
-	car = car.replace(/ť(\u005b|\u003c)/g, "ṫ");
-	car = car.replace(/ţ(\u005b|\u003c)/g, "ť");
-	car = car.replace(/ț(\u005b|\u003c)/g, "ţ");
-	car = car.replace(/ṭ(\u005b|\u003c)/g, "ț");
-	car = car.replace(/ŧ(\u005b|\u003c)/g, "ṭ");
-	car = car.replace(/þ(\u005b|\u003c)/g, "ŧ");
-	car = car.replace(/t(\u005b|\u003c)/g, "þ");
-	car = car.replace(/u(\u002a|\u005d|\u003e)/g, "ů");
-	car = car.replace(/ů(\u002a|\u005d|\u003e)/g, "ú");
-	car = car.replace(/ú(\u002a|\u005d|\u003e)/g, "ù");
-	car = car.replace(/ù(\u002a|\u005d|\u003e)/g, "û");
-	car = car.replace(/û(\u002a|\u005d|\u003e)/g, "ǔ");
-	car = car.replace(/ǔ(\u002a|\u005d|\u003e)/g, "ŭ");
-	car = car.replace(/ŭ(\u002a|\u005d|\u003e)/g, "ū");
-	car = car.replace(/ū(\u002a|\u005d|\u003e)/g, "ü");
-	car = car.replace(/ü(\u002a|\u005d|\u003e)/g, "ű");
-	car = car.replace(/ű(\u002a|\u005d|\u003e)/g, "ũ");
-	car = car.replace(/ũ(\u002a|\u005d|\u003e)/g, "ų");
-	car = car.replace(/ų(\u002a|\u005d|\u003e)/g, "ụ");
-	car = car.replace(/ụ(\u002a|\u005d|\u003e)/g, "ủ");
-	car = car.replace(/ủ(\u002a|\u005d|\u003e)/g, "ư");
-	car = car.replace(/ư(\u002a|\u005d|\u003e)/g, "ʉ");
-	car = car.replace(/ʉ(\u002a|\u005d|\u003e)/g, "u");
-	car = car.replace(/ů(\u005b|\u003c)/g, "u");
-	car = car.replace(/ú(\u005b|\u003c)/g, "ů");
-	car = car.replace(/ú(\u005b|\u003c)/g, "ú");
-	car = car.replace(/ù(\u005b|\u003c)/g, "ú");
-	car = car.replace(/û(\u005b|\u003c)/g, "ù");
-	car = car.replace(/ǔ(\u005b|\u003c)/g, "û");
-	car = car.replace(/ŭ(\u005b|\u003c)/g, "ǔ");
-	car = car.replace(/ū(\u005b|\u003c)/g, "ŭ");
-	car = car.replace(/ü(\u005b|\u003c)/g, "ū");
-	car = car.replace(/ű(\u005b|\u003c)/g, "ü");
-	car = car.replace(/ũ(\u005b|\u003c)/g, "ű");
-	car = car.replace(/ų(\u005b|\u003c)/g, "ũ");
-	car = car.replace(/ụ(\u005b|\u003c)/g, "ų");
-	car = car.replace(/ủ(\u005b|\u003c)/g, "ụ");
-	car = car.replace(/ư(\u005b|\u003c)/g, "ủ");
-	car = car.replace(/ʉ(\u005b|\u003c)/g, "ư");
-	car = car.replace(/u(\u005b|\u003c)/g, "ʉ");
-	car = car.replace(/v(\u002a|\u005d|\u003e)/g, "ṽ");
-	car = car.replace(/ṽ(\u002a|\u005d|\u003e)/g, "ṿ");
-	car = car.replace(/ṿ(\u002a|\u005d|\u003e)/g, "ꝟ");
-	car = car.replace(/ꝟ(\u002a|\u005d|\u003e)/g, "v");
-	car = car.replace(/ṽ(\u005b|\u003c)/g, "v");
-	car = car.replace(/ṿ(\u005b|\u003c)/g, "ṽ");
-	car = car.replace(/ꝟ(\u005b|\u003c)/g, "ṿ");
-	car = car.replace(/v(\u005b|\u003c)/g, "ꝟ");
-	car = car.replace(/w(\u002a|\u005d|\u003e)/g, "ẇ");
-	car = car.replace(/ẇ(\u002a|\u005d|\u003e)/g, "ẃ");
-	car = car.replace(/ẃ(\u002a|\u005d|\u003e)/g, "ẁ");
-	car = car.replace(/ẁ(\u002a|\u005d|\u003e)/g, "ŵ");
-	car = car.replace(/ŵ(\u002a|\u005d|\u003e)/g, "ẅ");
-	car = car.replace(/ẅ(\u002a|\u005d|\u003e)/g, "ẉ");
-	car = car.replace(/ẉ(\u002a|\u005d|\u003e)/g, "w");
-	car = car.replace(/ẇ(\u005b|\u003c)/g, "w");
-	car = car.replace(/ẃ(\u005b|\u003c)/g, "ẇ");
-	car = car.replace(/ẁ(\u005b|\u003c)/g, "ẃ");
-	car = car.replace(/ŵ(\u005b|\u003c)/g, "ẁ");
-	car = car.replace(/ẅ(\u005b|\u003c)/g, "ŵ");
-	car = car.replace(/ẉ(\u005b|\u003c)/g, "ẅ");
-	car = car.replace(/w(\u005b|\u003c)/g, "ẉ");
-	car = car.replace(/x(\u002a|\u005d|\u003e)/g, "ẋ");
-	car = car.replace(/ẋ(\u002a|\u005d|\u003e)/g, "ẍ");
-	car = car.replace(/ẍ(\u002a|\u005d|\u003e)/g, "x");
-	car = car.replace(/ẋ(\u005b|\u003c)/g, "x");
-	car = car.replace(/ẍ(\u005b|\u003c)/g, "ẋ");
-	car = car.replace(/x(\u005b|\u003c)/g, "ẍ");
-	car = car.replace(/y(\u002a|\u005d|\u003e)/g, "ẏ");
-	car = car.replace(/ẏ(\u002a|\u005d|\u003e)/g, "ý");
-	car = car.replace(/ý(\u002a|\u005d|\u003e)/g, "ỳ");
-	car = car.replace(/ỳ(\u002a|\u005d|\u003e)/g, "ŷ");
-	car = car.replace(/ŷ(\u002a|\u005d|\u003e)/g, "ȳ");
-	car = car.replace(/ȳ(\u002a|\u005d|\u003e)/g, "ÿ");
-	car = car.replace(/ÿ(\u002a|\u005d|\u003e)/g, "ỹ");
-	car = car.replace(/ỹ(\u002a|\u005d|\u003e)/g, "ỵ");
-	car = car.replace(/ỵ(\u002a|\u005d|\u003e)/g, "ỷ");
-	car = car.replace(/ỷ(\u002a|\u005d|\u003e)/g, "ɏ");
-	car = car.replace(/ɏ(\u002a|\u005d|\u003e)/g, "y");
-	car = car.replace(/ẏ(\u005b|\u003c)/g, "y");
-	car = car.replace(/ý(\u005b|\u003c)/g, "ẏ");
-	car = car.replace(/ỳ(\u005b|\u003c)/g, "ý");
-	car = car.replace(/ŷ(\u005b|\u003c)/g, "ỳ");
-	car = car.replace(/ȳ(\u005b|\u003c)/g, "ŷ");
-	car = car.replace(/ÿ(\u005b|\u003c)/g, "ȳ");
-	car = car.replace(/ỹ(\u005b|\u003c)/g, "ÿ");
-	car = car.replace(/ỵ(\u005b|\u003c)/g, "ỹ");
-	car = car.replace(/ỷ(\u005b|\u003c)/g, "ỵ");
-	car = car.replace(/ɏ(\u005b|\u003c)/g, "ỷ");
-	car = car.replace(/y(\u005b|\u003c)/g, "ɏ");
-	car = car.replace(/z(\u002a|\u005d|\u003e)/g, "ż");
-	car = car.replace(/ż(\u002a|\u005d|\u003e)/g, "ź");
-	car = car.replace(/ź(\u002a|\u005d|\u003e)/g, "ẑ");
-	car = car.replace(/ẑ(\u002a|\u005d|\u003e)/g, "ž");
-	car = car.replace(/ž(\u002a|\u005d|\u003e)/g, "ẓ");
-	car = car.replace(/ẓ(\u002a|\u005d|\u003e)/g, "ƶ");
-	car = car.replace(/ƶ(\u002a|\u005d|\u003e)/g, "ⱬ");
-	car = car.replace(/ⱬ(\u002a|\u005d|\u003e)/g, "z");
-	car = car.replace(/ż(\u005b|\u003c)/g, "z");
-	car = car.replace(/ź(\u005b|\u003c)/g, "ż");
-	car = car.replace(/ẑ(\u005b|\u003c)/g, "ź");
-	car = car.replace(/ž(\u005b|\u003c)/g, "ẑ");
-	car = car.replace(/ẓ(\u005b|\u003c)/g, "ž");
-	car = car.replace(/ƶ(\u005b|\u003c)/g, "ẓ");
-	car = car.replace(/ⱬ(\u005b|\u003c)/g, "ƶ");
-	car = car.replace(/z(\u005b|\u003c)/g, "ⱬ");
+	document.transcription.text1.value = document.transcription.text1.value
+	.replace(/\u0021(\u002a|\u005d|\u003e)/g, "\u00a1")
+	.replace(/\u00a1(\u002a|\u005d|\u003e)/g, "\u0021")
+	.replace(/\u003f(\u002a|\u005d|\u003e)/g, "\u00bf")
+	.replace(/\u00bf(\u002a|\u005d|\u003e)/g, "\u003f")
+	.replace(/\u0027(\u002a|\u005d|\u003e)/g, "\u2019")
+	.replace(/\u2019(\u002a|\u005d|\u003e)/g, "\u2018")
+	.replace(/\u2018(\u002a|\u005d|\u003e)/g, "\u2039")
+	.replace(/\u2039(\u002a|\u005d|\u003e)/g, "\u203a")
+	.replace(/\u203a(\u002a|\u005d|\u003e)/g, "\u0027")
+	.replace(/\u0022(\u002a|\u005d|\u003e)/g, "\u201c")
+	.replace(/\u201c(\u002a|\u005d|\u003e)/g, "\u201d")
+	.replace(/\u201d(\u002a|\u005d|\u003e)/g, "\u00ab")
+	.replace(/\u00ab(\u002a|\u005d|\u003e)/g, "\u00bb")
+	.replace(/\u00bb(\u002a|\u005d|\u003e)/g, "\u0022")
+	.replace(/\u00a1(\u005b|\u003c)/g, "\u0021")
+	.replace(/\u0021(\u005b|\u003c)/g, "\u00a1")
+	.replace(/\u00bf(\u005b|\u003c)/g, "\u003f")
+	.replace(/\u003f(\u005b|\u003c)/g, "\u00bf")
+	.replace(/\u2019(\u005b|\u003c)/g, "\u0027")
+	.replace(/\u2018(\u005b|\u003c)/g, "\u2019")
+	.replace(/\u2039(\u005b|\u003c)/g, "\u2018")
+	.replace(/\u203a(\u005b|\u003c)/g, "\u2039")
+	.replace(/\u0027(\u005b|\u003c)/g, "\u203a")
+	.replace(/\u201c(\u005b|\u003c)/g, "\u0022")
+	.replace(/\u201d(\u005b|\u003c)/g, "\u201c")
+	.replace(/\u00ab(\u005b|\u003c)/g, "\u201d")
+	.replace(/\u00bb(\u005b|\u003c)/g, "\u00ab")
+	.replace(/\u0022(\u005b|\u003c)/g, "\u00bb")
+	.replace(/A(\u002a|\u005d|\u003e)/g, "Å")
+	.replace(/Å(\u002a|\u005d|\u003e)/g, "Ȧ")
+	.replace(/Ȧ(\u002a|\u005d|\u003e)/g, "Á")
+	.replace(/Á(\u002a|\u005d|\u003e)/g, "À")
+	.replace(/À(\u002a|\u005d|\u003e)/g, "Â")
+	.replace(/Â(\u002a|\u005d|\u003e)/g, "Ǎ")
+	.replace(/Ǎ(\u002a|\u005d|\u003e)/g, "Ă")
+	.replace(/Ă(\u002a|\u005d|\u003e)/g, "Ā")
+	.replace(/Ā(\u002a|\u005d|\u003e)/g, "Ä")
+	.replace(/Ä(\u002a|\u005d|\u003e)/g, "Ã")
+	.replace(/Ã(\u002a|\u005d|\u003e)/g, "Ą")
+	.replace(/Ą(\u002a|\u005d|\u003e)/g, "Ạ")
+	.replace(/Ạ(\u002a|\u005d|\u003e)/g, "Ả")
+	.replace(/Ả(\u002a|\u005d|\u003e)/g, "Ⱥ")
+	.replace(/Ⱥ(\u002a|\u005d|\u003e)/g, "Æ")
+	.replace(/Æ(\u002a|\u005d|\u003e)/g, "A")
+	.replace(/Å(\u005b|\u003c)/g, "A")
+	.replace(/Ȧ(\u005b|\u003c)/g, "Å")
+	.replace(/Á(\u005b|\u003c)/g, "Ȧ")
+	.replace(/À(\u005b|\u003c)/g, "Á")
+	.replace(/Â(\u005b|\u003c)/g, "À")
+	.replace(/Ǎ(\u005b|\u003c)/g, "Â")
+	.replace(/Ă(\u005b|\u003c)/g, "Ǎ")
+	.replace(/Ā(\u005b|\u003c)/g, "Ă")
+	.replace(/Ä(\u005b|\u003c)/g, "Ā")
+	.replace(/Ã(\u005b|\u003c)/g, "Ä")
+	.replace(/Ą(\u005b|\u003c)/g, "Ã")
+	.replace(/Ạ(\u005b|\u003c)/g, "Ą")
+	.replace(/Ả(\u005b|\u003c)/g, "Ạ")
+	.replace(/Ⱥ(\u005b|\u003c)/g, "Ả")
+	.replace(/Æ(\u005b|\u003c)/g, "Ⱥ")
+	.replace(/A(\u005b|\u003c)/g, "Æ")
+	.replace(/B(\u002a|\u005d|\u003e)/g, "Ḃ")
+	.replace(/Ḃ(\u002a|\u005d|\u003e)/g, "Ḅ")
+	.replace(/Ḅ(\u002a|\u005d|\u003e)/g, "Ƀ")
+	.replace(/Ƀ(\u002a|\u005d|\u003e)/g, "B")
+	.replace(/Ḃ(\u005b|\u003c)/g, "B")
+	.replace(/Ḅ(\u005b|\u003c)/g, "Ḃ")
+	.replace(/Ƀ(\u005b|\u003c)/g, "Ḅ")
+	.replace(/B(\u005b|\u003c)/g, "Ƀ")
+	.replace(/C(\u002a|\u005d|\u003e)/g, "Ċ")
+	.replace(/Ċ(\u002a|\u005d|\u003e)/g, "Ć")
+	.replace(/Ć(\u002a|\u005d|\u003e)/g, "Ĉ")
+	.replace(/Ĉ(\u002a|\u005d|\u003e)/g, "Č")
+	.replace(/Č(\u002a|\u005d|\u003e)/g, "Ç")
+	.replace(/Ç(\u002a|\u005d|\u003e)/g, "Ȼ")
+	.replace(/Ȼ(\u002a|\u005d|\u003e)/g, "C")
+	.replace(/Ċ(\u005b|\u003c)/g, "C")
+	.replace(/Ć(\u005b|\u003c)/g, "Ċ")
+	.replace(/Ĉ(\u005b|\u003c)/g, "Ć")
+	.replace(/Č(\u005b|\u003c)/g, "Ĉ")
+	.replace(/Ç(\u005b|\u003c)/g, "Č")
+	.replace(/Ȼ(\u005b|\u003c)/g, "Ç")
+	.replace(/C(\u005b|\u003c)/g, "Ȼ")
+	.replace(/D(\u002a|\u005d|\u003e)/g, "Ḋ")
+	.replace(/Ḋ(\u002a|\u005d|\u003e)/g, "Ď")
+	.replace(/Ď(\u002a|\u005d|\u003e)/g, "Ḑ")
+	.replace(/Ḑ(\u002a|\u005d|\u003e)/g, "Ḍ")
+	.replace(/Ḍ(\u002a|\u005d|\u003e)/g, "Đ")
+	.replace(/Đ(\u002a|\u005d|\u003e)/g, "Ð")
+	.replace(/Ð(\u002a|\u005d|\u003e)/g, "D")
+	.replace(/Ḋ(\u005b|\u003c)/g, "D")
+	.replace(/Ď(\u005b|\u003c)/g, "Ḋ")
+	.replace(/Ḑ(\u005b|\u003c)/g, "Ď")
+	.replace(/Ḍ(\u005b|\u003c)/g, "Ḑ")
+	.replace(/Đ(\u005b|\u003c)/g, "Ḍ")
+	.replace(/Ð(\u005b|\u003c)/g, "Đ")
+	.replace(/D(\u005b|\u003c)/g, "Ð")
+	.replace(/E(\u002a|\u005d|\u003e)/g, "Ė")
+	.replace(/Ė(\u002a|\u005d|\u003e)/g, "É")
+	.replace(/É(\u002a|\u005d|\u003e)/g, "È")
+	.replace(/È(\u002a|\u005d|\u003e)/g, "Ê")
+	.replace(/Ê(\u002a|\u005d|\u003e)/g, "Ě")
+	.replace(/Ě(\u002a|\u005d|\u003e)/g, "Ĕ")
+	.replace(/Ĕ(\u002a|\u005d|\u003e)/g, "Ē")
+	.replace(/Ē(\u002a|\u005d|\u003e)/g, "Ë")
+	.replace(/Ë(\u002a|\u005d|\u003e)/g, "Ẽ")
+	.replace(/Ẽ(\u002a|\u005d|\u003e)/g, "Ȩ")
+	.replace(/Ȩ(\u002a|\u005d|\u003e)/g, "Ę")
+	.replace(/Ę(\u002a|\u005d|\u003e)/g, "Ẹ")
+	.replace(/Ẹ(\u002a|\u005d|\u003e)/g, "Ẻ")
+	.replace(/Ẻ(\u002a|\u005d|\u003e)/g, "Ɇ")
+	.replace(/Ɇ(\u002a|\u005d|\u003e)/g, "Ə")
+	.replace(/Ə(\u002a|\u005d|\u003e)/g, "E")
+	.replace(/Ė(\u005b|\u003c)/g, "E")
+	.replace(/É(\u005b|\u003c)/g, "Ė")
+	.replace(/È(\u005b|\u003c)/g, "É")
+	.replace(/Ê(\u005b|\u003c)/g, "È")
+	.replace(/Ě(\u005b|\u003c)/g, "Ê")
+	.replace(/Ĕ(\u005b|\u003c)/g, "Ě")
+	.replace(/Ē(\u005b|\u003c)/g, "Ĕ")
+	.replace(/Ë(\u005b|\u003c)/g, "Ē")
+	.replace(/Ẽ(\u005b|\u003c)/g, "Ë")
+	.replace(/Ȩ(\u005b|\u003c)/g, "Ẽ")
+	.replace(/Ę(\u005b|\u003c)/g, "Ȩ")
+	.replace(/Ẹ(\u005b|\u003c)/g, "Ę")
+	.replace(/Ẻ(\u005b|\u003c)/g, "Ẹ")
+	.replace(/Ɇ(\u005b|\u003c)/g, "Ẻ")
+	.replace(/Ə(\u005b|\u003c)/g, "Ɇ")
+	.replace(/E(\u005b|\u003c)/g, "Ə")
+	.replace(/F(\u002a|\u005d|\u003e)/g, "Ḟ")
+	.replace(/Ḟ(\u002a|\u005d|\u003e)/g, "F")
+	.replace(/Ḟ(\u005b|\u003c)/g, "F")
+	.replace(/F(\u005b|\u003c)/g, "Ḟ")
+	.replace(/G(\u002a|\u005d|\u003e)/g, "Ġ")
+	.replace(/Ġ(\u002a|\u005d|\u003e)/g, "Ǵ")
+	.replace(/Ǵ(\u002a|\u005d|\u003e)/g, "Ĝ")
+	.replace(/Ĝ(\u002a|\u005d|\u003e)/g, "Ǧ")
+	.replace(/Ǧ(\u002a|\u005d|\u003e)/g, "Ğ")
+	.replace(/Ğ(\u002a|\u005d|\u003e)/g, "Ḡ")
+	.replace(/Ḡ(\u002a|\u005d|\u003e)/g, "Ģ")
+	.replace(/Ģ(\u002a|\u005d|\u003e)/g, "G\u02bb")
+	.replace(/G\u02bb(\u002a|\u005d|\u003e)/g, "Ǥ")
+	.replace(/Ǥ(\u002a|\u005d|\u003e)/g, "G")
+	.replace(/Ġ(\u005b|\u003c)/g, "G")
+	.replace(/Ǵ(\u005b|\u003c)/g, "Ġ")
+	.replace(/Ĝ(\u005b|\u003c)/g, "Ǵ")
+	.replace(/Ǧ(\u005b|\u003c)/g, "Ĝ")
+	.replace(/Ğ(\u005b|\u003c)/g, "Ǧ")
+	.replace(/Ḡ(\u005b|\u003c)/g, "Ğ")
+	.replace(/Ģ(\u005b|\u003c)/g, "Ḡ")
+	.replace(/G\u02bb(\u005b|\u003c)/g, "Ģ")
+	.replace(/Ǥ(\u005b|\u003c)/g, "G\u02bb")
+	.replace(/G(\u005b|\u003c)/g, "Ǥ")
+	.replace(/H(\u002a|\u005d|\u003e)/g, "Ḣ")
+	.replace(/Ḣ(\u002a|\u005d|\u003e)/g, "Ĥ")
+	.replace(/Ĥ(\u002a|\u005d|\u003e)/g, "Ȟ")
+	.replace(/Ȟ(\u002a|\u005d|\u003e)/g, "Ḧ")
+	.replace(/Ḧ(\u002a|\u005d|\u003e)/g, "Ḩ")
+	.replace(/Ḩ(\u002a|\u005d|\u003e)/g, "Ḥ")
+	.replace(/Ḥ(\u002a|\u005d|\u003e)/g, "Ħ")
+	.replace(/Ħ(\u002a|\u005d|\u003e)/g, "H")
+	.replace(/Ḣ(\u005b|\u003c)/g, "H")
+	.replace(/Ĥ(\u005b|\u003c)/g, "Ḣ")
+	.replace(/Ȟ(\u005b|\u003c)/g, "Ĥ")
+	.replace(/Ḧ(\u005b|\u003c)/g, "Ȟ")
+	.replace(/Ḩ(\u005b|\u003c)/g, "Ḧ")
+	.replace(/Ḥ(\u005b|\u003c)/g, "Ḩ")
+	.replace(/Ħ(\u005b|\u003c)/g, "Ḥ")
+	.replace(/H(\u005b|\u003c)/g, "Ħ")
+	.replace(/I(\u002a|\u005d|\u003e)/g, "İ")
+	.replace(/İ(\u002a|\u005d|\u003e)/g, "Í")
+	.replace(/Í(\u002a|\u005d|\u003e)/g, "Ì")
+	.replace(/Ì(\u002a|\u005d|\u003e)/g, "Î")
+	.replace(/Î(\u002a|\u005d|\u003e)/g, "Ǐ")
+	.replace(/Ǐ(\u002a|\u005d|\u003e)/g, "Ĭ")
+	.replace(/Ĭ(\u002a|\u005d|\u003e)/g, "Ī")
+	.replace(/Ī(\u002a|\u005d|\u003e)/g, "Ï")
+	.replace(/Ï(\u002a|\u005d|\u003e)/g, "Ĩ")
+	.replace(/Ĩ(\u002a|\u005d|\u003e)/g, "Į")
+	.replace(/Į(\u002a|\u005d|\u003e)/g, "Ị")
+	.replace(/Ị(\u002a|\u005d|\u003e)/g, "Ỉ")
+	.replace(/Ỉ(\u002a|\u005d|\u003e)/g, "Ɨ")
+	.replace(/Ɨ(\u002a|\u005d|\u003e)/g, "I")
+	.replace(/İ(\u005b|\u003c)/g, "I")
+	.replace(/Í(\u005b|\u003c)/g, "İ")
+	.replace(/Ì(\u005b|\u003c)/g, "Í")
+	.replace(/Î(\u005b|\u003c)/g, "Ì")
+	.replace(/Ǐ(\u005b|\u003c)/g, "Î")
+	.replace(/Ĭ(\u005b|\u003c)/g, "Ǐ")
+	.replace(/Ī(\u005b|\u003c)/g, "Ĭ")
+	.replace(/Ï(\u005b|\u003c)/g, "Ī")
+	.replace(/Ĩ(\u005b|\u003c)/g, "Ï")
+	.replace(/Į(\u005b|\u003c)/g, "Ĩ")
+	.replace(/Ị(\u005b|\u003c)/g, "Į")
+	.replace(/Ỉ(\u005b|\u003c)/g, "Ị")
+	.replace(/Ɨ(\u005b|\u003c)/g, "Ỉ")
+	.replace(/I(\u005b|\u003c)/g, "Ɨ")
+	.replace(/J(\u002a|\u005d|\u003e)/g, "Ĵ")
+	.replace(/Ĵ(\u002a|\u005d|\u003e)/g, "Ɉ")
+	.replace(/Ɉ(\u002a|\u005d|\u003e)/g, "J")
+	.replace(/Ĵ(\u005b|\u003c)/g, "J")
+	.replace(/Ɉ(\u005b|\u003c)/g, "Ĵ")
+	.replace(/J(\u005b|\u003c)/g, "Ɉ")
+	.replace(/K(\u002a|\u005d|\u003e)/g, "Ḱ")
+	.replace(/Ḱ(\u002a|\u005d|\u003e)/g, "Ǩ")
+	.replace(/Ǩ(\u002a|\u005d|\u003e)/g, "Ķ")
+	.replace(/Ķ(\u002a|\u005d|\u003e)/g, "Ḳ")
+	.replace(/Ḳ(\u002a|\u005d|\u003e)/g, "Ꝁ")
+	.replace(/Ꝁ(\u002a|\u005d|\u003e)/g, "Ⱪ")
+	.replace(/Ⱪ(\u002a|\u005d|\u003e)/g, "K")
+	.replace(/Ḱ(\u005b|\u003c)/g, "K")
+	.replace(/Ǩ(\u005b|\u003c)/g, "Ḱ")
+	.replace(/Ķ(\u005b|\u003c)/g, "Ǩ")
+	.replace(/Ḳ(\u005b|\u003c)/g, "Ķ")
+	.replace(/Ꝁ(\u005b|\u003c)/g, "Ḳ")
+	.replace(/Ⱪ(\u005b|\u003c)/g, "Ꝁ")
+	.replace(/K(\u005b|\u003c)/g, "Ⱪ")
+	.replace(/L(\u002a|\u005d|\u003e)/g, "Ĺ")
+	.replace(/Ĺ(\u002a|\u005d|\u003e)/g, "Ľ")
+	.replace(/Ľ(\u002a|\u005d|\u003e)/g, "Ļ")
+	.replace(/Ļ(\u002a|\u005d|\u003e)/g, "Ḷ")
+	.replace(/Ḷ(\u002a|\u005d|\u003e)/g, "Ł")
+	.replace(/Ł(\u002a|\u005d|\u003e)/g, "L")
+	.replace(/Ĺ(\u005b|\u003c)/g, "L")
+	.replace(/Ľ(\u005b|\u003c)/g, "Ĺ")
+	.replace(/Ļ(\u005b|\u003c)/g, "Ľ")
+	.replace(/Ḷ(\u005b|\u003c)/g, "Ļ")
+	.replace(/Ł(\u005b|\u003c)/g, "Ḷ")
+	.replace(/L(\u005b|\u003c)/g, "Ł")
+	.replace(/M(\u002a|\u005d|\u003e)/g, "Ṁ")
+	.replace(/Ṁ(\u002a|\u005d|\u003e)/g, "Ḿ")
+	.replace(/Ḿ(\u002a|\u005d|\u003e)/g, "Ṃ")
+	.replace(/Ṃ(\u002a|\u005d|\u003e)/g, "M")
+	.replace(/Ṁ(\u005b|\u003c)/g, "M")
+	.replace(/Ḿ(\u005b|\u003c)/g, "Ṁ")
+	.replace(/Ṃ(\u005b|\u003c)/g, "Ḿ")
+	.replace(/M(\u005b|\u003c)/g, "Ṃ")
+	.replace(/N(\u002a|\u005d|\u003e)/g, "Ṅ")
+	.replace(/Ṅ(\u002a|\u005d|\u003e)/g, "Ń")
+	.replace(/Ń(\u002a|\u005d|\u003e)/g, "Ǹ")
+	.replace(/Ǹ(\u002a|\u005d|\u003e)/g, "Ň")
+	.replace(/Ň(\u002a|\u005d|\u003e)/g, "Ñ")
+	.replace(/Ñ(\u002a|\u005d|\u003e)/g, "Ņ")
+	.replace(/Ņ(\u002a|\u005d|\u003e)/g, "Ṇ")
+	.replace(/Ṇ(\u002a|\u005d|\u003e)/g, "Ꞥ")
+	.replace(/Ꞥ(\u002a|\u005d|\u003e)/g, "Ꞑ")
+	.replace(/Ꞑ(\u002a|\u005d|\u003e)/g, "N")
+	.replace(/Ṅ(\u005b|\u003c)/g, "N")
+	.replace(/Ń(\u005b|\u003c)/g, "Ṅ")
+	.replace(/Ǹ(\u005b|\u003c)/g, "Ń")
+	.replace(/Ň(\u005b|\u003c)/g, "Ǹ")
+	.replace(/Ñ(\u005b|\u003c)/g, "Ň")
+	.replace(/Ņ(\u005b|\u003c)/g, "Ñ")
+	.replace(/Ṇ(\u005b|\u003c)/g, "Ņ")
+	.replace(/Ꞥ(\u005b|\u003c)/g, "Ṇ")
+	.replace(/Ꞑ(\u005b|\u003c)/g, "Ꞥ")
+	.replace(/N(\u005b|\u003c)/g, "Ꞑ")
+	.replace(/O(\u002a|\u005d|\u003e)/g, "Ȯ")
+	.replace(/Ȯ(\u002a|\u005d|\u003e)/g, "Ó")
+	.replace(/Ó(\u002a|\u005d|\u003e)/g, "Ò")
+	.replace(/Ò(\u002a|\u005d|\u003e)/g, "Ô")
+	.replace(/Ô(\u002a|\u005d|\u003e)/g, "Ǒ")
+	.replace(/Ǒ(\u002a|\u005d|\u003e)/g, "Ŏ")
+	.replace(/Ŏ(\u002a|\u005d|\u003e)/g, "Ō")
+	.replace(/Ō(\u002a|\u005d|\u003e)/g, "Ö")
+	.replace(/Ö(\u002a|\u005d|\u003e)/g, "Ő")
+	.replace(/Ő(\u002a|\u005d|\u003e)/g, "Õ")
+	.replace(/Õ(\u002a|\u005d|\u003e)/g, "Ǫ")
+	.replace(/Ǫ(\u002a|\u005d|\u003e)/g, "Ọ")
+	.replace(/Ọ(\u002a|\u005d|\u003e)/g, "Ỏ")
+	.replace(/Ỏ(\u002a|\u005d|\u003e)/g, "Ơ")
+	.replace(/Ơ(\u002a|\u005d|\u003e)/g, "O\u02bb")
+	.replace(/O\u02bb(\u002a|\u005d|\u003e)/g, "Ø")
+	.replace(/Ø(\u002a|\u005d|\u003e)/g, "Œ")
+	.replace(/Œ(\u002a|\u005d|\u003e)/g, "O")
+	.replace(/Ȯ(\u005b|\u003c)/g, "O")
+	.replace(/Ó(\u005b|\u003c)/g, "Ȯ")
+	.replace(/Ò(\u005b|\u003c)/g, "Ó")
+	.replace(/Ô(\u005b|\u003c)/g, "Ò")
+	.replace(/Ǒ(\u005b|\u003c)/g, "Ô")
+	.replace(/Ŏ(\u005b|\u003c)/g, "Ǒ")
+	.replace(/Ō(\u005b|\u003c)/g, "Ŏ")
+	.replace(/Ö(\u005b|\u003c)/g, "Ō")
+	.replace(/Ő(\u005b|\u003c)/g, "Ö")
+	.replace(/Õ(\u005b|\u003c)/g, "Ő")
+	.replace(/Ǫ(\u005b|\u003c)/g, "Õ")
+	.replace(/Ọ(\u005b|\u003c)/g, "Ǫ")
+	.replace(/Ỏ(\u005b|\u003c)/g, "Ọ")
+	.replace(/Ơ(\u005b|\u003c)/g, "Ỏ")
+	.replace(/O\u02bb(\u005b|\u003c)/g, "Ơ")
+	.replace(/Ø(\u005b|\u003c)/g, "O\u02bb")
+	.replace(/Œ(\u005b|\u003c)/g, "Ø")
+	.replace(/O(\u005b|\u003c)/g, "Œ")
+	.replace(/P(\u002a|\u005d|\u003e)/g, "Ṗ")
+	.replace(/Ṗ(\u002a|\u005d|\u003e)/g, "Ṕ")
+	.replace(/Ṕ(\u002a|\u005d|\u003e)/g, "Ᵽ")
+	.replace(/Ᵽ(\u002a|\u005d|\u003e)/g, "P")
+	.replace(/Ṗ(\u005b|\u003c)/g, "P")
+	.replace(/Ṕ(\u005b|\u003c)/g, "Ṗ")
+	.replace(/Ᵽ(\u005b|\u003c)/g, "Ṕ")
+	.replace(/P(\u005b|\u003c)/g, "Ᵽ")
+	.replace(/Q(\u002a|\u005d|\u003e)/g, "Ƣ")
+	.replace(/Ƣ(\u002a|\u005d|\u003e)/g, "Q")
+	.replace(/Ƣ(\u005b|\u003c)/g, "Q")
+	.replace(/Q(\u005b|\u003c)/g, "Ƣ")
+	.replace(/R(\u002a|\u005d|\u003e)/g, "Ṙ")
+	.replace(/Ṙ(\u002a|\u005d|\u003e)/g, "Ŕ")
+	.replace(/Ŕ(\u002a|\u005d|\u003e)/g, "Ř")
+	.replace(/Ř(\u002a|\u005d|\u003e)/g, "Ŗ")
+	.replace(/Ŗ(\u002a|\u005d|\u003e)/g, "Ṛ")
+	.replace(/Ṛ(\u002a|\u005d|\u003e)/g, "Ɍ")
+	.replace(/Ɍ(\u002a|\u005d|\u003e)/g, "R")
+	.replace(/Ṙ(\u005b|\u003c)/g, "R")
+	.replace(/Ŕ(\u005b|\u003c)/g, "Ṙ")
+	.replace(/Ř(\u005b|\u003c)/g, "Ŕ")
+	.replace(/Ŗ(\u005b|\u003c)/g, "Ř")
+	.replace(/Ṛ(\u005b|\u003c)/g, "Ŗ")
+	.replace(/Ɍ(\u005b|\u003c)/g, "Ṛ")
+	.replace(/R(\u005b|\u003c)/g, "Ɍ")
+	.replace(/S(\u002a|\u005d|\u003e)/g, "Ṡ")
+	.replace(/Ṡ(\u002a|\u005d|\u003e)/g, "Ś")
+	.replace(/Ś(\u002a|\u005d|\u003e)/g, "Ŝ")
+	.replace(/Ŝ(\u002a|\u005d|\u003e)/g, "Š")
+	.replace(/Š(\u002a|\u005d|\u003e)/g, "Ş")
+	.replace(/Ş(\u002a|\u005d|\u003e)/g, "Ș")
+	.replace(/Ș(\u002a|\u005d|\u003e)/g, "Ṣ")
+	.replace(/Ṣ(\u002a|\u005d|\u003e)/g, "Ꞩ")
+	.replace(/Ꞩ(\u002a|\u005d|\u003e)/g, "S")
+	.replace(/Ṡ(\u005b|\u003c)/g, "S")
+	.replace(/Ś(\u005b|\u003c)/g, "Ṡ")
+	.replace(/Ŝ(\u005b|\u003c)/g, "Ś")
+	.replace(/Š(\u005b|\u003c)/g, "Ŝ")
+	.replace(/Ş(\u005b|\u003c)/g, "Š")
+	.replace(/Ș(\u005b|\u003c)/g, "Ş")
+	.replace(/Ṣ(\u005b|\u003c)/g, "Ș")
+	.replace(/Ꞩ(\u005b|\u003c)/g, "Ṣ")
+	.replace(/S(\u005b|\u003c)/g, "Ꞩ")
+	.replace(/T(\u002a|\u005d|\u003e)/g, "Ṫ")
+	.replace(/Ṫ(\u002a|\u005d|\u003e)/g, "Ť")
+	.replace(/Ť(\u002a|\u005d|\u003e)/g, "Ţ")
+	.replace(/Ţ(\u002a|\u005d|\u003e)/g, "Ț")
+	.replace(/Ț(\u002a|\u005d|\u003e)/g, "Ṭ")
+	.replace(/Ṭ(\u002a|\u005d|\u003e)/g, "Ŧ")
+	.replace(/Ŧ(\u002a|\u005d|\u003e)/g, "Þ")
+	.replace(/Þ(\u002a|\u005d|\u003e)/g, "T")
+	.replace(/Ṫ(\u005B|\u003c)/g, "T")
+	.replace(/Ť(\u005B|\u003c)/g, "Ṫ")
+	.replace(/Ţ(\u005B|\u003c)/g, "Ť")
+	.replace(/Ț(\u005B|\u003c)/g, "Ţ")
+	.replace(/Ṭ(\u005B|\u003c)/g, "Ț")
+	.replace(/Ŧ(\u005B|\u003c)/g, "Ṭ")
+	.replace(/Þ(\u005B|\u003c)/g, "Ŧ")
+	.replace(/T(\u005B|\u003c)/g, "Þ")
+	.replace(/U(\u002a|\u005d|\u003e)/g, "Ů")
+	.replace(/Ů(\u002a|\u005d|\u003e)/g, "Ú")
+	.replace(/Ú(\u002a|\u005d|\u003e)/g, "Ù")
+	.replace(/Ù(\u002a|\u005d|\u003e)/g, "Û")
+	.replace(/Û(\u002a|\u005d|\u003e)/g, "Ǔ")
+	.replace(/Ǔ(\u002a|\u005d|\u003e)/g, "Ŭ")
+	.replace(/Ŭ(\u002a|\u005d|\u003e)/g, "Ū")
+	.replace(/Ū(\u002a|\u005d|\u003e)/g, "Ü")
+	.replace(/Ü(\u002a|\u005d|\u003e)/g, "Ű")
+	.replace(/Ű(\u002a|\u005d|\u003e)/g, "Ũ")
+	.replace(/Ũ(\u002a|\u005d|\u003e)/g, "Ų")
+	.replace(/Ų(\u002a|\u005d|\u003e)/g, "Ụ")
+	.replace(/Ụ(\u002a|\u005d|\u003e)/g, "Ủ")
+	.replace(/Ủ(\u002a|\u005d|\u003e)/g, "Ư")
+	.replace(/Ư(\u002a|\u005d|\u003e)/g, "Ʉ")
+	.replace(/Ʉ(\u002a|\u005d|\u003e)/g, "U")
+	.replace(/Ů(\u005b|\u003c)/g, "U")
+	.replace(/Ú(\u005b|\u003c)/g, "Ů")
+	.replace(/Ú(\u005b|\u003c)/g, "Ú")
+	.replace(/Ù(\u005b|\u003c)/g, "Ú")
+	.replace(/Û(\u005b|\u003c)/g, "Ù")
+	.replace(/Ǔ(\u005b|\u003c)/g, "Û")
+	.replace(/Ŭ(\u005b|\u003c)/g, "Ǔ")
+	.replace(/Ū(\u005b|\u003c)/g, "Ŭ")
+	.replace(/Ü(\u005b|\u003c)/g, "Ū")
+	.replace(/Ű(\u005b|\u003c)/g, "Ü")
+	.replace(/Ũ(\u005b|\u003c)/g, "Ű")
+	.replace(/Ų(\u005b|\u003c)/g, "Ũ")
+	.replace(/Ụ(\u005b|\u003c)/g, "Ų")
+	.replace(/Ủ(\u005b|\u003c)/g, "Ụ")
+	.replace(/Ư(\u005b|\u003c)/g, "Ủ")
+	.replace(/Ʉ(\u005b|\u003c)/g, "Ư")
+	.replace(/U(\u005b|\u003c)/g, "Ʉ")
+	.replace(/V(\u002a|\u005d|\u003e)/g, "Ṽ")
+	.replace(/Ṽ(\u002a|\u005d|\u003e)/g, "Ṿ")
+	.replace(/Ṿ(\u002a|\u005d|\u003e)/g, "Ꝟ")
+	.replace(/Ꝟ(\u002a|\u005d|\u003e)/g, "V")
+	.replace(/Ṽ(\u005b|\u003c)/g, "V")
+	.replace(/Ṿ(\u005b|\u003c)/g, "Ṽ")
+	.replace(/Ꝟ(\u005b|\u003c)/g, "Ṿ")
+	.replace(/V(\u005b|\u003c)/g, "Ꝟ")
+	.replace(/W(\u002a|\u005d|\u003e)/g, "Ẇ")
+	.replace(/Ẇ(\u002a|\u005d|\u003e)/g, "Ẃ")
+	.replace(/Ẃ(\u002a|\u005d|\u003e)/g, "Ẁ")
+	.replace(/Ẁ(\u002a|\u005d|\u003e)/g, "Ŵ")
+	.replace(/Ŵ(\u002a|\u005d|\u003e)/g, "Ẅ")
+	.replace(/Ẅ(\u002a|\u005d|\u003e)/g, "Ẉ")
+	.replace(/Ẉ(\u002a|\u005d|\u003e)/g, "W")
+	.replace(/Ẇ(\u005b|\u003c)/g, "W")
+	.replace(/Ẃ(\u005b|\u003c)/g, "Ẇ")
+	.replace(/Ẁ(\u005b|\u003c)/g, "Ẃ")
+	.replace(/Ŵ(\u005b|\u003c)/g, "Ẁ")
+	.replace(/Ẅ(\u005b|\u003c)/g, "Ŵ")
+	.replace(/Ẉ(\u005b|\u003c)/g, "Ẅ")
+	.replace(/W(\u005b|\u003c)/g, "Ẉ")
+	.replace(/X(\u002a|\u005d|\u003e)/g, "Ẋ")
+	.replace(/Ẋ(\u002a|\u005d|\u003e)/g, "Ẍ")
+	.replace(/Ẍ(\u002a|\u005d|\u003e)/g, "X")
+	.replace(/Ẋ(\u005b|\u003c)/g, "X")
+	.replace(/Ẍ(\u005b|\u003c)/g, "Ẋ")
+	.replace(/X(\u005b|\u003c)/g, "Ẍ")
+	.replace(/Y(\u002a|\u005d|\u003e)/g, "Ẏ")
+	.replace(/Ẏ(\u002a|\u005d|\u003e)/g, "Ý")
+	.replace(/Ý(\u002a|\u005d|\u003e)/g, "Ỳ")
+	.replace(/Ỳ(\u002a|\u005d|\u003e)/g, "Ŷ")
+	.replace(/Ŷ(\u002a|\u005d|\u003e)/g, "Ȳ")
+	.replace(/Ȳ(\u002a|\u005d|\u003e)/g, "Ÿ")
+	.replace(/Ÿ(\u002a|\u005d|\u003e)/g, "Ỹ")
+	.replace(/Ỹ(\u002a|\u005d|\u003e)/g, "Ỵ")
+	.replace(/Ỵ(\u002a|\u005d|\u003e)/g, "Ỷ")
+	.replace(/Ỷ(\u002a|\u005d|\u003e)/g, "Ɏ")
+	.replace(/Ɏ(\u002a|\u005d|\u003e)/g, "Y")
+	.replace(/Ẏ(\u005b|\u003c)/g, "Y")
+	.replace(/Ý(\u005b|\u003c)/g, "Ẏ")
+	.replace(/Ỳ(\u005b|\u003c)/g, "Ý")
+	.replace(/Ŷ(\u005b|\u003c)/g, "Ỳ")
+	.replace(/Ȳ(\u005b|\u003c)/g, "Ŷ")
+	.replace(/Ÿ(\u005b|\u003c)/g, "Ȳ")
+	.replace(/Ỹ(\u005b|\u003c)/g, "Ÿ")
+	.replace(/Ỵ(\u005b|\u003c)/g, "Ỹ")
+	.replace(/Ỷ(\u005b|\u003c)/g, "Ỵ")
+	.replace(/Ɏ(\u005b|\u003c)/g, "Ỷ")
+	.replace(/Y(\u005b|\u003c)/g, "Ɏ")
+	.replace(/Z(\u002a|\u005d|\u003e)/g, "Ż")
+	.replace(/Ż(\u002a|\u005d|\u003e)/g, "Ź")
+	.replace(/Ź(\u002a|\u005d|\u003e)/g, "Ẑ")
+	.replace(/Ẑ(\u002a|\u005d|\u003e)/g, "Ž")
+	.replace(/Ž(\u002a|\u005d|\u003e)/g, "Ẓ")
+	.replace(/Ẓ(\u002a|\u005d|\u003e)/g, "Ƶ")
+	.replace(/Ƶ(\u002a|\u005d|\u003e)/g, "Ⱬ")
+	.replace(/Ⱬ(\u002a|\u005d|\u003e)/g, "Z")
+	.replace(/Ż(\u005b|\u003c)/g, "Z")
+	.replace(/Ź(\u005b|\u003c)/g, "Ż")
+	.replace(/Ẑ(\u005b|\u003c)/g, "Ź")
+	.replace(/Ž(\u005b|\u003c)/g, "Ẑ")
+	.replace(/Ẓ(\u005b|\u003c)/g, "Ž")
+	.replace(/Ƶ(\u005b|\u003c)/g, "Ẓ")
+	.replace(/Ⱬ(\u005b|\u003c)/g, "Ƶ")
+	.replace(/Z(\u005b|\u003c)/g, "Ⱬ")
+	.replace(/a(\u002a|\u005d|\u003e)/g, "å")
+	.replace(/å(\u002a|\u005d|\u003e)/g, "ȧ")
+	.replace(/ȧ(\u002a|\u005d|\u003e)/g, "á")
+	.replace(/á(\u002a|\u005d|\u003e)/g, "à")
+	.replace(/à(\u002a|\u005d|\u003e)/g, "â")
+	.replace(/â(\u002a|\u005d|\u003e)/g, "ǎ")
+	.replace(/ǎ(\u002a|\u005d|\u003e)/g, "ă")
+	.replace(/ă(\u002a|\u005d|\u003e)/g, "ā")
+	.replace(/ā(\u002a|\u005d|\u003e)/g, "ä")
+	.replace(/ä(\u002a|\u005d|\u003e)/g, "ã")
+	.replace(/ã(\u002a|\u005d|\u003e)/g, "ą")
+	.replace(/ą(\u002a|\u005d|\u003e)/g, "ạ")
+	.replace(/ạ(\u002a|\u005d|\u003e)/g, "ả")
+	.replace(/ả(\u002a|\u005d|\u003e)/g, "ⱥ")
+	.replace(/ⱥ(\u002a|\u005d|\u003e)/g, "æ")
+	.replace(/æ(\u002a|\u005d|\u003e)/g, "a")
+	.replace(/å(\u005b|\u003c)/g, "a")
+	.replace(/ȧ(\u005b|\u003c)/g, "å")
+	.replace(/á(\u005b|\u003c)/g, "ȧ")
+	.replace(/à(\u005b|\u003c)/g, "á")
+	.replace(/â(\u005b|\u003c)/g, "à")
+	.replace(/ǎ(\u005b|\u003c)/g, "â")
+	.replace(/ă(\u005b|\u003c)/g, "ǎ")
+	.replace(/ā(\u005b|\u003c)/g, "ă")
+	.replace(/ä(\u005b|\u003c)/g, "ā")
+	.replace(/ã(\u005b|\u003c)/g, "ä")
+	.replace(/ą(\u005b|\u003c)/g, "ã")
+	.replace(/ạ(\u005b|\u003c)/g, "ą")
+	.replace(/ả(\u005b|\u003c)/g, "ạ")
+	.replace(/ⱥ(\u005b|\u003c)/g, "ả")
+	.replace(/æ(\u005b|\u003c)/g, "ⱥ")
+	.replace(/a(\u005b|\u003c)/g, "æ")
+	.replace(/b(\u002a|\u005d|\u003e)/g, "ḃ")
+	.replace(/ḃ(\u002a|\u005d|\u003e)/g, "ḅ")
+	.replace(/ḅ(\u002a|\u005d|\u003e)/g, "ƀ")
+	.replace(/ƀ(\u002a|\u005d|\u003e)/g, "b")
+	.replace(/ḃ(\u005b|\u003c)/g, "b")
+	.replace(/ḅ(\u005b|\u003c)/g, "ḃ")
+	.replace(/ƀ(\u005b|\u003c)/g, "ḅ")
+	.replace(/b(\u005b|\u003c)/g, "ƀ")
+	.replace(/c(\u002a|\u005d|\u003e)/g, "ċ")
+	.replace(/ċ(\u002a|\u005d|\u003e)/g, "ć")
+	.replace(/ć(\u002a|\u005d|\u003e)/g, "ĉ")
+	.replace(/ĉ(\u002a|\u005d|\u003e)/g, "č")
+	.replace(/č(\u002a|\u005d|\u003e)/g, "ç")
+	.replace(/ç(\u002a|\u005d|\u003e)/g, "ȼ")
+	.replace(/ȼ(\u002a|\u005d|\u003e)/g, "c")
+	.replace(/ċ(\u005b|\u003c)/g, "c")
+	.replace(/ć(\u005b|\u003c)/g, "ċ")
+	.replace(/ĉ(\u005b|\u003c)/g, "ć")
+	.replace(/č(\u005b|\u003c)/g, "ĉ")
+	.replace(/ç(\u005b|\u003c)/g, "č")
+	.replace(/ȼ(\u005b|\u003c)/g, "ç")
+	.replace(/c(\u005b|\u003c)/g, "ȼ")
+	.replace(/d(\u002a|\u005d|\u003e)/g, "ḋ")
+	.replace(/ḋ(\u002a|\u005d|\u003e)/g, "ď")
+	.replace(/ď(\u002a|\u005d|\u003e)/g, "ḑ")
+	.replace(/ḑ(\u002a|\u005d|\u003e)/g, "ḍ")
+	.replace(/ḍ(\u002a|\u005d|\u003e)/g, "đ")
+	.replace(/đ(\u002a|\u005d|\u003e)/g, "ð")
+	.replace(/ð(\u002a|\u005d|\u003e)/g, "d")
+	.replace(/ḋ(\u005b|\u003c)/g, "d")
+	.replace(/ď(\u005b|\u003c)/g, "ḋ")
+	.replace(/ḑ(\u005b|\u003c)/g, "ď")
+	.replace(/ḍ(\u005b|\u003c)/g, "ḑ")
+	.replace(/đ(\u005b|\u003c)/g, "ḍ")
+	.replace(/ð(\u005b|\u003c)/g, "đ")
+	.replace(/d(\u005b|\u003c)/g, "ð")
+	.replace(/e(\u002a|\u005d|\u003e)/g, "ė")
+	.replace(/ė(\u002a|\u005d|\u003e)/g, "é")
+	.replace(/é(\u002a|\u005d|\u003e)/g, "è")
+	.replace(/è(\u002a|\u005d|\u003e)/g, "ê")
+	.replace(/ê(\u002a|\u005d|\u003e)/g, "ě")
+	.replace(/ě(\u002a|\u005d|\u003e)/g, "ĕ")
+	.replace(/ĕ(\u002a|\u005d|\u003e)/g, "ē")
+	.replace(/ē(\u002a|\u005d|\u003e)/g, "ë")
+	.replace(/ë(\u002a|\u005d|\u003e)/g, "ẽ")
+	.replace(/ẽ(\u002a|\u005d|\u003e)/g, "ȩ")
+	.replace(/ȩ(\u002a|\u005d|\u003e)/g, "ę")
+	.replace(/ę(\u002a|\u005d|\u003e)/g, "ẹ")
+	.replace(/ẹ(\u002a|\u005d|\u003e)/g, "ẻ")
+	.replace(/ẻ(\u002a|\u005d|\u003e)/g, "ɇ")
+	.replace(/ɇ(\u002a|\u005d|\u003e)/g, "ə")
+	.replace(/ə(\u002a|\u005d|\u003e)/g, "e")
+	.replace(/ė(\u005b|\u003c)/g, "e")
+	.replace(/é(\u005b|\u003c)/g, "ė")
+	.replace(/è(\u005b|\u003c)/g, "é")
+	.replace(/ê(\u005b|\u003c)/g, "è")
+	.replace(/ě(\u005b|\u003c)/g, "ê")
+	.replace(/ĕ(\u005b|\u003c)/g, "ě")
+	.replace(/ē(\u005b|\u003c)/g, "ĕ")
+	.replace(/ë(\u005b|\u003c)/g, "ē")
+	.replace(/ẽ(\u005b|\u003c)/g, "ë")
+	.replace(/ȩ(\u005b|\u003c)/g, "ẽ")
+	.replace(/ę(\u005b|\u003c)/g, "ȩ")
+	.replace(/ẹ(\u005b|\u003c)/g, "ę")
+	.replace(/ẻ(\u005b|\u003c)/g, "ẹ")
+	.replace(/ɇ(\u005b|\u003c)/g, "ẻ")
+	.replace(/ə(\u005b|\u003c)/g, "ɇ")
+	.replace(/e(\u005b|\u003c)/g, "ə")
+	.replace(/f(\u002a|\u005d|\u003e)/g, "ḟ")
+	.replace(/ḟ(\u002a|\u005d|\u003e)/g, "f")
+	.replace(/ḟ(\u005b|\u003c)/g, "f")
+	.replace(/f(\u005b|\u003c)/g, "ḟ")
+	.replace(/g(\u002a|\u005d|\u003e)/g, "ġ")
+	.replace(/ġ(\u002a|\u005d|\u003e)/g, "ǵ")
+	.replace(/ǵ(\u002a|\u005d|\u003e)/g, "ĝ")
+	.replace(/ĝ(\u002a|\u005d|\u003e)/g, "ǧ")
+	.replace(/ǧ(\u002a|\u005d|\u003e)/g, "ğ")
+	.replace(/ğ(\u002a|\u005d|\u003e)/g, "ḡ")
+	.replace(/ḡ(\u002a|\u005d|\u003e)/g, "ģ")
+	.replace(/ģ(\u002a|\u005d|\u003e)/g, "g\u02bb")
+	.replace(/g\u02bb(\u002a|\u005d|\u003e)/g, "ǥ")
+	.replace(/ǥ(\u002a|\u005d|\u003e)/g, "g")
+	.replace(/ġ(\u005b|\u003c)/g, "g")
+	.replace(/ǵ(\u005b|\u003c)/g, "ġ")
+	.replace(/ĝ(\u005b|\u003c)/g, "ǵ")
+	.replace(/ǧ(\u005b|\u003c)/g, "ĝ")
+	.replace(/ğ(\u005b|\u003c)/g, "ǧ")
+	.replace(/ḡ(\u005b|\u003c)/g, "ğ")
+	.replace(/ģ(\u005b|\u003c)/g, "ḡ")
+	.replace(/g\u02bb(\u005b|\u003c)/g, "ģ")
+	.replace(/ǥ(\u005b|\u003c)/g, "g\u02bb")
+	.replace(/g(\u005b|\u003c)/g, "ǥ")
+	.replace(/h(\u002a|\u005d|\u003e)/g, "ḣ")
+	.replace(/ḣ(\u002a|\u005d|\u003e)/g, "ĥ")
+	.replace(/ĥ(\u002a|\u005d|\u003e)/g, "ȟ")
+	.replace(/ȟ(\u002a|\u005d|\u003e)/g, "ḧ")
+	.replace(/ḧ(\u002a|\u005d|\u003e)/g, "ḩ")
+	.replace(/ḩ(\u002a|\u005d|\u003e)/g, "ḥ")
+	.replace(/ḥ(\u002a|\u005d|\u003e)/g, "ħ")
+	.replace(/ħ(\u002a|\u005d|\u003e)/g, "h")
+	.replace(/ḣ(\u005b|\u003c)/g, "h")
+	.replace(/ĥ(\u005b|\u003c)/g, "ḣ")
+	.replace(/ȟ(\u005b|\u003c)/g, "ĥ")
+	.replace(/ḧ(\u005b|\u003c)/g, "ȟ")
+	.replace(/ḩ(\u005b|\u003c)/g, "ḧ")
+	.replace(/ḥ(\u005b|\u003c)/g, "ḩ")
+	.replace(/ħ(\u005b|\u003c)/g, "ḥ")
+	.replace(/h(\u005b|\u003c)/g, "ħ")
+	.replace(/i(\u002a|\u005d|\u003e)/g, "ı")
+	.replace(/ı(\u002a|\u005d|\u003e)/g, "í")
+	.replace(/í(\u002a|\u005d|\u003e)/g, "ì")
+	.replace(/ì(\u002a|\u005d|\u003e)/g, "î")
+	.replace(/î(\u002a|\u005d|\u003e)/g, "ǐ")
+	.replace(/ǐ(\u002a|\u005d|\u003e)/g, "ĭ")
+	.replace(/ĭ(\u002a|\u005d|\u003e)/g, "ī")
+	.replace(/ī(\u002a|\u005d|\u003e)/g, "ï")
+	.replace(/ï(\u002a|\u005d|\u003e)/g, "ĩ")
+	.replace(/ĩ(\u002a|\u005d|\u003e)/g, "į")
+	.replace(/į(\u002a|\u005d|\u003e)/g, "ị")
+	.replace(/ị(\u002a|\u005d|\u003e)/g, "ỉ")
+	.replace(/ỉ(\u002a|\u005d|\u003e)/g, "ɨ")
+	.replace(/ɨ(\u002a|\u005d|\u003e)/g, "i")
+	.replace(/ı(\u005b|\u003c)/g, "i")
+	.replace(/í(\u005b|\u003c)/g, "ı")
+	.replace(/ì(\u005b|\u003c)/g, "í")
+	.replace(/î(\u005b|\u003c)/g, "ì")
+	.replace(/ǐ(\u005b|\u003c)/g, "î")
+	.replace(/ĭ(\u005b|\u003c)/g, "ǐ")
+	.replace(/ī(\u005b|\u003c)/g, "ĭ")
+	.replace(/ï(\u005b|\u003c)/g, "ī")
+	.replace(/ĩ(\u005b|\u003c)/g, "ï")
+	.replace(/į(\u005b|\u003c)/g, "ĩ")
+	.replace(/ị(\u005b|\u003c)/g, "į")
+	.replace(/ỉ(\u005b|\u003c)/g, "ị")
+	.replace(/ɨ(\u005b|\u003c)/g, "ỉ")
+	.replace(/i(\u005b|\u003c)/g, "ɨ")
+	.replace(/j(\u002a|\u005d|\u003e)/g, "ĵ")
+	.replace(/ĵ(\u002a|\u005d|\u003e)/g, "ɉ")
+	.replace(/ɉ(\u002a|\u005d|\u003e)/g, "j")
+	.replace(/ĵ(\u005b|\u003c)/g, "j")
+	.replace(/ɉ(\u005b|\u003c)/g, "ĵ")
+	.replace(/j(\u005b|\u003c)/g, "ɉ")
+	.replace(/k(\u002a|\u005d|\u003e)/g, "ḱ")
+	.replace(/ḱ(\u002a|\u005d|\u003e)/g, "ǩ")
+	.replace(/ǩ(\u002a|\u005d|\u003e)/g, "ķ")
+	.replace(/ķ(\u002a|\u005d|\u003e)/g, "ḳ")
+	.replace(/ḳ(\u002a|\u005d|\u003e)/g, "ꝁ")
+	.replace(/ꝁ(\u002a|\u005d|\u003e)/g, "ⱪ")
+	.replace(/ⱪ(\u002a|\u005d|\u003e)/g, "k")
+	.replace(/ḱ(\u005b|\u003c)/g, "k")
+	.replace(/ǩ(\u005b|\u003c)/g, "ḱ")
+	.replace(/ķ(\u005b|\u003c)/g, "ǩ")
+	.replace(/ḳ(\u005b|\u003c)/g, "ķ")
+	.replace(/ꝁ(\u005b|\u003c)/g, "ḳ")
+	.replace(/ⱪ(\u005b|\u003c)/g, "ꝁ")
+	.replace(/k(\u005b|\u003c)/g, "ⱪ")
+	.replace(/l(\u002a|\u005d|\u003e)/g, "ĺ")
+	.replace(/ĺ(\u002a|\u005d|\u003e)/g, "ľ")
+	.replace(/ľ(\u002a|\u005d|\u003e)/g, "ļ")
+	.replace(/ļ(\u002a|\u005d|\u003e)/g, "ḷ")
+	.replace(/ḷ(\u002a|\u005d|\u003e)/g, "ł")
+	.replace(/ł(\u002a|\u005d|\u003e)/g, "l")
+	.replace(/ĺ(\u005b|\u003c)/g, "l")
+	.replace(/ľ(\u005b|\u003c)/g, "ĺ")
+	.replace(/ļ(\u005b|\u003c)/g, "ľ")
+	.replace(/ḷ(\u005b|\u003c)/g, "ļ")
+	.replace(/ł(\u005b|\u003c)/g, "ḷ")
+	.replace(/l(\u005b|\u003c)/g, "ł")
+	.replace(/m(\u002a|\u005d|\u003e)/g, "ṁ")
+	.replace(/ṁ(\u002a|\u005d|\u003e)/g, "ḿ")
+	.replace(/ḿ(\u002a|\u005d|\u003e)/g, "ṃ")
+	.replace(/ṃ(\u002a|\u005d|\u003e)/g, "m")
+	.replace(/ṁ(\u005b|\u003c)/g, "m")
+	.replace(/ḿ(\u005b|\u003c)/g, "ṁ")
+	.replace(/ṃ(\u005b|\u003c)/g, "ḿ")
+	.replace(/m(\u005b|\u003c)/g, "ṃ")
+	.replace(/n(\u002a|\u005d|\u003e)/g, "ṅ")
+	.replace(/ṅ(\u002a|\u005d|\u003e)/g, "ń")
+	.replace(/ń(\u002a|\u005d|\u003e)/g, "ǹ")
+	.replace(/ǹ(\u002a|\u005d|\u003e)/g, "ň")
+	.replace(/ň(\u002a|\u005d|\u003e)/g, "ñ")
+	.replace(/ñ(\u002a|\u005d|\u003e)/g, "ņ")
+	.replace(/ņ(\u002a|\u005d|\u003e)/g, "ṇ")
+	.replace(/ṇ(\u002a|\u005d|\u003e)/g, "ꞥ")
+	.replace(/ꞥ(\u002a|\u005d|\u003e)/g, "ꞑ")
+	.replace(/ꞑ(\u002a|\u005d|\u003e)/g, "n")
+	.replace(/ṅ(\u005b|\u003c)/g, "n")
+	.replace(/ń(\u005b|\u003c)/g, "ṅ")
+	.replace(/ǹ(\u005b|\u003c)/g, "ń")
+	.replace(/ň(\u005b|\u003c)/g, "ǹ")
+	.replace(/ñ(\u005b|\u003c)/g, "ň")
+	.replace(/ņ(\u005b|\u003c)/g, "ñ")
+	.replace(/ṇ(\u005b|\u003c)/g, "ņ")
+	.replace(/ꞥ(\u005b|\u003c)/g, "ṇ")
+	.replace(/ꞑ(\u005b|\u003c)/g, "ꞥ")
+	.replace(/n(\u005b|\u003c)/g, "ꞑ")
+	.replace(/o(\u002a|\u005d|\u003e)/g, "ȯ")
+	.replace(/ȯ(\u002a|\u005d|\u003e)/g, "ó")
+	.replace(/ó(\u002a|\u005d|\u003e)/g, "ò")
+	.replace(/ò(\u002a|\u005d|\u003e)/g, "ô")
+	.replace(/ô(\u002a|\u005d|\u003e)/g, "ǒ")
+	.replace(/ǒ(\u002a|\u005d|\u003e)/g, "ŏ")
+	.replace(/ŏ(\u002a|\u005d|\u003e)/g, "ō")
+	.replace(/ō(\u002a|\u005d|\u003e)/g, "ö")
+	.replace(/ö(\u002a|\u005d|\u003e)/g, "ő")
+	.replace(/ő(\u002a|\u005d|\u003e)/g, "õ")
+	.replace(/õ(\u002a|\u005d|\u003e)/g, "ǫ")
+	.replace(/ǫ(\u002a|\u005d|\u003e)/g, "ọ")
+	.replace(/ọ(\u002a|\u005d|\u003e)/g, "ỏ")
+	.replace(/ỏ(\u002a|\u005d|\u003e)/g, "ơ")
+	.replace(/ơ(\u002a|\u005d|\u003e)/g, "o\u02bb")
+	.replace(/o\u02bb(\u002a|\u005d|\u003e)/g, "ø")
+	.replace(/ø(\u002a|\u005d|\u003e)/g, "œ")
+	.replace(/œ(\u002a|\u005d|\u003e)/g, "o")
+	.replace(/ȯ(\u005b|\u003c)/g, "o")
+	.replace(/ó(\u005b|\u003c)/g, "ȯ")
+	.replace(/ò(\u005b|\u003c)/g, "ó")
+	.replace(/ô(\u005b|\u003c)/g, "ò")
+	.replace(/ǒ(\u005b|\u003c)/g, "ô")
+	.replace(/ŏ(\u005b|\u003c)/g, "ǒ")
+	.replace(/ō(\u005b|\u003c)/g, "ŏ")
+	.replace(/ö(\u005b|\u003c)/g, "ō")
+	.replace(/ő(\u005b|\u003c)/g, "ö")
+	.replace(/õ(\u005b|\u003c)/g, "ő")
+	.replace(/ǫ(\u005b|\u003c)/g, "õ")
+	.replace(/ọ(\u005b|\u003c)/g, "ǫ")
+	.replace(/ỏ(\u005b|\u003c)/g, "ọ")
+	.replace(/ơ(\u005b|\u003c)/g, "ỏ")
+	.replace(/o\u02bb(\u005b|\u003c)/g, "ơ")
+	.replace(/ø(\u005b|\u003c)/g, "o\u02bb")
+	.replace(/œ(\u005b|\u003c)/g, "ø")
+	.replace(/o(\u005b|\u003c)/g, "œ")
+	.replace(/p(\u002a|\u005d|\u003e)/g, "ṗ")
+	.replace(/ṗ(\u002a|\u005d|\u003e)/g, "ṕ")
+	.replace(/ṕ(\u002a|\u005d|\u003e)/g, "ᵽ")
+	.replace(/ᵽ(\u002a|\u005d|\u003e)/g, "p")
+	.replace(/ṗ(\u005b|\u003c)/g, "p")
+	.replace(/ṕ(\u005b|\u003c)/g, "ṗ")
+	.replace(/ᵽ(\u005b|\u003c)/g, "ṕ")
+	.replace(/p(\u005b|\u003c)/g, "ᵽ")
+	.replace(/q(\u002a|\u005d|\u003e)/g, "ƣ")
+	.replace(/ƣ(\u002a|\u005d|\u003e)/g, "q")
+	.replace(/ƣ(\u005b|\u003c)/g, "q")
+	.replace(/q(\u005b|\u003c)/g, "ƣ")
+	.replace(/r(\u002a|\u005d|\u003e)/g, "ṙ")
+	.replace(/ṙ(\u002a|\u005d|\u003e)/g, "ŕ")
+	.replace(/ŕ(\u002a|\u005d|\u003e)/g, "ř")
+	.replace(/ř(\u002a|\u005d|\u003e)/g, "ŗ")
+	.replace(/ŗ(\u002a|\u005d|\u003e)/g, "ṛ")
+	.replace(/ṛ(\u002a|\u005d|\u003e)/g, "ɍ")
+	.replace(/ɍ(\u002a|\u005d|\u003e)/g, "r")
+	.replace(/ṙ(\u005b|\u003c)/g, "r")
+	.replace(/ŕ(\u005b|\u003c)/g, "ṙ")
+	.replace(/ř(\u005b|\u003c)/g, "ŕ")
+	.replace(/ŗ(\u005b|\u003c)/g, "ř")
+	.replace(/ṛ(\u005b|\u003c)/g, "ŗ")
+	.replace(/ɍ(\u005b|\u003c)/g, "ṛ")
+	.replace(/r(\u005b|\u003c)/g, "ɍ")
+	.replace(/s(\u002a|\u005d|\u003e)/g, "ṡ")
+	.replace(/ṡ(\u002a|\u005d|\u003e)/g, "ś")
+	.replace(/ś(\u002a|\u005d|\u003e)/g, "ŝ")
+	.replace(/ŝ(\u002a|\u005d|\u003e)/g, "š")
+	.replace(/š(\u002a|\u005d|\u003e)/g, "ş")
+	.replace(/ş(\u002a|\u005d|\u003e)/g, "ș")
+	.replace(/ș(\u002a|\u005d|\u003e)/g, "ṣ")
+	.replace(/ṣ(\u002a|\u005d|\u003e)/g, "ꞩ")
+	.replace(/ꞩ(\u002a|\u005d|\u003e)/g, "s")
+	.replace(/ṡ(\u005b|\u003c)/g, "s")
+	.replace(/ś(\u005b|\u003c)/g, "ṡ")
+	.replace(/ŝ(\u005b|\u003c)/g, "ś")
+	.replace(/š(\u005b|\u003c)/g, "ŝ")
+	.replace(/ş(\u005b|\u003c)/g, "š")
+	.replace(/ș(\u005b|\u003c)/g, "ş")
+	.replace(/ṣ(\u005b|\u003c)/g, "ș")
+	.replace(/ꞩ(\u005b|\u003c)/g, "ṣ")
+	.replace(/s(\u005b|\u003c)/g, "ꞩ")
+	.replace(/t(\u002a|\u005d|\u003e)/g, "ṫ")
+	.replace(/ṫ(\u002a|\u005d|\u003e)/g, "ť")
+	.replace(/ť(\u002a|\u005d|\u003e)/g, "ţ")
+	.replace(/ţ(\u002a|\u005d|\u003e)/g, "ț")
+	.replace(/ț(\u002a|\u005d|\u003e)/g, "ṭ")
+	.replace(/ṭ(\u002a|\u005d|\u003e)/g, "ŧ")
+	.replace(/ŧ(\u002a|\u005d|\u003e)/g, "þ")
+	.replace(/þ(\u002a|\u005d|\u003e)/g, "t")
+	.replace(/ṫ(\u005b|\u003c)/g, "t")
+	.replace(/ť(\u005b|\u003c)/g, "ṫ")
+	.replace(/ţ(\u005b|\u003c)/g, "ť")
+	.replace(/ț(\u005b|\u003c)/g, "ţ")
+	.replace(/ṭ(\u005b|\u003c)/g, "ț")
+	.replace(/ŧ(\u005b|\u003c)/g, "ṭ")
+	.replace(/þ(\u005b|\u003c)/g, "ŧ")
+	.replace(/t(\u005b|\u003c)/g, "þ")
+	.replace(/u(\u002a|\u005d|\u003e)/g, "ů")
+	.replace(/ů(\u002a|\u005d|\u003e)/g, "ú")
+	.replace(/ú(\u002a|\u005d|\u003e)/g, "ù")
+	.replace(/ù(\u002a|\u005d|\u003e)/g, "û")
+	.replace(/û(\u002a|\u005d|\u003e)/g, "ǔ")
+	.replace(/ǔ(\u002a|\u005d|\u003e)/g, "ŭ")
+	.replace(/ŭ(\u002a|\u005d|\u003e)/g, "ū")
+	.replace(/ū(\u002a|\u005d|\u003e)/g, "ü")
+	.replace(/ü(\u002a|\u005d|\u003e)/g, "ű")
+	.replace(/ű(\u002a|\u005d|\u003e)/g, "ũ")
+	.replace(/ũ(\u002a|\u005d|\u003e)/g, "ų")
+	.replace(/ų(\u002a|\u005d|\u003e)/g, "ụ")
+	.replace(/ụ(\u002a|\u005d|\u003e)/g, "ủ")
+	.replace(/ủ(\u002a|\u005d|\u003e)/g, "ư")
+	.replace(/ư(\u002a|\u005d|\u003e)/g, "ʉ")
+	.replace(/ʉ(\u002a|\u005d|\u003e)/g, "u")
+	.replace(/ů(\u005b|\u003c)/g, "u")
+	.replace(/ú(\u005b|\u003c)/g, "ů")
+	.replace(/ú(\u005b|\u003c)/g, "ú")
+	.replace(/ù(\u005b|\u003c)/g, "ú")
+	.replace(/û(\u005b|\u003c)/g, "ù")
+	.replace(/ǔ(\u005b|\u003c)/g, "û")
+	.replace(/ŭ(\u005b|\u003c)/g, "ǔ")
+	.replace(/ū(\u005b|\u003c)/g, "ŭ")
+	.replace(/ü(\u005b|\u003c)/g, "ū")
+	.replace(/ű(\u005b|\u003c)/g, "ü")
+	.replace(/ũ(\u005b|\u003c)/g, "ű")
+	.replace(/ų(\u005b|\u003c)/g, "ũ")
+	.replace(/ụ(\u005b|\u003c)/g, "ų")
+	.replace(/ủ(\u005b|\u003c)/g, "ụ")
+	.replace(/ư(\u005b|\u003c)/g, "ủ")
+	.replace(/ʉ(\u005b|\u003c)/g, "ư")
+	.replace(/u(\u005b|\u003c)/g, "ʉ")
+	.replace(/v(\u002a|\u005d|\u003e)/g, "ṽ")
+	.replace(/ṽ(\u002a|\u005d|\u003e)/g, "ṿ")
+	.replace(/ṿ(\u002a|\u005d|\u003e)/g, "ꝟ")
+	.replace(/ꝟ(\u002a|\u005d|\u003e)/g, "v")
+	.replace(/ṽ(\u005b|\u003c)/g, "v")
+	.replace(/ṿ(\u005b|\u003c)/g, "ṽ")
+	.replace(/ꝟ(\u005b|\u003c)/g, "ṿ")
+	.replace(/v(\u005b|\u003c)/g, "ꝟ")
+	.replace(/w(\u002a|\u005d|\u003e)/g, "ẇ")
+	.replace(/ẇ(\u002a|\u005d|\u003e)/g, "ẃ")
+	.replace(/ẃ(\u002a|\u005d|\u003e)/g, "ẁ")
+	.replace(/ẁ(\u002a|\u005d|\u003e)/g, "ŵ")
+	.replace(/ŵ(\u002a|\u005d|\u003e)/g, "ẅ")
+	.replace(/ẅ(\u002a|\u005d|\u003e)/g, "ẉ")
+	.replace(/ẉ(\u002a|\u005d|\u003e)/g, "w")
+	.replace(/ẇ(\u005b|\u003c)/g, "w")
+	.replace(/ẃ(\u005b|\u003c)/g, "ẇ")
+	.replace(/ẁ(\u005b|\u003c)/g, "ẃ")
+	.replace(/ŵ(\u005b|\u003c)/g, "ẁ")
+	.replace(/ẅ(\u005b|\u003c)/g, "ŵ")
+	.replace(/ẉ(\u005b|\u003c)/g, "ẅ")
+	.replace(/w(\u005b|\u003c)/g, "ẉ")
+	.replace(/x(\u002a|\u005d|\u003e)/g, "ẋ")
+	.replace(/ẋ(\u002a|\u005d|\u003e)/g, "ẍ")
+	.replace(/ẍ(\u002a|\u005d|\u003e)/g, "x")
+	.replace(/ẋ(\u005b|\u003c)/g, "x")
+	.replace(/ẍ(\u005b|\u003c)/g, "ẋ")
+	.replace(/x(\u005b|\u003c)/g, "ẍ")
+	.replace(/y(\u002a|\u005d|\u003e)/g, "ẏ")
+	.replace(/ẏ(\u002a|\u005d|\u003e)/g, "ý")
+	.replace(/ý(\u002a|\u005d|\u003e)/g, "ỳ")
+	.replace(/ỳ(\u002a|\u005d|\u003e)/g, "ŷ")
+	.replace(/ŷ(\u002a|\u005d|\u003e)/g, "ȳ")
+	.replace(/ȳ(\u002a|\u005d|\u003e)/g, "ÿ")
+	.replace(/ÿ(\u002a|\u005d|\u003e)/g, "ỹ")
+	.replace(/ỹ(\u002a|\u005d|\u003e)/g, "ỵ")
+	.replace(/ỵ(\u002a|\u005d|\u003e)/g, "ỷ")
+	.replace(/ỷ(\u002a|\u005d|\u003e)/g, "ɏ")
+	.replace(/ɏ(\u002a|\u005d|\u003e)/g, "y")
+	.replace(/ẏ(\u005b|\u003c)/g, "y")
+	.replace(/ý(\u005b|\u003c)/g, "ẏ")
+	.replace(/ỳ(\u005b|\u003c)/g, "ý")
+	.replace(/ŷ(\u005b|\u003c)/g, "ỳ")
+	.replace(/ȳ(\u005b|\u003c)/g, "ŷ")
+	.replace(/ÿ(\u005b|\u003c)/g, "ȳ")
+	.replace(/ỹ(\u005b|\u003c)/g, "ÿ")
+	.replace(/ỵ(\u005b|\u003c)/g, "ỹ")
+	.replace(/ỷ(\u005b|\u003c)/g, "ỵ")
+	.replace(/ɏ(\u005b|\u003c)/g, "ỷ")
+	.replace(/y(\u005b|\u003c)/g, "ɏ")
+	.replace(/z(\u002a|\u005d|\u003e)/g, "ż")
+	.replace(/ż(\u002a|\u005d|\u003e)/g, "ź")
+	.replace(/ź(\u002a|\u005d|\u003e)/g, "ẑ")
+	.replace(/ẑ(\u002a|\u005d|\u003e)/g, "ž")
+	.replace(/ž(\u002a|\u005d|\u003e)/g, "ẓ")
+	.replace(/ẓ(\u002a|\u005d|\u003e)/g, "ƶ")
+	.replace(/ƶ(\u002a|\u005d|\u003e)/g, "ⱬ")
+	.replace(/ⱬ(\u002a|\u005d|\u003e)/g, "z")
+	.replace(/ż(\u005b|\u003c)/g, "z")
+	.replace(/ź(\u005b|\u003c)/g, "ż")
+	.replace(/ẑ(\u005b|\u003c)/g, "ź")
+	.replace(/ž(\u005b|\u003c)/g, "ẑ")
+	.replace(/ẓ(\u005b|\u003c)/g, "ž")
+	.replace(/ƶ(\u005b|\u003c)/g, "ẓ")
+	.replace(/ⱬ(\u005b|\u003c)/g, "ƶ")
+	.replace(/z(\u005b|\u003c)/g, "ⱬ")
 
-	car = car.replace(/\u0023grave\u0023/g, "\u0300");
-	car = car.replace(/\u0023(acute|accent)\u0023/g, "\u0301");
-	car = car.replace(/\u0023(circumflex|caret)\u0023/g, "\u0302");
-	car = car.replace(/\u0023tilde\u0023/g, "\u0303");
-	car = car.replace(/\u0023macron\u0023/g, "\u0304");
-	car = car.replace(/\u0023breve\u0023/g, "\u0306");
-	car = car.replace(/\u0023dot(above)?\u0023/g, "\u0307");
-	car = car.replace(/\u0023(diaeresis|umlaut|trema)\u0023/g, "\u0308");
-	car = car.replace(/\u0023hook(above)?\u0023/g, "\u0309");
-	car = car.replace(/\u0023ring(above)?\u0023/g, "\u030a");
-	car = car.replace(/\u0023doubleacute\u0023/g, "\u030b");
-	car = car.replace(/\u0023(caron|hacek|hachek)\u0023/g, "\u030c");
-	car = car.replace(/\u0023(turned)?commaabove\u0023/g, "\u0312");
-	car = car.replace(/\u0023acute(accent)?below\u0023/g, "\u0317");
-	car = car.replace(/\u0023horn\u0023/g, "\u031b");
-	car = car.replace(/\u0023dotbelow\u0023/g, "\u0323");
-	car = car.replace(/\u0023comma(below)?\u0023/g, "\u0326");
-	car = car.replace(/\u0023(cedilla|tail)\u0023/g, "\u0327");
-	car = car.replace(/\u0023ogonek\u0023/g, "\u0328");
-	car = car.replace(/\u0023(vertical)?line(below)?\u0023/g, "\u0329");
-	car = car.replace(/\u0023(circumflex|caret)below\u0023/g, "\u032d");
-	car = car.replace(/\u0023U\+([0-9A-Fa-f]+)\u0023|\u0023u([0-9A-Fa-f]{4})\u0023/g, (_, uPlus, uLower) => {
+	.replace(/\u0023grave\u0023/g, "\u0300")
+	.replace(/\u0023(acute|accent)\u0023/g, "\u0301")
+	.replace(/\u0023(circumflex|caret)\u0023/g, "\u0302")
+	.replace(/\u0023tilde\u0023/g, "\u0303")
+	.replace(/\u0023macron\u0023/g, "\u0304")
+	.replace(/\u0023breve\u0023/g, "\u0306")
+	.replace(/\u0023dot(above)?\u0023/g, "\u0307")
+	.replace(/\u0023(diaeresis|umlaut|trema)\u0023/g, "\u0308")
+	.replace(/\u0023hook(above)?\u0023/g, "\u0309")
+	.replace(/\u0023ring(above)?\u0023/g, "\u030a")
+	.replace(/\u0023doubleacute\u0023/g, "\u030b")
+	.replace(/\u0023(caron|hacek|hachek)\u0023/g, "\u030c")
+	.replace(/\u0023(turned)?commaabove\u0023/g, "\u0312")
+	.replace(/\u0023acute(accent)?below\u0023/g, "\u0317")
+	.replace(/\u0023horn\u0023/g, "\u031b")
+	.replace(/\u0023dotbelow\u0023/g, "\u0323")
+	.replace(/\u0023comma(below)?\u0023/g, "\u0326")
+	.replace(/\u0023(cedilla|tail)\u0023/g, "\u0327")
+	.replace(/\u0023ogonek\u0023/g, "\u0328")
+	.replace(/\u0023(vertical)?line(below)?\u0023/g, "\u0329")
+	.replace(/\u0023(circumflex|caret)below\u0023/g, "\u032d")
+	.replace(/\u0023U\+([0-9A-Fa-f]+)\u0023|\u0023u([0-9A-Fa-f]{4})\u0023/g, (_, uPlus, uLower) => {
 		const hex = uPlus || uLower;
 		return String.fromCodePoint(parseInt(hex, 16));
-	});
-	car = car.normalize('NFC');
-	document.transcription.text1.value = car;
+	})
+	.normalize('NFC');
 }
 
 function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+{ navigator.clipboard.writeText(document.transcription.text1.value)
 }
 
 function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+{ navigator.clipboard.writeText(document.transcription.text2.value)
 }
