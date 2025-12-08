@@ -65,8 +65,8 @@ window.addEventListener("DOMContentLoaded", function() {
     t1.addEventListener("scroll", syncScroll);
     t2.addEventListener("scroll", syncScroll);
 
-	t1.addEventListener("input", syncScroll);
-    t2.addEventListener("input", syncScroll);
+	t1.addEventListener("input", () => requestAnimationFrame(() => syncScroll({ target: t1 })));
+    t2.addEventListener("input", () => requestAnimationFrame(() => syncScroll({ target: t2 })));
 });
 </script>
 </form>
