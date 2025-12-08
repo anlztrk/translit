@@ -1,7 +1,7 @@
 ﻿<html> 
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
-<title>Yañalif - Common Turkic Alphabet converter</title> 
+<title>Karakalpak alphabet - Common Turkic Alphabet converter</title> 
 		<script type="text/javascript" src="conversion.js"></script>
 		<style type="text/css"> 
 		@font-face {
@@ -20,12 +20,12 @@
 		</style> 
 </head> 
 <body> 
-	<h1>Yañalif - Common Turkic Alphabet converter</h1> 
+	<h1>Karakalpak alphabet - Common Turkic Alphabet converter</h1> 
 
 <div align="center"> Type or copy a text:<br> 
   <form name=transcription> 
 	<table width=90%><tr align=center> 
-		<td> in Yañalif: <br> 
+		<td> in Karakalpak alphabet: <br> 
 	<textarea name="text1" style="resize: none;" onKeyUp="cyrlat()"></textarea> 
 		  <br> 
 		  <br> 
@@ -64,6 +64,9 @@ window.addEventListener("DOMContentLoaded", function() {
 
     t1.addEventListener("scroll", syncScroll);
     t2.addEventListener("scroll", syncScroll);
+
+	t1.addEventListener("input", () => requestAnimationFrame(() => syncScroll({ target: t1 })));
+    t2.addEventListener("input", () => requestAnimationFrame(() => syncScroll({ target: t2 })));
 });
 </script>
 </form>
