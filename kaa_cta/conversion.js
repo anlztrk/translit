@@ -1,7 +1,7 @@
 var car;
 
-function latcyr() {
-	car = document.transcription.text2.value;
+function cyrlat() {
+	car = document.transcription.text1.value;
 	var car_Orig = car;
 	{
 		var letters = ["Á", "Ǵ", "Í", "Ń", "Ó", "Ú", "á", "ǵ", "í", "ń", "ó", "ú"];
@@ -43,11 +43,11 @@ function latcyr() {
 	car = car.replace(/ó/g, "ö");
 	car = car.replace(/ú/g, "ü");
 	car = car.normalize('NFC');
-	document.transcription.text1.value = car;
+	document.transcription.text2.value = car;
 }
 
-function cyrlat() {
-	car = document.transcription.text1.value;
+function latcyr() {
+	car = document.transcription.text2.value;
 	var car_Orig = car;
 	{
 		var letters = ["Ä", "Ç", "Ğ", "İ", "Ñ", "Ö", "Ş", "Ţ", "Ü", "ä", "ç", "ğ", "ñ", "ö", "ş", "ţ", "ü"];
@@ -85,7 +85,7 @@ function cyrlat() {
 	car = car.replace(/Ç/g, "Ch");
 	car = car.replace(/Ş/g, "Sh");
 	car = car.normalize('NFC');
-	document.transcription.text2.value = car;
+	document.transcription.text1.value = car;
 }
 
 function copy1() {
