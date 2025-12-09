@@ -1,120 +1,119 @@
-var car;
-function latcyr () {
-car = document.transcription.text2.value;
- car = car.replace(/Α/g, "A");
-  car = car.replace(/α/g, "a");
-  car = car.replace(/Β/g, "B");
-  car = car.replace(/β/g, "b");
-  car = car.replace(/Χ/g, "C");
-  car = car.replace(/χ/g, "c");
-  car = car.replace(/Δ/g, "D");
-  car = car.replace(/δ/g, "d");
-  car = car.replace(/Ε/g, "E");
-  car = car.replace(/ε/g, "e");
-  car = car.replace(/Φ/g, "F");
-  car = car.replace(/ϕ/g, "f");
-  car = car.replace(/Γ/g, "G");
-  car = car.replace(/γ/g, "g");
-  car = car.replace(/Η/g, "H");
-  car = car.replace(/η/g, "h");
-  car = car.replace(/Ι/g, "I");
-  car = car.replace(/ι/g, "i");
-  car = car.replace(/ϑ/g, "J");
-  car = car.replace(/φ/g, "j");
-  car = car.replace(/Κ/g, "K");
-  car = car.replace(/κ/g, "k");
-  car = car.replace(/Λ/g, "L");
-  car = car.replace(/λ/g, "l");
-  car = car.replace(/Μ/g, "M");
-  car = car.replace(/μ/g, "m");
-  car = car.replace(/Ν/g, "N");
-  car = car.replace(/ν/g, "n");
-  car = car.replace(/Ο/g, "O");
-  car = car.replace(/ο/g, "o");
-  car = car.replace(/Π/g, "P");
-  car = car.replace(/π/g, "p");
-  car = car.replace(/Θ/g, "Q");
-  car = car.replace(/θ/g, "q");
-  car = car.replace(/Ρ/g, "R");
-  car = car.replace(/ρ/g, "r");
-  car = car.replace(/Σ/g, "S");
-  car = car.replace(/σ/g, "s");
-  car = car.replace(/Τ/g, "T");
-  car = car.replace(/τ/g, "t");
-  car = car.replace(/Υ/g, "U");
-  car = car.replace(/υ/g, "u");
-  car = car.replace(/ς/g, "V");
-  car = car.replace(/ϖ/g, "v");
-  car = car.replace(/Ω/g, "W");
-  car = car.replace(/ω/g, "w");
-  car = car.replace(/Ξ/g, "X");
-  car = car.replace(/ξ/g, "x");
-  car = car.replace(/Ψ/g, "Y");
-  car = car.replace(/ψ/g, "y");
-  car = car.replace(/Ζ/g, "Z");
-  car = car.replace(/ζ/g, "z");
-document.transcription.text1.value=car;
-}
-function cyrlat () {
-car = document.transcription.text1.value;
-    car = car.replace(/A/g, "Α");
-  car = car.replace(/a/g, "α");
-  car = car.replace(/B/g, "Β");
-  car = car.replace(/b/g, "β");
-  car = car.replace(/C/g, "Χ");
-  car = car.replace(/c/g, "χ");
-  car = car.replace(/D/g, "Δ");
-  car = car.replace(/d/g, "δ");
-  car = car.replace(/E/g, "Ε");
-  car = car.replace(/e/g, "ε");
-  car = car.replace(/F/g, "Φ");
-  car = car.replace(/f/g, "ϕ");
-  car = car.replace(/G/g, "Γ");
-  car = car.replace(/g/g, "γ");
-  car = car.replace(/H/g, "Η");
-  car = car.replace(/h/g, "η");
-  car = car.replace(/I/g, "Ι");
-  car = car.replace(/i/g, "ι");
-  car = car.replace(/J/g, "ϑ");
-  car = car.replace(/j/g, "φ");
-  car = car.replace(/K/g, "Κ");
-  car = car.replace(/k/g, "κ");
-  car = car.replace(/L/g, "Λ");
-  car = car.replace(/l/g, "λ");
-  car = car.replace(/M/g, "Μ");
-  car = car.replace(/m/g, "μ");
-  car = car.replace(/N/g, "Ν");
-  car = car.replace(/n/g, "ν");
-  car = car.replace(/O/g, "Ο");
-  car = car.replace(/o/g, "ο");
-  car = car.replace(/P/g, "Π");
-  car = car.replace(/p/g, "π");
-  car = car.replace(/Q/g, "Θ");
-  car = car.replace(/q/g, "θ");
-  car = car.replace(/R/g, "Ρ");
-  car = car.replace(/r/g, "ρ");
-  car = car.replace(/S/g, "Σ");
-  car = car.replace(/s/g, "σ");
-  car = car.replace(/T/g, "Τ");
-  car = car.replace(/t/g, "τ");
-  car = car.replace(/U/g, "Υ");
-  car = car.replace(/u/g, "υ");
-  car = car.replace(/V/g, "ς");
-  car = car.replace(/v/g, "ϖ");
-  car = car.replace(/W/g, "Ω");
-  car = car.replace(/w/g, "ω");
-  car = car.replace(/X/g, "Ξ");
-  car = car.replace(/x/g, "ξ");
-  car = car.replace(/Y/g, "Ψ");
-  car = car.replace(/y/g, "ψ");
-  car = car.replace(/Z/g, "Ζ");
-  car = car.replace(/z/g, "ζ");
-document.transcription.text2.value=car;
-}
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function latcyr() {
+	document.transcription.text1.value = document.transcription.text2.value
+		.replace(/Α/g, "A")
+		.replace(/α/g, "a")
+		.replace(/Β/g, "B")
+		.replace(/β/g, "b")
+		.replace(/Χ/g, "C")
+		.replace(/χ/g, "c")
+		.replace(/Δ/g, "D")
+		.replace(/δ/g, "d")
+		.replace(/Ε/g, "E")
+		.replace(/ε/g, "e")
+		.replace(/Φ/g, "F")
+		.replace(/ϕ/g, "f")
+		.replace(/Γ/g, "G")
+		.replace(/γ/g, "g")
+		.replace(/Η/g, "H")
+		.replace(/η/g, "h")
+		.replace(/Ι/g, "I")
+		.replace(/ι/g, "i")
+		.replace(/ϑ/g, "J")
+		.replace(/φ/g, "j")
+		.replace(/Κ/g, "K")
+		.replace(/κ/g, "k")
+		.replace(/Λ/g, "L")
+		.replace(/λ/g, "l")
+		.replace(/Μ/g, "M")
+		.replace(/μ/g, "m")
+		.replace(/Ν/g, "N")
+		.replace(/ν/g, "n")
+		.replace(/Ο/g, "O")
+		.replace(/ο/g, "o")
+		.replace(/Π/g, "P")
+		.replace(/π/g, "p")
+		.replace(/Θ/g, "Q")
+		.replace(/θ/g, "q")
+		.replace(/Ρ/g, "R")
+		.replace(/ρ/g, "r")
+		.replace(/Σ/g, "S")
+		.replace(/σ/g, "s")
+		.replace(/Τ/g, "T")
+		.replace(/τ/g, "t")
+		.replace(/Υ/g, "U")
+		.replace(/υ/g, "u")
+		.replace(/ς/g, "V")
+		.replace(/ϖ/g, "v")
+		.replace(/Ω/g, "W")
+		.replace(/ω/g, "w")
+		.replace(/Ξ/g, "X")
+		.replace(/ξ/g, "x")
+		.replace(/Ψ/g, "Y")
+		.replace(/ψ/g, "y")
+		.replace(/Ζ/g, "Z")
+		.replace(/ζ/g, "z");
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function cyrlat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/A/g, "Α")
+		.replace(/a/g, "α")
+		.replace(/B/g, "Β")
+		.replace(/b/g, "β")
+		.replace(/C/g, "Χ")
+		.replace(/c/g, "χ")
+		.replace(/D/g, "Δ")
+		.replace(/d/g, "δ")
+		.replace(/E/g, "Ε")
+		.replace(/e/g, "ε")
+		.replace(/F/g, "Φ")
+		.replace(/f/g, "ϕ")
+		.replace(/G/g, "Γ")
+		.replace(/g/g, "γ")
+		.replace(/H/g, "Η")
+		.replace(/h/g, "η")
+		.replace(/I/g, "Ι")
+		.replace(/i/g, "ι")
+		.replace(/J/g, "ϑ")
+		.replace(/j/g, "φ")
+		.replace(/K/g, "Κ")
+		.replace(/k/g, "κ")
+		.replace(/L/g, "Λ")
+		.replace(/l/g, "λ")
+		.replace(/M/g, "Μ")
+		.replace(/m/g, "μ")
+		.replace(/N/g, "Ν")
+		.replace(/n/g, "ν")
+		.replace(/O/g, "Ο")
+		.replace(/o/g, "ο")
+		.replace(/P/g, "Π")
+		.replace(/p/g, "π")
+		.replace(/Q/g, "Θ")
+		.replace(/q/g, "θ")
+		.replace(/R/g, "Ρ")
+		.replace(/r/g, "ρ")
+		.replace(/S/g, "Σ")
+		.replace(/s/g, "σ")
+		.replace(/T/g, "Τ")
+		.replace(/t/g, "τ")
+		.replace(/U/g, "Υ")
+		.replace(/u/g, "υ")
+		.replace(/V/g, "ς")
+		.replace(/v/g, "ϖ")
+		.replace(/W/g, "Ω")
+		.replace(/w/g, "ω")
+		.replace(/X/g, "Ξ")
+		.replace(/x/g, "ξ")
+		.replace(/Y/g, "Ψ")
+		.replace(/y/g, "ψ")
+		.replace(/Z/g, "Ζ")
+		.replace(/z/g, "ζ");
+}
+
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
