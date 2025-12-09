@@ -8,7 +8,6 @@ function cyrlat() {
 	.replace(/(\p{Uppercase})( )?Ӏ( )?(\p{Lowercase})/ug, "$1$2ӏ$3$4");
 	
 	document.transcription.text2.value = document.transcription.text1.value
-
 	.replace(/(А|Е|Ё|И|О|У|Ы|Ю|Я)Щ(А|Е|Ё|И|О|У|Ы|Ю|Я)/g, "$1ШШ$2")
 	.replace(/(А|Е|Ё|И|О|У|Ы|Ю|Я)щ(а|е|ё|и|о|у|ы|ю|я)/g, "$1Шш$2")
 	.replace(/(а|е|ё|и|о|у|ы|ю|я)щ(а|е|ё|и|о|у|ы|ю|я)/g, "$1шш$2")
