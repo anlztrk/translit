@@ -1,340 +1,336 @@
-﻿
-var translit;
-
-function cyrlat () {
-translit = document.transcription.text1.value;
-translit = translit.replace(/бе/g, "bie");
-translit = translit.replace(/ве/g, "vie");
-translit = translit.replace(/ге/g, "hie");
-translit = translit.replace(/ґе/g, "gie");
-translit = translit.replace(/де/g, "die");
-translit = translit.replace(/же/g, "žie");
-translit = translit.replace(/зе/g, "zie");
-translit = translit.replace(/йе/g, "jie");
-translit = translit.replace(/ке/g, "kie");
-translit = translit.replace(/ле/g, "lie");
-translit = translit.replace(/ме/g, "mie");
-translit = translit.replace(/не/g, "nie");
-translit = translit.replace(/пе/g, "pie");
-translit = translit.replace(/ре/g, "rie");
-translit = translit.replace(/се/g, "sie");
-translit = translit.replace(/те/g, "tie");
-translit = translit.replace(/фе/g, "fie");
-translit = translit.replace(/хе/g, "chie");
-translit = translit.replace(/це/g, "cie");
-translit = translit.replace(/че/g, "čie");
-translit = translit.replace(/ше/g, "šie");
-translit = translit.replace(/Бе/g, "Bie");
-translit = translit.replace(/Ве/g, "Vie");
-translit = translit.replace(/Ге/g, "Hie");
-translit = translit.replace(/Ґе/g, "Gie");
-translit = translit.replace(/Де/g, "Die");
-translit = translit.replace(/Же/g, "Žie");
-translit = translit.replace(/Зе/g, "Zie");
-translit = translit.replace(/Йе/g, "Jie");
-translit = translit.replace(/Ке/g, "Kie");
-translit = translit.replace(/Ле/g, "Lie");
-translit = translit.replace(/Ме/g, "Mie");
-translit = translit.replace(/Не/g, "Nie");
-translit = translit.replace(/Пе/g, "Pie");
-translit = translit.replace(/Ре/g, "Rie");
-translit = translit.replace(/Се/g, "Sie");
-translit = translit.replace(/Те/g, "Tie");
-translit = translit.replace(/Фе/g, "Fie");
-translit = translit.replace(/Хе/g, "Chie");
-translit = translit.replace(/Це/g, "Cie");
-translit = translit.replace(/Че/g, "Čie");
-translit = translit.replace(/Ше/g, "Šie");
-translit = translit.replace(/БЕ/g, "BIE");
-translit = translit.replace(/ВЕ/g, "VIE");
-translit = translit.replace(/ГЕ/g, "HIE");
-translit = translit.replace(/ҐЕ/g, "GIE");
-translit = translit.replace(/ДЕ/g, "DIE");
-translit = translit.replace(/ЖЕ/g, "ŽIE");
-translit = translit.replace(/ЗЕ/g, "ZIE");
-translit = translit.replace(/ЙЕ/g, "JIE");
-translit = translit.replace(/КЕ/g, "KIE");
-translit = translit.replace(/ЛЕ/g, "LIE");
-translit = translit.replace(/МЕ/g, "MIE");
-translit = translit.replace(/НЕ/g, "NIE");
-translit = translit.replace(/ПЕ/g, "PIE");
-translit = translit.replace(/РЕ/g, "RIE");
-translit = translit.replace(/СЕ/g, "SIE");
-translit = translit.replace(/ТЕ/g, "TIE");
-translit = translit.replace(/ФЕ/g, "FIE");
-translit = translit.replace(/ХЕ/g, "CHIE");
-translit = translit.replace(/ЦЕ/g, "CIE");
-translit = translit.replace(/ЧЕ/g, "ČIE");
-translit = translit.replace(/ШЕ/g, "ŠIE");
-translit = translit.replace(/бя/g, "bia");
-translit = translit.replace(/вя/g, "via");
-translit = translit.replace(/гя/g, "hia");
-translit = translit.replace(/ґя/g, "gia");
-translit = translit.replace(/дя/g, "dia");
-translit = translit.replace(/жя/g, "žia");
-translit = translit.replace(/зя/g, "zia");
-translit = translit.replace(/йя/g, "jia");
-translit = translit.replace(/кя/g, "kia");
-translit = translit.replace(/ля/g, "lia");
-translit = translit.replace(/мя/g, "mia");
-translit = translit.replace(/ня/g, "nia");
-translit = translit.replace(/пя/g, "pia");
-translit = translit.replace(/ря/g, "ria");
-translit = translit.replace(/ся/g, "sia");
-translit = translit.replace(/тя/g, "tia");
-translit = translit.replace(/фя/g, "fia");
-translit = translit.replace(/хя/g, "chia");
-translit = translit.replace(/ця/g, "cia");
-translit = translit.replace(/чя/g, "čia");
-translit = translit.replace(/шя/g, "šia");
-translit = translit.replace(/ья/g, "\u0301ia");
-translit = translit.replace(/Бя/g, "Bia");
-translit = translit.replace(/Вя/g, "Via");
-translit = translit.replace(/Гя/g, "Hia");
-translit = translit.replace(/Ґя/g, "Gia");
-translit = translit.replace(/Дя/g, "Dia");
-translit = translit.replace(/Жя/g, "Žia");
-translit = translit.replace(/Зя/g, "Zia");
-translit = translit.replace(/Йя/g, "Jia");
-translit = translit.replace(/Кя/g, "Kia");
-translit = translit.replace(/Ля/g, "Lia");
-translit = translit.replace(/Мя/g, "Mia");
-translit = translit.replace(/Ня/g, "Nia");
-translit = translit.replace(/Пя/g, "Pia");
-translit = translit.replace(/Ря/g, "Ria");
-translit = translit.replace(/Ся/g, "Sia");
-translit = translit.replace(/Тя/g, "Tia");
-translit = translit.replace(/Фя/g, "Fia");
-translit = translit.replace(/Хя/g, "Chia");
-translit = translit.replace(/Ця/g, "Cia");
-translit = translit.replace(/Чя/g, "Čia");
-translit = translit.replace(/Шя/g, "Šia");
-translit = translit.replace(/БЯ/g, "BIA");
-translit = translit.replace(/ВЯ/g, "VIA");
-translit = translit.replace(/ГЯ/g, "HIA");
-translit = translit.replace(/ҐЯ/g, "GIA");
-translit = translit.replace(/ДЯ/g, "DIA");
-translit = translit.replace(/ЖЯ/g, "ŽIA");
-translit = translit.replace(/ЗЯ/g, "ZIA");
-translit = translit.replace(/ЙЯ/g, "JIA");
-translit = translit.replace(/КЯ/g, "KIA");
-translit = translit.replace(/ЛЯ/g, "LIA");
-translit = translit.replace(/МЯ/g, "MIA");
-translit = translit.replace(/НЯ/g, "NIA");
-translit = translit.replace(/ПЯ/g, "PIA");
-translit = translit.replace(/РЯ/g, "RIA");
-translit = translit.replace(/СЯ/g, "SIA");
-translit = translit.replace(/ТЯ/g, "TIA");
-translit = translit.replace(/ФЯ/g, "FIA");
-translit = translit.replace(/ХЯ/g, "CHIA");
-translit = translit.replace(/ЦЯ/g, "CIA");
-translit = translit.replace(/ЧЯ/g, "ČIA");
-translit = translit.replace(/ШЯ/g, "ŠIA");
-translit = translit.replace(/бё/g, "bio");
-translit = translit.replace(/вё/g, "vio");
-translit = translit.replace(/гё/g, "hio");
-translit = translit.replace(/ґё/g, "gio");
-translit = translit.replace(/дё/g, "dio");
-translit = translit.replace(/жё/g, "žio");
-translit = translit.replace(/зё/g, "zio");
-translit = translit.replace(/йё/g, "jio");
-translit = translit.replace(/кё/g, "kio");
-translit = translit.replace(/лё/g, "lio");
-translit = translit.replace(/мё/g, "mio");
-translit = translit.replace(/нё/g, "nio");
-translit = translit.replace(/пё/g, "pio");
-translit = translit.replace(/рё/g, "rio");
-translit = translit.replace(/сё/g, "sio");
-translit = translit.replace(/тё/g, "tio");
-translit = translit.replace(/фё/g, "fio");
-translit = translit.replace(/хё/g, "chio");
-translit = translit.replace(/цё/g, "cio");
-translit = translit.replace(/чё/g, "čio");
-translit = translit.replace(/шё/g, "šio");
-translit = translit.replace(/Бё/g, "Bio");
-translit = translit.replace(/Вё/g, "Vio");
-translit = translit.replace(/Гё/g, "Hio");
-translit = translit.replace(/Ґё/g, "Gio");
-translit = translit.replace(/Дё/g, "Dio");
-translit = translit.replace(/Жё/g, "Žio");
-translit = translit.replace(/Зё/g, "Zio");
-translit = translit.replace(/Йё/g, "Jio");
-translit = translit.replace(/Кё/g, "Kio");
-translit = translit.replace(/Лё/g, "Lio");
-translit = translit.replace(/Мё/g, "Mio");
-translit = translit.replace(/Нё/g, "Nio");
-translit = translit.replace(/Пё/g, "Pio");
-translit = translit.replace(/Рё/g, "Rio");
-translit = translit.replace(/Сё/g, "Sio");
-translit = translit.replace(/Тё/g, "Tio");
-translit = translit.replace(/Фё/g, "Fio");
-translit = translit.replace(/Хё/g, "Chio");
-translit = translit.replace(/Цё/g, "Cio");
-translit = translit.replace(/Чё/g, "Čio");
-translit = translit.replace(/Шё/g, "Šio");
-translit = translit.replace(/БЁ/g, "BIO");
-translit = translit.replace(/ВЁ/g, "VIO");
-translit = translit.replace(/ГЁ/g, "HIO");
-translit = translit.replace(/ҐЁ/g, "GIO");
-translit = translit.replace(/ДЁ/g, "DIO");
-translit = translit.replace(/ЖЁ/g, "ŽIO");
-translit = translit.replace(/ЗЁ/g, "ZIO");
-translit = translit.replace(/ЙЁ/g, "JIO");
-translit = translit.replace(/КЁ/g, "KIO");
-translit = translit.replace(/ЛЁ/g, "LIO");
-translit = translit.replace(/МЁ/g, "MIO");
-translit = translit.replace(/НЁ/g, "NIO");
-translit = translit.replace(/ПЁ/g, "PIO");
-translit = translit.replace(/РЁ/g, "RIO");
-translit = translit.replace(/СЁ/g, "SIO");
-translit = translit.replace(/ТЁ/g, "TIO");
-translit = translit.replace(/ФЁ/g, "FIO");
-translit = translit.replace(/ХЁ/g, "CHIO");
-translit = translit.replace(/ЦЁ/g, "CIO");
-translit = translit.replace(/ЧЁ/g, "ČIO");
-translit = translit.replace(/ШЁ/g, "ŠIO");
-translit = translit.replace(/бю/g, "biu");
-translit = translit.replace(/вю/g, "viu");
-translit = translit.replace(/гю/g, "hiu");
-translit = translit.replace(/ґю/g, "giu");
-translit = translit.replace(/дю/g, "diu");
-translit = translit.replace(/жю/g, "žiu");
-translit = translit.replace(/зю/g, "ziu");
-translit = translit.replace(/йю/g, "jiu");
-translit = translit.replace(/кю/g, "kiu");
-translit = translit.replace(/лю/g, "liu");
-translit = translit.replace(/мю/g, "miu");
-translit = translit.replace(/ню/g, "niu");
-translit = translit.replace(/пю/g, "piu");
-translit = translit.replace(/рю/g, "riu");
-translit = translit.replace(/сю/g, "siu");
-translit = translit.replace(/тю/g, "tiu");
-translit = translit.replace(/фю/g, "fiu");
-translit = translit.replace(/хю/g, "chiu");
-translit = translit.replace(/цю/g, "ciu");
-translit = translit.replace(/чю/g, "čiu");
-translit = translit.replace(/шю/g, "šiu");
-translit = translit.replace(/Бю/g, "Biu");
-translit = translit.replace(/Вю/g, "Viu");
-translit = translit.replace(/Гю/g, "Hiu");
-translit = translit.replace(/Ґю/g, "Giu");
-translit = translit.replace(/Дю/g, "Diu");
-translit = translit.replace(/Жю/g, "Žiu");
-translit = translit.replace(/Зю/g, "Ziu");
-translit = translit.replace(/Йю/g, "Jiu");
-translit = translit.replace(/Кю/g, "Kiu");
-translit = translit.replace(/Лю/g, "Liu");
-translit = translit.replace(/Мю/g, "Miu");
-translit = translit.replace(/Ню/g, "Niu");
-translit = translit.replace(/Пю/g, "Piu");
-translit = translit.replace(/Рю/g, "Riu");
-translit = translit.replace(/Сю/g, "Siu");
-translit = translit.replace(/Тю/g, "Tiu");
-translit = translit.replace(/Фю/g, "Fiu");
-translit = translit.replace(/Хю/g, "Chiu");
-translit = translit.replace(/Цю/g, "Ciu");
-translit = translit.replace(/Чю/g, "Čiu");
-translit = translit.replace(/Шю/g, "Šiu");
-translit = translit.replace(/БЮ/g, "BIU");
-translit = translit.replace(/ВЮ/g, "VIU");
-translit = translit.replace(/ГЮ/g, "HIU");
-translit = translit.replace(/ҐЮ/g, "GIU");
-translit = translit.replace(/ДЮ/g, "DIU");
-translit = translit.replace(/ЖЮ/g, "ŽIU");
-translit = translit.replace(/ЗЮ/g, "ZIU");
-translit = translit.replace(/ЙЮ/g, "JIU");
-translit = translit.replace(/КЮ/g, "KIU");
-translit = translit.replace(/ЛЮ/g, "LIU");
-translit = translit.replace(/МЮ/g, "MIU");
-translit = translit.replace(/НЮ/g, "NIU");
-translit = translit.replace(/ПЮ/g, "PIU");
-translit = translit.replace(/РЮ/g, "RIU");
-translit = translit.replace(/СЮ/g, "SIU");
-translit = translit.replace(/ТЮ/g, "TIU");
-translit = translit.replace(/ФЮ/g, "FIU");
-translit = translit.replace(/ХЮ/g, "CHIU");
-translit = translit.replace(/ЦЮ/g, "CIU");
-translit = translit.replace(/ЧЮ/g, "ČIU");
-translit = translit.replace(/ШЮ/g, "ŠIU");
+function cyrlat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/бе/g, "bie")
+		.replace(/ве/g, "vie")
+		.replace(/ге/g, "hie")
+		.replace(/ґе/g, "gie")
+		.replace(/де/g, "die")
+		.replace(/же/g, "žie")
+		.replace(/зе/g, "zie")
+		.replace(/йе/g, "jie")
+		.replace(/ке/g, "kie")
+		.replace(/ле/g, "lie")
+		.replace(/ме/g, "mie")
+		.replace(/не/g, "nie")
+		.replace(/пе/g, "pie")
+		.replace(/ре/g, "rie")
+		.replace(/се/g, "sie")
+		.replace(/те/g, "tie")
+		.replace(/фе/g, "fie")
+		.replace(/хе/g, "chie")
+		.replace(/це/g, "cie")
+		.replace(/че/g, "čie")
+		.replace(/ше/g, "šie")
+		.replace(/Бе/g, "Bie")
+		.replace(/Ве/g, "Vie")
+		.replace(/Ге/g, "Hie")
+		.replace(/Ґе/g, "Gie")
+		.replace(/Де/g, "Die")
+		.replace(/Же/g, "Žie")
+		.replace(/Зе/g, "Zie")
+		.replace(/Йе/g, "Jie")
+		.replace(/Ке/g, "Kie")
+		.replace(/Ле/g, "Lie")
+		.replace(/Ме/g, "Mie")
+		.replace(/Не/g, "Nie")
+		.replace(/Пе/g, "Pie")
+		.replace(/Ре/g, "Rie")
+		.replace(/Се/g, "Sie")
+		.replace(/Те/g, "Tie")
+		.replace(/Фе/g, "Fie")
+		.replace(/Хе/g, "Chie")
+		.replace(/Це/g, "Cie")
+		.replace(/Че/g, "Čie")
+		.replace(/Ше/g, "Šie")
+		.replace(/БЕ/g, "BIE")
+		.replace(/ВЕ/g, "VIE")
+		.replace(/ГЕ/g, "HIE")
+		.replace(/ҐЕ/g, "GIE")
+		.replace(/ДЕ/g, "DIE")
+		.replace(/ЖЕ/g, "ŽIE")
+		.replace(/ЗЕ/g, "ZIE")
+		.replace(/ЙЕ/g, "JIE")
+		.replace(/КЕ/g, "KIE")
+		.replace(/ЛЕ/g, "LIE")
+		.replace(/МЕ/g, "MIE")
+		.replace(/НЕ/g, "NIE")
+		.replace(/ПЕ/g, "PIE")
+		.replace(/РЕ/g, "RIE")
+		.replace(/СЕ/g, "SIE")
+		.replace(/ТЕ/g, "TIE")
+		.replace(/ФЕ/g, "FIE")
+		.replace(/ХЕ/g, "CHIE")
+		.replace(/ЦЕ/g, "CIE")
+		.replace(/ЧЕ/g, "ČIE")
+		.replace(/ШЕ/g, "ŠIE")
+		.replace(/бя/g, "bia")
+		.replace(/вя/g, "via")
+		.replace(/гя/g, "hia")
+		.replace(/ґя/g, "gia")
+		.replace(/дя/g, "dia")
+		.replace(/жя/g, "žia")
+		.replace(/зя/g, "zia")
+		.replace(/йя/g, "jia")
+		.replace(/кя/g, "kia")
+		.replace(/ля/g, "lia")
+		.replace(/мя/g, "mia")
+		.replace(/ня/g, "nia")
+		.replace(/пя/g, "pia")
+		.replace(/ря/g, "ria")
+		.replace(/ся/g, "sia")
+		.replace(/тя/g, "tia")
+		.replace(/фя/g, "fia")
+		.replace(/хя/g, "chia")
+		.replace(/ця/g, "cia")
+		.replace(/чя/g, "čia")
+		.replace(/шя/g, "šia")
+		.replace(/ья/g, "\u0301ia")
+		.replace(/Бя/g, "Bia")
+		.replace(/Вя/g, "Via")
+		.replace(/Гя/g, "Hia")
+		.replace(/Ґя/g, "Gia")
+		.replace(/Дя/g, "Dia")
+		.replace(/Жя/g, "Žia")
+		.replace(/Зя/g, "Zia")
+		.replace(/Йя/g, "Jia")
+		.replace(/Кя/g, "Kia")
+		.replace(/Ля/g, "Lia")
+		.replace(/Мя/g, "Mia")
+		.replace(/Ня/g, "Nia")
+		.replace(/Пя/g, "Pia")
+		.replace(/Ря/g, "Ria")
+		.replace(/Ся/g, "Sia")
+		.replace(/Тя/g, "Tia")
+		.replace(/Фя/g, "Fia")
+		.replace(/Хя/g, "Chia")
+		.replace(/Ця/g, "Cia")
+		.replace(/Чя/g, "Čia")
+		.replace(/Шя/g, "Šia")
+		.replace(/БЯ/g, "BIA")
+		.replace(/ВЯ/g, "VIA")
+		.replace(/ГЯ/g, "HIA")
+		.replace(/ҐЯ/g, "GIA")
+		.replace(/ДЯ/g, "DIA")
+		.replace(/ЖЯ/g, "ŽIA")
+		.replace(/ЗЯ/g, "ZIA")
+		.replace(/ЙЯ/g, "JIA")
+		.replace(/КЯ/g, "KIA")
+		.replace(/ЛЯ/g, "LIA")
+		.replace(/МЯ/g, "MIA")
+		.replace(/НЯ/g, "NIA")
+		.replace(/ПЯ/g, "PIA")
+		.replace(/РЯ/g, "RIA")
+		.replace(/СЯ/g, "SIA")
+		.replace(/ТЯ/g, "TIA")
+		.replace(/ФЯ/g, "FIA")
+		.replace(/ХЯ/g, "CHIA")
+		.replace(/ЦЯ/g, "CIA")
+		.replace(/ЧЯ/g, "ČIA")
+		.replace(/ШЯ/g, "ŠIA")
+		.replace(/бё/g, "bio")
+		.replace(/вё/g, "vio")
+		.replace(/гё/g, "hio")
+		.replace(/ґё/g, "gio")
+		.replace(/дё/g, "dio")
+		.replace(/жё/g, "žio")
+		.replace(/зё/g, "zio")
+		.replace(/йё/g, "jio")
+		.replace(/кё/g, "kio")
+		.replace(/лё/g, "lio")
+		.replace(/мё/g, "mio")
+		.replace(/нё/g, "nio")
+		.replace(/пё/g, "pio")
+		.replace(/рё/g, "rio")
+		.replace(/сё/g, "sio")
+		.replace(/тё/g, "tio")
+		.replace(/фё/g, "fio")
+		.replace(/хё/g, "chio")
+		.replace(/цё/g, "cio")
+		.replace(/чё/g, "čio")
+		.replace(/шё/g, "šio")
+		.replace(/Бё/g, "Bio")
+		.replace(/Вё/g, "Vio")
+		.replace(/Гё/g, "Hio")
+		.replace(/Ґё/g, "Gio")
+		.replace(/Дё/g, "Dio")
+		.replace(/Жё/g, "Žio")
+		.replace(/Зё/g, "Zio")
+		.replace(/Йё/g, "Jio")
+		.replace(/Кё/g, "Kio")
+		.replace(/Лё/g, "Lio")
+		.replace(/Мё/g, "Mio")
+		.replace(/Нё/g, "Nio")
+		.replace(/Пё/g, "Pio")
+		.replace(/Рё/g, "Rio")
+		.replace(/Сё/g, "Sio")
+		.replace(/Тё/g, "Tio")
+		.replace(/Фё/g, "Fio")
+		.replace(/Хё/g, "Chio")
+		.replace(/Цё/g, "Cio")
+		.replace(/Чё/g, "Čio")
+		.replace(/Шё/g, "Šio")
+		.replace(/БЁ/g, "BIO")
+		.replace(/ВЁ/g, "VIO")
+		.replace(/ГЁ/g, "HIO")
+		.replace(/ҐЁ/g, "GIO")
+		.replace(/ДЁ/g, "DIO")
+		.replace(/ЖЁ/g, "ŽIO")
+		.replace(/ЗЁ/g, "ZIO")
+		.replace(/ЙЁ/g, "JIO")
+		.replace(/КЁ/g, "KIO")
+		.replace(/ЛЁ/g, "LIO")
+		.replace(/МЁ/g, "MIO")
+		.replace(/НЁ/g, "NIO")
+		.replace(/ПЁ/g, "PIO")
+		.replace(/РЁ/g, "RIO")
+		.replace(/СЁ/g, "SIO")
+		.replace(/ТЁ/g, "TIO")
+		.replace(/ФЁ/g, "FIO")
+		.replace(/ХЁ/g, "CHIO")
+		.replace(/ЦЁ/g, "CIO")
+		.replace(/ЧЁ/g, "ČIO")
+		.replace(/ШЁ/g, "ŠIO")
+		.replace(/бю/g, "biu")
+		.replace(/вю/g, "viu")
+		.replace(/гю/g, "hiu")
+		.replace(/ґю/g, "giu")
+		.replace(/дю/g, "diu")
+		.replace(/жю/g, "žiu")
+		.replace(/зю/g, "ziu")
+		.replace(/йю/g, "jiu")
+		.replace(/кю/g, "kiu")
+		.replace(/лю/g, "liu")
+		.replace(/мю/g, "miu")
+		.replace(/ню/g, "niu")
+		.replace(/пю/g, "piu")
+		.replace(/рю/g, "riu")
+		.replace(/сю/g, "siu")
+		.replace(/тю/g, "tiu")
+		.replace(/фю/g, "fiu")
+		.replace(/хю/g, "chiu")
+		.replace(/цю/g, "ciu")
+		.replace(/чю/g, "čiu")
+		.replace(/шю/g, "šiu")
+		.replace(/Бю/g, "Biu")
+		.replace(/Вю/g, "Viu")
+		.replace(/Гю/g, "Hiu")
+		.replace(/Ґю/g, "Giu")
+		.replace(/Дю/g, "Diu")
+		.replace(/Жю/g, "Žiu")
+		.replace(/Зю/g, "Ziu")
+		.replace(/Йю/g, "Jiu")
+		.replace(/Кю/g, "Kiu")
+		.replace(/Лю/g, "Liu")
+		.replace(/Мю/g, "Miu")
+		.replace(/Ню/g, "Niu")
+		.replace(/Пю/g, "Piu")
+		.replace(/Рю/g, "Riu")
+		.replace(/Сю/g, "Siu")
+		.replace(/Тю/g, "Tiu")
+		.replace(/Фю/g, "Fiu")
+		.replace(/Хю/g, "Chiu")
+		.replace(/Цю/g, "Ciu")
+		.replace(/Чю/g, "Čiu")
+		.replace(/Шю/g, "Šiu")
+		.replace(/БЮ/g, "BIU")
+		.replace(/ВЮ/g, "VIU")
+		.replace(/ГЮ/g, "HIU")
+		.replace(/ҐЮ/g, "GIU")
+		.replace(/ДЮ/g, "DIU")
+		.replace(/ЖЮ/g, "ŽIU")
+		.replace(/ЗЮ/g, "ZIU")
+		.replace(/ЙЮ/g, "JIU")
+		.replace(/КЮ/g, "KIU")
+		.replace(/ЛЮ/g, "LIU")
+		.replace(/МЮ/g, "MIU")
+		.replace(/НЮ/g, "NIU")
+		.replace(/ПЮ/g, "PIU")
+		.replace(/РЮ/g, "RIU")
+		.replace(/СЮ/g, "SIU")
+		.replace(/ТЮ/g, "TIU")
+		.replace(/ФЮ/g, "FIU")
+		.replace(/ХЮ/g, "CHIU")
+		.replace(/ЦЮ/g, "CIU")
+		.replace(/ЧЮ/g, "ČIU")
+		.replace(/ШЮ/g, "ŠIU")
 
 
-translit = translit.replace(/а/g, "a");
-translit = translit.replace(/б/g, "b");
-translit = translit.replace(/в/g, "v");
-translit = translit.replace(/г/g, "h");
-translit = translit.replace(/ґ/g, "g");
-translit = translit.replace(/д/g, "d");
-translit = translit.replace(/е/g, "je");
-translit = translit.replace(/ё/g, "jo");
-translit = translit.replace(/ж/g, "ž");
-translit = translit.replace(/з/g, "z");
-translit = translit.replace(/і/g, "i");
-translit = translit.replace(/й/g, "j");
-translit = translit.replace(/к/g, "k");
-translit = translit.replace(/л/g, "l");
-translit = translit.replace(/м/g, "m");
-translit = translit.replace(/н/g, "n");
-translit = translit.replace(/о/g, "o");
-translit = translit.replace(/п/g, "p");
-translit = translit.replace(/р/g, "r");
-translit = translit.replace(/с/g, "s");
-translit = translit.replace(/т/g, "t");
-translit = translit.replace(/у/g, "u");
-translit = translit.replace(/ў/g, "ǔ");
-translit = translit.replace(/ф/g, "f");
-translit = translit.replace(/х/g, "ch");
-translit = translit.replace(/ц/g, "c");
-translit = translit.replace(/ч/g, "č");
-translit = translit.replace(/ш/g, "š");
-translit = translit.replace(/’/g, "");
-translit = translit.replace(/ы/g, "y");
-translit = translit.replace(/ь/g, "\u0301");
-translit = translit.replace(/э/g, "e");
-translit = translit.replace(/ю/g, "ju");
-translit = translit.replace(/я/g, "ja");
+		.replace(/а/g, "a")
+		.replace(/б/g, "b")
+		.replace(/в/g, "v")
+		.replace(/г/g, "h")
+		.replace(/ґ/g, "g")
+		.replace(/д/g, "d")
+		.replace(/е/g, "je")
+		.replace(/ё/g, "jo")
+		.replace(/ж/g, "ž")
+		.replace(/з/g, "z")
+		.replace(/і/g, "i")
+		.replace(/й/g, "j")
+		.replace(/к/g, "k")
+		.replace(/л/g, "l")
+		.replace(/м/g, "m")
+		.replace(/н/g, "n")
+		.replace(/о/g, "o")
+		.replace(/п/g, "p")
+		.replace(/р/g, "r")
+		.replace(/с/g, "s")
+		.replace(/т/g, "t")
+		.replace(/у/g, "u")
+		.replace(/ў/g, "ǔ")
+		.replace(/ф/g, "f")
+		.replace(/х/g, "ch")
+		.replace(/ц/g, "c")
+		.replace(/ч/g, "č")
+		.replace(/ш/g, "š")
+		.replace(/’/g, "")
+		.replace(/ы/g, "y")
+		.replace(/ь/g, "\u0301")
+		.replace(/э/g, "e")
+		.replace(/ю/g, "ju")
+		.replace(/я/g, "ja")
 
-translit = translit.replace(/А/g, "A");
-translit = translit.replace(/Б/g, "B");
-translit = translit.replace(/В/g, "V");
-translit = translit.replace(/Г/g, "H");
-translit = translit.replace(/Ґ/g, "G");
-translit = translit.replace(/Д/g, "D");
-translit = translit.replace(/Е/g, "Je");
-translit = translit.replace(/Ё/g, "Jo");
-translit = translit.replace(/Ж/g, "Ž");
-translit = translit.replace(/З/g, "Z");
-translit = translit.replace(/І/g, "I");
-translit = translit.replace(/Й/g, "J");
-translit = translit.replace(/К/g, "K");
-translit = translit.replace(/Л/g, "L");
-translit = translit.replace(/М/g, "M");
-translit = translit.replace(/Н/g, "N");
-translit = translit.replace(/О/g, "O");
-translit = translit.replace(/П/g, "P");
-translit = translit.replace(/Р/g, "R");
-translit = translit.replace(/С/g, "S");
-translit = translit.replace(/Т/g, "T");
-translit = translit.replace(/У/g, "U");
-translit = translit.replace(/Ў/g, "Ǔ");
-translit = translit.replace(/Ф/g, "F");
-translit = translit.replace(/Х/g, "Ch");
-translit = translit.replace(/Ц/g, "C");
-translit = translit.replace(/Ч/g, "Č");
-translit = translit.replace(/Ш/g, "Š");
-translit = translit.replace(/Ы/g, "Y");
-translit = translit.replace(/Ь/g, "\u0301");
-translit = translit.replace(/Э/g, "E");
-translit = translit.replace(/Ю/g, "Ju");
-translit = translit.replace(/Я/g, "Ja");
-translit = translit.replace(/«/g, "\u201c");
-translit = translit.replace(/»/g, "\u201d");
-document.transcription.text2.value = translit;
+		.replace(/А/g, "A")
+		.replace(/Б/g, "B")
+		.replace(/В/g, "V")
+		.replace(/Г/g, "H")
+		.replace(/Ґ/g, "G")
+		.replace(/Д/g, "D")
+		.replace(/Е/g, "Je")
+		.replace(/Ё/g, "Jo")
+		.replace(/Ж/g, "Ž")
+		.replace(/З/g, "Z")
+		.replace(/І/g, "I")
+		.replace(/Й/g, "J")
+		.replace(/К/g, "K")
+		.replace(/Л/g, "L")
+		.replace(/М/g, "M")
+		.replace(/Н/g, "N")
+		.replace(/О/g, "O")
+		.replace(/П/g, "P")
+		.replace(/Р/g, "R")
+		.replace(/С/g, "S")
+		.replace(/Т/g, "T")
+		.replace(/У/g, "U")
+		.replace(/Ў/g, "Ǔ")
+		.replace(/Ф/g, "F")
+		.replace(/Х/g, "Ch")
+		.replace(/Ц/g, "C")
+		.replace(/Ч/g, "Č")
+		.replace(/Ш/g, "Š")
+		.replace(/Ы/g, "Y")
+		.replace(/Ь/g, "\u0301")
+		.replace(/Э/g, "E")
+		.replace(/Ю/g, "Ju")
+		.replace(/Я/g, "Ja")
+		.replace(/«/g, "\u201c")
+		.replace(/»/g, "\u201d");
 }
 
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
