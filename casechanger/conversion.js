@@ -1,6 +1,7 @@
 function latcyr() {
 	document.transcription.text2.value = document.transcription.text2.value
 		.toUpperCase();
+		.normalize('NFC');
 
 	document.transcription.text1.value = document.transcription.text2.value
 		.toLowerCase()
@@ -10,7 +11,8 @@ function latcyr() {
 function cyrlat() {
 	document.transcription.text1.value = document.transcription.text1.value
 		.toLowerCase();
-
+		.normalize('NFC');
+	
 	document.transcription.text2.value = document.transcription.text1.value
 		.toUpperCase()
 		.normalize('NFC');
