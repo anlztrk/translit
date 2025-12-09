@@ -209,12 +209,6 @@ function cyrlat() {
 	car = car.replace(/((?<![BCÇDFGĞHKLMNÑPQRSŞTVXYZ]))I/g, "$1İ");
 	car = car.replace(/((?<![BCÇDFGĞHKLMNÑPQRSŞTVXYZbcçdfgğhklmnñpqrsştvxyz]))ı/g, "$1i");
 
-	car = car.replace(/Ä/g, "Ȧ");
-	car = car.replace(/ä/g, "ȧ");
-	car = car.replace(/Ö/g, "Ȯ");
-	car = car.replace(/ö/g, "ȯ");
-	car = car.replace(/Ü/g, "U̇");
-	car = car.replace(/ü/g, "u̇");
 	car = car.replace(/([0-9])x/g, "$1×");
 	car = car.replace(/x([0-9])/g, "×$1");
 	car = car.replace(/X/g, "H");
