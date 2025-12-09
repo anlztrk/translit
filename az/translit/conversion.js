@@ -78,12 +78,14 @@ function cyrlat() {
 		.replace(/ц/g, "ү")
 		.replace(/щ/g, "h")
 		.replace(/ь/g, "ғ")
+		.replace(/э/g, "ҝ")
 		.replace(/Я/g, "Ә")
 		.replace(/Ъ/g, "Ҹ")
 		.replace(/Й/g, "Ј")
 		.replace(/Ц/g, "Ү")
 		.replace(/Щ/g, "H")
-		.replace(/Ь/g, "Ғ");
+		.replace(/Ь/g, "Ғ")
+		.replace(/Э/g, "Ҝ";
 
 	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/а/g, "a")
