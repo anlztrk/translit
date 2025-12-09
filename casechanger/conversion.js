@@ -5,12 +5,14 @@ function latcyr() {
 
 	document.transcription.text1.value = document.transcription.text2.value
 		.toLowerCase()
+		.replace(/[ıi]\u0307/g, "i")
 		.normalize('NFC');
 }
 
 function cyrlat() {
 	document.transcription.text1.value = document.transcription.text1.value
 		.toLowerCase()
+		.replace(/[ıi]\u0307/g, "i")
 		.normalize('NFC');
 	
 	document.transcription.text2.value = document.transcription.text1.value
