@@ -68,7 +68,7 @@ function latcyr() {
 		.replace(/Ü/g, "Ү")
 		.replace(/V/g, "В")
 		.replace(/Y/g, "Ј")
-		.replace(/Z/g, "З");;
+		.replace(/Z/g, "З");
 }
 
 function cyrlat() {
