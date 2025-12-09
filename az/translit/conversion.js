@@ -1,5 +1,4 @@
 function latcyr() {
-
 	document.transcription.text2.value = document.transcription.text2.value
 		.replace(/ä/g, "ə")
 		.replace(/Ä/g, "Ə");
