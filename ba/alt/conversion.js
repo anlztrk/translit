@@ -1,5 +1,5 @@
 function cyrlat() {
-	document.transcription.text2.value = document.transcription.text1.value;
+	document.transcription.text2.value = document.transcription.text1.value
 	.replace(/(А|Е|Ё|И|О|Ө|У|Ү|Ы|Ю|Я|Э|Ә)Ц/g, "$1ТС")
 	.replace(/(а|е|ё|и|о|ө|у|ү|ы|ю|я|э|ә)Ц/g, "$1Тс")
 	.replace(/(а|е|ё|и|о|ө|у|ү|ы|ю|я|э|ә)ц/g, "$1тс")
