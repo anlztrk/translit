@@ -1,53 +1,51 @@
-var translit; 
-function cyrlat () { 
-translit = document.transcription.text1.value;
-translit = translit.replace(/ا/g, "ʾ"); 
-translit = translit.replace(/آ/g, "ā"); 
-translit = translit.replace(/ب/g, "b"); 
-translit = translit.replace(/پ/g, "p"); 
-translit = translit.replace(/ت/g, "t"); 
-translit = translit.replace(/ث/g, "s"); 
-translit = translit.replace(/ج/g, "j"); 
-translit = translit.replace(/چ/g, "č"); 
-translit = translit.replace(/ح/g, "h"); 
-translit = translit.replace(/خ/g, "x"); 
-translit = translit.replace(/د/g, "d"); 
-translit = translit.replace(/ذ/g, "z"); 
-translit = translit.replace(/ر/g, "r"); 
-translit = translit.replace(/ز/g, "z"); 
-translit = translit.replace(/ژ/g, "ž"); 
-translit = translit.replace(/س/g, "s"); 
-translit = translit.replace(/ش/g, "š"); 
-translit = translit.replace(/ص/g, "s"); 
-translit = translit.replace(/ض/g, "z"); 
-translit = translit.replace(/ط/g, "t"); 
-translit = translit.replace(/ظ/g, "z"); 
-translit = translit.replace(/ع/g, "ʿ"); 
-translit = translit.replace(/غ/g, "q"); 
-translit = translit.replace(/ف/g, "f"); 
-translit = translit.replace(/ق/g, "q"); 
-translit = translit.replace(/ك/g, "k"); 
-translit = translit.replace(/ک/g, "k"); 
-translit = translit.replace(/گ/g, "g"); 
-translit = translit.replace(/ل/g, "l"); 
-translit = translit.replace(/م/g, "m"); 
-translit = translit.replace(/ن/g, "n"); 
-translit = translit.replace(/و/g, "v"); 
-translit = translit.replace(/ه/g, "h"); 
-translit = translit.replace(/ة/g, ""); 
-translit = translit.replace(/ی/g, "y"); 
-translit = translit.replace(/ء/g, "ʾ"); 
-translit = translit.replace(/ؤ/g, "ʾ"); 
-translit = translit.replace(/ئ/g, "ʾ");
-document.transcription.text2.value=translit; 
+function cyrlat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/ا/g, "ʾ")
+		.replace(/آ/g, "ā")
+		.replace(/ب/g, "b")
+		.replace(/پ/g, "p")
+		.replace(/ت/g, "t")
+		.replace(/ث/g, "s")
+		.replace(/ج/g, "j")
+		.replace(/چ/g, "č")
+		.replace(/ح/g, "h")
+		.replace(/خ/g, "x")
+		.replace(/د/g, "d")
+		.replace(/ذ/g, "z")
+		.replace(/ر/g, "r")
+		.replace(/ز/g, "z")
+		.replace(/ژ/g, "ž")
+		.replace(/س/g, "s")
+		.replace(/ش/g, "š")
+		.replace(/ص/g, "s")
+		.replace(/ض/g, "z")
+		.replace(/ط/g, "t")
+		.replace(/ظ/g, "z")
+		.replace(/ع/g, "ʿ")
+		.replace(/غ/g, "q")
+		.replace(/ف/g, "f")
+		.replace(/ق/g, "q")
+		.replace(/ك/g, "k")
+		.replace(/ک/g, "k")
+		.replace(/گ/g, "g")
+		.replace(/ل/g, "l")
+		.replace(/م/g, "m")
+		.replace(/ن/g, "n")
+		.replace(/و/g, "v")
+		.replace(/ه/g, "h")
+		.replace(/ة/g, "")
+		.replace(/ی/g, "y")
+		.replace(/ء/g, "ʾ")
+		.replace(/ؤ/g, "ʾ")
+		.replace(/ئ/g, "ʾ");
 }
 
-function latcyr () {
-} 
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function latcyr() {}
+
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value)
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value)
 }
