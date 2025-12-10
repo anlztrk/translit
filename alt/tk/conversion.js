@@ -2,7 +2,6 @@ function latcyr() {}
 
 function cyrlat() {
 	document.transcription.text1.value = document.transcription.text1.value
-
 		.replace(/ö/g, "ӧ")
 		.replace(/Ö/g, "Ӧ")
 		.replace(/ÿ/g, "ӱ")
@@ -11,14 +10,6 @@ function cyrlat() {
 		.replace(/J/g, "Ј");
 
 	document.transcription.text2.value = document.transcription.text1.value
-
-		.replace(/ö/g, "ӧ")
-		.replace(/Ö/g, "Ӧ")
-		.replace(/ÿ/g, "ӱ")
-		.replace(/Ÿ/g, "Ӱ")
-		.replace(/j/g, "ј")
-		.replace(/J/g, "Ј")
-
 		.replace(/ е/g, " ýe")
 		.replace(/\nе/g, "\nýe")
 		.replace(/\rе/g, "\rýe")
