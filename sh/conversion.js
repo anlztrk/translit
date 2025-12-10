@@ -23,11 +23,13 @@ car = document.transcription.text2.value;
   car = car.replace(/p/g, "п");
   car = car.replace(/r/g, "р");
   car = car.replace(/s/g, "с");
+  car = car.replace(/ś/g, "с\u0301");
   car = car.replace(/š/g, "ш");
   car = car.replace(/t/g, "т");
   car = car.replace(/u/g, "у");
   car = car.replace(/v/g, "в");
   car = car.replace(/z/g, "з");
+  car = car.replace(/ź/g, "з\u0301");
   car = car.replace(/ž/g, "ж");
   car = car.replace(/A/g, "А");
   car = car.replace(/B/g, "Б");
@@ -50,11 +52,13 @@ car = document.transcription.text2.value;
   car = car.replace(/P/g, "П");
   car = car.replace(/R/g, "Р");
   car = car.replace(/S/g, "С");
+  car = car.replace(/Ś/g, "С\u0301");
   car = car.replace(/Š/g, "Ш");
   car = car.replace(/T/g, "Т");
   car = car.replace(/U/g, "У");
   car = car.replace(/V/g, "В");
   car = car.replace(/Z/g, "З");
+  car = car.replace(/Ź/g, "З\u0301");
   car = car.replace(/Ž/g, "Ж");
   car = car.replace(/дж/g, "џ");
   car = car.replace(/Дж/g, "Џ");
@@ -129,6 +133,8 @@ car = car.replace(/а/g, "a");
   car = car.replace(/В/g, "V");
   car = car.replace(/З/g, "Z");
   car = car.replace(/Ж/g, "Ž");
+
+  car = car.normalize('NFC');
 document.transcription.text2.value=car;
 }
 function copy1()
