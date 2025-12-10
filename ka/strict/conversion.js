@@ -1,115 +1,115 @@
-﻿var car;
-function geolat () {
-car = document.transcription.text1.value;
-let latinWords = {};
-   let index = 0;
-   car = car.replace(/\p{sc=Latin}+/ug, function(match) {
-     let key = `__placeholder${index}__`;
-     latinWords[key] = match;
-     index++;
-     return key;
-  });
+function geolat() {
+	document.transcription.text2.value = document.transcription.text1.value;
+	let latinWords = {};
+	let index = 0;
+	document.transcription.text2.value = document.transcription.text2.value.replace(/\p{sc=Latin}+/ug, function(match) {
+		let key = `__placeholder${index}__`;
+		latinWords[key] = match;
+		index++;
+		return key;
+	});
 
-car = car.replace(/Ა/g, "ა");
-car = car.replace(/Ბ/g, "ბ");
-car = car.replace(/Გ/g, "გ");
-car = car.replace(/Დ/g, "დ");
-car = car.replace(/Ე/g, "ე");
-car = car.replace(/Ვ/g, "ვ");
-car = car.replace(/Ზ/g, "ზ");
-car = car.replace(/Ჱ/g, "ჱ");
-car = car.replace(/Თ/g, "თ");
-car = car.replace(/Ი/g, "ი");
-car = car.replace(/Კ/g, "კ");
-car = car.replace(/Ლ/g, "ლ");
-car = car.replace(/Მ/g, "მ");
-car = car.replace(/Ნ/g, "ნ");
-car = car.replace(/Ჲ/g, "ჲ");
-car = car.replace(/Ო/g, "ო");
-car = car.replace(/Პ/g, "პ");
-car = car.replace(/Ჟ/g, "ჟ");
-car = car.replace(/Რ/g, "რ");
-car = car.replace(/Ს/g, "ს");
-car = car.replace(/Ტ/g, "ტ");
-car = car.replace(/Ჳ/g, "ჳ");
-car = car.replace(/Უ/g, "უ");
-car = car.replace(/Ჷ/g, "ჷ");
-car = car.replace(/Ფ/g, "ფ");
-car = car.replace(/Ქ/g, "ქ");
-car = car.replace(/Ღ/g, "ღ");
-car = car.replace(/Ყ/g, "ყ");
-car = car.replace(/Ჸ/g, "ჸ");
-car = car.replace(/Შ/g, "შ");
-car = car.replace(/Ჩ/g, "ჩ");
-car = car.replace(/Ც/g, "ც");
-car = car.replace(/Ძ/g, "ძ");
-car = car.replace(/Წ/g, "წ");
-car = car.replace(/Ჭ/g, "ჭ");
-car = car.replace(/Ხ/g, "ხ");
-car = car.replace(/Ჴ/g, "ჴ");
-car = car.replace(/Ჯ/g, "ჯ");
-car = car.replace(/Ჰ/g, "ჰ");
-car = car.replace(/Ჵ/g, "ჵ");
-car = car.replace(/Ჶ/g, "ჶ");
-car = car.replace(/Ჹ/g, "ჹ");
-car = car.replace(/Ჺ/g, "ჺ");
-car = car.replace(/Ჽ/g, "ჽ");
-car = car.replace(/Ჾ/g, "ჾ");
-car = car.replace(/Ჿ/g, "ჿ");
-   
-car = car.replace(/ქქ/g, "ქ-ქ");
-car = car.replace(/ფფ/g, "ფ-ფ");
-car = car.replace(/თთ/g, "თ-თ");
-car = car.replace(/ცც/g, "ც-ც");
-car = car.replace(/ჩჩ/g, "ჩ-ჩ");
-  
-car = car.replace(/ა/g, "A");
-car = car.replace(/ბ/g, "B");
-car = car.replace(/გ/g, "G");
-car = car.replace(/დ/g, "D");
-car = car.replace(/ე/g, "E");
-car = car.replace(/ვ/g, "V");
-car = car.replace(/ზ/g, "Z");
-car = car.replace(/თ/g, "T");
-car = car.replace(/ი/g, "I");
-car = car.replace(/კ/g, "KK");
-car = car.replace(/ლ/g, "L");
-car = car.replace(/მ/g, "M");
-car = car.replace(/ნ/g, "N");
-car = car.replace(/ო/g, "O");
-car = car.replace(/პ/g, "PP");
-car = car.replace(/ჟ/g, "Ž");
-car = car.replace(/რ/g, "R");
-car = car.replace(/ს/g, "S");
-car = car.replace(/ტ/g, "TT");
-car = car.replace(/უ/g, "U");
-car = car.replace(/ფ/g, "P");
-car = car.replace(/ქ/g, "K");
-car = car.replace(/ღ/g, "Ġ");
-car = car.replace(/ყ/g, "Q");
-car = car.replace(/შ/g, "Š");
-car = car.replace(/ჩ/g, "Č");
-car = car.replace(/ც/g, "C");
-car = car.replace(/ძ/g, "Ż");
-car = car.replace(/წ/g, "CC");
-car = car.replace(/ჭ/g, "ČČ");
-car = car.replace(/ხ/g, "X");
-car = car.replace(/ჯ/g, "J");
-car = car.replace(/ჰ/g, "H");
+	document.transcription.text2.value = document.transcription.text2.value.replace(/Ა/g, "ა")
+		.replace(/Ბ/g, "ბ")
+		.replace(/Გ/g, "გ")
+		.replace(/Დ/g, "დ")
+		.replace(/Ე/g, "ე")
+		.replace(/Ვ/g, "ვ")
+		.replace(/Ზ/g, "ზ")
+		.replace(/Ჱ/g, "ჱ")
+		.replace(/Თ/g, "თ")
+		.replace(/Ი/g, "ი")
+		.replace(/Კ/g, "კ")
+		.replace(/Ლ/g, "ლ")
+		.replace(/Მ/g, "მ")
+		.replace(/Ნ/g, "ნ")
+		.replace(/Ჲ/g, "ჲ")
+		.replace(/Ო/g, "ო")
+		.replace(/Პ/g, "პ")
+		.replace(/Ჟ/g, "ჟ")
+		.replace(/Რ/g, "რ")
+		.replace(/Ს/g, "ს")
+		.replace(/Ტ/g, "ტ")
+		.replace(/Ჳ/g, "ჳ")
+		.replace(/Უ/g, "უ")
+		.replace(/Ჷ/g, "ჷ")
+		.replace(/Ფ/g, "ფ")
+		.replace(/Ქ/g, "ქ")
+		.replace(/Ღ/g, "ღ")
+		.replace(/Ყ/g, "ყ")
+		.replace(/Ჸ/g, "ჸ")
+		.replace(/Შ/g, "შ")
+		.replace(/Ჩ/g, "ჩ")
+		.replace(/Ც/g, "ც")
+		.replace(/Ძ/g, "ძ")
+		.replace(/Წ/g, "წ")
+		.replace(/Ჭ/g, "ჭ")
+		.replace(/Ხ/g, "ხ")
+		.replace(/Ჴ/g, "ჴ")
+		.replace(/Ჯ/g, "ჯ")
+		.replace(/Ჰ/g, "ჰ")
+		.replace(/Ჵ/g, "ჵ")
+		.replace(/Ჶ/g, "ჶ")
+		.replace(/Ჹ/g, "ჹ")
+		.replace(/Ჺ/g, "ჺ")
+		.replace(/Ჽ/g, "ჽ")
+		.replace(/Ჾ/g, "ჾ")
+		.replace(/Ჿ/g, "ჿ")
 
-car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
-    return first + second.toLowerCase();
-});
+		.replace(/ქქ/g, "ქ-ქ")
+		.replace(/ფფ/g, "ფ-ფ")
+		.replace(/თთ/g, "თ-თ")
+		.replace(/ცც/g, "ც-ც")
+		.replace(/ჩჩ/g, "ჩ-ჩ")
 
-   Object.keys(latinWords).forEach(key => {
-     car = car.replace(key, latinWords[key]);
-});
-document.transcription.text2.value=car;
-}
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+		.replace(/ა/g, "A")
+		.replace(/ბ/g, "B")
+		.replace(/გ/g, "G")
+		.replace(/დ/g, "D")
+		.replace(/ე/g, "E")
+		.replace(/ვ/g, "V")
+		.replace(/ზ/g, "Z")
+		.replace(/თ/g, "T")
+		.replace(/ი/g, "I")
+		.replace(/კ/g, "KK")
+		.replace(/ლ/g, "L")
+		.replace(/მ/g, "M")
+		.replace(/ნ/g, "N")
+		.replace(/ო/g, "O")
+		.replace(/პ/g, "PP")
+		.replace(/ჟ/g, "Ž")
+		.replace(/რ/g, "R")
+		.replace(/ს/g, "S")
+		.replace(/ტ/g, "TT")
+		.replace(/უ/g, "U")
+		.replace(/ფ/g, "P")
+		.replace(/ქ/g, "K")
+		.replace(/ღ/g, "Ġ")
+		.replace(/ყ/g, "Q")
+		.replace(/შ/g, "Š")
+		.replace(/ჩ/g, "Č")
+		.replace(/ც/g, "C")
+		.replace(/ძ/g, "Ż")
+		.replace(/წ/g, "CC")
+		.replace(/ჭ/g, "ČČ")
+		.replace(/ხ/g, "X")
+		.replace(/ჯ/g, "J")
+		.replace(/ჰ/g, "H")
+
+		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
+			return first + second.toLowerCase();
+		});
+
+	Object.keys(latinWords).forEach(key => {
+		document.transcription.text2.value = document.transcription.text2.value.replace(key, latinWords[key]);
+	});
+	document.transcription.text2.value = car;
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
