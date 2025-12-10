@@ -1,125 +1,124 @@
-var car;
-function cyrlat () {
-car = document.transcription.text1.value;
-car = car.replace(/(きゃ|キャ)/g, 'kya');
-car = car.replace(/(きゅ|キュ)/g, 'kyu');
-car = car.replace(/(きょ|キョ)/g, 'kyo');
-car = car.replace(/(しゃ|シャ)/g, 'sha');
-car = car.replace(/(しゅ|シュ)/g, 'shu');
-car = car.replace(/(しょ|ショ)/g, 'sho');
-car = car.replace(/(ちゃ|チャ)/g, 'cha');
-car = car.replace(/(ちゅ|チュ)/g, 'chu');
-car = car.replace(/(ちょ|チョ)/g, 'cho');
-car = car.replace(/(にゃ|ニャ)/g, 'nya');
-car = car.replace(/(にゅ|ニュ)/g, 'nyu');
-car = car.replace(/(にょ|ニョ)/g, 'nyo');
-car = car.replace(/(ひゃ|ヒャ)/g, 'hya');
-car = car.replace(/(ひゅ|ヒュ)/g, 'hyu');
-car = car.replace(/(ひょ|ヒョ)/g, 'hyo');
-car = car.replace(/(みゃ|ミャ)/g, 'mya');
-car = car.replace(/(みゅ|ミュ)/g, 'myu');
-car = car.replace(/(みょ|ミョ)/g, 'myo');
-car = car.replace(/(りゃ|リャ)/g, 'rya');
-car = car.replace(/(りゅ|リュ)/g, 'ryu');
-car = car.replace(/(りょ|リョ)/g, 'ryo');
-car = car.replace(/(ゐゃ|ヰャ)/g, 'iya');
-car = car.replace(/(ゐゅ|ヰュ)/g, 'iyu');
-car = car.replace(/(ゐょ|ヰョ)/g, 'iyo');
-car = car.replace(/(ぎゃ|ギャ)/g, 'gya');
-car = car.replace(/(ぎゅ|ギュ)/g, 'gyu');
-car = car.replace(/(ぎょ|ギョ)/g, 'gyo');
-car = car.replace(/(びゃ|ビャ)/g, 'bya');
-car = car.replace(/(びゅ|ビュ)/g, 'byu');
-car = car.replace(/(びょ|ビョ)/g, 'byo');
-car = car.replace(/(ぴゃ|ピャ)/g, 'pya');
-car = car.replace(/(ぴゅ|ピュ)/g, 'pyu');
-car = car.replace(/(ぴょ|ピョ)/g, 'pyo');
-car = car.replace(/(じゃ|ジャ)/g, 'ja');
-car = car.replace(/(じゅ|ジュ)/g, 'ju');
-car = car.replace(/(じょ|ジョ)/g, 'jo');
-car = car.replace(/(ぢゃ|ヂャ)/g, 'ja');
-car = car.replace(/(ぢゅ|ヂュ)/g, 'ju');
-car = car.replace(/(ぢょ|ヂョ)/g, 'jo');
-car = car.replace(/(し|シ)/g, 'shi');
-car = car.replace(/(ち|チ)/g, 'chi');
-car = car.replace(/(つ|ツ)/g, 'tsu');
-car = car.replace(/(ん|ン)/g, 'n\u0027');
-car = car.replace(/(か|カ)/g, 'ka');
-car = car.replace(/(き|キ)/g, 'ki');
-car = car.replace(/(く|ク)/g, 'ku');
-car = car.replace(/(け|ケ)/g, 'ke');
-car = car.replace(/(こ|コ)/g, 'ko');
-car = car.replace(/(さ|サ)/g, 'sa');
-car = car.replace(/(す|ス)/g, 'su');
-car = car.replace(/(せ|セ)/g, 'se');
-car = car.replace(/(そ|ソ)/g, 'so');
-car = car.replace(/(た|タ)/g, 'ta');
-car = car.replace(/(て|テ)/g, 'te');
-car = car.replace(/(と|ト)/g, 'to');
-car = car.replace(/(な|ナ)/g, 'na');
-car = car.replace(/(に|ニ)/g, 'ni');
-car = car.replace(/(ぬ|ヌ)/g, 'nu');
-car = car.replace(/(ね|ネ)/g, 'ne');
-car = car.replace(/(の|ノ)/g, 'no');
-car = car.replace(/(は|ハ)/g, 'ha');
-car = car.replace(/(ひ|ヒ)/g, 'hi');
-car = car.replace(/(ふ|フ)/g, 'fu');
-car = car.replace(/(へ|ヘ)/g, 'he');
-car = car.replace(/(ほ|ホ)/g, 'ho');
-car = car.replace(/(ま|マ)/g, 'ma');
-car = car.replace(/(み|ミ)/g, 'mi');
-car = car.replace(/(む|ム)/g, 'mu');
-car = car.replace(/(め|メ)/g, 'me');
-car = car.replace(/(も|モ)/g, 'mo');
-car = car.replace(/(や|ヤ)/g, 'ya');
-car = car.replace(/(ゆ|ユ)/g, 'yu');
-car = car.replace(/(よ|ヨ)/g, 'yo');
-car = car.replace(/(ら|ラ)/g, 'ra');
-car = car.replace(/(り|リ)/g, 'ri');
-car = car.replace(/(る|ル)/g, 'ru');
-car = car.replace(/(れ|レ)/g, 're');
-car = car.replace(/(ろ|ロ)/g, 'ro');
-car = car.replace(/(わ|ワ)/g, 'wa');
-car = car.replace(/(が|ガ)/g, 'ga');
-car = car.replace(/(ぎ|ギ)/g, 'gi');
-car = car.replace(/(ぐ|グ)/g, 'gu');
-car = car.replace(/(げ|ゲ)/g, 'ge');
-car = car.replace(/(ご|ゴ)/g, 'go');
-car = car.replace(/(ざ|ザ)/g, 'za');
-car = car.replace(/(じ|ジ)/g, 'ji');
-car = car.replace(/(ず|ズ)/g, 'zu');
-car = car.replace(/(ぜ|ゼ)/g, 'ze');
-car = car.replace(/(ぞ|ゾ)/g, 'zo');
-car = car.replace(/(だ|ダ)/g, 'da');
-car = car.replace(/(ぢ|ヂ)/g, 'ji');
-car = car.replace(/(づ|ヅ)/g, 'zu');
-car = car.replace(/(で|デ)/g, 'de');
-car = car.replace(/(ど|ド)/g, 'do');
-car = car.replace(/(ば|バ)/g, 'ba');
-car = car.replace(/(び|ビ)/g, 'bi');
-car = car.replace(/(ぶ|ブ)/g, 'bu');
-car = car.replace(/(べ|ベ)/g, 'be');
-car = car.replace(/(ぼ|ボ)/g, 'bo');
-car = car.replace(/(ぱ|パ)/g, 'pa');
-car = car.replace(/(ぴ|ピ)/g, 'pi');
-car = car.replace(/(ぷ|プ)/g, 'pu');
-car = car.replace(/(ぺ|ペ)/g, 'pe');
-car = car.replace(/(ぽ|ポ)/g, 'po');
-car = car.replace(/(ゔ|ヴ)/g, 'vu');
-car = car.replace(/(あ|ア)/g, 'a');
-car = car.replace(/(い|イ)/g, 'i');
-car = car.replace(/(う|ウ)/g, 'u');
-car = car.replace(/(え|エ)/g, 'e');
-car = car.replace(/(お|オ)/g, 'o');
-car = car.replace(/(ゐ|ヰ)/g, 'i');
-car = car.replace(/(ゑ|ヱ)/g, 'e');
-car = car.replace(/(を|ヲ)/g, 'o');
-document.transcription.text2.value=car;
-}
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function cyrlat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/(きゃ|キャ)/g, 'kya')
+		.replace(/(きゅ|キュ)/g, 'kyu')
+		.replace(/(きょ|キョ)/g, 'kyo')
+		.replace(/(しゃ|シャ)/g, 'sha')
+		.replace(/(しゅ|シュ)/g, 'shu')
+		.replace(/(しょ|ショ)/g, 'sho')
+		.replace(/(ちゃ|チャ)/g, 'cha')
+		.replace(/(ちゅ|チュ)/g, 'chu')
+		.replace(/(ちょ|チョ)/g, 'cho')
+		.replace(/(にゃ|ニャ)/g, 'nya')
+		.replace(/(にゅ|ニュ)/g, 'nyu')
+		.replace(/(にょ|ニョ)/g, 'nyo')
+		.replace(/(ひゃ|ヒャ)/g, 'hya')
+		.replace(/(ひゅ|ヒュ)/g, 'hyu')
+		.replace(/(ひょ|ヒョ)/g, 'hyo')
+		.replace(/(みゃ|ミャ)/g, 'mya')
+		.replace(/(みゅ|ミュ)/g, 'myu')
+		.replace(/(みょ|ミョ)/g, 'myo')
+		.replace(/(りゃ|リャ)/g, 'rya')
+		.replace(/(りゅ|リュ)/g, 'ryu')
+		.replace(/(りょ|リョ)/g, 'ryo')
+		.replace(/(ゐゃ|ヰャ)/g, 'iya')
+		.replace(/(ゐゅ|ヰュ)/g, 'iyu')
+		.replace(/(ゐょ|ヰョ)/g, 'iyo')
+		.replace(/(ぎゃ|ギャ)/g, 'gya')
+		.replace(/(ぎゅ|ギュ)/g, 'gyu')
+		.replace(/(ぎょ|ギョ)/g, 'gyo')
+		.replace(/(びゃ|ビャ)/g, 'bya')
+		.replace(/(びゅ|ビュ)/g, 'byu')
+		.replace(/(びょ|ビョ)/g, 'byo')
+		.replace(/(ぴゃ|ピャ)/g, 'pya')
+		.replace(/(ぴゅ|ピュ)/g, 'pyu')
+		.replace(/(ぴょ|ピョ)/g, 'pyo')
+		.replace(/(じゃ|ジャ)/g, 'ja')
+		.replace(/(じゅ|ジュ)/g, 'ju')
+		.replace(/(じょ|ジョ)/g, 'jo')
+		.replace(/(ぢゃ|ヂャ)/g, 'ja')
+		.replace(/(ぢゅ|ヂュ)/g, 'ju')
+		.replace(/(ぢょ|ヂョ)/g, 'jo')
+		.replace(/(し|シ)/g, 'shi')
+		.replace(/(ち|チ)/g, 'chi')
+		.replace(/(つ|ツ)/g, 'tsu')
+		.replace(/(ん|ン)/g, 'n\u0027')
+		.replace(/(か|カ)/g, 'ka')
+		.replace(/(き|キ)/g, 'ki')
+		.replace(/(く|ク)/g, 'ku')
+		.replace(/(け|ケ)/g, 'ke')
+		.replace(/(こ|コ)/g, 'ko')
+		.replace(/(さ|サ)/g, 'sa')
+		.replace(/(す|ス)/g, 'su')
+		.replace(/(せ|セ)/g, 'se')
+		.replace(/(そ|ソ)/g, 'so')
+		.replace(/(た|タ)/g, 'ta')
+		.replace(/(て|テ)/g, 'te')
+		.replace(/(と|ト)/g, 'to')
+		.replace(/(な|ナ)/g, 'na')
+		.replace(/(に|ニ)/g, 'ni')
+		.replace(/(ぬ|ヌ)/g, 'nu')
+		.replace(/(ね|ネ)/g, 'ne')
+		.replace(/(の|ノ)/g, 'no')
+		.replace(/(は|ハ)/g, 'ha')
+		.replace(/(ひ|ヒ)/g, 'hi')
+		.replace(/(ふ|フ)/g, 'fu')
+		.replace(/(へ|ヘ)/g, 'he')
+		.replace(/(ほ|ホ)/g, 'ho')
+		.replace(/(ま|マ)/g, 'ma')
+		.replace(/(み|ミ)/g, 'mi')
+		.replace(/(む|ム)/g, 'mu')
+		.replace(/(め|メ)/g, 'me')
+		.replace(/(も|モ)/g, 'mo')
+		.replace(/(や|ヤ)/g, 'ya')
+		.replace(/(ゆ|ユ)/g, 'yu')
+		.replace(/(よ|ヨ)/g, 'yo')
+		.replace(/(ら|ラ)/g, 'ra')
+		.replace(/(り|リ)/g, 'ri')
+		.replace(/(る|ル)/g, 'ru')
+		.replace(/(れ|レ)/g, 're')
+		.replace(/(ろ|ロ)/g, 'ro')
+		.replace(/(わ|ワ)/g, 'wa')
+		.replace(/(が|ガ)/g, 'ga')
+		.replace(/(ぎ|ギ)/g, 'gi')
+		.replace(/(ぐ|グ)/g, 'gu')
+		.replace(/(げ|ゲ)/g, 'ge')
+		.replace(/(ご|ゴ)/g, 'go')
+		.replace(/(ざ|ザ)/g, 'za')
+		.replace(/(じ|ジ)/g, 'ji')
+		.replace(/(ず|ズ)/g, 'zu')
+		.replace(/(ぜ|ゼ)/g, 'ze')
+		.replace(/(ぞ|ゾ)/g, 'zo')
+		.replace(/(だ|ダ)/g, 'da')
+		.replace(/(ぢ|ヂ)/g, 'ji')
+		.replace(/(づ|ヅ)/g, 'zu')
+		.replace(/(で|デ)/g, 'de')
+		.replace(/(ど|ド)/g, 'do')
+		.replace(/(ば|バ)/g, 'ba')
+		.replace(/(び|ビ)/g, 'bi')
+		.replace(/(ぶ|ブ)/g, 'bu')
+		.replace(/(べ|ベ)/g, 'be')
+		.replace(/(ぼ|ボ)/g, 'bo')
+		.replace(/(ぱ|パ)/g, 'pa')
+		.replace(/(ぴ|ピ)/g, 'pi')
+		.replace(/(ぷ|プ)/g, 'pu')
+		.replace(/(ぺ|ペ)/g, 'pe')
+		.replace(/(ぽ|ポ)/g, 'po')
+		.replace(/(ゔ|ヴ)/g, 'vu')
+		.replace(/(あ|ア)/g, 'a')
+		.replace(/(い|イ)/g, 'i')
+		.replace(/(う|ウ)/g, 'u')
+		.replace(/(え|エ)/g, 'e')
+		.replace(/(お|オ)/g, 'o')
+		.replace(/(ゐ|ヰ)/g, 'i')
+		.replace(/(ゑ|ヱ)/g, 'e')
+		.replace(/(を|ヲ)/g, 'o');
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
