@@ -7,15 +7,8 @@ function cyrlat() {
 
 		.replace(/(\p{Lowercase})( )?Ӏ/ug, "$1$2ӏ")
 		.replace(/(\p{Uppercase})( )?Ӏ( )?(\p{Lowercase})/ug, "$1$2ӏ$3$4");
+	
 	document.transcription.text2.value = document.transcription.text1.value
-		.replace(/(\p{Script=Cyrl})(I|1)/ug, "$1Ӏ")
-		.replace(/(I|1)(\p{Script=Cyrl})/ug, "Ӏ$2")
-		.replace(/(\p{Script=Cyrl})l/ug, "$1ӏ")
-		.replace(/l(\p{Script=Cyrl})/ug, "ӏ$1")
-
-		.replace(/(\p{Lowercase})( )?Ӏ/ug, "$1$2ӏ")
-		.replace(/(\p{Uppercase})( )?Ӏ( )?(\p{Lowercase})/ug, "$1$2ӏ$3$4")
-
 		.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА")
 		.replace(/(\p{Uppercase})Я/ug, "$1ЙА")
 		.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2")
