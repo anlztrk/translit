@@ -1,217 +1,218 @@
-var car;
-function newLineUppercase($0,$1) {return '\n' + $1.toUpperCase()};
-function latgeo () {
-car = document.transcription.text2.value;
+function newLineUppercase($0, $1) {
+	return '\n' + $1.toUpperCase()
+};
 
-//1. convert all BIG letters into small
-car = car.replace(/A/g, "a");
-car = car.replace(/B/g, "b");
-car = car.replace(/G/g, "g");
-car = car.replace(/D/g, "d");
-car = car.replace(/E/g, "e");
-car = car.replace(/V/g, "v");
-car = car.replace(/Z/g, "z");
-car = car.replace(/T/g, "t");
-car = car.replace(/I/g, "i");
-car = car.replace(/K'/g, "k'");
-car = car.replace(/L/g, "l");
-car = car.replace(/M/g, "m");
-car = car.replace(/N/g, "n");
-car = car.replace(/O/g, "o");
-car = car.replace(/P'/g, "p'");
-car = car.replace(/J/g, "j");
-car = car.replace(/R/g, "r");
-car = car.replace(/S/g, "s");
-car = car.replace(/Ť/g, "t'");
-car = car.replace(/T'/g, "t'");
-car = car.replace(/U/g, "u");
-car = car.replace(/P/g, "p");
-car = car.replace(/K/g, "k");
-car = car.replace(/Ǧ/g, "ǧ");
-car = car.replace(/Ğ/g, "ǧ");
-car = car.replace(/Q/g, "q");
-car = car.replace(/Ş/g, "ş");
-car = car.replace(/Ç/g, "ç");
-car = car.replace(/Z'/g, "z'");
-car = car.replace(/Ç/g, "ç'");
-car = car.replace(/X/g, "x");
-car = car.replace(/C/g, "c");
-car = car.replace(/Č/g, "č");
-car = car.replace(/H/g, "h");
-car = car.replace(/F/g, "f");
-car = car.replace(/Y/g, "y");
-car = car.replace(/Ǯ/g, "ǯ");
+function latgeo() {
+	document.transcription.text1.value = document.transcription.text2.value
 
-
-//2. convert all special characters 
-//3. convert old version of alphabet into version used in this converter
-car = car.replace(/ʼ/g, "’");
-car = car.replace(/’/g, "’");
-car = car.replace(/'/g, "’");
-car = car.replace(/ğ/g, "ǧ");
-car = car.replace(/ɣ/g, "ǧ");
-car = car.replace(/ts/g, "3");
-car = car.replace(/З/g, "3");
-car = car.replace(/з/g, "3");
-car = car.replace(/ʒ/g, "3");
-car = car.replace(/Ʒ/g, "3");
-car = car.replace(/ǯ/g, "3'");
-car = car.replace(/ť/g, "t'");
-car = car.replace(/t̆/g, "t'");
-car = car.replace(/t\u200c\u030c/g, "t'");
-car = car.replace(/ǩ/g, "k'");
-car = car.replace(/Ǩ/g, "k'");
-car = car.replace(/ḱ/g, "k'");
-car = car.replace(/Ḱ/g, "k'");
-car = car.replace(/p̌/g, "p'");
-car = car.replace(/ṕ/g, "p'");
-car = car.replace(/Ṕ/g, "p'");
-car = car.replace(/ç̌/g, "ç'");
-car = car.replace(/ç̌/g, "ç'");
-car = car.replace(/ḉ/g, "ç'");
-car = car.replace(/Ḉ/g, "ç'");
-car = car.replace(/ž/g, "z'");
-car = car.replace(/Ž/g, "z'");
-
-//4. again apostrof just for each case: š, č plus apostrof
-car = car.replace(/ʼ/g, "'");
-car = car.replace(/’/g, "'");
-car = car.replace(/’/g, "'");
-
-//5. dotted and dotless I in Turkish, just to avoid spelling mistake
-car = car.replace(/İ/g, "i");
-car = car.replace(/i/g, "i");
-car = car.replace(/I/g, "i");
-car = car.replace(/ı/g, "i");
+		//1. convert all BIG letters into small
+		.replace(/A/g, "a")
+		.replace(/B/g, "b")
+		.replace(/G/g, "g")
+		.replace(/D/g, "d")
+		.replace(/E/g, "e")
+		.replace(/V/g, "v")
+		.replace(/Z/g, "z")
+		.replace(/T/g, "t")
+		.replace(/I/g, "i")
+		.replace(/K'/g, "k'")
+		.replace(/L/g, "l")
+		.replace(/M/g, "m")
+		.replace(/N/g, "n")
+		.replace(/O/g, "o")
+		.replace(/P'/g, "p'")
+		.replace(/J/g, "j")
+		.replace(/R/g, "r")
+		.replace(/S/g, "s")
+		.replace(/Ť/g, "t'")
+		.replace(/T'/g, "t'")
+		.replace(/U/g, "u")
+		.replace(/P/g, "p")
+		.replace(/K/g, "k")
+		.replace(/Ǧ/g, "ǧ")
+		.replace(/Ğ/g, "ǧ")
+		.replace(/Q/g, "q")
+		.replace(/Ş/g, "ş")
+		.replace(/Ç/g, "ç")
+		.replace(/Z'/g, "z'")
+		.replace(/Ç/g, "ç'")
+		.replace(/X/g, "x")
+		.replace(/C/g, "c")
+		.replace(/Č/g, "č")
+		.replace(/H/g, "h")
+		.replace(/F/g, "f")
+		.replace(/Y/g, "y")
+		.replace(/Ǯ/g, "ǯ")
 
 
-//6. standard convertion LAT-GEO
-car = car.replace(/a/g, "ა");
-car = car.replace(/b/g, "ბ");
-car = car.replace(/g/g, "გ");
-car = car.replace(/d/g, "დ");
-car = car.replace(/e/g, "ე");
-car = car.replace(/v/g, "ვ");
-car = car.replace(/t'/g, "ტ");
-car = car.replace(/t/g, "თ");
-car = car.replace(/(i|y)/g, "ი");
-car = car.replace(/k'/g, "კ");
-car = car.replace(/l/g, "ლ");
-car = car.replace(/m/g, "მ");
-car = car.replace(/n/g, "ნ");
-car = car.replace(/o/g, "ო");
-car = car.replace(/p'/g, "პ");
-car = car.replace(/j/g, "ჟ");
-car = car.replace(/r/g, "რ");
-car = car.replace(/s/g, "ს");
-car = car.replace(/u/g, "უ");
-car = car.replace(/(p|f)/g, "ფ");
-car = car.replace(/k/g, "ქ");
-car = car.replace(/ǧ/g, "ღ");
-car = car.replace(/q/g, "ყ");
-car = car.replace(/ş/g, "შ");
-car = car.replace(/ç'/g, "ჭ");
-car = car.replace(/ç/g, "ჩ");
-car = car.replace(/z'/g, "ძ");
-car = car.replace(/z/g, "ზ");
-car = car.replace(/3'/g, "წ");
-car = car.replace(/3/g, "ც");
-car = car.replace(/x/g, "ხ");
-car = car.replace(/c/g, "ჯ");
-car = car.replace(/h/g, "ჰ");
+		//2. convert all special characters 
+		//3. convert old version of alphabet into version used in this converter
+		.replace(/ʼ/g, "’")
+		.replace(/’/g, "’")
+		.replace(/'/g, "’")
+		.replace(/ğ/g, "ǧ")
+		.replace(/ɣ/g, "ǧ")
+		.replace(/ts/g, "3")
+		.replace(/З/g, "3")
+		.replace(/з/g, "3")
+		.replace(/ʒ/g, "3")
+		.replace(/Ʒ/g, "3")
+		.replace(/ǯ/g, "3'")
+		.replace(/ť/g, "t'")
+		.replace(/t̆/g, "t'")
+		.replace(/t\u200c\u030c/g, "t'")
+		.replace(/ǩ/g, "k'")
+		.replace(/Ǩ/g, "k'")
+		.replace(/ḱ/g, "k'")
+		.replace(/Ḱ/g, "k'")
+		.replace(/p̌/g, "p'")
+		.replace(/ṕ/g, "p'")
+		.replace(/Ṕ/g, "p'")
+		.replace(/ç̌/g, "ç'")
+		.replace(/ç̌/g, "ç'")
+		.replace(/ḉ/g, "ç'")
+		.replace(/Ḉ/g, "ç'")
+		.replace(/ž/g, "z'")
+		.replace(/Ž/g, "z'")
 
-   document.transcription.text1.value=car;
-}
-function geolat () {
-car = document.transcription.text1.value;
-car = car.replace(/(ა|ე|ი|ო|უ)ი/g, "$1ჲ");
-car = car.replace(/ი(ა|ე|ი|ო|უ)/g, "ჲ$1");
-car = car.replace(/ა/g, "a");
-car = car.replace(/ბ/g, "b");
-car = car.replace(/გ/g, "g");
-car = car.replace(/დ/g, "d");
-car = car.replace(/ე/g, "e");
-car = car.replace(/ვ/g, "v");
-car = car.replace(/ზ/g, "z");
-car = car.replace(/თ/g, "t");
-car = car.replace(/ი/g, "i");
-car = car.replace(/კ/g, "k'");
-car = car.replace(/ლ/g, "l");
-car = car.replace(/მ/g, "m");
-car = car.replace(/ნ/g, "n");
-car = car.replace(/ო/g, "o");
-car = car.replace(/პ/g, "p'");
-car = car.replace(/ჟ/g, "j");
-car = car.replace(/რ/g, "r");
-car = car.replace(/ს/g, "s");
-car = car.replace(/ტ/g, "t'");
-car = car.replace(/უ/g, "u");
-car = car.replace(/ფ/g, "p");
-car = car.replace(/ქ/g, "k");
-car = car.replace(/ღ/g, "ǧ");
-car = car.replace(/ყ/g, "q");
-car = car.replace(/შ/g, "ş");
-car = car.replace(/ჩ/g, "ç");
-car = car.replace(/ც/g, "з");
-car = car.replace(/ძ/g, "z'");
-car = car.replace(/წ/g, "з'");
-car = car.replace(/ჭ/g, "ç'");
-car = car.replace(/ხ/g, "x");
-car = car.replace(/ჯ/g, "c");
-car = car.replace(/ჰ/g, "h");
-car = car.replace(/ჶ/g, "f");
-car = car.replace(/ჲ/g, "y");
+		//4. again apostrof just for each case: š, č plus apostrof
+		.replace(/ʼ/g, "'")
+		.replace(/’/g, "'")
+		.replace(/’/g, "'")
 
-car = car.replace(/\u2018/g, "\u0027");
-car = car.replace(/\u2019/g, "\u0027");
-car = car.replace(/T'/g, "Ť");
-car = car.replace(/T\u0306/g, "Ť");
-car = car.replace(/K'/g, "Ǩ");
-car = car.replace(/K\u0306/g, "Ǩ");
-car = car.replace(/Ḱ/g, "Ǩ");
-car = car.replace(/P'/g, "P̌");
-car = car.replace(/P\u0306/g, "P̌");
-car = car.replace(/Ṕ/g, "P̌");
-car = car.replace(/Ç'/g, "Ç̌");
-car = car.replace(/Ç\u030c/g, "Ç̌");
-car = car.replace(/Ḉ/g, "Ç̌");
-car = car.replace(/Z'/g, "Ž");
-car = car.replace(/Z\u0306/g, "Ž");
-car = car.replace(/З'/g, "Ǯ");
-car = car.replace(/З/g, "Ʒ");
-car = car.replace(/Ʒ\u0306/g, "Ǯ");
-car = car.replace(/İ/g, "I");
+		//5. dotted and dotless I in Turkish, just to avoid spelling mistake
+		.replace(/İ/g, "i")
+		.replace(/i/g, "i")
+		.replace(/I/g, "i")
+		.replace(/ı/g, "i")
 
-car = car.replace(/t'/g, "t‌̌");
-car = car.replace(/ť/g, "t‌̌");
-car = car.replace(/t\u030c/g, "t‌̌");
-car = car.replace(/t\u0306/g, "t‌̌");
-car = car.replace(/k'/g, "ǩ");
-car = car.replace(/k\u0306/g, "ǩ");
-car = car.replace(/ḱ/g, "ǩ");
-car = car.replace(/p'/g, "p̌");
-car = car.replace(/p\u0306/g, "p̌");
-car = car.replace(/ṕ/g, "p̌");
-car = car.replace(/ç'/g, "ç̌");
-car = car.replace(/ç\u030c/g, "ç̌");
-car = car.replace(/ḉ/g, "ç̌");
-car = car.replace(/z'/g, "ž");
-car = car.replace(/z\u0306/g, "ž");
-car = car.replace(/з'/g, "ǯ");
-car = car.replace(/3'/g, "ǯ");
-car = car.replace(/з/g, "ʒ");
-car = car.replace(/ʒ\u0306/g, "ǯ");
-car = car.replace(/ı/g, "i");
-car = car.normalize('NFD');
-car = car.replace(/\n(\p{Ll})/ug, newLineUppercase);
-car = car.replace(/T‌̌/g, "Ť");
-car = car.normalize('NFC');
-document.transcription.text2.value=car;
-}
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+
+		//6. standard convertion LAT-GEO
+		.replace(/a/g, "ა")
+		.replace(/b/g, "ბ")
+		.replace(/g/g, "გ")
+		.replace(/d/g, "დ")
+		.replace(/e/g, "ე")
+		.replace(/v/g, "ვ")
+		.replace(/t'/g, "ტ")
+		.replace(/t/g, "თ")
+		.replace(/(i|y)/g, "ი")
+		.replace(/k'/g, "კ")
+		.replace(/l/g, "ლ")
+		.replace(/m/g, "მ")
+		.replace(/n/g, "ნ")
+		.replace(/o/g, "ო")
+		.replace(/p'/g, "პ")
+		.replace(/j/g, "ჟ")
+		.replace(/r/g, "რ")
+		.replace(/s/g, "ს")
+		.replace(/u/g, "უ")
+		.replace(/(p|f)/g, "ფ")
+		.replace(/k/g, "ქ")
+		.replace(/ǧ/g, "ღ")
+		.replace(/q/g, "ყ")
+		.replace(/ş/g, "შ")
+		.replace(/ç'/g, "ჭ")
+		.replace(/ç/g, "ჩ")
+		.replace(/z'/g, "ძ")
+		.replace(/z/g, "ზ")
+		.replace(/3'/g, "წ")
+		.replace(/3/g, "ც")
+		.replace(/x/g, "ხ")
+		.replace(/c/g, "ჯ")
+		.replace(/h/g, "ჰ");
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function geolat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/(ა|ე|ი|ო|უ)ი/g, "$1ჲ")
+		.replace(/ი(ა|ე|ი|ო|უ)/g, "ჲ$1")
+		.replace(/ა/g, "a")
+		.replace(/ბ/g, "b")
+		.replace(/გ/g, "g")
+		.replace(/დ/g, "d")
+		.replace(/ე/g, "e")
+		.replace(/ვ/g, "v")
+		.replace(/ზ/g, "z")
+		.replace(/თ/g, "t")
+		.replace(/ი/g, "i")
+		.replace(/კ/g, "k'")
+		.replace(/ლ/g, "l")
+		.replace(/მ/g, "m")
+		.replace(/ნ/g, "n")
+		.replace(/ო/g, "o")
+		.replace(/პ/g, "p'")
+		.replace(/ჟ/g, "j")
+		.replace(/რ/g, "r")
+		.replace(/ს/g, "s")
+		.replace(/ტ/g, "t'")
+		.replace(/უ/g, "u")
+		.replace(/ფ/g, "p")
+		.replace(/ქ/g, "k")
+		.replace(/ღ/g, "ǧ")
+		.replace(/ყ/g, "q")
+		.replace(/შ/g, "ş")
+		.replace(/ჩ/g, "ç")
+		.replace(/ც/g, "з")
+		.replace(/ძ/g, "z'")
+		.replace(/წ/g, "з'")
+		.replace(/ჭ/g, "ç'")
+		.replace(/ხ/g, "x")
+		.replace(/ჯ/g, "c")
+		.replace(/ჰ/g, "h")
+		.replace(/ჶ/g, "f")
+		.replace(/ჲ/g, "y")
+
+		.replace(/\u2018/g, "\u0027")
+		.replace(/\u2019/g, "\u0027")
+		.replace(/T'/g, "Ť")
+		.replace(/T\u0306/g, "Ť")
+		.replace(/K'/g, "Ǩ")
+		.replace(/K\u0306/g, "Ǩ")
+		.replace(/Ḱ/g, "Ǩ")
+		.replace(/P'/g, "P̌")
+		.replace(/P\u0306/g, "P̌")
+		.replace(/Ṕ/g, "P̌")
+		.replace(/Ç'/g, "Ç̌")
+		.replace(/Ç\u030c/g, "Ç̌")
+		.replace(/Ḉ/g, "Ç̌")
+		.replace(/Z'/g, "Ž")
+		.replace(/Z\u0306/g, "Ž")
+		.replace(/З'/g, "Ǯ")
+		.replace(/З/g, "Ʒ")
+		.replace(/Ʒ\u0306/g, "Ǯ")
+		.replace(/İ/g, "I")
+
+		.replace(/t'/g, "t‌̌")
+		.replace(/ť/g, "t‌̌")
+		.replace(/t\u030c/g, "t‌̌")
+		.replace(/t\u0306/g, "t‌̌")
+		.replace(/k'/g, "ǩ")
+		.replace(/k\u0306/g, "ǩ")
+		.replace(/ḱ/g, "ǩ")
+		.replace(/p'/g, "p̌")
+		.replace(/p\u0306/g, "p̌")
+		.replace(/ṕ/g, "p̌")
+		.replace(/ç'/g, "ç̌")
+		.replace(/ç\u030c/g, "ç̌")
+		.replace(/ḉ/g, "ç̌")
+		.replace(/z'/g, "ž")
+		.replace(/z\u0306/g, "ž")
+		.replace(/з'/g, "ǯ")
+		.replace(/3'/g, "ǯ")
+		.replace(/з/g, "ʒ")
+		.replace(/ʒ\u0306/g, "ǯ")
+		.replace(/ı/g, "i")
+		.normalize('NFD')
+		.replace(/\n(\p{Ll})/ug, newLineUppercase)
+		.replace(/T‌̌/g, "Ť")
+		.normalize('NFC');
+}
+
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
