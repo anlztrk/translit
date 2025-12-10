@@ -1,50 +1,49 @@
-﻿var car;
-function geolat () {
-car = document.transcription.text1.value;
-car = car.replace(/ა/g, "a");
-car = car.replace(/ბ/g, "b");
-car = car.replace(/გ/g, "g");
-car = car.replace(/დ/g, "d");
-car = car.replace(/ე/g, "e");
-car = car.replace(/ვ/g, "v");
-car = car.replace(/ზ/g, "z");
-car = car.replace(/ჱ/g, "ey");
-car = car.replace(/თ/g, "t");
-car = car.replace(/ი/g, "i");
-car = car.replace(/კ/g, "k\u2019");
-car = car.replace(/ლ/g, "l");
-car = car.replace(/მ/g, "m");
-car = car.replace(/ნ/g, "n");
-car = car.replace(/ჲ/g, "y");
-car = car.replace(/ო/g, "o");
-car = car.replace(/პ/g, "p\u2019");
-car = car.replace(/ჟ/g, "zh");
-car = car.replace(/რ/g, "r");
-car = car.replace(/ს/g, "s");
-car = car.replace(/ტ/g, "t\u2019");
-car = car.replace(/ჳ/g, "w");
-car = car.replace(/უ/g, "u");
-car = car.replace(/ფ/g, "p");
-car = car.replace(/ქ/g, "k");
-car = car.replace(/ღ/g, "gh");
-car = car.replace(/ყ/g, "q\u2019");
-car = car.replace(/შ/g, "sh");
-car = car.replace(/ჩ/g, "ch");
-car = car.replace(/ც/g, "ts");
-car = car.replace(/ძ/g, "dz");
-car = car.replace(/წ/g, "tsʼ");
-car = car.replace(/ჭ/g, "ch\u2019");
-car = car.replace(/ხ/g, "kh");
-car = car.replace(/ჴ/g, "q");
-car = car.replace(/ჯ/g, "j");
-car = car.replace(/ჰ/g, "h");
-car = car.replace(/ჵ/g, "oo");
-document.transcription.text2.value=car;
-}
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function geolat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/ა/g, "a")
+		.replace(/ბ/g, "b")
+		.replace(/გ/g, "g")
+		.replace(/დ/g, "d")
+		.replace(/ე/g, "e")
+		.replace(/ვ/g, "v")
+		.replace(/ზ/g, "z")
+		.replace(/ჱ/g, "ey")
+		.replace(/თ/g, "t")
+		.replace(/ი/g, "i")
+		.replace(/კ/g, "k\u2019")
+		.replace(/ლ/g, "l")
+		.replace(/მ/g, "m")
+		.replace(/ნ/g, "n")
+		.replace(/ჲ/g, "y")
+		.replace(/ო/g, "o")
+		.replace(/პ/g, "p\u2019")
+		.replace(/ჟ/g, "zh")
+		.replace(/რ/g, "r")
+		.replace(/ს/g, "s")
+		.replace(/ტ/g, "t\u2019")
+		.replace(/ჳ/g, "w")
+		.replace(/უ/g, "u")
+		.replace(/ფ/g, "p")
+		.replace(/ქ/g, "k")
+		.replace(/ღ/g, "gh")
+		.replace(/ყ/g, "q\u2019")
+		.replace(/შ/g, "sh")
+		.replace(/ჩ/g, "ch")
+		.replace(/ც/g, "ts")
+		.replace(/ძ/g, "dz")
+		.replace(/წ/g, "tsʼ")
+		.replace(/ჭ/g, "ch\u2019")
+		.replace(/ხ/g, "kh")
+		.replace(/ჴ/g, "q")
+		.replace(/ჯ/g, "j")
+		.replace(/ჰ/g, "h")
+		.replace(/ჵ/g, "oo");
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
