@@ -1,4 +1,8 @@
 function cyrlat() {
+	document.transcription.text1.value = document.transcription.text1.value
+		.replace(/ä/g, "ə")
+	    .replace(/Ä/g, "Ə");
+	
 	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/e/g, "ë")
 		.replace(/E/g, "Ë")
