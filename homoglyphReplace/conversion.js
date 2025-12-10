@@ -1,55 +1,54 @@
-var car;
-function cyrlat () {
-car = document.transcription.text1.value;
-car = car.replace(/A/g, 'А');
-car = car.replace(/B/g, 'В');
-car = car.replace(/C/g, 'С');
-car = car.replace(/Ç/g, 'Ҫ');
-car = car.replace(/E/g, 'Е');
-car = car.replace(/F/g, 'Ғ');
-car = car.replace(/G/g, 'Ԍ');
-car = car.replace(/H/g, 'Н');
-car = car.replace(/I/g, 'І');
-car = car.replace(/J/g, 'Ј');
-car = car.replace(/K/g, 'Κ');
-car = car.replace(/M/g, 'М');
-car = car.replace(/N/g, 'Ν');
-car = car.replace(/O/g, 'О');
-car = car.replace(/Ö/g, 'Ӧ');
-car = car.replace(/P/g, 'Р');
-car = car.replace(/S/g, 'Ѕ');
-car = car.replace(/Ş/g, 'Ș');
-car = car.replace(/T/g, 'Т');
-car = car.replace(/W/g, 'Ԝ');
-car = car.replace(/X/g, 'Х');
-car = car.replace(/Y/g, 'Ү');
-car = car.replace(/Z/g, 'Ζ');
-car = car.replace(/a/g, 'а');
-car = car.replace(/b/g, 'Ь');
-car = car.replace(/c/g, 'с');
-car = car.replace(/ç/g, 'ҫ');
-car = car.replace(/d/g, 'ԁ');
-car = car.replace(/e/g, 'е');
-car = car.replace(/h/g, 'һ');
-car = car.replace(/i/g, 'і');
-car = car.replace(/j/g, 'ј');
-car = car.replace(/l/g, 'ӏ');
-car = car.replace(/n/g, 'п');
-car = car.replace(/o/g, 'о');
-car = car.replace(/ö/g, 'ӧ');
-car = car.replace(/p/g, 'р');
-car = car.replace(/r/g, 'г');
-car = car.replace(/s/g, 'ѕ');
-car = car.replace(/ş/g, 'ș');
-car = car.replace(/w/g, 'ԝ');
-car = car.replace(/x/g, 'х');
-car = car.replace(/y/g, 'у');
-document.transcription.text1.value=car;
-}
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function cyrlat() {
+	document.transcription.text1.value = document.transcription.text1.value
+		.replace(/A/g, 'А')
+		.replace(/B/g, 'В')
+		.replace(/C/g, 'С')
+		.replace(/Ç/g, 'Ҫ')
+		.replace(/E/g, 'Е')
+		.replace(/F/g, 'Ғ')
+		.replace(/G/g, 'Ԍ')
+		.replace(/H/g, 'Н')
+		.replace(/I/g, 'І')
+		.replace(/J/g, 'Ј')
+		.replace(/K/g, 'Κ')
+		.replace(/M/g, 'М')
+		.replace(/N/g, 'Ν')
+		.replace(/O/g, 'О')
+		.replace(/Ö/g, 'Ӧ')
+		.replace(/P/g, 'Р')
+		.replace(/S/g, 'Ѕ')
+		.replace(/Ş/g, 'Ș')
+		.replace(/T/g, 'Т')
+		.replace(/W/g, 'Ԝ')
+		.replace(/X/g, 'Х')
+		.replace(/Y/g, 'Ү')
+		.replace(/Z/g, 'Ζ')
+		.replace(/a/g, 'а')
+		.replace(/b/g, 'Ь')
+		.replace(/c/g, 'с')
+		.replace(/ç/g, 'ҫ')
+		.replace(/d/g, 'ԁ')
+		.replace(/e/g, 'е')
+		.replace(/h/g, 'һ')
+		.replace(/i/g, 'і')
+		.replace(/j/g, 'ј')
+		.replace(/l/g, 'ӏ')
+		.replace(/n/g, 'п')
+		.replace(/o/g, 'о')
+		.replace(/ö/g, 'ӧ')
+		.replace(/p/g, 'р')
+		.replace(/r/g, 'г')
+		.replace(/s/g, 'ѕ')
+		.replace(/ş/g, 'ș')
+		.replace(/w/g, 'ԝ')
+		.replace(/x/g, 'х')
+		.replace(/y/g, 'у');
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
