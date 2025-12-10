@@ -43,9 +43,9 @@ function cyrlat() {
 function latcyr() {}
 
 function copy1() {
-	navigator.clipboard.writeText(document.transcription.text1.value)
+	navigator.clipboard.writeText(document.transcription.text1.value);
 }
 
 function copy2() {
-	navigator.clipboard.writeText(document.transcription.text2.value)
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
