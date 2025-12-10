@@ -1,6 +1,10 @@
 function latcyr() {}
 
 function cyrlat() {
+	document.transcription.text1.value = document.transcription.text1.value
+		.replace(/Ä/g, "Ə")
+		.replace(/ä/g, "ə");
+	
 	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/A/g, "a")
 		.replace(/B/g, "b")
