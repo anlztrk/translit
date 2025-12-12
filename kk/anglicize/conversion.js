@@ -375,8 +375,6 @@ function cyrlat() {
 		.replace(/ý/g, "y")
 		.replace(/ȳ/g, "y")
 		.replace(/ž/g, "zh");
-
-	document.transcription.text2.value = car;
 }
 
 function copy1() {
