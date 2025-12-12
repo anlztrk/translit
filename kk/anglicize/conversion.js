@@ -4,8 +4,6 @@ function cyrlat() {
 		.replace(/Ə/g, "Ә");
 
 	document.transcription.text2.value = document.transcription.text1.value
-		.replace(/ə/g, "ä")
-		.replace(/Ə/g, "Ä")
 		.replace(/бу/g, "бў")
 		.replace(/ву/g, "вў")
 		.replace(/гу/g, "гў")
