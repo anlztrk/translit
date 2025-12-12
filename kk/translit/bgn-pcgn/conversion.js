@@ -3,8 +3,8 @@ function cyrlat() {
 		.replace(/ə/g, "ә")
 		.replace(/Ə/g, "Ә");
 
-	car = document.transcription.text1.value;
-	.replace(/а/g, "a")
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/а/g, "a")
 		.replace(/ә/g, "ä")
 		.replace(/б/g, "b")
 		.replace(/в/g, "v")
