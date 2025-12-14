@@ -1,49 +1,46 @@
-﻿
-var car
-function geolat () {
-car = document.transcription.text1.value;
-car = car.replace(/ა/g, "a");
-car = car.replace(/ბ/g, "b");
-car = car.replace(/გ/g, "g");
-car = car.replace(/დ/g, "d");
-car = car.replace(/ე/g, "e");
-car = car.replace(/ვ/g, "v");
-car = car.replace(/ზ/g, "z");
-car = car.replace(/თ/g, "t");
-car = car.replace(/ი/g, "i");
-car = car.replace(/კ/g, "kk");
-car = car.replace(/ლ/g, "l");
-car = car.replace(/მ/g, "m");
-car = car.replace(/ნ/g, "n");
-car = car.replace(/ო/g, "o");
-car = car.replace(/პ/g, "pp");
-car = car.replace(/ჟ/g, "j");
-car = car.replace(/რ/g, "r");
-car = car.replace(/ს/g, "s");
-car = car.replace(/ტ/g, "tt");
-car = car.replace(/უ/g, "u");
-car = car.replace(/ფ/g, "p");
-car = car.replace(/ქ/g, "k");
-car = car.replace(/ღ/g, "q");
-car = car.replace(/ყ/g, "qq");
-car = car.replace(/შ/g, "ş");
-car = car.replace(/ჩ/g, "ç");
-car = car.replace(/ც/g, "c");
-car = car.replace(/ძ/g, "dz");
-car = car.replace(/წ/g, "cc");
-car = car.replace(/ჭ/g, "çç");
-car = car.replace(/ხ/g, "x");
-car = car.replace(/ჯ/g, "dj");
-car = car.replace(/ჰ/g, "h");
-car = car.replace(/ჶ/g, "f");
-car = car.replace(/ჲ/g, "y");
-
-document.transcription.text2.value=car;
-}
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+﻿function geolat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/ა/g, "a")
+		.replace(/ბ/g, "b")
+		.replace(/გ/g, "g")
+		.replace(/დ/g, "d")
+		.replace(/ე/g, "e")
+		.replace(/ვ/g, "v")
+		.replace(/ზ/g, "z")
+		.replace(/თ/g, "t")
+		.replace(/ი/g, "i")
+		.replace(/კ/g, "kk")
+		.replace(/ლ/g, "l")
+		.replace(/მ/g, "m")
+		.replace(/ნ/g, "n")
+		.replace(/ო/g, "o")
+		.replace(/პ/g, "pp")
+		.replace(/ჟ/g, "j")
+		.replace(/რ/g, "r")
+		.replace(/ს/g, "s")
+		.replace(/ტ/g, "tt")
+		.replace(/უ/g, "u")
+		.replace(/ფ/g, "p")
+		.replace(/ქ/g, "k")
+		.replace(/ღ/g, "q")
+		.replace(/ყ/g, "qq")
+		.replace(/შ/g, "ş")
+		.replace(/ჩ/g, "ç")
+		.replace(/ც/g, "c")
+		.replace(/ძ/g, "dz")
+		.replace(/წ/g, "cc")
+		.replace(/ჭ/g, "çç")
+		.replace(/ხ/g, "x")
+		.replace(/ჯ/g, "dj")
+		.replace(/ჰ/g, "h")
+		.replace(/ჶ/g, "f")
+		.replace(/ჲ/g, "y");
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }

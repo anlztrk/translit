@@ -1,175 +1,172 @@
-var car;
+function cyrlat() {
+	transcription.text2.value = document.transcription.text1.value
+		.normalize('NFD')
+		.replace(/ᆪᄉ/g, 'ᆨᄊ')
+		.replace(/ᆬᄌ/g, 'ᆫᄍ')
+		.replace(/ᆰᄀ/g, 'ᆯᄁ')
+		.replace(/ᆲᄇ/g, 'ᆯᄈ')
+		.replace(/ᆹᄉ/g, 'ᆸᄊ')
+		.replace(/ᆳᄉ/g, 'ᆯᄊ')
 
-function cyrlat () {
-  car = document.transcription.text1.value;
-  car = car.normalize('NFD');
-  car = car.replace(/ᆪᄉ/g, 'ᆨᄊ');
-  car = car.replace(/ᆬᄌ/g, 'ᆫᄍ');
-  car = car.replace(/ᆰᄀ/g, 'ᆯᄁ');
-  car = car.replace(/ᆲᄇ/g, 'ᆯᄈ');
-  car = car.replace(/ᆹᄉ/g, 'ᆸᄊ');
-  car = car.replace(/ᆳᄉ/g, 'ᆯᄊ');
-  
-  car = car.replace(/ᆪᄋ/g, 'ᆨᄉ');
-  car = car.replace(/ᆬᄋ/g, 'ᆫᄌ');
-  car = car.replace(/ᆭᄋ/g, 'ᆫᄒ');
-  car = car.replace(/ᆰᄋ/g, 'ᆯᄀ');
-  car = car.replace(/ᆲᄋ/g, 'ᆯᄇ');
-  car = car.replace(/ᆶᄋ/g, 'ᆯᄒ');
-  car = car.replace(/ᆱᄋ/g, 'ᆯᄆ');
-  car = car.replace(/ᆹᄋ/g, 'ᆸᄉ');
-  car = car.replace(/ㄿᄋ/g, 'ᆯᄑ');
-  car = car.replace(/ᆳᄋ/g, 'ᆯᄉ');
-  car = car.replace(/ㄾᄋ/g, 'ᆯᄐ');
-  
-  car = car.replace(/ᆭᄀ/g, 'ᆫᄏ');
-  car = car.replace(/ᆭᄃ/g, 'ᆫᄐ');
-  car = car.replace(/ᆭᄇ/g, 'ᆫᄑ');
-  car = car.replace(/ᆭᄌ/g, 'ᆫᄎ');
-  car = car.replace(/ᆶᄀ/g, 'ᆯᄏ');
-  car = car.replace(/ᆶᄃ/g, 'ᆯᄐ');
-  car = car.replace(/ᆶᄇ/g, 'ᆯᄑ');
-  car = car.replace(/ᆶᄌ/g, 'ᆯᄎ');
-  car = car.replace(/ᆬᄒ/g, 'ᆫᄎ');
-  car = car.replace(/ᆰᄒ/g, 'ᆯᄏ');
-  car = car.replace(/ᆲᄒ/g, 'ᆯᄑ');
-  
-  car = car.replace(/ᆪ/g, 'ᆨ');
-  car = car.replace(/ᆬ/g, 'ᆫ');
-  car = car.replace(/ᆭ/g, 'ᆫ');
-  car = car.replace(/ᆰ/g, 'ᆨ');
-  car = car.replace(/ᆲ/g, 'ᆯ');
-  car = car.replace(/ᆶ/g, 'ᆯ');
-  car = car.replace(/ᆱ/g, 'ᆷ');
-  car = car.replace(/ᆹ/g, 'ᆸ');
-  car = car.replace(/ㄿ/g, 'ᇁ');
-  car = car.replace(/ᆳ/g, 'ᆯ');
-  car = car.replace(/ㄾ/g, 'ᆯ');
-  
-  car = car.replace(/ᆮ이/g, '지');
-  car = car.replace(/ᆮ히/g, '치');
-  car = car.replace(/ᇀ이/g, '치');
+		.replace(/ᆪᄋ/g, 'ᆨᄉ')
+		.replace(/ᆬᄋ/g, 'ᆫᄌ')
+		.replace(/ᆭᄋ/g, 'ᆫᄒ')
+		.replace(/ᆰᄋ/g, 'ᆯᄀ')
+		.replace(/ᆲᄋ/g, 'ᆯᄇ')
+		.replace(/ᆶᄋ/g, 'ᆯᄒ')
+		.replace(/ᆱᄋ/g, 'ᆯᄆ')
+		.replace(/ᆹᄋ/g, 'ᆸᄉ')
+		.replace(/ㄿᄋ/g, 'ᆯᄑ')
+		.replace(/ᆳᄋ/g, 'ᆯᄉ')
+		.replace(/ㄾᄋ/g, 'ᆯᄐ')
 
-  car = car.replace(/ᆨᄋ/g, 'ᄀ');
-  car = car.replace(/ᆩᄋ/g, 'ᄁ');
-  car = car.replace(/ᆫᄋ/g, 'ᄂ');
-  car = car.replace(/ᆮᄋ/g, 'ᄃ');
-  car = car.replace(/ᆯᄋ/g, 'ᄅ');
-  car = car.replace(/ᆷᄋ/g, 'ᄆ');
-  car = car.replace(/ᆸᄋ/g, 'ᄇ');
-  car = car.replace(/ᆺᄋ/g, 'ᄉ');
-  car = car.replace(/ᆻᄋ/g, 'ᄊ');
-  car = car.replace(/ᆽᄋ/g, 'ᄌ');
-  car = car.replace(/ᆾᄋ/g, 'ᄎ');
-  car = car.replace(/ᆿᄋ/g, 'ᄏ');
-  car = car.replace(/ᇀᄋ/g, 'ᄐ');
-  car = car.replace(/ᇁᄋ/g, 'ᄑ');
-  car = car.replace(/ᇂᄋ/g, 'ᄋ');
+		.replace(/ᆭᄀ/g, 'ᆫᄏ')
+		.replace(/ᆭᄃ/g, 'ᆫᄐ')
+		.replace(/ᆭᄇ/g, 'ᆫᄑ')
+		.replace(/ᆭᄌ/g, 'ᆫᄎ')
+		.replace(/ᆶᄀ/g, 'ᆯᄏ')
+		.replace(/ᆶᄃ/g, 'ᆯᄐ')
+		.replace(/ᆶᄇ/g, 'ᆯᄑ')
+		.replace(/ᆶᄌ/g, 'ᆯᄎ')
+		.replace(/ᆬᄒ/g, 'ᆫᄎ')
+		.replace(/ᆰᄒ/g, 'ᆯᄏ')
+		.replace(/ᆲᄒ/g, 'ᆯᄑ')
 
-  car = car.replace(/(ᆨ|ᆿ)ᄂ/g, 'ᆼᄂ');
-  car = car.replace(/(ᆸ|ᇁ)ᄂ/g, 'ᆷᄂ');
-  car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄂ/g, 'ᆫᄂ');
-  car = car.replace(/(ᆨ|ᆿ)ᄅ/g, 'ᆼᄂ');
-  car = car.replace(/ᆫᄅ/g, 'ᆯᄅ');
-  car = car.replace(/(ᆷ|ᆸ)ᄅ/g, 'ᆷᄂ');
-  car = car.replace(/ᆼᄅ/g, 'ᆼᄂ');
-  car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄅ/g, 'ᆫᄂ');
-  car = car.replace(/(ᆨ|ᆿ)ᄆ/g, 'ᆼᄆ');
-  car = car.replace(/(ᆸ|ᇁ)ᄆ/g, 'ᆷᄆ');
-  car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄆ/g, 'ᆫᄆ');
+		.replace(/ᆪ/g, 'ᆨ')
+		.replace(/ᆬ/g, 'ᆫ')
+		.replace(/ᆭ/g, 'ᆫ')
+		.replace(/ᆰ/g, 'ᆨ')
+		.replace(/ᆲ/g, 'ᆯ')
+		.replace(/ᆶ/g, 'ᆯ')
+		.replace(/ᆱ/g, 'ᆷ')
+		.replace(/ᆹ/g, 'ᆸ')
+		.replace(/ㄿ/g, 'ᇁ')
+		.replace(/ᆳ/g, 'ᆯ')
+		.replace(/ㄾ/g, 'ᆯ')
 
-  car = car.replace(/ᇂᄀ/g, 'ᄏ');
-  car = car.replace(/ᇂᄃ/g, 'ᄐ');
-  car = car.replace(/ᇂᄇ/g, 'ᄑ');
-  car = car.replace(/ᇂᄌ/g, 'ᄎ');
-  
-  car = car.replace(/ᇂᄂ/g, 'ᆫᄂ');
-  car = car.replace(/ᇂ(ᄅ|ᄆ|ᄉ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ|ᄁ|ᄄ|ᄈ|ᄊ|ᄍ)/g, '$1');
-  
-  car = car.replace(/ᆫᄅ/g, 'ᆯᄅ');
-  car = car.replace(/ᆯᄂ/g, 'ᆯᄅ');
+		.replace(/ᆮ이/g, '지')
+		.replace(/ᆮ히/g, '치')
+		.replace(/ᇀ이/g, '치')
 
-  car = car.replace(/(ᅡ|ᅪ|ᅣ|ᅩ|ᅭ)에/g, '$1에\u0308');
-  car = car.replace(/ᆫᄀ/g, 'ᆫ\u2019ᄀ');
-  car = car.replace(/ᆼᄋ/g, 'ᆼ\u2019ᄋ');
+		.replace(/ᆨᄋ/g, 'ᄀ')
+		.replace(/ᆩᄋ/g, 'ᄁ')
+		.replace(/ᆫᄋ/g, 'ᄂ')
+		.replace(/ᆮᄋ/g, 'ᄃ')
+		.replace(/ᆯᄋ/g, 'ᄅ')
+		.replace(/ᆷᄋ/g, 'ᄆ')
+		.replace(/ᆸᄋ/g, 'ᄇ')
+		.replace(/ᆺᄋ/g, 'ᄉ')
+		.replace(/ᆻᄋ/g, 'ᄊ')
+		.replace(/ᆽᄋ/g, 'ᄌ')
+		.replace(/ᆾᄋ/g, 'ᄎ')
+		.replace(/ᆿᄋ/g, 'ᄏ')
+		.replace(/ᇀᄋ/g, 'ᄐ')
+		.replace(/ᇁᄋ/g, 'ᄑ')
+		.replace(/ᇂᄋ/g, 'ᄋ')
 
-  car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ\u2019|ᆯ|ᆷ|ᆼ)ᄀ/g, '$1г');
-  car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄃ/g, '$1д');
-  car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄇ/g, '$1б');
-  car = car.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄌ/g, '$1чж');
-  car = car.replace(/ᆯᄅ/g, 'лль');
-  car = car.replace(/ᄀ/g, 'кх');
-  car = car.replace(/ᆨ/g, 'к');
-  car = car.replace(/ᄁ/g, 'кк');
-  car = car.replace(/ᆩ/g, 'к');
-  car = car.replace(/ᄂ/g, 'н');
-  car = car.replace(/ᆫ/g, 'н');
-  car = car.replace(/ᄃ/g, 'тх');
-  car = car.replace(/ᆮ/g, 'т');
-  car = car.replace(/ᄄ/g, 'тт');
-  car = car.replace(/ᄅ/g, 'р');
-  car = car.replace(/ᆯ/g, 'ль');
-  car = car.replace(/ᄆ/g, 'м');
-  car = car.replace(/ᆷ/g, 'м');
-  car = car.replace(/ᄇ/g, 'пх');
-  car = car.replace(/ᆸ/g, 'п');
-  car = car.replace(/ᄈ/g, 'п');
-  car = car.replace(/쉬/g, 'щви');
-  car = car.replace(/ᄉ/g, 'с');
-  car = car.replace(/ᆺ/g, 'т');
-  car = car.replace(/ᄊ/g, 'сс');
-  car = car.replace(/ᆻ/g, 'т');
-  car = car.replace(/ᄋ/g, '');
-  car = car.replace(/ᆼ/g, 'нъ');
-  car = car.replace(/ᄌ/g, 'ч');
-  car = car.replace(/ᆽ/g, 'т');
-  car = car.replace(/ᄍ/g, 'тч');
-  car = car.replace(/ᄎ/g, 'чх');
-  car = car.replace(/ᆾ/g, 'т');
-  car = car.replace(/ᄏ/g, 'кх');
-  car = car.replace(/ᆿ/g, 'к');
-  car = car.replace(/ᄐ/g, 'тх');
-  car = car.replace(/ᇀ/g, 'т');
-  car = car.replace(/ᄑ/g, 'пх');
-  car = car.replace(/ᇁ/g, 'п');
-  car = car.replace(/ᄒ/g, 'х');
-  car = car.replace(/ᇂ/g, 'т');
+		.replace(/(ᆨ|ᆿ)ᄂ/g, 'ᆼᄂ')
+		.replace(/(ᆸ|ᇁ)ᄂ/g, 'ᆷᄂ')
+		.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄂ/g, 'ᆫᄂ')
+		.replace(/(ᆨ|ᆿ)ᄅ/g, 'ᆼᄂ')
+		.replace(/ᆫᄅ/g, 'ᆯᄅ')
+		.replace(/(ᆷ|ᆸ)ᄅ/g, 'ᆷᄂ')
+		.replace(/ᆼᄅ/g, 'ᆼᄂ')
+		.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄅ/g, 'ᆫᄂ')
+		.replace(/(ᆨ|ᆿ)ᄆ/g, 'ᆼᄆ')
+		.replace(/(ᆸ|ᇁ)ᄆ/g, 'ᆷᄆ')
+		.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄆ/g, 'ᆫᄆ')
 
-  car = car.replace(/ᅡ/g, 'а');
-  car = car.replace(/ᅢ/g, 'э');
-  car = car.replace(/ᅣ/g, 'я');
-  car = car.replace(/ᅤ/g, 'йэ');
-  car = car.replace(/ᅥ/g, 'o');
-  car = car.replace(/ᅦ/g, 'е');
-  car = car.replace(/ᅧ/g, 'йo');
-  car = car.replace(/ᅨ/g, 'йе');
-  car = car.replace(/ᅩ/g, 'o');
-  car = car.replace(/ᅪ/g, 'ва');
-  car = car.replace(/ᅫ/g, 'вэ');
-  car = car.replace(/ᅬ/g, 'ве');
-  car = car.replace(/ᅭ/g, 'ё');
-  car = car.replace(/ᅮ/g, 'у');
-  car = car.replace(/ᅯ/g, 'вo');
-  car = car.replace(/ᅰ/g, 'ве');
-  car = car.replace(/ᅱ/g, 'ви');
-  car = car.replace(/ᅲ/g, 'ю');
-  car = car.replace(/ᅳ/g, 'ы');
-  car = car.replace(/ᅴ/g, 'ый');
-  car = car.replace(/ᅵ/g, 'и');   
-  
-  car = car.replace(/ьа/g, 'я');
-  car = car.replace(/ьэ/g, 'е');
-  car = car.replace(/ьo/g, 'ё');
-  car = car.replace(/ьу/g, 'ю');
-  car = car.normalize('NFC');
-document.transcription.text2.value = car;
+		.replace(/ᇂᄀ/g, 'ᄏ')
+		.replace(/ᇂᄃ/g, 'ᄐ')
+		.replace(/ᇂᄇ/g, 'ᄑ')
+		.replace(/ᇂᄌ/g, 'ᄎ')
+
+		.replace(/ᇂᄂ/g, 'ᆫᄂ')
+		.replace(/ᇂ(ᄅ|ᄆ|ᄉ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ|ᄁ|ᄄ|ᄈ|ᄊ|ᄍ)/g, '$1')
+
+		.replace(/ᆫᄅ/g, 'ᆯᄅ')
+		.replace(/ᆯᄂ/g, 'ᆯᄅ')
+
+		.replace(/(ᅡ|ᅪ|ᅣ|ᅩ|ᅭ)에/g, '$1에\u0308')
+		.replace(/ᆫᄀ/g, 'ᆫ\u2019ᄀ')
+		.replace(/ᆼᄋ/g, 'ᆼ\u2019ᄋ')
+
+		.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ\u2019|ᆯ|ᆷ|ᆼ)ᄀ/g, '$1г')
+		.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄃ/g, '$1д')
+		.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄇ/g, '$1б')
+		.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄌ/g, '$1чж')
+		.replace(/ᆯᄅ/g, 'лль')
+		.replace(/ᄀ/g, 'кх')
+		.replace(/ᆨ/g, 'к')
+		.replace(/ᄁ/g, 'кк')
+		.replace(/ᆩ/g, 'к')
+		.replace(/ᄂ/g, 'н')
+		.replace(/ᆫ/g, 'н')
+		.replace(/ᄃ/g, 'тх')
+		.replace(/ᆮ/g, 'т')
+		.replace(/ᄄ/g, 'тт')
+		.replace(/ᄅ/g, 'р')
+		.replace(/ᆯ/g, 'ль')
+		.replace(/ᄆ/g, 'м')
+		.replace(/ᆷ/g, 'м')
+		.replace(/ᄇ/g, 'пх')
+		.replace(/ᆸ/g, 'п')
+		.replace(/ᄈ/g, 'п')
+		.replace(/쉬/g, 'щви')
+		.replace(/ᄉ/g, 'с')
+		.replace(/ᆺ/g, 'т')
+		.replace(/ᄊ/g, 'сс')
+		.replace(/ᆻ/g, 'т')
+		.replace(/ᄋ/g, '')
+		.replace(/ᆼ/g, 'нъ')
+		.replace(/ᄌ/g, 'ч')
+		.replace(/ᆽ/g, 'т')
+		.replace(/ᄍ/g, 'тч')
+		.replace(/ᄎ/g, 'чх')
+		.replace(/ᆾ/g, 'т')
+		.replace(/ᄏ/g, 'кх')
+		.replace(/ᆿ/g, 'к')
+		.replace(/ᄐ/g, 'тх')
+		.replace(/ᇀ/g, 'т')
+		.replace(/ᄑ/g, 'пх')
+		.replace(/ᇁ/g, 'п')
+		.replace(/ᄒ/g, 'х')
+		.replace(/ᇂ/g, 'т')
+
+		.replace(/ᅡ/g, 'а')
+		.replace(/ᅢ/g, 'э')
+		.replace(/ᅣ/g, 'я')
+		.replace(/ᅤ/g, 'йэ')
+		.replace(/ᅥ/g, 'o')
+		.replace(/ᅦ/g, 'е')
+		.replace(/ᅧ/g, 'йo')
+		.replace(/ᅨ/g, 'йе')
+		.replace(/ᅩ/g, 'o')
+		.replace(/ᅪ/g, 'ва')
+		.replace(/ᅫ/g, 'вэ')
+		.replace(/ᅬ/g, 'ве')
+		.replace(/ᅭ/g, 'ё')
+		.replace(/ᅮ/g, 'у')
+		.replace(/ᅯ/g, 'вo')
+		.replace(/ᅰ/g, 'ве')
+		.replace(/ᅱ/g, 'ви')
+		.replace(/ᅲ/g, 'ю')
+		.replace(/ᅳ/g, 'ы')
+		.replace(/ᅴ/g, 'ый')
+		.replace(/ᅵ/g, 'и')
+
+		.replace(/ьа/g, 'я')
+		.replace(/ьэ/g, 'е')
+		.replace(/ьo/g, 'ё')
+		.replace(/ьу/g, 'ю')
+		.normalize('NFC');
 }
 
 
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }

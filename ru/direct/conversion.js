@@ -1,78 +1,77 @@
-var car;
-function cyrlat () {
-car = document.transcription.text1.value;
-  car = car.replace(/А/g, "A");
-  car = car.replace(/Б/g, "B");
-  car = car.replace(/В/g, "V");
-  car = car.replace(/Г/g, "G");
-  car = car.replace(/Д/g, "D");
-  car = car.replace(/Е/g, "Ě");
-  car = car.replace(/Ё/g, "Ǒ");
-  car = car.replace(/Ж/g, "Ž");
-  car = car.replace(/З/g, "Z");
-  car = car.replace(/И/g, "I");
-  car = car.replace(/Й/g, "J");
-  car = car.replace(/К/g, "K");
-  car = car.replace(/Л/g, "L");
-  car = car.replace(/М/g, "M");
-  car = car.replace(/Н/g, "N");
-  car = car.replace(/О/g, "O");
-  car = car.replace(/П/g, "P");
-  car = car.replace(/Р/g, "R");
-  car = car.replace(/С/g, "S");
-  car = car.replace(/Т/g, "T");
-  car = car.replace(/У/g, "U");
-  car = car.replace(/Ф/g, "F");
-  car = car.replace(/Х/g, "H");
-  car = car.replace(/Ц/g, "C");
-  car = car.replace(/Ч/g, "Č");
-  car = car.replace(/Ш/g, "Š");
-  car = car.replace(/Щ/g, "Ś");
-  car = car.replace(/Ъ/g, "\u2019");
-  car = car.replace(/Ы/g, "Y");
-  car = car.replace(/Ь/g, "Ǐ");
-  car = car.replace(/Э/g, "E");
-  car = car.replace(/Ю/g, "Ǔ");
-  car = car.replace(/Я/g, "Ǎ");
-  car = car.replace(/а/g, "a");
-  car = car.replace(/б/g, "b");
-  car = car.replace(/в/g, "v");
-  car = car.replace(/г/g, "g");
-  car = car.replace(/д/g, "d");
-  car = car.replace(/е/g, "ě");
-  car = car.replace(/ё/g, "ǒ");
-  car = car.replace(/ж/g, "ž");
-  car = car.replace(/з/g, "z");
-  car = car.replace(/и/g, "i");
-  car = car.replace(/й/g, "j");
-  car = car.replace(/к/g, "k");
-  car = car.replace(/л/g, "l");
-  car = car.replace(/м/g, "m");
-  car = car.replace(/н/g, "n");
-  car = car.replace(/о/g, "o");
-  car = car.replace(/п/g, "p");
-  car = car.replace(/р/g, "r");
-  car = car.replace(/с/g, "s");
-  car = car.replace(/т/g, "t");
-  car = car.replace(/у/g, "u");
-  car = car.replace(/ф/g, "f");
-  car = car.replace(/х/g, "h");
-  car = car.replace(/ц/g, "c");
-  car = car.replace(/ч/g, "č");
-  car = car.replace(/ш/g, "š");
-  car = car.replace(/щ/g, "ś");
-  car = car.replace(/ъ/g, "\u2019");
-  car = car.replace(/ы/g, "y");
-  car = car.replace(/ь/g, "ǐ");
-  car = car.replace(/э/g, "e");
-  car = car.replace(/ю/g, "ǔ");
-  car = car.replace(/я/g, "ǎ");
-document.transcription.text2.value=car;
+function cyrlat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/А/g, "A")
+		.replace(/Б/g, "B")
+		.replace(/В/g, "V")
+		.replace(/Г/g, "G")
+		.replace(/Д/g, "D")
+		.replace(/Е/g, "Ě")
+		.replace(/Ё/g, "Ǒ")
+		.replace(/Ж/g, "Ž")
+		.replace(/З/g, "Z")
+		.replace(/И/g, "I")
+		.replace(/Й/g, "J")
+		.replace(/К/g, "K")
+		.replace(/Л/g, "L")
+		.replace(/М/g, "M")
+		.replace(/Н/g, "N")
+		.replace(/О/g, "O")
+		.replace(/П/g, "P")
+		.replace(/Р/g, "R")
+		.replace(/С/g, "S")
+		.replace(/Т/g, "T")
+		.replace(/У/g, "U")
+		.replace(/Ф/g, "F")
+		.replace(/Х/g, "H")
+		.replace(/Ц/g, "C")
+		.replace(/Ч/g, "Č")
+		.replace(/Ш/g, "Š")
+		.replace(/Щ/g, "Ś")
+		.replace(/Ъ/g, "\u2019")
+		.replace(/Ы/g, "Y")
+		.replace(/Ь/g, "Ǐ")
+		.replace(/Э/g, "E")
+		.replace(/Ю/g, "Ǔ")
+		.replace(/Я/g, "Ǎ")
+		.replace(/а/g, "a")
+		.replace(/б/g, "b")
+		.replace(/в/g, "v")
+		.replace(/г/g, "g")
+		.replace(/д/g, "d")
+		.replace(/е/g, "ě")
+		.replace(/ё/g, "ǒ")
+		.replace(/ж/g, "ž")
+		.replace(/з/g, "z")
+		.replace(/и/g, "i")
+		.replace(/й/g, "j")
+		.replace(/к/g, "k")
+		.replace(/л/g, "l")
+		.replace(/м/g, "m")
+		.replace(/н/g, "n")
+		.replace(/о/g, "o")
+		.replace(/п/g, "p")
+		.replace(/р/g, "r")
+		.replace(/с/g, "s")
+		.replace(/т/g, "t")
+		.replace(/у/g, "u")
+		.replace(/ф/g, "f")
+		.replace(/х/g, "h")
+		.replace(/ц/g, "c")
+		.replace(/ч/g, "č")
+		.replace(/ш/g, "š")
+		.replace(/щ/g, "ś")
+		.replace(/ъ/g, "\u2019")
+		.replace(/ы/g, "y")
+		.replace(/ь/g, "ǐ")
+		.replace(/э/g, "e")
+		.replace(/ю/g, "ǔ")
+		.replace(/я/g, "ǎ");
 }
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
-}
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
 
-    }
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
+}

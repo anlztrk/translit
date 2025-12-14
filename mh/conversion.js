@@ -1,27 +1,24 @@
-var car;
-
-function cyrlat () {
-car = document.transcription.text1.value;
-car = car.normalize('NFD');
-car = car.replace(/\u200c/g, "");
-car = car.replace(/\u0327/g, "\u0323");
-car = car.replace(/(N|n)\u0304/g, "$1\u0303");
-car = car.normalize('NFC');
-document.transcription.text2.value = car;
-}
-function latcyr () {
-car = document.transcription.text2.value;
-car = car.normalize('NFD');
-car = car.replace(/\u0323/g, "\u0327");
-car = car.replace(/(N|n)\u0303/g, "$1\u0304");
-car = car.normalize('NFC');
-document.transcription.text1.value = car;
+function cyrlat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.normalize('NFD')
+		.replace(/\u200c/g, "")
+		.replace(/\u0327/g, "\u0323")
+		.replace(/(N|n)\u0304/g, "$1\u0303")
+		.normalize('NFC');
 }
 
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function latcyr() {
+	document.transcription.text1.value = document.transcription.text2.value
+		.normalize('NFD')
+		.replace(/\u0323/g, "\u0327")
+		.replace(/(N|n)\u0303/g, "$1\u0304")
+		.normalize('NFC');
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value)
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value)
 }

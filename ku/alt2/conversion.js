@@ -1,35 +1,28 @@
-﻿
-var car;
+﻿function cyrlat() {
+	document.transcription.text1.value = document.transcription.text1.value
+		.replace(/ı/g, "i")
+		.replace(/İ/g, "Î");
 
-function cyrlat () {
-car = document.transcription.text1.value;
-translit = document.transcription.text1.value;
-translit = translit.replace(/ı/g, "i");
-translit = translit.replace(/İ/g, "Î");
-car = car.replace(/ı/g, "i");
-car = car.replace(/İ/g, "Î");
-
-car = car.replace(/j/g, "ĵ");
-car = car.replace(/c/g, "j");
-car = car.replace(/ç/g, "c");
-car = car.replace(/ş/g, "ŝ");
-car = car.replace(/ê/g, "é");
-car = car.replace(/î/g, "í");
-car = car.replace(/û/g, "ú");
-car = car.replace(/J/g, "Ĵ");
-car = car.replace(/Ç/g, "C");
-car = car.replace(/Ş/g, "Ŝ");
-car = car.replace(/Ê/g, "É");
-car = car.replace(/Î/g, "Í");
-car = car.replace(/Û/g, "Ú");
-document.transcription.text1.value = translit;
-document.transcription.text2.value = car;
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/j/g, "ĵ")
+		.replace(/c/g, "j")
+		.replace(/ç/g, "c")
+		.replace(/ş/g, "ŝ")
+		.replace(/ê/g, "é")
+		.replace(/î/g, "í")
+		.replace(/û/g, "ú")
+		.replace(/J/g, "Ĵ")
+		.replace(/Ç/g, "C")
+		.replace(/Ş/g, "Ŝ")
+		.replace(/Ê/g, "É")
+		.replace(/Î/g, "Í")
+		.replace(/Û/g, "Ú");
 }
 
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }

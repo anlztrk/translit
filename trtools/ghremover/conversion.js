@@ -1,118 +1,115 @@
-﻿
-var car;
-function latcyr () {
+﻿function latcyr () {
 }
 function cyrlat () {
-car = document.transcription.text1.value;
-  car = car.replace(/ağa/g, "a-a");
-  car = car.replace(/âğâ/g, "â-â");
-  car = car.replace(/ağâ/g, "a-â");
-  car = car.replace(/âğa/g, "â-a");
-  car = car.replace(/eğe/g, "e-e");
-  car = car.replace(/ığı/g, "ı-ı");
-  car = car.replace(/iği/g, "i-i");
-  car = car.replace(/îğî/g, "î-î");
-  car = car.replace(/iğî/g, "i-î");
-  car = car.replace(/îği/g, "î-i");
-  car = car.replace(/oğo/g, "o-o");
-  car = car.replace(/öğö/g, "ö-ö");
-  car = car.replace(/uğu/g, "u-u");
-  car = car.replace(/ûğû/g, "û-û");
-  car = car.replace(/ûğu/g, "û-u");
-  car = car.replace(/uğû/g, "u-û");
-  car = car.replace(/üğü/g, "ü-ü");
+document.transcription.text2.value = document.transcription.text1.value
+  .replace(/ağa/g, "a-a")
+  .replace(/âğâ/g, "â-â")
+  .replace(/ağâ/g, "a-â")
+  .replace(/âğa/g, "â-a")
+  .replace(/eğe/g, "e-e")
+  .replace(/ığı/g, "ı-ı")
+  .replace(/iği/g, "i-i")
+  .replace(/îğî/g, "î-î")
+  .replace(/iğî/g, "i-î")
+  .replace(/îği/g, "î-i")
+  .replace(/oğo/g, "o-o")
+  .replace(/öğö/g, "ö-ö")
+  .replace(/uğu/g, "u-u")
+  .replace(/ûğû/g, "û-û")
+  .replace(/ûğu/g, "û-u")
+  .replace(/uğû/g, "u-û")
+  .replace(/üğü/g, "ü-ü")
   
-  car = car.replace(/Ağa/g, "A-a");
-  car = car.replace(/Âğâ/g, "Â-â");
-  car = car.replace(/Ağâ/g, "A-â");
-  car = car.replace(/Âğa/g, "Â-a");
-  car = car.replace(/Eğe/g, "E-e");
-  car = car.replace(/Iğı/g, "I-ı");
-  car = car.replace(/İği/g, "İ-i");
-  car = car.replace(/Îğî/g, "Î-î");
-  car = car.replace(/İğî/g, "İ-î");
-  car = car.replace(/Îği/g, "Î-i");
-  car = car.replace(/Oğo/g, "O-o");
-  car = car.replace(/Öğö/g, "Ö-ö");
-  car = car.replace(/Uğu/g, "U-u");
-  car = car.replace(/Ûğû/g, "Û-û");
-  car = car.replace(/Ûğu/g, "Û-u");
-  car = car.replace(/Uğû/g, "U-û");
-  car = car.replace(/Üğü/g, "Ü-ü");
+  .replace(/Ağa/g, "A-a")
+  .replace(/Âğâ/g, "Â-â")
+  .replace(/Ağâ/g, "A-â")
+  .replace(/Âğa/g, "Â-a")
+  .replace(/Eğe/g, "E-e")
+  .replace(/Iğı/g, "I-ı")
+  .replace(/İği/g, "İ-i")
+  .replace(/Îğî/g, "Î-î")
+  .replace(/İğî/g, "İ-î")
+  .replace(/Îği/g, "Î-i")
+  .replace(/Oğo/g, "O-o")
+  .replace(/Öğö/g, "Ö-ö")
+  .replace(/Uğu/g, "U-u")
+  .replace(/Ûğû/g, "Û-û")
+  .replace(/Ûğu/g, "Û-u")
+  .replace(/Uğû/g, "U-û")
+  .replace(/Üğü/g, "Ü-ü")
   
-  car = car.replace(/AĞA/g, "A-A");
-  car = car.replace(/ÂĞÂ/g, "Â-Â");
-  car = car.replace(/AĞÂ/g, "A-Â");
-  car = car.replace(/ÂĞA/g, "Â-A");
-  car = car.replace(/EĞE/g, "E-E");
-  car = car.replace(/IĞI/g, "I-I");
-  car = car.replace(/İĞİ/g, "İ-İ");
-  car = car.replace(/ÎĞÎ/g, "Î-Î");
-  car = car.replace(/İĞÎ/g, "İ-Î");
-  car = car.replace(/ÎĞİ/g, "Î-İ");
-  car = car.replace(/OĞO/g, "O-O");
-  car = car.replace(/ÖĞÖ/g, "Ö-Ö");
-  car = car.replace(/UĞU/g, "U-U");
-  car = car.replace(/ÛĞÛ/g, "Û-Û");
-  car = car.replace(/UĞÛ/g, "U-Û");
-  car = car.replace(/ÛĞU/g, "Û-U");
-  car = car.replace(/ÜĞÜ/g, "Ü-Ü");
-  car = car.replace(/ğa/g, "a");
-  car = car.replace(/ğâ/g, "â");
-  car = car.replace(/ğe/g, "e");
-  car = car.replace(/ğı/g, "ı");
-  car = car.replace(/ği/g, "i");
-  car = car.replace(/ğî/g, "î");
-  car = car.replace(/ğo/g, "o");
-  car = car.replace(/ğö/g, "ö");
-  car = car.replace(/ğu/g, "u");
-  car = car.replace(/ğû/g, "û");
-  car = car.replace(/ğü/g, "ü");
-  car = car.replace(/ĞA/g, "A");
-  car = car.replace(/ĞÂ/g, "Â");
-  car = car.replace(/ĞE/g, "E");
-  car = car.replace(/ĞI/g, "I");
-  car = car.replace(/Ğİ/g, "İ");
-  car = car.replace(/ĞÎ/g, "Î");
-  car = car.replace(/ĞO/g, "O");
-  car = car.replace(/ĞÖ/g, "Ö");
-  car = car.replace(/ĞU/g, "U");
-  car = car.replace(/ĞÛ/g, "Û");
-  car = car.replace(/ĞÜ/g, "Ü");
-  car = car.replace(/ağ/g, "a:");
-  car = car.replace(/âğ/g, "â:");
-  car = car.replace(/eğ/g, "ey");
-  car = car.replace(/ığ/g, "ı:");
-  car = car.replace(/iğ/g, "iy");
-  car = car.replace(/îğ/g, "îy");
-  car = car.replace(/oğ/g, "o:");
-  car = car.replace(/öğ/g, "ö:");
-  car = car.replace(/uğ/g, "u:");
-  car = car.replace(/ûğ/g, "û:");
-  car = car.replace(/üğ/g, "ü:");
-  car = car.replace(/Ağ/g, "A:");
-  car = car.replace(/Âğ/g, "Â:");
-  car = car.replace(/Eğ/g, "Ey");
-  car = car.replace(/Iğ/g, "I:");
-  car = car.replace(/İğ/g, "İy");
-  car = car.replace(/Îğ/g, "Îy");
-  car = car.replace(/Oğ/g, "O:");
-  car = car.replace(/Öğ/g, "Ö:");
-  car = car.replace(/Uğ/g, "U:");
-  car = car.replace(/Ûğ/g, "Û:");
-  car = car.replace(/Üğ/g, "Ü:");
-  car = car.replace(/AĞ/g, "A:");
-  car = car.replace(/ÂĞ/g, "Â:");
-  car = car.replace(/EĞ/g, "EY");
-  car = car.replace(/IĞ/g, "I:");
-  car = car.replace(/İĞ/g, "İY");
-  car = car.replace(/ÎĞ/g, "ÎY");
-  car = car.replace(/OĞ/g, "O:");
-  car = car.replace(/ÖĞ/g, "Ö:");
-  car = car.replace(/UĞ/g, "U:");
-  car = car.replace(/ÛĞ/g, "Û:");
-  car = car.replace(/ÜĞ/g, "Ü:");  
-document.transcription.text2.value=car;
+  .replace(/AĞA/g, "A-A")
+  .replace(/ÂĞÂ/g, "Â-Â")
+  .replace(/AĞÂ/g, "A-Â")
+  .replace(/ÂĞA/g, "Â-A")
+  .replace(/EĞE/g, "E-E")
+  .replace(/IĞI/g, "I-I")
+  .replace(/İĞİ/g, "İ-İ")
+  .replace(/ÎĞÎ/g, "Î-Î")
+  .replace(/İĞÎ/g, "İ-Î")
+  .replace(/ÎĞİ/g, "Î-İ")
+  .replace(/OĞO/g, "O-O")
+  .replace(/ÖĞÖ/g, "Ö-Ö")
+  .replace(/UĞU/g, "U-U")
+  .replace(/ÛĞÛ/g, "Û-Û")
+  .replace(/UĞÛ/g, "U-Û")
+  .replace(/ÛĞU/g, "Û-U")
+  .replace(/ÜĞÜ/g, "Ü-Ü")
+  .replace(/ğa/g, "a")
+  .replace(/ğâ/g, "â")
+  .replace(/ğe/g, "e")
+  .replace(/ğı/g, "ı")
+  .replace(/ği/g, "i")
+  .replace(/ğî/g, "î")
+  .replace(/ğo/g, "o")
+  .replace(/ğö/g, "ö")
+  .replace(/ğu/g, "u")
+  .replace(/ğû/g, "û")
+  .replace(/ğü/g, "ü")
+  .replace(/ĞA/g, "A")
+  .replace(/ĞÂ/g, "Â")
+  .replace(/ĞE/g, "E")
+  .replace(/ĞI/g, "I")
+  .replace(/Ğİ/g, "İ")
+  .replace(/ĞÎ/g, "Î")
+  .replace(/ĞO/g, "O")
+  .replace(/ĞÖ/g, "Ö")
+  .replace(/ĞU/g, "U")
+  .replace(/ĞÛ/g, "Û")
+  .replace(/ĞÜ/g, "Ü")
+  .replace(/ağ/g, "a:")
+  .replace(/âğ/g, "â:")
+  .replace(/eğ/g, "ey")
+  .replace(/ığ/g, "ı:")
+  .replace(/iğ/g, "iy")
+  .replace(/îğ/g, "îy")
+  .replace(/oğ/g, "o:")
+  .replace(/öğ/g, "ö:")
+  .replace(/uğ/g, "u:")
+  .replace(/ûğ/g, "û:")
+  .replace(/üğ/g, "ü:")
+  .replace(/Ağ/g, "A:")
+  .replace(/Âğ/g, "Â:")
+  .replace(/Eğ/g, "Ey")
+  .replace(/Iğ/g, "I:")
+  .replace(/İğ/g, "İy")
+  .replace(/Îğ/g, "Îy")
+  .replace(/Oğ/g, "O:")
+  .replace(/Öğ/g, "Ö:")
+  .replace(/Uğ/g, "U:")
+  .replace(/Ûğ/g, "Û:")
+  .replace(/Üğ/g, "Ü:")
+  .replace(/AĞ/g, "A:")
+  .replace(/ÂĞ/g, "Â:")
+  .replace(/EĞ/g, "EY")
+  .replace(/IĞ/g, "I:")
+  .replace(/İĞ/g, "İY")
+  .replace(/ÎĞ/g, "ÎY")
+  .replace(/OĞ/g, "O:")
+  .replace(/ÖĞ/g, "Ö:")
+  .replace(/UĞ/g, "U:")
+  .replace(/ÛĞ/g, "Û:")
+  .replace(/ÜĞ/g, "Ü:");
 }
 function copy1()
 { navigator.clipboard.writeText(document.transcription.text1.value);

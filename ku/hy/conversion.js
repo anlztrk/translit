@@ -1,147 +1,143 @@
-var car;
+function cyrlat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/A/g, 'Ա')
+		.replace(/B/g, 'Բ')
+		.replace(/C/g, 'Ջ')
+		.replace(/Ç/g, 'Չ')
+		.replace(/D/g, 'Դ')
+		.replace(/E/g, 'Ե')
+		.replace(/Ê/g, 'Է')
+		.replace(/F/g, 'Ֆ')
+		.replace(/G/g, 'Գ')
+		.replace(/H/g, 'Հ')
+		.replace(/I/g, 'Ը')
+		.replace(/Î/g, 'Ի')
+		.replace(/J/g, 'Ժ')
+		.replace(/K/g, 'Ք')
+		.replace(/L/g, 'Լ')
+		.replace(/M/g, 'Մ')
+		.replace(/N/g, 'Ն')
+		.replace(/O/g, 'Ո')
+		.replace(/P/g, 'Փ')
+		.replace(/Q/g, 'Կ')
+		.replace(/R/g, 'Ր')
+		.replace(/S/g, 'Ս')
+		.replace(/Ş/g, 'Շ')
+		.replace(/T/g, 'Թ')
+		.replace(/U/g, 'ՈՒ')
+		.replace(/Û/g, 'Օ')
+		.replace(/V/g, 'Վ')
+		.replace(/W/g, 'ՕՒ')
+		.replace(/X/g, 'Խ')
+		.replace(/Y/g, 'Յ')
+		.replace(/Z/g, 'Զ')
+		.replace(/a/g, 'ա')
+		.replace(/b/g, 'բ')
+		.replace(/c/g, 'ջ')
+		.replace(/ç/g, 'չ')
+		.replace(/d/g, 'դ')
+		.replace(/e/g, 'ե')
+		.replace(/ê/g, 'է')
+		.replace(/f/g, 'ֆ')
+		.replace(/g/g, 'գ')
+		.replace(/h/g, 'հ')
+		.replace(/i/g, 'ը')
+		.replace(/î/g, 'ի')
+		.replace(/j/g, 'ժ')
+		.replace(/k/g, 'ք')
+		.replace(/l/g, 'լ')
+		.replace(/m/g, 'մ')
+		.replace(/n/g, 'ն')
+		.replace(/o/g, 'ո')
+		.replace(/p/g, 'փ')
+		.replace(/q/g, 'կ')
+		.replace(/r/g, 'ր')
+		.replace(/s/g, 'ս')
+		.replace(/ş/g, 'շ')
+		.replace(/t/g, 'թ')
+		.replace(/u/g, 'ու')
+		.replace(/û/g, 'օ')
+		.replace(/v/g, 'վ')
+		.replace(/w/g, 'օւ')
+		.replace(/x/g, 'խ')
+		.replace(/y/g, 'յ')
+		.replace(/z/g, 'զ')
 
-function cyrlat () {
-car = document.transcription.text1.value;
-  car = car.replace(/A/g, 'Ա');
-  car = car.replace(/B/g, 'Բ');
-  car = car.replace(/C/g, 'Ջ');
-  car = car.replace(/Ç/g, 'Չ');
-  car = car.replace(/D/g, 'Դ');
-  car = car.replace(/E/g, 'Ե');
-  car = car.replace(/Ê/g, 'Է');
-  car = car.replace(/F/g, 'Ֆ');
-  car = car.replace(/G/g, 'Գ');
-  car = car.replace(/H/g, 'Հ');
-  car = car.replace(/I/g, 'Ը');
-  car = car.replace(/Î/g, 'Ի');
-  car = car.replace(/J/g, 'Ժ');
-  car = car.replace(/K/g, 'Ք');
-  car = car.replace(/L/g, 'Լ');
-  car = car.replace(/M/g, 'Մ');
-  car = car.replace(/N/g, 'Ն');
-  car = car.replace(/O/g, 'Ո');
-  car = car.replace(/P/g, 'Փ');
-  car = car.replace(/Q/g, 'Կ');
-  car = car.replace(/R/g, 'Ր');
-  car = car.replace(/S/g, 'Ս');
-  car = car.replace(/Ş/g, 'Շ');
-  car = car.replace(/T/g, 'Թ');
-  car = car.replace(/U/g, 'ՈՒ');
-  car = car.replace(/Û/g, 'Օ');
-  car = car.replace(/V/g, 'Վ');
-  car = car.replace(/W/g, 'ՕՒ');
-  car = car.replace(/X/g, 'Խ');
-  car = car.replace(/Y/g, 'Յ');
-  car = car.replace(/Z/g, 'Զ');
-  car = car.replace(/a/g, 'ա');
-  car = car.replace(/b/g, 'բ');
-  car = car.replace(/c/g, 'ջ');
-  car = car.replace(/ç/g, 'չ');
-  car = car.replace(/d/g, 'դ');
-  car = car.replace(/e/g, 'ե');
-  car = car.replace(/ê/g, 'է');
-  car = car.replace(/f/g, 'ֆ');
-  car = car.replace(/g/g, 'գ');
-  car = car.replace(/h/g, 'հ');
-  car = car.replace(/i/g, 'ը');
-  car = car.replace(/î/g, 'ի');
-  car = car.replace(/j/g, 'ժ');
-  car = car.replace(/k/g, 'ք');
-  car = car.replace(/l/g, 'լ');
-  car = car.replace(/m/g, 'մ');
-  car = car.replace(/n/g, 'ն');
-  car = car.replace(/o/g, 'ո');
-  car = car.replace(/p/g, 'փ');
-  car = car.replace(/q/g, 'կ');
-  car = car.replace(/r/g, 'ր');
-  car = car.replace(/s/g, 'ս');
-  car = car.replace(/ş/g, 'շ');
-  car = car.replace(/t/g, 'թ');
-  car = car.replace(/u/g, 'ու');
-  car = car.replace(/û/g, 'օ');
-  car = car.replace(/v/g, 'վ');
-  car = car.replace(/w/g, 'օւ');
-  car = car.replace(/x/g, 'խ');
-  car = car.replace(/y/g, 'յ');
-  car = car.replace(/z/g, 'զ');
-  
-  car = car.replace(/Ւ( |)(ա|բ|ջ|չ|դ|ե|է|ֆ|գ|հ|ը|ի|ժ|ք|լ|մ|ն|ո|փ|կ|ր|ս|շ|թ|օ|վ|խ|յ|զ)/g, 'ւ$1$2');
-  car = car.replace(/(ա|բ|ջ|չ|դ|ե|է|ֆ|գ|հ|ը|ի|ժ|ք|լ|մ|ն|ո|փ|կ|ր|ս|շ|թ|օ|վ|խ|յ|զ)( |)(Ո|Օ)Ւ/g, '$1$2$3ւ');
-document.transcription.text2.value = car;
+		.replace(/Ւ( |)(ա|բ|ջ|չ|դ|ե|է|ֆ|գ|հ|ը|ի|ժ|ք|լ|մ|ն|ո|փ|կ|ր|ս|շ|թ|օ|վ|խ|յ|զ)/g, 'ւ$1$2')
+		.replace(/(ա|բ|ջ|չ|դ|ե|է|ֆ|գ|հ|ը|ի|ժ|ք|լ|մ|ն|ո|փ|կ|ր|ս|շ|թ|օ|վ|խ|յ|զ)( |)(Ո|Օ)Ւ/g, '$1$2$3ւ');
 }
 
-function latcyr () {
-car = document.transcription.text2.value;
-  car = car.replace(/Ո(Ւ|ւ)/g, 'U');
-  car = car.replace(/Օ(Ւ|ւ)/g, 'W');
-  car = car.replace(/ու/g, 'u');
-  car = car.replace(/օւ/g, 'w');
-  
-  car = car.replace(/Ա/g, 'A');
-  car = car.replace(/Բ/g, 'B');
-  car = car.replace(/Ջ/g, 'C');
-  car = car.replace(/Չ/g, 'Ç');
-  car = car.replace(/Դ/g, 'D');
-  car = car.replace(/Ե/g, 'E');
-  car = car.replace(/Է/g, 'Ê');
-  car = car.replace(/Ֆ/g, 'F');
-  car = car.replace(/Գ/g, 'G');
-  car = car.replace(/Հ/g, 'H');
-  car = car.replace(/Ը/g, 'I');
-  car = car.replace(/Ի/g, 'Î');
-  car = car.replace(/Ժ/g, 'J');
-  car = car.replace(/Ք/g, 'K');
-  car = car.replace(/Լ/g, 'L');
-  car = car.replace(/Մ/g, 'M');
-  car = car.replace(/Ն/g, 'N');
-  car = car.replace(/Ո/g, 'O');
-  car = car.replace(/Փ/g, 'P');
-  car = car.replace(/Կ/g, 'Q');
-  car = car.replace(/Ր/g, 'R');
-  car = car.replace(/Ս/g, 'S');
-  car = car.replace(/Շ/g, 'Ş');
-  car = car.replace(/Թ/g, 'T');
-  car = car.replace(/Օ/g, 'Û');
-  car = car.replace(/Վ/g, 'V');
-  car = car.replace(/Խ/g, 'X');
-  car = car.replace(/Յ/g, 'Y');
-  car = car.replace(/Զ/g, 'Z');
-  car = car.replace(/ա/g, 'a');
-  car = car.replace(/բ/g, 'b');
-  car = car.replace(/ջ/g, 'c');
-  car = car.replace(/չ/g, 'ç');
-  car = car.replace(/դ/g, 'd');
-  car = car.replace(/ե/g, 'e');
-  car = car.replace(/է/g, 'ê');
-  car = car.replace(/ֆ/g, 'f');
-  car = car.replace(/գ/g, 'g');
-  car = car.replace(/հ/g, 'h');
-  car = car.replace(/ը/g, 'i');
-  car = car.replace(/ի/g, 'î');
-  car = car.replace(/ժ/g, 'j');
-  car = car.replace(/ք/g, 'k');
-  car = car.replace(/լ/g, 'l');
-  car = car.replace(/մ/g, 'm');
-  car = car.replace(/ն/g, 'n');
-  car = car.replace(/ո/g, 'o');
-  car = car.replace(/փ/g, 'p');
-  car = car.replace(/կ/g, 'q');
-  car = car.replace(/ր/g, 'r');
-  car = car.replace(/ս/g, 's');
-  car = car.replace(/շ/g, 'ş');
-  car = car.replace(/թ/g, 't');
-  car = car.replace(/օ/g, 'û');
-  car = car.replace(/վ/g, 'v');
-  car = car.replace(/խ/g, 'x');
-  car = car.replace(/յ/g, 'y');
-  car = car.replace(/զ/g, 'z');
-document.transcription.text1.value = car;
+function latcyr() {
+	document.transcription.text1.value = document.transcription.text2.value
+		.replace(/Ո(Ւ|ւ)/g, 'U')
+		.replace(/Օ(Ւ|ւ)/g, 'W')
+		.replace(/ու/g, 'u')
+		.replace(/օւ/g, 'w')
+
+		.replace(/Ա/g, 'A')
+		.replace(/Բ/g, 'B')
+		.replace(/Ջ/g, 'C')
+		.replace(/Չ/g, 'Ç')
+		.replace(/Դ/g, 'D')
+		.replace(/Ե/g, 'E')
+		.replace(/Է/g, 'Ê')
+		.replace(/Ֆ/g, 'F')
+		.replace(/Գ/g, 'G')
+		.replace(/Հ/g, 'H')
+		.replace(/Ը/g, 'I')
+		.replace(/Ի/g, 'Î')
+		.replace(/Ժ/g, 'J')
+		.replace(/Ք/g, 'K')
+		.replace(/Լ/g, 'L')
+		.replace(/Մ/g, 'M')
+		.replace(/Ն/g, 'N')
+		.replace(/Ո/g, 'O')
+		.replace(/Փ/g, 'P')
+		.replace(/Կ/g, 'Q')
+		.replace(/Ր/g, 'R')
+		.replace(/Ս/g, 'S')
+		.replace(/Շ/g, 'Ş')
+		.replace(/Թ/g, 'T')
+		.replace(/Օ/g, 'Û')
+		.replace(/Վ/g, 'V')
+		.replace(/Խ/g, 'X')
+		.replace(/Յ/g, 'Y')
+		.replace(/Զ/g, 'Z')
+		.replace(/ա/g, 'a')
+		.replace(/բ/g, 'b')
+		.replace(/ջ/g, 'c')
+		.replace(/չ/g, 'ç')
+		.replace(/դ/g, 'd')
+		.replace(/ե/g, 'e')
+		.replace(/է/g, 'ê')
+		.replace(/ֆ/g, 'f')
+		.replace(/գ/g, 'g')
+		.replace(/հ/g, 'h')
+		.replace(/ը/g, 'i')
+		.replace(/ի/g, 'î')
+		.replace(/ժ/g, 'j')
+		.replace(/ք/g, 'k')
+		.replace(/լ/g, 'l')
+		.replace(/մ/g, 'm')
+		.replace(/ն/g, 'n')
+		.replace(/ո/g, 'o')
+		.replace(/փ/g, 'p')
+		.replace(/կ/g, 'q')
+		.replace(/ր/g, 'r')
+		.replace(/ս/g, 's')
+		.replace(/շ/g, 'ş')
+		.replace(/թ/g, 't')
+		.replace(/օ/g, 'û')
+		.replace(/վ/g, 'v')
+		.replace(/խ/g, 'x')
+		.replace(/յ/g, 'y')
+		.replace(/զ/g, 'z');
 }
 
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }

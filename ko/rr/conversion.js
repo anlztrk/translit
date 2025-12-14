@@ -1,187 +1,186 @@
-﻿var car;
+﻿function cyrlat() {
+	let latinWords = {};
+	let index = 0;
 
-function cyrlat () {
-   car = document.transcription.text1.value;
-   car = car.normalize('NFD');
+	document.transcription.text2.value = document.transcription.text1.value
+		.normalize('NFD')
+		.replace(/\p{sc=Latin}+/ug, function(match) {
+			let key = `__placeholder${index}__`;
+			latinWords[key] = match;
+			index++;
+			return key;
+		})
 
-   let latinWords = {};
-   let index = 0;
-   car = car.replace(/\p{sc=Latin}+/ug, function(match) {
-     let key = `__placeholder${index}__`;
-     latinWords[key] = match;
-     index++;
-     return key;
-   });
-  
-   car = car.replace(/ᆪᄉ/g, 'ᆨᄊ');
-   car = car.replace(/ᆬᄌ/g, 'ᆫᄍ');
-   car = car.replace(/ᆰᄀ/g, 'ᆯᄁ');
-   car = car.replace(/ᆲᄇ/g, 'ᆯᄈ');
-   car = car.replace(/ᆹᄉ/g, 'ᆸᄊ');
-   car = car.replace(/ᆳᄉ/g, 'ᆯᄊ');
-  
-   car = car.replace(/ᆪᄋ/g, 'ᆨᄉ');
-   car = car.replace(/ᆬᄋ/g, 'ᆫᄌ');
-   car = car.replace(/ᆭᄋ/g, 'ᆫᄒ');
-   car = car.replace(/ᆰᄋ/g, 'ᆯᄀ');
-   car = car.replace(/ᆲᄋ/g, 'ᆯᄇ');
-   car = car.replace(/ᆶᄋ/g, 'ᆯᄒ');
-   car = car.replace(/ᆱᄋ/g, 'ᆯᄆ');
-   car = car.replace(/ᆹᄋ/g, 'ᆸᄉ');
-   car = car.replace(/ㄿᄋ/g, 'ᆯᄑ');
-   car = car.replace(/ᆳᄋ/g, 'ᆯᄉ');
-   car = car.replace(/ㄾᄋ/g, 'ᆯᄐ');
-  
-   car = car.replace(/ᆭᄀ/g, 'ᆫᄏ');
-   car = car.replace(/ᆭᄃ/g, 'ᆫᄐ');
-   car = car.replace(/ᆭᄇ/g, 'ᆫᄑ');
-   car = car.replace(/ᆭᄌ/g, 'ᆫᄎ');
-   car = car.replace(/ᆶᄀ/g, 'ᆯᄏ');
-   car = car.replace(/ᆶᄃ/g, 'ᆯᄐ');
-   car = car.replace(/ᆶᄇ/g, 'ᆯᄑ');
-   car = car.replace(/ᆶᄌ/g, 'ᆯᄎ');
-   car = car.replace(/ᆬᄒ/g, 'ᆫᄎ');
-   car = car.replace(/ᆰᄒ/g, 'ᆯᄏ');
-   car = car.replace(/ᆲᄒ/g, 'ᆯᄑ');
-  
-   car = car.replace(/ᆪ/g, 'ᆨ');
-   car = car.replace(/ᆬ/g, 'ᆫ');
-   car = car.replace(/ᆭ/g, 'ᆫ');
-   car = car.replace(/ᆰ/g, 'ᆨ');
-   car = car.replace(/ᆲ/g, 'ᆯ');
-   car = car.replace(/ᆶ/g, 'ᆯ');
-   car = car.replace(/ᆱ/g, 'ᆷ');
-   car = car.replace(/ᆹ/g, 'ᆸ');
-   car = car.replace(/ㄿ/g, 'ᇁ');
-   car = car.replace(/ᆳ/g, 'ᆯ');
-   car = car.replace(/ㄾ/g, 'ᆯ');
-  
-   car = car.replace(/ᆮ이/g, '지');
-   car = car.replace(/ᆮ히/g, '치');
-   car = car.replace(/ᇀ이/g, '치');
+		.replace(/ᆪᄉ/g, 'ᆨᄊ')
+		.replace(/ᆬᄌ/g, 'ᆫᄍ')
+		.replace(/ᆰᄀ/g, 'ᆯᄁ')
+		.replace(/ᆲᄇ/g, 'ᆯᄈ')
+		.replace(/ᆹᄉ/g, 'ᆸᄊ')
+		.replace(/ᆳᄉ/g, 'ᆯᄊ')
 
-   car = car.replace(/ᆨᄋ/g, 'ᄀ');
-   car = car.replace(/ᆩᄋ/g, 'ᄁ');
-   car = car.replace(/ᆫᄋ/g, 'ᄂ');
-   car = car.replace(/ᆮᄋ/g, 'ᄃ');
-   car = car.replace(/ᆯᄋ/g, 'ᄅ');
-   car = car.replace(/ᆷᄋ/g, 'ᄆ');
-   car = car.replace(/ᆸᄋ/g, 'ᄇ');
-   car = car.replace(/ᆺᄋ/g, 'ᄉ');
-   car = car.replace(/ᆻᄋ/g, 'ᄊ');
-   car = car.replace(/ᆽᄋ/g, 'ᄌ');
-   car = car.replace(/ᆾᄋ/g, 'ᄎ');
-   car = car.replace(/ᆿᄋ/g, 'ᄏ');
-   car = car.replace(/ᇀᄋ/g, 'ᄐ');
-   car = car.replace(/ᇁᄋ/g, 'ᄑ');
-   car = car.replace(/ᇂᄋ/g, 'ᄋ');
+		.replace(/ᆪᄋ/g, 'ᆨᄉ')
+		.replace(/ᆬᄋ/g, 'ᆫᄌ')
+		.replace(/ᆭᄋ/g, 'ᆫᄒ')
+		.replace(/ᆰᄋ/g, 'ᆯᄀ')
+		.replace(/ᆲᄋ/g, 'ᆯᄇ')
+		.replace(/ᆶᄋ/g, 'ᆯᄒ')
+		.replace(/ᆱᄋ/g, 'ᆯᄆ')
+		.replace(/ᆹᄋ/g, 'ᆸᄉ')
+		.replace(/ㄿᄋ/g, 'ᆯᄑ')
+		.replace(/ᆳᄋ/g, 'ᆯᄉ')
+		.replace(/ㄾᄋ/g, 'ᆯᄐ')
 
-   car = car.replace(/(ᆨ|ᆿ)ᄂ/g, 'ᆼᄂ');
-   car = car.replace(/(ᆸ|ᇁ)ᄂ/g, 'ᆷᄂ');
-   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄂ/g, 'ᆫᄂ');
-   car = car.replace(/(ᆨ|ᆿ)ᄅ/g, 'ᆼᄂ');
-   car = car.replace(/ᆫᄅ/g, 'ᆯᄅ');
-   car = car.replace(/(ᆷ|ᆸ)ᄅ/g, 'ᆷᄂ');
-   car = car.replace(/ᆼᄅ/g, 'ᆼᄂ');
-   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄅ/g, 'ᆫᄂ');
-   car = car.replace(/(ᆨ|ᆿ)ᄆ/g, 'ᆼᄆ');
-   car = car.replace(/(ᆸ|ᇁ)ᄆ/g, 'ᆷᄆ');
-   car = car.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄆ/g, 'ᆫᄆ');
+		.replace(/ᆭᄀ/g, 'ᆫᄏ')
+		.replace(/ᆭᄃ/g, 'ᆫᄐ')
+		.replace(/ᆭᄇ/g, 'ᆫᄑ')
+		.replace(/ᆭᄌ/g, 'ᆫᄎ')
+		.replace(/ᆶᄀ/g, 'ᆯᄏ')
+		.replace(/ᆶᄃ/g, 'ᆯᄐ')
+		.replace(/ᆶᄇ/g, 'ᆯᄑ')
+		.replace(/ᆶᄌ/g, 'ᆯᄎ')
+		.replace(/ᆬᄒ/g, 'ᆫᄎ')
+		.replace(/ᆰᄒ/g, 'ᆯᄏ')
+		.replace(/ᆲᄒ/g, 'ᆯᄑ')
 
-   car = car.replace(/ᇂᄀ/g, 'ᄏ');
-   car = car.replace(/ᇂᄃ/g, 'ᄐ');
-   car = car.replace(/ᇂᄇ/g, 'ᄑ');
-   car = car.replace(/ᇂᄌ/g, 'ᄎ');
-  
-   car = car.replace(/ᇂᄂ/g, 'ᆫᄂ');
-   car = car.replace(/ᇂ(ᄅ|ᄆ|ᄉ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ|ᄁ|ᄄ|ᄈ|ᄊ|ᄍ)/g, '$1');
-  
-   car = car.replace(/ᆫᄅ/g, 'ᆯᄅ');
-   car = car.replace(/ᆯᄂ/g, 'ᆯᄅ');
+		.replace(/ᆪ/g, 'ᆨ')
+		.replace(/ᆬ/g, 'ᆫ')
+		.replace(/ᆭ/g, 'ᆫ')
+		.replace(/ᆰ/g, 'ᆨ')
+		.replace(/ᆲ/g, 'ᆯ')
+		.replace(/ᆶ/g, 'ᆯ')
+		.replace(/ᆱ/g, 'ᆷ')
+		.replace(/ᆹ/g, 'ᆸ')
+		.replace(/ㄿ/g, 'ᇁ')
+		.replace(/ᆳ/g, 'ᆯ')
+		.replace(/ㄾ/g, 'ᆯ')
 
-   car = car.replace(/(ᅡ|ᅪ|ᅣ)ᄋ(ᅦ|ᅥ|ᅳ)/g, '$1-ᄋ$2');
-   car = car.replace(/(ᅦ|ᅢ|ᅤ|ᅨ|ᅫ|ᅬ|ᅰ)ᄋ(ᅩ|ᅬ|ᅮ|ᅴ)/g, '$1-ᄋ$2');
-   car = car.replace(/(ᅥ|ᅧ|ᅩ|ᅭ|ᅯ)ᄋ(ᅦ|ᅥ|ᅳ)/g, '$1-ᄋ$2');
-   car = car.replace(/(ᅮ|ᅲ|ᅳ)이/g, '$1-이');
-// car = car.replace(/ᆫᄀ/g, 'ᆫ-ᄀ');
-   car = car.replace(/ᆼᄋ/g, 'ᆼ-ᄋ');
-   
-   car = car.replace(/(^\s*|\n\s*)(ᄀ|ᄁ|ᄂ|ᄃ|ᄄ|ᄅ|ᄆ|ᄇ|ᄈ|ᄉ|ᄊ|ᄋ|ᄌ|ᄍ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ)/g, '$1\u2060$2');
+		.replace(/ᆮ이/g, '지')
+		.replace(/ᆮ히/g, '치')
+		.replace(/ᇀ이/g, '치')
 
-   car = car.replace(/ᆯᄅ/g, 'LL');
-   car = car.replace(/ᄀ/g, 'G');
-   car = car.replace(/ᆨ/g, 'K');
-   car = car.replace(/ᄁ/g, 'KK');
-   car = car.replace(/ᆩ/g, 'K');
-   car = car.replace(/ᄂ/g, 'N');
-   car = car.replace(/ᆫ/g, 'N');
-   car = car.replace(/ᄃ/g, 'D');
-   car = car.replace(/ᆮ/g, 'T');
-   car = car.replace(/ᄄ/g, 'TT');
-   car = car.replace(/ᄅ/g, 'R');
-   car = car.replace(/ᆯ/g, 'L');
-   car = car.replace(/ᄆ/g, 'M');
-   car = car.replace(/ᆷ/g, 'M');
-   car = car.replace(/ᄇ/g, 'B');
-   car = car.replace(/ᆸ/g, 'P');
-   car = car.replace(/ᄈ/g, 'PP');
-   car = car.replace(/ᄉ/g, 'S');
-   car = car.replace(/ᆺ/g, 'T');
-   car = car.replace(/ᄊ/g, 'SS');
-   car = car.replace(/ᆻ/g, 'T');
-   car = car.replace(/ᄋ/g, '');
-   car = car.replace(/ᆼ/g, 'NG');
-   car = car.replace(/ᄌ/g, 'J');
-   car = car.replace(/ᆽ/g, 'T');
-   car = car.replace(/ᄍ/g, 'JJ');
-   car = car.replace(/ᄎ/g, 'CH');
-   car = car.replace(/ᆾ/g, 'T');
-   car = car.replace(/ᄏ/g, 'K');
-   car = car.replace(/ᆿ/g, 'K');
-   car = car.replace(/ᄐ/g, 'T');
-   car = car.replace(/ᇀ/g, 'T');
-   car = car.replace(/ᄑ/g, 'P');
-   car = car.replace(/ᇁ/g, 'P');
-   car = car.replace(/ᄒ/g, 'H');
-   car = car.replace(/ᇂ/g, 'T');
+		.replace(/ᆨᄋ/g, 'ᄀ')
+		.replace(/ᆩᄋ/g, 'ᄁ')
+		.replace(/ᆫᄋ/g, 'ᄂ')
+		.replace(/ᆮᄋ/g, 'ᄃ')
+		.replace(/ᆯᄋ/g, 'ᄅ')
+		.replace(/ᆷᄋ/g, 'ᄆ')
+		.replace(/ᆸᄋ/g, 'ᄇ')
+		.replace(/ᆺᄋ/g, 'ᄉ')
+		.replace(/ᆻᄋ/g, 'ᄊ')
+		.replace(/ᆽᄋ/g, 'ᄌ')
+		.replace(/ᆾᄋ/g, 'ᄎ')
+		.replace(/ᆿᄋ/g, 'ᄏ')
+		.replace(/ᇀᄋ/g, 'ᄐ')
+		.replace(/ᇁᄋ/g, 'ᄑ')
+		.replace(/ᇂᄋ/g, 'ᄋ')
 
-   car = car.replace(/ᅡ/g, 'A');
-   car = car.replace(/ᅢ/g, 'AE');
-   car = car.replace(/ᅣ/g, 'YA');
-   car = car.replace(/ᅤ/g, 'YAE');
-   car = car.replace(/ᅥ/g, 'EO');
-   car = car.replace(/ᅦ/g, 'E');
-   car = car.replace(/ᅧ/g, 'YEO');
-   car = car.replace(/ᅨ/g, 'YE');
-   car = car.replace(/ᅩ/g, 'O');
-   car = car.replace(/ᅪ/g, 'WA');
-   car = car.replace(/ᅫ/g, 'WAE');
-   car = car.replace(/ᅬ/g, 'OE');
-   car = car.replace(/ᅭ/g, 'YO');
-   car = car.replace(/ᅮ/g, 'U');
-   car = car.replace(/ᅯ/g, 'WO');
-   car = car.replace(/ᅰ/g, 'WE');
-   car = car.replace(/ᅱ/g, 'WI');
-   car = car.replace(/ᅲ/g, 'YU');
-   car = car.replace(/ᅳ/g, 'EU');
-   car = car.replace(/ᅴ/g, 'UI');
-   car = car.replace(/ᅵ/g, 'I');
+		.replace(/(ᆨ|ᆿ)ᄂ/g, 'ᆼᄂ')
+		.replace(/(ᆸ|ᇁ)ᄂ/g, 'ᆷᄂ')
+		.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄂ/g, 'ᆫᄂ')
+		.replace(/(ᆨ|ᆿ)ᄅ/g, 'ᆼᄂ')
+		.replace(/ᆫᄅ/g, 'ᆯᄅ')
+		.replace(/(ᆷ|ᆸ)ᄅ/g, 'ᆷᄂ')
+		.replace(/ᆼᄅ/g, 'ᆼᄂ')
+		.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄅ/g, 'ᆫᄂ')
+		.replace(/(ᆨ|ᆿ)ᄆ/g, 'ᆼᄆ')
+		.replace(/(ᆸ|ᇁ)ᄆ/g, 'ᆷᄆ')
+		.replace(/(ᆮ|ᆺ|ᆻ|ᆽ|ᆾ|ᇀ|ᇂ)ᄆ/g, 'ᆫᄆ')
 
-   car = car.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
-    return first + second.toLowerCase();
-});
+		.replace(/ᇂᄀ/g, 'ᄏ')
+		.replace(/ᇂᄃ/g, 'ᄐ')
+		.replace(/ᇂᄇ/g, 'ᄑ')
+		.replace(/ᇂᄌ/g, 'ᄎ')
 
-   Object.keys(latinWords).forEach(key => {
-     car = car.replace(key, latinWords[key]);
-});
-document.transcription.text2.value = car;
+		.replace(/ᇂᄂ/g, 'ᆫᄂ')
+		.replace(/ᇂ(ᄅ|ᄆ|ᄉ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ|ᄁ|ᄄ|ᄈ|ᄊ|ᄍ)/g, '$1')
+
+		.replace(/ᆫᄅ/g, 'ᆯᄅ')
+		.replace(/ᆯᄂ/g, 'ᆯᄅ')
+
+		.replace(/(ᅡ|ᅪ|ᅣ)ᄋ(ᅦ|ᅥ|ᅳ)/g, '$1-ᄋ$2')
+		.replace(/(ᅦ|ᅢ|ᅤ|ᅨ|ᅫ|ᅬ|ᅰ)ᄋ(ᅩ|ᅬ|ᅮ|ᅴ)/g, '$1-ᄋ$2')
+		.replace(/(ᅥ|ᅧ|ᅩ|ᅭ|ᅯ)ᄋ(ᅦ|ᅥ|ᅳ)/g, '$1-ᄋ$2')
+		.replace(/(ᅮ|ᅲ|ᅳ)이/g, '$1-이')
+		// .replace(/ᆫᄀ/g, 'ᆫ-ᄀ')
+		.replace(/ᆼᄋ/g, 'ᆼ-ᄋ')
+
+		.replace(/(^\s*|\n\s*)(ᄀ|ᄁ|ᄂ|ᄃ|ᄄ|ᄅ|ᄆ|ᄇ|ᄈ|ᄉ|ᄊ|ᄋ|ᄌ|ᄍ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ)/g, '$1\u2060$2')
+
+		.replace(/ᆯᄅ/g, 'LL')
+		.replace(/ᄀ/g, 'G')
+		.replace(/ᆨ/g, 'K')
+		.replace(/ᄁ/g, 'KK')
+		.replace(/ᆩ/g, 'K')
+		.replace(/ᄂ/g, 'N')
+		.replace(/ᆫ/g, 'N')
+		.replace(/ᄃ/g, 'D')
+		.replace(/ᆮ/g, 'T')
+		.replace(/ᄄ/g, 'TT')
+		.replace(/ᄅ/g, 'R')
+		.replace(/ᆯ/g, 'L')
+		.replace(/ᄆ/g, 'M')
+		.replace(/ᆷ/g, 'M')
+		.replace(/ᄇ/g, 'B')
+		.replace(/ᆸ/g, 'P')
+		.replace(/ᄈ/g, 'PP')
+		.replace(/ᄉ/g, 'S')
+		.replace(/ᆺ/g, 'T')
+		.replace(/ᄊ/g, 'SS')
+		.replace(/ᆻ/g, 'T')
+		.replace(/ᄋ/g, '')
+		.replace(/ᆼ/g, 'NG')
+		.replace(/ᄌ/g, 'J')
+		.replace(/ᆽ/g, 'T')
+		.replace(/ᄍ/g, 'JJ')
+		.replace(/ᄎ/g, 'CH')
+		.replace(/ᆾ/g, 'T')
+		.replace(/ᄏ/g, 'K')
+		.replace(/ᆿ/g, 'K')
+		.replace(/ᄐ/g, 'T')
+		.replace(/ᇀ/g, 'T')
+		.replace(/ᄑ/g, 'P')
+		.replace(/ᇁ/g, 'P')
+		.replace(/ᄒ/g, 'H')
+		.replace(/ᇂ/g, 'T')
+
+		.replace(/ᅡ/g, 'A')
+		.replace(/ᅢ/g, 'AE')
+		.replace(/ᅣ/g, 'YA')
+		.replace(/ᅤ/g, 'YAE')
+		.replace(/ᅥ/g, 'EO')
+		.replace(/ᅦ/g, 'E')
+		.replace(/ᅧ/g, 'YEO')
+		.replace(/ᅨ/g, 'YE')
+		.replace(/ᅩ/g, 'O')
+		.replace(/ᅪ/g, 'WA')
+		.replace(/ᅫ/g, 'WAE')
+		.replace(/ᅬ/g, 'OE')
+		.replace(/ᅭ/g, 'YO')
+		.replace(/ᅮ/g, 'U')
+		.replace(/ᅯ/g, 'WO')
+		.replace(/ᅰ/g, 'WE')
+		.replace(/ᅱ/g, 'WI')
+		.replace(/ᅲ/g, 'YU')
+		.replace(/ᅳ/g, 'EU')
+		.replace(/ᅴ/g, 'UI')
+		.replace(/ᅵ/g, 'I')
+
+		.normalize('NFC')
+		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
+			return first + second.toLowerCase();
+		});
+
+	Object.keys(latinWords).forEach(key => {
+		document.transcription.text2.value = document.transcription.text2.value
+			.replace(key, latinWords[key]);
+	});
 }
 
 
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }

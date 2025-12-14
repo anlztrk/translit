@@ -1,172 +1,170 @@
-﻿
-var car;
-function latcyr () {
-}
-function cyrlat () {
-car = document.transcription.text1.value;  
-  car = car.replace(/en/g, "än");
-  car = car.replace(/En/g, "Än");
-  car = car.replace(/EN/g, "ÄN");
-  car = car.replace(/el/g, "äl");
-  car = car.replace(/El/g, "Äl");
-  car = car.replace(/EL/g, "ÄL");
-  car = car.replace(/em/g, "äm");
-  car = car.replace(/Em/g, "Äm");
-  car = car.replace(/EM/g, "ÄM");
-  car = car.replace(/er/g, "är");
-  car = car.replace(/Er/g, "Är");
-  car = car.replace(/ER/g, "ÄR");
-  
-  car = car.replace(/äna/g, "ena");
-  car = car.replace(/Äna/g, "Ena");
-  car = car.replace(/ÄNA/g, "ENA");
-  car = car.replace(/änâ/g, "enâ");
-  car = car.replace(/Änâ/g, "Enâ");
-  car = car.replace(/ÄNÂ/g, "ENÂ");
-  car = car.replace(/äne/g, "ene");
-  car = car.replace(/Äne/g, "Ene");
-  car = car.replace(/ÄNE/g, "ENE");
-  car = car.replace(/änä/g, "enä");
-  car = car.replace(/Änä/g, "Enä");
-  car = car.replace(/ÄNÄ/g, "ENÄ");
-  car = car.replace(/änı/g, "enı");
-  car = car.replace(/Änı/g, "Enı");
-  car = car.replace(/ÄNI/g, "ENI");
-  car = car.replace(/äni/g, "eni");
-  car = car.replace(/Äni/g, "Eni");
-  car = car.replace(/ÄNİ/g, "ENİ");
-  car = car.replace(/änî/g, "enî");
-  car = car.replace(/Änî/g, "Enî");
-  car = car.replace(/ÄNÎ/g, "ENÎ");
-  car = car.replace(/äno/g, "eno");
-  car = car.replace(/Äno/g, "Eno");
-  car = car.replace(/ÄNO/g, "ENO");
-  car = car.replace(/änö/g, "enö");
-  car = car.replace(/Änö/g, "Enö");
-  car = car.replace(/ÄNÖ/g, "ENÖ");
-  car = car.replace(/änu/g, "enu");
-  car = car.replace(/Änu/g, "Enu");
-  car = car.replace(/ÄNU/g, "ENU");
-  car = car.replace(/änû/g, "enû");
-  car = car.replace(/Änû/g, "Enû");
-  car = car.replace(/ÄNÛ/g, "ENÛ");
-  car = car.replace(/änü/g, "enü");
-  car = car.replace(/Änü/g, "Enü");
-  car = car.replace(/ÄNÜ/g, "ENÜ");
-  car = car.replace(/ära/g, "era");
-  car = car.replace(/Ära/g, "Era");
-  car = car.replace(/ÄRA/g, "ERA");
-  car = car.replace(/ärâ/g, "erâ");
-  car = car.replace(/Ärâ/g, "Erâ");
-  car = car.replace(/ÄRÂ/g, "ERÂ");
-  car = car.replace(/äre/g, "ere");
-  car = car.replace(/Äre/g, "Ere");
-  car = car.replace(/ÄRE/g, "ERE");
-  car = car.replace(/ärä/g, "erä");
-  car = car.replace(/Ärä/g, "Erä");
-  car = car.replace(/ÄRÄ/g, "ERÄ");
-  car = car.replace(/ärı/g, "erı");
-  car = car.replace(/Ärı/g, "Erı");
-  car = car.replace(/ÄRI/g, "ERI");
-  car = car.replace(/äri/g, "eri");
-  car = car.replace(/Äri/g, "Eri");
-  car = car.replace(/ÄRİ/g, "ERİ");
-  car = car.replace(/ärî/g, "erî");
-  car = car.replace(/Ärî/g, "Erî");
-  car = car.replace(/ÄRÎ/g, "ERÎ");
-  car = car.replace(/äro/g, "ero");
-  car = car.replace(/Äro/g, "Ero");
-  car = car.replace(/ÄRO/g, "ERO");
-  car = car.replace(/ärö/g, "erö");
-  car = car.replace(/Ärö/g, "Erö");
-  car = car.replace(/ÄRÖ/g, "ERÖ");
-  car = car.replace(/äru/g, "eru");
-  car = car.replace(/Äru/g, "Eru");
-  car = car.replace(/ÄRU/g, "ERU");
-  car = car.replace(/ärû/g, "erû");
-  car = car.replace(/Ärû/g, "Erû");
-  car = car.replace(/ÄRÛ/g, "ERÛ");
-  car = car.replace(/ärü/g, "erü");
-  car = car.replace(/Ärü/g, "Erü");
-  car = car.replace(/ÄRÜ/g, "ERÜ");
-  car = car.replace(/äla/g, "ela");
-  car = car.replace(/Äla/g, "Ela");
-  car = car.replace(/ÄLA/g, "ELA");
-  car = car.replace(/älâ/g, "elâ");
-  car = car.replace(/Älâ/g, "Elâ");
-  car = car.replace(/ÄLÂ/g, "ELÂ");
-  car = car.replace(/äle/g, "ele");
-  car = car.replace(/Äle/g, "Ele");
-  car = car.replace(/ÄLE/g, "ELE");
-  car = car.replace(/älä/g, "elä");
-  car = car.replace(/Älä/g, "Elä");
-  car = car.replace(/ÄLÄ/g, "ELÄ");
-  car = car.replace(/älı/g, "elı");
-  car = car.replace(/Älı/g, "Elı");
-  car = car.replace(/ÄLI/g, "ELI");
-  car = car.replace(/äli/g, "eli");
-  car = car.replace(/Äli/g, "Eli");
-  car = car.replace(/ÄLİ/g, "ELİ");
-  car = car.replace(/älî/g, "elî");
-  car = car.replace(/Älî/g, "Elî");
-  car = car.replace(/ÄLÎ/g, "ELÎ");
-  car = car.replace(/älo/g, "elo");
-  car = car.replace(/Älo/g, "Elo");
-  car = car.replace(/ÄLO/g, "ELO");
-  car = car.replace(/älö/g, "elö");
-  car = car.replace(/Älö/g, "Elö");
-  car = car.replace(/ÄLÖ/g, "ELÖ");
-  car = car.replace(/älu/g, "elu");
-  car = car.replace(/Älu/g, "Elu");
-  car = car.replace(/ÄLU/g, "ELU");
-  car = car.replace(/älû/g, "elû");
-  car = car.replace(/Älû/g, "Elû");
-  car = car.replace(/ÄLÛ/g, "ELÛ");
-  car = car.replace(/älü/g, "elü");
-  car = car.replace(/Älü/g, "Elü");
-  car = car.replace(/ÄLÜ/g, "ELÜ");
-  car = car.replace(/äma/g, "ema");
-  car = car.replace(/Äma/g, "Ema");
-  car = car.replace(/ÄMA/g, "EMA");
-  car = car.replace(/ämâ/g, "emâ");
-  car = car.replace(/Ämâ/g, "Emâ");
-  car = car.replace(/ÄMÂ/g, "EMÂ");
-  car = car.replace(/äme/g, "eme");
-  car = car.replace(/Äme/g, "Eme");
-  car = car.replace(/ÄME/g, "EME");
-  car = car.replace(/ämä/g, "emä");
-  car = car.replace(/Ämä/g, "Emä");
-  car = car.replace(/ÄMÄ/g, "EMÄ");
-  car = car.replace(/ämı/g, "emı");
-  car = car.replace(/Ämı/g, "Emı");
-  car = car.replace(/ÄMI/g, "EMI");
-  car = car.replace(/ämi/g, "emi");
-  car = car.replace(/Ämi/g, "Emi");
-  car = car.replace(/ÄMİ/g, "EMİ");
-  car = car.replace(/ämî/g, "emî");
-  car = car.replace(/Ämî/g, "Emî");
-  car = car.replace(/ÄMÎ/g, "EMÎ");
-  car = car.replace(/ämo/g, "emo");
-  car = car.replace(/Ämo/g, "Emo");
-  car = car.replace(/ÄMO/g, "EMO");
-  car = car.replace(/ämö/g, "emö");
-  car = car.replace(/Ämö/g, "Emö");
-  car = car.replace(/ÄMÖ/g, "EMÖ");
-  car = car.replace(/ämu/g, "emu");
-  car = car.replace(/Ämu/g, "Emu");
-  car = car.replace(/ÄMU/g, "EMU");
-  car = car.replace(/ämû/g, "emû");
-  car = car.replace(/Ämû/g, "Emû");
-  car = car.replace(/ÄMÛ/g, "EMÛ");
-  car = car.replace(/ämü/g, "emü");
-  car = car.replace(/Ämü/g, "Emü");
-  car = car.replace(/ÄMÜ/g, "EMÜ");  
-document.transcription.text2.value=car;
-}
-function copy1()
-{ navigator.clipboard.writeText(document.transcription.text1.value);
+﻿function latcyr() {}
+
+function cyrlat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/en/g, "än")
+		.replace(/En/g, "Än")
+		.replace(/EN/g, "ÄN")
+		.replace(/el/g, "äl")
+		.replace(/El/g, "Äl")
+		.replace(/EL/g, "ÄL")
+		.replace(/em/g, "äm")
+		.replace(/Em/g, "Äm")
+		.replace(/EM/g, "ÄM")
+		.replace(/er/g, "är")
+		.replace(/Er/g, "Är")
+		.replace(/ER/g, "ÄR")
+
+		.replace(/äna/g, "ena")
+		.replace(/Äna/g, "Ena")
+		.replace(/ÄNA/g, "ENA")
+		.replace(/änâ/g, "enâ")
+		.replace(/Änâ/g, "Enâ")
+		.replace(/ÄNÂ/g, "ENÂ")
+		.replace(/äne/g, "ene")
+		.replace(/Äne/g, "Ene")
+		.replace(/ÄNE/g, "ENE")
+		.replace(/änä/g, "enä")
+		.replace(/Änä/g, "Enä")
+		.replace(/ÄNÄ/g, "ENÄ")
+		.replace(/änı/g, "enı")
+		.replace(/Änı/g, "Enı")
+		.replace(/ÄNI/g, "ENI")
+		.replace(/äni/g, "eni")
+		.replace(/Äni/g, "Eni")
+		.replace(/ÄNİ/g, "ENİ")
+		.replace(/änî/g, "enî")
+		.replace(/Änî/g, "Enî")
+		.replace(/ÄNÎ/g, "ENÎ")
+		.replace(/äno/g, "eno")
+		.replace(/Äno/g, "Eno")
+		.replace(/ÄNO/g, "ENO")
+		.replace(/änö/g, "enö")
+		.replace(/Änö/g, "Enö")
+		.replace(/ÄNÖ/g, "ENÖ")
+		.replace(/änu/g, "enu")
+		.replace(/Änu/g, "Enu")
+		.replace(/ÄNU/g, "ENU")
+		.replace(/änû/g, "enû")
+		.replace(/Änû/g, "Enû")
+		.replace(/ÄNÛ/g, "ENÛ")
+		.replace(/änü/g, "enü")
+		.replace(/Änü/g, "Enü")
+		.replace(/ÄNÜ/g, "ENÜ")
+		.replace(/ära/g, "era")
+		.replace(/Ära/g, "Era")
+		.replace(/ÄRA/g, "ERA")
+		.replace(/ärâ/g, "erâ")
+		.replace(/Ärâ/g, "Erâ")
+		.replace(/ÄRÂ/g, "ERÂ")
+		.replace(/äre/g, "ere")
+		.replace(/Äre/g, "Ere")
+		.replace(/ÄRE/g, "ERE")
+		.replace(/ärä/g, "erä")
+		.replace(/Ärä/g, "Erä")
+		.replace(/ÄRÄ/g, "ERÄ")
+		.replace(/ärı/g, "erı")
+		.replace(/Ärı/g, "Erı")
+		.replace(/ÄRI/g, "ERI")
+		.replace(/äri/g, "eri")
+		.replace(/Äri/g, "Eri")
+		.replace(/ÄRİ/g, "ERİ")
+		.replace(/ärî/g, "erî")
+		.replace(/Ärî/g, "Erî")
+		.replace(/ÄRÎ/g, "ERÎ")
+		.replace(/äro/g, "ero")
+		.replace(/Äro/g, "Ero")
+		.replace(/ÄRO/g, "ERO")
+		.replace(/ärö/g, "erö")
+		.replace(/Ärö/g, "Erö")
+		.replace(/ÄRÖ/g, "ERÖ")
+		.replace(/äru/g, "eru")
+		.replace(/Äru/g, "Eru")
+		.replace(/ÄRU/g, "ERU")
+		.replace(/ärû/g, "erû")
+		.replace(/Ärû/g, "Erû")
+		.replace(/ÄRÛ/g, "ERÛ")
+		.replace(/ärü/g, "erü")
+		.replace(/Ärü/g, "Erü")
+		.replace(/ÄRÜ/g, "ERÜ")
+		.replace(/äla/g, "ela")
+		.replace(/Äla/g, "Ela")
+		.replace(/ÄLA/g, "ELA")
+		.replace(/älâ/g, "elâ")
+		.replace(/Älâ/g, "Elâ")
+		.replace(/ÄLÂ/g, "ELÂ")
+		.replace(/äle/g, "ele")
+		.replace(/Äle/g, "Ele")
+		.replace(/ÄLE/g, "ELE")
+		.replace(/älä/g, "elä")
+		.replace(/Älä/g, "Elä")
+		.replace(/ÄLÄ/g, "ELÄ")
+		.replace(/älı/g, "elı")
+		.replace(/Älı/g, "Elı")
+		.replace(/ÄLI/g, "ELI")
+		.replace(/äli/g, "eli")
+		.replace(/Äli/g, "Eli")
+		.replace(/ÄLİ/g, "ELİ")
+		.replace(/älî/g, "elî")
+		.replace(/Älî/g, "Elî")
+		.replace(/ÄLÎ/g, "ELÎ")
+		.replace(/älo/g, "elo")
+		.replace(/Älo/g, "Elo")
+		.replace(/ÄLO/g, "ELO")
+		.replace(/älö/g, "elö")
+		.replace(/Älö/g, "Elö")
+		.replace(/ÄLÖ/g, "ELÖ")
+		.replace(/älu/g, "elu")
+		.replace(/Älu/g, "Elu")
+		.replace(/ÄLU/g, "ELU")
+		.replace(/älû/g, "elû")
+		.replace(/Älû/g, "Elû")
+		.replace(/ÄLÛ/g, "ELÛ")
+		.replace(/älü/g, "elü")
+		.replace(/Älü/g, "Elü")
+		.replace(/ÄLÜ/g, "ELÜ")
+		.replace(/äma/g, "ema")
+		.replace(/Äma/g, "Ema")
+		.replace(/ÄMA/g, "EMA")
+		.replace(/ämâ/g, "emâ")
+		.replace(/Ämâ/g, "Emâ")
+		.replace(/ÄMÂ/g, "EMÂ")
+		.replace(/äme/g, "eme")
+		.replace(/Äme/g, "Eme")
+		.replace(/ÄME/g, "EME")
+		.replace(/ämä/g, "emä")
+		.replace(/Ämä/g, "Emä")
+		.replace(/ÄMÄ/g, "EMÄ")
+		.replace(/ämı/g, "emı")
+		.replace(/Ämı/g, "Emı")
+		.replace(/ÄMI/g, "EMI")
+		.replace(/ämi/g, "emi")
+		.replace(/Ämi/g, "Emi")
+		.replace(/ÄMİ/g, "EMİ")
+		.replace(/ämî/g, "emî")
+		.replace(/Ämî/g, "Emî")
+		.replace(/ÄMÎ/g, "EMÎ")
+		.replace(/ämo/g, "emo")
+		.replace(/Ämo/g, "Emo")
+		.replace(/ÄMO/g, "EMO")
+		.replace(/ämö/g, "emö")
+		.replace(/Ämö/g, "Emö")
+		.replace(/ÄMÖ/g, "EMÖ")
+		.replace(/ämu/g, "emu")
+		.replace(/Ämu/g, "Emu")
+		.replace(/ÄMU/g, "EMU")
+		.replace(/ämû/g, "emû")
+		.replace(/Ämû/g, "Emû")
+		.replace(/ÄMÛ/g, "EMÛ")
+		.replace(/ämü/g, "emü")
+		.replace(/Ämü/g, "Emü")
+		.replace(/ÄMÜ/g, "EMÜ");
 }
 
-function copy2()
-{ navigator.clipboard.writeText(document.transcription.text2.value);
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
