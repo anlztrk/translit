@@ -2,7 +2,7 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
-    <title>Ukrainian Cyrillic - Latin transliterator</title>
+    <title>Georgian Latin transliterator</title>
     <script type="text/javascript" src="conversion.js"></script>
     <style type="text/css">
       @font-face {
@@ -22,14 +22,14 @@
     </style>
   </head>
   <body>
-    <h1>Ukrainian Cyrillic - Latin transliterator</h1>
+    <h1>Georgian Latin transliterator</h1>
     <div align="center"> Type or copy a text<br>
       <form name=transcription>
         <table width="90%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
           <!-- Top textarea spanning both -->
           <tr>
             <td colspan="2" style="padding-top: 10px; padding-left: 0; padding-right: 0;">
-              <center>in Ukrainian alphabet:</center>
+              <center>in Georgian alphabet:</center>
               <br>
               <textarea name="text1" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="topleft();topright()"></textarea>
               <br>
@@ -41,7 +41,7 @@
           <tr>
             <!-- Left textarea -->
             <td width="50%">
-              <center>here you get its friendly romanization: </center>
+              <center>here you get its official romanization: </center>
               <br>
               <textarea name="text2" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="lefttop();leftright()"></textarea>
               <br>
@@ -51,7 +51,7 @@
               </center>
               <!-- Right textarea -->
             <td width="50%">
-              <center>and here you get a precise one:</center>
+              <center>and here the strict alternative romanization:</center>
               <br>
               <textarea name="text3" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="righttop();rightleft()"></textarea>
               <br>
