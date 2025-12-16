@@ -97,7 +97,7 @@ function cyrlat() {
 		.replace(/ᆫᄅ/g, 'ᆯᄅ')
 		.replace(/ᆯᄂ/g, 'ᆯᄅ')
 
-		.replace(/ᆼᄀ/g, 'ᆼᄋ')
+		.replace(/ᆼᄀ/g, 'ᆼ')
 		.replace(/ᆼᄋ/g, 'ᆼ\u2019ᄋ')
 
 		.replace(/(ᅡ|ᅢ|ᅣ|ᅤ|ᅥ|ᅦ|ᅧ|ᅨ|ᅩ|ᅪ|ᅫ|ᅬ|ᅭ|ᅮ|ᅯ|ᅰ|ᅱ|ᅲ|ᅳ|ᅴ|ᅵ|ᆫ|ᆯ|ᆷ|ᆼ)ᄀ/g, '$1G')
