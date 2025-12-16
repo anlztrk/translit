@@ -163,15 +163,13 @@ function topleft() {
 		.replace(/Ẏ/g, "Y")
 		.replace(/ẏ/g, "y")
 
-		.replace(/«/g, "\u201e")
-		.replace(/»/g, "\u201c")
+		.replace(/«/g, "\u201c")
+		.replace(/»/g, "\u201d")
 		.normalize('NFC');
 }
 
 function topright() {
 	document.transcription.text1.value = document.transcription.text1.value
-		.replace(/<</g, "«")
-		.replace(/>>/g, "»")
 		.replace(/(\p{Script=Cyrl})A/ug, "$1А")
 		.replace(/(\p{Script=Cyrl})C/ug, "$1С")
 		.replace(/(\p{Script=Cyrl})E/ug, "$1Е")
@@ -311,7 +309,10 @@ function topright() {
 		.replace(/Э/g, "E")
 		.replace(/Ю/g, "Ju")
 		.replace(/Ё/g, "Jo")
-		.replace(/Я/g, "Ja");
+		.replace(/Я/g, "Ja")
+
+		.replace(/«/g, "\u201e")
+		.replace(/»/g, "\u201c");
 }
 
 function copy1() {
