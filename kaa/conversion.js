@@ -1,6 +1,4 @@
-var car;
-
-function cyrlat() {
+function topleft() {
 	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/[ЬЪьъ]/g, "")
 
@@ -100,8 +98,100 @@ function cyrlat() {
 		.replace(/»/g, "\u201d");
 }
 
-function latcyr() {
+function topright() {
+	document.transcription.text3.value = document.transcription.text1.value
+		.replace(/(Ь|Ъ|ь|ъ)(е|и|о)/g, "$1й$2")
+		.replace(/(Ь|Ъ)(Е|И|О)/g, "$1Й$2")
+
+		.replace(/а/g, "a")
+		.replace(/ә/g, "ä")
+		.replace(/б/g, "b")
+		.replace(/в/g, "v")
+		.replace(/г/g, "g")
+		.replace(/ғ/g, "ğ")
+		.replace(/д/g, "d")
+		.replace(/е/g, "e")
+		.replace(/ё/g, "yo")
+		.replace(/ж/g, "j")
+		.replace(/з/g, "z")
+		.replace(/и/g, "i")
+		.replace(/й/g, "y")
+		.replace(/к/g, "k")
+		.replace(/қ/g, "q")
+		.replace(/л/g, "l")
+		.replace(/м/g, "m")
+		.replace(/н/g, "n")
+		.replace(/ң/g, "ñ")
+		.replace(/о/g, "o")
+		.replace(/ө/g, "ö")
+		.replace(/п/g, "p")
+		.replace(/р/g, "r")
+		.replace(/с/g, "s")
+		.replace(/т/g, "t")
+		.replace(/у/g, "u")
+		.replace(/ү/g, "ü")
+		.replace(/ў/g, "w")
+		.replace(/ф/g, "f")
+		.replace(/х/g, "x")
+		.replace(/ҳ/g, "h")
+		.replace(/ц/g, "c")
+		.replace(/ч/g, "ç")
+		.replace(/ш/g, "ş")
+		.replace(/щ/g, "ş")
+		.replace(/ъ/g, "")
+		.replace(/ы/g, "ı")
+		.replace(/ь/g, "")
+		.replace(/э/g, "e")
+		.replace(/ю/g, "yu")
+		.replace(/я/g, "ya")
+		.replace(/А/g, "A")
+		.replace(/Ә/g, "Ä")
+		.replace(/Б/g, "B")
+		.replace(/В/g, "V")
+		.replace(/Г/g, "G")
+		.replace(/Ғ/g, "Ğ")
+		.replace(/Д/g, "D")
+		.replace(/Е/g, "E")
+		.replace(/Ё/g, "Yo")
+		.replace(/Ж/g, "J")
+		.replace(/З/g, "Z")
+		.replace(/И/g, "İ")
+		.replace(/Й/g, "Y")
+		.replace(/К/g, "K")
+		.replace(/Қ/g, "Q")
+		.replace(/Л/g, "L")
+		.replace(/М/g, "M")
+		.replace(/Н/g, "N")
+		.replace(/Ң/g, "Ñ")
+		.replace(/О/g, "O")
+		.replace(/Ө/g, "Ö")
+		.replace(/П/g, "P")
+		.replace(/Р/g, "R")
+		.replace(/С/g, "S")
+		.replace(/Т/g, "T")
+		.replace(/У/g, "U")
+		.replace(/Ү/g, "Ü")
+		.replace(/Ў/g, "W")
+		.replace(/Ф/g, "F")
+		.replace(/Х/g, "X")
+		.replace(/Ҳ/g, "H")
+		.replace(/Ц/g, "C")
+		.replace(/Ч/g, "Ç")
+		.replace(/Ш/g, "Ş")
+		.replace(/Щ/g, "Ş")
+		.replace(/Ъ/g, "")
+		.replace(/Ы/g, "I")
+		.replace(/Ь/g, "")
+		.replace(/Э/g, "E")
+		.replace(/Ю/g, "Yu")
+		.replace(/Я/g, "Ya")
+		.replace(/«/g, "\u201c")
+		.replace(/»/g, "\u201d");
+}
+
+function lefttop() {
 	document.transcription.text2.value = document.transcription.text2.value.replace(/['ˈ’‘ʻʼ´`ʿʹˊ׳′ʽߵ՚ߴ᾿ՙ῾‛ʾ՛ˋ]/g, "\u0027")
+		.normalize('NFD')
 		.replace(/([AaGgIiNnOoUu])\u0027/g, "$1\u0301")
 		.replace(/i\u0301/g, "ı")
 		.replace(/İ/g, "I")
@@ -185,6 +275,7 @@ function latcyr() {
 		.replace(/ı|í/g, "ы")
 		.replace(/\u201c/g, "«")
 		.replace(/\u201d/g, "»");
+		topright();
 }
 
 function copy1() {
