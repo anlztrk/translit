@@ -185,6 +185,7 @@ function cyrlat() {
 		.replace(/YI([ABDEGHIJKLMNOPRSTWYZ])/g, 'I$1')
 
 		.replace(/HW/g, "WH")
+		.replace(/CWH/g, "CHW")
 		.replace(/SWHI/g, "SHWI")
 
 		.normalize('NFC')
