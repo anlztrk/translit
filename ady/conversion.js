@@ -1,4 +1,4 @@
-function cyrlat() {
+function leftright() {
 	document.transcription.text1.value = document.transcription.text1.value
 		.replace(/(\p{Script=Cyrl})(I|1)/ug, "$1Ӏ")
 		.replace(/(I|1)(\p{Script=Cyrl})/ug, "Ӏ$2")
@@ -130,7 +130,7 @@ function cyrlat() {
 		.replace(/\u00bb/g, "\u201d");
 }
 
-function latcyr() {}
+function rightleft() {}
 
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value)
