@@ -104,8 +104,6 @@ function topleft() {
 		// .replace(/ᆫᄀ/g, 'ᆫ-ᄀ')
 		.replace(/ᆼᄋ/g, 'ᆼ-ᄋ')
 
-		.replace(/(^\s*|\n\s*)(ᄀ|ᄁ|ᄂ|ᄃ|ᄄ|ᄅ|ᄆ|ᄇ|ᄈ|ᄉ|ᄊ|ᄋ|ᄌ|ᄍ|ᄎ|ᄏ|ᄐ|ᄑ|ᄒ)/g, '$1\u2060$2')
-
 		.replace(/ᆯᄅ/g, 'LL')
 		.replace(/ᄀ/g, 'G')
 		.replace(/ᆨ/g, 'K')
