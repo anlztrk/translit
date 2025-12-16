@@ -1,32 +1,33 @@
-﻿<!doctype html>
-<html> 
-<head> 
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
-<title>Georgian Latin transliterator</title><script type="text/javascript" src="conversion.js"></script>
-		<style type="text/css"> 
-		@font-face {
-			font-family: 'GB-Plus';
-			src: url('/translit/fonts/GentiumBookPlus-Regular.ttf') format('truetype');
-			font-weight: normal;
-			font-style: normal;
-			unicode-range: U+000-10FFFF;
-		}
-		textarea {
-			font-family: 'Gentium Book Plus', 'GB-Plus', 'Liberation Serif', Tinos, Cambria, 'Times New Roman', serif;
-			font-size: 15px;
-			width: 500px;
-			height: 300px;
-		}
-		</style> 
-</head> 
-<body> 
-	<h1>Georgian Latin transliterator</h1> 
+<!doctype html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
+    <title>Georgian Latin transliterator</title>
+    <script type="text/javascript" src="conversion.js"></script>
+    <style type="text/css">
+      @font-face {
+        font-family: 'GB-Plus';
+        src: url('/translit/fonts/GentiumBookPlus-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        unicode-range: U+000-10FFFF;
+      }
 
-<div align="center"> Type or copy a text:<br> 
-  <form name=transcription> 
+      textarea {
+        font-family: 'Gentium Book Plus', 'GB-Plus', 'Liberation Serif', Tinos, Cambria, 'Times New Roman', serif;
+        font-size: 15px;
+        width: 500px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Georgian Latin transliterator</h1>
+    <div align="center"> Type or copy a text:<br>
+      <form name=transcription>
         <table width="90%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
-        <!-- Top textarea spanning both -->
-        <tr>
+          <!-- Top textarea spanning both -->
+          <tr>
             <td colspan="2" style="padding-top: 10px; padding-left: 0; padding-right: 0;">
               <center>in Georgian alphabet:</center>
               <br>
@@ -36,13 +37,13 @@
               <center>
                 <input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text1.focus()" value="clear" class=bf>
               </center>
-        </tr>
-		<tr>
+          </tr>
+          <tr>
             <!-- Left textarea -->
             <td width="50%">
               <center>here you get its official romanization: </center>
               <br>
-              <textarea name="text1" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="lefttop();leftright()"></textarea>
+              <textarea name="text2" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="lefttop();leftright()"></textarea>
               <br>
               <br>
               <center>
