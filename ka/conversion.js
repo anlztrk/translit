@@ -145,7 +145,6 @@ function topright() {
 	Object.keys(latinWords).forEach(key => {
 		document.transcription.text3.value = document.transcription.text3.value.replace(key, latinWords[key]);
 	});
-	document.transcription.text3.value = car;
 }
 
 function copy1() {
