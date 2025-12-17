@@ -73,7 +73,7 @@ function topleft() {
 		.replace(/g([gxh])/g, "n$1")
 
 		.replace(/M([Pp])/g, "B")
-		.replace(/μπ/g, "b")
+		.replace(/mp/g, "b")
 		.replace(/([ABVGDEZÎÞIKLMNXOPRSTYFHⱣÔ])([\u0301\u0308])?B([ABVGDEZÎÞIKLMNXOPRSTYFHⱣÔ])/g, "$1$2MP$3")
 		.replace(/([ABVGDEZÎÞIKLMNXOPRSTYFHⱣÔabvgdezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?b([abvgdezîþiklmnxoprsſtyfhᵽô])/g, "$1$2mp$3")
 
