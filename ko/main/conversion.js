@@ -163,10 +163,10 @@ function topleft() {
 		.replace(/ᅴ/g, 'UI')
 		.replace(/ᅵ/g, 'I')
 
-		.normalize('NFC')
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
 			return first + second.toLowerCase();
-		});
+		})
+		.normalize('NFC');
 
 	Object.keys(latinWords).forEach(key => {
 		document.transcription.text2.value = document.transcription.text2.value
@@ -341,10 +341,10 @@ function topright() {
 		.replace(/ᅴ/g, 'ŬI')
 		.replace(/ᅵ/g, 'I')
 
-		.normalize('NFC')
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
 			return first + second.toLowerCase();
-		});
+		})
+		.normalize('NFC');
 
 	Object.keys(latinWords).forEach(key => {
 		document.transcription.text3.value = document.transcription.text3.value
