@@ -215,6 +215,14 @@ function topright() {
 		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?b([aeiîoôybgðzlmnr])/g, "$1$2nt$3")
 		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?b([þkxpsſtfhᵽ])/g, "$1$2nd$3")
 
+        .replace(/(\p{Lu}|\p{Mn})H/ug, "$1KḢ")
+		.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) H/ug, "$1$2 KḢ")
+		.replace(/H (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "KḢ $1$2")
+		.replace(/H(\p{Lu}|\p{Mn})/ug, "KḢ$1")
+		.replace(/H/g, "Kḣ")
+		.replace(/Ḣ/g, "H")
+		.replace(/ḣ/g, "h")
+		
 		.replace(/(\p{Lu}|\p{Mn})Þ/ug, "$1TH")
 		.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Þ/ug, "$1$2 TH")
 		.replace(/Þ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "TH $1$2")
