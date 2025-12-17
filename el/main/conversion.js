@@ -253,7 +253,7 @@ function topright() {
 		.replace(/[oey][oey]?i/g, "i")
 
 		.replace(/OY/g, "U")
-		.replace(/Oy/g, "u")
+		.replace(/Oy/g, "U")
 		.replace(/oy/g, "u")
 
 		.replace(/Y/g, "I")
