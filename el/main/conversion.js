@@ -229,6 +229,22 @@ function topright() {
 		.replace(/Ᵽ/g, "Ps")
 		.replace(/ᵽ/g, "ps")
 
+		.replace(/A[OEY]?I/g, "E")
+		.replace(/A[oey]?i/g, "E")
+		.replace(/a[oey]?i/g, "e")
+
+		.replace(/[OEY][OEY]?I/g, "I")
+		.replace(/[OEY][oey]?i/g, "I")
+		.replace(/[oey][oey]?i/g, "i")
+
+		.replace(/G[EIÎYeiîy]/g, "Y$1")
+		.replace(/g[eiîy]/g, "y$1")
+
+		.replace(/(\p{Lu}|\p{Mn})GK/ug, "$1NG")
+		.replace(/(\p{Ll}|\p{Mn})γκ/ug, "$1ng")
+		.replace(/G[Kk]/ug, "G")
+		.replace(/gk/ug, "g")
+
 		.replace(/OY/g, "U")
 		.replace(/Oy/g, "u")
 		.replace(/oy/g, "u")
