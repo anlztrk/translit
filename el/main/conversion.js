@@ -187,14 +187,12 @@ function topright() {
 		.replace(/Ω/g, "Ô")
 		.replace(/ω/g, "ô")
 
-		.replace(/([AEÎ])Y\u0308/g, "$1Ÿ")
-		.replace(/([AEÎaeî])y\u0308/g, "$1ÿ")
+		.replace(/([AEIÎOÔY])\u0308/g, "\u2060$1")
+
 		.replace(/([AEÎ])(\u0301)?Y(\u0301)?([AEIÎOÔYBVGDÐZLMNR])/g, "$1$2V$3$4")
 		.replace(/([AEÎaeî])(\u0301)?y(\u0301)?([aeiîoôybvgdðzlmnr])/g, "$1$2v$3$4")
 		.replace(/([AEÎ])Y/g, "$1F")
 		.replace(/([AEÎaeî])y/g, "$1f")
-		.replace(/Ÿ/g, "Y\u0308")
-		.replace(/ÿ/g, "y\u0308")
 
 		.replace(/([VvFf])\u0301/g, "\u0301$1")
 
@@ -276,6 +274,8 @@ function topright() {
 		.replace(/ſ/g, "s")
 
 		.replace(/(\u003b|\u037e)/g, "\u003f")
+
+		.replace(/\u2060/g, "")
 
 		.normalize('NFC');
 	
