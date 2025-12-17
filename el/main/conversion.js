@@ -1,4 +1,7 @@
 function topleft() {
+	let latinWords = {};
+	let index = 0;
+	
 	document.transcription.text2.value = document.transcription.text1.value
 		.normalize('NFD')
 		.replace(/\p{sc=Latin}+/ug, function(match) {
@@ -122,6 +125,9 @@ function topleft() {
 }
 
 function topright() {
+	let latinWords = {};
+	let index = 0;
+
 	document.transcription.text3.value = document.transcription.text1.value
 		.normalize('NFD')
 		.replace(/\p{sc=Latin}+/ug, function(match) {
