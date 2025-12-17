@@ -60,10 +60,10 @@ function topleft() {
 		
 		.replace(/([AEÎ])Y\u0308/g, "$1Ÿ")
 		.replace(/([AEÎaeî])y\u0308/g, "$1ÿ")
-		.replace(/([AEÎ])Y(\u0301)?([AEIÎOÔYBGDZLMNR])/g, "$1V$2$3")
-		.replace(/([AEÎaeî])y(\u0301)?(aeiîoôybgdzlmnr)/g, "$1v$2$3")
-		.replace(/([AEÎ])Y(\u0301)?/g, "$1$2F")
-		.replace(/([AEÎaeî])y(\u0301)?/g, "$1$2f")
+		.replace(/([AEÎ])(\u0301)?Y(\u0301)?([AEIÎOÔYBGDZLMNR])/g, "$1V$2$3")
+		.replace(/([AEÎaeî])(\u0301)?y(\u0301)?(aeiîoôybgdzlmnr)/g, "$1v$2$3")
+		.replace(/([AEÎ])Y/g, "$1F")
+		.replace(/([AEÎaeî])y/g, "$1f")
 		.replace(/Ÿ/g, "Y\u0308")
 		.replace(/ÿ/g, "y\u0308")
 
@@ -72,8 +72,8 @@ function topleft() {
 		.replace(/G([GXHgxh])/g, "N$1")
 		.replace(/g([gxh])/g, "n$1")
 
-		.replace(/M([Pp])/g, "\u200cB")
-		.replace(/μπ/g, "\u200cb")
+		.replace(/M([Pp])/g, "B")
+		.replace(/μπ/g, "b")
 		.replace(/([ABVGDEZÎÞIKLMNXOPRSTYFHⱣÔ])([\u0301\u0308])?B([ABVGDEZÎÞIKLMNXOPRSTYFHⱣÔ])/g, "$1$2MP$3")
 		.replace(/([ABVGDEZÎÞIKLMNXOPRSTYFHⱣÔabvgdezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?b([abvgdezîþiklmnxoprsſtyfhᵽô])/g, "$1$2mp$3")
 
@@ -113,10 +113,6 @@ function topleft() {
 		.replace(/(\u003b|\u037e)/g, "\u003f")
 
 		.normalize('NFC')
-		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
-			return first + second.toLowerCase();
-		});
-
 	Object.keys(latinWords).forEach(key => {
 		document.transcription.text2.value = document.transcription.text2.value
 			.replace(key, latinWords[key])
