@@ -1,7 +1,7 @@
 function topleft() {
 	let latinWords = {};
 	let index = 0;
-	
+
 	document.transcription.text2.value = document.transcription.text1.value
 		.normalize('NFD')
 		.replace(/\p{sc=Latin}+/ug, function(match) {
@@ -117,7 +117,7 @@ function topleft() {
 		.replace(/(\u003b|\u037e)/g, "\u003f")
 
 		.normalize('NFC');
-	
+
 	Object.keys(latinWords).forEach(key => {
 		document.transcription.text2.value = document.transcription.text2.value
 			.replace(key, latinWords[key])
@@ -209,12 +209,12 @@ function topright() {
 
 		.replace(/N([Tt])/g, "D")
 		.replace(/nt/g, "d")
-		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔ])([\u0301\u0308])?B([AEIÎOÔYBGÐZLMNR])/g, "$1$2ND$3")
-		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔ])([\u0301\u0308])?B([ÞKXPSTFHⱣ])/g, "$1$2NT$3")
-		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?b([aeiîoôybgðzlmnr])/g, "$1$2nt$3")
-		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?b([þkxpsſtfhᵽ])/g, "$1$2nd$3")
+		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔ])([\u0301\u0308])?D([AEIÎOÔYBGÐZLMNR])/g, "$1$2ND$3")
+		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔ])([\u0301\u0308])?D([ÞKXPSTFHⱣ])/g, "$1$2NT$3")
+		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?d([aeiîoôybgðzlmnr])/g, "$1$2nt$3")
+		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?d([þkxpsſtfhᵽ])/g, "$1$2nd$3")
 
-        .replace(/(\p{Lu}|\p{Mn})H/ug, "$1KḢ")
+		.replace(/(\p{Lu}|\p{Mn})H/ug, "$1KḢ")
 		.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) H/ug, "$1$2 KḢ")
 		.replace(/H (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "KḢ $1$2")
 		.replace(/H(\p{Lu}|\p{Mn})/ug, "KḢ$1")
@@ -222,7 +222,7 @@ function topright() {
 		.replace(/Ḣ/g, "H")
 		.replace(/h/g, "kḣ")
 		.replace(/ḣ/g, "h")
-		
+
 		.replace(/(\p{Lu}|\p{Mn})Þ/ug, "$1TH")
 		.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) Þ/ug, "$1$2 TH")
 		.replace(/Þ (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "TH $1$2")
@@ -283,7 +283,7 @@ function topright() {
 		.replace(/\u2060/g, "")
 
 		.normalize('NFC');
-	
+
 	Object.keys(latinWords).forEach(key => {
 		document.transcription.text3.value = document.transcription.text3.value
 			.replace(key, latinWords[key])
