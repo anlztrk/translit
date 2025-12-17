@@ -168,7 +168,8 @@ function cyrlat() {
 
 	Object.keys(latinWords).forEach(key => {
 		document.transcription.text2.value = document.transcription.text2.value
-			.replace(key, latinWords[key]);
+			.replace(key, latinWords[key])
+			.normalize('NFC');
 	});
 }
 
