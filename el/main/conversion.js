@@ -85,6 +85,7 @@ function topleft() {
 		.replace(/H (\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn})/ug, "CḢ $1$2")
 		.replace(/H(\p{Lu}|\p{Mn})/ug, "CḢ$1")
 		.replace(/H/g, "Cḣ")
+		.replace(/h/g, "cḣ")
 		.replace(/Ḣ/g, "H")
 		.replace(/ḣ/g, "h")
 
@@ -219,6 +220,7 @@ function topright() {
 		.replace(/H(\p{Lu}|\p{Mn})/ug, "KḢ$1")
 		.replace(/H/g, "Kḣ")
 		.replace(/Ḣ/g, "H")
+		.replace(/h/g, "kḣ")
 		.replace(/ḣ/g, "h")
 		
 		.replace(/(\p{Lu}|\p{Mn})Þ/ug, "$1TH")
