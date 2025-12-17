@@ -112,7 +112,8 @@ function topleft() {
 
 		.replace(/(\u003b|\u037e)/g, "\u003f")
 
-		.normalize('NFC')
+		.normalize('NFC');
+	
 	Object.keys(latinWords).forEach(key => {
 		document.transcription.text2.value = document.transcription.text2.value
 			.replace(key, latinWords[key])
@@ -260,7 +261,8 @@ function topright() {
 
 		.replace(/(\u003b|\u037e)/g, "\u003f")
 
-		.normalize('NFC')
+		.normalize('NFC');
+	
 	Object.keys(latinWords).forEach(key => {
 		document.transcription.text3.value = document.transcription.text3.value
 			.replace(key, latinWords[key])
