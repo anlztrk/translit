@@ -1,4 +1,4 @@
-function topleft() {
+function leftright() {
 	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/[ЬЪьъ]/g, "")
 
@@ -98,7 +98,7 @@ function topleft() {
 		.replace(/»/g, "\u201d");
 }
 
-function topright() {
+function leftbottom() {
 	document.transcription.text3.value = document.transcription.text1.value
 		.replace(/(Ь|Ъ|ь|ъ)(е|и|о)/g, "$1й$2")
 		.replace(/(Ь|Ъ)(Е|И|О)/g, "$1Й$2")
@@ -189,7 +189,7 @@ function topright() {
 		.replace(/»/g, "\u201d");
 }
 
-function lefttop() {
+function rightleft() {
 	document.transcription.text2.value = document.transcription.text2.value.replace(/['ˈ’‘ʻʼ´`ʿʹˊ׳′ʽߵ՚ߴ᾿ՙ῾‛ʾ՛ˋ]/g, "\u0027")
 		.normalize('NFD')
 		.replace(/([AaGgIiNnOoUu])\u0027/g, "$1\u0301")
@@ -275,7 +275,7 @@ function lefttop() {
 		.replace(/ı|í/g, "ы")
 		.replace(/\u201c/g, "«")
 		.replace(/\u201d/g, "»");
-		topright();
+		leftbottom();
 }
 
 function copy1() {
