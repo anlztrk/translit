@@ -211,8 +211,8 @@ function topright() {
 		.replace(/nt/g, "d")
 		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔ])([\u0301\u0308])?D([AEIÎOÔYBGÐZLMNR])/g, "$1$2ND$3")
 		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔ])([\u0301\u0308])?D([ÞKXPSTFHⱣ])/g, "$1$2NT$3")
-		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?d([aeiîoôybgðzlmnr])/g, "$1$2nt$3")
-		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?d([þkxpsſtfhᵽ])/g, "$1$2nd$3")
+		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?d([aeiîoôybgðzlmnr])/g, "$1$2nd$3")
+		.replace(/([ABVGÐEZÎÞIKLMNXOPRSTYFHⱣÔabvgðezîþiklmnxoprsſtyfhᵽô])([\u0301\u0308])?d([þkxpsſtfhᵽ])/g, "$1$2nt$3")
 
 		.replace(/(\p{Lu}|\p{Mn})H/ug, "$1KḢ")
 		.replace(/(\p{Lu}|\p{Mn})(\p{Lu}|\p{Mn}) H/ug, "$1$2 KḢ")
