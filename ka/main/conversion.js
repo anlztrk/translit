@@ -3,6 +3,7 @@ function topleft() {
 	let latinWords = {};
 	let index = 0;
 	document.transcription.text2.value = document.transcription.text2.value
+		.normalize('NFD')
 		.replace(/\p{sc=Latin}+/ug, function(match) {
 			let key = `__placeholder${index}__`;
 			latinWords[key] = match;
@@ -100,7 +101,8 @@ function topleft() {
 		});
 
 	Object.keys(latinWords).forEach(key => {
-		document.transcription.text2.value = document.transcription.text2.value.replace(key, latinWords[key]);
+		document.transcription.text2.value = document.transcription.text2.value.replace(key, latinWords[key])
+		.normalize('NFC');
 	});
 }
 
@@ -109,6 +111,7 @@ function topright() {
 	let latinWords = {};
 	let index = 0;
 	document.transcription.text3.value = document.transcription.text3.value
+		.normalize('NFD')
 		.replace(/\p{sc=Latin}+/ug, function(match) {
 			let key = `__placeholder${index}__`;
 			latinWords[key] = match;
@@ -204,7 +207,8 @@ function topright() {
 		.replace(/ჰ/g, "H")
 
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
-			return first + second.toLowerCase();
+			return first + second.toLowerCase()
+			.normalize('NFC');
 		});
 
 	Object.keys(latinWords).forEach(key => {
