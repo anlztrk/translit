@@ -105,7 +105,16 @@ function topleft() {
 		.replace(/(\u003b|\u037e)/g, "\u003f")
 		.normalize('NFC')
 
-		.replace(/\u2060/g, "");
+		.normalize('NFC')
+		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
+			return first + second.toLowerCase();
+		});
+
+	Object.keys(latinWords).forEach(key => {
+		document.transcription.text2.value = document.transcription.text2.value
+			.replace(key, latinWords[key])
+			.normalize('NFC');
+	});
 }
 
 function topright() {
