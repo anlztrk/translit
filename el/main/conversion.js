@@ -103,6 +103,11 @@ function topleft() {
 		.replace(/Oy/g, "Ou")
 		.replace(/oy/g, "ou")
 
+		.replace(/Î/g, "I")
+		.replace(/î/g, "i")
+		.replace(/Ô/g, "O")
+		.replace(/ô/g, "o")		
+
 		.replace(/ſ/g, "s")
 		
 		.replace(/(\u003b|\u037e)/g, "\u003f")
