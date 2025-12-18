@@ -3,6 +3,7 @@ function cyrlat() {
 		.replace(/ə/g, "ә")
 		.replace(/Ə/g, "Ә");
 
+	document.transcription.text2.value = document.transcription.text1.value
 		//Я, Ё, Ю 
 		.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЬА")
 		.replace(/(\p{Uppercase})Я/ug, "$1ЬА")
@@ -67,7 +68,6 @@ function cyrlat() {
 		.replace(/ь([аәеиоөуұүыіэ])/g, "й$1")
 		.replace(/([Ьь])/g, "")
 
-	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/(\p{Uppercase})(\p{Uppercase}) Ш/ug, "$1$2 SH")
 		.replace(/(\p{Uppercase})Ш/ug, "$1SH")
 		.replace(/Ш (\p{Uppercase})(\p{Uppercase})/ug, "SH $1$2")
