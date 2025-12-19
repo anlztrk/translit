@@ -179,8 +179,8 @@ function cyrlat() {
 		.replace(/ᅴ/g, 'WI')
 		.replace(/ᅵ/g, 'YI')
 
-		.replace(/([ABDEGHIJKLMNOPRSTWYZ])WU/g, '$1U')
-		.replace(/([ABDEGHIJKLMNOPRSTWYZ])YI/g, '$1I')
+		.replace(/([ABDEGHIJKLMNOPRSTWYZ\u002d])WU/g, '$1U')
+		.replace(/([ABDEGHIJKLMNOPRSTWYZ\u002d])YI/g, '$1I')
 		.replace(/WU([ABDEGHIJKLMNOPRSTWYZ])/g, 'U$1')
 		.replace(/YI([ABDEGHIJKLMNOPRSTWYZ])/g, 'I$1')
 
