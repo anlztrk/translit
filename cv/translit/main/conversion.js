@@ -22,6 +22,8 @@ function cyrlat() {
 		.replace(/(\p{Script=Cyrl})ç/ug, "$1ҫ")
 		.replace(/ç(\p{Script=Cyrl})/ug, "ҫ$1")
 
+        .replace(/([АӐЕЁӖИОУӲЫЭЮЯ])Щ([АӐЕЁӖИОУӲЫЭЮЯ])/g, "$1ҪҪ$2")
+		.replace(/([АӐЕЁӖИОУӲЫЭЮЯаӑеёӗиоуӳыэюя])щ([аӑеёӗиоуӳыэюя])/g, "$1ҫҫ$2")
 		.replace(/щ/g, "ҫ")
 		.replace(/Щ/g, "Ҫ")
 
