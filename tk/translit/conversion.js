@@ -217,7 +217,7 @@ function rightbottom() {
 		.replace(/j/g, "c")
 		.replace(/ž/g, "j")
 		.replace(/ň/g, "ñ")
-		.replace(/y/g, "I")
+		.replace(/y/g, "ı")
 		.replace(/ý/g, "y")
 		.replace(/w/g, "v")
 		.replace(/([AÄBCÇDEFGHIİJLMNÑOÖPRSŞTUÜVYZ])G/g, "$1Ğ")
@@ -225,7 +225,7 @@ function rightbottom() {
 }
 
 function bottomright() {
-	document.transcription.text3.value = document.transcription.text2.value
+	document.transcription.text2.value = document.transcription.text3.value
 		.replace(/V/g, "W")
 		.replace(/Y/g, "Ý")
 		.replace(/I/g, "Y")
