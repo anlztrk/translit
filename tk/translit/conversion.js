@@ -96,6 +96,7 @@ function leftright() {
 		.replace(/Ы/g, "Y")
 		.replace(/Ь/g, "")
 		.replace(/Э/g, "E");
+		leftbottom();
 }
 
 function rightleft() {
@@ -302,7 +303,6 @@ function leftbottom() {
 		.replace(/Ы/g, "I")
 		.replace(/Ь/g, "")
 		.replace(/Э/g, "E");
-		leftbottom();
 }
 
 function copy1() {
