@@ -224,6 +224,8 @@ function rightbottom() {
 		.replace(/([AÄBCÇDEFGHIİJLMNÑOÖPRSŞTUÜVYZaäbcçdefghıijlmnñoöprsştuüvyz])g/g, "$1ğ");
 }
 
+function bottomleft() {}
+
 function bottomright() {
 	document.transcription.text2.value = document.transcription.text3.value
 		.replace(/V/g, "W")
