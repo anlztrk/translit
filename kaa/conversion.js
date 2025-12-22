@@ -278,6 +278,10 @@ function rightleft() {
 		leftbottom();
 }
 
+function rightleft {}
+
+function rightbottom {}
+
 function bottomleft {}
 
 function bottomright {}
