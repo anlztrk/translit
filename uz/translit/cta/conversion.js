@@ -1,12 +1,8 @@
-function apostropheFix(var car) {
-	car = document.transcription.text1.value;
-	car = car.replace(/['ˈ’ʼ‘ʻ´`ʿʹˊ׳′ʽߵ՚ߴ᾿ՙ῾‛ʾ՛ˋ]/g, "ʼ")
-		.replace(/([OoGg])ʼ/g, "$1ʻ");
-	return car;
-}
-
 function cyrlat() {
-	document.transcription.text1.value = apostropheFix(document.transcription.text1.value);
+	document.transcription.text1.value = document.transcription.text1.value
+		.replace(/['ˈ’ʼ‘ʻ´`ʿʹˊ׳′ʽߵ՚ߴ᾿ՙ῾‛ʾ՛ˋ]/g, "ʼ")
+		.replace(/([OoGg])ʼ/g, "$1ʻ");
+	
 	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/Щ/g, "Ш")
 		.replace(/щ/g, "ш")
