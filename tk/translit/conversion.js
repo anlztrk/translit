@@ -32,7 +32,6 @@ function cyrlat() {
 		.replace(/Ю/g, "Йу")
 		.replace(/ю/g, "йу")
 
-
 		.replace(/а/g, "a")
 		.replace(/ә/g, "ä")
 		.replace(/б/g, "b")
@@ -111,8 +110,8 @@ function latcyr() {
 		.replace(/İ/g, "I")
 		.replace(/(\p{Script=Latn})[¥Ұ]/ug, "$1Ý")
 		.replace(/[¥Ұ](\p{Script=Latn})/ug, "Ý$1")
-		.replace(/(\p{Script=Latn})$/ug, "$1Ş")
-		.replace(/$(\p{Script=Latn})/ug, "Ş$1")
+		.replace(/(\p{Script=Latn})\$/ug, "$1Ş")
+		.replace(/\$(\p{Script=Latn})/ug, "Ş$1")
 		.replace(/(\p{Script=Latn})¢/ug, "$1ş")
 		.replace(/¢(\p{Script=Latn})/ug, "ş$1")
 		.replace(/(\p{Script=Latn})£/ug, "$1Ž")
