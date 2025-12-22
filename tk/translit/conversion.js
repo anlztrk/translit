@@ -107,6 +107,7 @@ function latcyr() {
 		.replace(/Ñ/g, "Ň")
 		.replace(/ñ/g, "ň")
 		.replace(/Ÿ/g, "Ý")
+		.replace(/ÿ/g, "ý")
 		.replace(/İ/g, "I")
 		.replace(/(\p{Script=Latn})[¥Ұ]/ug, "$1Ý")
 		.replace(/[¥Ұ](\p{Script=Latn})/ug, "Ý$1")
