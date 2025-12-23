@@ -197,6 +197,15 @@ function cyrlat() {
 		.replace(/(G|K|g|k)o/g, "$1ö")
 		.replace(/(G|K|g|k)u/g, "$1ü")
 
+		.replace(/Â/g, "Å")
+		.replace(/â/g, "å")
+		.replace(/Ä/g, "Ȧ")
+		.replace(/ä/g, "ȧ")
+		.replace(/Ö/g, "Ȯ")
+		.replace(/ö/g, "ȯ")
+		.replace(/Ü/g, "U̇")
+		.replace(/ü/g, "u̇")
+
 		.replace(/(L|l)ı((?![bcçdfgğhklmnñpqrsştvxyz]))/g, "$1i$2")
 		.replace(/LI((?![BCÇDFGĞHKLMNÑPQRSŞTVXYZ]))/g, "$1Lİ$2")
 
