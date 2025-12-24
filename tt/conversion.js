@@ -335,10 +335,10 @@ function latcyr() {
 		.replace(/x/g, 'х')
 		.replace(/X/g, 'Х')
 		.replace(/y/g, 'й')
-		.replace(/Y/g, 'Й')	
+		.replace(/Y/g, 'Й')
 		.replace(/z/g, 'з')
 		.replace(/Z/g, 'З')
-		
+
 		.replace(/ғэ([бвгғджҗзйкҡлмнңпрстфхһцчшщ])/g, 'гы$1ь')
 		.replace(/Ғэ([бвгғджҗзйкҡлмнңпрстфхһцчшщ])/g, 'Гы$1ь')
 		.replace(/ҒЭ([БВГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])/g, 'ГЫ$1Ь')
@@ -354,7 +354,7 @@ function latcyr() {
 		.replace(/ғy([бвгғджҗзйкҡлмнңпрстфхһцчшщ])/g, 'гу$1ь')
 		.replace(/Ғy([бвгғджҗзйкҡлмнңпрстфхһцчшщ])/g, 'Гу$1ь')
 		.replace(/ҒY([БВГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])/g, 'ГУ$1Ь')
-		
+
 		.replace(/ҡэ([бвгғджҗзйкҡлмнңпрстфхһцчшщ])/g, 'кы$1ь')
 		.replace(/Ҡэ([бвгғджҗзйкҡлмнңпрстфхһцчшщ])/g, 'Кы$1ь')
 		.replace(/ҠЭ([БВГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])/g, 'КЫ$1Ь')
@@ -370,45 +370,45 @@ function latcyr() {
 		.replace(/ҡy([бвгғджҗзйкҡлмнңпрстфхһцчшщ])/g, 'ку$1ь')
 		.replace(/Ҡy([бвгғджҗзйкҡлмнңпрстфхһцчшщ])/g, 'Ку$1ь')
 		.replace(/ҠY([БВГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])/g, 'КУ$1Ь')
-		
+
 		.replace(/(а|ы|ый|о|у)([бвгғджҗзйкҡлмнңпрстфхһцчшщ])ь([бвгғджҗзйкҡлмнңпрстфхһцчшщ])?([эәиөү])/g, '$1$2$3$4')
-		.replace(/(А|Ы|ЫЙ|О|У)([БВГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])Ь([БВГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])?([ЭӘИӨҮ])/g, '$1$2$3$4')	
+		.replace(/(А|Ы|ЫЙ|О|У)([БВГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])Ь([БВГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])?([ЭӘИӨҮ])/g, '$1$2$3$4')
 
 		.replace(/([ЭӘИӨҮэәиөү])ғ/g, '$1гъ')
 		.replace(/([ЭӘИӨҮ])Ғ/g, '$1ГЪ')
 		.replace(/([ЭӘИӨҮэәиөү])ҡ/g, '$1къ')
 		.replace(/([ЭӘИӨҮ])Ҡ/g, '$1КЪ')
-		
+
 		.replace(/([Гг])ъ(а|ы|о|у)/g, '$1$2')
 		.replace(/ГЪ(А|Ы|О|У)/g, 'Г$1')
 		.replace(/([Кк])ъ(а|ы|о|у)/g, '$1$2')
 		.replace(/КЪ(А|Ы|О|У)/g, 'К$1')
-		
+
 		.replace(/йа/g, 'я')
 		.replace(/Й[Аа]/g, 'Я')
 		.replace(/йы/g, 'е')
 		.replace(/Й[Ыы]/g, 'Е')
 		.replace(/йу/g, 'ю')
 		.replace(/Й[Уу]/g, 'Ю')
-		
+
 		.replace(/([ЭӘИӨҮэәиөү])([бвгғджҗзйкҡлмнңпрстфхһцчшщ])([яею])/g, '$1$2ь$3')
 		.replace(/([ЭӘИӨҮ])([БВГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])([ЯЕЮ])/g, '$1$2Ь$3')
-		
+
 		.replace(/([Үү])э/g, '$1йэ')
 		.replace(/ҮЭ/g, '$1ЙЭ')
-		
+
 		.replace(/йа/g, 'я')
 		.replace(/Й[Әә]/g, 'Я')
 		.replace(/йэ/g, 'е')
 		.replace(/Й[Ээ]/g, 'Е')
 		.replace(/йү/g, 'ю')
 		.replace(/Й[Үү]/g, 'Ю');
-}		
+}
 
-	function copy1() {
-		navigator.clipboard.writeText(document.transcription.text1.value);
-	}
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
 
-	function copy2() {
-		navigator.clipboard.writeText(document.transcription.text2.value);
-	}
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
+}
