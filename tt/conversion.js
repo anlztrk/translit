@@ -388,9 +388,6 @@ function latcyr() {
 		.replace(/([АЫО])Ў/g, '$1У')
 		.replace(/([ЭӘИӨэәиө])ў/g, '$1ү')
 		.replace(/([ЭӘИӨ])Ў/g, '$1Ү')
-		
-		.replace(/ў/g, 'в')
-		.replace(/Ў/g, 'В')
 
 		.replace(/йа/g, 'я')
 		.replace(/Й[Аа]/g, 'Я')
@@ -410,7 +407,17 @@ function latcyr() {
 		.replace(/йэ/g, 'е')
 		.replace(/Й[Ээ]/g, 'Е')
 		.replace(/йү/g, 'ю')
-		.replace(/Й[Үү]/g, 'Ю');
+		.replace(/Й[Үү]/g, 'Ю')
+		
+		.replace(/ў/g, 'в')
+		.replace(/Ў/g, 'В')
+		.replace(/ғ/g, 'г')
+		.replace(/Ғ/g, 'Г')
+		.replace(/ҡ/g, 'к')
+		.replace(/Ҡ/g, 'К')
+		
+		.replace(/([БВГДЖҖЗЙКЛМНҢПРСТФХҺЦЧШЩбвгджҗзйклмнңпрстфхһцчшщ])э/g, "$1е")
+		.replace(/([БВГДЖҖЗЙКЛМНҢПРСТФХҺЦЧШЩ])Э/g, "$1Е");
 }
 
 function copy1() {
