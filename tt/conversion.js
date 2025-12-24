@@ -1,4 +1,8 @@
 function cyrlat() {
+	document.transcription.text1.value = document.transcription.text1.value
+		.replace(/ə/g, 'ә')
+		.replace(/Ə/g, 'Ә');
+	
 	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/([БВГДЖҖЗЙКЛМНҢПРСТФХҺЦЧШЩ])Е/g, "$1Э")
 		.replace(/([БВГДЖҖЗЙКЛМНҢПРСТФХҺЦЧШЩбвгджҗзйклмнңпрстфхһцчшщ])е/g, "$1э")
@@ -269,6 +273,14 @@ function cyrlat() {
 }
 
 function latcyr() {
+	document.transcription.text2.value = document.transcription.text2.value
+		.replace(/[әə]/g, 'ä')
+		.replace(/[ƏӘ]/g, 'Ä')
+		.replace(/[ɵө]/g, 'ö')
+		.replace(/[ƟӨ]/g, 'Ö')
+		.replace(/[ꞑŋ]/g, 'ñ')
+		.replace(/[ꞐŊ]/g, 'Ñ');
+		
 	document.transcription.text1.value = document.transcription.text2.value
 		.replace(/a/g, 'а')
 		.replace(/A/g, 'А')
@@ -410,16 +422,21 @@ function latcyr() {
 		.replace(/Ҡү([эәиөү])/g, 'Ку$1')
 		.replace(/ҠҮ([ЭӘИӨҮ])/g, 'КУ$1')		
 		
-		
 		.replace(/([ЭӘИӨҮэәиөү])ғ/g, '$1гъ')
 		.replace(/([ЭӘИӨҮэәиөү])ҡ/g, '$1къ')
 		
-
 		.replace(/([Гг])ъ([аыоу])/g, '$1$2')
 		.replace(/ГЪ([АЫОУ])/g, 'Г$1')
 		.replace(/([Кк])ъ([аыоу])/g, '$1$2')
 		.replace(/КЪ([АЫОУ])/g, 'К$1')
-
+		
+		.replace(/Ў([АЫОУЭӘИӨҮаыоуэәиөү])/g, 'В$1')
+		.replace(/ў([аыоуэәиөү])/g, 'в$1')
+		.replace(/([АЫОаыо])ў/g, '$1у')
+		.replace(/([АЫО])Ў/g, '$1У')
+		.replace(/([ЭӘИӨэәиө])ў/g, '$1ү')
+		.replace(/([ЭӘИӨ])Ў/g, '$1Ү')
+		
 		.replace(/йа/g, 'я')
 		.replace(/Й[Аа]/g, 'Я')
 		.replace(/йы/g, 'е')
@@ -430,18 +447,15 @@ function latcyr() {
 		.replace(/([ЭӘИӨҮэәиөү])([бвўгғджҗзйкҡлмнңпрстфхһцчшщ])([яею])/g, '$1$2ь$3')
 		.replace(/([ЭӘИӨҮ])([БВЎГҒДЖҖЗЙКҠЛМНҢПРСТФХҺЦЧШЩ])([ЯЕЮ])/g, '$1$2Ь$3')
 
-		.replace(/([Үү])э/g, '$1йэ')
-		.replace(/ҮЭ/g, '$1ЙЭ')
+		.replace(/([Үү])э/g, '$1е')
+		.replace(/ҮЭ/g, 'ҮЕ')
 
 		.replace(/йә/g, 'я')
 		.replace(/Й[Әә]/g, 'Я')
+		.replace(/йэ/g, 'е')
+		.replace(/Й[Ээ]/g, 'Е')
 		.replace(/йү/g, 'ю')
 		.replace(/Й[Үү]/g, 'Ю')
-		
-		.replace(/([АЫОаыо])ў/g, '$1у')
-		.replace(/([АЫО])Ў/g, '$1У')
-		.replace(/([ЭӘИӨэәиө])ў/g, '$1ү')
-		.replace(/([ЭӘИӨ])Ў/g, '$1Ү')
 		
 		.replace(/ў/g, 'в')
 		.replace(/Ў/g, 'В')
