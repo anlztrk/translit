@@ -402,7 +402,7 @@ function latcyr() {
 		.replace(/([Үү])э/g, '$1йэ')
 		.replace(/ҮЭ/g, '$1ЙЭ')
 
-		.replace(/йа/g, 'я')
+		.replace(/йә/g, 'я')
 		.replace(/Й[Әә]/g, 'Я')
 		.replace(/йэ/g, 'е')
 		.replace(/Й[Ээ]/g, 'Е')
