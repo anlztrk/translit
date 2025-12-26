@@ -139,15 +139,15 @@ function cyrlat() {
 
 function latcyr() {
 	const orig = document.transcription.text2.value;
-	if (/[Jj]/.test(orig) == false) {
+	if (/[Jj]/.test(orig) == true) {
 		document.transcription.text2.value = document.transcription.text2.value
-		.replace(/C/g, "J")
-		.replace(/c/g, "j");
+		.replace(/C/g, "Ç")
+		.replace(/c/g, "Ç");
 		}
 		else {
 		document.transcription.text2.value = document.transcription.text2.value
-		.replace(/C/g, "Ç")
-		.replace(/c/g, "ç");
+		.replace(/C/g, "J")
+		.replace(/c/g, "j");
 		}
 		document.transcription.text2.value = document.transcription.text2.value
 		.replace(/Ğ/g, "G")
