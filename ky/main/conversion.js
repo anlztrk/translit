@@ -287,8 +287,8 @@ function latcyr() {
 		.replace(/йье/g, "ййе")
 		.replace(/ЙЬЕ/g, "ЙЙЕ")
 
-		.replace(/\u201e/g, "\u00ab")
-		.replace(/\u201c/g, "\u00bb");
+		.replace(/\u201c/g, "\u00ab")
+		.replace(/\u201b/g, "\u00bb");
 }
 
 function copy1() {
