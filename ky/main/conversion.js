@@ -138,7 +138,8 @@ function cyrlat() {
 }
 
 function latcyr() {
-	if (/[Jj]/.test(document.transcription.text2.value) == false) {
+	const orig = document.transcription.text2.value;
+	if (/[Jj]/.test(orig) == false) {
 		document.transcription.text2.value = document.transcription.text2.value
 		.replace(/C/g, "J")
 		.replace(/c/g, "j");
@@ -149,12 +150,12 @@ function latcyr() {
 		.replace(/c/g, "ç");
 		}
 		document.transcription.text2.value = document.transcription.text2.value
-		.replace(/Ğ/g, "Ç")
-		.replace(/ğ/g, "c")
+		.replace(/Ğ/g, "G")
+		.replace(/ğ/g, "g")
 		.replace(/Ŋ/g, "Ñ")
 		.replace(/ŋ/g, "ñ")
-		.replace(/C/g, "Ç")
-		.replace(/c/g, "c")
+		.replace(/Q/g, "K")
+		.replace(/q/g, "k")
 		.replace(/A[Aa]/g, "Á")
 		.replace(/E[Ee]/g, "É")
 		.replace(/İ[İi]/g, "Í")
