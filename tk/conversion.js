@@ -204,6 +204,8 @@ function rightleft() {
 		.replace(/\u201c/g, "\u00bb");
 }
 
+function leftbottom() {}
+
 function rightbottom() {
 	document.transcription.text3.value = document.transcription.text2.value
 		.replace(/J/g, "C")
