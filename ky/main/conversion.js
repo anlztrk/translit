@@ -142,7 +142,7 @@ function latcyr() {
 	if (/[Jj]/.test(orig) == true) {
 		document.transcription.text2.value = document.transcription.text2.value
 		.replace(/C/g, "Ç")
-		.replace(/c/g, "Ç");
+		.replace(/c/g, "ç");
 		}
 		else {
 		document.transcription.text2.value = document.transcription.text2.value
