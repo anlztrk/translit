@@ -1,7 +1,11 @@
 function latcyr() {
 	document.transcription.text2.value = document.transcription.text2.value
 		.replace(/ä/g, "ə")
-		.replace(/Ä/g, "Ə");
+		.replace(/Ä/g, "Ə")
+		.replace(/(\p{Script=Latn})ә/ug, "$1ə")
+		.replace(/ә(\p{Script=Latn})/ug, "ə$1")
+		.replace(/(\p{Script=Latn})Ә/ug, "$1Ə")
+		.replace(/Ә(\p{Script=Latn})/ug, "Ə$1");
 
 	document.transcription.text1.value = document.transcription.text2.value
 		.replace(/a/g, "а")
