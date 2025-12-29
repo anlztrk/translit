@@ -202,8 +202,8 @@ function topright() {
 	document.transcription.text3.value = document.transcription.text1.value
 		.replace(/([ЪЬ])([АОУ])/g, "$1\u2019$2")
 		.replace(/([ЪЬъь])([аоу])/g, "$1\u2019$2")
-		.replace(/ЪЕ/g, "ЙÉ")
-		.replace(/([Ъъ])е/g, "йé")
+		.replace(/ЪЕ/g, "ЙË")
+		.replace(/([Ъъ])е/g, "йë")
 		.replace(/([ЬЪ])Э/g, "$1\u2019Э")
 		.replace(/([ЬЪьъ])э/g, "$1\u2019э")
 		
@@ -324,6 +324,111 @@ function topright() {
 		.replace(/»/g, "\u201c")
 		.normalize('NFC');
 }
+
+function lefttop() {}
+
+function righttop() {
+	document.transcription.text1.value = document.transcription.text3.value
+		.normalize('NFD')
+		.replace(/([aou])\u0301/g, "ь$1")
+		.replace(/([AOU])\u0301/g, "Ь$1")
+		.normalize('NFC')
+		
+		.replace(/([BCČDFGHJKLMNPRSŠŚTVZŽbcčdfghjklmnprsšśtvzž])j([aou])/g, "$1ъj$2")
+		.replace(/([BCČDFGHJKLMNPRSŠŚTVZŽbcčdfghjklmnprsšśtvzž])jë/g, "$1ъje")
+		.replace(/([BCČDFGHJKLMNPRSŠŚTVZŽ])J([AOU])/g, "$1ЪJ$2")
+		.replace(/([BCČDFGHJKLMNPRSŠŚTVZŽ])JË/g, "$1ЪJE")
+		
+		.replace(/a/g, "а")
+		.replace(/b/g, "б")
+		.replace(/c/g, "ц")
+		.replace(/č/g, "ч")
+		.replace(/d/g, "д")
+		.replace(/e/g, "э")
+		.replace(/f/g, "ф")
+		.replace(/g/g, "г")
+		.replace(/h/g, "х")
+		.replace(/i/g, "и")
+		.replace(/j/g, "ь")
+		.replace(/k/g, "к")
+		.replace(/l/g, "л")
+		.replace(/m/g, "м")
+		.replace(/n/g, "н")
+		.replace(/o/g, "о")
+		.replace(/p/g, "п")
+		.replace(/r/g, "р")
+		.replace(/s/g, "с")
+		.replace(/š/g, "ш")
+		.replace(/ś/g, "щ")
+		.replace(/t/g, "т")
+		.replace(/u/g, "у")
+		.replace(/v/g, "в")
+		.replace(/y/g, "ы")
+		.replace(/z/g, "з")
+		.replace(/ž/g, "ж")
+		.replace(/A/g, "А")
+		.replace(/B/g, "Б")
+		.replace(/C/g, "Ц")
+		.replace(/Č/g, "Ч")
+		.replace(/D/g, "Д")
+		.replace(/E/g, "Э")
+		.replace(/F/g, "Ф")
+		.replace(/G/g, "Г")
+		.replace(/H/g, "Х")
+		.replace(/I/g, "И")
+		.replace(/J/g, "Ь")
+		.replace(/K/g, "К")
+		.replace(/L/g, "Л")
+		.replace(/M/g, "М")
+		.replace(/N/g, "Н")
+		.replace(/O/g, "О")
+		.replace(/P/g, "П")
+		.replace(/R/g, "Р")
+		.replace(/S/g, "С")
+		.replace(/Š/g, "Ш")
+		.replace(/Ś/g, "Щ")
+		.replace(/T/g, "Т")
+		.replace(/U/g, "У")
+		.replace(/V/g, "В")
+		.replace(/Y/g, "Ы")
+		.replace(/Z/g, "З")
+		.replace(/Ž/g, "Ж")
+		.replace(/(\p{Uppercase})\u2019/ug, "Ъ")
+		.replace(/\u2019/g, "ъ")
+		
+		.replace(/ьа/g, "я")
+		.replace(/ьэ/g, "е")
+		.replace(/ьо/g, "ё")
+		.replace(/ьу/g, "ю")
+		.replace(/[ЬЪ][Аа]/g, "Я")
+		.replace(/[ЬЪ][Ээ]/g, "Е")
+		.replace(/[ЬЪ][Оо]/g, "Ё")
+		.replace(/[ЬЪ][Уу]/g, "Ю")
+		
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])е/g, "$1ье")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Е/g, "$1ЬЕ")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])э/g, "$1е")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Э/g, "$1Е")
+		
+		.replace(/ä/g, "а")
+		.replace(/ë/g, "э")
+		.replace(/ö/g, "о")
+		.replace(/ü/g, "у")
+		.replace(/Ä/g, "А")
+		.replace(/Ë/g, "Э")
+		.replace(/Ö/g, "О")
+		.replace(/Ü/g, "У")
+		
+		.replace(/([АЕЁИЙОУЫЭЮЯЪЬаеёийоуыэюяъь])ь/g, "$1й")
+		.replace(/([АЕЁИЙОУЫЭЮЯЪЬ])Ь/g, "$1Й")
+		
+		.replace(/ьъ/g, "ь")
+		.replace(/ЬЪ/g, "Ь");
+}
+
+function leftright() {}
+
+function rightleft() {}
 
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value);
