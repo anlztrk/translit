@@ -1,6 +1,7 @@
 ﻿<!doctype html>
 <html> 
-<head> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
 <title>Cyrillic script - Scientific transcription converter</title><script type="text/javascript" src="conversion.js"></script>
 		<style type="text/css"> 
@@ -17,17 +18,26 @@
 			width: 500px;
 			height: 300px;
 		}
-		@media (max-width: 720px) {
-			table, tr, td {
-				display: block;
-				width: 100%;
-			}
+		@media (max-width: 768px) {
+    table {
+        width: 100% !important;
+    }
 
-			textarea {
-				width: 100%;
-				box-sizing: border-box;
-			}
-		}
+    tr {
+        display: block;
+    }
+
+    td {
+        display: block;
+        width: 100% !important;
+    }
+
+    textarea {
+        width: 100% !important;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
 		</style> 
 </head> 
 <body> 

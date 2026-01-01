@@ -17,17 +17,26 @@
 			width: 500px;
 			height: 300px;
 		}
-		@media (max-width: 720px) {
-			table, tr, td {
-				display: block;
-				width: 100%;
-			}
+		@media (max-width: 768px) {
+    table {
+        width: 100% !important;
+    }
 
-			textarea {
-				width: 100%;
-				box-sizing: border-box;
-			}
-		}
+    tr {
+        display: block;
+    }
+
+    td {
+        display: block;
+        width: 100% !important;
+    }
+
+    textarea {
+        width: 100% !important;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
 		</style> 
 </head> 
 <body> 
