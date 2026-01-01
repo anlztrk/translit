@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
     <title>Uyghur Arabic - Latin - CTA converter</title>
     <script type="text/javascript" src="conversion.js"></script>
     <style type="text/css">
@@ -24,7 +25,35 @@
       .Arabic {
         font-family: 'Noto Naskh Arabic', Spectral, Cambria, 'Times New Roman', serif;
       }
-    </style>
+		@media (max-width: 720px) {
+			table {
+				width: 100% !important;
+				border-collapse: collapse;
+			}
+
+			tr {
+				display: block;
+				width: 100%;
+			}
+
+			td {
+				display: block;
+				width: 100% !important;
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
+
+			td[colspan] {
+				width: 100% !important;
+			}
+
+			textarea {
+				width: 100% !important;
+				height: 300px;
+				box-sizing: border-box;
+			}
+		}
+		</style> 
   </head>
   <body>
     <h1>Uyghur Arabic - Latin - CTA converter</h1>
