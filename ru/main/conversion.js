@@ -1,5 +1,5 @@
 function topleft() {
-	document.transcription.text2.value = document.transcription.text1.value
+	document.transcription.text1.value = document.transcription.text1.value
 		.replace(/(\p{Script=Cyrl})a/ug, "$1а")
 		.replace(/a(\p{Script=Cyrl})/ug, "а$1")
 		.replace(/(\p{Script=Cyrl})e/ug, "$1е")
@@ -47,6 +47,7 @@ function topleft() {
 		.replace(/([0-9])Х/g, "$1X")
 		.replace(/([0-9])х/g, "$1x")
 
+	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/Й(А|а)/g, "Й$1\u0300")
 		.replace(/йа/g, "йа\u0300")
 		.replace(/Й(Э|э)/g, "Й$1\u0300")
