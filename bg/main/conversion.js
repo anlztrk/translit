@@ -1,9 +1,52 @@
 function topleft() {
 	document.transcription.text1.value = document.transcription.text1.value
-		.replace(/Ы/g, "Ъ")
-		.replace(/ы/g, "ъ");
+		.replace(/(\p{Script=Cyrl})a/ug, "$1а")
+		.replace(/a(\p{Script=Cyrl})/ug, "а$1")
+		.replace(/(\p{Script=Cyrl})e/ug, "$1е")
+		.replace(/e(\p{Script=Cyrl})/ug, "е$1")
+		.replace(/(\p{Script=Cyrl})o/ug, "$1о")
+		.replace(/o(\p{Script=Cyrl})/ug, "о$1")
+		.replace(/(\p{Script=Cyrl})p/ug, "$1р")
+		.replace(/p(\p{Script=Cyrl})/ug, "р$1")
+		.replace(/(\p{Script=Cyrl})c/ug, "$1с")
+		.replace(/c(\p{Script=Cyrl})/ug, "с$1")
+		.replace(/(\p{Script=Cyrl})y/ug, "$1у")
+		.replace(/y(\p{Script=Cyrl})/ug, "у$1")
+		.replace(/(\p{Script=Cyrl})x/ug, "$1х")
+		.replace(/x(\p{Script=Cyrl})/ug, "х$1")
+		
+		.replace(/(\p{Script=Cyrl})A/ug, "$1А")
+		.replace(/A(\p{Script=Cyrl})/ug, "А$1")
+		.replace(/(\p{Script=Cyrl})B/ug, "$1В")
+		.replace(/B(\p{Script=Cyrl})/ug, "В$1")
+		.replace(/(\p{Script=Cyrl})E/ug, "$1Е")
+		.replace(/E(\p{Script=Cyrl})/ug, "Е$1")
+		.replace(/(\p{Script=Cyrl})K/ug, "$1К")
+		.replace(/K(\p{Script=Cyrl})/ug, "К$1")
+		.replace(/(\p{Script=Cyrl})M/ug, "$1М")
+		.replace(/M(\p{Script=Cyrl})/ug, "М$1")
+		.replace(/(\p{Script=Cyrl})H/ug, "$1Н")
+		.replace(/H(\p{Script=Cyrl})/ug, "Н$1")
+		.replace(/(\p{Script=Cyrl})O/ug, "$1О")
+		.replace(/O(\p{Script=Cyrl})/ug, "О$1")
+		.replace(/(\p{Script=Cyrl})P/ug, "$1Р")
+		.replace(/P(\p{Script=Cyrl})/ug, "Р$1")
+		.replace(/(\p{Script=Cyrl})C/ug, "$1С")
+		.replace(/C(\p{Script=Cyrl})/ug, "С$1")
+		.replace(/(\p{Script=Cyrl})T/ug, "$1Т")
+		.replace(/T(\p{Script=Cyrl})/ug, "Т$1")
+		.replace(/(\p{Script=Cyrl})X/ug, "$1Х")
+		.replace(/X(\p{Script=Cyrl})/ug, "Х$1")		
+		
+		.replace(/Х([0-9])/g, "X$1")
+		.replace(/х([0-9])/g, "x$1")
+		.replace(/([0-9])Х/g, "$1X")
+		.replace(/([0-9])х/g, "$1x")
 
 	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/Ы/g, "Ъ")
+		.replace(/ы/g, "ъ")
+		
 		.replace(/ъ̀/g, "ъ")
 
 		.replace(/ияа/g, "ийаа")
@@ -176,32 +219,9 @@ function topleft() {
 }
 
 function topright() {
-	document.transcription.text1.value = document.transcription.text1.value
-		.replace(/Ы/g, "Ъ")
-		.replace(/ы/g, "ъ");
-
 	document.transcription.text3.value = document.transcription.text1.value
-		.replace(/\u0028х1/g, "\u0028x1")
-		.replace(/\u0028х2/g, "\u0028x2")
-		.replace(/\u0028х3/g, "\u0028x3")
-		.replace(/\u0028х4/g, "\u0028x4")
-		.replace(/\u0028х5/g, "\u0028x5")
-		.replace(/\u0028х6/g, "\u0028x6")
-		.replace(/\u0028х7/g, "\u0028x7")
-		.replace(/\u0028х8/g, "\u0028x8")
-		.replace(/\u0028х9/g, "\u0028x9")
-		.replace(/\u0028х0/g, "\u0028x0")
-
-		.replace(/1х\u0029/g, "1x\u0029")
-		.replace(/2х\u0029/g, "2x\u0029")
-		.replace(/3х\u0029/g, "3x\u0029")
-		.replace(/4х\u0029/g, "4x\u0029")
-		.replace(/5х\u0029/g, "5x\u0029")
-		.replace(/6х\u0029/g, "6x\u0029")
-		.replace(/7х\u0029/g, "7x\u0029")
-		.replace(/8х\u0029/g, "8x\u0029")
-		.replace(/9х\u0029/g, "9x\u0029")
-		.replace(/0х\u0029/g, "0x\u0029")
+		.replace(/Ы/g, "Ъ")
+		.replace(/ы/g, "ъ")
 
 		.replace(/ъ̀/g, "ъ")
 		.replace(/а/g, "a")
