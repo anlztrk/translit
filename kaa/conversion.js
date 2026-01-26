@@ -278,13 +278,13 @@ function rightleft() {
 		leftbottom();
 }
 
-function rightleft {}
+function rightleft() {}
 
-function rightbottom {}
+function rightbottom() {}
 
-function bottomleft {}
+function bottomleft() {}
 
-function bottomright {}
+function bottomright() {}
 
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value);
