@@ -277,8 +277,6 @@ function rightleft() {
 		.replace(/\u201d/g, "»");
 }
 
-function rightleft() {}
-
 function rightbottom() {}
 
 function bottomleft() {}
