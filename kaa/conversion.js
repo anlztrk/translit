@@ -275,7 +275,6 @@ function rightleft() {
 		.replace(/ı|í/g, "ы")
 		.replace(/\u201c/g, "«")
 		.replace(/\u201d/g, "»");
-		leftbottom();
 }
 
 function rightleft() {}
