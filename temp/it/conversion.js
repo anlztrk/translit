@@ -30,6 +30,10 @@ function cyrlat() {
         .replace(/I([AEIOUaeiou])/g, "Y$1")
 		.replace(/i([aeiou])/g, "y$1")
 
+        .replace(/GN/g, "NY")
+        .replace(/Gn/g, "Ny")
+        .replace(/gn/g, "ny")
+
 		.replace(/c/g, "k")
 		.replace(/C/g, "K")
 		.replace(/ĝ/g, "c")
