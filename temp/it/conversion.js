@@ -1,7 +1,5 @@
 function cyrlat() {
-	document.transcription.text1.value = document.transcription.text1.value
-
-
+	document.transcription.text2.value = document.transcription.text1.value
 
 		.replace(/c([ie])/g, "ĉ$1")
 		.replace(/g([ie])/g, "ĝ$1")
