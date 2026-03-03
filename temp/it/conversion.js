@@ -1,5 +1,8 @@
 function cyrlat() {
 	document.transcription.text2.value = document.transcription.text1.value
+        .normalize('NFD')
+        .replace(/\u0300|\u0301|\u0027|\u2019/g, "")
+        .normalize('NFC')
 
 		.replace(/c([ie])/g, "ĉ$1")
 		.replace(/g([ie])/g, "ĝ$1")
