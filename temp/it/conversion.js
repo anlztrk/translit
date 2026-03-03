@@ -1,8 +1,13 @@
 function cyrlat() {
 	document.transcription.text2.value = document.transcription.text1.value
         .normalize('NFD')
-        .replace(/\u0300|\u0301|\u0027|\u2019/g, "")
-        .normalize('NFC')
+		.replace(/\u0300|\u0301|\u0027|\u2019/g, "")
+		.normalize('NFC')
+        
+		.replace(/([AEIOUaeiou])i/g, "$1y")
+		.replace(/([AEIOU])I/g, "$1Y")
+        .replace(/I([AEIOUaeiou])/g, "Y$1")
+		.replace(/i([aeiou])/g, "y$1")
 
 		.replace(/c([ie])/g, "ĉ$1")
 		.replace(/g([ie])/g, "ĝ$1")
