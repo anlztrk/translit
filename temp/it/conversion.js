@@ -3,11 +3,6 @@ function cyrlat() {
         .normalize('NFD')
 		.replace(/\u0300|\u0301|\u0027|\u2019/g, "")
 		.normalize('NFC')
-        
-		.replace(/([AEIOUaeiou])i/g, "$1y")
-		.replace(/([AEIOU])I/g, "$1Y")
-        .replace(/I([AEIOUaeiou])/g, "Y$1")
-		.replace(/i([aeiou])/g, "y$1")
 
 		.replace(/c([ie])/g, "ĉ$1")
 		.replace(/g([ie])/g, "ĝ$1")
@@ -29,6 +24,11 @@ function cyrlat() {
 		.replace(/Zz/g, "Ttż")
 		.replace(/ZZ/g, "TTŻ")
 		.replace(/Z/g, "TŻ")
+
+        .replace(/([AEIOUaeiou])i/g, "$1y")
+		.replace(/([AEIOU])I/g, "$1Y")
+        .replace(/I([AEIOUaeiou])/g, "Y$1")
+		.replace(/i([aeiou])/g, "y$1")
 
 		.replace(/c/g, "k")
 		.replace(/C/g, "K")
