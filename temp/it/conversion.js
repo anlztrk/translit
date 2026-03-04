@@ -41,9 +41,9 @@ function cyrlat() {
         .replace(/Gn/g, "Ny")
         .replace(/gn/g, "ny")
 		
-		.replace(/GLI([AEOU])/g, "LY$1")
-        .replace(/Gli([aeou])/g, "Ly$1")
-        .replace(/gli([aeou])/g, "ly$1")
+		.replace(/GLY([AEOU])/g, "LY$1")
+        .replace(/Gly([aeou])/g, "Ly$1")
+        .replace(/gly([aeou])/g, "ly$1")
 
 		.replace(/GLI/g, "LYI")
         .replace(/Gli/g, "Lyi")
