@@ -23,7 +23,7 @@ function cyrlat() {
 		.replace(/([AEIOU])S([AEIOU])/g, "$1Ż$2")
 		.replace(/Zz/g, "Ttż")
 		.replace(/ZZ/g, "TTŻ")
-		.replace(/Z/g, "TŻ")
+		.replace(/Z/g, "Tż")
 
         .replace(/([AEIOUaeiou])i/g, "$1y")
 		.replace(/([AEIOU])I/g, "$1Y")
