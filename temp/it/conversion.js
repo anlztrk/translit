@@ -64,7 +64,7 @@ function cyrlat() {
         .replace(/ż/g, "z")
         .replace(/Ż/g, "Z")
 		.replace(/h/g, "")
-		.replace(/H/g, "");
+		.replace(/H(\p{Lowercase})/ug, (_, c) => c.toUpperCase());
 }
 
 function latcyr() {}
