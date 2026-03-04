@@ -34,6 +34,8 @@ function cyrlat() {
 		.replace(/ĈY([AOU])/g, "Ĉ$1")
 		.replace(/([Ĝĝ])y([aou])/g, "$1$2")
 		.replace(/ĜY([AOU])/g, "Ĝ$1")
+		.replace(/([Ŝŝ])y([aou])/g, "$1$2")
+		.replace(/ŜY([AOU])/g, "Ŝ$1")
 
         .replace(/GN/g, "NY")
         .replace(/Gn/g, "Ny")
