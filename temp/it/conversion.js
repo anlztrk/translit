@@ -55,8 +55,8 @@ function cyrlat() {
 		.replace(/([AEIOUY])LY/g, "$1LLY")
 		.replace(/([AEIOUYaeiouy])ly/g, "$1lly")
 
-		.replace(/s([bdgĝmnvż])/g, "ż$1")
-		.replace(/S([BDGĜMNVŻbdgmnvż])/g, "Ż$1")
+		.replace(/s([bdgĝlmnrvż])/g, "ż$1")
+		.replace(/S([BDGĜLMNRVŻbdglmnrvż])/g, "Ż$1")
 
 		.replace(/[cq]/g, "k")
 		.replace(/[CQ]/g, "K")
