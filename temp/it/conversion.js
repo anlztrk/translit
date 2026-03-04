@@ -40,6 +40,17 @@ function cyrlat() {
         .replace(/GN/g, "NY")
         .replace(/Gn/g, "Ny")
         .replace(/gn/g, "ny")
+		
+		.replace(/GLI([AEOU])/g, "LY$1")
+        .replace(/Gli([aeou])/g, "Ly$1")
+        .replace(/gli([aeou])/g, "ly$1")
+
+		.replace(/GLI/g, "LYI")
+        .replace(/Gli/g, "Lyi")
+        .replace(/gli/g, "lyi")
+
+		.replace(/([AEIOUY])LY/g, "$1LLY")
+		.replace(/([AEIOUYaeiouy])ly/g, "$1lly")
 
 		.replace(/[cq]/g, "k")
 		.replace(/[CQ]/g, "K")
