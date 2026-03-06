@@ -1,4 +1,5 @@
 ﻿function cyrlat() {
+document.transcription.text2.value = document.transcription.text1.value
 	.replace(/<</g, "«")
 		.replace(/>>/g, "»")
 		.replace(/<</g, "«")
