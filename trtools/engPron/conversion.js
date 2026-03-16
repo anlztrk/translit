@@ -154,6 +154,8 @@ function cyrlat() {
 	.replace(/hw/g, 'WH')
 	.replace(/β/g, 'W')
 	.replace(/j/g, 'Y')
+	.replace(/ƏR/, 'ĔR')
+	.replace(/Ə/, 'ŬH')
 	.replace(/\u002e/g, '\u002d')
 	.toLowerCase();
 }
