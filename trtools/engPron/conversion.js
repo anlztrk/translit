@@ -4,14 +4,7 @@ function cyrlat() {
 	.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)ğ/g, "$1g")
 
 	.replace(
-  /([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])(?=
-     [BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz]{3}[AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü] |  // VCCCV
-     [BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz]{2}[AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü] |  // VCCV
-     [BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz][AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü] |     // VCV
-     [AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü]                                                    // VV
-  )/gx,
-  "$1."
-)
+  /([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])(?=[BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz]{3}[AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü]|[BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz]{2}[AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü]|[BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz][AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü]|[AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g, "$1.")
 
 	.replace(/A/g, "a")
 	.replace(/B/g, "b")
