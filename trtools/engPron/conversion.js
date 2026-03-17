@@ -122,7 +122,7 @@ function cyrlat() {
 	.replace(/oːɾ|oɾ/g, 'OR')
 	.replace(/([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(oː|o|œː|œ)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1O$3E')
 	.replace(/(oː|o|œː|œ)([bʤʧdfɡɟʒkclɫmŋɲpɾsʃtvβz])/g, 'O$2E')
-	.replace(/(oː|o|œː|œ)/g, 'OWN')
+	.replace(/(oː|o|œː|œ)n/g, 'OWN')
 	.replace(/oː|o|œː|œ/g, 'OH')
 	.replace(/ɑɾ/g, 'URR')
 	.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑ([flɫnstz])([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβjz])/g, '$1U$2$3')
