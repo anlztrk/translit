@@ -3,14 +3,15 @@ function cyrlat() {
 	.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)Ğ/g, "$1G")
 	.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)ğ/g, "$1g")
 
-	.replace(/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g, "$1$2$3.$4$5")
-	.replace(/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g, "$1$2$3.$4$5")
-	.replace(/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g, "$1$2.$3$4")
-	.replace(/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g, "$1$2.$3$4")
-	.replace(/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g, "$1.$2$3")
-	.replace(/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g, "$1.$2$3")
-	.replace(/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g, "$1.$2")
-	.replace(/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g, "$1.$2")
+	.replace(
+  /([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])(?=
+     [BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz]{3}[AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü] |  // VCCCV
+     [BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz]{2}[AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü] |  // VCCV
+     [BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz][AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü] |     // VCV
+     [AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü]                                                    // VV
+  )/gx,
+  "$1."
+)
 
 	.replace(/A/g, "a")
 	.replace(/B/g, "b")
