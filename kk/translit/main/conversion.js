@@ -229,13 +229,13 @@ function cyrlat() {
 
 function latcyr() {
 	document.transcription.text1.value = document.transcription.text2.value
-		.replace(/[Iİ]Y([AEIİÎOÖUÛÜ])/g, "Î$1")
-		.replace(/[Iİ]y([aeıiîoöuûü])/g, "Î$1")
-		.replace(/[ıi]y([aeıiîoöuûü])/g, "î$1")
+		.replace(/[Iİ]Y([AÄEIİÎOÖUÛÜ])/g, "Î$1")
+		.replace(/[Iİ]y([aäeıiîoöuûü])/g, "Î$1")
+		.replace(/[ıi]y([aäeıiîoöuûü])/g, "î$1")
 
-		.replace(/[UÜ]W([AEIİÎOÖUÛÜ])/g, "Û$1")
-		.replace(/[UÜ]w([aeıiîoöuûü])/g, "Û$1")
-		.replace(/[uü]w([aeıiîoöuûü])/g, "û$1")
+		.replace(/[UÜ]W([AÄEIİÎOÖUÛÜ])/g, "Û$1")
+		.replace(/[UÜ]w([aäeıiîoöuûü])/g, "Û$1")
+		.replace(/[uü]w([aäeıiîoöuûü])/g, "û$1")
 
 		.replace(/Y[Aa]/g, "Я")
 		.replace(/ya/g, "я")
