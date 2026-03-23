@@ -233,9 +233,13 @@ function latcyr() {
 		.replace(/[Iİ]y([aäeıiîoöuûü])/g, "Î$1")
 		.replace(/[ıi]y([aäeıiîoöuûü])/g, "î$1")
 
-		.replace(/[UÜ]W([AÄEIİÎOÖUÛÜ])/g, "Û$1")
-		.replace(/[UÜ]w([aäeıiîoöuûü])/g, "Û$1")
-		.replace(/[uü]w([aäeıiîoöuûü])/g, "û$1")
+		.replace(/UW([AIÎOUÛ])/g, "Û$1")
+		.replace(/Uw([aıîouû])/g, "Û$1")
+		.replace(/uw([aıîouû])/g, "û$1")
+		
+		.replace(/ÜW([ÄEİÎÖÛÜ])/g, "Û$1")
+		.replace(/Üw([äeiîöûü])/g, "Û$1")
+		.replace(/üw([äeiîöûü])/g, "û$1")
 
 		.replace(/Y[Aa]/g, "Я")
 		.replace(/ya/g, "я")
