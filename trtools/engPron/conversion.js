@@ -128,7 +128,7 @@ function cyrlat() {
 		.replace(/ɑjɾ/g, 'IRE')
 		.replace(/jɑj([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'jI$1E')
 		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβz])ɑj([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1Y$2E')
-		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβz])ɑj/g, '$1Y')
+		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβz])ɑj/g, '$1YE')
 		.replace(/jɑj/g, 'jI')
 		.replace(/ɑj/g, 'EYE')
 		.replace(/[oœ]jɾ/g, 'OIR')
