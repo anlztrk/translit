@@ -146,7 +146,7 @@ function cyrlat() {
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑʤ/g, '$1UDGE')
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑʧ/g, '$1UTCH')
 		.replace(/ɑ[kc]/g, 'UCK')
-		.replace(/ɑ([fmnpɾstz])/g, 'U$1$1')
+		.replace(/ɑ([bdfɡmnpɾstz])/g, 'U$1$1')
 		.replace(/ɑ([bʤʧdɡɟʒkclɫŋɲʃvβ])/g, 'U$1')
 		.replace(/uɾ/g, 'UURR')
 		.replace(/yɾ/g, 'OOR')
