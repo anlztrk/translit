@@ -106,7 +106,7 @@ function cyrlat() {
 		.replace(/c\.([ɑɯoœuy])/g, 'k.j$1')
 		.replace(/l\.([ɑɯoœuy])/g, 'ɫ.j$1')
 		.replace(/[uy]j\.([ɑeæɯioœuy])/g, "uː\.j$1")
-		.replace(/([ʤʧfʒlɫmnŋɲɾsʃvβjz])[uy]j([bʤʧdfɡɟʒkclɫmnŋɲɾsʃvβjz])/g, '$1uː.iː$2')
+		.replace(/([ʤʧfʒlɫmnŋɲɾsʃvβjz])[uy]j(\.)?([bʤʧdfɡɟʒkclɫmnŋɲɾsʃvβjz])/g, '$1uː.iː$2$3')
 		.replace(/[uy]j/g, 'wiː')
 		.replace(/([ɑeæɯioœuy])β/g, '$1v')
 
