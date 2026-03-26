@@ -153,7 +153,7 @@ function cyrlat() {
 		.replace(/u([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'UU$1')
 		.replace(/y([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'OO$1')
 		.replace(/(uː|u|yː|y)/g, 'OO')
-		.replace(/ɑ/g, 'UH')
+		.replace(/ɑ/g, 'A')
 		.replace(/ɯ/g, 'Ə')
 		.replace(/([AEIOUYaeuioy])ʤ/g, '$1DGE')
 		.replace(/ʤ/g, 'J')
@@ -174,7 +174,7 @@ function cyrlat() {
 		.replace(/j/g, 'Y')
 		.replace(/ƏR/g, 'ER')
 		.replace(/Ə([CGJKLSZbdfmnpstvz])/g, 'UH$1')
-		.replace(/Ə/g, 'ŬH')
+		.replace(/Ə/g, 'UH')
 		.replace(/\u002e/g, '\u002d')
 		.toLowerCase();
 }
