@@ -112,7 +112,7 @@ function cyrlat() {
 
 		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(yɾ|yːɾ)/g, '$1URE')
 		.replace(/(juɾ|juːɾ|jyɾ|jyːɾ)/g, 'YOOR')
-		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβjz])(y|yː)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1U$3E')
+		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(y|yː)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1U$3E')
 		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(y|yː)/g, '$1EW')
 		.replace(/(juː|ju|jyː|jy)/g, 'YOO')
 		.replace(/æɾ/g, 'AIR')
