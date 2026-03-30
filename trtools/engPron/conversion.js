@@ -162,6 +162,7 @@ function cyrlat() {
 		.replace(/(uː|u|yː|y)/g, 'OO')
 		.replace(/ɑ/g, 'A')
 		.replace(/ɯ/g, 'Ə')
+		.replace(/([AEIOUYaeuioy])ʤE/g, '$1GE')
 		.replace(/([AEIOUYaeuioy])ʤ/g, '$1DGE')
 		.replace(/ʤ/g, 'J')
 		.replace(/([AEIOUYaeuioy])ʧE/g, '$1CHE')
