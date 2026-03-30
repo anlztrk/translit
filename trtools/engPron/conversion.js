@@ -164,6 +164,7 @@ function cyrlat() {
 		.replace(/ɯ/g, 'Ə')
 		.replace(/([AEIOUYaeuioy])ʤ/g, '$1DGE')
 		.replace(/ʤ/g, 'J')
+		.replace(/([AEIOUYaeuioy])ʧE/g, '$1CHE')
 		.replace(/([AEIOUYaeuioy])ʧ/g, '$1TCH')
 		.replace(/ʧ/g, 'CH')
 		.replace(/[ɡɟ]([EIei])/g, 'GH$1')
