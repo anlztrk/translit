@@ -75,21 +75,31 @@ const FINAL = [
     [/ü/g, "u̇"],
 ];
 
-function applyHarmony(str, maxIterations = 50) {
+function runTierUntilStable(str, rules, maxIterations = 20) {
     let current = str;
 
     for (let i = 0; i < maxIterations; i++) {
-        let prev = current;
-
-        current = applyTier(current, T5);
-        current = applyTier(current, T4);
-        current = applyTier(current, T3);
-        current = applyTier(current, T2);
-        current = applyTier(current, T1);
-
-        if (current === prev) break;
+        let next = applyTier(current, rules);
+        if (next === current) break;
+        current = next;
     }
 
+    return current;
+}
+
+function applyHarmony(str) {
+    let current = str;
+
+    // Each tier stabilizes independently
+    current = runTierUntilStable(current, T5);
+    current = runTierUntilStable(current, T4);
+    current = runTierUntilStable(current, T3);
+    current = runTierUntilStable(current, T2);
+
+    // Base layer applies ONLY ONCE
+    current = applyTier(current, T1);
+
+    // Final normalization (also once)
     current = applyTier(current, FINAL);
 
     return current;
