@@ -91,13 +91,13 @@ function applyHarmony(str) {
     let current = str;
 
     // Each tier stabilizes independently
-    current = runTierUntilStable(current, T5);
+    current = runTierUntilStable(current, T1);
     current = runTierUntilStable(current, T4);
     current = runTierUntilStable(current, T3);
     current = runTierUntilStable(current, T2);
 
     // Base layer applies ONLY ONCE
-    current = applyTier(current, T1);
+    current = applyTier(current, T5);
 
     // Final normalization (also once)
     current = applyTier(current, FINAL);
