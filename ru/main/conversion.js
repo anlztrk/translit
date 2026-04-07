@@ -253,7 +253,7 @@ function topright() {
 		.replace(/Й([Аа])/g, "Й$1\u0308")
 		.replace(/йа/g, "йа\u0308")
 		.replace(/Й([Ээ])/g, "Й$1\u0308")
-		.replace(/йэ/g, "йэ\u0300")
+		.replace(/йэ/g, "йэ\u0308")
 		.replace(/Й([Уу])/g, "Й$1\u0308")
 		.replace(/йу/g, "йу\u0308")
 		.replace(/Й([Оо])/g, "Й$1\u0308")
