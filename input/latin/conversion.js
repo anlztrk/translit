@@ -1,5 +1,6 @@
 function cyrlat() {
 	document.transcription.text1.value = document.transcription.text1.value
+	.replace(/#([A-Z]+)#/g, (_, content) => { return '#' + content.toLowerCase() + '#'; })
 	.replace(/\u0021(\u002a|\u005d|\u003e)/g, "\u00a1")
 	.replace(/\u00a1(\u002a|\u005d|\u003e)/g, "\u0021")
 	.replace(/\u003f(\u002a|\u005d|\u003e)/g, "\u00bf")
