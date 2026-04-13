@@ -5,7 +5,7 @@ function cyrlat() {
 		.replace(/(є|ѳ)/g, "ө")
 		.replace(/(Є|Ѳ)/g, "Ө")
 
-		// Convert Latin letters to Cyrillic when adjacent to Cyrillic (right side)
+		// Convert homoglyphic Latin letters to Cyrillic when adjacent to Cyrillic (right side)
 		.replace(/(\p{Script=Cyrl})A/ug, "$1А")
 		.replace(/(\p{Script=Cyrl})C/ug, "$1С")
 		.replace(/(\p{Script=Cyrl})E/ug, "$1Е")
@@ -25,7 +25,7 @@ function cyrlat() {
 		.replace(/(\p{Script=Cyrl})p/ug, "$1р")
 		.replace(/(\p{Script=Cyrl})x/ug, "$1х")
 
-		// Convert Latin letters to Cyrillic when adjacent to Cyrillic (left side)
+		// Convert homoglyphic Latin letters to Cyrillic when adjacent to Cyrillic (left side)
 		.replace(/A(\p{Script=Cyrl})/ug, "А$1")
 		.replace(/C(\p{Script=Cyrl})/ug, "С$1")
 		.replace(/E(\p{Script=Cyrl})/ug, "Е$1")
@@ -50,20 +50,16 @@ function cyrlat() {
 		.normalize('NFC') // Normalize Unicode composition
 
 		// --- HARD/SOFT SIGN + VOWEL HANDLING ---
-		.replace(/([ЪЬ])([АОУ])/g, "$1\u2019$2") // Insert apostrophe after Ъ/Ь before vowels
-		.replace(/([ЪЬъь])([аоу])/g, "$1\u2019$2")
-		.replace(/ЪЕ/g, "ЙЭ") // Special case transformations
-		.replace(/([Ъъ])е/g, "йэ")
-		.replace(/([ЬЪ])Э/g, "$1\u2019Э")
-		.replace(/([ЬЪьъ])э/g, "$1\u2019э")
-		
+		.replace(/([ЪЬ])([АЕОӨУҮ])/g, "$1\u2019$2") // Insert apostrophe after Ъ/Ь before vowels
+		.replace(/([ЪЬъь])([аеоөуү])/g, "$1\u2019$2")
+
 		// --- Й + VOWEL DIACRITIC MARKING ---
 		.replace(/Й([Аа])/g, "Й$1\u0308")
 		.replace(/йа/g, "йа\u0308")
-		.replace(/Й([Ээ])/g, "Й$1\u0308")
-		.replace(/йэ/g, "йэ\u0308")
-		.replace(/Й([Уу])/g, "Й$1\u0308")
-		.replace(/йу/g, "йу\u0308")
+		.replace(/Й([ЭэӨө])/g, "Й$1\u0308")
+		.replace(/й([эө])/g, "й$1\u0308")
+		.replace(/Й([УуҮү])/g, "Й$1\u0308")
+		.replace(/й([уү])/g, "й$1\u0308")
 		.replace(/Й([Оо])/g, "Й$1\u0308")
 		.replace(/йо/g, "йо\u0308")
 
@@ -76,7 +72,7 @@ function cyrlat() {
 		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ё/g, "$1ó")
 		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ю/g, "$1Ú")
 		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ю/g, "$1ú")
-		
+
 		// --- VOWEL COLLISION / RESOLUTION RULES ---
 		.replace(/ЕЭ/g, "ЙЭЭ")
 		.replace(/Еэ/g, "Йээ")
@@ -121,7 +117,7 @@ function cyrlat() {
 		// --- FINAL Й SIMPLIFICATION (NON-VOWEL CONTEXT) ---
 		.replace(/([АЕЁИОӨУҮЫЭЮЯ])Й(?![АЕЁИЙОӨУҮЫЭЮЯ])/g, "$1И")
 		.replace(/([АЕЁИОӨУҮЫЭЮЯаеёиоөуүыэюя])й(?![аеёийоөуүыэюя])/g, "$1и")
-		
+
 		// Remove redundant soft sign before Й
 		.replace(/ьй/g, "й")
 		.replace(/ЬЙ/g, "Й")
