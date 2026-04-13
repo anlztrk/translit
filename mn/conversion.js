@@ -1,7 +1,11 @@
 function cyrlat() {
+	// --- INPUT NORMALIZATION & MIXED SCRIPT FIXES ---
 	document.transcription.text1.value = document.transcription.text1.value
+		// Normalize archaic / variant Cyrillic letters to standard ones
 		.replace(/(є|ѳ)/g, "ө")
 		.replace(/(Є|Ѳ)/g, "Ө")
+
+		// Convert Latin letters to Cyrillic when adjacent to Cyrillic (right side)
 		.replace(/(\p{Script=Cyrl})A/ug, "$1А")
 		.replace(/(\p{Script=Cyrl})C/ug, "$1С")
 		.replace(/(\p{Script=Cyrl})E/ug, "$1Е")
@@ -10,6 +14,8 @@ function cyrlat() {
 		.replace(/(\p{Script=Cyrl})O/ug, "$1О")
 		.replace(/(\p{Script=Cyrl})P/ug, "$1Р")
 		.replace(/(\p{Script=Cyrl})X/ug, "$1Х")
+
+		// Same as above for lowercase
 		.replace(/(\p{Script=Cyrl})a/ug, "$1а")
 		.replace(/(\p{Script=Cyrl})c/ug, "$1с")
 		.replace(/(\p{Script=Cyrl})e/ug, "$1е")
@@ -18,6 +24,8 @@ function cyrlat() {
 		.replace(/(\p{Script=Cyrl})o/ug, "$1о")
 		.replace(/(\p{Script=Cyrl})p/ug, "$1р")
 		.replace(/(\p{Script=Cyrl})x/ug, "$1х")
+
+		// Convert Latin letters to Cyrillic when adjacent to Cyrillic (left side)
 		.replace(/A(\p{Script=Cyrl})/ug, "А$1")
 		.replace(/C(\p{Script=Cyrl})/ug, "С$1")
 		.replace(/E(\p{Script=Cyrl})/ug, "Е$1")
@@ -26,6 +34,8 @@ function cyrlat() {
 		.replace(/O(\p{Script=Cyrl})/ug, "О$1")
 		.replace(/P(\p{Script=Cyrl})/ug, "Р$1")
 		.replace(/X(\p{Script=Cyrl})/ug, "Х$1")
+
+		// Same as above for lowercase
 		.replace(/a(\p{Script=Cyrl})/ug, "а$1")
 		.replace(/c(\p{Script=Cyrl})/ug, "с$1")
 		.replace(/e(\p{Script=Cyrl})/ug, "е$1")
@@ -35,16 +45,19 @@ function cyrlat() {
 		.replace(/p(\p{Script=Cyrl})/ug, "р$1")
 		.replace(/x(\p{Script=Cyrl})/ug, "х$1");
 
+	// --- MAIN TRANSFORMATION PIPELINE ---
 	document.transcription.text2.value = document.transcription.text1.value
-		.normalize('NFC')
+		.normalize('NFC') // Normalize Unicode composition
 
-		.replace(/([ЪЬ])([АОУ])/g, "$1\u2019$2")
+		// --- HARD/SOFT SIGN + VOWEL HANDLING ---
+		.replace(/([ЪЬ])([АОУ])/g, "$1\u2019$2") // Insert apostrophe after Ъ/Ь before vowels
 		.replace(/([ЪЬъь])([аоу])/g, "$1\u2019$2")
-		.replace(/ЪЕ/g, "ЙЭ")
+		.replace(/ЪЕ/g, "ЙЭ") // Special case transformations
 		.replace(/([Ъъ])е/g, "йэ")
 		.replace(/([ЬЪ])Э/g, "$1\u2019Э")
 		.replace(/([ЬЪьъ])э/g, "$1\u2019э")
 		
+		// --- Й + VOWEL DIACRITIC MARKING ---
 		.replace(/Й([Аа])/g, "Й$1\u0308")
 		.replace(/йа/g, "йа\u0308")
 		.replace(/Й([Ээ])/g, "Й$1\u0308")
@@ -54,6 +67,7 @@ function cyrlat() {
 		.replace(/Й([Оо])/g, "Й$1\u0308")
 		.replace(/йо/g, "йо\u0308")
 
+		// --- PALATALIZATION MARKING (CONSONANT + IOTATED VOWEL) ---
 		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Я/g, "$1Á")
 		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])я/g, "$1á")
 		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Е/g, "$1É")
@@ -63,6 +77,7 @@ function cyrlat() {
 		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ю/g, "$1Ú")
 		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ю/g, "$1ú")
 		
+		// --- VOWEL COLLISION / RESOLUTION RULES ---
 		.replace(/ЕЭ/g, "ЙЭЭ")
 		.replace(/Еэ/g, "Йээ")
 		.replace(/еэ/g, "йээ")
@@ -74,24 +89,28 @@ function cyrlat() {
 		.replace(/ҮЮ/g, "ҮЙҮ")
 		.replace(/([Үү])ю/g, "$1йү")
 
+		// --- IOTATED VOWELS → Й + VOWEL (CASE-SENSITIVE HANDLING) ---
 		.replace(/(\p{Uppercase})Я/ug, "$1ЙА")
 		.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА")
 		.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2")
 		.replace(/Я(\p{Uppercase})/ug, "ЙА$1")
 		.replace(/Я/g, "Йа")
 		.replace(/я/g, "йа")
+
 		.replace(/(\p{Uppercase})Е/ug, "$1ЙӨ")
 		.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙӨ")
 		.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙӨ $1$2")
 		.replace(/Е(\p{Uppercase})/ug, "ЙӨ$1")
 		.replace(/Е/g, "Йө")
 		.replace(/е/g, "йө")
+
 		.replace(/(\p{Uppercase})Ё/ug, "$1ЙО")
 		.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО")
 		.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2")
 		.replace(/Ё(\p{Uppercase})/ug, "ЙО$1")
 		.replace(/Ё/g, "Йо")
 		.replace(/ё/g, "йо")
+
 		.replace(/(\p{Uppercase})Ю/ug, "$1ЙУ")
 		.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ")
 		.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2")
@@ -99,12 +118,15 @@ function cyrlat() {
 		.replace(/Ю/g, "Йу")
 		.replace(/ю/g, "йу")
 
+		// --- FINAL Й SIMPLIFICATION (NON-VOWEL CONTEXT) ---
 		.replace(/([АЕЁИОӨУҮЫЭЮЯ])Й(?![АЕЁИЙОӨУҮЫЭЮЯ])/g, "$1И")
 		.replace(/([АЕЁИОӨУҮЫЭЮЯаеёиоөуүыэюя])й(?![аеёийоөуүыэюя])/g, "$1и")
 		
+		// Remove redundant soft sign before Й
 		.replace(/ьй/g, "й")
 		.replace(/ЬЙ/g, "Й")
 
+		// --- CYRILLIC → LATIN TRANSLITERATION (LOWERCASE) ---
 		.replace(/а/g, "a")
 		.replace(/б/g, "b")
 		.replace(/в/g, "v")
@@ -141,6 +163,7 @@ function cyrlat() {
 		.replace(/ё/g, "yo")
 		.replace(/я/g, "ya")
 
+		// --- CYRILLIC → LATIN TRANSLITERATION (UPPERCASE) ---
 		.replace(/А/g, "A")
 		.replace(/Б/g, "B")
 		.replace(/В/g, "V")
@@ -177,9 +200,11 @@ function cyrlat() {
 		.replace(/Ё/g, "Yo")
 		.replace(/Я/g, "Ya")
 
-		.replace(/«/g, "\u201e")
-		.replace(/»/g, "\u201c")
-		.normalize('NFC');
+		// --- TYPOGRAPHIC QUOTES ---
+		.replace(/«/g, "\u201e") // low double quote
+		.replace(/»/g, "\u201c") // high double quote
+
+		.normalize('NFC'); // Final normalization
 }
 
 function latcyr() {
