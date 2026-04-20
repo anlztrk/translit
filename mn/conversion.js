@@ -49,19 +49,9 @@ function cyrlat() {
 	document.transcription.text2.value = document.transcription.text1.value
 		.normalize('NFC') // Normalize Unicode composition
 
-		// --- HARD/SOFT SIGN + VOWEL HANDLING ---
-		.replace(/([ЪЬ])([АЕОӨУҮ])/g, "$1\u2019$2") // Insert apostrophe after Ъ/Ь before vowels
-		.replace(/([ЪЬъь])([аеоөуү])/g, "$1\u2019$2")
-
 		// --- Й + VOWEL DIACRITIC MARKING ---
-		.replace(/Й([Аа])/g, "Й$1\u0308")
-		.replace(/йа/g, "йа\u0308")
-		.replace(/Й([ЭэӨө])/g, "Й$1\u0308")
-		.replace(/й([эө])/g, "й$1\u0308")
-		.replace(/Й([УуҮү])/g, "Й$1\u0308")
-		.replace(/й([уү])/g, "й$1\u0308")
-		.replace(/Й([Оо])/g, "Й$1\u0308")
-		.replace(/йо/g, "йо\u0308")
+		.replace(/Й([АаЭэОоӨөУуҮү])/g, "Й$1\u0308")
+		.replace(/й([аэоөуү])/g, "й$1\u0308")
 
 		// --- PALATALIZATION MARKING (CONSONANT + IOTATED VOWEL) ---
 		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Я/g, "$1Á")
@@ -118,9 +108,9 @@ function cyrlat() {
 		.replace(/([АЕЁИОӨУҮЫЭЮЯ])Й(?![АЕЁИЙОӨУҮЫЭЮЯ])/g, "$1И")
 		.replace(/([АЕЁИОӨУҮЫЭЮЯаеёиоөуүыэюя])й(?![аеёийоөуүыэюя])/g, "$1и")
 
-		// Remove redundant soft sign before Й
-		.replace(/ьй/g, "й")
-		.replace(/ЬЙ/g, "Й")
+		// Handle soft sign before Й
+		.replace(/ьй([аэоөуү])/g, "й$1\u0301")
+		.replace(/ЬЙ([АЭОӨУҮ])/g, "Й$1\u0301")
 
 		// --- CYRILLIC → LATIN TRANSLITERATION (LOWERCASE) ---
 		.replace(/а/g, "a")
@@ -203,119 +193,7 @@ function cyrlat() {
 		.normalize('NFC'); // Final normalization
 }
 
-function latcyr() {
-	document.transcription.text1.value = document.transcription.text2.value
-		.normalize('NFC')
-
-		.replace(/\u201e/g, "«")
-		.replace(/\u201c/g, "»")
-
-		// Apostrophe-marked sequences
-		.replace(/Y’([AOUE])/g, "Ь$1")
-		.replace(/y’([aoue])/g, "ь$1")
-		.replace(/’([AOUE])/g, "Ъ$1")
-		.replace(/’([aoue])/g, "ъ$1")
-
-		// Й + vowel sequences
-		.replace(/YÄ/g, "ЙА")
-		.replace(/yä/g, "йа")
-		.replace(/YË/g, "ЙЭ")
-		.replace(/yë/g, "йэ")
-		.replace(/YÖ/g, "ЙО")
-		.replace(/yö/g, "йо")
-		.replace(/YÜ/g, "ЙУ")
-		.replace(/yü/g, "йу")
-
-		// Plain digraphs
-		.replace(/Yo/g, "Ё")
-		.replace(/yo/g, "ё")
-		.replace(/Yu/g, "Ю")
-		.replace(/yu/g, "ю")
-		.replace(/Ya/g, "Я")
-		.replace(/ya/g, "я")
-		.replace(/Yọ/g, "Е")
-		.replace(/yọ/g, "е")
-
-		// Accented consonant + vowel results
-		.replace(/Á/g, "Я")
-		.replace(/á/g, "я")
-		.replace(/É/g, "Е")
-		.replace(/é/g, "е")
-		.replace(/Ó/g, "Ё")
-		.replace(/ó/g, "ё")
-		.replace(/Ú/g, "Ю")
-		.replace(/ú/g, "ю")
-
-		// Special vowels
-		.replace(/Ọ/g, "Ө")
-		.replace(/ọ/g, "ө")
-		.replace(/Ụ/g, "Ү")
-		.replace(/ụ/g, "ү")
-		.replace(/Ị/g, "Ы")
-		.replace(/ị/g, "ы")
-
-		// Consonants with dedicated Latin symbols
-		.replace(/Č/g, "Ч")
-		.replace(/č/g, "ч")
-		.replace(/Š/g, "Ш")
-		.replace(/š/g, "ш")
-		.replace(/Ś/g, "Щ")
-		.replace(/ś/g, "щ")
-
-		// Contextual y -> soft sign, otherwise y -> й
-		.replace(/([BCDFGHJKLMNPQRSTVWXZČŠŚbcdfghjklmnpqrstvwxzčšś])Y/g, "$1Ь")
-		.replace(/([BCDFGHJKLMNPQRSTVWXZČŠŚbcdfghjklmnpqrstvwxzčšś])y/g, "$1ь")
-		.replace(/Y/g, "Й")
-		.replace(/y/g, "й")
-
-		// Basic alphabet
-		.replace(/A/g, "А")
-		.replace(/a/g, "а")
-		.replace(/B/g, "Б")
-		.replace(/b/g, "б")
-		.replace(/V/g, "В")
-		.replace(/v/g, "в")
-		.replace(/G/g, "Г")
-		.replace(/g/g, "г")
-		.replace(/D/g, "Д")
-		.replace(/d/g, "д")
-		.replace(/J/g, "Ж")
-		.replace(/j/g, "ж")
-		.replace(/Z/g, "З")
-		.replace(/z/g, "з")
-		.replace(/I/g, "И")
-		.replace(/i/g, "и")
-		.replace(/K/g, "К")
-		.replace(/k/g, "к")
-		.replace(/L/g, "Л")
-		.replace(/l/g, "л")
-		.replace(/M/g, "М")
-		.replace(/m/g, "м")
-		.replace(/N/g, "Н")
-		.replace(/n/g, "н")
-		.replace(/O/g, "О")
-		.replace(/o/g, "о")
-		.replace(/P/g, "П")
-		.replace(/p/g, "п")
-		.replace(/R/g, "Р")
-		.replace(/r/g, "р")
-		.replace(/S/g, "С")
-		.replace(/s/g, "с")
-		.replace(/T/g, "Т")
-		.replace(/t/g, "т")
-		.replace(/U/g, "У")
-		.replace(/u/g, "у")
-		.replace(/F/g, "Ф")
-		.replace(/f/g, "ф")
-		.replace(/H/g, "Х")
-		.replace(/h/g, "х")
-		.replace(/C/g, "Ц")
-		.replace(/c/g, "ц")
-		.replace(/E/g, "Э")
-		.replace(/e/g, "э")
-
-		.normalize('NFC');
-}
+function latcyr() {}
 
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value);
