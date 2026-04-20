@@ -1,108 +1,632 @@
-var car;
+function cyrlat() {
+	let text = document.transcription.text1.value.normalize("NFC")
 
-function cyrlat () {
-car = document.transcription.text1.value;
-car = car.normalize('NFC');
+		// Normalize archaic / variant Cyrillic letters to standard ones
+		.replace(/(є|ѳ)/g, "ө")
+		.replace(/(Є|Ѳ)/g, "Ө")
 
-car = car.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ)Е/g, "$1ЬӨ");
-car = car.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)е/g, "$1ьө");
+		// Convert homoglyphic Latin letters to Cyrillic when adjacent to Cyrillic (right side)
+		.replace(/(\p{Script=Cyrl})A/ug, "$1А")
+		.replace(/(\p{Script=Cyrl})C/ug, "$1С")
+		.replace(/(\p{Script=Cyrl})E/ug, "$1Е")
+		.replace(/(\p{Script=Cyrl})Ë/ug, "$1Ё")
+		.replace(/(\p{Script=Cyrl})Ї/ug, "$1Ү")
+		.replace(/(\p{Script=Cyrl})O/ug, "$1О")
+		.replace(/(\p{Script=Cyrl})P/ug, "$1Р")
+		.replace(/(\p{Script=Cyrl})X/ug, "$1Х")
 
-car = car.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ)Ё/g, "$1ЬО");
-car = car.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ё/g, "$1ьо");
+		// Same as above for lowercase
+		.replace(/(\p{Script=Cyrl})a/ug, "$1а")
+		.replace(/(\p{Script=Cyrl})c/ug, "$1с")
+		.replace(/(\p{Script=Cyrl})e/ug, "$1е")
+		.replace(/(\p{Script=Cyrl})ë/ug, "$1ё")
+		.replace(/(\p{Script=Cyrl})ї/ug, "$1ү")
+		.replace(/(\p{Script=Cyrl})o/ug, "$1о")
+		.replace(/(\p{Script=Cyrl})p/ug, "$1р")
+		.replace(/(\p{Script=Cyrl})x/ug, "$1х")
 
-car = car.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ)Ю/g, "$1ЬУ");
-car = car.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ю/g, "$1ьу");
+		// Convert homoglyphic Latin letters to Cyrillic when adjacent to Cyrillic (left side)
+		.replace(/A(\p{Script=Cyrl})/ug, "А$1")
+		.replace(/C(\p{Script=Cyrl})/ug, "С$1")
+		.replace(/E(\p{Script=Cyrl})/ug, "Е$1")
+		.replace(/Ë(\p{Script=Cyrl})/ug, "Ё$1")
+		.replace(/Ї(\p{Script=Cyrl})/ug, "Ү$1")
+		.replace(/O(\p{Script=Cyrl})/ug, "О$1")
+		.replace(/P(\p{Script=Cyrl})/ug, "Р$1")
+		.replace(/X(\p{Script=Cyrl})/ug, "Х$1")
 
-car = car.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ)Я/g, "$1ЬА");
-car = car.replace(/(Б|В|Г|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)я/g, "$1ьа");
+		// Same as above for lowercase
+		.replace(/a(\p{Script=Cyrl})/ug, "а$1")
+		.replace(/c(\p{Script=Cyrl})/ug, "с$1")
+		.replace(/e(\p{Script=Cyrl})/ug, "е$1")
+		.replace(/ë(\p{Script=Cyrl})/ug, "ё$1")
+		.replace(/ї(\p{Script=Cyrl})/ug, "ү$1")
+		.replace(/o(\p{Script=Cyrl})/ug, "о$1")
+		.replace(/p(\p{Script=Cyrl})/ug, "р$1")
+		.replace(/x(\p{Script=Cyrl})/ug, "х$1");
 
+	const vowels = "АЕЁИЙОӨУҮЫЭЮЯаеёийоөуүыэюя";
+	const consonants = "БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ";
 
-car = car.replace(/а/g, "a");
-car = car.replace(/б/g, "b");
-car = car.replace(/в/g, "v");
-car = car.replace(/г/g, "g");
-car = car.replace(/д/g, "d");
-car = car.replace(/е/g, "jŏ");
-car = car.replace(/ё/g, "jo");
-car = car.replace(/ж/g, "ż");
-car = car.replace(/з/g, "z");
-car = car.replace(/и/g, "i");
-car = car.replace(/й/g, "j");
-car = car.replace(/к/g, "k");
-car = car.replace(/л/g, "l");
-car = car.replace(/м/g, "m");
-car = car.replace(/н/g, "n");
-car = car.replace(/о/g, "o");
-car = car.replace(/(ө|є)/g, "ŏ");
-car = car.replace(/п/g, "p");
-car = car.replace(/р/g, "r");
-car = car.replace(/с/g, "s");
-car = car.replace(/т/g, "t");
-car = car.replace(/у/g, "u");
-car = car.replace(/(ү|ї)/g, "ŭ");
-car = car.replace(/ф/g, "f");
-car = car.replace(/х/g, "h");
-car = car.replace(/ц/g, "c");
-car = car.replace(/ч/g, "ċ");
-car = car.replace(/ш/g, "ṡ");
-car = car.replace(/щ/g, "ṣ");
-car = car.replace(/ъ|Ъ/g, "\u2019");
-car = car.replace(/ы/g, "y");
-car = car.replace(/ь/g, "ị");
-car = car.replace(/э/g, "e");
-car = car.replace(/ю/g, "ju");
-car = car.replace(/я/g, "ja");
+	function isVowel(ch) {
+		return vowels.includes(ch);
+	}
 
-car = car.replace(/А/g, "A");
-car = car.replace(/Б/g, "B");
-car = car.replace(/В/g, "V");
-car = car.replace(/Г/g, "G");
-car = car.replace(/Д/g, "D");
-car = car.replace(/Е/g, "Jŏ");
-car = car.replace(/Ё/g, "Jo");
-car = car.replace(/Ж/g, "Ż");
-car = car.replace(/З/g, "Z");
-car = car.replace(/И/g, "I");
-car = car.replace(/Й/g, "J");
-car = car.replace(/К/g, "K");
-car = car.replace(/Л/g, "L");
-car = car.replace(/М/g, "M");
-car = car.replace(/Н/g, "N");
-car = car.replace(/О/g, "O");
-car = car.replace(/(Ө|Є)/g, "Ŏ");
-car = car.replace(/П/g, "P");
-car = car.replace(/Р/g, "R");
-car = car.replace(/С/g, "S");
-car = car.replace(/Т/g, "T");
-car = car.replace(/У/g, "U");
-car = car.replace(/(Ү|Ї)/g, "Ŭ");
-car = car.replace(/Ф/g, "F");
-car = car.replace(/Х/g, "H");
-car = car.replace(/Ц/g, "C");
-car = car.replace(/Ч/g, "Ċ");
-car = car.replace(/Ш/g, "Ṡ");
-car = car.replace(/Щ/g, "Ṣ");
-car = car.replace(/Ы/g, "Y");
-car = car.replace(/Ь/g, "Ị");
-car = car.replace(/Э/g, "E");
-car = car.replace(/Ю/g, "Ju");
-car = car.replace(/Я/g, "Ja");
-car = car.replace(/«/g, "\u201e");
-car = car.replace(/»/g, "\u201c");
-car = car.normalize('NFC');
-document.transcription.text2.value = car;
+	function isConsonant(ch) {
+		return "БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ".includes(ch);
+	}
+
+	function applyCase(str, ch, prev) {
+		const isUpper = ch === ch.toUpperCase();
+		const isLower = ch === ch.toLowerCase();
+
+		if (isLower) return str.toLowerCase();
+
+		// TitleCase: uppercase letter at word start OR after non-letter
+		const isLetter = prev && prev.toLowerCase() !== prev.toUpperCase();
+		const isTitle = isUpper && (!isLetter);
+
+		if (isTitle) {
+			return str[0].toUpperCase() + str.slice(1).toLowerCase();
+		}
+
+		// ALL CAPS context
+		return str.toUpperCase();
+	}
+
+	let result = "";
+
+	for (let i = 0; i < text.length; i++) {
+		const ch = text[i];
+		const prev = text[i - 1] || "";
+		const next = text[i + 1] || "";
+
+		// =========================
+		// Й + vowel (highest priority)
+		// =========================
+		if (ch === "Й" || ch === "й") {
+
+			if (isVowel(next)) {
+				const map = {
+					"а": "ä",
+					"э": "ë",
+					"о": "ö",
+					"ө": "ọ̈",
+					"у": "ü",
+					"ү": "ụ̈"
+				};
+
+				const mapped = map[next.toLowerCase()];
+
+				if (mapped !== undefined) {
+					result += applyCase("y" + mapped, ch, prev);
+					i++; // skip vowel
+					continue;
+				}
+
+				// 👇 EXPLICIT fallback (your desired behavior)
+				result += (ch === "Й") ? "I" : "i";
+				continue;
+			}
+
+			// non-vowel case
+			result += (ch === "Й") ? "I" : "i";
+			continue;
+		}
+
+		switch (ch) {
+
+			// ===== Е =====
+			case "Е":
+			case "е":
+				if (prev === "Ь" || prev === "ь") {
+					result += applyCase("YÉ", ch, prev);
+				} else if (isConsonant(prev)) {
+					result += applyCase("É", ch, prev);
+				} else if (prev === "Ъ" || prev === "ъ") {
+					result += applyCase("YỌ", ch, prev);
+				} else if (prev === "Э" || prev === "э" || next === "Э" || next === "э") {
+					result += applyCase("YE", ch, prev);
+				} else {
+					result += applyCase("YỌ", ch, prev);
+				}
+				break;
+
+				// ===== Ё =====
+			case "Ё":
+			case "ё":
+				if (prev === "Ь" || prev === "ь") {
+					result += applyCase("YÓ", ch, prev);
+				} else if (isConsonant(prev)) {
+					result += applyCase("Ó", ch, prev);
+				} else {
+					result += applyCase("YO", ch, prev);
+				}
+				break;
+
+				// ===== Ю =====
+			case "Ю":
+			case "ю":
+				if (prev === "Ь" || prev === "ь") {
+					result += applyCase("YÚ", ch, prev);
+				} else if (isConsonant(prev)) {
+					result += applyCase("Ú", ch, prev);
+				} else if (prev === "Ъ" || prev === "ъ") {
+					result += applyCase("YU", ch, prev);
+				} else if (next === "Ү" || next === "ү") {
+					result += applyCase("YỤ", ch, prev);
+				} else {
+					result += applyCase("YU", ch, prev);
+				}
+				break;
+
+				// ===== Я =====
+			case "Я":
+			case "я":
+				if (prev === "Ь" || prev === "ь") {
+					result += applyCase("YÁ", ch, prev);
+				} else if (isConsonant(prev)) {
+					result += applyCase("Á", ch, prev);
+				} else if (prev === "Ъ" || prev === "ъ") {
+					result += applyCase("YA", ch, prev);
+				} else {
+					result += applyCase("YA", ch, prev);
+				}
+				break;
+
+				// ===== Й (non-vowel context) =====
+			case "Й":
+				result += "I";
+				break;
+
+			case "й":
+				result += "i";
+				break;
+
+				// ===== Basic mappings =====
+			case "А":
+				result += "A";
+				break;
+			case "а":
+				result += "a";
+				break;
+
+			case "Б":
+				result += "B";
+				break;
+			case "б":
+				result += "b";
+				break;
+
+			case "В":
+				result += "V";
+				break;
+			case "в":
+				result += "v";
+				break;
+
+			case "Г":
+				result += "G";
+				break;
+			case "г":
+				result += "g";
+				break;
+
+			case "Д":
+				result += "D";
+				break;
+			case "д":
+				result += "d";
+				break;
+
+			case "Ж":
+				result += "J";
+				break;
+			case "ж":
+				result += "j";
+				break;
+
+			case "З":
+				result += "Z";
+				break;
+			case "з":
+				result += "z";
+				break;
+
+			case "И":
+				result += "I";
+				break;
+			case "и":
+				result += "i";
+				break;
+
+			case "К":
+				result += "K";
+				break;
+			case "к":
+				result += "k";
+				break;
+
+			case "Л":
+				result += "L";
+				break;
+			case "л":
+				result += "l";
+				break;
+
+			case "М":
+				result += "M";
+				break;
+			case "м":
+				result += "m";
+				break;
+
+			case "Н":
+				result += "N";
+				break;
+			case "н":
+				result += "n";
+				break;
+
+			case "О":
+				result += "O";
+				break;
+			case "о":
+				result += "o";
+				break;
+
+			case "Ө":
+				result += "Ọ";
+				break;
+			case "ө":
+				result += "ọ";
+				break;
+
+			case "П":
+				result += "P";
+				break;
+			case "п":
+				result += "p";
+				break;
+
+			case "Р":
+				result += "R";
+				break;
+			case "р":
+				result += "r";
+				break;
+
+			case "С":
+				result += "S";
+				break;
+			case "с":
+				result += "s";
+				break;
+
+			case "Т":
+				result += "T";
+				break;
+			case "т":
+				result += "t";
+				break;
+
+			case "У":
+				result += "U";
+				break;
+			case "у":
+				result += "u";
+				break;
+
+			case "Ү":
+				result += "Ụ";
+				break;
+			case "ү":
+				result += "ụ";
+				break;
+
+			case "Ф":
+				result += "F";
+				break;
+			case "ф":
+				result += "f";
+				break;
+
+			case "Х":
+				result += "H";
+				break;
+			case "х":
+				result += "h";
+				break;
+
+			case "Ц":
+				result += "C";
+				break;
+			case "ц":
+				result += "c";
+				break;
+
+			case "Ч":
+				result += "Č";
+				break;
+			case "ч":
+				result += "č";
+				break;
+
+			case "Ш":
+				result += "Š";
+				break;
+			case "ш":
+				result += "š";
+				break;
+
+			case "Щ":
+				result += "Ś";
+				break;
+			case "щ":
+				result += "ś";
+				break;
+
+			case "Ы":
+				result += "Ị";
+				break;
+			case "ы":
+				result += "ị";
+				break;
+
+			case "Э":
+				result += "E";
+				break;
+			case "э":
+				result += "e";
+				break;
+
+			case "Ь":
+			case "ь":
+				if (
+					next === "Е" || next === "е" ||
+					next === "Ё" || next === "ё" ||
+					next === "Я" || next === "я" ||
+					next === "Ю" || next === "ю"
+				) {
+					// absorbed by following vowel
+					break;
+				}
+				result += (ch === "Ь") ? "Y" : "y";
+				break;
+
+			case "Ъ":
+			case "ъ":
+				break;
+
+			default:
+				result += ch;
+		}
+	}
+
+	// Final normalization
+	result = result
+		.replace(/Ọ́/g, "É")
+		.replace(/ọ́/g, "é")
+
+		// --- TYPOGRAPHIC QUOTES ---
+		.replace(/«/g, "\u201e") // low double quote
+		.replace(/»/g, "\u201c") // high double quote
+
+		.normalize('NFC'); // Final normalization
+
+	document.transcription.text2.value = result;
 }
 
-function latcyr () {
+function latcyr() {
+    let text = document.transcription.text2.value.normalize("NFC");
+    let result = "";
+
+    for (let i = 0; i < text.length; i++) {
+        let ch = text[i];
+        let next = text[i + 1] || "";
+        let next2 = text[i + 2] || "";
+        let next3 = text[i + 3] || "";
+
+        const isUpper = ch === ch.toUpperCase();
+
+        // Helper to apply case (upper/lower) based on original Latin character
+        function out(str) {
+            if (!str) return "";
+            return isUpper ? str.toUpperCase() : str.toLowerCase();
+        }
+
+        // ============================================================
+        // 1. Y + DIAERESIS (ä, ë, ö, ọ̈, ü, ụ̈) → Й + vowel
+        // ============================================================
+        if ((ch === "Y" || ch === "y")) {
+            const seq3 = (ch + next + next2 + next3).toLowerCase(); // for ọ̈ / ụ̈ (two combining marks)
+            const seq2 = (ch + next + next2).toLowerCase();         // for combining diaeresis
+            const seq1 = (ch + next).toLowerCase();                 // for simple diaeresis
+
+            // Handle ọ̈ (o with dot below + diaeresis) and ụ̈ (u with dot below + diaeresis)
+            if (seq3 === "yọ̈") {
+                result += out("йө");
+                i += 3;
+                continue;
+            }
+            if (seq3 === "yụ̈") {
+                result += out("йү");
+                i += 3;
+                continue;
+            }
+            // Fallback for decomposed forms (if any)
+            if (seq2 === "yọ̈" || seq2 === "yọ̈") {
+                result += out("йө");
+                i += 2;
+                continue;
+            }
+            if (seq2 === "yụ̈" || seq2 === "yụ̈") {
+                result += out("йү");
+                i += 2;
+                continue;
+            }
+
+            // Simple diaeresis pairs
+            if (seq1 === "yä") {
+                result += out("йа");
+                i += 1;
+                continue;
+            }
+            if (seq1 === "yë") {
+                result += out("йэ");
+                i += 1;
+                continue;
+            }
+            if (seq1 === "yö") {
+                result += out("йо");
+                i += 1;
+                continue;
+            }
+            if (seq1 === "yü") {
+                result += out("йу");
+                i += 1;
+                continue;
+            }
+
+            // ============================================================
+            // 2. Y + ACUTE (á, é, ó, ú) → Ь + iotated vowel
+            // ============================================================
+            if (seq1 === "yá") {
+                result += out("ья");
+                i += 1;
+                continue;
+            }
+            if (seq1 === "yé") {
+                result += out("ье");
+                i += 1;
+                continue;
+            }
+            if (seq1 === "yó") {
+                result += out("ьё");
+                i += 1;
+                continue;
+            }
+            if (seq1 === "yú") {
+                result += out("ью");
+                i += 1;
+                continue;
+            }
+
+            // ============================================================
+            // 3. Y + plain vowel → Ъ + vowel
+            //    (ya → ъя, yo → ъё, yu → ъю, yọ → ъе)
+            // ============================================================
+            if (seq1 === "ya") {
+                result += out("ъя");
+                i += 1;
+                continue;
+            }
+            if (seq1 === "yo") {
+                result += out("ъё");
+                i += 1;
+                continue;
+            }
+            if (seq1 === "yu") {
+                result += out("ъю");
+                i += 1;
+                continue;
+            }
+            if (seq1 === "yọ") {
+                result += out("ъе");
+                i += 1;
+                continue;
+            }
+
+            // ============================================================
+            // 4. Y + Ụ (special case: Ю followed by Ү/ү → YỤ)
+            // ============================================================
+            if (seq1 === "yụ") {
+                result += out("ю");
+                i += 1;
+                continue;
+            }
+
+            // ============================================================
+            // 5. Standalone Y (not followed by a vowel) → Ь (soft sign)
+            // ============================================================
+            result += out("ь");
+            continue;
+        }
+
+        // ============================================================
+        // 6. Standalone ACUTE vowels → iotated after consonant
+        // ============================================================
+        switch (ch.toLowerCase()) {
+            case "á": result += out("я"); continue;
+            case "é": result += out("е"); continue;
+            case "ó": result += out("ё"); continue;
+            case "ú": result += out("ю"); continue;
+        }
+
+        // ============================================================
+        // 7. Basic vowels and special dotted vowels
+        // ============================================================
+        switch (ch.toLowerCase()) {
+            case "a":  result += out("а"); continue;
+            case "e":  result += out("э"); continue;
+            case "o":  result += out("о"); continue;
+            case "u":  result += out("у"); continue;
+            case "ö":  result += out("ө"); continue;
+            case "ü":  result += out("ү"); continue;
+            case "ọ":  result += out("ө"); continue; // dot below o → ө
+            case "ụ":  result += out("ү"); continue; // dot below u → ү
+            case "ị":  result += out("ы"); continue; // dot below i → ы
+        }
+
+        // ============================================================
+        // 8. I / i → Й (Й when not before a vowel)
+        //    (Ambiguity with И is unavoidable, but Й is far more common in this position)
+        // ============================================================
+        if (ch === "I" || ch === "i") {
+            result += out("й");
+            continue;
+        }
+
+        // ============================================================
+        // 9. Consonants (including those with diacritics)
+        // ============================================================
+        const map = {
+            "b": "б", "v": "в", "g": "г", "d": "д",
+            "j": "ж", "z": "з", "k": "к", "l": "л",
+            "m": "м", "n": "н", "p": "п", "r": "р",
+            "s": "с", "t": "т", "f": "ф", "h": "х",
+            "c": "ц", "č": "ч", "š": "ш", "ś": "щ"
+        };
+
+        const lower = ch.toLowerCase();
+        if (map.hasOwnProperty(lower)) {
+            result += out(map[lower]);
+            continue;
+        }
+
+        // ============================================================
+        // 10. Hard sign (Ъ) is never produced; ignore if encountered
+        // ============================================================
+        if (lower === "ъ") {
+            continue;
+        }
+
+        // ============================================================
+        // 11. Fallback: keep original character
+        // ============================================================
+        result += ch;
+    }
+
+    // Final normalization (NFC ensures composed forms)
+    result = result.normalize("NFC");
+
+    document.transcription.text1.value = result;
 }
 
-function copy1()
-{ textRange=document.transcription.text1.createTextRange();
-textRange.execCommand("Copy");
-textRange="";
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
 }
-function copy2()
-{ textRange=document.transcription.text2.createTextRange();
-textRange.execCommand("Copy");
-textRange="";
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
 }
