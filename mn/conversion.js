@@ -1,67 +1,87 @@
 function topright() {
 	// --- INPUT NORMALIZATION & MIXED SCRIPT FIXES ---
 	document.transcription.text1.value = document.transcription.text1.value
-		// Normalize archaic / variant Cyrillic letters to standard ones
-		.replace(/(є|ѳ)/g, "ө")
-		.replace(/(Є|Ѳ)/g, "Ө")
 
 		// Convert homoglyphic Latin letters to Cyrillic when adjacent to Cyrillic (right side)
 		.replace(/(\p{Script=Cyrl})A/ug, "$1А")
+		.replace(/(\p{Script=Cyrl})B/ug, "$1В")
 		.replace(/(\p{Script=Cyrl})C/ug, "$1С")
 		.replace(/(\p{Script=Cyrl})E/ug, "$1Е")
 		.replace(/(\p{Script=Cyrl})Ë/ug, "$1Ё")
-		.replace(/(\p{Script=Cyrl})Ї/ug, "$1Ү")
+		.replace(/(\p{Script=Cyrl})H/ug, "$1Н")
+		.replace(/(\p{Script=Cyrl})I/ug, "$1І")
+		.replace(/(\p{Script=Cyrl})Ï/ug, "$1Ї")
+		.replace(/(\p{Script=Cyrl})J/ug, "$1Ј")
+		.replace(/(\p{Script=Cyrl})K/ug, "$1К")
+		.replace(/(\p{Script=Cyrl})M/ug, "$1М")
 		.replace(/(\p{Script=Cyrl})O/ug, "$1О")
 		.replace(/(\p{Script=Cyrl})P/ug, "$1Р")
+		.replace(/(\p{Script=Cyrl})T/ug, "$1Т")
 		.replace(/(\p{Script=Cyrl})X/ug, "$1Х")
+		.replace(/(\p{Script=Cyrl})Y/ug, "$1Ү")
 
 		// Same as above for lowercase
 		.replace(/(\p{Script=Cyrl})a/ug, "$1а")
 		.replace(/(\p{Script=Cyrl})c/ug, "$1с")
 		.replace(/(\p{Script=Cyrl})e/ug, "$1е")
 		.replace(/(\p{Script=Cyrl})ë/ug, "$1ё")
-		.replace(/(\p{Script=Cyrl})ї/ug, "$1ү")
+		.replace(/(\p{Script=Cyrl})h/ug, "$1һ")
+		.replace(/(\p{Script=Cyrl})i/ug, "$1і")
+		.replace(/(\p{Script=Cyrl})ï/ug, "$1ї")
+		.replace(/(\p{Script=Cyrl})j/ug, "$1ј")
 		.replace(/(\p{Script=Cyrl})o/ug, "$1о")
 		.replace(/(\p{Script=Cyrl})p/ug, "$1р")
 		.replace(/(\p{Script=Cyrl})x/ug, "$1х")
+		.replace(/(\p{Script=Cyrl})y/ug, "$1у")
 
 		// Convert homoglyphic Latin letters to Cyrillic when adjacent to Cyrillic (left side)
 		.replace(/A(\p{Script=Cyrl})/ug, "А$1")
 		.replace(/C(\p{Script=Cyrl})/ug, "С$1")
 		.replace(/E(\p{Script=Cyrl})/ug, "Е$1")
 		.replace(/Ë(\p{Script=Cyrl})/ug, "Ё$1")
-		.replace(/Ї(\p{Script=Cyrl})/ug, "Ү$1")
+		.replace(/H(\p{Script=Cyrl})/ug, "Н$1")
+		.replace(/I(\p{Script=Cyrl})/ug, "І$1")
+		.replace(/Ï(\p{Script=Cyrl})/ug, "Ї$1")
+		.replace(/J(\p{Script=Cyrl})/ug, "Ј$1")
+		.replace(/K(\p{Script=Cyrl})/ug, "К$1")
+		.replace(/M(\p{Script=Cyrl})/ug, "М$1")
 		.replace(/O(\p{Script=Cyrl})/ug, "О$1")
 		.replace(/P(\p{Script=Cyrl})/ug, "Р$1")
+		.replace(/T(\p{Script=Cyrl})/ug, "Т$1")
 		.replace(/X(\p{Script=Cyrl})/ug, "Х$1")
+		.replace(/Y(\p{Script=Cyrl})/ug, "Ү$1")
 
 		// Same as above for lowercase
 		.replace(/a(\p{Script=Cyrl})/ug, "а$1")
 		.replace(/c(\p{Script=Cyrl})/ug, "с$1")
 		.replace(/e(\p{Script=Cyrl})/ug, "е$1")
 		.replace(/ë(\p{Script=Cyrl})/ug, "ё$1")
-		.replace(/ї(\p{Script=Cyrl})/ug, "ү$1")
+		.replace(/h(\p{Script=Cyrl})/ug, "һ$1")
+		.replace(/i(\p{Script=Cyrl})/ug, "і$1")
+		.replace(/ï(\p{Script=Cyrl})/ug, "ї$1")
+		.replace(/j(\p{Script=Cyrl})/ug, "ј$1")
 		.replace(/o(\p{Script=Cyrl})/ug, "о$1")
 		.replace(/p(\p{Script=Cyrl})/ug, "р$1")
-		.replace(/x(\p{Script=Cyrl})/ug, "х$1");
+		.replace(/x(\p{Script=Cyrl})/ug, "х$1")
+		.replace(/y(\p{Script=Cyrl})/ug, "у$1")
+
+		// Normalize archaic / variant Cyrillic letters to standard ones
+		.replace(/(є|ѳ)/g, "ө")
+		.replace(/ї/g, "ү")
+		.replace(/(\p{Script=Cyrl})v/g, "$1ү")
+		.replace(/v(\p{Script=Cyrl})/g, "ү$1")
+		.replace(/(Є|Ѳ)/g, "Ө")
+		.replace(/Ї/g, "Ү")
+		.replace(/(\p{Script=Cyrl})V/g, "$1Ү")
+		.replace(/V(\p{Script=Cyrl})/g, "Ү$1");
 
 	// --- MAIN TRANSFORMATION PIPELINE ---
 	document.transcription.text3.value = document.transcription.text1.value
 		.normalize('NFC') // Normalize Unicode composition
 
 		// --- Й + VOWEL DIACRITIC MARKING ---
-		.replace(/Й([АаЭэОоӨөУуҮү])/g, "Й$1\u0308")
-		.replace(/й([аэоөуү])/g, "й$1\u0308")
-
-		// --- PALATALIZATION MARKING (CONSONANT + IOTATED VOWEL) ---
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Я/g, "$1Á")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])я/g, "$1á")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Е/g, "$1É")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])е/g, "$1é")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ё/g, "$1Ó")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ё/g, "$1ó")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ю/g, "$1Ú")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ю/g, "$1ú")
+		.replace(/Й([АаЭэИиОоӨөУуҮү])/g, "Й$1\u0308")
+		.replace(/й([аэиоөуү])/g, "й$1\u0308")
 
 		// --- VOWEL COLLISION / RESOLUTION RULES ---
 		.replace(/ЕЭ/g, "ЙЭЭ")
@@ -76,35 +96,29 @@ function topright() {
 		.replace(/([Үү])ю/g, "$1йү")
 
 		// --- IOTATED VOWELS → Й + VOWEL (CASE-SENSITIVE HANDLING) ---
-		.replace(/(\p{Uppercase})Я/ug, "$1ЙА")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА")
-		.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2")
-		.replace(/Я(\p{Uppercase})/ug, "ЙА$1")
-		.replace(/Я/g, "Йа")
-		.replace(/я/g, "йа")
+		.replace(/(\p{Lu})Я/ug, "$1ЙА")
+		.replace(/(\p{Lu})(\p{Lu}) Я/ug, "$1$2 ЙА")
+		.replace(/Я (\p{Lu})(\p{Lu})/ug, "ЙА $1$2")
+		.replace(/Я(\p{Lu})/ug, "ЙА$1")
 
-		.replace(/(\p{Uppercase})Е/ug, "$1ЙӨ")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙӨ")
-		.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙӨ $1$2")
-		.replace(/Е(\p{Uppercase})/ug, "ЙӨ$1")
-		.replace(/Е/g, "Йө")
-		.replace(/е/g, "йө")
+		.replace(/(\p{Lu})Е/ug, "$1ЙӨ")
+		.replace(/(\p{Lu})(\p{Lu}) Е/ug, "$1$2 ЙӨ")
+		.replace(/Е (\p{Lu})(\p{Lu})/ug, "ЙӨ $1$2")
+		.replace(/Е(\p{Lu})/ug, "ЙӨ$1")
 
-		.replace(/(\p{Uppercase})Ё/ug, "$1ЙО")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО")
-		.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2")
-		.replace(/Ё(\p{Uppercase})/ug, "ЙО$1")
-		.replace(/Ё/g, "Йо")
-		.replace(/ё/g, "йо")
+		.replace(/(\p{Lu})Ё/ug, "$1ЙО")
+		.replace(/(\p{Lu})(\p{Lu}) Ё/ug, "$1$2 ЙО")
+		.replace(/Ё (\p{Lu})(\p{Lu})/ug, "ЙО $1$2")
+		.replace(/Ё(\p{Lu})/ug, "ЙО$1")
 
-		.replace(/(\p{Uppercase})Ю/ug, "$1ЙУ")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ")
-		.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2")
-		.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1")
-		.replace(/Ю/g, "Йу")
-		.replace(/ю/g, "йу")
+		.replace(/(\p{Lu})Ю/ug, "$1ЙУ")
+		.replace(/(\p{Lu})(\p{Lu}) Ю/ug, "$1$2 ЙУ")
+		.replace(/Ю (\p{Lu})(\p{Lu})/ug, "ЙУ $1$2")
+		.replace(/Ю(\p{Lu})/ug, "ЙУ$1")
 
 		// --- FINAL Й SIMPLIFICATION (NON-VOWEL CONTEXT) ---
+		.replace(/([АЕЁИОӨУҮЫЭЮЯ])И(?![АЕЁИЙОӨУҮЫЭЮЯ])/g, "$1И\u0308")
+		.replace(/([АЕЁИОӨУҮЫЭЮЯаеёиоөуүыэюя])и(?![аеёийоөуүыэюя])/g, "$1и\u0308")
 		.replace(/([АЕЁИОӨУҮЫЭЮЯ])Й(?![АЕЁИЙОӨУҮЫЭЮЯ])/g, "$1И")
 		.replace(/([АЕЁИОӨУҮЫЭЮЯаеёиоөуүыэюя])й(?![аеёийоөуүыэюя])/g, "$1и")
 
@@ -115,6 +129,16 @@ function topright() {
 		// Handle YỌ́ TO YE transformation
 		.replace(/ө\u0301/g, "э\u0301")
 		.replace(/Ө\u0301/g, "Э\u0301")
+
+		// --- PALATALIZATION MARKING (CONSONANT + IOTATED VOWEL) ---
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Я/g, "$1Á")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])я/g, "$1á")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Е/g, "$1É")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])е/g, "$1é")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ё/g, "$1Ó")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ё/g, "$1ó")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ю/g, "$1Ú")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ю/g, "$1ú")
 
 		// --- CYRILLIC → LATIN TRANSLITERATION (LOWERCASE) ---
 		.replace(/а/g, "a")
@@ -195,12 +219,12 @@ function topright() {
 		.replace(/»/g, "\u201c") // high double quote
 
 		.normalize('NFC'); // Final normalization
-	
+
 	topleft();
 }
 
 function topleft() {
-// --- INPUT NORMALIZATION & MIXED SCRIPT FIXES ---
+	// --- INPUT NORMALIZATION & MIXED SCRIPT FIXES ---
 	document.transcription.text1.value = document.transcription.text1.value
 		// Normalize archaic / variant Cyrillic letters to standard ones
 		.replace(/(є|ѳ)/g, "ө")
@@ -248,55 +272,55 @@ function topleft() {
 
 	// --- MAIN TRANSFORMATION PIPELINE ---
 	document.transcription.text2.value = document.transcription.text1.value
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 YA")
-		.replace(/(\p{Uppercase})Я/ug, "$1YA")
-		.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "YA $1$2")
-		.replace(/Я(\p{Uppercase})/ug, "YA$1")
+		.replace(/(\p{Lu})(\p{Lu}) Я/ug, "$1$2 YA")
+		.replace(/(\p{Lu})Я/ug, "$1YA")
+		.replace(/Я (\p{Lu})(\p{Lu})/ug, "YA $1$2")
+		.replace(/Я(\p{Lu})/ug, "YA$1")
 		.replace(/Я/g, "Ya")
 		.replace(/я/g, "ya")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 YE")
-		.replace(/(\p{Uppercase})Е/ug, "$1YE")
-		.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "YE $1$2")
-		.replace(/Е(\p{Uppercase})/ug, "YE$1")
+		.replace(/(\p{Lu})(\p{Lu}) Е/ug, "$1$2 YE")
+		.replace(/(\p{Lu})Е/ug, "$1YE")
+		.replace(/Е (\p{Lu})(\p{Lu})/ug, "YE $1$2")
+		.replace(/Е(\p{Lu})/ug, "YE$1")
 		.replace(/Е/g, "Ye")
 		.replace(/е/g, "ye")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 YO")
-		.replace(/(\p{Uppercase})Ё/ug, "$1YO")
-		.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "YO $1$2")
-		.replace(/Ё(\p{Uppercase})/ug, "YO$1")
+		.replace(/(\p{Lu})(\p{Lu}) Ё/ug, "$1$2 YO")
+		.replace(/(\p{Lu})Ё/ug, "$1YO")
+		.replace(/Ё (\p{Lu})(\p{Lu})/ug, "YO $1$2")
+		.replace(/Ё(\p{Lu})/ug, "YO$1")
 		.replace(/Ё/g, "Yo")
 		.replace(/ё/g, "yo")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 YU")
-		.replace(/(\p{Uppercase})Ю/ug, "$1YU")
-		.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "YU $1$2")
-		.replace(/Ю(\p{Uppercase})/ug, "YU$1")
+		.replace(/(\p{Lu})(\p{Lu}) Ю/ug, "$1$2 YU")
+		.replace(/(\p{Lu})Ю/ug, "$1YU")
+		.replace(/Ю (\p{Lu})(\p{Lu})/ug, "YU $1$2")
+		.replace(/Ю(\p{Lu})/ug, "YU$1")
 		.replace(/Ю/g, "Yu")
 		.replace(/ю/g, "yu")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Х/ug, "$1$2 KH")
-		.replace(/(\p{Uppercase})Х/ug, "$1KH")
-		.replace(/Х (\p{Uppercase})(\p{Uppercase})/ug, "KH $1$2")
-		.replace(/Х(\p{Uppercase})/ug, "KH$1")
+		.replace(/(\p{Lu})(\p{Lu}) Х/ug, "$1$2 KH")
+		.replace(/(\p{Lu})Х/ug, "$1KH")
+		.replace(/Х (\p{Lu})(\p{Lu})/ug, "KH $1$2")
+		.replace(/Х(\p{Lu})/ug, "KH$1")
 		.replace(/Х/g, "Kh")
 		.replace(/х/g, "kh")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Ц/ug, "$1$2 TS")
-		.replace(/(\p{Uppercase})Ц/ug, "$1TS")
-		.replace(/Ц (\p{Uppercase})(\p{Uppercase})/ug, "TS $1$2")
-		.replace(/Ц(\p{Uppercase})/ug, "TS$1")
+		.replace(/(\p{Lu})(\p{Lu}) Ц/ug, "$1$2 TS")
+		.replace(/(\p{Lu})Ц/ug, "$1TS")
+		.replace(/Ц (\p{Lu})(\p{Lu})/ug, "TS $1$2")
+		.replace(/Ц(\p{Lu})/ug, "TS$1")
 		.replace(/Ц/g, "Ts")
 		.replace(/ц/g, "ts")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Ч/ug, "$1$2 CH")
-		.replace(/(\p{Uppercase})Ч/ug, "$1CH")
-		.replace(/Ч (\p{Uppercase})(\p{Uppercase})/ug, "CH $1$2")
-		.replace(/Ч(\p{Uppercase})/ug, "CH$1")
+		.replace(/(\p{Lu})(\p{Lu}) Ч/ug, "$1$2 CH")
+		.replace(/(\p{Lu})Ч/ug, "$1CH")
+		.replace(/Ч (\p{Lu})(\p{Lu})/ug, "CH $1$2")
+		.replace(/Ч(\p{Lu})/ug, "CH$1")
 		.replace(/Ч/g, "Ch")
 		.replace(/ч/g, "ch")
-		.replace(/(\p{Uppercase})(\p{Uppercase}) [ШЩ]/ug, "$1$2 SH")
-		.replace(/(\p{Uppercase})[ШЩ]/ug, "$1SH")
-		.replace(/[ШЩ] (\p{Uppercase})(\p{Uppercase})/ug, "SH $1$2")
-		.replace(/[ШЩ](\p{Uppercase})/ug, "SH$1")
+		.replace(/(\p{Lu})(\p{Lu}) [ШЩ]/ug, "$1$2 SH")
+		.replace(/(\p{Lu})[ШЩ]/ug, "$1SH")
+		.replace(/[ШЩ] (\p{Lu})(\p{Lu})/ug, "SH $1$2")
+		.replace(/[ШЩ](\p{Lu})/ug, "SH$1")
 		.replace(/[ШЩ]/g, "Sh")
 		.replace(/[шщ]/g, "sh")
-		
+
 		.replace(/а/g, "a")
 		.replace(/б/g, "b")
 		.replace(/в/g, "v")
@@ -368,18 +392,16 @@ function topleft() {
 		.replace(/Я/g, "Ya");
 }
 
-function righttop() {/*
+function righttop() {
 	document.transcription.text1.value = document.transcription.text3.value
 		.normalize('NFD')
 		.replace(/([aeou])\u0301/g, "ь$1")
 		.replace(/([AEOU])\u0301/g, "Ь$1")
 		.normalize('NFC')
-		
+
 		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZbcčdfghjklmnprsšśtvyz])y([aeoọuụ])/g, "$1ъy$2")
-		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZbcčdfghjklmnprsšśtvyz])yë/g, "$1ъje")
 		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZ])Y([AEOỌUỤ])/g, "$1ЪY$2")
-		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZ])YË/g, "$1ЪYE")
-		
+
 		.replace(/a/g, "а")
 		.replace(/b/g, "б")
 		.replace(/c/g, "ц")
@@ -390,12 +412,14 @@ function righttop() {/*
 		.replace(/g/g, "г")
 		.replace(/h/g, "х")
 		.replace(/i/g, "и")
-		.replace(/j/g, "ь")
+		.replace(/ị/g, "ы")
+		.replace(/j/g, "ж")
 		.replace(/k/g, "к")
 		.replace(/l/g, "л")
 		.replace(/m/g, "м")
 		.replace(/n/g, "н")
 		.replace(/o/g, "о")
+		.replace(/ọ/g, "ө")
 		.replace(/p/g, "п")
 		.replace(/r/g, "р")
 		.replace(/s/g, "с")
@@ -403,10 +427,10 @@ function righttop() {/*
 		.replace(/ś/g, "щ")
 		.replace(/t/g, "т")
 		.replace(/u/g, "у")
+		.replace(/ụ/g, "ү")
 		.replace(/v/g, "в")
-		.replace(/y/g, "ы")
+		.replace(/y/g, "ь")
 		.replace(/z/g, "з")
-		.replace(/ž/g, "ж")
 		.replace(/A/g, "А")
 		.replace(/B/g, "Б")
 		.replace(/C/g, "Ц")
@@ -417,12 +441,14 @@ function righttop() {/*
 		.replace(/G/g, "Г")
 		.replace(/H/g, "Х")
 		.replace(/I/g, "И")
-		.replace(/J/g, "Ь")
+		.replace(/Ị/g, "Ы")
+		.replace(/J/g, "Ж")
 		.replace(/K/g, "К")
 		.replace(/L/g, "Л")
 		.replace(/M/g, "М")
 		.replace(/N/g, "Н")
 		.replace(/O/g, "О")
+		.replace(/Ọ/g, "Ө")
 		.replace(/P/g, "П")
 		.replace(/R/g, "Р")
 		.replace(/S/g, "С")
@@ -430,27 +456,25 @@ function righttop() {/*
 		.replace(/Ś/g, "Щ")
 		.replace(/T/g, "Т")
 		.replace(/U/g, "У")
+		.replace(/Ụ/g, "Ү")
 		.replace(/V/g, "В")
-		.replace(/Y/g, "Ы")
+		.replace(/Y/g, "Ь")
 		.replace(/Z/g, "З")
-		.replace(/Ž/g, "Ж")
-		.replace(/(\p{Uppercase})\u2019/ug, "Ъ")
+		.replace(/(\p{Lu})\u2019/ug, "Ъ")
 		.replace(/\u2019/g, "ъ")
-		
 		.replace(/ьа/g, "я")
-		.replace(/ьэ/g, "е")
+		.replace(/ь[эө]/g, "е")
 		.replace(/ьо/g, "ё")
-		.replace(/ьу/g, "ю")
+		.replace(/ь[уү]/g, "ю")
 		.replace(/[ЬЪ][Аа]/g, "Я")
-		.replace(/[ЬЪ][Ээ]/g, "Е")
+		.replace(/[ЬЪ][ЭӨэө]/g, "Е")
 		.replace(/[ЬЪ][Оо]/g, "Ё")
-		.replace(/[ЬЪ][Уу]/g, "Ю")
-		
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])е/g, "$1ье")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Е/g, "$1ЬЕ")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])э/g, "$1е")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Э/g, "$1Е")
-		
+		.replace(/[ЬЪ][УҮуү]/g, "Ю")
+
+		.replace(/ь([äëïöü])/g, "й$1")
+		.replace(/Ь([ÄËÏÖÜäëïöü])/g, "Й$1")
+
+		.replace(/([ӨөYy])\u0308/g, "$1")
 		.replace(/ä/g, "а")
 		.replace(/ë/g, "э")
 		.replace(/ö/g, "о")
@@ -459,13 +483,22 @@ function righttop() {/*
 		.replace(/Ë/g, "Э")
 		.replace(/Ö/g, "О")
 		.replace(/Ü/g, "У")
-		
-		.replace(/([АЕЁИЙОУЫЭЮЯЪЬаеёийоуыэюяъь])ь/g, "$1й")
-		.replace(/([АЕЁИЙОУЫЭЮЯЪЬ])Ь/g, "$1Й")
-		
+
+		.replace(/([АЕЁИЙОӨУҮЫЭЮЯЪЬаеёийоөуүыэюяъь])[иь]/g, "$1й")
+		.replace(/([АЕЁИЙОӨУҮЫЭЮЯЪЬ])[ИЬ]/g, "$1Й")
+		.replace(/ï/g, "и")
+		.replace(/Ï/g, "И")
+
 		.replace(/ьъ/g, "ь")
-		.replace(/ЬЪ/g, "Ь");
-*/}
+		.replace(/ЬЪ/g, "Ь")
+
+		.replace(/\u201e/g, "«") // low double quote
+		.replace(/\u201c/g, "»") // high double quote
+
+		.normalize('NFC'); // Final normalization
+
+	topleft();
+}
 
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value);
