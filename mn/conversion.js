@@ -46,7 +46,7 @@ function topright() {
 		.replace(/x(\p{Script=Cyrl})/ug, "х$1");
 
 	// --- MAIN TRANSFORMATION PIPELINE ---
-	document.transcription.text2.value = document.transcription.text1.value
+	document.transcription.text3.value = document.transcription.text1.value
 		.normalize('NFC') // Normalize Unicode composition
 
 		// --- Й + VOWEL DIACRITIC MARKING ---
