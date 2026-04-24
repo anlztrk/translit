@@ -368,17 +368,17 @@ function topleft() {
 		.replace(/Я/g, "Ya");
 }
 
-function righttop() {/*ỌỤ
+function righttop() {/*
 	document.transcription.text1.value = document.transcription.text3.value
 		.normalize('NFD')
 		.replace(/([aeou])\u0301/g, "ь$1")
 		.replace(/([AEOU])\u0301/g, "Ь$1")
 		.normalize('NFC')
 		
-		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZbcčdfghjklmnprsšśtvyz])j([aeou])/g, "$1ъj$2")
-		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZbcčdfghjklmnprsšśtvyz])jë/g, "$1ъje")
-		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZ])J([AEOU])/g, "$1ЪJ$2")
-		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZ])JË/g, "$1ЪJE")
+		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZbcčdfghjklmnprsšśtvyz])y([aeoọuụ])/g, "$1ъy$2")
+		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZbcčdfghjklmnprsšśtvyz])yë/g, "$1ъje")
+		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZ])Y([AEOỌUỤ])/g, "$1ЪY$2")
+		.replace(/([BCČDFGHJKLMNPRSŠŚTVYZ])YË/g, "$1ЪYE")
 		
 		.replace(/a/g, "а")
 		.replace(/b/g, "б")
