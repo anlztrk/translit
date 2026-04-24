@@ -1,4 +1,4 @@
-function cyrlat() {
+function topright() {
 	// --- INPUT NORMALIZATION & MIXED SCRIPT FIXES ---
 	document.transcription.text1.value = document.transcription.text1.value
 		// Normalize archaic / variant Cyrillic letters to standard ones
@@ -191,9 +191,13 @@ function cyrlat() {
 		.replace(/»/g, "\u201c") // high double quote
 
 		.normalize('NFC'); // Final normalization
+	
+	topleft();
 }
 
-function latcyr() {}
+function topleft() {}
+
+function righttop() {}
 
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value);
