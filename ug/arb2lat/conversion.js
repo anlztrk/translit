@@ -131,8 +131,7 @@ function latcyr() {
 
 		.replace(/\u002c/g, "\u060c")
 		.replace(/\u003f/g, "\u061f")
-		.replace(/\u003b/g, "\u061b")
-		.replace(/\u002e/g, "\u06d4");
+		.replace(/\u003b/g, "\u061b");
 }
 
 function handleDotlessI(text) {
