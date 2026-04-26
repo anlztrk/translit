@@ -70,7 +70,7 @@ function cyrlat() {
         .replace(/ż/g, "z")
         .replace(/Ż/g, "Z")
 		.replace(/h/g, "")
-		.replace(/H(\p{Lowercase})/ug, (_, c) => c.toUpperCase())
+		.replace(/H(\p{Ll})/ug, (_, c) => c.toUpperCase())
 		.replace(/H/g, "");
 }
 

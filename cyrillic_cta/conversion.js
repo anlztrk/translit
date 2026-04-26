@@ -131,26 +131,26 @@ function cyrlat() {
 	car = car.replace(/йо/g, "йо\u0300");
 	car = car.replace(/Й(У|у)/g, "Й$1\u0300");
 	car = car.replace(/йу/g, "йу\u0300");
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
-	car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2");
-	car = car.replace(/Я(\p{Uppercase})/ug, "ЙА$1");
+	car = car.replace(/(\p{Lu})(\p{Lu}) Я/ug, "$1$2 ЙА");
+	car = car.replace(/Я (\p{Lu})(\p{Lu})/ug, "ЙА $1$2");
+	car = car.replace(/Я(\p{Lu})/ug, "ЙА$1");
 	car = car.replace(/Я/g, "Йа");
 	car = car.replace(/я/g, "йа");
 	if (iotatedE == true) {
-		car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
-		car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЭ $1$2");
-		car = car.replace(/Е(\p{Uppercase})/ug, "ЙЭ$1");
+		car = car.replace(/(\p{Lu})(\p{Lu}) Е/ug, "$1$2 ЙЭ");
+		car = car.replace(/Е (\p{Lu})(\p{Lu})/ug, "ЙЭ $1$2");
+		car = car.replace(/Е(\p{Lu})/ug, "ЙЭ$1");
 		car = car.replace(/Е/g, "Йэ");
 		car = car.replace(/е/g, "йэ");
 	}
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО");
-	car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2");
-	car = car.replace(/Ё(\p{Uppercase})/ug, "ЙО$1");
+	car = car.replace(/(\p{Lu})(\p{Lu}) Ё/ug, "$1$2 ЙО");
+	car = car.replace(/Ё (\p{Lu})(\p{Lu})/ug, "ЙО $1$2");
+	car = car.replace(/Ё(\p{Lu})/ug, "ЙО$1");
 	car = car.replace(/Ё/g, "Йо");
 	car = car.replace(/ё/g, "йо");
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ");
-	car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2");
-	car = car.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
+	car = car.replace(/(\p{Lu})(\p{Lu}) Ю/ug, "$1$2 ЙУ");
+	car = car.replace(/Ю (\p{Lu})(\p{Lu})/ug, "ЙУ $1$2");
+	car = car.replace(/Ю(\p{Lu})/ug, "ЙУ$1");
 	car = car.replace(/Ю/g, "Йу");
 	car = car.replace(/ю/g, "йу");
 
@@ -458,8 +458,8 @@ function latcyr() {
 	car = car.replace(/e/g, "э");
 	car = car.replace(/è/g, "э\u0300");
 
-	car = car.replace(/(\p{Uppercase})ъ/ug, "$1Ъ");
-	car = car.replace(/(\p{Uppercase})ь/ug, "$1Ь");
+	car = car.replace(/(\p{Lu})ъ/ug, "$1Ъ");
+	car = car.replace(/(\p{Lu})ь/ug, "$1Ь");
 
 	car = car.replace(/(Б|В|Г|Ғ|Ҕ|Д|Ж|З|К|Қ|Ҡ|Л|М|Н|Ң|Ҥ|П|Р|С|Т|Ў|Ф|Х|Һ|Ҳ|Ц|Ч|Џ|Җ|Ҷ|Ҹ|Ӂ|Ш|Щ|б|в|г|ғ|ҕ|д|ж|з|к|қ|ҡ|л|м|н|ң|ҥ|п|р|с|т|ў|ф|х|һ|ҳ|ц|ч|џ|җ|ҷ|ҹ|ӂ|ш|щ)Э/g, "$1Е");
 	car = car.replace(/(Б|В|Г|Ғ|Ҕ|Д|Ж|З|К|Қ|Ҡ|Л|М|Н|Ң|Ҥ|П|Р|С|Т|Ў|Ф|Х|Һ|Ҳ|Ц|Ч|Џ|Җ|Ҷ|Ҹ|Ӂ|Ш|Щ|б|в|г|ғ|ҕ|д|ж|з|к|қ|ҡ|л|м|н|ң|ҥ|п|р|с|т|ў|ф|х|һ|ҳ|ц|ч|џ|җ|ҷ|ҹ|ӂ|ш|щ)э/g, "$1е");

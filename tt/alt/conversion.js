@@ -148,24 +148,24 @@ function cyrlat() {
 			}
 		}
 	}
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Я/ug, "$1$2 ЙА");
-	car = car.replace(/Я (\p{Uppercase})(\p{Uppercase})/ug, "ЙА $1$2");
-	car = car.replace(/Я(\p{Uppercase})/ug, "ЙА$1");
+	car = car.replace(/(\p{Lu})(\p{Lu}) Я/ug, "$1$2 ЙА");
+	car = car.replace(/Я (\p{Lu})(\p{Lu})/ug, "ЙА $1$2");
+	car = car.replace(/Я(\p{Lu})/ug, "ЙА$1");
 	car = car.replace(/Я/g, "Йа");
 	car = car.replace(/я/g, "йа");
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ");
-	car = car.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЫ $1$2");
-	car = car.replace(/Е(\p{Uppercase})/ug, "ЙЫ$1");
+	car = car.replace(/(\p{Lu})(\p{Lu}) Е/ug, "$1$2 ЙЭ");
+	car = car.replace(/Е (\p{Lu})(\p{Lu})/ug, "ЙЫ $1$2");
+	car = car.replace(/Е(\p{Lu})/ug, "ЙЫ$1");
 	car = car.replace(/Е/g, "Йы");
 	car = car.replace(/е/g, "йы");
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ё/ug, "$1$2 ЙО");
-	car = car.replace(/Ё (\p{Uppercase})(\p{Uppercase})/ug, "ЙО $1$2");
-	car = car.replace(/Ё(\p{Uppercase})/ug, "ЙО$1");
+	car = car.replace(/(\p{Lu})(\p{Lu}) Ё/ug, "$1$2 ЙО");
+	car = car.replace(/Ё (\p{Lu})(\p{Lu})/ug, "ЙО $1$2");
+	car = car.replace(/Ё(\p{Lu})/ug, "ЙО$1");
 	car = car.replace(/Ё/g, "Йо");
 	car = car.replace(/ё/g, "йо");
-	car = car.replace(/(\p{Uppercase})(\p{Uppercase}) Ю/ug, "$1$2 ЙУ");
-	car = car.replace(/Ю (\p{Uppercase})(\p{Uppercase})/ug, "ЙУ $1$2");
-	car = car.replace(/Ю(\p{Uppercase})/ug, "ЙУ$1");
+	car = car.replace(/(\p{Lu})(\p{Lu}) Ю/ug, "$1$2 ЙУ");
+	car = car.replace(/Ю (\p{Lu})(\p{Lu})/ug, "ЙУ $1$2");
+	car = car.replace(/Ю(\p{Lu})/ug, "ЙУ$1");
 	car = car.replace(/Ю/g, "Йу");
 	car = car.replace(/ю/g, "йу");
 	

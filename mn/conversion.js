@@ -95,50 +95,62 @@ function topright() {
 		.replace(/ҮЮ/g, "ҮЙҮ")
 		.replace(/([Үү])ю/g, "$1йү")
 
+		// --- PALATALIZATION MARKING (CONSONANT + IOTATED VOWEL) ---
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Я/g, "$1ЬА")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])я/g, "$1ьа")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Е/g, "$1ЬЭ")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])е/g, "$1ьэ")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ё/g, "$1ЬО")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ё/g, "$1ьо")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ю/g, "$1ЬУ")
+		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ю/g, "$1ьу")
+
 		// --- IOTATED VOWELS → Й + VOWEL (CASE-SENSITIVE HANDLING) ---
 		.replace(/(\p{Lu})Я/ug, "$1ЙА")
 		.replace(/(\p{Lu})(\p{Lu}) Я/ug, "$1$2 ЙА")
 		.replace(/Я (\p{Lu})(\p{Lu})/ug, "ЙА $1$2")
 		.replace(/Я(\p{Lu})/ug, "ЙА$1")
+		.replace(/Я/ug, "Йа")
+		.replace(/я/ug, "йа")
 
 		.replace(/(\p{Lu})Е/ug, "$1ЙӨ")
 		.replace(/(\p{Lu})(\p{Lu}) Е/ug, "$1$2 ЙӨ")
 		.replace(/Е (\p{Lu})(\p{Lu})/ug, "ЙӨ $1$2")
 		.replace(/Е(\p{Lu})/ug, "ЙӨ$1")
+		.replace(/Е/ug, "Йө")
+		.replace(/е/ug, "йө")
 
 		.replace(/(\p{Lu})Ё/ug, "$1ЙО")
 		.replace(/(\p{Lu})(\p{Lu}) Ё/ug, "$1$2 ЙО")
 		.replace(/Ё (\p{Lu})(\p{Lu})/ug, "ЙО $1$2")
 		.replace(/Ё(\p{Lu})/ug, "ЙО$1")
+		.replace(/Ё/ug, "Йо")
+		.replace(/ё/ug, "йо")
 
 		.replace(/(\p{Lu})Ю/ug, "$1ЙУ")
 		.replace(/(\p{Lu})(\p{Lu}) Ю/ug, "$1$2 ЙУ")
 		.replace(/Ю (\p{Lu})(\p{Lu})/ug, "ЙУ $1$2")
 		.replace(/Ю(\p{Lu})/ug, "ЙУ$1")
+		.replace(/Ю/ug, "Йу")
+		.replace(/ю/ug, "йу")
 
 		// --- FINAL Й SIMPLIFICATION (NON-VOWEL CONTEXT) ---
-		.replace(/([АЕЁИОӨУҮЫЭЮЯ])И(?![АЕЁИЙОӨУҮЫЭЮЯ])/g, "$1И\u0308")
-		.replace(/([АЕЁИОӨУҮЫЭЮЯаеёиоөуүыэюя])и(?![аеёийоөуүыэюя])/g, "$1и\u0308")
-		.replace(/([АЕЁИОӨУҮЫЭЮЯ])Й(?![АЕЁИЙОӨУҮЫЭЮЯ])/g, "$1И")
-		.replace(/([АЕЁИОӨУҮЫЭЮЯаеёиоөуүыэюя])й(?![аеёийоөуүыэюя])/g, "$1и")
+		.replace(/([АИОӨУҮЫЭ])И(?![АИОӨУҮЫЭ])/g, "$1И\u0308")
+		.replace(/([АИОӨУҮЫЭаиоөуүыэ])и(?![аиоөуүыэ])/g, "$1и\u0308")
+		.replace(/([АИОӨУҮЫЭ])Й(?![АИОӨУҮЫЭ])/g, "$1И")
+		.replace(/([АИОӨУҮЫЭаиоөуүыэ])й(?![аиоөуүыэ])/g, "$1и")
+
+		// Handle YYỌ TO YÉ transformation
+		.replace(/ьйө/g, "йэ\u0301")
+		.replace(/ЬЙӨ/g, "ЙЭ\u0301")
 
 		// Handle soft sign before Й
-		.replace(/ьй([аэоөуү])/g, "й$1\u0301")
-		.replace(/ЬЙ([АЭОӨУҮ])/g, "Й$1\u0301")
-
-		// Handle YỌ́ TO YE transformation
-		.replace(/ө\u0301/g, "э\u0301")
-		.replace(/Ө\u0301/g, "Э\u0301")
-
-		// --- PALATALIZATION MARKING (CONSONANT + IOTATED VOWEL) ---
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Я/g, "$1Á")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])я/g, "$1á")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Е/g, "$1É")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])е/g, "$1é")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ё/g, "$1Ó")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ё/g, "$1ó")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩ])Ю/g, "$1Ú")
-		.replace(/([БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])ю/g, "$1ú")
+		.replace(/ьй([аэоуү])/g, "й$1\u0301")
+		.replace(/ЬЙ([АЭОУҮ])/g, "Й$1\u0301")
+		
+		// Handle palatalizing vowels
+		.replace(/ь([аэоу])/g, "$1\u0301")
+		.replace(/Ь([АЭОУ])/g, "$1\u0301")
 
 		// --- CYRILLIC → LATIN TRANSLITERATION (LOWERCASE) ---
 		.replace(/а/g, "a")
@@ -393,6 +405,12 @@ function topleft() {
 }
 
 function righttop() {
+	document.transcription.text3.value = document.transcription.text3.value
+		.normalize('NFD')
+		.replace(/([CcSs])\u0327/g, "$1\u030c")
+		.replace(/([IiOoUu])\u0300/g, "$1\u0323")
+		.normalize('NFC');
+		
 	document.transcription.text1.value = document.transcription.text3.value
 		.normalize('NFD')
 		.replace(/([aeou])\u0301/g, "ь$1")

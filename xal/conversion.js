@@ -7,9 +7,9 @@ function cyrlat() {
 		.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|Ң|П|Р|С|Т|Ф|Х|Һ|Ц|Ч|Җ|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|ң|п|р|с|т|ф|х|һ|ц|ч|җ|ш|щ)е/g, "$1э")
 		.replace(/(Э|э)\u0300(Э|э)/g, "$1$2")
 
-		.replace(/(\p{Uppercase})(\p{Uppercase}) Е/ug, "$1$2 ЙЭ")
-		.replace(/Е (\p{Uppercase})(\p{Uppercase})/ug, "ЙЭ $1$2")
-		.replace(/Е(\p{Uppercase})/ug, "ЙЭ$1")
+		.replace(/(\p{Lu})(\p{Lu}) Е/ug, "$1$2 ЙЭ")
+		.replace(/Е (\p{Lu})(\p{Lu})/ug, "ЙЭ $1$2")
+		.replace(/Е(\p{Lu})/ug, "ЙЭ$1")
 		.replace(/(Е|е|Э|э)Е/g, "$1Э")
 		.replace(/(Е|е|Э|э)е/g, "$1э")
 		.replace(/Е/g, "Йэ")
