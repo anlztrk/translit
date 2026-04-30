@@ -407,6 +407,7 @@ function topleft() {
 function righttop() {
 	document.transcription.text3.value = document.transcription.text3.value
 		.normalize('NFD')
+		.replace(/\u00b4([Ss])/g, "$1\u0301")
 		.replace(/([CcSs])\u0327/g, "$1\u030c")
 		.replace(/([IiOoUu])\u0300/g, "$1\u0323")
 		.normalize('NFC');
