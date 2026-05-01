@@ -129,7 +129,12 @@ function cyrlat() {
 		.replace(/Ю/g, "Yu")
 		.replace(/Я/g, "Ya")
 		.replace(/«/g, "\u201c")
-		.replace(/»/g, "\u201d");
+		.replace(/»/g, "\u201d")
+		
+		.replace(/(Ğ|Q|X|ğ|q|x)i/g, "$1ı")
+		.replace(/(H|h|K|k)ı/g, "$1i")
+		.replace(/i(ğ|q|x)/g, "ı$1")
+		.replace(/ı(h|k)/g, "i$1");
 
 	document.transcription.text2.value = handleDotlessI(document.transcription.text2.value);
 }
