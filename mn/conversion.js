@@ -68,12 +68,12 @@ function topright() {
 		// Normalize archaic / variant Cyrillic letters to standard ones
 		.replace(/(є|ѳ)/g, "ө")
 		.replace(/ї/g, "ү")
-		.replace(/(\p{Script=Cyrl})v/g, "$1ү")
-		.replace(/v(\p{Script=Cyrl})/g, "ү$1")
+		.replace(/(\p{Script=Cyrl})v/ug, "$1ү")
+		.replace(/v(\p{Script=Cyrl})/ug, "ү$1")
 		.replace(/(Є|Ѳ)/g, "Ө")
 		.replace(/Ї/g, "Ү")
-		.replace(/(\p{Script=Cyrl})V/g, "$1Ү")
-		.replace(/V(\p{Script=Cyrl})/g, "Ү$1");
+		.replace(/(\p{Script=Cyrl})V/ug, "$1Ү")
+		.replace(/V(\p{Script=Cyrl})/ug, "Ү$1");
 
 	// --- MAIN TRANSFORMATION PIPELINE ---
 	document.transcription.text3.value = document.transcription.text1.value
