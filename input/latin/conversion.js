@@ -878,6 +878,7 @@ function cyrlat() {
 
 	.replace(/\u0060(\p{Script=Latn})/ug, "$1\u0300")
 	.replace(/\u00b4(\p{Script=Latn})/ug, "$1\u0301")
+	.replace(/\u005e(\p{Script=Latn})/ug, "$1\u0302")
 	.replace(/\u007e(\p{Script=Latn})/ug, "$1\u0303")
 	.replace(/\u00a8(\p{Script=Latn})/ug, "$1\u0308")
 
