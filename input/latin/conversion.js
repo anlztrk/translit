@@ -876,6 +876,11 @@ function cyrlat() {
 	.replace(/ⱬ(\u005b|\u003c)/g, "ƶ")
 	.replace(/z(\u005b|\u003c)/g, "ⱬ")
 
+	.replace(/\u0060(\p{Script=Latn})/ug, "$1\u0300")
+	.replace(/\u00b4(\p{Script=Latn})/ug, "$1\u0301")
+	.replace(/\u007e(\p{Script=Latn})/ug, "$1\u0303")
+	.replace(/\u00a8(\p{Script=Latn})/ug, "$1\u0308")
+
 	.replace(/\u0023grave\u0023/g, "\u0300")
 	.replace(/\u0023(acute|accent)\u0023/g, "\u0301")
 	.replace(/\u0023(circumflex|caret)\u0023/g, "\u0302")
