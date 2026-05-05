@@ -41,6 +41,9 @@
 		.replace(/3(\p{Ll})/ug, "Ʒ$1")
 		.replace(/(\p{Ll})3/ug, "$1ʒ")
 		.replace(/(\p{Lu})3/ug, "$1Ʒ")
+
+		.replace(/(\p{Lu})Ǯ(\p{Ll})/ug, "$1ǯ$2")
+		.replace(/(\p{Lu})Ʒ(\p{Ll})/ug, "$1ʒ$2")
 		
 		.replace(/ts\u0027/g, "ǯ")
 		.replace(/T[Ss]\u0027/g, "Ǯ")
