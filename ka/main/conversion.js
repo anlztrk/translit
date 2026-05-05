@@ -216,6 +216,53 @@ function topright() {
 	});
 }
 
+function righttop(){
+	document.transcription.text1.value = document.transcription.text3.value
+		.toLowerCase()
+		.replace(/[ıi]\u0307/g, "i")
+		
+		.replace(/tt/g, "ტ")
+		.replace(/kk/g, "კ")
+		.replace(/pp/g, "პ")
+		.replace(/čč/g, "ჭ")
+		.replace(/cc/g, "წ")
+		
+		.replace(/t-t/g, "tt")
+		.replace(/k-k/g, "kk")
+		.replace(/p-p/g, "pp")
+		.replace(/č-č/g, "čč")
+		.replace(/c-c/g, "cc")
+		
+		.replace(/a/g, "ა")
+		.replace(/b/g, "ბ")
+		.replace(/g/g, "გ")
+		.replace(/d/g, "დ")
+		.replace(/e/g, "ე")
+		.replace(/v/g, "ვ")
+		.replace(/t/g, "თ")
+		.replace(/i/g, "ი")
+		.replace(/l/g, "ლ")
+		.replace(/m/g, "მ")
+		.replace(/n/g, "ნ")
+		.replace(/o/g, "ო")
+		.replace(/ž/g, "ჟ")
+		.replace(/r/g, "რ")
+		.replace(/s/g, "ს")
+		.replace(/u/g, "უ")
+		.replace(/p/g, "ფ")
+		.replace(/k/g, "ქ")
+		.replace(/ġ/g, "ღ")
+		.replace(/q/g, "ყ")
+		.replace(/š/g, "შ")
+		.replace(/č/g, "ჩ")
+		.replace(/ż/g, "ძ")
+		.replace(/z/g, "ზ")
+		.replace(/c/g, "ც")
+		.replace(/x/g, "ხ")
+		.replace(/j/g, "ჯ")
+		.replace(/h/g, "ჰ");
+}
+
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value);
 }
