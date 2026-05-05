@@ -260,7 +260,9 @@ function righttop(){
 		.replace(/c/g, "ც")
 		.replace(/x/g, "ხ")
 		.replace(/j/g, "ჯ")
-		.replace(/h/g, "ჰ");
+		.replace(/h/g, "ჰ")
+		.normalize('NFC');
+		topleft();
 }
 
 function copy1() {
