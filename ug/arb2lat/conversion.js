@@ -120,7 +120,7 @@ function latcyr() {
 		.replace(/[Üü]/g, "ئۈ")
 		.replace(/[Ww]/g, "ۋ")
 		.replace(/[Xx]/g, "خ")
-		.replace(/[Yy]/g, "ي")
+		.replace(/[YyŶŷ]/g, "ي")
 		.replace(/[Zz]/g, "ز")
 		.replace(/ئاللاھ/g, "ﷲ")
 
