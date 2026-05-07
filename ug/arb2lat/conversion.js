@@ -1,4 +1,4 @@
-function cyrlat() {
+function arblat() {
 	let latinWords = {};
 	let index = 0;
 
@@ -79,7 +79,7 @@ function acuteFix(car) {
 	return car;
 }
 
-function latcyr() {
+function latarb() {
 	document.transcription.text2.value = acuteFix(document.transcription.text2.value);
 	document.transcription.text1.value = document.transcription.text2.value
 		.replace(/\u00b4/g, "\u2019")
