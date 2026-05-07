@@ -185,8 +185,8 @@ function handleDotlessI(text) {
 		return modifiedWord.join('');
 	}
 
-	let words = text.split(/(\s+)/);
-	let transformedText = words.map(word => /\s/.test(word) ? word : transformWord(word));
+	let words = text.split(/([\s-]+)/);
+	let transformedText = words.map(word => /^[\s-]+$/.test(word) ? word : transformWord(word));
 	return transformedText.join('');
 }
 
