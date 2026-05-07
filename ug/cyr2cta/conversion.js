@@ -128,13 +128,14 @@ function cyrlat() {
 		.replace(/Ш/g, "Ş")
 		.replace(/Ю/g, "Yu")
 		.replace(/Я/g, "Ya")
+		.replace(/[Ъъ]/g, "\u0027")
 		.replace(/«/g, "\u201c")
 		.replace(/»/g, "\u201d")
 		
-		.replace(/(Ğ|Q|X|ğ|q|x)i/g, "$1ı")
-		.replace(/(H|h|K|k)ı/g, "$1i")
-		.replace(/i(ğ|q|x)/g, "ı$1")
-		.replace(/ı(h|k)/g, "i$1");
+		.replace(/([ĞQXğqx])i/g, "$1ı")
+		.replace(/([HhKk])ı/g, "$1i")
+		.replace(/i([ğqx])/g, "ı$1")
+		.replace(/ı([hk])/g, "i$1");
 
 	document.transcription.text2.value = handleDotlessI(document.transcription.text2.value);
 }
@@ -149,10 +150,10 @@ function latcyr() {
 		.replace(/Ğ/g, "Ғ")
 		.replace(/D/g, "Д")
 		.replace(/E/g, "Е")
-		.replace(/J|Ŷ/g, "Ж")
+		.replace(/[JŶ]/g, "Ж")
 		.replace(/C/g, "Җ")
 		.replace(/Z/g, "З")
-		.replace(/I|İ/g, "И")
+		.replace(/[Iİ]/g, "И")
 		.replace(/Y/g, "Й")
 		.replace(/K/g, "К")
 		.replace(/Q/g, "Қ")
@@ -180,7 +181,7 @@ function latcyr() {
 		.replace(/g/g, "г")
 		.replace(/ğ/g, "ғ")
 		.replace(/d/g, "д")
-		.replace(/j|ŷ/g, "ж")
+		.replace(/[jŷ]/g, "ж")
 		.replace(/c/g, "җ")
 		.replace(/z/g, "з")
 		.replace(/i/g, "и")
@@ -204,13 +205,15 @@ function latcyr() {
 		.replace(/x/g, "х")
 		.replace(/ç/g, "ч")
 		.replace(/ş/g, "ш")
-		.replace(/ı|i/g, "и")
+		.replace(/[ıi]/g, "и")
 		.replace(/Й[Аа]/g, "Я")
 		.replace(/Й[Уу]/g, "Ю")
 		.replace(/йа/g, "я")
 		.replace(/йу/g, "ю")
 		.replace(/\u201c/g, "«")
-		.replace(/\u201d/g, "»");
+		.replace(/\u201d/g, "»")
+		.replace(/[\u0027\u2018\u2019]/g, "Ъ")
+		.replace(/Ъ(\p{Ll})/ug, "ъ$1");
 }
 
 function copy1() {
