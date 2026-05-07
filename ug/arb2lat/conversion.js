@@ -120,7 +120,7 @@ function latcyr() {
 		.replace(/[Üü]/g, "ئۈ")
 		.replace(/[Ww]/g, "ۋ")
 		.replace(/[Xx]/g, "خ")
-		.replace(/[YyŶŷ]/g, "ي")
+		.replace(/[Yy]/g, "ي")
 		.replace(/[Zz]/g, "ز")
 		.replace(/ئاللاھ/g, "ﷲ")
 
@@ -304,6 +304,7 @@ function ctalat() {
 		.replace(/ñ/g, "ng")
 		.replace(/ş/g, "sh")
 		.replace(/v/g, "w")
+		.replace(/ŷ/g, "y")
 		.replace(/J/g, "Zh")
 		.replace(/C/g, "J")
 		.replace(/Ç/g, "Ch")
@@ -313,7 +314,8 @@ function ctalat() {
 		.replace(/Ğ/g, "Gh")
 		.replace(/Ñ/g, "NG")
 		.replace(/Ş/g, "Sh")
-		.replace(/V/g, "W");
+		.replace(/V/g, "W")
+		.replace(/Ŷ/g, "Y");
 }
 
 function copy1() {
