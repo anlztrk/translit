@@ -1,5 +1,5 @@
 function topright() {
-	document.transcription.text2.value = document.transcription.text1.value
+	document.transcription.text3.value = document.transcription.text1.value
 		.replace(/Ե([Ււ])/g, "Վ")
 		.replace(/եւ/g, "վ")
 		
