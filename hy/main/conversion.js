@@ -98,16 +98,17 @@ function topleft() {
 		.replace(/Ե([Ււ])/g, "Վ")
 		.replace(/եւ/g, "վ")
 
-		.replace(/(\p{Script=Armn})Ե/ug, "$1Է")
-		.replace(/(\p{Script=Armn})ե/ug, "$1է")
-		.replace(/(\p{Script=Armn})Ո/ug, "$1Օ")
-		.replace(/(\p{Script=Armn})ո/ug, "$1օ")
-		
 		.replace(/ԵՎ/g, "EV")
 		.replace(/Եվ/g, "Ev")
 		.replace(/Ու/g, "U")
 		.replace(/ՈՒ/g, "U")
 		.replace(/ու/g, "u")
+
+		.replace(/(\p{Script=Armn})Ե/ug, "$1Է")
+		.replace(/(\p{Script=Armn})ե/ug, "$1է")
+		.replace(/(\p{Script=Armn})Ո/ug, "$1Օ")
+		.replace(/(\p{Script=Armn})ո/ug, "$1օ")
+		
 		.replace(/Ա/g, "A")
 		.replace(/Բ/g, "B") //b/
 		.replace(/Գ/g, "G") //g/
