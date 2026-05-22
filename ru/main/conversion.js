@@ -371,9 +371,6 @@ function topright() {
 		.replace(/\u203a/g, "\u2018")
 		.replace(/\u00ab/g, "\u201e")
 		.replace(/\u00bb/g, "\u201c")
-		
-		.replace(/«/g, "\u201e")
-		.replace(/»/g, "\u201c")
 		.normalize('NFC');
 }
 
