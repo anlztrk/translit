@@ -212,8 +212,10 @@ function topleft() {
 		.replace(/Ẏ/g, "Y")
 		.replace(/ẏ/g, "y")
 
-		.replace(/«/g, "\u201e")
-		.replace(/»/g, "\u201c")
+		.replace(/\u2039/g, "\u2018")
+		.replace(/\u203a/g, "\u2019")
+		.replace(/\u00ab/g, "\u201c")
+		.replace(/\u00bb/g, "\u201d")
 		.normalize('NFC');
 }
 
@@ -316,7 +318,13 @@ function topright() {
 		.replace(/Є/g, "Je")
 		.replace(/Ї/g, "Ji")
 		.replace(/Ю/g, "Ju")
-		.replace(/Я/g, "Ja");
+		.replace(/Я/g, "Ja")
+		
+		.replace(/\u2039/g, "\u201a")
+		.replace(/\u203a/g, "\u2018")
+		.replace(/\u00ab/g, "\u201e")
+		.replace(/\u00bb/g, "\u201c")
+		.normalize('NFC');
 }
 
 function copy1() {
