@@ -1,4 +1,4 @@
-function topleft() {
+function cyrsimp() {
 	document.transcription.text2.value = document.transcription.text1.value
 		.replace(/(\p{Script=Cyrl})a/ug, "$1а")
 		.replace(/a(\p{Script=Cyrl})/ug, "а$1")
@@ -219,7 +219,7 @@ function topleft() {
 		.normalize('NFC');
 }
 
-function topright() {
+function cyrstrict() {
 	document.transcription.text1.value = document.transcription.text1.value
 		.replace(/<</g, "«")
 		.replace(/>>/g, "»");
@@ -327,6 +327,155 @@ function topright() {
 		.normalize('NFC');
 }
 
+function cyrpol() {
+	document.transcription.text1.value = document.transcription.text1.value
+		.replace(/<</g, "«")
+		.replace(/>>/g, "»");
+
+	document.transcription.text4.value = document.transcription.text1.value
+		.replace(/<</g, "«")
+		.replace(/>>/g, "»")
+
+		.replace(/(\u2019|\u0027)/g, "\u02bc")
+
+		.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ)Я/g, "$1ЬА")
+		.replace(/(б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Я/g, "$1ьА")
+		.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)я/g, "$1ьа")
+		.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ)Ю/g, "$1ЬУ")
+		.replace(/(б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ю/g, "$1ьУ")
+		.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ю/g, "$1ьу")
+		.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ)Є/g, "$1ЬЕ")
+		.replace(/(б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Є/g, "$1ьЕ")
+		.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)є/g, "$1ье")
+		.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ)Ї/g, "$1ЬІ")
+		.replace(/(б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Ї/g, "$1ьІ")
+		.replace(/(Б|В|Г|Ґ|Д|Ж|З|Й|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|ґ|д|ж|з|й|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)ї/g, "$1ьі")
+
+		.replace(/\u02bc/g, "")
+
+		.replace(/ль/g, "љ")
+		.replace(/Л(Ь|ь)/g, "Љ")
+		.replace(/лі/g, "љі")
+		.replace(/Л(І|і)/g, "Љ$1")
+
+		.replace(/Ь(А|Е|И|О|У|а|е|и|о|у)/g, "І$1")
+		.replace(/ь(А|Е|И|О|У|а|е|и|о|у)/g, "і$1")
+		.replace(/(Ь|ь)І/g, "І")
+		.replace(/ьі/g, "і")
+
+		.replace(/(\p{Lu})(\p{Lu}) Х/ug, "$1$2 CH")
+		.replace(/(\p{Lu})Х/ug, "$1CH")
+		.replace(/Х (\p{Lu})(\p{Lu})/ug, "CH $1$2")
+		.replace(/Х(\p{Lu})/ug, "CH$1")
+		.replace(/Х/g, "Ch")
+		.replace(/х/g, "ch")
+		.replace(/(\p{Lu})(\p{Lu}) Ч/ug, "$1$2 CZ")
+		.replace(/(\p{Lu})Ч/ug, "$1CZ")
+		.replace(/Ч (\p{Lu})(\p{Lu})/ug, "CZ $1$2")
+		.replace(/Ч(\p{Lu})/ug, "CZ$1")
+		.replace(/Ч/g, "Cz")
+		.replace(/ч/g, "cz")
+		.replace(/(\p{Lu})(\p{Lu}) Ш/ug, "$1$2 SZ")
+		.replace(/(\p{Lu})Ш/ug, "$1SZ")
+		.replace(/Ш (\p{Lu})(\p{Lu})/ug, "SZ $1$2")
+		.replace(/Ш(\p{Lu})/ug, "SZ$1")
+		.replace(/Ш/g, "Sz")
+		.replace(/ш/g, "sz")
+		.replace(/(\p{Lu})(\p{Lu}) Щ/ug, "$1$2 SZCZ")
+		.replace(/(\p{Lu})Щ/ug, "$1SZCZ")
+		.replace(/Щ (\p{Lu})(\p{Lu})/ug, "SZCZ $1$2")
+		.replace(/Щ(\p{Lu})/ug, "SZCZ$1")
+		.replace(/Щ/g, "Szcz")
+		.replace(/щ/g, "szcz")
+		.replace(/(\p{Lu})(\p{Lu}) Є/ug, "$1$2 JE")
+		.replace(/(\p{Lu})Є/ug, "$1JE")
+		.replace(/Є (\p{Lu})(\p{Lu})/ug, "JE $1$2")
+		.replace(/Є(\p{Lu})/ug, "JE$1")
+		.replace(/Є/g, "Je")
+		.replace(/є/g, "je")
+		.replace(/(\p{Lu})(\p{Lu}) Ї/ug, "$1$2 JI")
+		.replace(/(\p{Lu})Ї/ug, "$1JI")
+		.replace(/Ї (\p{Lu})(\p{Lu})/ug, "JI $1$2")
+		.replace(/Ї(\p{Lu})/ug, "JI$1")
+		.replace(/Ї/g, "Ji")
+		.replace(/ї/g, "ji")
+		.replace(/(\p{Lu})(\p{Lu}) Ю/ug, "$1$2 JU")
+		.replace(/(\p{Lu})Ю/ug, "$1JU")
+		.replace(/Ю (\p{Lu})(\p{Lu})/ug, "JU $1$2")
+		.replace(/Ю(\p{Lu})/ug, "JU$1")
+		.replace(/Ю/g, "Ju")
+		.replace(/ю/g, "ju")
+		.replace(/(\p{Lu})(\p{Lu}) Я/ug, "$1$2 JA")
+		.replace(/(\p{Lu})Я/ug, "$1JA")
+		.replace(/Я (\p{Lu})(\p{Lu})/ug, "JA $1$2")
+		.replace(/Я(\p{Lu})/ug, "JA$1")
+		.replace(/Я/g, "Ja")
+		.replace(/я/g, "ja")
+
+		.replace(/а/g, "a")
+		.replace(/б/g, "b")
+		.replace(/в/g, "w")
+		.replace(/г/g, "h")
+		.replace(/ґ/g, "g")
+		.replace(/д/g, "d")
+		.replace(/е/g, "e")
+		.replace(/ж/g, "ż")
+		.replace(/з/g, "z")
+		.replace(/и/g, "y")
+		.replace(/і/g, "i")
+		.replace(/й/g, "j")
+		.replace(/к/g, "k")
+		.replace(/љ/g, "l")
+		.replace(/л/g, "ł")
+		.replace(/м/g, "m")
+		.replace(/н/g, "n")
+		.replace(/о/g, "o")
+		.replace(/п/g, "p")
+		.replace(/р/g, "r")
+		.replace(/с/g, "s")
+		.replace(/т/g, "t")
+		.replace(/у/g, "u")
+		.replace(/ф/g, "f")
+		.replace(/ц/g, "c")
+		.replace(/ь/g, "\u0301")
+
+		.replace(/А/g, "A")
+		.replace(/Б/g, "B")
+		.replace(/В/g, "W")
+		.replace(/Г/g, "H")
+		.replace(/Ґ/g, "G")
+		.replace(/Д/g, "D")
+		.replace(/Е/g, "E")
+		.replace(/Ж/g, "Ż")
+		.replace(/З/g, "Z")
+		.replace(/И/g, "Y")
+		.replace(/І/g, "I")
+		.replace(/Й/g, "J")
+		.replace(/К/g, "K")
+		.replace(/Љ/g, "L")
+		.replace(/Л/g, "Ł")
+		.replace(/М/g, "M")
+		.replace(/Н/g, "N")
+		.replace(/О/g, "O")
+		.replace(/П/g, "P")
+		.replace(/Р/g, "R")
+		.replace(/С/g, "S")
+		.replace(/Т/g, "T")
+		.replace(/У/g, "U")
+		.replace(/Ф/g, "F")
+		.replace(/Ц/g, "C")
+		.replace(/Ь/g, "\u0301")
+
+		.replace(/(D|d|T|t)\u0301/g, "$1\u0326")
+
+		.replace(/\u2039/g, "\u2018")
+		.replace(/\u203a/g, "\u2019")
+		.replace(/\u00ab/g, "\u201c")
+		.replace(/\u00bb/g, "\u201d")
+
+		.normalize('NFC');
+}
+
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value);
 }
@@ -337,4 +486,8 @@ function copy2() {
 
 function copy3() {
 	navigator.clipboard.writeText(document.transcription.text3.value);
+}
+
+function copy4() {
+	navigator.clipboard.writeText(document.transcription.text4.value);
 }
