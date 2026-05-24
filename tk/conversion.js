@@ -227,6 +227,10 @@ function rightbottom() {
 function bottomleft() {}
 
 function bottomright() {
+	document.transcription.text3.value = document.transcription.text3.value
+		.replace(/Ə/g, "Ä")
+		.replace(/ə/g, "ä");
+	
 	document.transcription.text2.value = document.transcription.text3.value
 		.replace(/V/g, "W")
 		.replace(/Y/g, "Ý")
