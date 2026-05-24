@@ -95,7 +95,12 @@ function leftright() {
 		.replace(/Ъ/g, "")
 		.replace(/Ы/g, "Y")
 		.replace(/Ь/g, "")
-		.replace(/Э/g, "E");
+		.replace(/Э/g, "E")
+		
+		.replace(/\u2039/g, "\u2018")
+		.replace(/\u203a/g, "\u2019")
+		.replace(/\u00ab/g, "\u201c")
+		.replace(/\u00bb/g, "\u201d");
 }
 
 function rightleft() {
@@ -199,8 +204,10 @@ function rightleft() {
 		.replace(/йье/g, "ййе")
 		.replace(/ЙЬЕ/g, "ЙЙЕ")
 
-		.replace(/\u201e/g, "\u00ab")
-		.replace(/\u201c/g, "\u00bb");
+		.replace(/\u2018/g, "\u2039")
+		.replace(/\u2019/g, "\u203a")
+		.replace(/\u201c/g, "\u00ab")
+		.replace(/\u201d/g, "\u00bb");
 }
 
 function leftbottom() {}
