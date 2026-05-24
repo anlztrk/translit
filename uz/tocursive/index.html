@@ -74,32 +74,39 @@
 	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf><br><br> 
 	</td></tr></table>
 <script>
-// Sync scroll positions of both textareas
-function syncScroll(e) {
-    const t1 = document.getElementsByName("text1")[0];
-    const t2 = document.getElementsByName("text2")[0];
+          document.addEventListener("DOMContentLoaded", () => {
+            const textareas = Array.from(document.querySelectorAll("textarea"));
 
-    const source = e.target;
-
-    // Scroll percentage of source
-    const percent = source.scrollTop / (source.scrollHeight - source.clientHeight);
-
-    // Apply to other textarea
-    [t1, t2].forEach(t => {
-        if (t !== source) {
-            t.scrollTop = percent * (t.scrollHeight - t.clientHeight);
-        }
-    });
-}
-
-window.addEventListener("DOMContentLoaded", function() {
-    const t1 = document.getElementsByName("text1")[0];
-    const t2 = document.getElementsByName("text2")[0];
-
-    t1.addEventListener("scroll", syncScroll);
-    t2.addEventListener("scroll", syncScroll);
-});
-</script>
+            function syncScroll(e) {
+              const source = e.target;
+              const sourceMax = source.scrollHeight - source.clientHeight;
+              const percent = sourceMax > 0 ? source.scrollTop / sourceMax : 0;
+              // Temporarily disable listeners
+              textareas.forEach(t => {
+                t.removeEventListener("scroll", syncScroll);
+              });
+              // Sync others
+              textareas.forEach(t => {
+                if (t === source) return;
+                const targetMax = t.scrollHeight - t.clientHeight;
+                t.scrollTop = targetMax > 0 ? percent * targetMax : 0;
+              });
+              // Re-enable listeners after browser finishes this frame
+              requestAnimationFrame(() => {
+                textareas.forEach(t => {
+                  t.addEventListener("scroll", syncScroll, {
+                    passive: true
+                  });
+                });
+              });
+            }
+            textareas.forEach(t => {
+              t.addEventListener("scroll", syncScroll, {
+                passive: true
+              });
+            });
+          });
+        </script>
 </form>
 </body> 
 </html> 
