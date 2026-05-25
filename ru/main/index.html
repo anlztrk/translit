@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
   <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
     <title>Russian Cyrillic - Latin transliterator</title>
     <script type="text/javascript" src="conversion.js"></script>
     <style type="text/css">
@@ -19,74 +19,93 @@
         font-size: 15px;
         width: 500px;
         height: 300px;
-		}
-		@media (max-width: 720px) {
-			table {
-				width: 100% !important;
-				border-collapse: collapse;
-			}
+      }
 
-			tr {
-				display: block;
-				width: 100%;
-			}
+      @media (max-width: 720px) {
+        table {
+          width: 100% !important;
+          border-collapse: collapse;
+        }
 
-			td {
-				display: block;
-				width: 100% !important;
-				padding-left: 0 !important;
-				padding-right: 0 !important;
-			}
+        tr {
+          display: block;
+          width: 100%;
+        }
 
-			td[colspan] {
-				width: 100% !important;
-			}
+        td {
+          display: block;
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
 
-			textarea {
-				width: 100% !important;
-				height: 300px;
-				box-sizing: border-box;
-			}
-		}
-		</style>
+        td[colspan] {
+          width: 100% !important;
+        }
+
+        textarea {
+          width: 100% !important;
+          height: 300px;
+          box-sizing: border-box;
+        }
+      }
+    </style>
   </head>
   <body>
     <h1>Russian Cyrillic - Latin transliterator</h1>
     <div align="center"> Type or copy a text<br>
       <form name=transcription>
         <table width="90%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
-          <!-- Top textarea spanning both -->
           <tr>
-            <td colspan="2" style="padding-top: 10px; padding-left: 0; padding-right: 0;">
+            <!-- Top left textarea -->
+            <td width="50%">
               <center>in Russian alphabet:</center>
               <br>
-              <textarea name="text1" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="topleft();topright()"></textarea>
+              <textarea name="text1" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="cyrsimp();cyrstr();cyrtra()"></textarea>
               <br>
               <br>
               <center>
-                <input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text1.focus()" value="clear" class=bf><br><br>
+                <input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text1.focus()" value="clear" class=bf>
+                <br>
+                <br>
               </center>
-          </tr>
-          <tr>
-            <!-- Left textarea -->
-            <td width="50%">
-              <center>here you get its friendly romanization: </center>
-              <br>
-              <textarea name="text2" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="lefttop();leftright()"></textarea>
-              <br>
-              <br>
-              <center>
-                <input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text2.focus()" value="clear" class=bf><br><br>
-              </center>
-              <!-- Right textarea -->
+              <!-- Top right textarea -->
             <td width="50%">
               <center>and here you get a precise one:</center>
               <br>
-              <textarea name="text3" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="righttop();topleft()"></textarea>
+              <textarea name="text4" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="tracyr();cyrsimp();cyrstr()"></textarea>
               <br>
               <br>
               <center>
-                <input type=button onClick="transcription.text3.select();copy3()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text3.focus()" value="clear" class=bf><br><br>
+                <input type=button onClick="transcription.text4.select();copy4()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text4.focus()" value="clear" class=bf>
+                <br>
+                <br>
+              </center>
+          </tr>
+          <tr>
+            <!-- Bottom left textarea -->
+            <td width="50%">
+              <center>here you get its friendly romanization: </center>
+              <br>
+              <textarea name="text2" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="simpcyr();simpstr()"></textarea>
+              <br>
+              <br>
+              <center>
+                <input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text2.focus()" value="clear" class=bf>
+                <br>
+                <br>
+              </center>
+              <!-- Bottom right textarea -->
+            <td width="50%">
+              <center>and here you get a precise one:</center>
+              <br>
+              <textarea name="text3" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="strcyr();cyrsimp()"></textarea>
+              <br>
+              <br>
+              <center>
+                <input type=button onClick="transcription.text3.select();copy3()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text3.focus()" value="clear" class=bf>
+                <br>
+                <br>
               </center>
           </tr>
         </table>
