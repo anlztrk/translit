@@ -1,73 +1,79 @@
-﻿<html> 
-<head>
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
-<title>Karakalpak alphabet - Common Turkic Alphabet converter</title> 
-		<script type="text/javascript" src="conversion.js"></script>
-		<style type="text/css"> 
-		@font-face {
-			font-family: 'GB-Plus';
-			src: url('/translit/fonts/GentiumBookPlus-Regular.ttf') format('truetype');
-			font-weight: normal;
-			font-style: normal;
-			unicode-range: U+000-10FFFF;
-		}
-		textarea {
-			font-family: 'Gentium Book Plus', 'GB-Plus', 'Liberation Serif', Tinos, Cambria, 'Times New Roman', serif;
-			font-size: 15px;
-			width: 500px;
-			height: 300px;
-		}
-		@media (max-width: 720px) {
-			table {
-				width: 100% !important;
-				border-collapse: collapse;
-			}
+﻿<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
+    <title>Karakalpak alphabet - Common Turkic Alphabet converter</title>
+    <script type="text/javascript" src="conversion.js"></script>
+    <style type="text/css">
+      @font-face {
+        font-family: 'GB-Plus';
+        src: url('/translit/fonts/GentiumBookPlus-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        unicode-range: U+000-10FFFF;
+      }
 
-			tr {
-				display: block;
-				width: 100%;
-			}
+      textarea {
+        font-family: 'Gentium Book Plus', 'GB-Plus', 'Liberation Serif', Tinos, Cambria, 'Times New Roman', serif;
+        font-size: 15px;
+        width: 500px;
+        height: 300px;
+      }
 
-			td {
-				display: block;
-				width: 100% !important;
-				padding-left: 0 !important;
-				padding-right: 0 !important;
-			}
+      @media (max-width: 720px) {
+        table {
+          width: 100% !important;
+          border-collapse: collapse;
+        }
 
-			td[colspan] {
-				width: 100% !important;
-			}
+        tr {
+          display: block;
+          width: 100%;
+        }
 
-			textarea {
-				width: 100% !important;
-				height: 300px;
-				box-sizing: border-box;
-			}
-		}
-		</style> 
-</head> 
-<body> 
-	<h1>Karakalpak alphabet - Common Turkic Alphabet converter</h1> 
+        td {
+          display: block;
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
 
-<div align="center"> Type or copy a text:<br> 
-  <form name=transcription> 
-	<table width=90%><tr align=center> 
-		<td> in Karakalpak alphabet: <br> 
-	<textarea name="text1" style="resize: none;" onKeyUp="cyrlat()"></textarea> 
-		  <br> 
-		  <br> 
-	<input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; 
-	<input type=button onClick="reset();transcription.text1.focus()"  value="clear" class=bf><br><br> 
-		</td> 
-		<td> here you get it in CTA:<br> 
-	<textarea name="text2" style="resize: none;" onKeyUp="latcyr()"></textarea> 
-			  <br> 
-		  <br> 
-	<input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; 
-	<input type=button onClick="reset();transcription.text2.focus()"  value="clear" class=bf><br><br> 
-	</td></tr></table>
-<script>
+        td[colspan] {
+          width: 100% !important;
+        }
+
+        textarea {
+          width: 100% !important;
+          height: 300px;
+          box-sizing: border-box;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Karakalpak alphabet - Common Turkic Alphabet converter</h1>
+    <div align="center"> Type or copy a text: <br>
+      <form name=transcription>
+        <table width=90%>
+          <tr align=center>
+            <td> in Karakalpak alphabet: <br>
+              <textarea name="text1" style="resize: none;" onKeyUp="cyrlat()"></textarea>
+              <br>
+              <br>
+              <input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text1.focus()" value="clear" class=bf>
+              <br>
+              <br>
+            </td>
+            <td> here you get it in CTA: <br>
+              <textarea name="text2" style="resize: none;" onKeyUp="latcyr()"></textarea>
+              <br>
+              <br>
+              <input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text2.focus()" value="clear" class=bf>
+              <br>
+              <br>
+            </td>
+          </tr>
+        </table>
+        <script>
           document.addEventListener("DOMContentLoaded", () => {
             const textareas = Array.from(document.querySelectorAll("textarea"));
 
@@ -101,7 +107,6 @@
             });
           });
         </script>
-</form>
-</body> 
-</html> 
-
+      </form>
+  </body>
+</html>

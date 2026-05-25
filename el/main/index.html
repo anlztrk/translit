@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
   <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Tinos&display=swap" rel="stylesheet">
     <title>Greek transliterator</title>
     <script type="text/javascript" src="conversion.js"></script>
     <style type="text/css">
@@ -19,36 +19,37 @@
         font-size: 15px;
         width: 500px;
         height: 300px;
-		}
-		@media (max-width: 720px) {
-			table {
-				width: 100% !important;
-				border-collapse: collapse;
-			}
+      }
 
-			tr {
-				display: block;
-				width: 100%;
-			}
+      @media (max-width: 720px) {
+        table {
+          width: 100% !important;
+          border-collapse: collapse;
+        }
 
-			td {
-				display: block;
-				width: 100% !important;
-				padding-left: 0 !important;
-				padding-right: 0 !important;
-			}
+        tr {
+          display: block;
+          width: 100%;
+        }
 
-			td[colspan] {
-				width: 100% !important;
-			}
+        td {
+          display: block;
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
 
-			textarea {
-				width: 100% !important;
-				height: 300px;
-				box-sizing: border-box;
-			}
-		}
-		</style>
+        td[colspan] {
+          width: 100% !important;
+        }
+
+        textarea {
+          width: 100% !important;
+          height: 300px;
+          box-sizing: border-box;
+        }
+      }
+    </style>
   </head>
   <body>
     <h1>Greek transliterator</h1>
@@ -64,7 +65,9 @@
               <br>
               <br>
               <center>
-                <input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text1.focus()" value="clear" class=bf><br><br>
+                <input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text1.focus()" value="clear" class=bf>
+                <br>
+                <br>
               </center>
           </tr>
           <tr>
@@ -76,7 +79,9 @@
               <br>
               <br>
               <center>
-                <input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text2.focus()" value="clear" class=bf><br><br>
+                <input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text2.focus()" value="clear" class=bf>
+                <br>
+                <br>
               </center>
               <!-- Right textarea -->
             <td width="50%">
@@ -86,7 +91,9 @@
               <br>
               <br>
               <center>
-                <input type=button onClick="transcription.text3.select();copy3()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text3.focus()" value="clear" class=bf><br><br>
+                <input type=button onClick="transcription.text3.select();copy3()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text3.focus()" value="clear" class=bf>
+                <br>
+                <br>
               </center>
           </tr>
         </table>

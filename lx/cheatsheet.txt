@@ -1,0 +1,34 @@
+a = u
+b = x
+c = j
+d = m
+e = i
+f = g
+g = n
+h = s
+i = y
+j = b
+k = p
+l = v
+m = t
+n = l
+o = e
+p = c
+q = k
+r = h
+s = x
+t = z
+u = a
+v = q
+w = f
+y = y
+z = r
+
+è = å
+é = o
+ê = o
+ò = ŭ
+ô = ŭ
+
+ou = ĕ
+kh = x
