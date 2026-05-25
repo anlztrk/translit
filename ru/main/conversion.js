@@ -1,4 +1,4 @@
-function topleft() {
+function cyrsimp() {
 	document.transcription.text1.value = document.transcription.text1.value
 		.replace(/(\p{Script=Cyrl})a/ug, "$1а")
 		.replace(/a(\p{Script=Cyrl})/ug, "а$1")
@@ -215,7 +215,7 @@ function topleft() {
 		.normalize('NFC');
 }
 
-function topright() {
+function cyrstr() {
 	document.transcription.text1.value = document.transcription.text1.value
 		.replace(/(\p{Script=Cyrl})A/ug, "$1А")
 		.replace(/(\p{Script=Cyrl})C/ug, "$1С")
@@ -374,9 +374,9 @@ function topright() {
 		.normalize('NFC');
 }
 
-function lefttop() {}
+function simpcyr() {}
 
-function righttop() {
+function strcyr() {
 	document.transcription.text1.value = document.transcription.text3.value
 		.normalize('NFD')
 		.replace(/([aou])\u0301/g, "ь$1")
@@ -475,9 +475,141 @@ function righttop() {
 		.replace(/ЬЪ/g, "Ь");
 }
 
-function leftright() {}
+function cyrtra() {
+	document.transcription.text1.value = document.transcription.text1.value
+		.replace(/(\p{Script=Cyrl})A/ug, "$1А")
+		.replace(/(\p{Script=Cyrl})C/ug, "$1С")
+		.replace(/(\p{Script=Cyrl})E/ug, "$1Е")
+		.replace(/(\p{Script=Cyrl})Ë/ug, "$1Ё")
+		.replace(/(\p{Script=Cyrl})O/ug, "$1О")
+		.replace(/(\p{Script=Cyrl})P/ug, "$1Р")
+		.replace(/(\p{Script=Cyrl})X/ug, "$1Х")
+		.replace(/(\p{Script=Cyrl})a/ug, "$1а")
+		.replace(/(\p{Script=Cyrl})c/ug, "$1с")
+		.replace(/(\p{Script=Cyrl})e/ug, "$1е")
+		.replace(/(\p{Script=Cyrl})ë/ug, "$1ё")
+		.replace(/(\p{Script=Cyrl})o/ug, "$1о")
+		.replace(/(\p{Script=Cyrl})p/ug, "$1р")
+		.replace(/(\p{Script=Cyrl})x/ug, "$1х")
+		.replace(/A(\p{Script=Cyrl})/ug, "А$1")
+		.replace(/C(\p{Script=Cyrl})/ug, "С$1")
+		.replace(/E(\p{Script=Cyrl})/ug, "Е$1")
+		.replace(/Ë(\p{Script=Cyrl})/ug, "Ё$1")
+		.replace(/O(\p{Script=Cyrl})/ug, "О$1")
+		.replace(/P(\p{Script=Cyrl})/ug, "Р$1")
+		.replace(/X(\p{Script=Cyrl})/ug, "Х$1")
+		.replace(/a(\p{Script=Cyrl})/ug, "а$1")
+		.replace(/c(\p{Script=Cyrl})/ug, "с$1")
+		.replace(/e(\p{Script=Cyrl})/ug, "е$1")
+		.replace(/ë(\p{Script=Cyrl})/ug, "ё$1")
+		.replace(/o(\p{Script=Cyrl})/ug, "о$1")
+		.replace(/p(\p{Script=Cyrl})/ug, "р$1")
+		.replace(/x(\p{Script=Cyrl})/ug, "х$1");
+	
+	document.transcription.text4.value = document.transcription.text1.value
+		.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)(Э|э)/g, "$1$2\u0300")
+		.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Е/g, "$1Э")
+		.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)е/g, "$1э")
 
-function rightleft() {}
+		.replace(/Й(А|а)/g, "Й$1\u0300")
+		.replace(/йа/g, "йа\u0300")
+		.replace(/Й(Э|э)/g, "Й$1\u0300")
+		.replace(/йэ/g, "йе\u0300")
+		.replace(/Й(О|о)/g, "Й$1\u0300")
+		.replace(/йо/g, "йо\u0300")
+		.replace(/Й(У|у)/g, "Й$1\u0300")
+		.replace(/йу/g, "йу\u0300")
+
+		.replace(/(Ж|Ш|Щ|Ч|Ц)Я/g, "$1А")
+		.replace(/(Ж|Ш|Щ|Ч|Ц)Ё/g, "$1О")
+		.replace(/(Ж|Ш|Щ|Ч|Ц)Ю/g, "$1У")
+		.replace(/(Ж|Ш|Щ|Ч|Ц|ж|ш|щ|ч|ц)я/g, "$1а")
+		.replace(/(Ж|Ш|Щ|Ч|Ц|ж|ш|щ|ч|ц)ё/g, "$1о")
+		.replace(/(Ж|Ш|Щ|Ч|Ц|ж|ш|щ|ч|ц)ю/g, "$1у")
+
+		.replace(/(\p{Lu})(\p{Lu}) Я/ug, "$1$2 ЙА")
+		.replace(/Я (\p{Lu})(\p{Lu})/ug, "ЙА $1$2")
+		.replace(/Я(\p{Lu})/ug, "ЙА$1")
+		.replace(/Я/g, "Йа")
+		.replace(/я/g, "йа")
+		.replace(/(\p{Lu})(\p{Lu}) Е/ug, "$1$2 ЙЭ")
+		.replace(/Е (\p{Lu})(\p{Lu})/ug, "ЙЭ $1$2")
+		.replace(/Е(\p{Lu})/ug, "ЙЭ$1")
+		.replace(/Е/g, "Йэ")
+		.replace(/е/g, "йэ")
+		.replace(/(\p{Lu})(\p{Lu}) Ё/ug, "$1$2 ЙО")
+		.replace(/Ё (\p{Lu})(\p{Lu})/ug, "ЙО $1$2")
+		.replace(/Ё(\p{Lu})/ug, "ЙО$1")
+		.replace(/Ё/g, "Йо")
+		.replace(/ё/g, "йо")
+		.replace(/(\p{Lu})(\p{Lu}) Ю/ug, "$1$2 ЙУ")
+		.replace(/Ю (\p{Lu})(\p{Lu})/ug, "ЙУ $1$2")
+		.replace(/Ю(\p{Lu})/ug, "ЙУ$1")
+		.replace(/Ю/g, "Йу")
+		.replace(/ю/g, "йу")
+
+		.replace(/А/g, "A")
+		.replace(/Б/g, "B")
+		.replace(/В/g, "V")
+		.replace(/Г/g, "G")
+		.replace(/Д/g, "D")
+		.replace(/Ж/g, "Ž")
+		.replace(/З/g, "Z")
+		.replace(/И/g, "I")
+		.replace(/Й/g, "J")
+		.replace(/К/g, "K")
+		.replace(/Л/g, "L")
+		.replace(/М/g, "M")
+		.replace(/Н/g, "N")
+		.replace(/О/g, "O")
+		.replace(/П/g, "P")
+		.replace(/Р/g, "R")
+		.replace(/С/g, "S")
+		.replace(/Т/g, "T")
+		.replace(/У/g, "U")
+		.replace(/Ф/g, "F")
+		.replace(/Х/g, "H")
+		.replace(/Ц/g, "C")
+		.replace(/Ч/g, "Č")
+		.replace(/Ш/g, "Š")
+		.replace(/Щ/g, "Ś")
+		.replace(/Ы/g, "Y")
+		.replace(/Э/g, "E")
+		.replace(/а/g, "a")
+		.replace(/б/g, "b")
+		.replace(/в/g, "v")
+		.replace(/г/g, "g")
+		.replace(/д/g, "d")
+		.replace(/ж/g, "ž")
+		.replace(/з/g, "z")
+		.replace(/и/g, "i")
+		.replace(/й/g, "j")
+		.replace(/к/g, "k")
+		.replace(/л/g, "l")
+		.replace(/м/g, "m")
+		.replace(/н/g, "n")
+		.replace(/о/g, "o")
+		.replace(/п/g, "p")
+		.replace(/р/g, "r")
+		.replace(/с/g, "s")
+		.replace(/т/g, "t")
+		.replace(/у/g, "u")
+		.replace(/ф/g, "f")
+		.replace(/х/g, "h")
+		.replace(/ц/g, "c")
+		.replace(/ч/g, "č")
+		.replace(/ш/g, "š")
+		.replace(/щ/g, "ś")
+		.replace(/(Ъ|ъ)/g, "\u0022")
+		.replace(/ы/g, "y")
+		.replace(/(Ь|ь)/g, "\u0027")
+		.replace(/э/g, "e")
+		.normalize('NFC');
+}
+
+function simpstr() {}
+
+function strsimp() {}
 
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value);
