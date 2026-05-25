@@ -247,6 +247,8 @@ function cyrstr() {
 		.replace(/x(\p{Script=Cyrl})/ug, "х$1");
 
 	document.transcription.text3.value = document.transcription.text1.value
+		.replace(/(\p{Script=Cyrl})\u0301/ug, "$1")
+		
 		.replace(/([ЪЬ])([АОУ])/g, "$1\u2019$2")
 		.replace(/([ЪЬъь])([аоу])/g, "$1\u2019$2")
 		.replace(/ЪЕ/g, "ЙË")
@@ -507,6 +509,8 @@ function cyrtra() {
 		.replace(/x(\p{Script=Cyrl})/ug, "х$1");
 	
 	document.transcription.text4.value = document.transcription.text1.value
+		.replace(/(\p{Script=Cyrl})\u0301/ug, "$1")
+		
 		.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)(Э|э)/g, "$1$2\u0300")
 		.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)Е/g, "$1Э")
 		.replace(/(Б|В|Г|Д|Ж|З|К|Л|М|Н|П|Р|С|Т|Ф|Х|Ц|Ч|Ш|Щ|б|в|г|д|ж|з|к|л|м|н|п|р|с|т|ф|х|ц|ч|ш|щ)е/g, "$1э")
