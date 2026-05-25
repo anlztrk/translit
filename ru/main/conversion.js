@@ -622,3 +622,7 @@ function copy2() {
 function copy3() {
 	navigator.clipboard.writeText(document.transcription.text3.value);
 }
+
+function copy4() {
+	navigator.clipboard.writeText(document.transcription.text4.value);
+}
