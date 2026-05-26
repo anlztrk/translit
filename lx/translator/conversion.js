@@ -125,6 +125,12 @@ function latcyr() {
 		.replace(/Ж(\p{Lu})/ug, 'ЗХЬ$1')
 		.replace(/Ж/g, 'Зхь')
 		.replace(/ж/g, 'зхь')
+		.replace(/(\p{Lu})Є/ug, '$1OU')
+		.replace(/(\p{Lu})(\p{Lu}) Є/ug, '$1$2 OU')
+		.replace(/Є (\p{Lu})(\p{Lu})/ug, 'OU $1$2')
+		.replace(/Є(\p{Lu})/ug, 'OU$1')
+		.replace(/Є/g, 'Ou')
+		.replace(/є/g, 'ou')
 
 		.replace(/А/g, 'U')
 		.replace(/Б/g, 'J')
