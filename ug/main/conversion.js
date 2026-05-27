@@ -193,7 +193,10 @@ function handleDotlessI(text) {
 function latcta() {
 	document.transcription.text2.value = document.transcription.text2.value
 		.replace(/é/g, "ë")
-		.replace(/É/g, "Ë");
+		.replace(/É/g, "Ë")
+		
+		.replace(/([AEËIOÖUÜ])[\u2019\u02bc\u0027]([AEËIOÖUÜaeëioöuü])/g, "$1$2")
+		.replace(/([aeëioöuü])[\u2019\u02bc\u0027]([aeëioöuü])/g, "$1$2");
 	document.transcription.text3.value = document.transcription.text2.value
 		.replace(/[\u2019|\u02bc]/g, "\u0027")
 
