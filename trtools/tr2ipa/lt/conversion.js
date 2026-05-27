@@ -1,5 +1,7 @@
 function cyrlat() {
 	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/[\u0027\u2019]/g, "")
+		
 		.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|Ĺ|ĺ|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)Ğ/g, "$1G")
 		.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|Ĺ|ĺ|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)ğ/g, "$1g")
 
