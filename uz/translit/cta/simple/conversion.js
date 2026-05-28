@@ -5,52 +5,38 @@ function applyTier(str, rules) {
     return str;
 }
 
-const T5 = [
-    [/(Ğ|X|Q)Ä/g, "$1A"],
-    [/(Ğ|X|Q)İ/g, "$1I"],
-    [/(Ğ|X|Q)Ö/g, "$1O"],
-    [/(Ğ|X|Q)Ü/g, "$1U"],
-    [/(Ğ|X|Q|ğ|x|q)ä/g, "$1a"],
-    [/(Ğ|X|Q|ğ|x|q)i/g, "$1ı"],
-    [/(Ğ|X|Q|ğ|x|q)ö/g, "$1o"],
-    [/(Ğ|X|Q|ğ|x|q)ü/g, "$1u"],
-
-    [/Ä(Ğ|X|Q|ğ|x|q)/g, "A$1"],
-    [/İ(Ğ|X|Q|ğ|x|q)/g, "I$1"],
-    [/Ö(Ğ|X|Q|ğ|x|q)/g, "O$1"],
-    [/Ü(Ğ|X|Q|ğ|x|q)/g, "U$1"],
-    [/ä(ğ|x|q)/g, "a$1"],
-    [/i(ğ|x|q)/g, "ı$1"],
-    [/ö(ğ|x|q)/g, "o$1"],
-    [/ü(ğ|x|q)/g, "u$1"],
+const T6 = [
+    [/i/g, "ı"],
+    [/a/g, "ă"],
+    [/A/g, "Ă"],
 ];
 
-const T4 = [
-    [/(G|K|Y)A/g, "$1Ä"],
+const T5 = [
+    [/(G|K|Y)Ă/g, "$1Ä"],
     [/(G|K|Y)I/g, "$1İ"],
     [/(G|K|Y)O/g, "$1Ö"],
     [/(G|K|Y)U/g, "$1Ü"],
-    [/(G|K|Y|g|k|y)a/g, "$1ä"],
+    [/(G|K|Y|g|k|y)ă/g, "$1ä"],
     [/(G|K|Y|g|k|y)ı/g, "$1i"],
     [/(G|K|Y|g|k|y)o/g, "$1ö"],
     [/(G|K|Y|g|k|y)u/g, "$1ü"],
 
-    [/A(G|K|g|k)/g, "Ä$1"],
+    [/Ă(G|K|g|k)/g, "Ä$1"],
     [/I(G|K|g|k)/g, "İ$1"],
     [/O(G|K|g|k)/g, "Ö$1"],
     [/U(G|K|g|k)/g, "Ü$1"],
-    [/a(g|k)/g, "ä$1"],
+    [/ă(g|k)/g, "ä$1"],
     [/ı(g|k)/g, "i$1"],
     [/o(g|k)/g, "ö$1"],
     [/u(g|k)/g, "ü$1"],
 ];
 
-const T3 = [
+const T4 = [
     [/I(Ñ|Y|ñ|y)/g, "İ$1"],
     [/ı(ñ|y)/g, "i$1"],
 ];
 
-const T2 = [
+const T3 = [
     [/(L|l)ı((?![bcçdfgğhklmnñpqrsştvxyz]))/g, "$1i$2"],
     [/LI((?![BCÇDFGĞHKLMNÑPQRSŞTVXYZ]))/g, "$1Lİ$2"],
 
@@ -58,13 +44,38 @@ const T2 = [
     [/((?<![BCÇDFGĞHKLMNÑPQRSŞTVXYZbcçdfgğhklmnñpqrsştvxyz]))ı/g, "$1i"],
 ];
 
-const T1 = [
-    [/i/g, "ı"],
-    [/a/g, "ä"],
-    [/A/g, "Ä"],
+const T2 = [
+    [/([ĞXQ])[ĂÄ]/g, "$1A"],
+    [/([ĞXQ])İ/g, "$1I"],
+    [/([ĞXQ])Ö/g, "$1O"],
+    [/([ĞXQ])Ü/g, "$1U"],
+    [/([ĞXQğxq])[ăä]/g, "$1a"],
+    [/([ĞXQğxq])i/g, "$1ı"],
+    [/([ĞXQğxq])ö/g, "$1o"],
+    [/([ĞXQğxq])ü/g, "$1u"],
+
+    [/[ĂÄ](Ğ|X|Q|ğ|x|q)/g, "A$1"],
+    [/İ(Ğ|X|Q|ğ|x|q)/g, "I$1"],
+    [/Ö(Ğ|X|Q|ğ|x|q)/g, "O$1"],
+    [/Ü(Ğ|X|Q|ğ|x|q)/g, "U$1"],
+    [/[ăä](ğ|x|q)/g, "a$1"],
+    [/i(ğ|x|q)/g, "ı$1"],
+    [/ö(ğ|x|q)/g, "o$1"],
+    [/ü(ğ|x|q)/g, "u$1"],
 ];
 
-const FINAL = [];
+const T1 = [
+	[/([AÂIOU])([BCÇDFGĞHKLMNÑPQRSŞTVXYZ]{0,3})Ă/g, "$1$2A"],
+	[/([AÂIOUaâıou])([bcçdfgğhklmnñpqrsştvxyz]{0,3})ă/g, "$1$2a"],
+	[/Ă([BCÇDFGĞHKLMNÑPQRSŞTVXYZ]{0,3})A/g, "A$1A"],
+	[/Ă([bcçdfgğhklmnñpqrsştvxyz]{0,3})a/g, "A$1a"],
+	[/ă([bcçdfgğhklmnñpqrsştvxyz]{0,3})a/g, "a$1a"],
+];
+
+const FINAL = [
+	[/Ă/g, "Ä"],
+    [/ă/g, "ä"],
+];
 
 function runTierUntilStable(str, rules, maxIterations = 20) {
     let current = str;
@@ -82,15 +93,14 @@ function applyHarmony(str) {
     let current = str;
 
     // Each tier stabilizes independently
-    current = runTierUntilStable(current, T1);
+	current = runTierUntilStable(current, T6);
+    current = runTierUntilStable(current, T5);
     current = runTierUntilStable(current, T4);
     current = runTierUntilStable(current, T3);
     current = runTierUntilStable(current, T2);
+    current = runTierUntilStable(current, T1);
 
-    // Base layer applies ONLY ONCE
-    current = applyTier(current, T5);
-
-    // Final normalization (also once)
+    // Final normalization applies ONLY ONCE
     current = applyTier(current, FINAL);
 
     return current;
