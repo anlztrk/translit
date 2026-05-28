@@ -274,6 +274,10 @@ function latcta() {
 }
 
 function ctalat() {
+	document.transcription.text3.value = document.transcription.text3.value
+		.replace(/ə/g, "ä")
+		.replace(/Ə/g, "Ä");
+		
 	document.transcription.text2.value = document.transcription.text3.value
 		.replace(/ngh/g, "n\u0027g\u0027h")
 		.replace(/Ngh/g, "N\u0027g\u0027h")
