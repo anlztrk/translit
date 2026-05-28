@@ -67,9 +67,6 @@ const T2 = [
 const T1 = [
 	[/([AÂIOU])([BCÇDFGĞHKLMNÑPQRSŞTVXYZ]{0,3})Ă/g, "$1$2A"],
 	[/([AÂIOUaâıou])([bcçdfgğhklmnñpqrsştvxyz]{0,3})ă/g, "$1$2a"],
-	[/Ă([BCÇDFGĞHKLMNÑPQRSŞTVXYZ]{0,3})A/g, "A$1A"],
-	[/Ă([bcçdfgğhklmnñpqrsştvxyz]{0,3})a/g, "A$1a"],
-	[/ă([bcçdfgğhklmnñpqrsştvxyz]{0,3})a/g, "a$1a"],
 ];
 
 const FINAL = [
