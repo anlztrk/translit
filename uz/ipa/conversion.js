@@ -95,7 +95,7 @@ function toIPA(str) {
 		.replace(/9χ\u0029/g, "9х\u0029")
 		.replace(/0χ\u0029/g, "0х\u0029")
 		
-		.replace(/[\u002e\u002c\u003a\u003b\u002d]/g, "");
+		.replace(/[\u002e\u002c\u003a\u003b\u002d\u2013\u2014]/g, "");
 
 	return str;
 }
