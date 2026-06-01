@@ -81,6 +81,18 @@ function cyrlat() {
 		.replace(/\u0903/g, 'Ḥ')
 		.replace(/\u0020\u0964\u0020/g, '\u002e\u0020')
 		.replace(/\u0964/g, '\u002e')
+
+		.replace(/\u0966/g, '\u0030')
+		.replace(/\u0967/g, '\u0031')
+		.replace(/\u0968/g, '\u0032')
+		.replace(/\u0969/g, '\u0033')
+		.replace(/\u096a/g, '\u0034')
+		.replace(/\u096b/g, '\u0035')
+		.replace(/\u096c/g, '\u0036')
+		.replace(/\u096d/g, '\u0037')
+		.replace(/\u096e/g, '\u0038')
+		.replace(/\u096f/g, '\u0039')
+		
 		.normalize('NFC')
 
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
