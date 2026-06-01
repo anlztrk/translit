@@ -67,14 +67,14 @@ function cyrlat() {
 		.replace(/[\u090a\u0942]/g, 'Ū') // ऊ, ू
 		.replace(/[\u0910\u0948]/g, 'AI') // ऐ, ै
 		.replace(/[\u0914\u094c]/g, 'AU') // औ, ौ
-
+		.replace(/[\u0901\u0902]/g, '\u0303')
+		
 		.replace(/Ə\u094d/g, '')
 		.replace(/Ə(?=[AĀƏEIĪOUŪŔ])/g, '')
-		.replace(/(?<=[AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV])Ə(?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV])/g,  '')
+		.replace(/(?<=[AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])Ə(?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])/g,  '')
 		.replace(/Ə/g, 'A')
 
-		.replace(/([KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW])[\u0901\u0902]/g, '\u0303$1')
-		.replace(/[\u0901\u0902]/g, '\u0303')
+		.replace(/([KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW])\u0303/g, '\u0303$1')
 		.replace(/\u0303([KGHQĠX])/g, '\u0303Ṅ$1')
 		.replace(/\u0303([PFBV])/g, '\u0303M$1')
 		.replace(/\u0303([TDLS])/g, '\u0303N$1')
