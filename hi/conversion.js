@@ -70,14 +70,14 @@ function cyrlat() {
 
 		.replace(/Ə\u094d/g, '')
 		.replace(/Ə(?=[AĀƏEIĪOUŪŔ])/g, '')
-		.replace(/([AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV])Ə/g, '$1')
+		.replace(/(?<=[AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV])Ə(?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV])/g,  '')
 		.replace(/Ə/g, 'A')
 
 		.replace(/([KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW])[\u0901\u0902]/g, '\u0303$1')
 		.replace(/[\u0901\u0902]/g, '\u0303')
 		.replace(/\u0303([KGHQĠX])/g, '\u0303Ṅ$1')
-		.replace(/\u0303([TDLS])/g, '\u0303N$1')
 		.replace(/\u0303([PFBV])/g, '\u0303M$1')
+		.replace(/\u0303([TDLS])/g, '\u0303N$1')
 		
 		.replace(/\u0903/g, 'Ḥ')
 		.replace(/\u0020\u0964\u0020/g, '\u002e\u0020')
