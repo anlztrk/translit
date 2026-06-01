@@ -213,6 +213,11 @@ function topleft() {
 		.replace(/\u0303([ṄÑṆNM])/g, '$1')
 		.replace(/\u0303/g, 'N')
 		
+		.replace(/AA/g, 'A\002d\A')
+		.replace(/AI/g, 'A\002d\I')
+		.replace(/EE/g, 'E\002d\E')
+		.replace(/OO/g, 'O\002d\O')
+		
 		.replace(/JÑ/g, 'GY')		
 		.replace(/X/g, 'KH')
 		.replace(/Ġ/g, 'GH')
@@ -233,7 +238,8 @@ function topleft() {
 		.replace(/Ŕ/g, 'RI')
 		.replace(/Ā/g, 'AA')
 		.replace(/Ī/g, 'EE')
-		.replace(/Ū/g, 'OO')		
+		.replace(/Ū/g, 'OO')
+		.replace(/Ḥ/g, 'H')
 
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u0303\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
 			return first + second.toLowerCase()
