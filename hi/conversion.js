@@ -72,6 +72,7 @@ function cyrlat() {
 		.replace(/Ə((?![KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW]))/g, '$1')
 		.replace(/Ə/g, 'A')
 
+		.replace(/([KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW])[\u0901\u0902]/g, '\u0303$1')
 		.replace(/[\u0901\u0902]/g, '\u0303')
 		.replace(/\u0303([KGHQĠX])/g, '\u0303Ṅ$1')
 		.replace(/\u0303([TDLS])/g, '\u0303N$1')
