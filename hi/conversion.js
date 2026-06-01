@@ -10,7 +10,7 @@ function topright() {
 			index++;
 			return key;
 		})
-		
+
 		.replace(/\u0915\u093c/g, 'QƏ') // क़
 		.replace(/\u0916\u093c/g, 'XƏ') // ख़
 		.replace(/\u0917\u093c/g, 'ĠƏ') // ग़
@@ -67,9 +67,9 @@ function topright() {
 		.replace(/[\u090a\u0942]/g, 'Ū') // ऊ, ू
 		.replace(/[\u0910\u0948]/g, 'AI') // ऐ, ै
 		.replace(/[\u0914\u094c]/g, 'AU') // औ, ौ
-		
+
 		.replace(/\u0901/g, '\u0303')
-		
+
 		.replace(/\u0902/g, 'Ṁ')
 		.replace(/Ṁ([KQXGĠṄ])/g, '\u0303Ṅ$1')
 		.replace(/Ṁ([CJZŹÑ])/g, '\u0303Ñ$1')
@@ -77,12 +77,12 @@ function topright() {
 		.replace(/Ṁ([TDN])/g, '\u0303N$1')
 		.replace(/Ṁ([PFBVW])/g, '\u0303M$1')
 		.replace(/Ṁ/g, '\u0303')
-		
+
 		.replace(/Ə\u094d/g, '')
 		.replace(/Ə(?=[AĀƏEIĪOUŪŔ])/g, '')
-		.replace(/(?<=[AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])Ə(?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])/g,  '')
+		.replace(/(?<=[AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])Ə(?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])/g, '')
 		.replace(/Ə/g, 'A')
-		
+
 		.replace(/\u0903/g, 'Ḥ')
 		.replace(/\u0020[\u0964\u0965\u0970]\u0020/g, '\u002e\u0020')
 		.replace(/\u0964/g, '\u002e')
@@ -97,12 +97,12 @@ function topright() {
 		.replace(/\u096d/g, '\u0037')
 		.replace(/\u096e/g, '\u0038')
 		.replace(/\u096f/g, '\u0039')
-		
+
 		.normalize('NFC')
 
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u0303\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
 			return first + second.toLowerCase()
-			.normalize('NFC');
+				.normalize('NFC');
 		});
 
 	Object.keys(latinWords).forEach(key => {
@@ -122,7 +122,7 @@ function topleft() {
 			index++;
 			return key;
 		})
-		
+
 		.replace(/\u0915\u093c/g, 'QƏ') // क़
 		.replace(/\u0916\u093c/g, 'XƏ') // ख़
 		.replace(/\u0917\u093c/g, 'ĠƏ') // ग़
@@ -179,9 +179,9 @@ function topleft() {
 		.replace(/[\u090a\u0942]/g, 'Ū') // ऊ, ू
 		.replace(/[\u0910\u0948]/g, 'AI') // ऐ, ै
 		.replace(/[\u0914\u094c]/g, 'AU') // औ, ौ
-		
+
 		.replace(/\u0901/g, '\u0303')
-		
+
 		.replace(/\u0902/g, 'Ṁ')
 		.replace(/Ṁ([KQXGĠṄ])/g, '\u0303Ṅ$1')
 		.replace(/Ṁ([CJZŹÑ])/g, '\u0303Ñ$1')
@@ -189,13 +189,12 @@ function topleft() {
 		.replace(/Ṁ([TDN])/g, '\u0303N$1')
 		.replace(/Ṁ([PFBVW])/g, '\u0303M$1')
 		.replace(/Ṁ/g, '\u0303')
-		
+
 		.replace(/Ə\u094d/g, '')
 		.replace(/Ə(?=[AĀƏEIĪOUŪŔ])/g, '')
-		.replace(/(?<=[AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])Ə(?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])/g,  '')
-		.replace(/Ə([IU])/g, 'Ə\u002d$1')
+		.replace(/(?<=[AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])Ə(?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])/g, '')
 		.replace(/Ə/g, 'A')
-		
+
 		.replace(/\u0903/g, 'Ḥ')
 		.replace(/\u0020[\u0964\u0965\u0970]\u0020/g, '\u002e\u0020')
 		.replace(/\u0964/g, '\u002e')
@@ -210,27 +209,27 @@ function topleft() {
 		.replace(/\u096d/g, '\u0037')
 		.replace(/\u096e/g, '\u0038')
 		.replace(/\u096f/g, '\u0039')
-		
+
 		.replace(/\u0303([ṄÑṆNM])/g, '$1')
 		.replace(/\u0303/g, 'N')
-		
+
 		.replace(/AA/g, 'A\u002dA')
 		.replace(/EE/g, 'E\u002dE')
 		.replace(/OO/g, 'O\u002dO')
-		.replace(/Ā([IU])/g, 'Ā$1')
-		
-		.replace(/JÑ/g, 'GY')		
+		.replace(/Ā([IU])/g, 'Ā\u002d$1')
+
+		.replace(/JÑ/g, 'GY')
 		.replace(/X/g, 'KH')
 		.replace(/Ġ/g, 'GH')
 		.replace(/Ź/g, 'ZH')
 		.replace(/Ṛ/g, 'R')
-		
-		.replace(/Ṅ/g, 'N')		
+
+		.replace(/Ṅ/g, 'N')
 		.replace(/C/g, 'CH')
 		.replace(/Ñ/g, 'N')
 		.replace(/Ś/g, 'SH')
 		.replace(/Ṭ/g, 'T')
-		.replace(/Ḍ/g, 'D')		
+		.replace(/Ḍ/g, 'D')
 		.replace(/Ṇ/g, 'N')
 		.replace(/Ṣ/g, 'SH')
 		.replace(/Ḷ/g, 'L')
@@ -244,7 +243,7 @@ function topleft() {
 
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u0303\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
 			return first + second.toLowerCase()
-			.normalize('NFC');
+				.normalize('NFC');
 		});
 
 	Object.keys(latinWords).forEach(key => {
@@ -253,8 +252,11 @@ function topleft() {
 }
 
 function lefttop() {}
+
 function leftright() {}
+
 function righttop() {}
+
 function rightleft() {}
 
 function copy1() {
