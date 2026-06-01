@@ -193,7 +193,7 @@ function topleft() {
 		.replace(/Ə\u094d/g, '')
 		.replace(/Ə(?=[AĀƏEIĪOUŪŔ])/g, '')
 		.replace(/(?<=[AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])Ə(?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV\u0303])/g,  '')
-		.replace(/ƏI/g, 'Ə\u002dI')
+		.replace(/Ə([IU])/g, 'Ə\u002d$1')
 		.replace(/Ə/g, 'A')
 		
 		.replace(/\u0903/g, 'Ḥ')
@@ -217,6 +217,7 @@ function topleft() {
 		.replace(/AA/g, 'A\u002dA')
 		.replace(/EE/g, 'E\u002dE')
 		.replace(/OO/g, 'O\u002dO')
+		.replace(/Ā([IU])/g, 'Ā$1')
 		
 		.replace(/JÑ/g, 'GY')		
 		.replace(/X/g, 'KH')
