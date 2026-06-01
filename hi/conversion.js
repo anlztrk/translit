@@ -244,6 +244,11 @@ function topleft() {
 	});
 }
 
+function lefttop() {}
+function leftright() {}
+function righttop() {}
+function rightleft() {}
+
 function copy1() {
 	navigator.clipboard.writeText(document.transcription.text1.value);
 }
