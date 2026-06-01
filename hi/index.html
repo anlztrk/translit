@@ -53,12 +53,48 @@
   </head>
   <body>
     <h1>Hindi in Devanagari script - Latin alphabet converter</h1>
-    <div align="center"> Type or copy a text:<br>
+    <div align="center"> Type or copy a text<br>
       <form name=transcription>
-        <table width=90%>
-          <tr align=center>
-            <td> in Hindi in Devanagari script: <br><textarea name="text1" style="resize: none;" onKeyUp="cyrlat()"></textarea><br><br><input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text1.focus()" value="clear" class=bf><br><br></td>
-            <td> here you get it in the Latin alphabet:<br><textarea name="text2" style="resize: none;" onKeyUp="latcyr()"></textarea><br><br><input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text2.focus()" value="clear" class=bf><br><br></td>
+        <table width="90%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+          <!-- Top textarea spanning both -->
+          <tr>
+            <td colspan="2" style="padding-top: 10px; padding-left: 0; padding-right: 0;">
+              <center>in Hindi in Devanagari script:</center>
+              <br>
+              <textarea name="text1" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="topleft();topright()"></textarea>
+              <br>
+              <br>
+              <center>
+                <input type=button onClick="transcription.text1.select();copy1()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text1.focus()" value="clear" class=bf>
+                <br>
+                <br>
+              </center>
+          </tr>
+          <tr>
+            <!-- Left textarea -->
+            <td width="50%">
+              <center>here you get its official romanization: </center>
+              <br>
+              <textarea name="text2" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="lefttop();leftright()"></textarea>
+              <br>
+              <br>
+              <center>
+                <input type=button onClick="transcription.text2.select();copy2()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text2.focus()" value="clear" class=bf>
+                <br>
+                <br>
+              </center>
+              <!-- Right textarea -->
+            <td width="50%">
+              <center>and here you get a precise one:</center>
+              <br>
+              <textarea name="text3" style="width: 100%; box-sizing: border-box; resize: none;" onKeyUp="righttop();rightleft()"></textarea>
+              <br>
+              <br>
+              <center>
+                <input type=button onClick="transcription.text3.select();copy3()" value="copy" class=bf> &nbsp; &nbsp; <input type=button onClick="reset();transcription.text3.focus()" value="clear" class=bf>
+                <br>
+                <br>
+              </center>
           </tr>
         </table>
         <script>
