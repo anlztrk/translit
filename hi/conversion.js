@@ -68,8 +68,9 @@ function cyrlat() {
 		.replace(/[\u0910\u0948]/g, 'AI') // ऐ, ै
 		.replace(/[\u0914\u094c]/g, 'AU') // औ, ौ
 
-		.replace(/Ə\u094d/g, '')
-		.replace(/Ə((?![KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW]))/g, '$1')
+		.replace(/Ə\u094d/g, '')/*
+		.replace(/Ə((?![KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW]))/g, '$1')*/
+		.replace(/Ə(?=.)(?!(?:[KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW]))/g,'')
 		.replace(/Ə/g, 'A')
 
 		.replace(/([KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW])[\u0901\u0902]/g, '\u0303$1')
@@ -95,7 +96,7 @@ function cyrlat() {
 		
 		.normalize('NFC')
 
-		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
+		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u0303\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
 			return first + second.toLowerCase()
 			.normalize('NFC');
 		});
