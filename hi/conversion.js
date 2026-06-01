@@ -56,6 +56,7 @@ function cyrlat() {
 		.replace(/[\u0910\u0948]/g, 'AI') // ऐ, ै
 		.replace(/[\u0914\u094c]/g, 'AU') // औ, ौ
 
+		.replace(/Ə\u094d/g, '')
 		.replace(/Ə((?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV]))/g, '$1')
 		.replace(/Ə/g, 'A')
 
