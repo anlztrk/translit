@@ -73,8 +73,8 @@ function topright() {
 		.replace(/\u0902/g, 'Ṁ')
 		.replace(/Ṁ([KQXGĠṄ])/g, '\u0303Ṅ$1')
 		.replace(/Ṁ([CJZŹÑ])/g, '\u0303Ñ$1')
-		.replace(/Ṁ([ṬḌṚṆ])/g, '\u0303Ṇ$1')
-		.replace(/Ṁ([TDN])/g, '\u0303N$1')
+		.replace(/Ṁ([ṬḌṚṆṢ])/g, '\u0303Ṇ$1')
+		.replace(/Ṁ([TDRNS])/g, '\u0303N$1')
 		.replace(/Ṁ([PFBVW])/g, '\u0303M$1')
 		.replace(/Ṁ/g, '\u0303')
 
@@ -185,8 +185,8 @@ function topleft() {
 		.replace(/\u0902/g, 'Ṁ')
 		.replace(/Ṁ([KQXGĠṄ])/g, '\u0303Ṅ$1')
 		.replace(/Ṁ([CJZŹÑ])/g, '\u0303Ñ$1')
-		.replace(/Ṁ([ṬḌṚṆ])/g, '\u0303Ṇ$1')
-		.replace(/Ṁ([TDN])/g, '\u0303N$1')
+		.replace(/Ṁ([ṬḌṚṆṢ])/g, '\u0303Ṇ$1')
+		.replace(/Ṁ([TDRNS])/g, '\u0303N$1')
 		.replace(/Ṁ([PFBVW])/g, '\u0303M$1')
 		.replace(/Ṁ/g, '\u0303')
 
