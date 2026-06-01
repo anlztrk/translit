@@ -85,7 +85,7 @@ function topright() {
 
 		.replace(/\u0903/g, 'Ḥ')
 		.replace(/\u0020[\u0964\u0965\u0970]\u0020/g, '\u002e\u0020')
-		.replace(/\u0964/g, '\u002e')
+		.replace(/[\u0964\u0965]/g, '\u002e')
 
 		.replace(/\u0966/g, '\u0030')
 		.replace(/\u0967/g, '\u0031')
@@ -197,7 +197,7 @@ function topleft() {
 
 		.replace(/\u0903/g, 'Ḥ')
 		.replace(/\u0020[\u0964\u0965\u0970]\u0020/g, '\u002e\u0020')
-		.replace(/\u0964/g, '\u002e')
+		.replace(/[\u0964\u0965]/g, '\u002e')
 
 		.replace(/\u0966/g, '\u0030')
 		.replace(/\u0967/g, '\u0031')
