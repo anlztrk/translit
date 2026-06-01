@@ -210,6 +210,7 @@ function topleft() {
 		.replace(/\u096e/g, '\u0038')
 		.replace(/\u096f/g, '\u0039')
 		
+		.replace(/\u0303([ṄÑṆNM])/g, '$1')
 		.replace(/\u0303/g, 'N')
 		
 		.replace(/JÑ/g, 'GY')		
