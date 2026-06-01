@@ -69,7 +69,8 @@ function cyrlat() {
 		.replace(/[\u0914\u094c]/g, 'AU') // औ, ौ
 
 		.replace(/Ə\u094d/g, '')
-		.replace(/([AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV]?[KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV])Ə(?=[AĀƏEIĪOUŪŔ])/g, '$1')
+		.replace(/Ə(?=[AĀƏEIĪOUŪŔ])/g, '')
+		.replace(/([AĀƏEIĪOUŪŔKGṄHCJÑYŚṬḌṆRṢTDNLSPBMV][KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV])Ə/g, '$1')
 		.replace(/Ə/g, 'A')
 
 		.replace(/([KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMḶḺVW])[\u0901\u0902]/g, '\u0303$1')
