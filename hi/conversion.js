@@ -217,6 +217,11 @@ function topleft() {
 		.replace(/EE/g, 'E\u002dE')
 		.replace(/OO/g, 'O\u002dO')
 		.replace(/Ā([IU])/g, 'Ā\u002d$1')
+		
+		.replace(/ĪE/g, 'Ī\u002dE')
+		.replace(/EĪ/g, 'E\u002dĪ')
+		.replace(/ŪO/g, 'Ū\u002dO')
+		.replace(/OŪ/g, 'O\u002dŪ')
 
 		.replace(/JÑ/g, 'GY')
 		.replace(/X/g, 'KH')
