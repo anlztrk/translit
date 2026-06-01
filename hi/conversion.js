@@ -65,8 +65,8 @@ function topright() {
 		.replace(/[\u0906\u093e]/g, 'Ā') // आ, ा
 		.replace(/[\u0908\u0940]/g, 'Ī') // ई, ी
 		.replace(/[\u090a\u0942]/g, 'Ū') // ऊ, ू
-		.replace(/[\u0910\u0948]/g, 'AI') // ऐ, ै
-		.replace(/[\u0914\u094c]/g, 'AU') // औ, ौ
+		.replace(/[\u0910\u0948\u090d\u0945]/g, 'AI') // ऐ, ै, ॲ, ॅ
+		.replace(/[\u0914\u094c\u0911\u0949]/g, 'AU') // औ, ौ, ऑ, ॉ
 
 		.replace(/\u0901/g, '\u0303')
 
@@ -168,12 +168,12 @@ function topleft() {
 		.replace(/\u0933/g, 'ḶƏ') // ळ
 		.replace(/\u0934/g, 'ḺƏ') // ऴ
 		.replace(/\u0935/g, 'VƏ') // व
-		.replace(/\u0905/g, 'A') // अ
+		.replace(/[\u0905\u090d\u0945]/g, 'A') // अ
 		.replace(/[\u0907\u093f]/g, 'I') // इ, ि
 		.replace(/[\u0909\u0941]/g, 'U') // उ, ु
 		.replace(/[\u090b\u0943]/g, 'Ŕ') // ऋ, ृ
 		.replace(/[\u090f\u0947]/g, 'E') // ए, े
-		.replace(/[\u0913\u094b]/g, 'O') // ओ, ो
+		.replace(/[\u0913\u094b\u0911\u0949]/g, 'O') // ओ, ो, ऑ, ॉ
 		.replace(/[\u0906\u093e]/g, 'Ā') // आ, ा
 		.replace(/[\u0908\u0940]/g, 'Ī') // ई, ी
 		.replace(/[\u090a\u0942]/g, 'Ū') // ऊ, ू
