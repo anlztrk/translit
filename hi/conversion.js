@@ -1,8 +1,8 @@
 function topright() {
-	document.transcription.text2.value = document.transcription.text1.value;
+	document.transcription.text3.value = document.transcription.text1.value;
 	let latinWords = {};
 	let index = 0;
-	document.transcription.text2.value = document.transcription.text2.value
+	document.transcription.text3.value = document.transcription.text3.value
 		.normalize('NFD')
 		.replace(/\p{sc=Latin}+/ug, function(match) {
 			let key = `__placeholder${index}__`;
@@ -106,7 +106,7 @@ function topright() {
 		});
 
 	Object.keys(latinWords).forEach(key => {
-		document.transcription.text2.value = document.transcription.text2.value.replace(key, latinWords[key]);
+		document.transcription.text3.value = document.transcription.text3.value.replace(key, latinWords[key]);
 	});
 }
 
@@ -250,4 +250,8 @@ function copy1() {
 
 function copy2() {
 	navigator.clipboard.writeText(document.transcription.text2.value);
+}
+
+function copy3() {
+	navigator.clipboard.writeText(document.transcription.text3.value);
 }
