@@ -17,14 +17,14 @@ function cyrlat() {
 		.replace(/\u0918/g, 'GHƏ') // घ
 		.replace(/\u0919/g, 'ṄƏ') // ङ
 		.replace(/\u0939/g, 'HƏ') // ह
-		.replace(/\u091A/g, 'CƏ') // च
-		.replace(/\u091B/g, 'CHƏ') // छ
-		.replace(/\u091C/g, 'JƏ') // ज
-		.replace(/\u091D/g, 'JHƏ') // झ
-		.replace(/\u091E/g, 'ÑƏ') // ञ
-		.replace(/\u092F/g, 'YƏ') // य
+		.replace(/\u091a/g, 'CƏ') // च
+		.replace(/\u091b/g, 'CHƏ') // छ
+		.replace(/\u091c/g, 'JƏ') // ज
+		.replace(/\u091d/g, 'JHƏ') // झ
+		.replace(/\u091e/g, 'ÑƏ') // ञ
+		.replace(/\u092f/g, 'YƏ') // य
 		.replace(/\u0936/g, 'ŚƏ') // श
-		.replace(/\u091F/g, 'ṬƏ') // ट
+		.replace(/\u091f/g, 'ṬƏ') // ट
 		.replace(/\u0920/g, 'ṬHƏ') // ठ
 		.replace(/\u0921/g, 'ḌƏ') // ड
 		.replace(/\u0922/g, 'ḌHƏ') // ढ
@@ -38,25 +38,25 @@ function cyrlat() {
 		.replace(/\u0928/g, 'NƏ') // न
 		.replace(/\u0932/g, 'LƏ') // ल
 		.replace(/\u0938/g, 'SƏ') // स
-		.replace(/\u092A/g, 'PƏ') // प
-		.replace(/\u092B/g, 'PHƏ') // फ
-		.replace(/\u092C/g, 'BƏ') // ब
-		.replace(/\u092D/g, 'BHƏ') // भ
-		.replace(/\u092E/g, 'MƏ') // म
+		.replace(/\u092a/g, 'PƏ') // प
+		.replace(/\u092b/g, 'PHƏ') // फ
+		.replace(/\u092c/g, 'BƏ') // ब
+		.replace(/\u092d/g, 'BHƏ') // भ
+		.replace(/\u092e/g, 'MƏ') // म
 		.replace(/\u0935/g, 'VƏ') // व
 		.replace(/\u0905/g, 'A') // अ
-		.replace(/[\u0907\u093F]/g, 'I') // इ, ि
+		.replace(/[\u0907\u093f]/g, 'I') // इ, ि
 		.replace(/[\u0909\u0941]/g, 'U') // उ, ु
-		.replace(/[\u090B\u0943]/g, 'Ŕ') // ऋ, ृ
-		.replace(/[\u090F\u0947]/g, 'E') // ए, े
-		.replace(/[\u0913\u094B]/g, 'O') // ओ, ो
-		.replace(/[\u0906\u093E]/g, 'Ā') // आ, ा
+		.replace(/[\u090b\u0943]/g, 'Ŕ') // ऋ, ृ
+		.replace(/[\u090f\u0947]/g, 'E') // ए, े
+		.replace(/[\u0913\u094b]/g, 'O') // ओ, ो
+		.replace(/[\u0906\u093e]/g, 'Ā') // आ, ा
 		.replace(/[\u0908\u0940]/g, 'Ī') // ई, ी
-		.replace(/[\u090A\u0942]/g, 'Ū') // ऊ, ू
+		.replace(/[\u090a\u0942]/g, 'Ū') // ऊ, ू
 		.replace(/[\u0910\u0948]/g, 'AI') // ऐ, ै
-		.replace(/[\u0914\u094C]/g, 'AU') // औ, ौ
+		.replace(/[\u0914\u094c]/g, 'AU') // औ, ौ
 
-		.replace(/Ə([AIUŔEOĀĪŪ])/g, '$1')
+		.replace(/Ə([AIUŔEOĀĪŪ\u094d])/g, '$1')
 		.replace(/Ə/g, 'A')
 
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
