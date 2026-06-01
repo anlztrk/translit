@@ -10,6 +10,15 @@ function cyrlat() {
 			index++;
 			return key;
 		})
+		
+		.replace(/\u0915\u093c/g, 'QƏ') // क़
+		.replace(/\u0916\u093c/g, 'XƏ') // ख़
+		.replace(/\u0917\u093c/g, 'ĠƏ') // ग़
+		.replace(/\u091c\u093c/g, 'ZƏ') // ज
+		.replace(/\u091d\u093c/g, 'ŹƏ') // झ़
+		.replace(/\u092b\u093c/g, 'FƏ') // फ़
+		.replace(/\u0921\u093c/g, 'ṚƏ') // ड़
+		.replace(/\u0922\u093c/g, 'ṚHƏ') // ढ़
 
 		.replace(/\u0915/g, 'KƏ') // क
 		.replace(/\u0916/g, 'KHƏ') // ख
@@ -57,8 +66,13 @@ function cyrlat() {
 		.replace(/[\u0914\u094c]/g, 'AU') // औ, ौ
 
 		.replace(/Ə\u094d/g, '')
-		.replace(/Ə((?![KGṄHCJÑYŚṬḌṆRṢTDNLSPBMV]))/g, '$1')
+		.replace(/Ə((?![KQXGĠṄHCJZŹÑYŚṬḌṆRṢTDṚNLSPFBMV]))/g, '$1')
 		.replace(/Ə/g, 'A')
+
+		.replace(/[\u0901\u0902]/g, '\u0303')
+		.replace(/\u0303([KGHQĠX])/g, '\u0303Ṅ$1')
+		.replace(/\u0303([TDLS])/g, '\u0303N$1')
+		.replace(/\u0303([PFBV])/g, '\u0303M$1')
 
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
 			return first + second.toLowerCase()
