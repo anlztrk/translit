@@ -80,6 +80,7 @@ function topright() {
 
 		.replace(/Ə\u094d/g, '')
 		.replace(/Ə(?=[AĀƏEIĪOUŪŔ])/g, '')
+		.replace(/(?<=[AĀƏEIĪOUŪŔ])([KQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW])Ə(?=[KQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW][AĀIĪOUŪŔ])/g, '$1')
 		.replace(/(?<=[AĀƏEIĪOUŪŔKQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW\u0303][KQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW\u0303])Ə(?![KQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW\u0303])/g, '')
 		.replace(/Ə/g, 'A')
 
@@ -192,6 +193,7 @@ function topleft() {
 
 		.replace(/Ə\u094d/g, '')
 		.replace(/Ə(?=[AĀƏEIĪOUŪŔ])/g, '')
+		.replace(/(?<=[AĀƏEIĪOUŪŔ])([KQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW])Ə(?=[KQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW][AĀIĪOUŪŔ])/g, '$1')
 		.replace(/(?<=[AĀƏEIĪOUŪŔKQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW\u0303][KQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW\u0303])Ə(?![KQXGĠṄHCJZŹÑYŚṬḌṚṆRṢTDNLSPFBMVW\u0303])/g, '')
 		.replace(/Ə/g, 'A')
 
