@@ -92,7 +92,7 @@ function cyrlat() {
 		.replace(/n(ɡ|\.ɡ|k|\.k)/g, "ŋ$1")
 		.replace(/n(ɟ|\.ɟ|c|\.cc)/g, "ɲ$1")
 
-		.replace(/.mez/g, ".mæz")
+		.replace(/\.mez/g, ".mæz")
 		.replace(/e(ɾ|l|m|n)/g, "æ$1")
 		.replace(/eː(ɾ|l|m|n)/g, "æː$1")
 
@@ -155,10 +155,6 @@ function cyrlat() {
 		.replace(/ɑ([mnps])([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH$1$2')
 		.replace(/ɑ([mnps])/g, 'U$1')
 		.replace(/ɑ([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH$1')
-		.replace(/uɾ/g, 'UURR')
-		.replace(/yɾ/g, 'OOR')
-		.replace(/u([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'UU$1')
-		.replace(/y([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'OO$1')
 		.replace(/(uː|u|yː|y)/g, 'OO')
 		.replace(/ɑ/g, 'A')
 		.replace(/ɯ/g, 'Ə')
