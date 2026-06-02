@@ -1,0 +1,197 @@
+function cyrlat() {
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)Ğ/g, "$1G")
+		.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)ğ/g, "$1g")
+
+		// 1. VCCCV → VCC.CV
+		.replace(
+			/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz]{2})(?=[BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz][AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g,
+			"$1$2."
+		)
+
+		// 2. VCCV → VC.CV
+		.replace(
+			/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])([BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])(?=[BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz][AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g,
+			"$1$2."
+		)
+
+		// 3. VCV → V.CV
+		.replace(
+			/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])(?=[BbCcÇçDdFfGgĞğHhJjKkLlMmNnPpRrSsŞşTtVvYyZz][AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g,
+			"$1."
+		)
+
+		// 4. VV → V.V
+		.replace(
+			/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])(?=[AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g,
+			"$1."
+		)
+
+		.replace(/A/g, "a")
+		.replace(/B/g, "b")
+		.replace(/C|c/g, "ʤ")
+		.replace(/Ç|ç/g, "ʧ")
+		.replace(/D/g, "d")
+		.replace(/E/g, "e")
+		.replace(/Ê|ê/g, "eː")
+		.replace(/F/g, "f")
+		.replace(/G|g/g, "ɡ")
+		.replace(/Ğ|ğ/g, "ɰ")
+		.replace(/H/g, "h")
+		.replace(/I|ı/g, "ɯ")
+		.replace(/İ/g, "i")
+		.replace(/Î|î/g, "iː")
+		.replace(/J|j/g, "ʒ")
+		.replace(/K/g, "k")
+		.replace(/L|l/g, "ɫ")
+		.replace(/M/g, "m")
+		.replace(/N/g, "n")
+		.replace(/O/g, "o")
+		.replace(/Ö|ö/g, "œ")
+		.replace(/P/g, "p")
+		.replace(/R|r/g, "ɾ")
+		.replace(/S/g, "s")
+		.replace(/Ş|ş/g, "ʃ")
+		.replace(/T/g, "t")
+		.replace(/U/g, "u")
+		.replace(/Y|y/g, "j")
+		.replace(/Ü|ü/g, "y")
+		.replace(/V/g, "v")
+		.replace(/Z/g, "z")
+
+		.replace(/(^|\.|\s)([bʤʧdfɡhʒkɫmnpɾsʃtvjz])([bʤʧdfɡhʒkɫmnpɾsʃtvjz])(?=[aâoûuɯeêiîyœ])/g, "$1$2ɯ.$3")
+
+		.replace(/Â|â/g, "ʲa")
+		.replace(/Û|û/g, "ʲu")
+
+		.replace(/eɰ/g, "eĵ")
+		.replace(/ĵ(b|ʤ|ʧ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)/g, "ː$1")
+		.replace(/ĵ/g, "j")
+		.replace(/(a|i|o|u|y|œ|ɯ)ɰ/g, "$1ː")
+		.replace(/a\.i/g, "aː.i")
+		.replace(/a\.ɰɯ/g, "a.ɰa")
+		.replace(/ɰ/g, "")
+
+		.replace(/(o|u|y|œ)v/g, "$1β")
+		.replace(/v(o|u|y|œ)/g, "β$1")
+
+		.replace(/(e|i|œ|y)ɡ/g, "$1ɟ")
+		.replace(/(e|i|œ|y)k/g, "$1c")
+		.replace(/(e|i|œ|y)ɫ/g, "$1l")
+		.replace(/(e|i|œ|y)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)ɡ/g, "$1$2ɟ")
+		.replace(/(e|i|œ|y)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)k/g, "$1$2c")
+		.replace(/(e|i|œ|y)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)ɫ/g, "$1$2l")
+		.replace(/ɡ(e|i|œ|y|ʲ)/g, "ɟ$1")
+		.replace(/k(e|i|œ|y|ʲ)/g, "c$1")
+		.replace(/ɫ(e|i|œ|y|ʲ)/g, "l$1")
+		.replace(/(ɟ|c|l)ʲ/g, "$1")
+
+		.replace(/ʲ(a|u)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "$1$2")
+		.replace(/ʲ(a|u)/g, "$1ː")
+
+		.replace(/n(ɡ|\.ɡ|k|\.k)/g, "ŋ$1")
+		.replace(/n(ɟ|\.ɟ|c|\.cc)/g, "ɲ$1")
+
+		.replace(/.mez/g, ".mæz")
+		.replace(/e(ɾ|l|m|n)/g, "æ$1")
+		.replace(/eː(ɾ|l|m|n)/g, "æː$1")
+
+		.replace(/æɲ(.)?(c|ɟ)/g, "eɲ$1$2")
+
+		.replace(/a/g, "ɑ")
+
+		.replace(/([ɑeæɯioœuy])[ː]?h/g, '$1ː')
+		.replace(/([eiu])\.([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβjz])/g, '$1$2\.')
+		.replace(/ɟ\.([ɑɯoœuy])/g, 'ɡ.j$1')
+		.replace(/c\.([ɑɯoœuy])/g, 'k.j$1')
+		.replace(/l\.([ɑɯoœuy])/g, 'ɫ.j$1')
+		.replace(/[uy]j\.([ɑeæɯioœuy])/g, "uː\.j$1")
+		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβjz])[uy]j(\.)?([bʤʧdfɡɟʒkclɫmnŋɲɾsʃvβjz])/g, '$1uː.iː$2$3')
+		.replace(/[uy]j/g, 'wiː')
+		.replace(/jwiː(\.)?([ɑɯoœuy])/g, 'juː$1j$2')
+		.replace(/jwiː/g, 'juː.iː')
+		.replace(/([ɑeæɯioœuy])β/g, '$1v')
+
+		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(yɾ|yːɾ)/g, '$1URE')
+		.replace(/(juɾ|juːɾ|jyɾ|jyːɾ)/g, 'YOOR')
+		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(y|yː)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1U$3E')
+		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(y|yː)/g, '$1EW')
+		.replace(/(juː|ju|jyː|jy)/g, 'YOO')
+		.replace(/æɾ/g, 'AIR')
+		.replace(/æ/g, 'A')
+		.replace(/ɑːɾ/g, 'AR')
+		.replace(/ɑː/g, 'AH')
+		.replace(/eɾ/g, 'ERR')
+		.replace(/e([bʤʧdfɡɟʒkclɫmnŋɲpsʃtvβz])/g, 'E$1')
+		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβjz])(ej|eː|e)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1A$3E')
+		.replace(/(ej|eː|e)/g, 'AY')
+		.replace(/iɾ/g, 'IRR')
+		.replace(/i([bʤʧdfɡɟʒkclɫmnŋɲpsʃtvβz])/g, 'I$1')
+		.replace(/(iː|ij|ɯj|ɯː|i)/g, 'EE')
+		.replace(/ɯːɾ/g, 'EER')
+		.replace(/ɑjɾ/g, 'IRE')
+		.replace(/jɑj([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'jI$1E')
+		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβz])ɑj([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1Y$2E')
+		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβz])ɑj/g, '$1YE')
+		.replace(/jɑj/g, 'jI')
+		.replace(/ɑj/g, 'EYE')
+		.replace(/[oœ]jɾ/g, 'OIR')
+		.replace(/[oœ]j/g, 'OY')
+		.replace(/œɾ/g, 'UR')
+		.replace(/oːɾ|oɾ/g, 'OR')
+		.replace(/([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(oː|o|œː|œ)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1O$3E')
+		.replace(/(oː|o|œː|œ)([bʤʧdfɡɟʒkclɫmŋɲpɾsʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'O$2E')
+		.replace(/(oː|o|œː|œ)n/g, 'OWN')
+		.replace(/oː|o|œː|œ/g, 'OH')
+		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑɾ/g, '$1URR')
+		.replace(/ɑɾ/g, 'ARE')
+		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑ([flɫstz])([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβjz])/g, '$1U$2$3')
+		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑ([flɫmnstz])/g, '$1U$2$2')
+		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑʤ/g, '$1UDGE')
+		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑʧ/g, '$1UTCH')
+		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑ[kc]/g, '$1UCK')
+		.replace(/ɑ[kc]/g, 'AHK')
+		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑ([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, '$1U$2')
+		.replace(/ɑ([mnps])([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH$1$2')
+		.replace(/ɑ([mnps])/g, 'U$1')
+		.replace(/ɑ([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH$1')
+		.replace(/uɾ/g, 'UURR')
+		.replace(/yɾ/g, 'OOR')
+		.replace(/u([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'UU$1')
+		.replace(/y([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'OO$1')
+		.replace(/(uː|u|yː|y)/g, 'OO')
+		.replace(/ɑ/g, 'A')
+		.replace(/ɯ/g, 'Ə')
+		.replace(/([AEIOUYaeuioy])ʤE/g, '$1GE')
+		.replace(/([AEIOUYaeuioy])ʤ/g, '$1DGE')
+		.replace(/ʤ/g, 'J')
+		.replace(/([AEIOUYaeuioy])ʧE/g, '$1CHE')
+		.replace(/([AEIOUYaeuioy])ʧ/g, '$1TCH')
+		.replace(/ʧ/g, 'CH')
+		.replace(/[ɡɟ]([EIei])/g, 'GH$1')
+		.replace(/[ɡɟ]/g, 'G')
+		.replace(/ʒ/g, 'ZH')
+		.replace(/[lɫ]/g, 'L')
+		.replace(/(ŋk|ɲc)/g, 'NK')
+		.replace(/[kc]/g, 'K')
+		.replace(/ŋɡ/g, 'NG')
+		.replace(/[ŋɲ]/g, 'NG')
+		.replace(/ɾ/g, 'R')
+		.replace(/ʃ/g, 'SH')
+		.replace(/hw/g, 'WH')
+		.replace(/β/g, 'W')
+		.replace(/j/g, 'Y')
+		//.replace(/ƏR/g, 'ER')
+		.replace(/Ə([CGJKLSZbdfmnpstvz])/g, 'UH$1')
+		.replace(/Ə/g, 'UH')
+		.replace(/\u002e/g, '\u002d')
+		.toLowerCase();
+}
+
+function copy1() {
+	navigator.clipboard.writeText(document.transcription.text1.value);
+}
+
+function copy2() {
+	navigator.clipboard.writeText(document.transcription.text2.value);
+}
