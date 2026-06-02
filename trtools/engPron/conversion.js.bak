@@ -1,7 +1,46 @@
 function cyrlat() {
 	document.transcription.text2.value = document.transcription.text1.value
+
+		// ============================================================================
+		// PART 00 — PREPROCESSING AND PHONOLOGICAL NORMALIZATION
+		// ============================================================================
+
+		// ========================================================================
+		// BLOK A — ÜNSÜZ + Ğ DİZİLERİNİ GEÇİCİ OLARAK NORMALLEŞTİR
+		// ========================================================================
+		//
+		// Daha sonraki aşamalarda Ğ harfi özel olarak işlenecektir.
+		//
+		// Ancak bazı bağlamlarda büyük/küçük harf ve dönüşüm sırası
+		// sorun yaratabileceğinden, ünsüz + Ğ dizileri önce geçici
+		// olarak G biçimine indirgenir.
+		//
+		// Amaç nihai telaffuzu belirlemek değil,
+		// sonraki fonolojik işlemleri kolaylaştırmaktır.
+
 		.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)Ğ/g, "$1G")
 		.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)ğ/g, "$1g")
+
+		// ========================================================================
+		// BLOK B — HECE SINIRLARINI BELİRLE
+		// ========================================================================
+		//
+		// Sonraki fonolojik kuralların büyük bölümü
+		// hece yapısına bağlıdır.
+		//
+		// Bu nedenle dönüşümün ilk aşamasında metin
+		// yaklaşık hecelere ayrılır.
+		//
+		// Kullanılan "." karakteri gerçek çıktı değildir.
+		// Yalnızca ara işlem aşamalarında kullanılan
+		// bir hece sınırı işaretidir.
+		//
+		// Temel ilkeler:
+		//
+		// VCCCV → VCC.CV
+		// VCCV  → VC.CV
+		// VCV   → V.CV
+		// VV    → V.V
 
 		// 1. VCCCV → VCC.CV
 		.replace(
@@ -26,6 +65,29 @@ function cyrlat() {
 			/([AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])(?=[AaÂâEeÊêIıİiÎîOoÖöUuÛûÜü])/g,
 			"$1."
 		)
+
+		// ========================================================================
+		// BLOK C — TÜRKÇE ORTOGRAFİSİNİ IPA BENZERİ TEMSİLE DÖNÜŞTÜR
+		// ========================================================================
+		//
+		// Bu aşamada Türkçe yazı sistemi,
+		// sonraki fonolojik işlemlerin uygulanabileceği
+		// tutarlı bir IPA benzeri ara temsile dönüştürülür.
+		//
+		// Amaç tam akademik IPA üretmek değil,
+		// kuralların üzerinde çalışabileceği
+		// fonolojik bir gösterim elde etmektir.
+		//
+		// Örnek:
+		//
+		// c → ʤ
+		// ç → ʧ
+		// ş → ʃ
+		// ğ → ɰ
+		// ı → ɯ
+		// ö → œ
+		// ü → y
+		// l → ɫ
 
 		.replace(/A/g, "a")
 		.replace(/B/g, "b")
@@ -59,10 +121,49 @@ function cyrlat() {
 		.replace(/V/g, "v")
 		.replace(/Z/g, "z")
 
+		// ========================================================================
+		// BLOK D — TÜRKÇEDE BULUNMAYAN KELİME BAŞI ÇİFT ÜNSÜZLERİ ONAR
+		// ========================================================================
+		//
+		// Türkçede yerli sözcükler genellikle iki ünsüzle başlamaz.
+		//
+		// Sonraki işlemlerde ortaya çıkabilecek yapay CC başlangıçları
+		// araya yardımcı [ɯ] yerleştirilerek düzeltilir.
+		//
+		// CCV
+		//
+		// yapısı yaklaşık olarak:
+		//
+		// Cɯ.CV
+		//
+		// biçimine dönüştürülür.
+
 		.replace(/(^|\.|\s)([bʤʧdfɡhʒkɫmnpɾsʃtvjz])([bʤʧdfɡhʒkɫmnpɾsʃtvjz])(?=[aâoûuɯeêiîyœ])/g, "$1$2ɯ.$3")
+
+		// ========================================================================
+		// BLOK E — Â VE Û HARFLERİNDEKİ PALATALİZASYONU İŞARETLE
+		// ========================================================================
+		//
+		// Â ve Û harfleri geçici olarak palatalizasyon/uzunluk işaretiyle
+		// işaretlenir. Bu işaretler sonraki aşamalarda bağlama göre ya
+		// ünsüz inceliğine ya da ünlü uzunluğuna dönüştürülecektir.
 
 		.replace(/Â|â/g, "ʲa")
 		.replace(/Û|û/g, "ʲu")
+
+		// ========================================================================
+		// BLOK F — Ğ HARFİNİN BAĞLAMA GÖRE YORUMLANMASI
+		// ========================================================================
+		//
+		// Ğ (geçici olarak ɰ) çevresindeki seslere göre yeniden yorumlanır.
+		//
+		// Özellikle:
+		// - eğV → ejV
+		// - eğC → eːC
+		// - eğ# → ej
+		//
+		// Amaç, Türkçedeki farklı Ğ davranışlarını İngiliz okuyucunun
+		// algılayabileceği biçimlere dönüştürmektir.
 
 		.replace(/eɰ/g, "eĵ")
 		.replace(/ĵ(b|ʤ|ʧ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)/g, "ː$1")
@@ -72,8 +173,44 @@ function cyrlat() {
 		.replace(/a\.ɰɯ/g, "a.ɰa")
 		.replace(/ɰ/g, "")
 
+		// ========================================================================
+		// BLOK G — DUDAKSIL VARYANTLARI İŞARETLE
+		// ========================================================================
+		//
+		// Yuvarlak ünlülere komşu bazı v sesleri
+		// geçici olarak β ile işaretlenir.
+		//
+		// NOT:
+		// Bu bölümün fonolojik gerekçesi kodun diğer
+		// bölümleri kadar açık değildir.
+		//
+		// Daha sonraki aşamalarda β örneklerinin
+		// bir kısmı yeniden v'ye dönüştürülmektedir.
+		//
+		// Bu nedenle deneysel veya yeniden değerlendirilmesi
+		// gereken bir blok olabilir.
+
 		.replace(/(o|u|y|œ)v/g, "$1β")
 		.replace(/v(o|u|y|œ)/g, "β$1")
+
+		// ========================================================================
+		// BLOK H — ÖN ÜNLÜLERİN TETİKLEDİĞİ PALATALİZASYON
+		// ========================================================================
+		//
+		// Türkçede ön ünlülerle komşu olan
+		// k, g ve l sesleri çoğu zaman
+		// ön damaksıllaşmış varyantlarla gerçekleşir.
+		//
+		// Bu nedenle:
+		//
+		// k → c
+		// g → ɟ
+		// ɫ → l
+		//
+		// dönüşümleri uygun bağlamlarda uygulanır.
+		//
+		// Amaç İngilizce yazım üretmek değil,
+		// Türkçe telaffuzu daha doğru modellemektir.
 
 		.replace(/(e|i|œ|y)ɡ/g, "$1ɟ")
 		.replace(/(e|i|œ|y)k/g, "$1c")
@@ -86,11 +223,46 @@ function cyrlat() {
 		.replace(/ɫ(e|i|œ|y|ʲ)/g, "l$1")
 		.replace(/(ɟ|c|l)ʲ/g, "$1")
 
+		// ========================================================================
+		// BLOK I — Â / Û PALATALİZASYONUNU ÇÖZÜMLE
+		// ========================================================================
+		//
+		// Daha önce işaretlenen palatalizasyon
+		// burada gerçek fonolojik etkiye dönüştürülür.
+		//
+		// Bazı bağlamlarda yalnızca incelik korunur,
+		// bazı bağlamlarda ise uzunluk ortaya çıkar.
+
 		.replace(/ʲ(a|u)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "$1$2")
 		.replace(/ʲ(a|u)/g, "$1ː")
 
+		// ========================================================================
+		// BLOK J — NAZAL UYUMU
+		// ========================================================================
+		//
+		// Türkçede n sesi bazı damaksıl ünsüzlerden önce
+		// artikülasyon yerini değiştirir.
+		//
+		// nɡ → ŋɡ
+		// nk → ŋk
+		// nɟ → ɲɟ
+		// nc → ɲc
+		//
+		// Böylece sonraki kurallar gerçek telaffuza
+		// daha yakın bir girdi üzerinde çalışır.
+
 		.replace(/n(ɡ|\.ɡ|k|\.k)/g, "ŋ$1")
 		.replace(/n(ɟ|\.ɟ|c|\.cc)/g, "ɲ$1")
+
+		// ========================================================================
+		// BLOK K — ÖZEL TÜRKÇE TELAFFUZ DÜZELTMELERİ
+		// ========================================================================
+		//
+		// Önceki dönüşümlerden sonra ortaya çıkan bazı özel ses
+		// birleşimleri için düzeltmeler uygulanır.
+		//
+		// Bu kurallar belirli sözcük gruplarında daha doğal ve beklenen
+		// çıktıların elde edilmesini amaçlar.
 
 		.replace(/.mez/g, ".mæz")
 		.replace(/e(ɾ|l|m|n)/g, "æ$1")
@@ -98,13 +270,48 @@ function cyrlat() {
 
 		.replace(/æɲ(.)?(c|ɟ)/g, "eɲ$1$2")
 
+		// ========================================================================
+		// BLOK L — A SESİNİ ARKA A'YA DÖNÜŞTÜR
+		// ========================================================================
+		//
+		// Bu aşamadan sonra düz a sesi,
+		// fonolojik işlemlerin geri kalanında
+		// açık arka ünlü [ɑ] olarak temsil edilir.
+
 		.replace(/a/g, "ɑ")
+
+		// ========================================================================
+		// BLOK M — HECE VE ÜNLÜ DİZİLERİNİ YENİDEN DÜZENLE
+		// ========================================================================
+		//
+		// Bazı kısa ünlülerle biten açık heceler İngiliz okuyucu açısından
+		// beklenmedik algılanabileceğinden, belirli bağlamlarda hece
+		// sınırları yeniden düzenlenir.
+		//
+		// Amaç, ortaya çıkan yazımın İngilizce okuma alışkanlıklarıyla
+		// daha uyumlu olmasını sağlamaktır.
 
 		.replace(/([ɑeæɯioœuy])[ː]?h/g, '$1ː')
 		.replace(/([eiu])\.([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβjz])/g, '$1$2\.')
 		.replace(/ɟ\.([ɑɯoœuy])/g, 'ɡ.j$1')
 		.replace(/c\.([ɑɯoœuy])/g, 'k.j$1')
 		.replace(/l\.([ɑɯoœuy])/g, 'ɫ.j$1')
+
+		// ========================================================================
+		// BLOK N — [uj] VE [yj] DİZİLERİNİ İNGİLİZCEYE YAKLAŞTIR
+		// ========================================================================
+		//
+		// Türkçedeki [uj] ve [yj] dizileri
+		// İngilizcede doğal hece yapıları değildir.
+		//
+		// Bu nedenle en yakın İngilizce örüntülerden biri olan
+		// [wiː] tabanlı yapılara dönüştürülür.
+		//
+		// Daha sonra özel düzeltme kuralları uygulanarak
+		// istenmeyen yan etkiler giderilir.
+
+
+
 		.replace(/[uy]j\.([ɑeæɯioœuy])/g, "uː\.j$1")
 		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβjz])[uy]j(\.)?([bʤʧdfɡɟʒkclɫmnŋɲɾsʃvβjz])/g, '$1uː.iː$2$3')
 		.replace(/[uy]j/g, 'wiː')
@@ -112,79 +319,341 @@ function cyrlat() {
 		.replace(/jwiː/g, 'juː.iː')
 		.replace(/([ɑeæɯioœuy])β/g, '$1v')
 
+		// ============================================================================
+		// PART 01 — IPA → ENGLISH-STYLE SPELLING
+		// Y / Ü SYSTEM, AIR, A, E, I, EYE, OY
+		// ============================================================================
+
+		// Türkçe [yɾ] ve [yːɾ] dizilerini URE ile göster.
+		//
+		// cure, pure, lure gibi İngilizce örüntüler
+		// İngiliz okuyucuya [jʊɹ]/[ʊɹ] benzeri bir ses çağrıştırır.
+		//
+		// Amaç bire bir fonetik eşleşme değil,
+		// Türkçe [yɾ] dizisine mümkün olduğunca yaklaşmaktır.
 		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(yɾ|yːɾ)/g, '$1URE')
+		// Baştaki [j] korunmuşsa YOOR kullan.
+		//
+		// Amaç [juɾ], [jyɾ] dizilerini İngilizcenin
+		// "your" ailesine yaklaştırmaktır.
 		.replace(/(juɾ|juːɾ|jyɾ|jyːɾ)/g, 'YOOR')
+
+		// Türkçe [y] sesi tek son ünsüzden önce geliyorsa
+		// İngilizcedeki magic-E sisteminden yararlan.
+		//
+		// cute, mute, lute gibi örüntüler örnek alınır.
 		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(y|yː)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1U$3E')
+
+		// Genel durumda Türkçe [y] sesini EW ile göster.
+		//
+		// few, pew, mew gibi örüntülerden yararlanılır.
 		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(y|yː)/g, '$1EW')
+
+		// [ju], [jy] dizilerini YOO ile göster.
+		//
+		// you, youth ailesinden yararlanılır.
 		.replace(/(juː|ju|jyː|jy)/g, 'YOO')
+
+		// Türkçe [æɾ] dizisini AIR ile göster.
+		//
+		// AIR İngilizcede genellikle [ɛəɹ] çağrıştırır.
 		.replace(/æɾ/g, 'AIR')
+
+		// Kalan [æ] örneklerini geçici olarak A ile göster.
 		.replace(/æ/g, 'A')
+
+
+		// Uzun [ɑːɾ] → AR
 		.replace(/ɑːɾ/g, 'AR')
+
+		// Uzun [ɑː] → AH
 		.replace(/ɑː/g, 'AH')
+
+		// [eɾ] → ERR
 		.replace(/eɾ/g, 'ERR')
+
+		// Kapalı hecedeki [e] sesini işaretle.
 		.replace(/e([bʤʧdfɡɟʒkclɫmnŋɲpsʃtvβz])/g, 'E$1')
+
+		// Magic-E kullanarak [e], [eː], [ej] → [eɪ]
 		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβjz])(ej|eː|e)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1A$3E')
+
+		// day, say, way örüntülerinden yararlan.
 		.replace(/(ej|eː|e)/g, 'AY')
+
+		// [iɾ] → IRR
 		.replace(/iɾ/g, 'IRR')
+
+		// Kısa [i] → kısa I
 		.replace(/i([bʤʧdfɡɟʒkclɫmnŋɲpsʃtvβz])/g, 'I$1')
+
+		// Uzun yüksek ön ünlüler → EE
 		.replace(/(iː|ij|ɯj|ɯː|i)/g, 'EE')
+
+		// [ɯːɾ] → EER
 		.replace(/ɯːɾ/g, 'EER')
+
+		// [ɑjɾ] → IRE
 		.replace(/ɑjɾ/g, 'IRE')
+
+		// Kelime başındaki yay dizileri için özel durum.
 		.replace(/jɑj([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'jI$1E')
+
+		// Ünsüz + [ɑj] + ünsüz → magic-E
 		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβz])ɑj([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1Y$2E')
+
+		// Hece sonundaki [ɑj] → YE
 		.replace(/([bʤʧdfɡɟhʒkclɫmnŋɲpɾsʃtvβz])ɑj/g, '$1YE')
+
 		.replace(/jɑj/g, 'jI')
+
+		// Türkçe [ɑj] diftongunu EYE ile göster.
+		//
+		// eye doğrudan [aɪ] okunur.
 		.replace(/ɑj/g, 'EYE')
+
+		// [ojɾ] ve [œjɾ] → OIR
 		.replace(/[oœ]jɾ/g, 'OIR')
+
+		// [oj] ve [œj] → OY
 		.replace(/[oœ]j/g, 'OY')
+
+		// Türkçe [œɾ] sesini UR ile göster.
+		//
+		// blur, fur, burn ailesindeki merkezî r'li ünlüye
+		// yaklaşmak amaçlanır.
 		.replace(/œɾ/g, 'UR')
+
+
+		// Türkçe [oɾ] ve [oːɾ] dizilerini OR ile göster.
 		.replace(/oːɾ|oɾ/g, 'OR')
+
+		// Ünsüz + o/ö + ünsüz yapılarında
+		// İngilizcedeki magic-E sistemini kullan.
+		//
+		// bone, home, note gibi örüntüler hedeflenir.
 		.replace(/([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(oː|o|œː|œ)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1O$3E')
+
+		// Kelime sonu tek ünsüz öncesinde de aynı sistem uygulanır.
 		.replace(/(oː|o|œː|œ)([bʤʧdfɡɟʒkclɫmŋɲpɾsʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'O$2E')
+
+		// [on] ve [ön] dizilerini OWN ile göster.
+		//
+		// own, shown örüntülerinden yararlanılır.
 		.replace(/(oː|o|œː|œ)n/g, 'OWN')
+
+		// Kalan o/ö sesleri için genel çözüm.
+		//
+		// Amaç [oʊ] çağrışımı oluşturmaktır.
 		.replace(/oː|o|œː|œ/g, 'OH')
+
+		// Ünsüz + [ɑɾ] → URR
+		//
+		// Türkçe kısa [ɑ] sesi İngiliz okuyucuya
+		// çoğu zaman [ʌ] yönünde yaklaştırılır.
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑɾ/g, '$1URR')
+
+		// Kelime başındaki [ɑɾ] dizisini ARE ile göster.
 		.replace(/ɑɾ/g, 'ARE')
+
+		// Belirli ünsüz kümeleri öncesindeki [ɑ]
+		// sesini İngilizcedeki kısa U örüntüsüne yaklaştır.
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑ([flɫstz])([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβjz])/g, '$1U$2$3')
+
+		// Kelime sonundaki benzer örüntüler.
+		//
+		// Ünsüz çiftlenerek kısa ünlü hissi güçlendirilir.
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑ([flɫmnstz])/g, '$1U$2$2')
+
+		// [ɑʤ] → UDGE
+		//
+		// judge, budget ailesinden yararlanılır.
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑʤ/g, '$1UDGE')
+
+		// [ɑʧ] → UTCH
+		//
+		// much, Dutch örüntüleri hedeflenir.
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑʧ/g, '$1UTCH')
+
+		// [ɑk] ve [ɑc] → UCK
+		//
+		// duck, luck, truck ailesinden yararlanılır.
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑ[kc]/g, '$1UCK')
+
+		// Kelime başındaki [ɑk] için daha nötr bir çözüm kullan.
 		.replace(/ɑ[kc]/g, 'AHK')
+
+		// Genel kısa [ɑ] → kısa U yaklaşımı.
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑ([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, '$1U$2')
+
+		// um / un / up / us hecelerinde U korunur.
+		//
+		// Daha karmaşık kümelerde AH tercih edilir.
 		.replace(/ɑ([mnps])([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH$1$2')
 		.replace(/ɑ([mnps])/g, 'U$1')
+
+		// Kalan [ɑ] + ünsüz örnekleri AH ile göster.
 		.replace(/ɑ([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH$1')
+
+		// [uɾ] → UURR
 		.replace(/uɾ/g, 'UURR')
+
+		// [yɾ] → OOR
 		.replace(/yɾ/g, 'OOR')
+
+		// Kapalı hecedeki [u] sesini UU ile göster.
+		//
+		// Amaç İngiliz okuyucunun [ʊ] üretmesidir.
 		.replace(/u([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'UU$1')
+
+		// Kapalı hecedeki [y] sesini OO ile göster.
 		.replace(/y([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'OO$1')
+
+		// Genel yaklaşım:
+		//
+		// Türkçe [u]  → İngilizce [ʊ]
+		// Türkçe [uː] → İngilizce [u]
+		// Türkçe [y]  → İngilizce [u]
 		.replace(/(uː|u|yː|y)/g, 'OO')
+
+		// Kalan [ɑ] örneklerini A ile göster.
 		.replace(/ɑ/g, 'A')
+
+		// Türkçe [ɯ] sesi geçici olarak Ə ile gösterilir.
+		// Nihai aşamada UH'ye dönüştürülecektir.
 		.replace(/ɯ/g, 'Ə')
+
+
+		// Magic-E bağlamındaki [ʤ] sesini GE ile göster.
+		//
+		// page, rage, cage gibi örüntülerde GE,
+		// önceki seslinin uzun veya diftong olarak
+		// algılanmasına yardımcı olur.
 		.replace(/([AEIOUYaeuioy])ʤE/g, '$1GE')
+
+		// Sesliden sonra gelen [ʤ] sesini DGE ile göster.
+		//
+		// badge, bridge, judge gibi yazımlarda
+		// DGE genellikle kısa sesliyle birlikte görülür.
+		//
+		// Amaç yalnızca [ʤ] sesini göstermek değil,
+		// önceki seslinin kısa okunmasını da teşvik etmektir.
 		.replace(/([AEIOUYaeuioy])ʤ/g, '$1DGE')
+
+		// Geriye kalan [ʤ] seslerini J ile göster.
 		.replace(/ʤ/g, 'J')
+
+		// Magic-E bağlamındaki [ʧ] sesini CHE ile göster.
 		.replace(/([AEIOUYaeuioy])ʧE/g, '$1CHE')
+
+		// Sesliden sonra gelen [ʧ] sesini TCH ile göster.
+		//
+		// catch, match, fetch gibi örüntülerden yararlanılır.
 		.replace(/([AEIOUYaeuioy])ʧ/g, '$1TCH')
+
+		// Geriye kalan [ʧ] seslerini CH ile göster.
 		.replace(/ʧ/g, 'CH')
+
+		// İngilizcede GE ve GI dizileri çoğu zaman
+		// sert G olarak değil /dʒ/ olarak okunur.
+		//
+		// Bu nedenle e ve i öncesindeki [ɡ]/[ɟ]
+		// sesleri GH ile gösterilir.
 		.replace(/[ɡɟ]([EIei])/g, 'GH$1')
+
+		// Kalan [ɡ] ve [ɟ] örneklerini G ile göster.
+		//
+		// İngiliz okuyucu açısından bu ayrım
+		// güvenilir biçimde korunamaz.
 		.replace(/[ɡɟ]/g, 'G')
+
+		// Türkçe [ʒ] sesini ZH ile göster.
+		//
+		// vision, television türü telaffuz açıklamalarında
+		// kullanılan yerleşik gösterimden yararlanılır.
 		.replace(/ʒ/g, 'ZH')
+
+		// İnce ve kalın L ayrımını kaldır.
 		.replace(/[lɫ]/g, 'L')
+
+		// [ŋk] ve [ɲc] dizilerini NK ile göster.
+		//
+		// İngiliz okuyucu için [ŋ] üretmek,
+		// [ɲ] üretmekten daha doğaldır.
 		.replace(/(ŋk|ɲc)/g, 'NK')
+
+		// [k] ve [c] seslerini ortak olarak K ile göster.
 		.replace(/[kc]/g, 'K')
+
+		// [ŋɡ] dizisini NG ile göster.
+		//
+		// finger, angle, longer ailesinden yararlanılır.
 		.replace(/ŋɡ/g, 'NG')
+
+		// Kalan [ŋ] ve [ɲ] örneklerini NG ile göster.
+		//
+		// Amaç tam fonetik doğruluk değil,
+		// sezgisel İngilizce telaffuz elde etmektir.
 		.replace(/[ŋɲ]/g, 'NG')
+
+		// Türkçe [ɾ] sesini R ile göster.
+		//
+		// İngilizce R farklı bir ses olsa da,
+		// okuyucunun üretebileceği en yakın
+		// ve en doğal karşılıktır.
 		.replace(/ɾ/g, 'R')
+
+		// Türkçe [ʃ] sesini SH ile göster.
+		//
+		// ship, shop, fish örüntülerinden yararlanılır.
 		.replace(/ʃ/g, 'SH')
+
+		// Daha önce oluşan [hw] dizisini
+		// İngilizcenin yerleşik WH yazımıyla göster.
+		//
+		// what, when, where ailesi hedeflenir.
 		.replace(/hw/g, 'WH')
+
+		// Türkçede [w] sesi bulunmaz.
+		//
+		// Önceki aşamalarda oluşan [β] sesi,
+		// artikülasyon bakımından [w]'ya en yakın
+		// Türkçe seslerden biri kabul edilmiştir.
 		.replace(/β/g, 'W')
+
+		// Türkçe [j] sesini Y ile göster.
+		//
+		// yes, yellow, yard örüntülerinden yararlanılır.
 		.replace(/j/g, 'Y')
+
+		// Bu kural bir dönem denenmiş olsa da
+		// yeterince tutarlı sonuç vermediği için
+		// devre dışı bırakılmıştır.
+		//
+		// Amaç [ɯɾ] dizilerini ER örüntüsüne
+		// yaklaştırmaktı.
 		//.replace(/ƏR/g, 'ER')
+
+		// Türkçe [ɯ] sesi sistem içinde geçici olarak
+		// Ə sembolüyle temsil edilmektedir.
+		//
+		// Nihai hedef Türkçe [ɯ] → İngilizce [ə]
+		// yakınsamasıdır.
+		//
+		// uh, huh örüntülerinden yararlanılır.
 		.replace(/Ə([CGJKLSZbdfmnpstvz])/g, 'UH$1')
+
+		// Kalan bütün Ə örneklerini UH ile göster.
 		.replace(/Ə/g, 'UH')
+
+		// Hece sınırı göstermek için kullanılan
+		// noktaları tireye dönüştür.
+		//
+		// Amaç daha doğal görünen bir İngilizce benzeri
+		// yazım sistemi elde etmektir.
 		.replace(/\u002e/g, '\u002d')
+
+		// Son çıktıyı tamamen küçük harfe dönüştür.
 		.toLowerCase();
 }
 
