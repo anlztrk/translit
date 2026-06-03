@@ -153,7 +153,7 @@ function cyrlat() {
 		.replace(/ɑɾ/g, 'ARE')
 		.replace(/([bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ([flɫstz])([bʤdfɡɟkcmnŋɲpɾstvβjz])/g, '$1U$2$3')
 		.replace(/[kc]ɑ([flɫstz])([bʤdfɡɟkcmnŋɲpɾstvβjz])/g, 'CU$1$2')
-		.replace(/\.([bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ([flɫmnstz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '.$1U$2$2')
+		//.replace(/\.([bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ([flɫmnstz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '.$1U$2$2')
 		.replace(/\.[kc]ɑ([flɫmnstz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '.CU$1$1')
 		.replace(/([bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑʤ/g, '$1UDGE')
 		.replace(/[kc]ɑʤ/g, 'CUDGE')
