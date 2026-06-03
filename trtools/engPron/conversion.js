@@ -110,8 +110,11 @@ function cyrlat() {
 		.replace(/[uy]j/g, 'wiː')
 		.replace(/jwiː(\.)?([ɑɯoœuy])/g, 'juː$1j$2')
 		.replace(/jwiː/g, 'juː.iː')
-		.replace(/([ɑeæɯioœuy])β/g, '$1v')
+		.replace(/([eæɯiœuy])β/g, '$1v')
 
+		.replace(/ɑβ/g, 'OW')
+		.replace(/[oœ]β/g, 'OH')
+		
 		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(yɾ|yːɾ)/g, '$1URE')
 		.replace(/(juɾ|juːɾ|jyɾ|jyːɾ)/g, 'YOOR')
 		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(y|yː)([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1U$3E')
@@ -145,6 +148,7 @@ function cyrlat() {
 		.replace(/(?:oː|o|œː|œ)([bʧdfkclɫmpɾʃtvβz])(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'O$1E')
 		.replace(/(?:oː|o|œː|œ)ʤ/g, 'OJE')
 		.replace(/(?:oː|o|œː|œ)n/g, 'OWN')
+		.replace(/(?:oː|o|œː|œ)s/g, 'OSS')
 		.replace(/(?:oː|o|œː|œ)/g, 'OH')
 		.replace(/([bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑɾ/g, '$1AR')
 		.replace(/ɑɾ/g, 'ARE')
