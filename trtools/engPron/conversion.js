@@ -59,7 +59,7 @@ function cyrlat() {
 		.replace(/V/g, "v")
 		.replace(/Z/g, "z")
 
-		.replace(/(^|\.|\s)([bʤʧdfɡhʒkɫmnpɾsʃtvjz])([bʤʧdfɡhʒkɫmnpɾsʃtvjz])(?=[aâoûuɯeêiîyœ])/g, "$1$2ɯ.$3")
+		.replace(/(?<!aâoûuɯeêiîyœ)([bʤʧdfɡhʒkɫmnpɾsʃtvjz])([bʤʧdfɡhʒkɫmnpɾsʃtvjz])(?=[aâoûuɯeêiîyœ])/g, "$1ɯ.$2")
 
 		.replace(/Â|â/g, "ʲa")
 		.replace(/Û|û/g, "ʲu")
