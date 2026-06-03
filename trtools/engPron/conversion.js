@@ -1,7 +1,7 @@
 function cyrlat() {
 	document.transcription.text2.value = document.transcription.text1.value
-		.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)Ğ/g, "$1G")
-		.replace(/(B|b|C|c|Ç|ç|D|d|F|f|G|g|H|h|J|j|K|k|L|l|M|m|N|n|P|p|R|r|S|s|Ş|ş|T|t|V|v|Y|y|Z|z)ğ/g, "$1g")
+		.replace(/(?<=[BbCcÇçDdFfGgHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])Ğ/g, "G")
+		.replace(/(?<=[BbCcÇçDdFfGgHhJjKkLlMmNnPpRrSsŞşTtVvYyZz])ğ/g, "g")
 
 		// 1. VCCCV → VCC.CV
 		.replace(
@@ -61,46 +61,42 @@ function cyrlat() {
 
 		.replace(/(?<!aâoûuɯeêiîyœ)([bʤʧdfɡhʒkɫmnpɾsʃtvjz])([bʤʧdfɡhʒkɫmnpɾsʃtvjz])(?=[aâoûuɯeêiîyœ])/g, "$1ɯ.$2")
 
-		.replace(/Â|â/g, "ʲa")
-		.replace(/Û|û/g, "ʲu")
+		.replace(/[Ââ]/g, "ʲa")
+		.replace(/[Ûû]/g, "ʲu")
 
 		.replace(/eɰ/g, "eĵ")
-		.replace(/ĵ(b|ʤ|ʧ|d|f|ɡ|h|ʒ|k|ɫ|m|n|p|ɾ|s|ʃ|t|v|j|z)/g, "ː$1")
+		.replace(/ĵ(?=[bʤʧdfɡhʒkɫmnpɾsʃtvjz])/g, "ː")
 		.replace(/ĵ/g, "j")
-		.replace(/(a|i|o|u|y|œ|ɯ)ɰ/g, "$1ː")
+		.replace(/(?<=[aiouyœɯ])ɰ/g, "ː")
 		.replace(/a\.i/g, "aː.i")
 		.replace(/a\.ɰɯ/g, "a.ɰa")
 		.replace(/ɰ/g, "")
 
-		.replace(/(o|u|y|œ)v/g, "$1β")
+		.replace(/(?<=[ouyœ])v/g, "$1β")
 		.replace(/v(o|u|y|œ)/g, "β$1")
+		.replace(/v(?=[ouyœ])/g, "β")
 
-		.replace(/(e|i|œ|y)ɡ/g, "$1ɟ")
-		.replace(/(e|i|œ|y)k/g, "$1c")
-		.replace(/(e|i|œ|y)ɫ/g, "$1l")
-		.replace(/(e|i|œ|y)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)ɡ/g, "$1$2ɟ")
-		.replace(/(e|i|œ|y)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)k/g, "$1$2c")
-		.replace(/(e|i|œ|y)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)ɫ/g, "$1$2l")
-		.replace(/ɡ(e|i|œ|y|ʲ)/g, "ɟ$1")
-		.replace(/k(e|i|œ|y|ʲ)/g, "c$1")
-		.replace(/ɫ(e|i|œ|y|ʲ)/g, "l$1")
-		.replace(/(ɟ|c|l)ʲ/g, "$1")
+		.replace(/(?<=[eiœy][bʤʧdfɡɟːhʒkcɫlmnpɾsʃtvβjz]?)ɡ/g, "ɟ")
+		.replace(/(?<=[eiœy][bʤʧdfɡɟːhʒkcɫlmnpɾsʃtvβjz]?)k/g, "c")
+		.replace(/(?<=[eiœy][bʤʧdfɡɟːhʒkcɫlmnpɾsʃtvβjz]?)ɫ/g, "l")
+		.replace(/ɡ(?=[eiœyʲ])/g, "ɟ")
+		.replace(/k(?=[eiœyʲ])/g, "c")
+		.replace(/ɫ(?=[eiœyʲ])/g, "l")
+		.replace(/(?<=[ɟcl])ʲ/g, "")
 
-		.replace(/ʲ(a|u)(b|ʤ|ʧ|d|f|ɡ|ɟ|ː|h|ʒ|k|c|ɫ|l|m|n|p|ɾ|s|ʃ|t|v|β|j|z)/g, "$1$2")
-		.replace(/ʲ(a|u)/g, "$1ː")
+		.replace(/ʲ(?=[au][bʤʧdfɡɟːhʒkcɫlmnpɾsʃtvβjz])/g, "")
+		.replace(/ʲ([au])/g, "$1ː")
 
-		.replace(/n(ɡ|\.ɡ|k|\.k)/g, "ŋ$1")
-		.replace(/n(ɟ|\.ɟ|c|\.cc)/g, "ɲ$1")
+		.replace(/n(?=[\.]?[ɡk])/g, "ŋ")
+        .replace(/n(?=[\.]?[ɟc])/g, "ɲ")
 
 		.replace(/\.mez/g, ".mæz")
-		.replace(/e(ɾ|l|m|n)/g, "æ$1")
-		.replace(/eː(ɾ|l|m|n)/g, "æː$1")
-
-		.replace(/æɲ(.)?(c|ɟ)/g, "eɲ$1$2")
+		.replace(/e(?=ː?[ɾlmn])/g, "æ")
+		.replace(/æ(?=ɲ\.?[cɟ])/g, "e")
 
 		.replace(/a/g, "ɑ")
 
-		.replace(/([ɑeæɯioœuy])[ː]?h/g, '$1ː')
+		.replace(/(?<=[ɑeæɯioœuy])ː?h/g, 'ː')
 		.replace(/([ei])\.([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβjz])/g, '$1$2\.')
 		.replace(/ɟ\.([ɑɯoœuy])/g, 'ɡ.j$1')
 		.replace(/c\.([ɑɯoœuy])/g, 'k.j$1')
@@ -163,13 +159,17 @@ function cyrlat() {
 		.replace(/([ʤʧlɫmvβjz])ɑn(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1UNN')
 		.replace(/[kc]ɑn(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'CUNN')
 		.replace(/tɑn/g, 'TAHN')
+		.replace(/([bʤʧdɡhɟʒlɫmnŋɲɾsʃtvβjz])ɑ[lɫ](?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1ULL')
+		.replace(/([bp])ɑ[lɫ]/g, '$1AHL')
+		.replace(/[kc]ɑ[lɫ](?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, 'CULL')
+		.replace(/[kc]ɑ[lɫ]/g, 'CUL')
 		.replace(/([ʤdflɫnpʃtvβz])ɑm(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1UMM')
 		.replace(/[kc]ɑm/g, 'CUM')
 		.replace(/([bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ([bʤdfɡɟkcmnŋɲpɾstvβz])/g, '$1U$2')
 		.replace(/[kc]ɑ([bʤdfɡɟkcmnŋɲpɾstvβz])/g, 'CU$1')
 		.replace(/ɑ([mnps])([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH$1$2')
 		.replace(/ɑ([mnps])/g, 'U$1')
-		.replace(/(?<!bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz)ɑ([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH$1')
+		.replace(/(?<![bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ([bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH$1')
 		.replace(/(uː|u|yː|y)/g, 'OO')
 		.replace(/ɑ/g, 'A')
 		.replace(/ɯ/g, 'Ə')
