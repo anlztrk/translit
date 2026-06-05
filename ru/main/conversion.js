@@ -520,8 +520,8 @@ function cyrest() {
 	document.transcription.text4.value = document.transcription.text1.value
 		.replace(/(?<=\p{Script=Cyrl})\u0301/ug, "")
 		
-		.replace(/(?<=[БВГДЖЗКЛМНПРСТФХЦЧШЩЬ])Е/g, "Э")
-		.replace(/(?<=[БВГДЖЗКЛМНПРСТФХЦЧШЩЬбвгджзклмнпрстфхцчшщь])е/g, "э")
+		.replace(/(?<=[БВГДЖЗКЛМНПРСТФХЦЧШЩ])Е/g, "Э")
+		.replace(/(?<=[БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])е/g, "э")
 		
 		.replace(/(?<=\p{Lu}|\p{Lu}\p{Lu} )Я/ug, "ЙА")
 		.replace(/Я(?=\p{Lu}| \p{Lu}\p{Lu})/ug, "ЙА")
