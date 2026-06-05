@@ -518,7 +518,6 @@ function cyrest() {
 		.replace(/X(?=\p{Script=Cyrl})/ug, "Х");
 	
 	document.transcription.text4.value = document.transcription.text1.value
-		.replace(/(?<=\p{Script=Cyrl})\u0301/ug, "")
 		
 		.replace(/(?<=[БВГДЖЗКЛМНПРСТФХЦЧШЩ])Е/g, "Э")
 		.replace(/(?<=[БВГДЖЗКЛМНПРСТФХЦЧШЩбвгджзклмнпрстфхцчшщ])е/g, "э")
