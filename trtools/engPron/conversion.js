@@ -147,7 +147,8 @@ function cyrlat() {
 		.replace(/(?<![bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑɾ(?![bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])/g, 'ARE')
 		.replace(/ɑɾ/g, 'AR')
 		
-		.replace(/(?<=[bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ(?=[bʤdfɡɟʒmnŋɲpvβz])/g, 'U')
+		.replace(/(?<=[bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ(?=[bʤdfɡɟʒmŋɲpvβz])/g, 'U')
+		.replace(/(?<=[bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ([nts])/g, 'U$1$1')
 		.replace(/(?<=[bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ[ck]/g, 'UCK')
 		.replace(/(?<=[bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑʤ/g, 'UDGE')
 		.replace(/(?<=[bʤʧdfɡhɟʒlɫmnŋɲpɾsʃtvβjz])ɑ(?=[bʤʧdfɡɟʒkclɫmnŋɲpɾstʃvβz])/g, 'AH')
