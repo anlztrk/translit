@@ -111,8 +111,10 @@ function cyrlat() {
 		.replace(/(?<=[ɑeæɯioœuy])β/g, 'v')
 		
 		.replace(/(?<=[bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])yː?ɾ/g, 'URE')
+		.replace(/(?<=(?:d|fl|p|m))uː?ɾ/g, 'URE')
 		.replace(/(?<=[bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])yː?([bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz](?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz]))/g, 'U$1E')
 		.replace(/([bʤʧfɡɟhʒkclɫmnŋɲpɾʃvβ])(y|yː)(?![bʤʧdfɡɟʒkclɫmnŋɲpɾsʃtvβz])/g, '$1EW')
+		.replace(/(?<=(?:d|fl|p|m))uː?ɾ/g, 'URE')
 		.replace(/j[uy]ː?/g, 'YOO')
 		
 		.replace(/æɾ/g, 'AIR')
