@@ -172,7 +172,7 @@ function cyrlat() {
 		.replace(/ŋɡ/g, 'NG')
 		.replace(/[ŋɲ]/g, 'NG')
 		.replace(/ɾ/g, 'R')
-		.replace(/(?<=[AEIOUYaeuioy])(?:s|ss)/g, 'SS')
+		.replace(/(?<=[AEIOUYaeuioy])(?:ss|s)/g, 'SS')
 		.replace(/ʃ/g, 'SH')
 		.replace(/hw/g, 'WH')
 		.replace(/β/g, 'W')
