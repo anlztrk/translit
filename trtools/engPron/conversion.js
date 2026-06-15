@@ -139,6 +139,7 @@ function cyrlat() {
 		.replace(/[oœ]j/g, 'OY')
 		.replace(/œɾ/g, 'UR')
 		.replace(/oː?ɾ/g, 'OR')
+		.replace(/[oœ]ː?([bʤʧdfɡhɟʒkclɫpɾʃtjz])(?![bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])/g, 'O$1E')
 		.replace(/[oœ]ː?(?=[bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])/g, 'OA')
 		.replace(/[oœ]ː?/g, 'OH')
 		.replace(/(?<![bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])ɑɾ(?![bʤʧdfɡhɟʒkclɫmnŋɲpɾsʃtvβjz])/g, 'ARE')
