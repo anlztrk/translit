@@ -83,8 +83,8 @@ function cyrlat() {
 		.replace(/(ś|š)/g, "ş")
 		.replace(/(Ž|Ź)/g, "J")
 		.replace(/(ž|ź)/g, "j")
-		.replace(/(W|Ł)/g, "V")
-		.replace(/(w|ł)/g, "v")
+		.replace(/W/g, "V")
+		.replace(/w/g, "v")
 
 		.replace(/Ń(A|E|İ|O|U|I)/g, "NY$1")
 		.replace(/Ń(a|e|i|o|u|ı)/g, "Ny$1")
@@ -112,7 +112,12 @@ function cyrlat() {
 		.replace(/(a|e|i|o|u|ı)Ѕ/g, "$1Dz")
 		.replace(/(a|e|i|o|u|ı)ѕ/g, "$1dz")
 		.replace(/Ѕ/g, "Z")
-		.replace(/ѕ/g, "z");
+		.replace(/ѕ/g, "z")
+		
+		.replace(/(?<=[BCÇDFGHJKLMNPRSŞTVYZ])Ł/g, "U")
+		.replace(/(?<=[BCÇDFGHJKLMNPRSŞTVYZbcçdfghjklmnprsştvyz])ł/g, "u")
+		.replace(/Ł/g, "V")
+		.replace(/ł/g, "v");
 }
 
 function copy1() {
