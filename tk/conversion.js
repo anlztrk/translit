@@ -96,7 +96,7 @@ function leftright() {
 		.replace(/Ы/g, "Y")
 		.replace(/Ь/g, "")
 		.replace(/Э/g, "E")
-		
+
 		.replace(/\u2039/g, "\u2018")
 		.replace(/\u203a/g, "\u2019")
 		.replace(/\u00ab/g, "\u201c")
@@ -200,7 +200,7 @@ function rightleft() {
 		.replace(/([БВГДЖҖЗКЛМНҢПРСТУФХЦЧШЩ])Е/g, "$1ЬЕ")
 		.replace(/([БВГДЖҖЗКЛМНҢПРСТУФХЦЧШЩбвгджҗзйклмнңпрстуфхцчшщ])э/g, "$1е")
 		.replace(/([БВГДЖҖЗКЛМНҢПРСТУФХЦЧШЩ])Э/g, "$1Е")
-		
+
 		.replace(/йье/g, "ййе")
 		.replace(/ЙЬЕ/g, "ЙЙЕ")
 
@@ -213,22 +213,74 @@ function rightleft() {
 function leftbottom() {}
 
 function rightbottom() {
-	document.transcription.text3.value = document.transcription.text2.value
-		.replace(/J/g, "C")
-		.replace(/Ž/g, "J")
-		.replace(/Ň/g, "Ñ")
-		.replace(/I/g, "İ")
-		.replace(/Y/g, "I")
-		.replace(/Ý/g, "Y")
-		.replace(/W/g, "V")
-		.replace(/j/g, "c")
-		.replace(/ž/g, "j")
-		.replace(/ň/g, "ñ")
-		.replace(/y/g, "ı")
-		.replace(/ý/g, "y")
-		.replace(/w/g, "v")
-		.replace(/([AÄBCÇDEFGHIİJLMNÑOÖPRSŞTUÜVYZ])G/g, "$1Ğ")
-		.replace(/([AÄBCÇDEFGHIİJLMNÑOÖPRSŞTUÜVYZaäbcçdefghıijlmnñoöprsştuüvyz])g/g, "$1ğ");
+	document.transcription.text3.value = (() => {
+		let s = document.transcription.text2.value
+			.replace(/J/g, "C")
+			.replace(/Ž/g, "J")
+			.replace(/Ň/g, "Ñ")
+			.replace(/I/g, "İ")
+			.replace(/Y/g, "I")
+			.replace(/Ý/g, "Y")
+			.replace(/W/g, "V")
+			.replace(/j/g, "c")
+			.replace(/ž/g, "j")
+			.replace(/ň/g, "ñ")
+			.replace(/y/g, "ı")
+			.replace(/ý/g, "y")
+			.replace(/w/g, "v")
+			.replace(/([AÄBCÇDEFGHIİJLMNÑOÖPRSŞTUÜVYZ])G/g, "$1Ğ")
+			.replace(/([AÄBCÇDEFGHIİJLMNÑOÖPRSŞTUÜVYZaäbcçdefghıijlmnñoöprsştuüvyz])g/g, "$1ğ");
+
+		let prev;
+		do {
+			prev = s;
+			s = s
+				// Assimilation rules
+				.replace(/ç([dls])/g, "ş$1")
+				.replace(/[çş]j/g, "şş")
+				.replace(/[ÇŞ]j/g, "Şş")
+				.replace(/Gb/g, "Gw")
+				.replace(/gb/g, "gw")
+				.replace(/([Ll])d/g, "$1l")
+				.replace(/([Nn])d/g, "$1n")
+				.replace(/([Ss])[dt]/g, "$1s")
+				.replace(/Tç/g, "Çç")
+				.replace(/tç/g, "çç")
+				.replace(/[TZ]s/g, "ss")
+				.replace(/[tz]s/g, "ss")
+				.replace(/Zd/g, "Zz")
+				.replace(/Ç([DLSdls])/g, "Ş$1")
+				.replace(/[ÇŞ]J/g, "ŞŞ")
+				.replace(/GB/g, "GW")
+				.replace(/LD/g, "LL")
+				.replace(/ND/g, "NN")
+				.replace(/S[DT]/g, "SS")
+				.replace(/TÇ/g, "ÇÇ")
+				.replace(/[TZ]S/g, "SS")
+				.replace(/ZD/g, "ZZ")
+
+				.replace(/(?<=[ÇFHKPSŞT])B/g, "P")
+				.replace(/(?<=[ÇFHKPSŞT])D/g, "T")
+				.replace(/(?<=[ÇFHKPSŞT])G/g, "K")
+				.replace(/(?<=[ÇFHKPSŞT])J/g, "Ç")
+				.replace(/(?<=[ÇFHKPSŞTçfhkpsşt])b/g, "p")
+				.replace(/(?<=[ÇFHKPSŞTçfhkpsşt])d/g, "t")
+				.replace(/(?<=[ÇFHKPSŞTçfhkpsşt])g/g, "k")
+				.replace(/(?<=[ÇFHKPSŞTçfhkpsşt])j/g, "ç")
+
+				// Harmony rules
+				.replace(/([OÖUÜ][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)A/gu, "$1O")
+				.replace(/([OÖUÜ][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)E/gu, "$1Ö")
+				.replace(/([OÖUÜ][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)İ/gu, "$1Ü")
+				.replace(/([OÖUÜ][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)I/gu, "$1U")
+				.replace(/([OÖUÜoöuü][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)a/gu, "$1o")
+				.replace(/([OÖUÜoöuü][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)e/gu, "$1ö")
+				.replace(/([OÖUÜoöuü][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)i/gu, "$1ü")
+				.replace(/([OÖUÜoöuü][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)ı/gu, "$1u");
+		} while (s !== prev);
+
+		return s;
+	})();
 }
 
 function bottomleft() {}
@@ -237,7 +289,7 @@ function bottomright() {
 	document.transcription.text3.value = document.transcription.text3.value
 		.replace(/Ə/g, "Ä")
 		.replace(/ə/g, "ä");
-	
+
 	document.transcription.text2.value = document.transcription.text3.value
 		.replace(/V/g, "W")
 		.replace(/Y/g, "Ý")
