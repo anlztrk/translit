@@ -272,14 +272,14 @@ function rightbottom() {
 				.replace(/(?<=[ÇFHKPSŞTçfhkpsşt])j/g, "ç")
 
 				// Harmony rules
-				.replace(/([OU][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)A/gu, "$1O")
-				.replace(/([ÖÜ][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)E/gu, "$1Ö")
-				.replace(/([ÖÜ][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)İ/gu, "$1Ü")
-				.replace(/([OU][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)I/gu, "$1U")
-				.replace(/([OUou][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)a/gu, "$1o")
-				.replace(/([ÖÜöü][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)e/gu, "$1ö")
-				.replace(/([ÖÜöü][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)i/gu, "$1ü")
-				.replace(/([OUou][^AÄEIİOÖUÜaäeiıioöuü\p{P}\p{Z}\r\n]*)ı/gu, "$1u");
+				.replace(/([OU](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)A/gu, "$1O")
+				.replace(/([ÖÜ](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)E/gu, "$1Ö")
+				.replace(/([ÖÜ](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)İ/gu, "$1Ü")
+				.replace(/([OU](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)I/gu, "$1U")
+				.replace(/([OUou](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)a/gu, "$1o")
+				.replace(/([ÖÜöü](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)e/gu, "$1ö")
+				.replace(/([ÖÜöü](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)i/gu, "$1ü")
+				.replace(/([OUou](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)ı/gu, "$1u");
 		} while (s !== prev);
 
 		return s;
