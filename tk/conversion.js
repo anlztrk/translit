@@ -105,15 +105,11 @@ function leftright() {
 
 function rightleft() {
 	document.transcription.text2.value = document.transcription.text2.value
-		.replace(/C/g, "Ç")
-		.replace(/c/g, "ç")
-		.replace(/V/g, "W")
-		.replace(/v/g, "w")
-		.replace(/Ñ/g, "Ň")
 		.replace(/ñ/g, "ň")
-		.replace(/Ÿ/g, "Ý")
 		.replace(/ÿ/g, "ý")
 		.replace(/İ/g, "I")
+		.replace(/Ñ/g, "Ň")
+		.replace(/Ÿ/g, "Ý")
 		.replace(/(\p{Script=Latn})[¥Ұ]/ug, "$1Ý")
 		.replace(/[¥Ұ](\p{Script=Latn})/ug, "Ý$1")
 		.replace(/(\p{Script=Latn})\$/ug, "$1Ş")
@@ -123,7 +119,16 @@ function rightleft() {
 		.replace(/(\p{Script=Latn})£/ug, "$1Ž")
 		.replace(/£(\p{Script=Latn})/ug, "Ž$1")
 		.replace(/(\p{Script=Latn})ſ/ug, "$1ž")
-		.replace(/ſ(\p{Script=Latn})/ug, "ž$1");
+		.replace(/ſ(\p{Script=Latn})/ug, "ž$1")
+		
+		.replace(/a\u002a/g, "ä")
+		.replace(/z\u002a/g, "ž")
+		.replace(/n\u002a/g, "ň")
+		.replace(/y\u002a/g, "ý")
+		.replace(/A\u002a/g, "Ä")
+		.replace(/Z\u002a/g, "Ž")
+		.replace(/N\u002a/g, "Ň")
+		.replace(/Y\u002a/g, "Ý");
 
 	document.transcription.text1.value = document.transcription.text2.value
 		.replace(/a/g, "а")
