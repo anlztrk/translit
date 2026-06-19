@@ -276,6 +276,10 @@ function rightbottom() {
 				.replace(/(?<=[ÇFHKPSŞTçfhkpsşt])g/g, "k")
 				.replace(/(?<=[ÇFHKPSŞTçfhkpsşt])c/g, "ç")
 
+				.replace(/üy(?![aäeıioöuü])/g, "ü")
+				.replace(/Üy(?![aäeıioöuü])/g, "Ü")
+				.replace(/ÜY(?![AÄEIİOÖUÜ])/g, "Ü")
+
 				// Harmony rules
 				.replace(/([OU](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)A/gu, "$1O")
 				.replace(/([ÖÜ](?:-|[^\p{P}\p{Z}\r\nAÄEIİOÖUÜaäeiıioöuü])*)E/gu, "$1Ö")
