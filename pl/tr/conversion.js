@@ -114,8 +114,8 @@ function cyrlat() {
 		.replace(/Ѕ/g, "Z")
 		.replace(/ѕ/g, "z")
 		
-		.replace(/(?<=[BCÇDFGHJKLMNPRSŞTVYZ])Ł/g, "U")
-		.replace(/(?<=[BCÇDFGHJKLMNPRSŞTVYZbcçdfghjklmnprsştvyz])ł/g, "u")
+		.replace(/(?<=[BCÇDFGHJKLMNPRSŞTVYZ])Ł(?!U)/g, "U")
+		.replace(/(?<=[BCÇDFGHJKLMNPRSŞTVYZbcçdfghjklmnprsştvyz])ł(?!u)/g, "u")
 		.replace(/Ł/g, "V")
 		.replace(/ł/g, "v");
 }
