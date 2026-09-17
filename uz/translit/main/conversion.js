@@ -37,24 +37,11 @@ function cyrlat() {
 		.replace(/Ц/g, "С")
 		.replace(/ц/g, "с")
 
-		.replace(/СҲ/g, "СЪҲ")
-		.replace(/([Сс])ҳ/g, "$1ъҳ")
-
-		.replace(/Ў([Ъъ])/g, "Ў")
-		.replace(/ўъ/g, "ў")
-
-		.replace(/(\p{Lu})Ч/ug, "$1CH")
-		.replace(/Ч (\p{Lu})(\p{Lu})/ug, "CH $1$2")
-		.replace(/Ч(\p{Lu})/ug, "CH$1")
-		.replace(/(\p{Lu})Ш/ug, "$1SH")
-		.replace(/Ш (\p{Lu})(\p{Lu})/ug, "SH $1$2")
-		.replace(/Ш(\p{Lu})/ug, "SH$1")
-
 		.replace(/а/g, "a")
 		.replace(/б/g, "b")
 		.replace(/в/g, "v")
 		.replace(/г/g, "g")
-		.replace(/ғ/g, "g\u02bb")
+		.replace(/ғ/g, "ğ")
 		.replace(/д/g, "d")
 		.replace(/ж/g, "j")
 		.replace(/з/g, "z")
@@ -71,12 +58,12 @@ function cyrlat() {
 		.replace(/с/g, "s")
 		.replace(/т/g, "t")
 		.replace(/у/g, "u")
-		.replace(/ў/g, "o\u02bb")
+		.replace(/ў/g, "ö")
 		.replace(/ф/g, "f")
 		.replace(/х/g, "x")
 		.replace(/ҳ/g, "h")
-		.replace(/ч/g, "ch")
-		.replace(/ш/g, "sh")
+		.replace(/ч/g, "ç")
+		.replace(/ш/g, "ş")
 		.replace(/ъ/g, "\u02bc")
 		.replace(/ь/g, "")
 		.replace(/э/g, "e")
@@ -84,7 +71,7 @@ function cyrlat() {
 		.replace(/Б/g, "B")
 		.replace(/В/g, "V")
 		.replace(/Г/g, "G")
-		.replace(/Ғ/g, "G\u02bb")
+		.replace(/Ғ/g, "Ğ")
 		.replace(/Д/g, "D")
 		.replace(/Ж/g, "J")
 		.replace(/З/g, "Z")
@@ -101,12 +88,12 @@ function cyrlat() {
 		.replace(/С/g, "S")
 		.replace(/Т/g, "T")
 		.replace(/У/g, "U")
-		.replace(/Ў/g, "O\u02bb")
+		.replace(/Ў/g, "Ö")
 		.replace(/Ф/g, "F")
 		.replace(/Х/g, "X")
 		.replace(/Ҳ/g, "H")
-		.replace(/Ч/g, "Ch")
-		.replace(/Ш/g, "Sh")
+		.replace(/Ч/g, "Ç")
+		.replace(/Ш/g, "Ş")
 		.replace(/Ъ/g, "\u02bc")
 		.replace(/Ь/g, "")
 		.replace(/Э/g, "E")
@@ -172,20 +159,34 @@ function latcyr() {
 		.replace(/V/g, "В")
 		.replace(/X/g, "Х")
 		.replace(/Y/g, "Й")
-		.replace(/Z/g, "З")
+		.replace(/Z/g, "З");
 
+		else if (/[ÖĞŞÇöğşç]/.test(car_Orig) && !/[ОоГг]\u02bb/.test(car_Orig)) {
+		document.transcription.text1.value = document.transcription.text2.value
+		.replace(/ç/g, "ч")
+		.replace(/ş/g, "ш")
+		.replace(/ğ/g, "ғ")
+		.replace(/ö/g, "ў")
+		.replace(/Ç/g, "Ч")
+		.replace(/Ş/g, "Ш")
+		.replace(/Ğ/g, "Ғ")
+		.replace(/Ö/g, "Ў");
+		}
+		else {
+		document.transcription.text1.value = document.transcription.text2.value
 		.replace(/цҳ/g, "ч")
 		.replace(/сҳ/g, "ш")
 		.replace(/Ц([Ҳҳ])/g, "Ч")
-		.replace(/С([Ҳҳ])/g, "Ш")
 		.replace(/С([Ҳҳ])/g, "Ш")
 		.replace(/съҳ/g, "сҳ")
 		.replace(/Съ([Ҳҳ])/g, "С$1")
 		.replace(/гъ/g, "ғ")
 		.replace(/Гъ/g, "Ғ")
 		.replace(/оъ/g, "ў")
-		.replace(/Оъ/g, "Ў")
+		.replace(/Оъ/g, "Ў");
+		}
 
+		document.transcription.text1.value = document.transcription.text2.value
 		.replace(/йа/g, "я")
 		.replace(/йо/g, "ё")
 		.replace(/йу/g, "ю")
