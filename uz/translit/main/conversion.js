@@ -162,7 +162,7 @@ function latcyr() {
 		.replace(/Z/g, "З");
 
 		if (/[ÖĞŞÇöğşç]/.test(car_Orig) && !/[ОоГг]\u02bb/.test(car_Orig)) {
-		document.transcription.text1.value = document.transcription.text2.value
+		document.transcription.text1.value = document.transcription.text1.value
 		.replace(/ç/g, "ч")
 		.replace(/ş/g, "ш")
 		.replace(/ğ/g, "ғ")
@@ -173,7 +173,7 @@ function latcyr() {
 		.replace(/Ö/g, "Ў");
 		}
 		else {
-		document.transcription.text1.value = document.transcription.text2.value
+		document.transcription.text1.value = document.transcription.text1.value
 		.replace(/цҳ/g, "ч")
 		.replace(/сҳ/g, "ш")
 		.replace(/Ц([Ҳҳ])/g, "Ч")
@@ -186,7 +186,7 @@ function latcyr() {
 		.replace(/Оъ/g, "Ў");
 		}
 
-		document.transcription.text1.value = document.transcription.text2.value
+		document.transcription.text1.value = document.transcription.text1.value
 		.replace(/йа/g, "я")
 		.replace(/йо/g, "ё")
 		.replace(/йу/g, "ю")
@@ -228,7 +228,7 @@ function latcyr() {
 		.replace(/МЎТАРИЗА/g, "МЎЪТАРИЗА")
 
 		.replace(/(\p{Lu})ъ/ug, "$1Ъ");
-		/*
+		
 		if (/\u201e/.test(car_Orig)) {
 		document.transcription.text1.value = document.transcription.text1.value.replace(/\u201e/g, "\u00ab")
 		.replace(/\u201c/g, "\u00bb"); 
@@ -236,7 +236,7 @@ function latcyr() {
 			document.transcription.text1.value = document.transcription.text1.value.replace(/\u201c/g, "\u00ab")
 			.replace(/\u201d/g, "\u00bb");
 		}
-		*/
+		
 }
 
 function copy1() {
