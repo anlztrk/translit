@@ -161,7 +161,7 @@ function latcyr() {
 		.replace(/Y/g, "Й")
 		.replace(/Z/g, "З");
 
-		else if (/[ÖĞŞÇöğşç]/.test(car_Orig) && !/[ОоГг]\u02bb/.test(car_Orig)) {
+		if (/[ÖĞŞÇöğşç]/.test(car_Orig) && !/[ОоГг]\u02bb/.test(car_Orig)) {
 		document.transcription.text1.value = document.transcription.text2.value
 		.replace(/ç/g, "ч")
 		.replace(/ş/g, "ш")
