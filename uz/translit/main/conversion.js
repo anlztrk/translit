@@ -228,7 +228,7 @@ function latcyr() {
 		.replace(/МЎТАРИЗА/g, "МЎЪТАРИЗА")
 
 		.replace(/(\p{Lu})ъ/ug, "$1Ъ");
-		
+		/*
 		if (/\u201e/.test(car_Orig)) {
 		document.transcription.text1.value = document.transcription.text1.value.replace(/\u201e/g, "\u00ab")
 		.replace(/\u201c/g, "\u00bb"); 
@@ -236,6 +236,7 @@ function latcyr() {
 			document.transcription.text1.value = document.transcription.text1.value.replace(/\u201c/g, "\u00ab")
 			.replace(/\u201d/g, "\u00bb");
 		}
+		*/
 }
 
 function copy1() {
