@@ -1,9 +1,55 @@
 function cyrlat() {
-	document.transcription.text1.value = document.transcription.text1.value
+	document.transcription.text2.value = document.transcription.text1.value
+		.replace(/'/g, "ʼ")
+		.replace(/ˈ/g, "ʼ")
+		.replace(/’/g, "ʼ")
+		.replace(/ʼ/g, "ʼ")
+		.replace(/‘/g, "ʼ")
+		.replace(/ʻ/g, "ʼ")
+		.replace(/´/g, "ʼ")
+		.replace(/`/g, "ʼ")
+		.replace(/ʿ/g, "ʼ")
+		.replace(/ʹ/g, "ʼ")
+		.replace(/ˊ/g, "ʼ")
+		.replace(/׳/g, "ʼ")
+		.replace(/′/g, "ʼ")
+		.replace(/ʽ/g, "ʼ")
+		.replace(/ߵ/g, "ʼ")
+		.replace(/՚/g, "ʼ")
+		.replace(/ߴ/g, "ʼ")
+		.replace(/᾿/g, "ʼ")
+		.replace(/ՙ/g, "ʼ")
+		.replace(/῾/g, "ʼ")
+		.replace(/‛/g, "ʼ")
+		.replace(/ʾ/g, "ʼ")
+		.replace(/՛/g, "ʼ")
+		.replace(/ˋ/g, "ʼ")
+
+		.replace(/sh/g, "sʼh")
+		.replace(/Sh/g, "Sʼh")
+		.replace(/SH/g, "SʼH")
+
+		.replace(/ş/g, "sh")
+		.replace(/Ş/g, "Sh")
+
+		.replace(/(c|ç)/g, "ch")
+		.replace(/(C|Ç)/g, "Ch")
+
+		.replace(/ö/g, "oʻ")
+		.replace(/Ö/g, "Oʻ")
+		.replace(/ğ/g, "gʻ")
+		.replace(/Ğ/g, "Gʻ")
+
+		.replace(/oʻʼ/g, "oʻ")
+		.replace(/Oʻʼ/g, "Oʻ");
+}
+
+function latcyr() {
+	document.transcription.text2.value = document.transcription.text2.value
 		.replace(/['ˈ’ʼ‘ʻ´`ʿʹˊ׳′ʽߵ՚ߴ᾿ՙ῾‛ʾ՛ˋ]/g, "ʼ")
 		.replace(/([OoGg])ʼ/g, "$1ʻ");
 	
-	document.transcription.text2.value = document.transcription.text1.value
+	document.transcription.text1.value = document.transcription.text2.value
 		.replace(/'/g, "ʼ")
 		.replace(/ˈ/g, "ʼ")
 		.replace(/’/g, "ʼ")
@@ -72,52 +118,6 @@ function cyrlat() {
 		.replace(/MÖTAD/g, "MÖʼTAD")
 		.replace(/MÖTAZILA/g, "MÖʼTAZILA")
 		.replace(/MÖTARIZA/g, "MÖʼTARIZA");
-}
-
-function latcyr() {
-	document.transcription.text1.value = document.transcription.text2.value
-		.replace(/'/g, "ʼ")
-		.replace(/ˈ/g, "ʼ")
-		.replace(/’/g, "ʼ")
-		.replace(/ʼ/g, "ʼ")
-		.replace(/‘/g, "ʼ")
-		.replace(/ʻ/g, "ʼ")
-		.replace(/´/g, "ʼ")
-		.replace(/`/g, "ʼ")
-		.replace(/ʿ/g, "ʼ")
-		.replace(/ʹ/g, "ʼ")
-		.replace(/ˊ/g, "ʼ")
-		.replace(/׳/g, "ʼ")
-		.replace(/′/g, "ʼ")
-		.replace(/ʽ/g, "ʼ")
-		.replace(/ߵ/g, "ʼ")
-		.replace(/՚/g, "ʼ")
-		.replace(/ߴ/g, "ʼ")
-		.replace(/᾿/g, "ʼ")
-		.replace(/ՙ/g, "ʼ")
-		.replace(/῾/g, "ʼ")
-		.replace(/‛/g, "ʼ")
-		.replace(/ʾ/g, "ʼ")
-		.replace(/՛/g, "ʼ")
-		.replace(/ˋ/g, "ʼ")
-
-		.replace(/sh/g, "sʼh")
-		.replace(/Sh/g, "Sʼh")
-		.replace(/SH/g, "SʼH")
-
-		.replace(/ş/g, "sh")
-		.replace(/Ş/g, "Sh")
-
-		.replace(/(c|ç)/g, "ch")
-		.replace(/(C|Ç)/g, "Ch")
-
-		.replace(/ö/g, "oʻ")
-		.replace(/Ö/g, "Oʻ")
-		.replace(/ğ/g, "gʻ")
-		.replace(/Ğ/g, "Gʻ")
-
-		.replace(/oʻʼ/g, "oʻ")
-		.replace(/Oʻʼ/g, "Oʻ");
 }
 
 function copy1() {
