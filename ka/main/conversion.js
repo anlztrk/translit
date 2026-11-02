@@ -94,6 +94,7 @@ function topleft() {
 		.replace(/ჴ/g, "Q")
 		.replace(/ჯ/g, "J")
 		.replace(/ჰ/g, "H")
+		.replace(/ჶ/g, "F")
 		.replace(/ჵ/g, "OO")
 
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
@@ -205,6 +206,7 @@ function topright() {
 		.replace(/ხ/g, "X")
 		.replace(/ჯ/g, "J")
 		.replace(/ჰ/g, "H")
+		.replace(/ჶ/g, "F")
 
 		.replace(/(\p{L}|\p{N}|__placeholder\d+__)([\p{L}\t\u0020,;\u002d\u2010\u201c\u201d\u2018\u2019'"()]+)/gu, function(_, first, second) {
 			return first + second.toLowerCase()
@@ -261,6 +263,7 @@ function righttop(){
 		.replace(/x/g, "ხ")
 		.replace(/j/g, "ჯ")
 		.replace(/h/g, "ჰ")
+		.replace(/f/g, "ჶ")
 		.normalize('NFC');
 		topleft();
 }
