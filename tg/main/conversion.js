@@ -167,7 +167,8 @@ function latcyr() {
 		.replace(/Ī/g, "Í")
 		.replace(/ı̄/g, "í")
 		.replace(/Ū/g, "Ú")
-		.replace(/ū/g, "ú");
+		.replace(/ū/g, "ú")
+		.replace(/[\u02bc\u0027]/g, "\u2019");
 	
 	document.transcription.text1.value = document.transcription.text2.value
 
