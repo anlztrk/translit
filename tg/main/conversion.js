@@ -165,7 +165,7 @@ function latcyr() {
 		.replace(/Ğ/g, "Ǧ")
 		.replace(/ğ/g, "ǧ")
 		.replace(/Ī/g, "Í")
-		.replace(/ı̄/g, "í")
+		.replace(/ī/g, "í")
 		.replace(/Ū/g, "Ú")
 		.replace(/ū/g, "ú")
 		.replace(/[\u02bc\u0027]/g, "\u2019");
