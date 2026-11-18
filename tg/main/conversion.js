@@ -148,7 +148,7 @@ function cyrlat() {
 		.replace(/Ӯ/g, "Ú")
 		.replace(/Ф/g, "F")
 		.replace(/Х/g, "X")
-		.replace(/Ҳ/g, "X")
+		.replace(/Ҳ/g, "H")
 		.replace(/Ч/g, "C")
 		.replace(/Ҷ/g, "J")
 		.replace(/Ш/g, "Š")
