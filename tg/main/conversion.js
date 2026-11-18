@@ -159,10 +159,20 @@ function cyrlat() {
 }
 
 function latcyr() {
+	document.transcription.text2.value = document.transcription.text2.value
+		.replace(/Č/g, "C")
+		.replace(/č/g, "c")
+		.replace(/Ğ/g, "Ǧ")
+		.replace(/ğ/g, "ǧ")
+		.replace(/Ī/g, "Í")
+		.replace(/ı̄/g, "í")
+		.replace(/Ū/g, "Ú")
+		.replace(/ū/g, "ú");
+	
 	document.transcription.text1.value = document.transcription.text2.value
 
-		.replace(/([AEIĪOUŪY])Y([IĪ])/g, "$1$2")
-		.replace(/([AEIĪOUŪYaeiīouūy])y([iī])/g, "$1$2")
+		.replace(/([AEIÍOUÚY])Y([IÍ])/g, "$1$2")
+		.replace(/([AEIÍOUÚYaeiíouúy])y([ií])/g, "$1$2")
 
 		.replace(/Y[Aa]/g, "Я")
 		.replace(/ya/g, "я")
@@ -179,13 +189,13 @@ function latcyr() {
 
 		.replace(/Ǧ/g, "Ғ")
 		.replace(/Ž/g, "Ж")
-		.replace(/Ī/g, "Ӣ")
-		.replace(/Ū/g, "Ӯ")
+		.replace(/Í/g, "Ӣ")
+		.replace(/Ú/g, "Ӯ")
 		.replace(/Š/g, "Ш")
 		.replace(/ǧ/g, "ғ")
 		.replace(/ž/g, "ж")
-		.replace(/ī/g, "ӣ")
-		.replace(/ū/g, "ӯ")
+		.replace(/í/g, "ӣ")
+		.replace(/ú/g, "ӯ")
 		.replace(/š/g, "ш")
 
 		.normalize('NFD')
