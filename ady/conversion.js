@@ -57,7 +57,7 @@ function leftright() {
 		.replace(/чӏ/g, "ċӏ")
 		.replace(/Ч(Ӏ|ӏ)/g, "Ċ$1")
 		.replace(/кӏ/g, "čӏ")
-		.replace(/Ч(Ӏ|ӏ)/g, "Č$1")
+		.replace(/К(Ӏ|ӏ)/g, "Č$1")
 
 		.replace(/а/g, "a")
 		.replace(/б/g, "b")
